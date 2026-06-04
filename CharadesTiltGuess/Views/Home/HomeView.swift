@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var router: AppRouter
     @State private var isHeroFloating = false
 
     private let sampleDecks = [
@@ -55,6 +56,7 @@ struct HomeView: View {
             Spacer(minLength: 8)
 
             DoodleIconButton(symbol: "gearshape", accessibilityLabel: "Settings") {
+                router.open(.settings)
             }
         }
     }
@@ -129,6 +131,7 @@ struct HomeView: View {
                 Spacer()
 
                 DoodleIconButton(symbol: "shuffle", accessibilityLabel: "Choose a random deck") {
+                    router.open(.gameSetup(deckName: "Surprise Mix"))
                 }
 
                 DoodleIconButton(
@@ -136,6 +139,7 @@ struct HomeView: View {
                     accent: DoodleTheme.yellow,
                     accessibilityLabel: "Create deck"
                 ) {
+                    router.open(.deckEditor)
                 }
             }
 
@@ -145,6 +149,7 @@ struct HomeView: View {
             ) {
                 ForEach(sampleDecks) { deck in
                     Button {
+                        router.open(.gameSetup(deckName: deck.name))
                     } label: {
                         DoodleDeckCard(deck: deck)
                     }
@@ -159,6 +164,7 @@ struct HomeView: View {
 
     private var createDeckPrompt: some View {
         Button {
+            router.open(.deckEditor)
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "plus")
@@ -415,4 +421,5 @@ private enum DoodleTheme {
 
 #Preview {
     HomeView()
+        .environmentObject(AppRouter())
 }

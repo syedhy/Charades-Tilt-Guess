@@ -30,7 +30,7 @@ final class CharadesTiltGuessUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        app.buttons["Tech, 36 prompts"].tap()
+        app.buttons["Tech, 24 prompts"].tap()
         XCTAssertTrue(app.staticTexts["Tech setup"].waitForExistence(timeout: 5))
 
         app.buttons["Start placeholder round"].tap()

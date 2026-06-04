@@ -24,6 +24,16 @@
 		AAC000000000000000000003 /* DoodlePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000013 /* DoodlePanel.swift */; };
 		AAC000000000000000000004 /* DoodleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000014 /* DoodleButtons.swift */; };
 		AAC000000000000000000005 /* DeckCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000015 /* DeckCardView.swift */; };
+		AAD000000000000000000001 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000011 /* Deck.swift */; };
+		AAD000000000000000000002 /* DeckColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000012 /* DeckColor.swift */; };
+		AAD000000000000000000003 /* DeckType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000013 /* DeckType.swift */; };
+		AAD000000000000000000004 /* GameWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000014 /* GameWord.swift */; };
+		AAD000000000000000000005 /* DefaultDeckLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000015 /* DefaultDeckLoader.swift */; };
+		AAD000000000000000000006 /* DeckStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000016 /* DeckStore.swift */; };
+		AAD000000000000000000007 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000017 /* HomeViewModel.swift */; };
+		AAD000000000000000000008 /* DeckGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000018 /* DeckGridView.swift */; };
+		AAD000000000000000000009 /* DefaultDecks.json in Resources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000019 /* DefaultDecks.json */; };
+		AAD000000000000000000010 /* DefaultDeckLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +74,16 @@
 		AAC000000000000000000013 /* DoodlePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePanel.swift; sourceTree = "<group>"; };
 		AAC000000000000000000014 /* DoodleButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleButtons.swift; sourceTree = "<group>"; };
 		AAC000000000000000000015 /* DeckCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardView.swift; sourceTree = "<group>"; };
+		AAD000000000000000000011 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		AAD000000000000000000012 /* DeckColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckColor.swift; sourceTree = "<group>"; };
+		AAD000000000000000000013 /* DeckType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckType.swift; sourceTree = "<group>"; };
+		AAD000000000000000000014 /* GameWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWord.swift; sourceTree = "<group>"; };
+		AAD000000000000000000015 /* DefaultDeckLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeckLoader.swift; sourceTree = "<group>"; };
+		AAD000000000000000000016 /* DeckStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStore.swift; sourceTree = "<group>"; };
+		AAD000000000000000000017 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AAD000000000000000000018 /* DeckGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckGridView.swift; sourceTree = "<group>"; };
+		AAD000000000000000000019 /* DefaultDecks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultDecks.json; sourceTree = "<group>"; };
+		AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeckLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +128,9 @@
 				AAA000000000000000000027 /* Models */,
 				AAA000000000000000000028 /* Views */,
 				AAC000000000000000000021 /* Utilities */,
+				AAD000000000000000000021 /* Services */,
+				AAD000000000000000000022 /* ViewModels */,
+				AAD000000000000000000023 /* Resources */,
 			);
 			path = CharadesTiltGuess;
 			sourceTree = "<group>";
@@ -116,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA000000000000000000014 /* CharadesTiltGuessTests.swift */,
+				AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -151,6 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				AAA000000000000000000012 /* AppMetadata.swift */,
+				AAD000000000000000000011 /* Deck.swift */,
+				AAD000000000000000000012 /* DeckColor.swift */,
+				AAD000000000000000000013 /* DeckType.swift */,
+				AAD000000000000000000014 /* GameWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +201,7 @@
 			children = (
 				AAA000000000000000000013 /* HomeView.swift */,
 				AAC000000000000000000015 /* DeckCardView.swift */,
+				AAD000000000000000000018 /* DeckGridView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -227,6 +256,31 @@
 				AAC000000000000000000011 /* AppTheme.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AAD000000000000000000021 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AAD000000000000000000015 /* DefaultDeckLoader.swift */,
+				AAD000000000000000000016 /* DeckStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AAD000000000000000000022 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAD000000000000000000017 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AAD000000000000000000023 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAD000000000000000000019 /* DefaultDecks.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD000000000000000000009 /* DefaultDecks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +427,14 @@
 				AAC000000000000000000003 /* DoodlePanel.swift in Sources */,
 				AAC000000000000000000004 /* DoodleButtons.swift in Sources */,
 				AAC000000000000000000005 /* DeckCardView.swift in Sources */,
+				AAD000000000000000000001 /* Deck.swift in Sources */,
+				AAD000000000000000000002 /* DeckColor.swift in Sources */,
+				AAD000000000000000000003 /* DeckType.swift in Sources */,
+				AAD000000000000000000004 /* GameWord.swift in Sources */,
+				AAD000000000000000000005 /* DefaultDeckLoader.swift in Sources */,
+				AAD000000000000000000006 /* DeckStore.swift in Sources */,
+				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
+				AAD000000000000000000008 /* DeckGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAA000000000000000000004 /* CharadesTiltGuessTests.swift in Sources */,
+				AAD000000000000000000010 /* DefaultDeckLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

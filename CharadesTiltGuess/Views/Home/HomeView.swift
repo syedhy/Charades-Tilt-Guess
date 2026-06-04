@@ -2,14 +2,18 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var router: AppRouter
+    @StateObject private var viewModel: HomeViewModel
     @State private var isHeroFloating = false
 
-    private let sampleDecks = [
-        DoodleDeck(name: "Tech", detail: "36 prompts", symbol: "laptopcomputer", accent: AppTheme.Colors.mint, rotation: -1.2),
-        DoodleDeck(name: "Movies", detail: "42 prompts", symbol: "popcorn", accent: AppTheme.Colors.yellow, rotation: 1.0),
-        DoodleDeck(name: "Food", detail: "40 prompts", symbol: "fork.knife", accent: AppTheme.Colors.coral, rotation: 0.8),
-        DoodleDeck(name: "Sports", detail: "34 prompts", symbol: "figure.run", accent: AppTheme.Colors.blue, rotation: -0.9)
-    ]
+    @MainActor
+    init() {
+        _viewModel = StateObject(wrappedValue: HomeViewModel())
+    }
+
+    @MainActor
+    init(viewModel: HomeViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
         ZStack {
@@ -131,7 +135,8 @@ struct HomeView: View {
                 Spacer()
 
                 DoodleIconButton(symbol: "shuffle", accessibilityLabel: "Choose a random deck") {
-                    router.open(.gameSetup(deckName: "Surprise Mix"))
+                    guard let deck = viewModel.randomDeck else { return }
+                    router.open(.gameSetup(deck: deck))
                 }
 
                 DoodleIconButton(
@@ -143,24 +148,11 @@ struct HomeView: View {
                 }
             }
 
-            LazyVGrid(
-                columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible())],
-                spacing: 16
-            ) {
-                ForEach(sampleDecks) { deck in
-                    Button {
-                        router.open(.gameSetup(deckName: deck.name))
-                    } label: {
-                        DeckCardView(
-                            name: deck.name,
-                            detail: deck.detail,
-                            symbol: deck.symbol,
-                            accent: deck.accent,
-                            rotation: deck.rotation
-                        )
-                    }
-                    .buttonStyle(DoodlePressStyle(rotation: deck.rotation))
-                    .accessibilityLabel("\(deck.name), \(deck.detail)")
+            if let loadErrorMessage = viewModel.loadErrorMessage {
+                deckLoadError(message: loadErrorMessage)
+            } else {
+                DeckGridView(decks: viewModel.decks) { deck in
+                    router.open(.gameSetup(deck: deck))
                 }
             }
 
@@ -202,16 +194,28 @@ struct HomeView: View {
         .buttonStyle(DoodlePressStyle(rotation: 0))
         .accessibilityLabel("Make your own deck")
     }
-}
 
-private struct DoodleDeck: Identifiable {
-    let name: String
-    let detail: String
-    let symbol: String
-    let accent: Color
-    let rotation: Double
+    private func deckLoadError(message: String) -> some View {
+        DoodlePanel(cornerRadius: AppTheme.Radius.card) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
+                Text("Decks took a wrong turn")
+                    .font(.system(size: 19, weight: .black, design: .rounded))
 
-    var id: String { name }
+                Text(message)
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+
+                DoodleActionButton(
+                    title: "Try loading again",
+                    symbol: "arrow.clockwise",
+                    accent: AppTheme.Colors.yellow,
+                    action: viewModel.loadDecks
+                )
+            }
+            .foregroundStyle(AppTheme.Colors.ink)
+            .padding(AppTheme.Spacing.standard)
+        }
+    }
 }
 
 private struct DoodleGameCard: View {

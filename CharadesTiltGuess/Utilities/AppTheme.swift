@@ -29,3 +29,24 @@ enum AppTheme {
         static let bold: CGFloat = 4
     }
 }
+
+extension DeckColor {
+    var displayColor: Color {
+        switch self {
+        case .yellow:
+            AppTheme.Colors.yellow
+        case .mint:
+            AppTheme.Colors.mint
+        case .coral:
+            AppTheme.Colors.coral
+        case .blue:
+            AppTheme.Colors.blue
+        case .purple:
+            Color(red: 0.57, green: 0.40, blue: 0.88)
+        case .pink:
+            Color(red: 0.92, green: 0.43, blue: 0.66)
+        case .gray:
+            Color(red: 0.68, green: 0.68, blue: 0.65)
+        }
+    }
+}

@@ -9,11 +9,19 @@ final class CharadesTiltGuessTests: XCTestCase {
     @MainActor
     func testRouterPresentsAndFinishesGameFlow() {
         let router = AppRouter()
+        let deck = Deck(
+            id: "test-tech",
+            name: "Tech",
+            cards: [GameWord(id: "test-word", text: "Phone")],
+            type: .default,
+            color: .mint,
+            symbolName: "laptopcomputer"
+        )
 
-        router.startGame(deckName: "Tech")
-        XCTAssertEqual(router.activeGame?.deckName, "Tech")
+        router.startGame(deck: deck)
+        XCTAssertEqual(router.activeGame?.deck, deck)
 
-        router.finishGame(deckName: "Tech")
+        router.finishGame(deck: deck)
         XCTAssertNil(router.activeGame)
 
         router.handleGameDismissal()

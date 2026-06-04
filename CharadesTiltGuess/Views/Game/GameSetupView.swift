@@ -10,11 +10,10 @@ struct GameSetupView: View {
             title: "\(deckName) setup",
             message: "Round duration, deck details, and tilt instructions will be added in a later phase.",
             symbol: "timer",
-            accent: Color(red: 1.00, green: 0.82, blue: 0.23),
+            accent: AppTheme.Colors.yellow,
             primaryActionTitle: "Start placeholder round",
             primaryAction: onStartRound
         )
         .navigationTitle(deckName)
     }
 }
-

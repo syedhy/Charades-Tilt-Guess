@@ -11,7 +11,7 @@ struct ResultsView: View {
             title: "Results placeholder",
             message: "The final score and correct or passed words for \(deckName) will appear here.",
             symbol: "trophy",
-            accent: Color(red: 1.00, green: 0.82, blue: 0.23),
+            accent: AppTheme.Colors.yellow,
             primaryActionTitle: "Play placeholder again",
             primaryAction: onPlayAgain,
             secondaryActionTitle: "Choose another deck",
@@ -20,4 +20,3 @@ struct ResultsView: View {
         .navigationTitle("Results")
     }
 }
-

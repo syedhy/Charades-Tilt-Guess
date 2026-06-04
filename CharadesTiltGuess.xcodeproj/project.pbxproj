@@ -19,6 +19,11 @@
 		AAB000000000000000000005 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000015 /* ResultsView.swift */; };
 		AAB000000000000000000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000016 /* SettingsView.swift */; };
 		AAB000000000000000000007 /* DeckEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000017 /* DeckEditorView.swift */; };
+		AAC000000000000000000001 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000011 /* AppTheme.swift */; };
+		AAC000000000000000000002 /* DoodleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000012 /* DoodleBackground.swift */; };
+		AAC000000000000000000003 /* DoodlePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000013 /* DoodlePanel.swift */; };
+		AAC000000000000000000004 /* DoodleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000014 /* DoodleButtons.swift */; };
+		AAC000000000000000000005 /* DeckCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC000000000000000000015 /* DeckCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		AAB000000000000000000015 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000017 /* DeckEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckEditorView.swift; sourceTree = "<group>"; };
+		AAC000000000000000000011 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		AAC000000000000000000012 /* DoodleBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleBackground.swift; sourceTree = "<group>"; };
+		AAC000000000000000000013 /* DoodlePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodlePanel.swift; sourceTree = "<group>"; };
+		AAC000000000000000000014 /* DoodleButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleButtons.swift; sourceTree = "<group>"; };
+		AAC000000000000000000015 /* DeckCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 				AAA000000000000000000026 /* App */,
 				AAA000000000000000000027 /* Models */,
 				AAA000000000000000000028 /* Views */,
+				AAC000000000000000000021 /* Utilities */,
 			);
 			path = CharadesTiltGuess;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA000000000000000000013 /* HomeView.swift */,
+				AAC000000000000000000015 /* DeckCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -169,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				AAB000000000000000000012 /* PlaceholderScreen.swift */,
+				AAC000000000000000000012 /* DoodleBackground.swift */,
+				AAC000000000000000000013 /* DoodlePanel.swift */,
+				AAC000000000000000000014 /* DoodleButtons.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -204,6 +219,14 @@
 				AAB000000000000000000017 /* DeckEditorView.swift */,
 			);
 			path = DeckEditor;
+			sourceTree = "<group>";
+		};
+		AAC000000000000000000021 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AAC000000000000000000011 /* AppTheme.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +367,11 @@
 				AAB000000000000000000005 /* ResultsView.swift in Sources */,
 				AAB000000000000000000006 /* SettingsView.swift in Sources */,
 				AAB000000000000000000007 /* DeckEditorView.swift in Sources */,
+				AAC000000000000000000001 /* AppTheme.swift in Sources */,
+				AAC000000000000000000002 /* DoodleBackground.swift in Sources */,
+				AAC000000000000000000003 /* DoodlePanel.swift in Sources */,
+				AAC000000000000000000004 /* DoodleButtons.swift in Sources */,
+				AAC000000000000000000005 /* DeckCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

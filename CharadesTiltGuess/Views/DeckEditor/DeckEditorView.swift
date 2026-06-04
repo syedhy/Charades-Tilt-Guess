@@ -7,9 +7,8 @@ struct DeckEditorView: View {
             title: "Create a custom deck",
             message: "Deck naming, color selection, manual cards, and clipboard import arrive in dedicated phases.",
             symbol: "rectangle.stack.badge.plus",
-            accent: Color(red: 0.96, green: 0.42, blue: 0.36)
+            accent: AppTheme.Colors.coral
         )
         .navigationTitle("New Deck")
     }
 }
-

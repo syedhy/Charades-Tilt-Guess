@@ -7,7 +7,7 @@ struct GameView: View {
 
     var body: some View {
         ZStack {
-            PlaceholderPaperBackground()
+            DoodlePaperBackground()
 
             VStack(spacing: 24) {
                 HStack {
@@ -17,15 +17,12 @@ struct GameView: View {
 
                     Spacer()
 
-                    Button(action: onExit) {
-                        Image(systemName: "xmark")
-                            .font(.system(size: 18, weight: .black))
-                            .foregroundStyle(.black)
-                            .frame(width: 48, height: 48)
-                            .background(.white, in: Circle())
-                            .overlay(Circle().stroke(.black, lineWidth: 3))
-                    }
-                    .accessibilityLabel("Exit game")
+                    DoodleIconButton(
+                        symbol: "xmark",
+                        size: 48,
+                        accessibilityLabel: "Exit game",
+                        action: onExit
+                    )
                 }
 
                 Spacer()
@@ -49,23 +46,12 @@ struct GameView: View {
 
                 Spacer()
 
-                Button(action: onEndRound) {
-                    Text("End placeholder round")
-                        .font(.system(size: 17, weight: .black, design: .rounded))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 58)
-                        .background(
-                            Color(red: 0.39, green: 0.82, blue: 0.62),
-                            in: RoundedRectangle(cornerRadius: 16, style: .continuous)
-                        )
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                                .stroke(.black, lineWidth: 3)
-                        }
-                        .shadow(color: .black.opacity(0.16), radius: 0, x: 4, y: 5)
-                }
-                .buttonStyle(.plain)
+                DoodleActionButton(
+                    title: "End placeholder round",
+                    symbol: "flag.checkered",
+                    accent: AppTheme.Colors.mint,
+                    action: onEndRound
+                )
             }
             .foregroundStyle(.black)
             .padding(24)
@@ -73,4 +59,3 @@ struct GameView: View {
         .preferredColorScheme(.light)
     }
 }
-

@@ -14,11 +14,11 @@ final class HomeViewModel: ObservableObject {
 
     func loadDecks() {
         do {
-            decks = try deckStore.loadDefaultDecks()
+            decks = try deckStore.loadDecks()
             loadErrorMessage = nil
         } catch {
             decks = []
-            loadErrorMessage = "The premade decks could not be loaded."
+            loadErrorMessage = "The decks could not be loaded."
         }
     }
 

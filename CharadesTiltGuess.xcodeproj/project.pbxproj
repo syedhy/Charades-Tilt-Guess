@@ -34,6 +34,9 @@
 		AAD000000000000000000008 /* DeckGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000018 /* DeckGridView.swift */; };
 		AAD000000000000000000009 /* DefaultDecks.json in Resources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000019 /* DefaultDecks.json */; };
 		AAD000000000000000000010 /* DefaultDeckLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */; };
+		AAE000000000000000000001 /* CustomDeckStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000011 /* CustomDeckStore.swift */; };
+		AAE000000000000000000002 /* CustomDeckStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000012 /* CustomDeckStoreTests.swift */; };
+		AAE000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000013 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		AAD000000000000000000018 /* DeckGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckGridView.swift; sourceTree = "<group>"; };
 		AAD000000000000000000019 /* DefaultDecks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultDecks.json; sourceTree = "<group>"; };
 		AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeckLoaderTests.swift; sourceTree = "<group>"; };
+		AAE000000000000000000011 /* CustomDeckStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeckStore.swift; sourceTree = "<group>"; };
+		AAE000000000000000000012 /* CustomDeckStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeckStoreTests.swift; sourceTree = "<group>"; };
+		AAE000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 		AAA000000000000000000022 /* CharadesTiltGuess */ = {
 			isa = PBXGroup;
 			children = (
+				AAE000000000000000000013 /* Assets.xcassets */,
 				AAA000000000000000000026 /* App */,
 				AAA000000000000000000027 /* Models */,
 				AAA000000000000000000028 /* Views */,
@@ -140,6 +147,7 @@
 			children = (
 				AAA000000000000000000014 /* CharadesTiltGuessTests.swift */,
 				AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */,
+				AAE000000000000000000012 /* CustomDeckStoreTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			children = (
 				AAD000000000000000000015 /* DefaultDeckLoader.swift */,
 				AAD000000000000000000016 /* DeckStore.swift */,
+				AAE000000000000000000011 /* CustomDeckStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE000000000000000000003 /* Assets.xcassets in Resources */,
 				AAD000000000000000000009 /* DefaultDecks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +443,7 @@
 				AAD000000000000000000004 /* GameWord.swift in Sources */,
 				AAD000000000000000000005 /* DefaultDeckLoader.swift in Sources */,
 				AAD000000000000000000006 /* DeckStore.swift in Sources */,
+				AAE000000000000000000001 /* CustomDeckStore.swift in Sources */,
 				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
 				AAD000000000000000000008 /* DeckGridView.swift in Sources */,
 			);
@@ -444,6 +455,7 @@
 			files = (
 				AAA000000000000000000004 /* CharadesTiltGuessTests.swift in Sources */,
 				AAD000000000000000000010 /* DefaultDeckLoaderTests.swift in Sources */,
+				AAE000000000000000000002 /* CustomDeckStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

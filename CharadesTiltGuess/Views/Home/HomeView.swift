@@ -150,7 +150,7 @@ struct HomeView: View {
                     accent: AppTheme.Colors.yellow,
                     accessibilityLabel: "Create deck"
                 ) {
-                    router.open(.deckEditor)
+                    router.openImmediately(.deckEditor)
                 }
             }
 
@@ -168,7 +168,7 @@ struct HomeView: View {
 
     private var createDeckPrompt: some View {
         Button {
-            router.open(.deckEditor)
+            router.openImmediately(.deckEditor)
         } label: {
             HStack(spacing: 14) {
                 Image(systemName: "plus")

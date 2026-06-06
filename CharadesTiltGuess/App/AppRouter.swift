@@ -23,6 +23,15 @@ final class AppRouter: ObservableObject {
         path.append(route)
     }
 
+    func openImmediately(_ route: AppRoute) {
+        var transaction = Transaction()
+        transaction.animation = nil
+
+        withTransaction(transaction) {
+            path.append(route)
+        }
+    }
+
     func startGame(deck: Deck) {
         activeGame = ActiveGame(deck: deck)
     }

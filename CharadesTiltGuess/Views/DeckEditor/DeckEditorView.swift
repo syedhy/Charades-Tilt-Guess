@@ -193,14 +193,17 @@ struct DeckEditorView: View {
     }
 
     private func scrollNameFieldIntoKeyboardView(using scrollProxy: ScrollViewProxy) {
-        DispatchQueue.main.async {
-            scrollProxy.scrollTo(Self.deckNameFieldScrollID, anchor: .center)
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.keyboardScrollDelay) {
+            withAnimation(.snappy(duration: 0.09)) {
+                scrollProxy.scrollTo(Self.deckNameFieldScrollID, anchor: .center)
+            }
         }
     }
 }
 
 private extension DeckEditorView {
     static let deckNameFieldScrollID = "deck-name-field-scroll-target"
+    static let keyboardScrollDelay: TimeInterval = 0.08
 }
 
 #Preview {

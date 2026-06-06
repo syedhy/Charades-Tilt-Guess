@@ -131,7 +131,7 @@ struct DeckEditorView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
             }
 
-            TextField("Movie night, family chaos...", text: $viewModel.deckName)
+            TextField("Movies , Celebs", text: $viewModel.deckName)
                 .font(.system(size: 21, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
                 .textInputAutocapitalization(.words)
@@ -194,7 +194,7 @@ struct DeckEditorView: View {
 
     private func scrollNameFieldIntoKeyboardView(using scrollProxy: ScrollViewProxy) {
         DispatchQueue.main.asyncAfter(deadline: .now() + Self.keyboardScrollDelay) {
-            withAnimation(.snappy(duration: 0.15)) {
+            withAnimation(.snappy(duration: 0.18)) {
                 scrollProxy.scrollTo(Self.deckNameFieldScrollID, anchor: .center)
             }
         }
@@ -203,7 +203,7 @@ struct DeckEditorView: View {
 
 private extension DeckEditorView {
     static let deckNameFieldScrollID = "deck-name-field-scroll-target"
-    static let keyboardScrollDelay: TimeInterval = 0.015
+    static let keyboardScrollDelay: TimeInterval = 0.00
 }
 
 #Preview {

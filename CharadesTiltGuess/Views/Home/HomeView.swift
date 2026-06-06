@@ -4,6 +4,7 @@ struct HomeView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel: HomeViewModel
     @State private var isHeroFloating = false
+    @State private var didStartHeroAnimation = false
 
     @MainActor
     init() {
@@ -33,8 +34,13 @@ struct HomeView: View {
         }
         .preferredColorScheme(.light)
         .onAppear {
+            viewModel.loadDecks()
+
+            guard !didStartHeroAnimation else { return }
+
+            didStartHeroAnimation = true
             withAnimation(.easeInOut(duration: 2.2).repeatForever(autoreverses: true)) {
-                isHeroFloating = true
+                isHeroFloating.toggle()
             }
         }
     }

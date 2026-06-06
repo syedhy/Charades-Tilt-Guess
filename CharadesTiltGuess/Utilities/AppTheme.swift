@@ -9,6 +9,7 @@ enum AppTheme {
         static let mint = Color(red: 0.39, green: 0.82, blue: 0.62)
         static let coral = Color(red: 0.96, green: 0.42, blue: 0.36)
         static let blue = Color(red: 0.37, green: 0.68, blue: 0.92)
+        static let gray = Color(red: 0.68, green: 0.68, blue: 0.65)
     }
 
     enum Spacing {

@@ -37,6 +37,8 @@
 		AAE000000000000000000001 /* CustomDeckStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000011 /* CustomDeckStore.swift */; };
 		AAE000000000000000000002 /* CustomDeckStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000012 /* CustomDeckStoreTests.swift */; };
 		AAE000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE000000000000000000013 /* Assets.xcassets */; };
+		AAF000000000000000000001 /* DeckEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF000000000000000000011 /* DeckEditorViewModel.swift */; };
+		AAF000000000000000000002 /* DeckEditorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF000000000000000000012 /* DeckEditorViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		AAE000000000000000000011 /* CustomDeckStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeckStore.swift; sourceTree = "<group>"; };
 		AAE000000000000000000012 /* CustomDeckStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeckStoreTests.swift; sourceTree = "<group>"; };
 		AAE000000000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAF000000000000000000011 /* DeckEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckEditorViewModel.swift; sourceTree = "<group>"; };
+		AAF000000000000000000012 /* DeckEditorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckEditorViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				AAA000000000000000000014 /* CharadesTiltGuessTests.swift */,
 				AAD000000000000000000020 /* DefaultDeckLoaderTests.swift */,
 				AAE000000000000000000012 /* CustomDeckStoreTests.swift */,
+				AAF000000000000000000012 /* DeckEditorViewModelTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AAD000000000000000000017 /* HomeViewModel.swift */,
+				AAF000000000000000000011 /* DeckEditorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				AAD000000000000000000006 /* DeckStore.swift in Sources */,
 				AAE000000000000000000001 /* CustomDeckStore.swift in Sources */,
 				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
+				AAF000000000000000000001 /* DeckEditorViewModel.swift in Sources */,
 				AAD000000000000000000008 /* DeckGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +463,7 @@
 				AAA000000000000000000004 /* CharadesTiltGuessTests.swift in Sources */,
 				AAD000000000000000000010 /* DefaultDeckLoaderTests.swift in Sources */,
 				AAE000000000000000000002 /* CustomDeckStoreTests.swift in Sources */,
+				AAF000000000000000000002 /* DeckEditorViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

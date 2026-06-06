@@ -19,17 +19,24 @@ struct DeckEditorView: View {
         ZStack {
             DoodlePaperBackground()
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
-                    header
-                    deckPreview
-                    formPanel
+            ScrollViewReader { scrollProxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
+                        header
+                        deckPreview
+                        formPanel
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 24)
+                    .padding(.bottom, 42)
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 24)
-                .padding(.bottom, 42)
+                .scrollIndicators(.hidden)
+                .scrollDismissesKeyboard(.interactively)
+                .onChange(of: isNameFocused) { _, isFocused in
+                    guard isFocused else { return }
+                    scrollNameFieldIntoKeyboardView(using: scrollProxy)
+                }
             }
-            .scrollIndicators(.hidden)
         }
         .navigationTitle("New Deck")
         .navigationBarTitleDisplayMode(.inline)
@@ -139,6 +146,7 @@ struct DeckEditorView: View {
                 }
                 .accessibilityIdentifier("deckNameField")
         }
+        .id(Self.deckNameFieldScrollID)
         .foregroundStyle(AppTheme.Colors.ink)
     }
 
@@ -183,6 +191,19 @@ struct DeckEditorView: View {
         .accessibilityLabel("\(deckColor.rawValue.capitalized) deck color")
         .accessibilityAddTraits(viewModel.selectedColor == deckColor ? .isSelected : [])
     }
+
+    private func scrollNameFieldIntoKeyboardView(using scrollProxy: ScrollViewProxy) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Self.keyboardScrollDelay) {
+            withAnimation(.snappy(duration: 0.34)) {
+                scrollProxy.scrollTo(Self.deckNameFieldScrollID, anchor: .center)
+            }
+        }
+    }
+}
+
+private extension DeckEditorView {
+    static let deckNameFieldScrollID = "deck-name-field-scroll-target"
+    static let keyboardScrollDelay: TimeInterval = 0.32
 }
 
 #Preview {

@@ -49,6 +49,6 @@ final class CharadesTiltGuessUITests: XCTestCase {
 
         app.navigationBars.buttons.element(boundBy: 0).tap()
         app.buttons["Create deck"].tap()
-        XCTAssertTrue(app.staticTexts["Create a custom deck"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Custom deck"].waitForExistence(timeout: 5))
     }
 }

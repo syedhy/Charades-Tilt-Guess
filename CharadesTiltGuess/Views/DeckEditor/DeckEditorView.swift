@@ -23,8 +23,22 @@ struct DeckEditorView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
                         header
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                isNameFocused = false
+                            }
+
                         deckPreview
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                isNameFocused = false
+                            }
+
                         formPanel
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                isNameFocused = false
+                            }
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 24)
@@ -38,13 +52,9 @@ struct DeckEditorView: View {
                 }
             }
         }
-        .navigationTitle("New Deck")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
         .preferredColorScheme(.light)
-        .onAppear {
-            isNameFocused = true
-        }
     }
 
     private var header: some View {
@@ -106,6 +116,7 @@ struct DeckEditorView: View {
                     guard viewModel.saveDeck() != nil else { return }
                     router.goHome()
                 }
+                .simultaneousGesture(TapGesture())
                 .disabled(!viewModel.canSave)
                 .opacity(viewModel.canSave ? 1 : 0.58)
                 .accessibilityIdentifier("createCustomDeckButton")
@@ -135,10 +146,22 @@ struct DeckEditorView: View {
                 .focused($isNameFocused)
                 .padding(.horizontal, AppTheme.Spacing.standard)
                 .frame(height: 58)
-                .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous))
+                .background(
+                    AppTheme.Colors.paper,
+                    in: RoundedRectangle(
+                        cornerRadius: AppTheme.Radius.button,
+                        style: .continuous
+                    )
+                )
                 .overlay {
-                    RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                        .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                    RoundedRectangle(
+                        cornerRadius: AppTheme.Radius.button,
+                        style: .continuous
+                    )
+                    .stroke(
+                        AppTheme.Colors.ink,
+                        lineWidth: AppTheme.Stroke.standard
+                    )
                 }
                 .accessibilityIdentifier("deckNameField")
         }
@@ -184,13 +207,14 @@ struct DeckEditorView: View {
                 .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
         }
         .buttonStyle(DoodlePressStyle())
+        .simultaneousGesture(TapGesture())
         .accessibilityLabel("\(deckColor.rawValue.capitalized) deck color")
         .accessibilityAddTraits(viewModel.selectedColor == deckColor ? .isSelected : [])
     }
 
     private func scrollNameFieldIntoKeyboardView(using scrollProxy: ScrollViewProxy) {
         DispatchQueue.main.asyncAfter(deadline: .now() + Self.keyboardScrollDelay) {
-            withAnimation(.snappy(duration: 0.18)) {
+            withAnimation(.snappy(duration: 0.15)) {
                 scrollProxy.scrollTo(Self.deckNameFieldScrollID, anchor: .center)
             }
         }
@@ -199,7 +223,7 @@ struct DeckEditorView: View {
 
 private extension DeckEditorView {
     static let deckNameFieldScrollID = "deck-name-field-scroll-target"
-    static let keyboardScrollDelay: TimeInterval = 0.00
+    static let keyboardScrollDelay: TimeInterval = 0.0
 }
 
 #Preview {

@@ -17,6 +17,5 @@ struct ResultsView: View {
             secondaryActionTitle: "Choose another deck",
             secondaryAction: onChooseDeck
         )
-        .navigationTitle("Results")
     }
 }

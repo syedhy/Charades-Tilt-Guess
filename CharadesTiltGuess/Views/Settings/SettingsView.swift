@@ -9,6 +9,5 @@ struct SettingsView: View {
             symbol: "gearshape.2",
             accent: AppTheme.Colors.blue
         )
-        .navigationTitle("Settings")
     }
 }

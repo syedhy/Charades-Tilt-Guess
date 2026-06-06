@@ -14,6 +14,5 @@ struct GameSetupView: View {
             primaryActionTitle: "Start placeholder round",
             primaryAction: onStartRound
         )
-        .navigationTitle(deckName)
     }
 }

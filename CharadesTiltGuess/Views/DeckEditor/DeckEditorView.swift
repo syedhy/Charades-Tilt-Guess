@@ -49,16 +49,12 @@ struct DeckEditorView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
-            Text("CUSTOM DECK")
-                .font(.system(size: 12, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
-
-            Text("Create a custom deck")
+            Text("Custom deck")
                 .font(.system(size: 34, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("Name it, color it, then we will add cards in the next step.")
+            Text("Name it , Color it and Start Playing")
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
         }

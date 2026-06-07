@@ -3,6 +3,7 @@ import SwiftUI
 struct DeckEditorView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel: DeckEditorViewModel
+    @State private var isShowingAddCardSheet = false
     @FocusState private var isNameFocused: Bool
 
     @MainActor
@@ -55,6 +56,11 @@ struct DeckEditorView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
         .preferredColorScheme(.light)
+        .sheet(isPresented: $isShowingAddCardSheet) {
+            AddCardSheet(viewModel: viewModel)
+                .presentationDetents([.height(330)])
+                .presentationDragIndicator(.hidden)
+        }
     }
 
     private var header: some View {
@@ -74,7 +80,7 @@ struct DeckEditorView: View {
         HStack(spacing: AppTheme.Spacing.standard) {
             DeckCardView(
                 name: viewModel.trimmedDeckName.isEmpty ? "My Deck" : viewModel.trimmedDeckName,
-                detail: "0 prompts",
+                detail: viewModel.cardCountText,
                 symbol: "rectangle.stack",
                 accent: viewModel.selectedColor.displayColor,
                 rotation: -1
@@ -85,7 +91,7 @@ struct DeckEditorView: View {
                 Text("Starter shell")
                     .font(.system(size: 18, weight: .black, design: .rounded))
 
-                Text("Cards are coming next. For now, this saves the deck identity locally.")
+                Text("Add prompts now so your deck is ready for game night.")
                     .font(.system(size: 13, weight: .bold, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
                     .fixedSize(horizontal: false, vertical: true)
@@ -101,6 +107,7 @@ struct DeckEditorView: View {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                 deckNameField
                 colorPicker
+                cardList
 
                 if let saveErrorMessage = viewModel.saveErrorMessage {
                     Text(saveErrorMessage)
@@ -186,6 +193,98 @@ struct DeckEditorView: View {
         }
     }
 
+    private var cardList: some View {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Cards")
+                        .font(.system(size: 17, weight: .black, design: .rounded))
+
+                    Text(viewModel.cardCountText)
+                        .font(.system(size: 12, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
+                }
+
+                Spacer()
+
+                Button {
+                    isNameFocused = false
+                    viewModel.clearCardError()
+                    isShowingAddCardSheet = true
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.system(size: 18, weight: .black))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .frame(width: 44, height: 44)
+                        .background(AppTheme.Colors.yellow, in: Circle())
+                        .overlay {
+                            Circle()
+                                .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                        }
+                        .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Add card")
+            }
+
+            if let cardErrorMessage = viewModel.cardErrorMessage {
+                Text(cardErrorMessage)
+                    .font(.system(size: 12, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.coral)
+            }
+
+            if viewModel.cards.isEmpty {
+                Text("Add at least one prompt before saving this deck.")
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.vertical, 4)
+            } else {
+                VStack(spacing: 10) {
+                    ForEach(viewModel.cards) { card in
+                        cardRow(card)
+                    }
+                }
+            }
+        }
+        .foregroundStyle(AppTheme.Colors.ink)
+    }
+
+    private func cardRow(_ card: GameWord) -> some View {
+        HStack(spacing: 12) {
+            Text(card.text)
+                .font(.system(size: 15, weight: .black, design: .rounded))
+                .lineLimit(2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            Button {
+                viewModel.deleteCard(id: card.id)
+            } label: {
+                Image(systemName: "trash")
+                    .font(.system(size: 14, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 34, height: 34)
+                    .background(AppTheme.Colors.paper, in: Circle())
+                    .overlay {
+                        Circle()
+                            .stroke(AppTheme.Colors.ink, lineWidth: 2)
+                    }
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Delete \(card.text)")
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 10)
+        .background(
+            AppTheme.Colors.paper,
+            in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+        )
+        .overlay {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(AppTheme.Colors.ink.opacity(0.92), lineWidth: 2)
+        }
+    }
+
     private func colorButton(for deckColor: DeckColor) -> some View {
         Button {
             viewModel.selectedColor = deckColor
@@ -230,5 +329,103 @@ private extension DeckEditorView {
     NavigationStack {
         DeckEditorView()
             .environmentObject(AppRouter())
+    }
+}
+
+private struct AddCardSheet: View {
+    @ObservedObject var viewModel: DeckEditorViewModel
+    @Environment(\.dismiss) private var dismiss
+    @State private var cardText = ""
+    @FocusState private var isCardFocused: Bool
+
+    var body: some View {
+        ZStack {
+            DoodlePaperBackground()
+
+            DoodlePanel {
+                VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
+                    HStack(alignment: .top) {
+                        Text("Add Card")
+                            .font(.system(size: 30, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+
+                        Spacer()
+
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .font(.system(size: 15, weight: .black))
+                                .foregroundStyle(AppTheme.Colors.ink)
+                                .frame(width: 38, height: 38)
+                                .background(AppTheme.Colors.paper, in: Circle())
+                                .overlay {
+                                    Circle()
+                                        .stroke(AppTheme.Colors.ink, lineWidth: 2)
+                                }
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel("Close add card")
+                    }
+
+                    VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
+                        HStack {
+                            Text("Card text")
+                                .font(.system(size: 14, weight: .black, design: .rounded))
+
+                            Spacer()
+
+                            Text(viewModel.cardCharacterCountText(for: cardText))
+                                .font(.system(size: 12, weight: .black, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
+                        }
+
+                        TextField("Pizza, Spider-Man, Football", text: $cardText)
+                            .font(.system(size: 19, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .textInputAutocapitalization(.words)
+                            .autocorrectionDisabled()
+                            .focused($isCardFocused)
+                            .padding(.horizontal, AppTheme.Spacing.standard)
+                            .frame(height: 56)
+                            .background(
+                                AppTheme.Colors.paper,
+                                in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                            )
+                            .overlay {
+                                RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                            }
+                            .accessibilityIdentifier("addCardTextField")
+                    }
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                    if let message = viewModel.cardValidationMessage(for: cardText), !cardText.isEmpty {
+                        Text(message)
+                            .font(.system(size: 12, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.coral)
+                    }
+
+                    DoodleActionButton(
+                        title: "Add card",
+                        symbol: "plus",
+                        accent: viewModel.canAddCard(text: cardText) ? AppTheme.Colors.yellow : AppTheme.Colors.gray.opacity(0.45)
+                    ) {
+                        guard viewModel.addCard(text: cardText) else { return }
+                        cardText = ""
+                        dismiss()
+                    }
+                    .disabled(!viewModel.canAddCard(text: cardText))
+                    .opacity(viewModel.canAddCard(text: cardText) ? 1 : 0.58)
+                    .accessibilityIdentifier("confirmAddCardButton")
+                }
+                .padding(AppTheme.Spacing.roomy)
+            }
+            .padding(20)
+        }
+        .preferredColorScheme(.light)
+        .onAppear {
+            isCardFocused = true
+        }
     }
 }

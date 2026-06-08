@@ -158,7 +158,11 @@ struct HomeView: View {
                 deckLoadError(message: loadErrorMessage)
             } else {
                 DeckGridView(decks: viewModel.decks) { deck in
-                    router.open(.gameSetup(deck: deck))
+                    if deck.type == .custom {
+                        router.open(.customDeckDetail(deck: deck))
+                    } else {
+                        router.open(.gameSetup(deck: deck))
+                    }
                 }
             }
 
@@ -181,7 +185,7 @@ struct HomeView: View {
                     Text("Make your own deck")
                         .font(.system(size: 17, weight: .black, design: .rounded))
 
-                    Text("Type cards or paste a whole list")
+                    Text("Name it now, fill it after")
                         .font(.system(size: 13, weight: .bold, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }

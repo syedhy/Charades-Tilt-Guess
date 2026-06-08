@@ -3,6 +3,7 @@ import SwiftUI
 enum AppRoute: Hashable {
     case settings
     case deckEditor
+    case customDeckDetail(deck: Deck)
     case gameSetup(deck: Deck)
     case results(deck: Deck)
 }
@@ -57,6 +58,11 @@ final class AppRouter: ObservableObject {
     func goHome() {
         path = NavigationPath()
     }
+
+    func goBack() {
+        guard !path.isEmpty else { return }
+        path.removeLast()
+    }
 }
 
 struct AppShellView: View {
@@ -85,6 +91,8 @@ struct AppShellView: View {
             SettingsView()
         case .deckEditor:
             DeckEditorView()
+        case let .customDeckDetail(deck):
+            CustomDeckDetailView(deck: deck)
         case let .gameSetup(deck):
             GameSetupView(
                 deckName: deck.name,

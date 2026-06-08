@@ -13,8 +13,8 @@ struct ClipboardImportPreview: Equatable {
     var summaryMessages: [String] {
         var messages: [String] = []
 
-        if blankLineCount > 0 {
-            messages.append("\(blankLineCount) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
+        if blankLineCount > 1 {
+            messages.append("\(blankLineCount-1) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
         }
 
         if duplicateCount > 0 {

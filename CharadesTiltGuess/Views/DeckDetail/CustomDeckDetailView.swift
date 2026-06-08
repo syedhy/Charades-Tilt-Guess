@@ -646,7 +646,7 @@ private struct PasteCardsSheet: View {
                             .font(.system(size: 32, weight: .black, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink)
 
-                        Text("Put each card on its own line. Lists from AI work great here.")
+                        Text("Put each card on its own line\nLists from AI work great here")
                             .font(.system(size: 16, weight: .bold, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
                     }
@@ -685,7 +685,7 @@ private struct PasteCardsSheet: View {
 
     private var textInput: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
-            Text("Preview text")
+            Text("Or Paste Here")
                 .font(.system(size: 17, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
 
@@ -718,7 +718,7 @@ private struct PasteCardsSheet: View {
                 }
 
                 if viewModel.importPreview.cards.isEmpty {
-                    Text("Apple\nFootball\nShah Rukh Khan\nPizza\nSpider-Man")
+                    Text("Apple\nFootball\nPizza\nSpider-Man")
                         .font(.system(size: 17, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.34))
                         .frame(maxWidth: .infinity, alignment: .leading)

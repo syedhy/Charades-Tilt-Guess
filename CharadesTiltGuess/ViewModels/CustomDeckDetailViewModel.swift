@@ -21,7 +21,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
     private let wordIDProvider: () -> String
     private let dateProvider: () -> Date
 
-    let availableColors: [DeckColor] = [.mint, .yellow, .coral, .blue, .purple, .pink, .gray]
+    let availableColors: [DeckColor] = [.mint, .yellow, .coral, .blue, .purple, .pink, .orange, .gray]
 
     init(
         deck: Deck,

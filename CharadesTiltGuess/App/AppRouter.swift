@@ -34,17 +34,20 @@ final class AppRouter: ObservableObject {
     }
 
     func startGame(deck: Deck) {
+        OrientationController.shared.useGameplayLandscape()
         activeGame = ActiveGame(deck: deck)
     }
 
     func finishGame(deck: Deck) {
         pendingResultsDeck = deck
         activeGame = nil
+        OrientationController.shared.useMenuPortrait()
     }
 
     func exitGame() {
         pendingResultsDeck = nil
         activeGame = nil
+        OrientationController.shared.useMenuPortrait()
         path = NavigationPath()
     }
 
@@ -56,6 +59,7 @@ final class AppRouter: ObservableObject {
     }
 
     func goHome() {
+        OrientationController.shared.useMenuPortrait()
         path = NavigationPath()
     }
 

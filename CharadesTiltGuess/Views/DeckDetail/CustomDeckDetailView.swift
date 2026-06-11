@@ -4,7 +4,7 @@ import UIKit
 struct CustomDeckDetailView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel: CustomDeckDetailViewModel
-    @State private var isEditing = false
+    @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
     @State private var isShowingAddCardSheet = false
     @State private var isShowingPasteSheet = false
@@ -22,24 +22,25 @@ struct CustomDeckDetailView: View {
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            DoodlePaperBackground()
+            DeckDetailBackground(accent: viewModel.draftColor.displayColor)
 
-            if isEditing {
-                editContent
-            } else {
-                detailContent
-            }
+            deckManagementContent
 
-            if isEditing {
-                floatingEditTools
-                    .transition(.scale.combined(with: .opacity))
+            floatingEditTools
+
+            if isShowingAddCardSheet {
+                AddCardSheet(viewModel: viewModel) {
+                    isShowingAddCardSheet = false
+                }
+                .transition(.opacity)
+                .zIndex(2)
             }
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
         .preferredColorScheme(.light)
-        .animation(.snappy(duration: 0.18), value: isEditing)
+        .animation(.snappy(duration: 0.16), value: isEditingDeckIdentity)
         .alert("Delete deck?", isPresented: $isShowingDeleteConfirmation) {
             Button("Cancel", role: .cancel) {}
             Button("Delete", role: .destructive) {
@@ -49,11 +50,6 @@ struct CustomDeckDetailView: View {
         } message: {
             Text("This removes \"\(viewModel.deck.name)\" and all of its cards from this device.")
         }
-        .sheet(isPresented: $isShowingAddCardSheet) {
-            AddCardSheet(viewModel: viewModel)
-                .presentationDetents([.height(350)])
-                .presentationDragIndicator(.hidden)
-        }
         .sheet(isPresented: $isShowingPasteSheet) {
             PasteCardsSheet(viewModel: viewModel)
                 .presentationDetents([.large])
@@ -61,208 +57,229 @@ struct CustomDeckDetailView: View {
         }
     }
 
-    private var detailContent: some View {
+    private var deckManagementContent: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
-                detailPanel
+            VStack(alignment: .leading, spacing: 26) {
+                managementHeader
+                deckTitleBlock
+
+                if isEditingDeckIdentity {
+                    editFormPanel
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                }
+
+                cardsWorkspace
             }
             .padding(.horizontal, 20)
-            .padding(.top, 22)
-            .padding(.bottom, 42)
-        }
-        .scrollIndicators(.hidden)
-    }
-
-    private var detailPanel: some View {
-        DoodlePanel(background: viewModel.deck.color.displayColor.opacity(0.92)) {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                detailControls
-
-                VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
-                    Text(viewModel.deck.name)
-                        .font(.system(size: 48, weight: .black, design: .rounded))
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.62)
-
-                    Text(viewModel.cardCountText)
-                        .font(.system(size: 20, weight: .black, design: .rounded))
-                }
-                .foregroundStyle(AppTheme.Colors.ink)
-                .accessibilityIdentifier("customDeckDetailTitle")
-
-                if viewModel.deck.cards.isEmpty {
-                    detailEmptyState
-                } else {
-                    detailCardPreview
-                }
-
-                if let deleteErrorMessage = viewModel.deleteErrorMessage {
-                    Text(deleteErrorMessage)
-                        .font(.system(size: 13, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.coral)
-                }
-            }
-            .padding(AppTheme.Spacing.roomy)
-        }
-    }
-
-    private var detailControls: some View {
-        HStack(spacing: AppTheme.Spacing.standard) {
-            DoodleIconButton(
-                symbol: "trash",
-                accent: AppTheme.Colors.paperBright.opacity(0.66),
-                size: 44,
-                accessibilityLabel: "Delete deck"
-            ) {
-                isShowingDeleteConfirmation = true
-            }
-
-            DoodleIconButton(
-                symbol: "gearshape",
-                accent: AppTheme.Colors.paperBright.opacity(0.66),
-                size: 44,
-                accessibilityLabel: "Edit deck"
-            ) {
-                isEditing = true
-                viewModel.resetDraft()
-            }
-
-            Spacer()
-
-            DoodleIconButton(
-                symbol: "xmark",
-                accent: AppTheme.Colors.paperBright.opacity(0.78),
-                size: 44,
-                accessibilityLabel: "Close deck"
-            ) {
-                router.goBack()
-            }
-        }
-    }
-
-    private var detailEmptyState: some View {
-        VStack(spacing: AppTheme.Spacing.standard) {
-            EmptyDeckDoodle()
-                .frame(height: 150)
-                .opacity(0.62)
-
-            Text("Uh oh. Your deck is empty.")
-                .font(.system(size: 24, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink)
-                .multilineTextAlignment(.center)
-
-            DoodleActionButton(
-                title: "Add cards",
-                symbol: "plus",
-                accent: AppTheme.Colors.paperBright
-            ) {
-                isEditing = true
-                viewModel.resetDraft()
-            }
-            .accessibilityIdentifier("addCardsFromEmptyDeckButton")
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, AppTheme.Spacing.compact)
-    }
-
-    private var detailCardPreview: some View {
-        VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-            LazyVGrid(
-                columns: [GridItem(.adaptive(minimum: 116), spacing: 10)],
-                alignment: .leading,
-                spacing: 10
-            ) {
-                ForEach(viewModel.deck.cards.prefix(16)) { card in
-                    WordChip(text: card.text)
-                }
-            }
-
-            if viewModel.deck.cards.count > 16 {
-                Text("+ \(viewModel.deck.cards.count - 16) more")
-                    .font(.system(size: 14, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
-            }
-
-            DoodleActionButton(
-                title: "Play",
-                symbol: "play.fill",
-                accent: AppTheme.Colors.paperBright
-            ) {
-                router.open(.gameSetup(deck: viewModel.deck))
-            }
-            .accessibilityIdentifier("playCustomDeckButton")
-        }
-    }
-
-    private var editContent: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
-                editHeader
-                editFormPanel
-                editCardsSection
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 22)
+            .padding(.top, 20)
             .padding(.bottom, 132)
         }
         .scrollIndicators(.hidden)
         .scrollDismissesKeyboard(.interactively)
     }
 
-    private var editHeader: some View {
-        HStack(alignment: .center, spacing: AppTheme.Spacing.standard) {
+    private var managementHeader: some View {
+        HStack(spacing: 12) {
             DoodleIconButton(
                 symbol: "xmark",
-                size: 46,
-                accessibilityLabel: "Cancel editing deck"
+                accent: AppTheme.Colors.paperBright.opacity(0.66),
+                size: 48,
+                accessibilityLabel: "Close deck"
             ) {
-                viewModel.resetDraft()
-                isNameFocused = false
-                isEditing = false
+                router.goBack()
             }
 
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Edit deck")
-                    .font(.system(size: 30, weight: .black, design: .rounded))
+            Button {
+                isEditingDeckIdentity.toggle()
+                isNameFocused = isEditingDeckIdentity
+            } label: {
+                Text(isEditingDeckIdentity ? "Done" : "Edit")
+                    .font(.system(size: 18, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-
-                Text("Tune it, then save.")
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
+                    .frame(width: 78, height: 48)
+                    .background(AppTheme.Colors.blue, in: Capsule())
+                    .overlay {
+                        Capsule()
+                            .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                    }
+                    .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
             }
+            .buttonStyle(DoodlePressStyle())
+            .accessibilityLabel(isEditingDeckIdentity ? "Hide deck identity editor" : "Edit deck name and color")
 
             Spacer()
 
-            Button {
-                guard viewModel.saveDraft() != nil else { return }
-                isNameFocused = false
-                isEditing = false
-            } label: {
-                HStack(spacing: 8) {
-                    Text("Save")
-                        .font(.system(size: 17, weight: .black, design: .rounded))
-
-                    Image(systemName: "checkmark")
-                        .font(.system(size: 15, weight: .black))
-                }
-                .foregroundStyle(AppTheme.Colors.ink)
-                .padding(.horizontal, 16)
-                .frame(height: 48)
-                .background(
-                    viewModel.canSaveDraft ? AppTheme.Colors.blue : AppTheme.Colors.gray.opacity(0.45),
-                    in: Capsule()
-                )
-                .overlay {
-                    Capsule()
-                        .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-                }
-                .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
+            DoodleIconButton(
+                symbol: "trash",
+                accent: AppTheme.Colors.paperBright.opacity(0.58),
+                size: 48,
+                accessibilityLabel: "Delete deck"
+            ) {
+                isShowingDeleteConfirmation = true
             }
-            .buttonStyle(DoodlePressStyle())
-            .disabled(!viewModel.canSaveDraft)
-            .opacity(viewModel.canSaveDraft ? 1 : 0.58)
-            .accessibilityIdentifier("saveCustomDeckEditsButton")
+
+            saveButton
         }
+    }
+
+    private var saveButton: some View {
+        Button {
+            guard viewModel.saveDraft() != nil else { return }
+            isNameFocused = false
+            isEditingDeckIdentity = false
+        } label: {
+            HStack(spacing: 8) {
+                Text("Save")
+                    .font(.system(size: 18, weight: .black, design: .rounded))
+
+                Image(systemName: "checkmark")
+                    .font(.system(size: 16, weight: .black))
+            }
+            .foregroundStyle(AppTheme.Colors.ink)
+            .padding(.horizontal, 17)
+            .frame(height: 48)
+            .background(
+                viewModel.canSaveDraft ? AppTheme.Colors.blue : AppTheme.Colors.gray.opacity(0.45),
+                in: Capsule()
+            )
+            .overlay {
+                Capsule()
+                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+            }
+            .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
+        }
+        .buttonStyle(DoodlePressStyle())
+        .disabled(!viewModel.canSaveDraft)
+        .opacity(viewModel.canSaveDraft ? 1 : 0.58)
+        .accessibilityIdentifier("saveCustomDeckEditsButton")
+    }
+
+    private var deckTitleBlock: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(viewModel.trimmedDraftName.isEmpty ? viewModel.deck.name : viewModel.trimmedDraftName)
+                .font(.system(size: 48, weight: .black, design: .rounded))
+                .lineLimit(2)
+                .minimumScaleFactor(0.62)
+                .foregroundStyle(viewModel.draftColor.displayColor)
+                .accessibilityIdentifier("customDeckDetailTitle")
+
+            Text(viewModel.draftCardCountText)
+                .font(.system(size: 21, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+        }
+    }
+
+    private var cardsWorkspace: some View {
+        VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
+            if let cardErrorMessage = viewModel.cardErrorMessage {
+                Text(cardErrorMessage)
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.coral)
+            }
+
+            if let saveErrorMessage = viewModel.saveErrorMessage {
+                Text(saveErrorMessage)
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.coral)
+            }
+
+            if let deleteErrorMessage = viewModel.deleteErrorMessage {
+                Text(deleteErrorMessage)
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.coral)
+            }
+
+            if viewModel.draftCards.isEmpty {
+                emptyCardsWorkspace
+            } else {
+                cardPreviewPanel
+            }
+        }
+    }
+
+    private var emptyCardsWorkspace: some View {
+        VStack(spacing: AppTheme.Spacing.standard) {
+            Spacer(minLength: 42)
+
+            EmptyDeckDoodle()
+                .frame(height: 175)
+                .opacity(0.22)
+
+            Text("Your deck is empty\nAdd cards to\nyour Deck!")
+                .font(.system(size: 34, weight: .black, design: .rounded))
+                .multilineTextAlignment(.center)
+                .foregroundStyle(AppTheme.Colors.ink.opacity(0.42))
+                .frame(maxWidth: .infinity)
+
+            Spacer(minLength: 120)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(minHeight: 520)
+    }
+
+    private var cardPreviewPanel: some View {
+        DoodlePanel(background: viewModel.draftColor.displayColor.opacity(0.88)) {
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
+                LazyVGrid(
+                    columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2),
+                    alignment: .leading,
+                    spacing: 12
+                ) {
+                    ForEach(viewModel.draftCards.prefix(16)) { card in
+                        EditCardRow(card: card) {
+                            viewModel.deleteDraftCard(id: card.id)
+                        }
+                    }
+                }
+
+                if viewModel.draftCards.count > 16 {
+                    Text("+ \(viewModel.draftCards.count - 16) more")
+                        .font(.system(size: 18, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+                }
+
+                DoodleActionButton(
+                    title: "Play",
+                    symbol: "play.fill",
+                    accent: AppTheme.Colors.paperBright
+                ) {
+                    router.open(.gameSetup(deck: viewModel.deck))
+                }
+                .accessibilityIdentifier("playCustomDeckButton")
+            }
+            .padding(AppTheme.Spacing.roomy)
+        }
+    }
+
+    private var floatingEditTools: some View {
+        HStack(spacing: 14) {
+            DoodleIconButton(
+                symbol: "doc.on.clipboard",
+                accent: AppTheme.Colors.yellow,
+                size: 62,
+                accessibilityLabel: "Paste cards from clipboard"
+            ) {
+                isNameFocused = false
+                viewModel.refreshImportPreview(from: "")
+                isShowingPasteSheet = true
+            }
+
+            DoodleIconButton(
+                symbol: "plus",
+                accent: AppTheme.Colors.yellow,
+                size: 62,
+                accessibilityLabel: "Add card manually"
+            ) {
+                isNameFocused = false
+                var transaction = Transaction()
+                transaction.animation = nil
+                withTransaction(transaction) {
+                    isShowingAddCardSheet = true
+                }
+            }
+        }
+        .padding(.trailing, 28)
+        .padding(.bottom, 26)
     }
 
     private var editFormPanel: some View {
@@ -270,12 +287,6 @@ struct CustomDeckDetailView: View {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                 editNameField
                 editColorPicker
-
-                if let saveErrorMessage = viewModel.saveErrorMessage {
-                    Text(saveErrorMessage)
-                        .font(.system(size: 13, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.coral)
-                }
             }
             .padding(AppTheme.Spacing.roomy)
         }
@@ -352,79 +363,40 @@ struct CustomDeckDetailView: View {
             }
         }
     }
+}
 
-    private var editCardsSection: some View {
-        VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
-            HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Cards")
-                        .font(.system(size: 29, weight: .black, design: .rounded))
+private struct DeckDetailBackground: View {
+    let accent: Color
 
-                    Text(viewModel.draftCardCountText)
-                        .font(.system(size: 14, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
-                }
+    var body: some View {
+        ZStack {
+            Color(red: 0.09, green: 0.12, blue: 0.16)
+                .ignoresSafeArea()
 
-                Spacer()
-            }
-            .foregroundStyle(AppTheme.Colors.ink)
-
-            if let cardErrorMessage = viewModel.cardErrorMessage {
-                Text(cardErrorMessage)
-                    .font(.system(size: 13, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.coral)
-            }
-
-            if viewModel.draftCards.isEmpty {
-                VStack(spacing: AppTheme.Spacing.standard) {
-                    EmptyDeckDoodle()
-                        .frame(height: 145)
-                        .opacity(0.36)
-
-                    Text("Your deck is empty\nAdd cards to your deck!")
-                        .font(.system(size: 31, weight: .black, design: .rounded))
-                        .multilineTextAlignment(.center)
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
-                }
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 40)
-            } else {
-                VStack(spacing: 10) {
-                    ForEach(viewModel.draftCards) { card in
-                        EditCardRow(card: card) {
-                            viewModel.deleteDraftCard(id: card.id)
-                        }
+            Canvas { context, size in
+                for y in stride(from: 0.0, through: size.height, by: 18.0) {
+                    for x in stride(from: 0.0, through: size.width, by: 18.0) {
+                        let rect = CGRect(x: x, y: y, width: 1.4, height: 1.4)
+                        let opacity = ((Int(x + y) / 18).isMultiple(of: 3)) ? 0.055 : 0.025
+                        context.fill(Path(ellipseIn: rect), with: .color(AppTheme.Colors.paperBright.opacity(opacity)))
                     }
                 }
             }
-        }
-    }
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
 
-    private var floatingEditTools: some View {
-        HStack(spacing: 14) {
-            DoodleIconButton(
-                symbol: "doc.on.clipboard",
-                accent: AppTheme.Colors.yellow,
-                size: 62,
-                accessibilityLabel: "Paste cards from clipboard"
-            ) {
-                isNameFocused = false
-                viewModel.refreshImportPreview(from: "")
-                isShowingPasteSheet = true
-            }
+            accent
+                .opacity(0.20)
+                .blur(radius: 72)
+                .frame(width: 260, height: 260)
+                .offset(x: -110, y: -210)
 
-            DoodleIconButton(
-                symbol: "plus",
-                accent: AppTheme.Colors.yellow,
-                size: 62,
-                accessibilityLabel: "Add card manually"
-            ) {
-                isNameFocused = false
-                isShowingAddCardSheet = true
-            }
+            AppTheme.Colors.coral
+                .opacity(0.12)
+                .blur(radius: 88)
+                .frame(width: 280, height: 280)
+                .offset(x: 150, y: 260)
         }
-        .padding(.trailing, 28)
-        .padding(.bottom, 26)
     }
 }
 
@@ -433,55 +405,33 @@ private struct EditCardRow: View {
     let onDelete: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 8) {
             Text(card.text)
-                .font(.system(size: 17, weight: .black, design: .rounded))
+                .font(.system(size: 15, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
-                .lineLimit(2)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .lineLimit(1)
+                .minimumScaleFactor(0.74)
+                .frame(maxWidth: .infinity)
 
             Button(action: onDelete) {
-                Image(systemName: "trash")
-                    .font(.system(size: 15, weight: .black))
+                Image(systemName: "xmark")
+                    .font(.system(size: 10, weight: .black))
                     .foregroundStyle(AppTheme.Colors.ink)
-                    .frame(width: 36, height: 36)
-                    .background(AppTheme.Colors.paper, in: Circle())
-                    .overlay {
-                        Circle()
-                            .stroke(AppTheme.Colors.ink, lineWidth: 2)
-                    }
+                    .frame(width: 22, height: 22)
+                    .background(AppTheme.Colors.paperBright.opacity(0.88), in: Circle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Delete \(card.text)")
         }
-        .padding(.horizontal, 14)
-        .padding(.vertical, 12)
-        .background(AppTheme.Colors.paperBright, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .padding(.leading, 12)
+        .padding(.trailing, 7)
+        .padding(.vertical, 8)
+        .background(AppTheme.Colors.paperBright.opacity(0.76), in: Capsule())
         .overlay {
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(AppTheme.Colors.ink, lineWidth: 2)
+            Capsule()
+                .stroke(AppTheme.Colors.ink.opacity(0.46), lineWidth: 2)
         }
-        .shadow(color: AppTheme.Colors.ink.opacity(0.10), radius: 0, x: 3, y: 3)
-    }
-}
-
-private struct WordChip: View {
-    let text: String
-
-    var body: some View {
-        Text(text)
-            .font(.system(size: 15, weight: .black, design: .rounded))
-            .foregroundStyle(AppTheme.Colors.ink)
-            .lineLimit(1)
-            .minimumScaleFactor(0.75)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 7)
-            .frame(maxWidth: .infinity)
-            .background(AppTheme.Colors.paperBright.opacity(0.72), in: Capsule())
-            .overlay {
-                Capsule()
-                    .stroke(AppTheme.Colors.ink.opacity(0.48), lineWidth: 2)
-            }
+        .shadow(color: AppTheme.Colors.ink.opacity(0.12), radius: 0, x: 2, y: 2)
     }
 }
 
@@ -518,32 +468,33 @@ private struct EmptyDeckDoodle: View {
 
 private struct AddCardSheet: View {
     @ObservedObject var viewModel: CustomDeckDetailViewModel
-    @Environment(\.dismiss) private var dismiss
+    let onDismiss: () -> Void
     @State private var cardText = ""
     @FocusState private var isCardFocused: Bool
 
     var body: some View {
-        ZStack {
-            AppTheme.Colors.paper
+        ZStack(alignment: .top) {
+            AppTheme.Colors.ink
+                .opacity(0.36)
                 .ignoresSafeArea()
 
             DoodlePanel(background: AppTheme.Colors.yellow) {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                    HStack {
-                        Text("Add Card")
-                            .font(.system(size: 36, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-
-                        Spacer()
-
+                    HStack(spacing: AppTheme.Spacing.standard) {
                         DoodleIconButton(
                             symbol: "xmark",
                             accent: AppTheme.Colors.paperBright.opacity(0.70),
                             size: 42,
                             accessibilityLabel: "Close add card"
                         ) {
-                            dismiss()
+                            onDismiss()
                         }
+
+                        Text("Add Card")
+                            .font(.system(size: 36, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+
+                        Spacer()
                     }
 
                     VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
@@ -599,6 +550,7 @@ private struct AddCardSheet: View {
                 .padding(AppTheme.Spacing.roomy)
             }
             .padding(20)
+            .padding(.top, 32)
         }
         .onAppear {
             isCardFocused = true
@@ -622,7 +574,6 @@ private struct PasteCardsSheet: View {
                     header
                     textInput
                     preview
-                    importButton
                 }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 22)
@@ -640,7 +591,15 @@ private struct PasteCardsSheet: View {
     private var header: some View {
         DoodlePanel(background: AppTheme.Colors.paperBright) {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
-                HStack(alignment: .top) {
+                HStack(alignment: .top, spacing: AppTheme.Spacing.standard) {
+                    DoodleIconButton(
+                        symbol: "xmark",
+                        size: 42,
+                        accessibilityLabel: "Close paste cards"
+                    ) {
+                        dismiss()
+                    }
+
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Paste from clipboard")
                             .font(.system(size: 32, weight: .black, design: .rounded))
@@ -652,15 +611,9 @@ private struct PasteCardsSheet: View {
                     }
 
                     Spacer()
-
-                    DoodleIconButton(
-                        symbol: "xmark",
-                        size: 42,
-                        accessibilityLabel: "Close paste cards"
-                    ) {
-                        dismiss()
-                    }
                 }
+
+                importButton
 
                 DoodleActionButton(
                     title: "Paste clipboard",
@@ -726,17 +679,17 @@ private struct PasteCardsSheet: View {
                         .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 } else {
                     LazyVGrid(
-                        columns: [GridItem(.adaptive(minimum: 116), spacing: 10)],
+                        columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2),
                         alignment: .leading,
-                        spacing: 10
+                        spacing: 12
                     ) {
-                        ForEach(viewModel.importPreview.cards.prefix(12), id: \.self) { card in
-                            WordChip(text: card)
+                        ForEach(Array(viewModel.importPreview.cards.prefix(14).enumerated()), id: \.element) { index, card in
+                            ImportPreviewChip(text: card, index: index)
                         }
                     }
 
-                    if viewModel.importPreview.cards.count > 12 {
-                        Text("+ \(viewModel.importPreview.cards.count - 12) more")
+                    if viewModel.importPreview.cards.count > 14 {
+                        Text("+ \(viewModel.importPreview.cards.count - 14) more")
                             .font(.system(size: 13, weight: .black, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                     }
@@ -752,13 +705,43 @@ private struct PasteCardsSheet: View {
             symbol: "tray.and.arrow.down.fill",
             accent: viewModel.importPreview.hasImportableCards ? AppTheme.Colors.mint : AppTheme.Colors.gray.opacity(0.42)
         ) {
-            guard viewModel.importCards(from: pastedText) > 0 else { return }
-            pastedText = ""
-            dismiss()
+            importCardsAndDismiss()
         }
         .disabled(!viewModel.importPreview.hasImportableCards)
         .opacity(viewModel.importPreview.hasImportableCards ? 1 : 0.60)
         .accessibilityIdentifier("importClipboardCardsButton")
+    }
+
+    private func importCardsAndDismiss() {
+        guard viewModel.importCards(from: pastedText) > 0 else { return }
+        pastedText = ""
+        dismiss()
+    }
+}
+
+private struct ImportPreviewChip: View {
+    let text: String
+    let index: Int
+
+    private var background: Color {
+        [AppTheme.Colors.paperBright, AppTheme.Colors.mint.opacity(0.45), AppTheme.Colors.yellow.opacity(0.52)][index % 3]
+    }
+
+    var body: some View {
+        Text(text)
+            .font(.system(size: 15, weight: .black, design: .rounded))
+            .foregroundStyle(AppTheme.Colors.ink)
+            .lineLimit(1)
+            .minimumScaleFactor(0.72)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .background(background, in: Capsule())
+            .overlay {
+                Capsule()
+                    .stroke(AppTheme.Colors.ink.opacity(0.38), lineWidth: 2)
+            }
+            .shadow(color: AppTheme.Colors.ink.opacity(0.10), radius: 0, x: 2, y: 2)
     }
 }
 

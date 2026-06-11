@@ -5,5 +5,6 @@ enum DeckColor: String, Codable, CaseIterable, Hashable {
     case blue
     case purple
     case pink
+    case orange
     case gray
 }

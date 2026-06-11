@@ -9,6 +9,7 @@ enum AppTheme {
         static let mint = Color(red: 0.39, green: 0.82, blue: 0.62)
         static let coral = Color(red: 0.96, green: 0.42, blue: 0.36)
         static let blue = Color(red: 0.37, green: 0.68, blue: 0.92)
+        static let orange = Color(red: 1.00, green: 0.58, blue: 0.22)
         static let gray = Color(red: 0.68, green: 0.68, blue: 0.65)
     }
 
@@ -46,6 +47,8 @@ extension DeckColor {
             Color(red: 0.57, green: 0.40, blue: 0.88)
         case .pink:
             Color(red: 0.92, green: 0.43, blue: 0.66)
+        case .orange:
+            AppTheme.Colors.orange
         case .gray:
             Color(red: 0.68, green: 0.68, blue: 0.65)
         }

@@ -10,7 +10,7 @@ final class DeckEditorViewModel: ObservableObject {
     private let idProvider: () -> String
     private let dateProvider: () -> Date
 
-    let availableColors: [DeckColor] = [.mint, .yellow, .coral, .blue, .purple, .pink, .gray]
+    let availableColors: [DeckColor] = [.mint, .yellow, .coral, .blue, .purple, .pink, .orange, .gray]
 
     init(
         deckStore: DeckStore = DeckStore(),

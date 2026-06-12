@@ -11,7 +11,8 @@ final class CustomDeckDetailViewModel: ObservableObject {
         cards: [],
         blankLineCount: 0,
         duplicateCount: 0,
-        tooLongLines: []
+        tooLongLines: [],
+        overDeckLimitCount: 0
     )
     @Published private(set) var saveErrorMessage: String?
     @Published private(set) var deleteErrorMessage: String?
@@ -92,6 +93,10 @@ final class CustomDeckDetailViewModel: ObservableObject {
             return "Keep cards under \(Self.maxCardTextLength) characters."
         }
 
+        if draftCards.count >= Self.maxCustomDeckCardCount {
+            return "Custom decks can have up to \(Self.maxCustomDeckCardCount) cards."
+        }
+
         if draftCards.contains(where: { $0.text.localizedCaseInsensitiveCompare(trimmedText) == .orderedSame }) {
             return "That card is already in this deck."
         }
@@ -120,16 +125,22 @@ final class CustomDeckDetailViewModel: ObservableObject {
     }
 
     func refreshImportPreview(from text: String) {
-        importPreview = importService.previewCards(from: text, existingCards: draftCards)
+        importPreview = importPreviewLimitedToRemainingSlots(
+            importService.previewCards(from: text, existingCards: draftCards)
+        )
     }
 
     @discardableResult
     func importCards(from text: String) -> Int {
-        let preview = importService.previewCards(from: text, existingCards: draftCards)
+        let preview = importPreviewLimitedToRemainingSlots(
+            importService.previewCards(from: text, existingCards: draftCards)
+        )
         importPreview = preview
 
         guard preview.hasImportableCards else {
-            cardErrorMessage = "Paste one card per line to import."
+            cardErrorMessage = draftCards.count >= Self.maxCustomDeckCardCount
+                ? "Custom decks can have up to \(Self.maxCustomDeckCardCount) cards."
+                : "Paste one card per line to import."
             return 0
         }
 
@@ -145,6 +156,11 @@ final class CustomDeckDetailViewModel: ObservableObject {
     func saveDraft() -> Deck? {
         guard canSaveDraft else {
             saveErrorMessage = trimmedDraftName.isEmpty ? "Give your deck a name first." : "Keep the name under \(Self.maxNameLength) characters."
+            return nil
+        }
+
+        guard draftCards.count <= Self.maxCustomDeckCardCount else {
+            saveErrorMessage = "Custom decks can have up to \(Self.maxCustomDeckCardCount) cards."
             return nil
         }
 
@@ -177,9 +193,23 @@ final class CustomDeckDetailViewModel: ObservableObject {
             return false
         }
     }
+
+    private func importPreviewLimitedToRemainingSlots(_ preview: ClipboardImportPreview) -> ClipboardImportPreview {
+        let remainingSlots = max(Self.maxCustomDeckCardCount - draftCards.count, 0)
+        guard preview.cards.count > remainingSlots else { return preview }
+
+        return ClipboardImportPreview(
+            cards: Array(preview.cards.prefix(remainingSlots)),
+            blankLineCount: preview.blankLineCount,
+            duplicateCount: preview.duplicateCount,
+            tooLongLines: preview.tooLongLines,
+            overDeckLimitCount: preview.overDeckLimitCount + preview.cards.count - remainingSlots
+        )
+    }
 }
 
 extension CustomDeckDetailViewModel {
     static let maxNameLength = 20
     static let maxCardTextLength = 50
+    static let maxCustomDeckCardCount = 200
 }

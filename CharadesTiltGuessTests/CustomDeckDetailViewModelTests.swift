@@ -77,6 +77,50 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         )
     }
 
+    func testAddCardRejectsCardsBeyondCustomDeckLimit() {
+        let viewModel = makeViewModel(cards: makeCards(count: CustomDeckDetailViewModel.maxCustomDeckCardCount))
+
+        XCTAssertFalse(viewModel.addCard(text: "One Too Many"))
+        XCTAssertEqual(viewModel.cardErrorMessage, "Custom decks can have up to 200 cards.")
+        XCTAssertEqual(viewModel.draftCards.count, CustomDeckDetailViewModel.maxCustomDeckCardCount)
+    }
+
+    func testImportCardsOnlyUsesRemainingCustomDeckSlots() {
+        var nextID = 1
+        let existingCards = makeCards(count: CustomDeckDetailViewModel.maxCustomDeckCardCount - 1)
+        let viewModel = makeViewModel(cards: existingCards) {
+            defer { nextID += 1 }
+            return "new-\(nextID)"
+        }
+
+        let pastedText = """
+        Apple
+        River
+        Mountain
+        """
+
+        viewModel.refreshImportPreview(from: pastedText)
+
+        XCTAssertEqual(viewModel.importPreview.cards, ["Apple"])
+        XCTAssertEqual(viewModel.importPreview.overDeckLimitCount, 2)
+        XCTAssertEqual(
+            viewModel.importPreview.summaryMessages.last,
+            "2 cards were skipped because custom decks are limited to 200 cards."
+        )
+
+        XCTAssertEqual(viewModel.importCards(from: pastedText), 1)
+        XCTAssertEqual(viewModel.draftCards.first, GameWord(id: "new-1", text: "Apple"))
+        XCTAssertEqual(viewModel.draftCards.count, CustomDeckDetailViewModel.maxCustomDeckCardCount)
+    }
+
+    func testSaveDraftRejectsDeckBeyondCustomDeckLimit() {
+        let tooManyCards = makeCards(count: CustomDeckDetailViewModel.maxCustomDeckCardCount + 1)
+        let viewModel = makeViewModel(cards: tooManyCards)
+
+        XCTAssertNil(viewModel.saveDraft())
+        XCTAssertEqual(viewModel.saveErrorMessage, "Custom decks can have up to 200 cards.")
+    }
+
     func testSaveDraftPersistsEditedDeck() throws {
         let store = makeCustomStore()
         let deckStore = DeckStore(customDeckStore: store)
@@ -138,5 +182,11 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
             createdDate: Date(timeIntervalSince1970: 100),
             updatedDate: Date(timeIntervalSince1970: 100)
         )
+    }
+
+    private func makeCards(count: Int) -> [GameWord] {
+        (1...count).map { index in
+            GameWord(id: "word-\(index)", text: "Card \(index)")
+        }
     }
 }

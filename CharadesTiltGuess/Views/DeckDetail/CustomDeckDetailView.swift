@@ -238,7 +238,7 @@ struct CustomDeckDetailView: View {
     }
 
     private var editHeader: some View {
-        VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
+        VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .center, spacing: AppTheme.Spacing.standard) {
                 DoodleIconButton(
                     symbol: "xmark",
@@ -316,10 +316,6 @@ struct CustomDeckDetailView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
-
-                Text(isCustomDeck ? viewModel.draftCardCountText : viewModel.cardCountText)
-                    .font(.system(size: 16, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
 
             playDeckButton

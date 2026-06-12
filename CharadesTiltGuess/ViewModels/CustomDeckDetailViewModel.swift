@@ -60,6 +60,10 @@ final class CustomDeckDetailViewModel: ObservableObject {
         !trimmedDraftName.isEmpty && draftName.count <= Self.maxNameLength
     }
 
+    var hasUnsavedChanges: Bool {
+        trimmedDraftName != deck.name || draftColor != deck.color || draftCards != deck.cards
+    }
+
     func resetDraft() {
         draftName = deck.name
         draftColor = deck.color
@@ -103,7 +107,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
         }
 
         let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
-        draftCards.append(GameWord(id: wordIDProvider(), text: trimmedText))
+        draftCards.insert(GameWord(id: wordIDProvider(), text: trimmedText), at: 0)
         cardErrorMessage = nil
         saveErrorMessage = nil
         refreshImportPreview(from: "")
@@ -130,7 +134,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
         }
 
         let newCards = preview.cards.map { GameWord(id: wordIDProvider(), text: $0) }
-        draftCards.append(contentsOf: newCards)
+        draftCards.insert(contentsOf: newCards, at: 0)
         cardErrorMessage = nil
         saveErrorMessage = nil
         refreshImportPreview(from: "")

@@ -29,7 +29,10 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         })
 
         XCTAssertTrue(viewModel.addCard(text: "  Pizza  "))
-        XCTAssertEqual(viewModel.draftCards.last, GameWord(id: "word-1", text: "Pizza"))
+        XCTAssertEqual(viewModel.draftCards.first, GameWord(id: "word-1", text: "Pizza"))
+
+        XCTAssertTrue(viewModel.addCard(text: "Burger"))
+        XCTAssertEqual(viewModel.draftCards.map(\.text), ["Burger", "Pizza"])
 
         XCTAssertFalse(viewModel.addCard(text: "pizza"))
         XCTAssertEqual(viewModel.cardErrorMessage, "That card is already in this deck.")
@@ -37,10 +40,13 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
 
     func testImportCardsSplitsNewlinesAndSkipsProblemLines() {
         var nextID = 10
-        let viewModel = makeViewModel(wordIDProvider: {
-            defer { nextID += 1 }
-            return "word-\(nextID)"
-        })
+        let viewModel = makeViewModel(
+            cards: [GameWord(id: "existing", text: "Existing Card")],
+            wordIDProvider: {
+                defer { nextID += 1 }
+                return "word-\(nextID)"
+            }
+        )
 
         let longLine = String(repeating: "A", count: CustomDeckDetailViewModel.maxCardTextLength + 1)
         let pastedText = """
@@ -65,7 +71,8 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
             [
                 GameWord(id: "word-10", text: "Apple"),
                 GameWord(id: "word-11", text: "Football"),
-                GameWord(id: "word-12", text: "Shah Rukh Khan")
+                GameWord(id: "word-12", text: "Shah Rukh Khan"),
+                GameWord(id: "existing", text: "Existing Card")
             ]
         )
     }
@@ -108,8 +115,11 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         XCTAssertEqual(try store.loadDecks(), [])
     }
 
-    private func makeViewModel(wordIDProvider: @escaping () -> String = { "word-test" }) -> CustomDeckDetailViewModel {
-        CustomDeckDetailViewModel(deck: makeDeck(cards: []), wordIDProvider: wordIDProvider)
+    private func makeViewModel(
+        cards: [GameWord] = [],
+        wordIDProvider: @escaping () -> String = { "word-test" }
+    ) -> CustomDeckDetailViewModel {
+        CustomDeckDetailViewModel(deck: makeDeck(cards: cards), wordIDProvider: wordIDProvider)
     }
 
     private func makeCustomStore() -> CustomDeckStore {

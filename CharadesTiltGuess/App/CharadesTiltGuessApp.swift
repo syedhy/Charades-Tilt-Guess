@@ -45,11 +45,10 @@ final class OrientationController {
         guard let windowScene = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first else {
-            UIViewController.attemptRotationToDeviceOrientation()
             return
         }
 
-        windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: orientations))
-        UIViewController.attemptRotationToDeviceOrientation()
+        windowScene.windows.first?.rootViewController?.setNeedsUpdateOfSupportedInterfaceOrientations()
+        windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: orientations)) { _ in }
     }
 }

@@ -23,13 +23,19 @@ struct CustomDeckDetailView: View {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
+    private var isCustomDeck: Bool {
+        viewModel.deck.type == .custom
+    }
+
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             DoodlePaperBackground()
 
             editContent
 
-            floatingEditTools
+            if isCustomDeck {
+                floatingEditTools
+            }
 
             if let toastMessage {
                 ToastBanner(message: toastMessage)
@@ -74,8 +80,6 @@ struct CustomDeckDetailView: View {
         .sheet(isPresented: $isShowingAddCardSheet) {
             AddCardSheet(viewModel: viewModel) {
                 isShowingAddCardSheet = false
-            } onCardAdded: { cardText in
-                showToast("Added \(cardText)")
             }
             .presentationDetents([.large])
             .presentationDragIndicator(.hidden)
@@ -238,78 +242,101 @@ struct CustomDeckDetailView: View {
             HStack(alignment: .center, spacing: AppTheme.Spacing.standard) {
                 DoodleIconButton(
                     symbol: "xmark",
-                size: 46,
-                accessibilityLabel: "Close custom deck"
-            ) {
-                closeDeck()
-            }
+                    size: 46,
+                    accessibilityLabel: "Close deck"
+                ) {
+                    closeDeck()
+                }
 
-            DoodleIconButton(
-                symbol: "trash",
-                accent: AppTheme.Colors.coral.opacity(0.82),
-                size: 46,
-                accessibilityLabel: "Delete deck"
-            ) {
-                isShowingDeleteConfirmation = true
-            }
+                if isCustomDeck {
+                    DoodleIconButton(
+                        symbol: "trash",
+                        accent: AppTheme.Colors.coral.opacity(0.82),
+                        size: 46,
+                        accessibilityLabel: "Delete deck"
+                    ) {
+                        isShowingDeleteConfirmation = true
+                    }
 
-            Spacer()
+                    Spacer()
 
-            Button {
-                toggleIdentityEditor()
-            } label: {
-                Text(isEditingDeckIdentity ? "Done" : "Edit")
-                        .font(.system(size: 16, weight: .black, design: .rounded))
+                    Button {
+                        toggleIdentityEditor()
+                    } label: {
+                        Text(isEditingDeckIdentity ? "Done" : "Edit")
+                            .font(.system(size: 16, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .padding(.horizontal, 15)
+                            .frame(height: 46)
+                            .background(AppTheme.Colors.blue, in: Capsule())
+                            .overlay {
+                                Capsule()
+                                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                            }
+                            .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
+                    }
+                    .buttonStyle(DoodlePressStyle())
+                    .accessibilityIdentifier("editDeckIdentityButton")
+
+                    Button {
+                        saveDeck(leaveOpen: true)
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text("Save")
+                                .font(.system(size: 17, weight: .black, design: .rounded))
+
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 15, weight: .black))
+                        }
                         .foregroundStyle(AppTheme.Colors.ink)
-                        .padding(.horizontal, 15)
-                        .frame(height: 46)
-                        .background(AppTheme.Colors.blue, in: Capsule())
+                        .padding(.horizontal, 16)
+                        .frame(height: 48)
+                        .background(
+                            viewModel.canSaveDraft ? AppTheme.Colors.blue : AppTheme.Colors.gray.opacity(0.45),
+                            in: Capsule()
+                        )
                         .overlay {
                             Capsule()
                                 .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
                         }
                         .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
-                }
-                .buttonStyle(DoodlePressStyle())
-                .accessibilityIdentifier("editDeckIdentityButton")
-
-            Button {
-                saveDeck(leaveOpen: true)
-            } label: {
-                    HStack(spacing: 8) {
-                        Text("Save")
-                            .font(.system(size: 17, weight: .black, design: .rounded))
-
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 15, weight: .black))
                     }
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .padding(.horizontal, 16)
-                    .frame(height: 48)
-                    .background(
-                        viewModel.canSaveDraft ? AppTheme.Colors.blue : AppTheme.Colors.gray.opacity(0.45),
-                        in: Capsule()
-                    )
-                    .overlay {
-                        Capsule()
-                            .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-                    }
-                    .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 3, y: 3)
+                    .buttonStyle(DoodlePressStyle())
+                    .disabled(!viewModel.canSaveDraft)
+                    .opacity(viewModel.canSaveDraft ? 1 : 0.58)
+                    .accessibilityIdentifier("saveCustomDeckEditsButton")
+                } else {
+                    Spacer()
                 }
-                .buttonStyle(DoodlePressStyle())
-                .disabled(!viewModel.canSaveDraft)
-                .opacity(viewModel.canSaveDraft ? 1 : 0.58)
-                .accessibilityIdentifier("saveCustomDeckEditsButton")
             }
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(viewModel.draftName.isEmpty ? viewModel.deck.name : viewModel.draftName)
+                Text(isCustomDeck && !viewModel.draftName.isEmpty ? viewModel.draftName : viewModel.deck.name)
                     .font(.system(size: 42, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
+
+                Text(isCustomDeck ? viewModel.draftCardCountText : viewModel.cardCountText)
+                    .font(.system(size: 16, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
+
+            playDeckButton
         }
+    }
+
+    private var playDeckButton: some View {
+        DoodleActionButton(
+            title: viewModel.draftCards.isEmpty ? "Add cards to play" : "Play deck",
+            symbol: viewModel.draftCards.isEmpty ? "exclamationmark.circle.fill" : "play.fill",
+            accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : viewModel.draftColor.displayColor
+        ) {
+            playDeck()
+        }
+        .disabled(viewModel.draftCards.isEmpty)
+        .opacity(viewModel.draftCards.isEmpty ? 0.62 : 1)
+        .accessibilityIdentifier("playDeckButton")
     }
 
     private var editFormPanel: some View {
@@ -433,8 +460,12 @@ struct CustomDeckDetailView: View {
             } else {
                 VStack(spacing: 10) {
                     ForEach(viewModel.draftCards) { card in
-                        EditCardRow(card: card) {
-                            viewModel.deleteDraftCard(id: card.id)
+                        if isCustomDeck {
+                            EditCardRow(card: card) {
+                                viewModel.deleteDraftCard(id: card.id)
+                            }
+                        } else {
+                            ReadOnlyCardRow(card: card)
                         }
                     }
                 }
@@ -497,6 +528,22 @@ struct CustomDeckDetailView: View {
         if !leaveOpen {
             router.goBack()
         }
+    }
+
+    private func playDeck() {
+        if isCustomDeck && viewModel.hasUnsavedChanges {
+            guard let savedDeck = viewModel.saveDraft() else {
+                isEditingDeckIdentity = true
+                return
+            }
+
+            isNameFocused = false
+            hideIdentityEditorImmediately()
+            router.open(.gameSetup(deck: savedDeck))
+            return
+        }
+
+        router.open(.gameSetup(deck: viewModel.deck))
     }
 
     private func toggleIdentityEditor() {
@@ -571,6 +618,32 @@ private struct EditCardRow: View {
     }
 }
 
+private struct ReadOnlyCardRow: View {
+    let card: GameWord
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Text(card.text)
+                .font(.system(size: 17, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+                .lineLimit(2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            Image(systemName: "rectangle.stack")
+                .font(.system(size: 15, weight: .black))
+                .foregroundStyle(AppTheme.Colors.ink.opacity(0.42))
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 14)
+        .background(AppTheme.Colors.paperBright, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(AppTheme.Colors.ink, lineWidth: 2)
+        }
+        .shadow(color: AppTheme.Colors.ink.opacity(0.10), radius: 0, x: 3, y: 3)
+    }
+}
+
 private struct WordChip: View {
     let text: String
 
@@ -625,8 +698,8 @@ private struct EmptyDeckDoodle: View {
 private struct AddCardSheet: View {
     @ObservedObject var viewModel: CustomDeckDetailViewModel
     let onDismiss: () -> Void
-    let onCardAdded: (String) -> Void
     @State private var cardText = ""
+    @State private var toastMessage: String?
     @FocusState private var isCardFocused: Bool
 
     var body: some View {
@@ -639,6 +712,11 @@ private struct AddCardSheet: View {
                     addCardHeader
                     cardInputPanel
                     addCardButton
+                    if let toastMessage {
+                        ToastBanner(message: toastMessage)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     currentCardsPreview
                 }
                 .padding(.horizontal, 20)
@@ -675,6 +753,7 @@ private struct AddCardSheet: View {
                 }
             }
             .padding(AppTheme.Spacing.roomy)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -717,6 +796,7 @@ private struct AddCardSheet: View {
                 }
             }
             .padding(AppTheme.Spacing.roomy)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -730,7 +810,7 @@ private struct AddCardSheet: View {
             guard viewModel.addCard(text: cardText) else { return }
             cardText = ""
             isCardFocused = true
-            onCardAdded(addedText)
+            showAddedToast(for: addedText)
         }
         .disabled(!viewModel.canAddCard(text: cardText))
         .opacity(viewModel.canAddCard(text: cardText) ? 1 : 0.60)
@@ -770,6 +850,20 @@ private struct AddCardSheet: View {
                 }
             }
             .padding(AppTheme.Spacing.roomy)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    private func showAddedToast(for cardText: String) {
+        withAnimation(.snappy(duration: 0.16)) {
+            toastMessage = "Added \(cardText)"
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.15) {
+            guard toastMessage == "Added \(cardText)" else { return }
+            withAnimation(.snappy(duration: 0.16)) {
+                toastMessage = nil
+            }
         }
     }
 }

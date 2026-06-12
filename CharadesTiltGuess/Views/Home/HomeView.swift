@@ -158,11 +158,7 @@ struct HomeView: View {
                 deckLoadError(message: loadErrorMessage)
             } else {
                 DeckGridView(decks: viewModel.decks) { deck in
-                    if deck.type == .custom {
-                        router.open(.customDeckDetail(deck: deck))
-                    } else {
-                        router.open(.gameSetup(deck: deck))
-                    }
+                    router.open(.customDeckDetail(deck: deck))
                 }
             }
 

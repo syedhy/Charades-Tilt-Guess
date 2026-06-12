@@ -671,9 +671,6 @@ private struct AddCardSheet: View {
                             .lineLimit(1)
                             .minimumScaleFactor(0.72)
 
-                        Text("Type one prompt, add it, then keep going.")
-                            .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
                     }
                 }
             }

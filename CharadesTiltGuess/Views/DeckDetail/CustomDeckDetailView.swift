@@ -10,6 +10,7 @@ struct CustomDeckDetailView: View {
     @State private var isShowingAddCardSheet = false
     @State private var isShowingPasteSheet = false
     @State private var toastMessage: String?
+    @State private var toastPlacement: ToastPlacement = .top
     @FocusState private var isNameFocused: Bool
 
     @MainActor
@@ -30,22 +31,13 @@ struct CustomDeckDetailView: View {
 
             floatingEditTools
 
-            if isShowingAddCardSheet {
-                AddCardSheet(viewModel: viewModel) {
-                    isShowingAddCardSheet = false
-                } onCardAdded: { cardText in
-                    showToast("Added \(cardText)")
-                }
-                .transition(.opacity)
-                .zIndex(2)
-            }
-
             if let toastMessage {
                 ToastBanner(message: toastMessage)
                     .padding(.horizontal, 24)
-                    .padding(.top, 14)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .padding(.top, toastPlacement == .top ? 14 : 0)
+                    .padding(.bottom, toastPlacement == .lower ? 150 : 0)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: toastPlacement.alignment)
+                    .transition(toastPlacement.transition)
                     .zIndex(4)
             }
         }
@@ -78,6 +70,15 @@ struct CustomDeckDetailView: View {
             PasteCardsSheet(viewModel: viewModel)
                 .presentationDetents([.large])
                 .presentationDragIndicator(.hidden)
+        }
+        .sheet(isPresented: $isShowingAddCardSheet) {
+            AddCardSheet(viewModel: viewModel) {
+                isShowingAddCardSheet = false
+            } onCardAdded: { cardText in
+                showToast("Added \(cardText)")
+            }
+            .presentationDetents([.large])
+            .presentationDragIndicator(.hidden)
         }
     }
 
@@ -307,11 +308,6 @@ struct CustomDeckDetailView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
-
-                Text("Add cards, paste lists, or tune the deck.")
-                    .font(.system(size: 15, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
-                    .lineLimit(2)
             }
         }
     }
@@ -337,8 +333,6 @@ struct CustomDeckDetailView: View {
             HStack {
                 Text("Deck name")
                     .font(.system(size: 17, weight: .black, design: .rounded))
-
-                Spacer()
 
                 Text(viewModel.nameCharacterCountText)
                     .font(.system(size: 12, weight: .black, design: .rounded))
@@ -408,9 +402,6 @@ struct CustomDeckDetailView: View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
             HStack {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Cards")
-                        .font(.system(size: 29, weight: .black, design: .rounded))
-
                     Text(viewModel.draftCardCountText)
                         .font(.system(size: 14, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
@@ -501,7 +492,7 @@ struct CustomDeckDetailView: View {
 
         isNameFocused = false
         hideIdentityEditorImmediately()
-        showToast("Deck saved")
+        showToast("Deck saved", placement: .lower)
 
         if !leaveOpen {
             router.goBack()
@@ -528,8 +519,9 @@ struct CustomDeckDetailView: View {
         }
     }
 
-    private func showToast(_ message: String) {
+    private func showToast(_ message: String, placement: ToastPlacement = .top) {
         withAnimation(.snappy(duration: 0.16)) {
+            toastPlacement = placement
             toastMessage = message
         }
 
@@ -639,7 +631,8 @@ private struct AddCardSheet: View {
 
     var body: some View {
         ZStack {
-            DoodlePaperBackground()
+            AppTheme.Colors.paper
+                .ignoresSafeArea()
 
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
@@ -958,6 +951,29 @@ private struct ImportPreviewChip: View {
                     .stroke(AppTheme.Colors.ink.opacity(0.42), lineWidth: 2)
             }
             .shadow(color: AppTheme.Colors.ink.opacity(0.08), radius: 0, x: 2, y: 2)
+    }
+}
+
+private enum ToastPlacement {
+    case top
+    case lower
+
+    var alignment: Alignment {
+        switch self {
+        case .top:
+            return .top
+        case .lower:
+            return .bottom
+        }
+    }
+
+    var transition: AnyTransition {
+        switch self {
+        case .top:
+            return .move(edge: .top).combined(with: .opacity)
+        case .lower:
+            return .move(edge: .bottom).combined(with: .opacity)
+        }
     }
 }
 

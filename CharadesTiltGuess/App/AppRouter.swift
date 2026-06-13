@@ -5,12 +5,13 @@ enum AppRoute: Hashable {
     case deckEditor
     case customDeckDetail(deck: Deck)
     case gameSetup(deck: Deck)
-    case results(deck: Deck)
+    case results(result: RoundResult)
 }
 
 struct ActiveGame: Identifiable, Equatable {
     let id = UUID()
     let deck: Deck
+    let duration: Int
 }
 
 @MainActor
@@ -18,7 +19,7 @@ final class AppRouter: ObservableObject {
     @Published var path = NavigationPath()
     @Published var activeGame: ActiveGame?
 
-    private var pendingResultsDeck: Deck?
+    private var pendingResult: RoundResult?
 
     func open(_ route: AppRoute) {
         path.append(route)
@@ -33,29 +34,29 @@ final class AppRouter: ObservableObject {
         }
     }
 
-    func startGame(deck: Deck) {
+    func startGame(deck: Deck, duration: Int) {
         OrientationController.shared.useGameplayLandscape()
-        activeGame = ActiveGame(deck: deck)
+        activeGame = ActiveGame(deck: deck, duration: duration)
     }
 
-    func finishGame(deck: Deck) {
-        pendingResultsDeck = deck
+    func finishGame(result: RoundResult) {
+        pendingResult = result
         activeGame = nil
         OrientationController.shared.useMenuPortrait()
     }
 
     func exitGame() {
-        pendingResultsDeck = nil
+        pendingResult = nil
         activeGame = nil
         OrientationController.shared.useMenuPortrait()
         path = NavigationPath()
     }
 
     func handleGameDismissal() {
-        guard let deck = pendingResultsDeck else { return }
+        guard let result = pendingResult else { return }
 
-        pendingResultsDeck = nil
-        path.append(AppRoute.results(deck: deck))
+        pendingResult = nil
+        path.append(AppRoute.results(result: result))
     }
 
     func goHome() {
@@ -81,8 +82,9 @@ struct AppShellView: View {
         }
         .fullScreenCover(item: $router.activeGame, onDismiss: router.handleGameDismissal) { game in
             GameView(
-                deckName: game.deck.name,
-                onEndRound: { router.finishGame(deck: game.deck) },
+                deck: game.deck,
+                duration: game.duration,
+                onRoundFinished: router.finishGame,
                 onExit: router.exitGame
             )
         }
@@ -99,13 +101,13 @@ struct AppShellView: View {
             CustomDeckDetailView(deck: deck)
         case let .gameSetup(deck):
             GameSetupView(
-                deckName: deck.name,
-                onStartRound: { router.startGame(deck: deck) }
+                deck: deck,
+                onStartRound: { duration in router.startGame(deck: deck, duration: duration) }
             )
-        case let .results(deck):
+        case let .results(result):
             ResultsView(
-                deckName: deck.name,
-                onPlayAgain: { router.startGame(deck: deck) },
+                result: result,
+                onPlayAgain: { router.startGame(deck: result.deck, duration: result.duration) },
                 onChooseDeck: router.goHome
             )
         }

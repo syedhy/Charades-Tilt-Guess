@@ -18,10 +18,11 @@ final class CharadesTiltGuessTests: XCTestCase {
             symbolName: "laptopcomputer"
         )
 
-        router.startGame(deck: deck)
+        router.startGame(deck: deck, duration: 60)
         XCTAssertEqual(router.activeGame?.deck, deck)
 
-        router.finishGame(deck: deck)
+        let result = RoundResult(deck: deck, duration: 60, correctWords: [], passedWords: [])
+        router.finishGame(result: result)
         XCTAssertNil(router.activeGame)
 
         router.handleGameDismissal()

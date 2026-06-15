@@ -17,7 +17,6 @@ final class GameViewModel: ObservableObject {
     private var motionManager: MotionManager?
     private let settings: GameSettings
     private let hapticsManager: HapticsManager
-    private var nextTiltActionDate = Date.distantPast
     private var hasFinished = false
     private let onFinish: (RoundResult) -> Void
 
@@ -131,22 +130,36 @@ final class GameViewModel: ObservableObject {
         }
 
         isTiltAvailable = true
-        tiltStatusText = "Tilt down for correct, tilt up to pass"
+        tiltStatusText = "Top forward for correct, top back to pass"
         motionManager.start { [weak self] action in
             self?.handleTiltAction(action)
         }
     }
 
     private func handleTiltAction(_ action: TiltAction) {
-        guard !hasFinished, !isPaused, Date() >= nextTiltActionDate else { return }
-
-        nextTiltActionDate = Date().addingTimeInterval(0.8)
+        guard !hasFinished, !isPaused else { return }
 
         switch action {
         case .correct:
-            mark(.correct)
+            markFromTilt(.correct)
         case .pass:
-            mark(.passed)
+            markFromTilt(.passed)
+        case .neutral:
+            feedback = nil
+        }
+    }
+
+    private func markFromTilt(_ status: WordStatus) {
+        feedback = status
+        if settings.hapticsEnabled {
+            hapticsManager.play(status)
+        }
+
+        let result = engine.markCurrentWord(status)
+        syncFromEngine()
+
+        if let result {
+            finishRound(with: result)
         }
     }
 

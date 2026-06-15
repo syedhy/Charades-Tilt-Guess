@@ -2,11 +2,12 @@ import SwiftUI
 
 struct GameSetupView: View {
     let deck: Deck
+    let settings: GameSettings
     let onStartRound: (Int) -> Void
 
     @State private var selectedDuration = 60
 
-    private let durations = [30, 60, 90, 120]
+    private let durations = GameSettings.availableDurations
     private var canStart: Bool { !deck.cards.isEmpty }
 
     var body: some View {
@@ -38,6 +39,9 @@ struct GameSetupView: View {
         .navigationTitle("Game Setup")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.light)
+        .onAppear {
+            selectedDuration = settings.defaultDuration
+        }
     }
 
     private var header: some View {
@@ -50,7 +54,7 @@ struct GameSetupView: View {
 
             HStack(spacing: 10) {
                 Label("\(deck.cards.count) cards", systemImage: "rectangle.stack.fill")
-                Label("Tilt later", systemImage: "iphone.gen3.radiowaves.left.and.right")
+                Label("\(settings.tiltSensitivity.displayName) tilt", systemImage: "iphone.gen3.radiowaves.left.and.right")
             }
             .font(.system(size: 14, weight: .black, design: .rounded))
             .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
@@ -99,8 +103,8 @@ struct GameSetupView: View {
                     .fixedSize(horizontal: false, vertical: true)
 
                 VStack(alignment: .leading, spacing: 10) {
-                    instructionRow(symbol: "checkmark.circle.fill", text: "Correct button scores the word")
-                    instructionRow(symbol: "arrow.uturn.forward.circle.fill", text: "Pass button skips the word")
+                    instructionRow(symbol: "checkmark.circle.fill", text: "Tilt down or tap Correct")
+                    instructionRow(symbol: "arrow.uturn.forward.circle.fill", text: "Tilt up or tap Pass")
                     instructionRow(symbol: "pause.circle.fill", text: "Pause anytime")
                 }
             }

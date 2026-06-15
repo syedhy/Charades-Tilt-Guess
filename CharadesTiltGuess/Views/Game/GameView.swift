@@ -3,6 +3,7 @@ import SwiftUI
 struct GameView: View {
     let deck: Deck
     let duration: Int
+    let settings: GameSettings
     let onRoundFinished: (RoundResult) -> Void
     let onExit: () -> Void
 
@@ -11,17 +12,20 @@ struct GameView: View {
     init(
         deck: Deck,
         duration: Int,
+        settings: GameSettings,
         onRoundFinished: @escaping (RoundResult) -> Void,
         onExit: @escaping () -> Void
     ) {
         self.deck = deck
         self.duration = duration
+        self.settings = settings
         self.onRoundFinished = onRoundFinished
         self.onExit = onExit
         _viewModel = StateObject(
             wrappedValue: GameViewModel(
                 deck: deck,
                 duration: duration,
+                settings: settings,
                 onFinish: onRoundFinished
             )
         )
@@ -40,6 +44,7 @@ struct GameView: View {
 
                 Spacer(minLength: 0)
 
+                tiltStatus
                 actionButtons
             }
             .padding(.horizontal, 32)
@@ -55,7 +60,7 @@ struct GameView: View {
         }
         .preferredColorScheme(.light)
         .onAppear {
-            viewModel.startTimerIfNeeded()
+            viewModel.startRoundSystemsIfNeeded()
         }
     }
 
@@ -158,6 +163,18 @@ struct GameView: View {
             .accessibilityIdentifier("correctButton")
         }
         .buttonStyle(DoodlePressStyle())
+    }
+
+    private var tiltStatus: some View {
+        Label(
+            viewModel.tiltStatusText,
+            systemImage: viewModel.isTiltAvailable ? "iphone.gen3.radiowaves.left.and.right" : "hand.tap.fill"
+        )
+        .font(.system(size: 13, weight: .black, design: .rounded))
+        .foregroundStyle(.white.opacity(0.68))
+        .lineLimit(1)
+        .minimumScaleFactor(0.72)
+        .accessibilityIdentifier("tiltStatus")
     }
 
     private func gameActionLabel(title: String, symbol: String, color: Color) -> some View {

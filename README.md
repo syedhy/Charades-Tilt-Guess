@@ -6,14 +6,17 @@ Players choose a deck, start a timed round, hold the phone up, and guess the wor
 
 ## Current Status
 
-Phase 0 is complete:
+Core MVP systems are now in place:
 
-- Minimal SwiftUI iOS app project created
-- App name and early home screen added
-- Basic playful visual direction started
-- Unit test and UI test targets added
-- Simulator build and tests verified
-- Detailed development plan saved in `docs/plans/`
+- SwiftUI iPhone app shell, navigation, and playful doodle visual direction
+- Bundled premade decks plus locally stored custom decks
+- Custom deck creation, editing, manual cards, and newline paste import
+- Game setup, timed button-driven rounds, pause, scoring, and results
+- Settings for default duration, haptics, and tilt sensitivity
+- Core Motion tilt controls with simulator-safe button fallback
+- Unit and UI test coverage for the main flows
+
+Broad UI polish and final visual refinement are intentionally deferred until the functional app is complete. That end-of-build work is tracked in GitHub issue #2.
 
 ## Product Direction
 
@@ -115,6 +118,7 @@ Next planned phases:
 8. Basic game loop with buttons
 9. Timer, pause, score, and results
 10. CoreMotion tilt detection
+11. End-of-build UI polish and visual refinement
 
 ## Repository
 
@@ -123,4 +127,3 @@ GitHub remote:
 ```text
 https://github.com/syedhy/Charades-Tilt-Guess.git
 ```
-

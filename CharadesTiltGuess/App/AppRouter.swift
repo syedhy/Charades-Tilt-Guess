@@ -72,6 +72,7 @@ final class AppRouter: ObservableObject {
 
 struct AppShellView: View {
     @EnvironmentObject private var router: AppRouter
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
 
     var body: some View {
         NavigationStack(path: $router.path) {
@@ -84,6 +85,7 @@ struct AppShellView: View {
             GameView(
                 deck: game.deck,
                 duration: game.duration,
+                settings: settingsViewModel.settings,
                 onRoundFinished: router.finishGame,
                 onExit: router.exitGame
             )
@@ -102,6 +104,7 @@ struct AppShellView: View {
         case let .gameSetup(deck):
             GameSetupView(
                 deck: deck,
+                settings: settingsViewModel.settings,
                 onStartRound: { duration in router.startGame(deck: deck, duration: duration) }
             )
         case let .results(result):

@@ -8,26 +8,51 @@ final class GameViewModel: ObservableObject {
     @Published private(set) var score: Int = 0
     @Published private(set) var passedCount: Int = 0
     @Published private(set) var feedback: WordStatus?
+    @Published private(set) var tiltStatusText = "Tilt controls need a real iPhone"
+    @Published private(set) var isTiltAvailable = false
     @Published var isPaused = false
 
     private var engine: GameEngine
     private var timerTask: Task<Void, Never>?
+    private var motionManager: MotionManager?
+    private let settings: GameSettings
+    private let hapticsManager: HapticsManager
+    private var nextTiltActionDate = Date.distantPast
     private var hasFinished = false
     private let onFinish: (RoundResult) -> Void
 
-    init(deck: Deck, duration: Int, onFinish: @escaping (RoundResult) -> Void) {
+    init(
+        deck: Deck,
+        duration: Int,
+        settings: GameSettings = .default,
+        hapticsManager: HapticsManager = .shared,
+        onFinish: @escaping (RoundResult) -> Void
+    ) {
         let engine = GameEngine(deck: deck, duration: duration)
         self.engine = engine
         self.timeRemaining = duration
         self.currentWordText = engine.currentWord?.text ?? "No cards"
+        self.settings = settings
+        self.hapticsManager = hapticsManager
         self.onFinish = onFinish
     }
 
     deinit {
         timerTask?.cancel()
+
+        if let motionManager {
+            Task { @MainActor in
+                motionManager.stop()
+            }
+        }
     }
 
-    func startTimerIfNeeded() {
+    func startRoundSystemsIfNeeded() {
+        startTimerIfNeeded()
+        startMotionIfAvailable()
+    }
+
+    private func startTimerIfNeeded() {
         guard timerTask == nil else { return }
 
         timerTask = Task { [weak self] in
@@ -53,6 +78,10 @@ final class GameViewModel: ObservableObject {
         guard !hasFinished, !isPaused else { return }
 
         feedback = status
+        if settings.hapticsEnabled {
+            hapticsManager.play(status)
+        }
+
         let result = engine.markCurrentWord(status)
         syncFromEngine()
 
@@ -71,14 +100,54 @@ final class GameViewModel: ObservableObject {
 
     func togglePause() {
         isPaused.toggle()
+
+        if isPaused {
+            motionManager?.stop()
+        } else {
+            startMotionIfAvailable()
+        }
     }
 
     func resume() {
         isPaused = false
+        startMotionIfAvailable()
     }
 
     func endRound() {
         finishRound()
+    }
+
+    private func startMotionIfAvailable() {
+        guard !hasFinished, !isPaused else { return }
+
+        if motionManager == nil {
+            motionManager = MotionManager(sensitivity: settings.tiltSensitivity)
+        }
+
+        guard let motionManager, motionManager.isAvailable else {
+            isTiltAvailable = false
+            tiltStatusText = "Tilt controls need a real iPhone"
+            return
+        }
+
+        isTiltAvailable = true
+        tiltStatusText = "Tilt down for correct, tilt up to pass"
+        motionManager.start { [weak self] action in
+            self?.handleTiltAction(action)
+        }
+    }
+
+    private func handleTiltAction(_ action: TiltAction) {
+        guard !hasFinished, !isPaused, Date() >= nextTiltActionDate else { return }
+
+        nextTiltActionDate = Date().addingTimeInterval(0.8)
+
+        switch action {
+        case .correct:
+            mark(.correct)
+        case .pass:
+            mark(.passed)
+        }
     }
 
     private func syncFromEngine() {
@@ -97,6 +166,10 @@ final class GameViewModel: ObservableObject {
         hasFinished = true
         timerTask?.cancel()
         timerTask = nil
+        motionManager?.stop()
+        if settings.hapticsEnabled {
+            hapticsManager.playRoundFinished()
+        }
         onFinish(result)
     }
 }

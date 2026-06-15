@@ -49,6 +49,14 @@
 		AAH000000000000000000004 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAH000000000000000000014 /* GameEngine.swift */; };
 		AAH000000000000000000005 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAH000000000000000000015 /* GameViewModel.swift */; };
 		AAH000000000000000000006 /* GameEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAH000000000000000000016 /* GameEngineTests.swift */; };
+		AAI000000000000000000001 /* TiltSensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000011 /* TiltSensitivity.swift */; };
+		AAI000000000000000000002 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000012 /* GameSettings.swift */; };
+		AAI000000000000000000003 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000013 /* SettingsStore.swift */; };
+		AAI000000000000000000004 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000014 /* HapticsManager.swift */; };
+		AAI000000000000000000005 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000015 /* MotionManager.swift */; };
+		AAI000000000000000000006 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000016 /* SettingsViewModel.swift */; };
+		AAI000000000000000000007 /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000017 /* SettingsStoreTests.swift */; };
+		AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000018 /* TiltGestureDetectorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +122,14 @@
 		AAH000000000000000000014 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		AAH000000000000000000015 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		AAH000000000000000000016 /* GameEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngineTests.swift; sourceTree = "<group>"; };
+		AAI000000000000000000011 /* TiltSensitivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltSensitivity.swift; sourceTree = "<group>"; };
+		AAI000000000000000000012 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		AAI000000000000000000013 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		AAI000000000000000000014 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		AAI000000000000000000015 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		AAI000000000000000000016 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AAI000000000000000000017 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
+		AAI000000000000000000018 /* TiltGestureDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltGestureDetectorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +191,8 @@
 				AAF000000000000000000012 /* DeckEditorViewModelTests.swift */,
 				AAG000000000000000000014 /* CustomDeckDetailViewModelTests.swift */,
 				AAH000000000000000000016 /* GameEngineTests.swift */,
+				AAI000000000000000000017 /* SettingsStoreTests.swift */,
+				AAI000000000000000000018 /* TiltGestureDetectorTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -217,6 +235,8 @@
 				AAH000000000000000000011 /* WordStatus.swift */,
 				AAH000000000000000000012 /* GameSession.swift */,
 				AAH000000000000000000013 /* RoundResult.swift */,
+				AAI000000000000000000011 /* TiltSensitivity.swift */,
+				AAI000000000000000000012 /* GameSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +333,9 @@
 				AAE000000000000000000011 /* CustomDeckStore.swift */,
 				AAG000000000000000000013 /* ClipboardImportService.swift */,
 				AAH000000000000000000014 /* GameEngine.swift */,
+				AAI000000000000000000013 /* SettingsStore.swift */,
+				AAI000000000000000000014 /* HapticsManager.swift */,
+				AAI000000000000000000015 /* MotionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,6 +347,7 @@
 				AAF000000000000000000011 /* DeckEditorViewModel.swift */,
 				AAG000000000000000000012 /* CustomDeckDetailViewModel.swift */,
 				AAH000000000000000000015 /* GameViewModel.swift */,
+				AAI000000000000000000016 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -488,14 +512,20 @@
 				AAH000000000000000000001 /* WordStatus.swift in Sources */,
 				AAH000000000000000000002 /* GameSession.swift in Sources */,
 				AAH000000000000000000003 /* RoundResult.swift in Sources */,
+				AAI000000000000000000001 /* TiltSensitivity.swift in Sources */,
+				AAI000000000000000000002 /* GameSettings.swift in Sources */,
 				AAD000000000000000000005 /* DefaultDeckLoader.swift in Sources */,
 				AAD000000000000000000006 /* DeckStore.swift in Sources */,
 				AAH000000000000000000004 /* GameEngine.swift in Sources */,
+				AAI000000000000000000003 /* SettingsStore.swift in Sources */,
+				AAI000000000000000000004 /* HapticsManager.swift in Sources */,
+				AAI000000000000000000005 /* MotionManager.swift in Sources */,
 				AAE000000000000000000001 /* CustomDeckStore.swift in Sources */,
 				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
 				AAF000000000000000000001 /* DeckEditorViewModel.swift in Sources */,
 				AAG000000000000000000002 /* CustomDeckDetailViewModel.swift in Sources */,
 				AAH000000000000000000005 /* GameViewModel.swift in Sources */,
+				AAI000000000000000000006 /* SettingsViewModel.swift in Sources */,
 				AAG000000000000000000003 /* ClipboardImportService.swift in Sources */,
 				AAD000000000000000000008 /* DeckGridView.swift in Sources */,
 				AAG000000000000000000001 /* CustomDeckDetailView.swift in Sources */,
@@ -512,6 +542,8 @@
 				AAF000000000000000000002 /* DeckEditorViewModelTests.swift in Sources */,
 				AAG000000000000000000004 /* CustomDeckDetailViewModelTests.swift in Sources */,
 				AAH000000000000000000006 /* GameEngineTests.swift in Sources */,
+				AAI000000000000000000007 /* SettingsStoreTests.swift in Sources */,
+				AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

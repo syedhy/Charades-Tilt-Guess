@@ -5,11 +5,13 @@ import UIKit
 struct CharadesTiltGuessApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var router = AppRouter()
+    @StateObject private var settingsViewModel = SettingsViewModel()
 
     var body: some Scene {
         WindowGroup {
             AppShellView()
                 .environmentObject(router)
+                .environmentObject(settingsViewModel)
         }
     }
 }

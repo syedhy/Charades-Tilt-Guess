@@ -30,63 +30,103 @@ enum LandscapeTiltOrientation {
     }
 
     func forwardTiltAngle(gravityX: Double, gravityZ: Double) -> Double {
-        // Landscape gameplay holds the phone upright. Forward/back gestures rotate around
-        // the screen's landscape X axis, so gravity.z is the signal to compare to neutral.
         let verticalComponent = abs(topEdgeGravityComponent(x: gravityX))
-        return atan2(-gravityZ, verticalComponent)
+        return atan2(gravityZ, verticalComponent)
+    }
+
+    func isXAxisParallelToGround(gravityY: Double) -> Bool {
+        let allowedSideTilt = 0.25
+        return abs(gravityY) <= allowedSideTilt
     }
 }
 
 enum TiltGestureState {
+    case waitingForValidNeutral
     case neutral
     case showingCorrect
     case showingPass
 }
 
-enum TiltGestureThresholds {
-    // Tune these three values after real-device testing in landscape gameplay.
-    static let forwardTriggerAngle = degreesToRadians(16)
-    static let backwardTriggerAngle = degreesToRadians(-16)
-    static let neutralDeadZoneAngle = degreesToRadians(7)
+struct TiltGestureThresholdValues {
+    let forwardTriggerAngle: Double
+    let backwardTriggerAngle: Double
+    let neutralDeadZoneAngle: Double
+}
 
-    private static func degreesToRadians(_ degrees: Double) -> Double {
-        degrees * .pi / 180
+enum TiltGestureThresholds {
+    // Edit these preset degree values to tune each sensitivity. Normal is the
+    // real-device tuned baseline that currently feels good in landscape play.
+    static let relaxed = values(forwardDegrees: 34, backwardDegrees: -34, neutralDegrees: 20)
+    static let normal = values(forwardDegrees: 39, backwardDegrees: -39, neutralDegrees: 18)
+    static let strict = values(forwardDegrees: 44, backwardDegrees: -44, neutralDegrees: 16)
+
+    static let forwardTriggerAngle = normal.forwardTriggerAngle
+    static let backwardTriggerAngle = normal.backwardTriggerAngle
+    static let neutralDeadZoneAngle = normal.neutralDeadZoneAngle
+
+    static func values(for sensitivity: TiltSensitivity) -> TiltGestureThresholdValues {
+        switch sensitivity {
+        case .relaxed:
+            relaxed
+        case .normal:
+            normal
+        case .strict:
+            strict
+        }
     }
+
+    private static func values(
+        forwardDegrees: Double,
+        backwardDegrees: Double,
+        neutralDegrees: Double
+    ) -> TiltGestureThresholdValues {
+        TiltGestureThresholdValues(
+            forwardTriggerAngle: degreesToRadians(forwardDegrees),
+            backwardTriggerAngle: degreesToRadians(backwardDegrees),
+            neutralDeadZoneAngle: degreesToRadians(neutralDegrees)
+        )
+    }
+
+    private static func degreesToRadians(_ degrees: Double) -> Double { degrees * .pi / 180 }
 }
 
 struct TiltGestureDetector {
-    private var neutralAngle: Double?
-    private var state: TiltGestureState = .neutral
+    private let thresholds: TiltGestureThresholdValues
+    private var state: TiltGestureState = .waitingForValidNeutral
 
     init(sensitivity: TiltSensitivity) {
-        // Gesture thresholds live in TiltGestureThresholds so real-device tuning is one edit.
+        thresholds = TiltGestureThresholds.values(for: sensitivity)
     }
 
     mutating func reset() {
-        neutralAngle = nil
-        state = .neutral
+        state = .waitingForValidNeutral
+    }
+
+    mutating func alignmentLost() {
+        if state == .neutral {
+            state = .waitingForValidNeutral
+        }
     }
 
     mutating func process(currentAngle: Double) -> TiltAction? {
-        guard let neutralAngle else {
-            self.neutralAngle = currentAngle
-            return nil
-        }
+        let relativeAngle = currentAngle
+        let isInNeutralZone = abs(relativeAngle) <= thresholds.neutralDeadZoneAngle
 
-        let relativeAngle = currentAngle - neutralAngle
-
-        // State machine:
-        // - neutral waits for the phone to rotate far enough forward/back.
-        // - showingCorrect/showingPass keep the feedback screen visible.
-        // - only returning to the neutral dead zone arms the next gesture.
         switch state {
+        case .waitingForValidNeutral:
+            if isInNeutralZone {
+                state = .neutral
+            }
+
+            return nil
+
         case .neutral:
-            if relativeAngle >= TiltGestureThresholds.forwardTriggerAngle {
+            if relativeAngle >= thresholds.forwardTriggerAngle {
                 state = .showingCorrect
                 return .correct
             }
 
-            if relativeAngle <= TiltGestureThresholds.backwardTriggerAngle {
+            if relativeAngle <= thresholds.backwardTriggerAngle {
                 state = .showingPass
                 return .pass
             }
@@ -94,7 +134,7 @@ struct TiltGestureDetector {
             return nil
 
         case .showingCorrect, .showingPass:
-            if abs(relativeAngle) <= TiltGestureThresholds.neutralDeadZoneAngle {
+            if isInNeutralZone {
                 state = .neutral
                 return .neutral
             }
@@ -141,9 +181,16 @@ final class MotionManager {
                 gravityX: motion.gravity.x,
                 gravityZ: motion.gravity.z
             )
+
+            guard self.orientation.isXAxisParallelToGround(gravityY: motion.gravity.y) else {
+                self.detector.alignmentLost()
+                return
+            }
+
             #if DEBUG
             // For device tuning, temporarily log roll/pitch/yaw and `angle` here while holding the phone in landscape.
             #endif
+
             if let action = self.detector.process(currentAngle: angle) {
                 self.onAction?(action)
             }

@@ -54,8 +54,6 @@ struct TiltGestureThresholdValues {
 }
 
 enum TiltGestureThresholds {
-    // Edit these preset degree values to tune each sensitivity. Normal is the
-    // real-device tuned baseline that currently feels good in landscape play.
     static let relaxed = values(forwardDegrees: 34, backwardDegrees: -34, neutralDegrees: 20)
     static let normal = values(forwardDegrees: 39, backwardDegrees: -39, neutralDegrees: 18)
     static let strict = values(forwardDegrees: 44, backwardDegrees: -44, neutralDegrees: 16)
@@ -63,6 +61,8 @@ enum TiltGestureThresholds {
     static let forwardTriggerAngle = normal.forwardTriggerAngle
     static let backwardTriggerAngle = normal.backwardTriggerAngle
     static let neutralDeadZoneAngle = normal.neutralDeadZoneAngle
+
+    static let oppositeActionDelay: TimeInterval = 0.5
 
     static func values(for sensitivity: TiltSensitivity) -> TiltGestureThresholdValues {
         switch sensitivity {
@@ -93,6 +93,8 @@ enum TiltGestureThresholds {
 struct TiltGestureDetector {
     private let thresholds: TiltGestureThresholdValues
     private var state: TiltGestureState = .waitingForValidNeutral
+    private var lastAction: TiltAction?
+    private var lastActionAt: Date?
 
     init(sensitivity: TiltSensitivity) {
         thresholds = TiltGestureThresholds.values(for: sensitivity)
@@ -100,6 +102,8 @@ struct TiltGestureDetector {
 
     mutating func reset() {
         state = .waitingForValidNeutral
+        lastAction = nil
+        lastActionAt = nil
     }
 
     mutating func alignmentLost() {
@@ -122,13 +126,11 @@ struct TiltGestureDetector {
 
         case .neutral:
             if relativeAngle >= thresholds.forwardTriggerAngle {
-                state = .showingCorrect
-                return .correct
+                return trigger(.correct)
             }
 
             if relativeAngle <= thresholds.backwardTriggerAngle {
-                state = .showingPass
-                return .pass
+                return trigger(.pass)
             }
 
             return nil
@@ -141,6 +143,38 @@ struct TiltGestureDetector {
 
             return nil
         }
+    }
+
+    private mutating func trigger(_ action: TiltAction) -> TiltAction? {
+        if isOppositeActionBlocked(action) {
+            return nil
+        }
+
+        lastAction = action
+        lastActionAt = Date()
+
+        switch action {
+        case .correct:
+            state = .showingCorrect
+        case .pass:
+            state = .showingPass
+        case .neutral:
+            state = .neutral
+        }
+
+        return action
+    }
+
+    private func isOppositeActionBlocked(_ action: TiltAction) -> Bool {
+        guard let lastAction,
+              let lastActionAt,
+              lastAction != action,
+              action != .neutral
+        else {
+            return false
+        }
+
+        return Date().timeIntervalSince(lastActionAt) < TiltGestureThresholds.oppositeActionDelay
     }
 }
 

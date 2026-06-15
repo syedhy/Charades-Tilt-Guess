@@ -34,14 +34,17 @@ final class OrientationController {
     private init() {}
 
     func useMenuPortrait() {
-        updateSupportedOrientations(.portrait)
+        updateSupportedOrientations(.portrait, requestedOrientation: .portrait)
     }
 
     func useGameplayLandscape() {
-        updateSupportedOrientations([.landscapeLeft, .landscapeRight])
+        updateSupportedOrientations([.landscapeLeft, .landscapeRight], requestedOrientation: .landscapeRight)
     }
 
-    private func updateSupportedOrientations(_ orientations: UIInterfaceOrientationMask) {
+    private func updateSupportedOrientations(
+        _ orientations: UIInterfaceOrientationMask,
+        requestedOrientation: UIInterfaceOrientationMask
+    ) {
         supportedOrientations = orientations
 
         guard let windowScene = UIApplication.shared.connectedScenes
@@ -51,6 +54,6 @@ final class OrientationController {
         }
 
         windowScene.windows.first?.rootViewController?.setNeedsUpdateOfSupportedInterfaceOrientations()
-        windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: orientations)) { _ in }
+        windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: requestedOrientation)) { _ in }
     }
 }

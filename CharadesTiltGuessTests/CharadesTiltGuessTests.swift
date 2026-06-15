@@ -7,7 +7,7 @@ final class CharadesTiltGuessTests: XCTestCase {
     }
 
     @MainActor
-    func testRouterPresentsAndFinishesGameFlow() {
+    func testRouterPresentsAndFinishesGameFlow() async {
         let router = AppRouter()
         let deck = Deck(
             id: "test-tech",
@@ -23,9 +23,10 @@ final class CharadesTiltGuessTests: XCTestCase {
 
         let result = RoundResult(deck: deck, duration: 60, correctWords: [], passedWords: [])
         router.finishGame(result: result)
-        XCTAssertNil(router.activeGame)
+        XCTAssertEqual(router.path.count, 0)
 
-        router.handleGameDismissal()
+        try? await Task.sleep(for: .milliseconds(420))
+        XCTAssertNil(router.activeGame)
         XCTAssertEqual(router.path.count, 1)
     }
 }

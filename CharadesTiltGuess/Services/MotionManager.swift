@@ -1,14 +1,37 @@
 import CoreMotion
 import Foundation
+import UIKit
 
 enum TiltAction: Equatable {
     case correct
     case pass
 }
 
+enum LandscapeTiltOrientation {
+    case landscapeLeft
+    case landscapeRight
+
+    init(interfaceOrientation: UIInterfaceOrientation) {
+        if interfaceOrientation == .landscapeLeft {
+            self = .landscapeLeft
+        } else {
+            self = .landscapeRight
+        }
+    }
+
+    func topEdgeGravityComponent(x: Double) -> Double {
+        switch self {
+        case .landscapeLeft:
+            x
+        case .landscapeRight:
+            -x
+        }
+    }
+}
+
 struct TiltGestureDetector {
     private let sensitivity: TiltSensitivity
-    private var baselinePitch: Double?
+    private var baselineTilt: Double?
     private var isArmed = true
     private var pendingAction: TiltAction?
     private var pendingCount = 0
@@ -18,19 +41,19 @@ struct TiltGestureDetector {
     }
 
     mutating func reset() {
-        baselinePitch = nil
+        baselineTilt = nil
         isArmed = true
         pendingAction = nil
         pendingCount = 0
     }
 
-    mutating func process(pitch: Double) -> TiltAction? {
-        guard let baselinePitch else {
-            self.baselinePitch = pitch
+    mutating func process(landscapeXAxisTilt: Double) -> TiltAction? {
+        guard let baselineTilt else {
+            self.baselineTilt = landscapeXAxisTilt
             return nil
         }
 
-        let delta = pitch - baselinePitch
+        let delta = landscapeXAxisTilt - baselineTilt
 
         if abs(delta) <= sensitivity.neutralThreshold {
             isArmed = true
@@ -42,9 +65,9 @@ struct TiltGestureDetector {
         guard isArmed else { return nil }
 
         let action: TiltAction?
-        if delta <= -sensitivity.threshold {
+        if delta >= sensitivity.threshold {
             action = .correct
-        } else if delta >= sensitivity.threshold {
+        } else if delta <= -sensitivity.threshold {
             action = .pass
         } else {
             action = nil
@@ -77,6 +100,7 @@ final class MotionManager {
     private let manager: CMMotionManager
     private var detector: TiltGestureDetector
     private var onAction: ((TiltAction) -> Void)?
+    private var orientation: LandscapeTiltOrientation = .landscapeRight
 
     init(
         sensitivity: TiltSensitivity,
@@ -98,12 +122,14 @@ final class MotionManager {
         guard isAvailable, !isRunning else { return }
 
         self.onAction = onAction
+        self.orientation = LandscapeTiltOrientation(interfaceOrientation: Self.currentInterfaceOrientation)
         detector.reset()
         manager.deviceMotionUpdateInterval = 1.0 / 30.0
-        manager.startDeviceMotionUpdates(to: .main) { [weak self] motion, _ in
-            guard let self, let pitch = motion?.attitude.pitch else { return }
+        manager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: .main) { [weak self] motion, _ in
+            guard let self, let gravityX = motion?.gravity.x else { return }
 
-            if let action = self.detector.process(pitch: pitch) {
+            let tilt = self.orientation.topEdgeGravityComponent(x: gravityX)
+            if let action = self.detector.process(landscapeXAxisTilt: tilt) {
                 self.onAction?(action)
             }
         }
@@ -115,5 +141,12 @@ final class MotionManager {
         manager.stopDeviceMotionUpdates()
         onAction = nil
         detector.reset()
+    }
+
+    private static var currentInterfaceOrientation: UIInterfaceOrientation {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?
+            .interfaceOrientation ?? .landscapeRight
     }
 }

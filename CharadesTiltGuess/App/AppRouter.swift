@@ -19,7 +19,7 @@ final class AppRouter: ObservableObject {
     @Published var path = NavigationPath()
     @Published var activeGame: ActiveGame?
 
-    private var pendingResult: RoundResult?
+    private var orientationTransitionTask: Task<Void, Never>?
 
     func open(_ route: AppRoute) {
         path.append(route)
@@ -35,28 +35,21 @@ final class AppRouter: ObservableObject {
     }
 
     func startGame(deck: Deck, duration: Int) {
-        OrientationController.shared.useGameplayLandscape()
+        orientationTransitionTask?.cancel()
         activeGame = ActiveGame(deck: deck, duration: duration)
+        OrientationController.shared.useGameplayLandscape()
     }
 
     func finishGame(result: RoundResult) {
-        pendingResult = result
-        activeGame = nil
-        OrientationController.shared.useMenuPortrait()
+        dismissGameAfterPortraitTransition {
+            self.path.append(AppRoute.results(result: result))
+        }
     }
 
     func exitGame() {
-        pendingResult = nil
-        activeGame = nil
-        OrientationController.shared.useMenuPortrait()
-        path = NavigationPath()
-    }
-
-    func handleGameDismissal() {
-        guard let result = pendingResult else { return }
-
-        pendingResult = nil
-        path.append(AppRoute.results(result: result))
+        dismissGameAfterPortraitTransition {
+            self.path = NavigationPath()
+        }
     }
 
     func goHome() {
@@ -68,6 +61,17 @@ final class AppRouter: ObservableObject {
         guard !path.isEmpty else { return }
         path.removeLast()
     }
+
+    private func dismissGameAfterPortraitTransition(afterDismiss: @escaping @MainActor () -> Void) {
+        OrientationController.shared.useMenuPortrait()
+        orientationTransitionTask?.cancel()
+        orientationTransitionTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .milliseconds(360))
+            guard !Task.isCancelled else { return }
+            self?.activeGame = nil
+            afterDismiss()
+        }
+    }
 }
 
 struct AppShellView: View {
@@ -75,20 +79,26 @@ struct AppShellView: View {
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
 
     var body: some View {
-        NavigationStack(path: $router.path) {
-            HomeView()
-                .navigationDestination(for: AppRoute.self) { route in
-                    destination(for: route)
-                }
-        }
-        .fullScreenCover(item: $router.activeGame, onDismiss: router.handleGameDismissal) { game in
-            GameView(
-                deck: game.deck,
-                duration: game.duration,
-                settings: settingsViewModel.settings,
-                onRoundFinished: router.finishGame,
-                onExit: router.exitGame
-            )
+        ZStack {
+            NavigationStack(path: $router.path) {
+                HomeView()
+                    .navigationDestination(for: AppRoute.self) { route in
+                        destination(for: route)
+                    }
+            }
+
+            if let game = router.activeGame {
+                GameView(
+                    deck: game.deck,
+                    duration: game.duration,
+                    settings: settingsViewModel.settings,
+                    onRoundFinished: router.finishGame,
+                    onExit: router.exitGame
+                )
+                .ignoresSafeArea()
+                .zIndex(1)
+                .transition(.opacity)
+            }
         }
     }
 

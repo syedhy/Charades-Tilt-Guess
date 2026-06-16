@@ -47,7 +47,6 @@ The MVP intentionally avoids:
 - CoreMotion, planned for tilt detection
 - UIKit haptics, planned for feedback
 - Local JSON storage, planned for custom decks
-- Xcode project, no package manager required yet
 
 ## Project Structure
 

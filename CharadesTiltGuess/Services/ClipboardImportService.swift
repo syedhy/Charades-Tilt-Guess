@@ -14,8 +14,8 @@ struct ClipboardImportPreview: Equatable {
     var summaryMessages: [String] {
         var messages: [String] = []
 
-        if blankLineCount > 1 {
-            messages.append("\(blankLineCount-1) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
+        if blankLineCount > 0 {
+            messages.append("\(blankLineCount) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
         }
 
         if duplicateCount > 0 {
@@ -48,7 +48,7 @@ struct ClipboardImportService {
         var tooLongLines: [String] = []
         var seen = Set(existingCards.map { normalized($0.text) })
 
-        for rawLine in text.components(separatedBy: .newlines) {
+        for rawLine in candidateCardTexts(from: text) {
             let trimmedLine = rawLine.trimmingCharacters(in: .whitespacesAndNewlines)
 
             guard !trimmedLine.isEmpty else {
@@ -81,5 +81,39 @@ struct ClipboardImportService {
 
     private func normalized(_ text: String) -> String {
         text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+
+    private func candidateCardTexts(from text: String) -> [String] {
+        text.components(separatedBy: .newlines)
+            .flatMap { line in
+                line.split(separator: ",", omittingEmptySubsequences: false).map(String.init)
+            }
+            .map(strippingListMarker)
+    }
+
+    private func strippingListMarker(from rawText: String) -> String {
+        var text = rawText.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if let first = text.first, first == "-" || first == "*" || first == "•" {
+            text.removeFirst()
+            return text.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+
+        var digitPrefix = ""
+        for character in text {
+            guard character.isNumber else { break }
+            digitPrefix.append(character)
+        }
+
+        guard !digitPrefix.isEmpty else { return text }
+
+        let index = text.index(text.startIndex, offsetBy: digitPrefix.count)
+        guard index < text.endIndex else { return text }
+
+        let marker = text[index]
+        guard marker == "." || marker == ")" || marker == "-" || marker == ":" else { return text }
+
+        text.removeSubrange(text.startIndex...index)
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }

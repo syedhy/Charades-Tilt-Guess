@@ -19,7 +19,7 @@ struct DeckStore {
     }
 
     func loadDecks() throws -> [Deck] {
-        try loadDefaultDecks() + loadCustomDecks()
+        try loadCustomDecks() + loadDefaultDecks()
     }
 
     func saveCustomDeck(_ deck: Deck) throws {

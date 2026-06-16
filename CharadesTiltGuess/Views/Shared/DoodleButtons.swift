@@ -49,12 +49,15 @@ struct DoodleActionButton: View {
             .padding(.horizontal, 18)
             .frame(maxWidth: .infinity)
             .frame(height: 58)
-            .background(accent, in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous))
+            .background {
+                RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                    .fill(accent)
+                    .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 4, y: 5)
+            }
             .overlay {
                 RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
                     .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
             }
-            .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 4, y: 5)
         }
         .buttonStyle(DoodlePressStyle())
     }

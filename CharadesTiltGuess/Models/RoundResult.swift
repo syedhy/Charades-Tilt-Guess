@@ -5,6 +5,10 @@ struct RoundResult: Hashable {
     let duration: Int
     let correctWords: [GameWord]
     let passedWords: [GameWord]
+    var mode: GameMode = .normal
+    var attempts: [RoundAttempt] = []
+    var timeUsed: Int = 0
+    var wasTimeUp: Bool = false
 
     var finalScore: Int {
         correctWords.count
@@ -12,5 +16,65 @@ struct RoundResult: Hashable {
 
     var totalAttempted: Int {
         correctWords.count + passedWords.count
+    }
+
+    var passCount: Int {
+        passedWords.count
+    }
+
+    var accuracyPercentage: Int {
+        guard totalAttempted > 0 else { return 0 }
+        return Int((Double(correctWords.count) / Double(totalAttempted) * 100).rounded())
+    }
+
+    var cardsSeen: Int {
+        attempts.isEmpty ? totalAttempted : attempts.count
+    }
+
+    var bestStreak: Int {
+        guard !attempts.isEmpty else { return correctWords.count }
+
+        var current = 0
+        var best = 0
+
+        for attempt in attempts {
+            if attempt.status == .correct {
+                current += 1
+                best = max(best, current)
+            } else {
+                current = 0
+            }
+        }
+
+        return best
+    }
+
+    var longestCorrectStreak: Int {
+        bestStreak
+    }
+
+    var title: String {
+        if mode == .hotPotato, wasTimeUp {
+            return "Holder loses"
+        }
+
+        return wasTimeUp ? "Time up" : "Round complete"
+    }
+
+    var subtitle: String {
+        switch mode {
+        case .hotPotato:
+            return wasTimeUp ? "The current holder got caught." : "Round ended manually."
+        case .infinite:
+            return "You played until you were ready to stop."
+        case .pasteAndPlay:
+            return "Temporary deck complete."
+        case .challengeCards:
+            return "Challenge round complete."
+        case .wikipedia:
+            return "Wikipedia deck complete."
+        case .normal:
+            return deck.name
+        }
     }
 }

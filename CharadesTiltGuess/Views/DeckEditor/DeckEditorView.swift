@@ -64,7 +64,7 @@ struct DeckEditorView: View {
                 .foregroundStyle(AppTheme.Colors.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("Name it , Color it and Start Playing")
+            Text("Name it, color it, then fill it with cards.")
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
         }

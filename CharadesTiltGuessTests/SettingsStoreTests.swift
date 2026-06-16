@@ -33,13 +33,16 @@ final class SettingsStoreTests: XCTestCase {
         let store = SettingsStore(userDefaults: userDefaults)
         let settings = GameSettings(
             defaultDuration: 90,
+            soundsEnabled: false,
             hapticsEnabled: false,
+            motionControlsEnabled: false,
+            swipeControlsEnabled: false,
             tiltSensitivity: .strict
         )
 
         store.saveSettings(settings)
 
-        XCTAssertEqual(store.loadSettings(), settings)
+        XCTAssertEqual(store.loadSettings(), settings.normalized)
     }
 
     func testInvalidDurationFallsBackToDefaultDuration() {
@@ -55,5 +58,23 @@ final class SettingsStoreTests: XCTestCase {
         XCTAssertEqual(store.loadSettings().defaultDuration, GameSettings.default.defaultDuration)
         XCTAssertFalse(store.loadSettings().hapticsEnabled)
         XCTAssertEqual(store.loadSettings().tiltSensitivity, .relaxed)
+    }
+
+    func testMotionDisabledForcesSwipeControlsOn() {
+        let store = SettingsStore(userDefaults: userDefaults)
+        let settings = GameSettings(
+            defaultDuration: 60,
+            hapticsEnabled: true,
+            motionControlsEnabled: false,
+            swipeControlsEnabled: false,
+            tiltSensitivity: .normal
+        )
+
+        store.saveSettings(settings)
+
+        let loaded = store.loadSettings()
+        XCTAssertFalse(loaded.motionControlsEnabled)
+        XCTAssertTrue(loaded.swipeControlsEnabled)
+        XCTAssertTrue(loaded.effectiveSwipeControlsEnabled)
     }
 }

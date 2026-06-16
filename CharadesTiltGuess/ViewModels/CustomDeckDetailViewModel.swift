@@ -45,10 +45,6 @@ final class CustomDeckDetailViewModel: ObservableObject {
         draftName.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    var cardCountText: String {
-        "\(deck.cards.count) \(deck.cards.count == 1 ? "card" : "cards")"
-    }
-
     var draftCardCountText: String {
         "\(draftCards.count) \(draftCards.count == 1 ? "card" : "cards")"
     }

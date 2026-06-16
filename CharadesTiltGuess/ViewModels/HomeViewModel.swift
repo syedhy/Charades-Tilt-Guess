@@ -2,7 +2,8 @@ import Foundation
 
 @MainActor
 final class HomeViewModel: ObservableObject {
-    @Published private(set) var decks: [Deck] = []
+    @Published private(set) var defaultDecks: [Deck] = []
+    @Published private(set) var customDecks: [Deck] = []
     @Published private(set) var loadErrorMessage: String?
 
     private let deckStore: DeckStore
@@ -14,12 +15,18 @@ final class HomeViewModel: ObservableObject {
 
     func loadDecks() {
         do {
-            decks = try deckStore.loadDecks()
+            defaultDecks = try deckStore.loadDefaultDecks()
+            customDecks = try deckStore.loadCustomDecks()
             loadErrorMessage = nil
         } catch {
-            decks = []
+            defaultDecks = []
+            customDecks = []
             loadErrorMessage = "The decks could not be loaded."
         }
+    }
+
+    var decks: [Deck] {
+        customDecks + defaultDecks
     }
 
     var randomDeck: Deck? {

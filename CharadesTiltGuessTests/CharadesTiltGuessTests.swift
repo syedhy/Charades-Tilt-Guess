@@ -19,7 +19,7 @@ final class CharadesTiltGuessTests: XCTestCase {
         )
 
         router.startGame(deck: deck, duration: 60)
-        XCTAssertEqual(router.activeGame?.deck, deck)
+        XCTAssertEqual(router.activeGame?.configuration.deck, deck)
 
         let result = RoundResult(deck: deck, duration: 60, correctWords: [], passedWords: [])
         router.finishGame(result: result)

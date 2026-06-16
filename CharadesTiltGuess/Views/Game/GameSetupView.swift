@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct GameSetupView: View {
+    let mode: GameMode
     let deck: Deck
     let settings: GameSettings
-    let onStartRound: (Int) -> Void
+    let onStartRound: (GameConfiguration) -> Void
 
     @State private var selectedDuration = 60
+    @State private var isShowingInstructions = false
 
     private let durations = GameSettings.availableDurations
     private var canStart: Bool { !deck.cards.isEmpty }
@@ -17,16 +19,18 @@ struct GameSetupView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
-                    durationPicker
+                    if mode.showsDurationPicker {
+                        durationPicker
+                    }
                     instructionPanel
 
                     DoodleActionButton(
-                        title: canStart ? "Start round" : "Add cards first",
+                        title: canStart ? startButtonTitle : "Add cards first",
                         symbol: "play.fill",
-                        accent: deck.color.displayColor
+                        accent: mode.accentColor
                     ) {
                         guard canStart else { return }
-                        onStartRound(selectedDuration)
+                        onStartRound(makeConfiguration())
                     }
                     .opacity(canStart ? 1 : 0.48)
                     .disabled(!canStart)
@@ -36,11 +40,39 @@ struct GameSetupView: View {
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle("Game Setup")
+        .navigationTitle(mode.title)
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.light)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    isShowingInstructions = true
+                } label: {
+                    Image(systemName: "questionmark.circle.fill")
+                        .font(.system(size: 18, weight: .black))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                }
+                .accessibilityLabel("\(mode.title) instructions")
+            }
+        }
+        .sheet(isPresented: $isShowingInstructions) {
+            ModeInstructionsView(mode: mode)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.visible)
+        }
         .onAppear {
             selectedDuration = settings.defaultDuration
+        }
+    }
+
+    private var startButtonTitle: String {
+        switch mode {
+        case .infinite:
+            return "Start infinite round"
+        case .hotPotato:
+            return "Start hidden timer"
+        default:
+            return "Start round"
         }
     }
 
@@ -54,7 +86,7 @@ struct GameSetupView: View {
 
             HStack(spacing: 10) {
                 Label("\(deck.cards.count) cards", systemImage: "rectangle.stack.fill")
-                Label("\(settings.tiltSensitivity.displayName) tilt", systemImage: "iphone.gen3.radiowaves.left.and.right")
+                Label(mode.title, systemImage: mode.symbolName)
             }
             .font(.system(size: 14, weight: .black, design: .rounded))
             .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
@@ -103,9 +135,9 @@ struct GameSetupView: View {
                     .fixedSize(horizontal: false, vertical: true)
 
                 VStack(alignment: .leading, spacing: 10) {
-                    instructionRow(symbol: "checkmark.circle.fill", text: "Tilt down or tap Correct")
-                    instructionRow(symbol: "arrow.uturn.forward.circle.fill", text: "Tilt up or tap Pass")
-                    instructionRow(symbol: "pause.circle.fill", text: "Pause anytime")
+                    instructionRow(symbol: "checkmark.circle.fill", text: "Tilt down or swipe down for Correct")
+                    instructionRow(symbol: "arrow.uturn.forward.circle.fill", text: "Tilt up or swipe up to Pass")
+                    instructionRow(symbol: "pause.circle.fill", text: mode == .hotPotato ? "The timer is hidden" : "Pause anytime")
                 }
             }
             .padding(22)
@@ -116,5 +148,22 @@ struct GameSetupView: View {
         Label(text, systemImage: symbol)
             .font(.system(size: 16, weight: .black, design: .rounded))
             .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
+    }
+
+    private func makeConfiguration() -> GameConfiguration {
+        switch mode {
+        case .normal:
+            return .normal(deck: deck, duration: selectedDuration)
+        case .infinite:
+            return .infinite(deck: deck)
+        case .hotPotato:
+            return .hotPotato(deck: deck, hiddenDuration: Int.random(in: 35...90))
+        case .challengeCards:
+            return .challengeCards(deck: deck, duration: selectedDuration)
+        case .pasteAndPlay:
+            return .pasteAndPlay(deck: deck, duration: selectedDuration)
+        case .wikipedia:
+            return .wikipedia(deck: deck, duration: selectedDuration)
+        }
     }
 }

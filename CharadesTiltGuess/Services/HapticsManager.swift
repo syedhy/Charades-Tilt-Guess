@@ -42,6 +42,12 @@ final class HapticsManager {
         impact.impactOccurred(intensity: 0.78)
     }
 
+    func playNeutralReturn() {
+        let impact = UIImpactFeedbackGenerator(style: .light)
+        impact.prepare()
+        impact.impactOccurred(intensity: 0.55)
+    }
+
     func playTimeUp() {
         UINotificationFeedbackGenerator().notificationOccurred(.warning)
     }

@@ -371,6 +371,9 @@ final class GameViewModel: ObservableObject {
         isHoldingFeedbackUntilNeutral = false
         feedback = nil
         tiltStatusText = "Tilt or swipe to score"
+        if settings.hapticsEnabled {
+            hapticsManager.playNeutralReturn()
+        }
 
         if let pendingNeutralResult {
             self.pendingNeutralResult = nil

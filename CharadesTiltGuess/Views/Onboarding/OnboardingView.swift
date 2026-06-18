@@ -117,6 +117,7 @@ struct OnboardingView: View {
                     }
                 }
             }
+            .padding(.top, 8)
             .padding(.bottom, 10)
         }
         .scrollIndicators(.hidden)

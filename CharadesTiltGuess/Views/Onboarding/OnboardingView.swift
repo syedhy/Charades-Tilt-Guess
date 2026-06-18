@@ -108,7 +108,7 @@ struct OnboardingView: View {
                 .padding(20)
                 .frame(maxWidth: .infinity)
                 .background(OnboardingCardBackground(background: item.accent))
-                .padding(.horizontal, 2)
+                .padding(.horizontal, 10)
                 .padding(.bottom, 6)
 
                 VStack(spacing: 8) {

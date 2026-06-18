@@ -26,8 +26,8 @@ struct PasteAndPlayView: View {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
                     pastePanel
-                    previewPanel
                     playButton
+                    previewPanel
                 }
                 .padding(24)
                 .padding(.bottom, 32)
@@ -91,9 +91,11 @@ struct PasteAndPlayView: View {
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                     .scrollContentBackground(.hidden)
+                    .background(Color.clear)
                     .padding(12)
                     .frame(minHeight: 140)
                     .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .overlay {
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
                             .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)

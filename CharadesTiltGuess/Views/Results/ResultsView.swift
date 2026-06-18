@@ -10,16 +10,17 @@ struct ResultsView: View {
             ZStack {
                 DoodlePaperBackground()
 
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: 10) {
                     scoreHeader
                     cardSection
                         .frame(maxHeight: .infinity)
+                        .layoutPriority(1)
 
                     actionButtons
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, max(proxy.safeAreaInsets.top + 16, 28))
-                .padding(.bottom, 20)
+                .padding(.top, min(max(proxy.safeAreaInsets.top - 20, 12), 28))
+                .padding(.bottom, 16)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -61,7 +62,7 @@ struct ResultsView: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 18)
-            .frame(minHeight: 118)
+            .frame(minHeight: 108)
         }
     }
 

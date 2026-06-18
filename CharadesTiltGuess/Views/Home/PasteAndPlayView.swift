@@ -25,8 +25,8 @@ struct PasteAndPlayView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
-                    pastePanel
                     playButton
+                    pastePanel
                     previewPanel
                 }
                 .padding(24)

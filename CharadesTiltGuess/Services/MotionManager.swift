@@ -138,6 +138,8 @@ struct TiltGestureDetector {
         case .showingCorrect, .showingPass:
             if isInNeutralZone {
                 state = .neutral
+                lastAction = nil
+                lastActionAt = nil
                 return .neutral
             }
 
@@ -181,15 +183,19 @@ struct TiltGestureDetector {
 @MainActor
 final class MotionManager {
     private let manager: CMMotionManager
+    private let sensitivity: TiltSensitivity
     private var detector: TiltGestureDetector
     private var onAction: ((TiltAction) -> Void)?
+    private var onNeutralDetected: (() -> Void)?
     private var orientation: LandscapeTiltOrientation = .landscapeRight
+    private var hasDetectedNeutral = false
 
     init(
         sensitivity: TiltSensitivity,
         manager: CMMotionManager = CMMotionManager()
     ) {
         self.manager = manager
+        self.sensitivity = sensitivity
         self.detector = TiltGestureDetector(sensitivity: sensitivity)
     }
 
@@ -201,10 +207,15 @@ final class MotionManager {
         manager.isDeviceMotionActive
     }
 
-    func start(onAction: @escaping (TiltAction) -> Void) {
+    func start(
+        onAction: @escaping (TiltAction) -> Void,
+        onNeutralDetected: (() -> Void)? = nil
+    ) {
         guard isAvailable, !isRunning else { return }
 
         self.onAction = onAction
+        self.onNeutralDetected = onNeutralDetected
+        self.hasDetectedNeutral = false
         self.orientation = LandscapeTiltOrientation(interfaceOrientation: Self.currentInterfaceOrientation)
         detector.reset()
         manager.deviceMotionUpdateInterval = 1.0 / 30.0
@@ -218,7 +229,14 @@ final class MotionManager {
 
             guard self.orientation.isXAxisParallelToGround(gravityY: motion.gravity.y) else {
                 self.detector.alignmentLost()
+                self.hasDetectedNeutral = false
                 return
+            }
+
+            if !self.hasDetectedNeutral,
+               abs(angle) <= TiltGestureThresholds.values(for: self.sensitivity).neutralDeadZoneAngle {
+                self.hasDetectedNeutral = true
+                self.onNeutralDetected?()
             }
 
             #if DEBUG
@@ -236,6 +254,8 @@ final class MotionManager {
 
         manager.stopDeviceMotionUpdates()
         onAction = nil
+        onNeutralDetected = nil
+        hasDetectedNeutral = false
         detector.reset()
     }
 

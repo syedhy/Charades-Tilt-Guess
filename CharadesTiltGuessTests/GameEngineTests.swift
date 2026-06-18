@@ -47,6 +47,51 @@ final class GameEngineTests: XCTestCase {
         XCTAssertEqual(result.passedWords, [])
     }
 
+    func testTracksAttemptsForResultStatistics() {
+        let deck = makeDeck()
+        var engine = GameEngine(deck: deck, duration: 60, shuffledWords: deck.cards)
+
+        _ = engine.markCurrentWord(.correct)
+        _ = engine.markCurrentWord(.passed)
+
+        let result = engine.finishRound(timeUsed: 12)
+        XCTAssertEqual(result.attempts.map(\.status), [.correct, .passed])
+        XCTAssertEqual(result.accuracyPercentage, 50)
+        XCTAssertEqual(result.cardsSeen, 2)
+        XCTAssertEqual(result.timeUsed, 12)
+    }
+
+    func testChallengeModeAssignsReusableChallengeCards() {
+        let deck = makeDeck(cards: [
+            GameWord(id: "one", text: "One"),
+            GameWord(id: "two", text: "Two"),
+            GameWord(id: "three", text: "Three"),
+            GameWord(id: "four", text: "Four")
+        ])
+        var engine = GameEngine(
+            configuration: .challengeCards(deck: deck, duration: 60),
+            orderedWords: deck.cards,
+            challengeProvider: ChallengeCardProvider(challengeEvery: 2, challenges: [.silentAct])
+        )
+
+        _ = engine.markCurrentWord(.correct)
+        _ = engine.markCurrentWord(.correct)
+
+        XCTAssertNil(engine.session.attempts[0].challenge)
+        XCTAssertEqual(engine.session.attempts[1].challenge, .silentAct)
+    }
+
+    func testInfiniteModeFinishesWhenDeckIsExhausted() {
+        let deck = makeDeck(cards: [GameWord(id: "one", text: "Only Word")])
+        var engine = GameEngine(configuration: .infinite(deck: deck), orderedWords: deck.cards)
+
+        let result = engine.markCurrentWord(.correct)
+
+        XCTAssertEqual(result?.correctWords, deck.cards)
+        XCTAssertEqual(result?.totalAttempted, 1)
+        XCTAssertEqual(result?.finalScore, 1)
+    }
+
     private func makeDeck(cards: [GameWord]? = nil) -> Deck {
         Deck(
             id: "test-deck",

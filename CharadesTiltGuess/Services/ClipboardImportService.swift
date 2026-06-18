@@ -6,6 +6,7 @@ struct ClipboardImportPreview: Equatable {
     let duplicateCount: Int
     let tooLongLines: [String]
     let overDeckLimitCount: Int
+    let maxCardLength: Int
 
     var hasImportableCards: Bool {
         !cards.isEmpty
@@ -14,8 +15,8 @@ struct ClipboardImportPreview: Equatable {
     var summaryMessages: [String] {
         var messages: [String] = []
 
-        if blankLineCount > 1 {
-            messages.append("\(blankLineCount-1) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
+        if blankLineCount > 0 {
+            messages.append("\(blankLineCount) blank \(blankLineCount == 1 ? "line was" : "lines were") ignored.")
         }
 
         if duplicateCount > 0 {
@@ -23,7 +24,7 @@ struct ClipboardImportPreview: Equatable {
         }
 
         if !tooLongLines.isEmpty {
-            messages.append("\(tooLongLines.count) \(tooLongLines.count == 1 ? "card is" : "cards are") over 50 characters.")
+            messages.append("\(tooLongLines.count) \(tooLongLines.count == 1 ? "card is" : "cards are") over \(maxCardLength) characters.")
         }
 
         if overDeckLimitCount > 0 {
@@ -37,7 +38,7 @@ struct ClipboardImportPreview: Equatable {
 struct ClipboardImportService {
     let maxCardLength: Int
 
-    init(maxCardLength: Int = 50) {
+    init(maxCardLength: Int = 30) {
         self.maxCardLength = maxCardLength
     }
 
@@ -48,7 +49,7 @@ struct ClipboardImportService {
         var tooLongLines: [String] = []
         var seen = Set(existingCards.map { normalized($0.text) })
 
-        for rawLine in text.components(separatedBy: .newlines) {
+        for rawLine in candidateCardTexts(from: text) {
             let trimmedLine = rawLine.trimmingCharacters(in: .whitespacesAndNewlines)
 
             guard !trimmedLine.isEmpty else {
@@ -75,11 +76,46 @@ struct ClipboardImportService {
             blankLineCount: blankLineCount,
             duplicateCount: duplicateCount,
             tooLongLines: tooLongLines,
-            overDeckLimitCount: 0
+            overDeckLimitCount: 0,
+            maxCardLength: maxCardLength
         )
     }
 
     private func normalized(_ text: String) -> String {
         text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+
+    private func candidateCardTexts(from text: String) -> [String] {
+        text.components(separatedBy: .newlines)
+            .flatMap { line in
+                line.split(separator: ",", omittingEmptySubsequences: false).map(String.init)
+            }
+            .map(strippingListMarker)
+    }
+
+    private func strippingListMarker(from rawText: String) -> String {
+        var text = rawText.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if let first = text.first, first == "-" || first == "*" || first == "•" {
+            text.removeFirst()
+            return text.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+
+        var digitPrefix = ""
+        for character in text {
+            guard character.isNumber else { break }
+            digitPrefix.append(character)
+        }
+
+        guard !digitPrefix.isEmpty else { return text }
+
+        let index = text.index(text.startIndex, offsetBy: digitPrefix.count)
+        guard index < text.endIndex else { return text }
+
+        let marker = text[index]
+        guard marker == "." || marker == ")" || marker == "-" || marker == ":" else { return text }
+
+        text.removeSubrange(text.startIndex...index)
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }

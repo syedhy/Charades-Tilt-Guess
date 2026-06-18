@@ -2,16 +2,18 @@ import SwiftUI
 
 enum AppRoute: Hashable {
     case settings
+    case onboarding
     case deckEditor
-    case customDeckDetail(deck: Deck)
-    case gameSetup(deck: Deck)
+    case customDeckDetail(deck: Deck, mode: GameMode)
+    case modeDeckSelection(mode: GameMode)
+    case pasteAndPlay
+    case wikipediaMode
     case results(result: RoundResult)
 }
 
 struct ActiveGame: Identifiable, Equatable {
     let id = UUID()
-    let deck: Deck
-    let duration: Int
+    let configuration: GameConfiguration
 }
 
 @MainActor
@@ -34,10 +36,38 @@ final class AppRouter: ObservableObject {
         }
     }
 
-    func startGame(deck: Deck, duration: Int) {
+    func replaceCurrent(with route: AppRoute) {
+        if !path.isEmpty {
+            path.removeLast()
+        }
+        path.append(route)
+    }
+
+    func startGame(configuration: GameConfiguration) {
         orientationTransitionTask?.cancel()
-        activeGame = ActiveGame(deck: deck, duration: duration)
+        activeGame = ActiveGame(configuration: configuration)
         OrientationController.shared.useGameplayLandscape()
+    }
+
+    func startGame(deck: Deck, duration: Int) {
+        startGame(configuration: .normal(deck: deck, duration: duration))
+    }
+
+    func startGame(mode: GameMode, deck: Deck, settings: GameSettings) {
+        switch mode {
+        case .normal:
+            startGame(configuration: .normal(deck: deck, duration: settings.defaultDuration))
+        case .infinite:
+            startGame(configuration: .infinite(deck: deck))
+        case .pasteAndPlay:
+            startGame(configuration: .pasteAndPlay(deck: deck, duration: settings.defaultDuration))
+        case .wikipedia:
+            startGame(configuration: .wikipedia(deck: deck, duration: settings.defaultDuration))
+        case .hotPotato:
+            startGame(configuration: .hotPotato(deck: deck, hiddenDuration: settings.defaultDuration))
+        case .challengeCards:
+            startGame(configuration: .challengeCards(deck: deck, duration: settings.defaultDuration))
+        }
     }
 
     func finishGame(result: RoundResult) {
@@ -77,6 +107,7 @@ final class AppRouter: ObservableObject {
 struct AppShellView: View {
     @EnvironmentObject private var router: AppRouter
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
+    @AppStorage("CharadesTiltGuess.HasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
         ZStack {
@@ -89,8 +120,7 @@ struct AppShellView: View {
 
             if let game = router.activeGame {
                 GameView(
-                    deck: game.deck,
-                    duration: game.duration,
+                    configuration: game.configuration,
                     settings: settingsViewModel.settings,
                     onRoundFinished: router.finishGame,
                     onExit: router.exitGame
@@ -100,6 +130,22 @@ struct AppShellView: View {
                 .transition(.opacity)
             }
         }
+        .fullScreenCover(isPresented: onboardingBinding) {
+            OnboardingView(isPresentedModally: true) {
+                hasSeenOnboarding = true
+            }
+        }
+    }
+
+    private var onboardingBinding: Binding<Bool> {
+        Binding(
+            get: { !hasSeenOnboarding },
+            set: { isPresented in
+                if !isPresented {
+                    hasSeenOnboarding = true
+                }
+            }
+        )
     }
 
     @ViewBuilder
@@ -107,20 +153,38 @@ struct AppShellView: View {
         switch route {
         case .settings:
             SettingsView()
+        case .onboarding:
+            OnboardingView(isPresentedModally: false) {
+                router.goBack()
+            }
         case .deckEditor:
             DeckEditorView()
-        case let .customDeckDetail(deck):
-            CustomDeckDetailView(deck: deck)
-        case let .gameSetup(deck):
-            GameSetupView(
-                deck: deck,
-                settings: settingsViewModel.settings,
-                onStartRound: { duration in router.startGame(deck: deck, duration: duration) }
-            )
+        case let .customDeckDetail(deck, mode):
+            CustomDeckDetailView(deck: deck, mode: mode)
+        case let .modeDeckSelection(mode):
+            ModeDeckSelectionView(mode: mode)
+        case .pasteAndPlay:
+            PasteAndPlayView(settings: settingsViewModel.settings) { configuration in
+                router.startGame(configuration: configuration)
+            }
+        case .wikipediaMode:
+            WikipediaModeView(settings: settingsViewModel.settings) { configuration in
+                router.startGame(configuration: configuration)
+            }
         case let .results(result):
             ResultsView(
                 result: result,
-                onPlayAgain: { router.startGame(deck: result.deck, duration: result.duration) },
+                onPlayAgain: {
+                    router.startGame(
+                        configuration: GameConfiguration(
+                            mode: result.mode,
+                            deck: result.deck,
+                            duration: result.mode == .infinite || result.mode == .hotPotato ? nil : result.duration,
+                            hiddenDuration: result.mode == .hotPotato ? result.duration : nil,
+                            isTemporaryDeck: result.deck.type == .custom && result.deck.id.hasPrefix("temp-")
+                        )
+                    )
+                },
                 onChooseDeck: router.goHome
             )
         }

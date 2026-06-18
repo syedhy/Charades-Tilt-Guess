@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject private var viewModel: SettingsViewModel
+    @EnvironmentObject private var router: AppRouter
 
     var body: some View {
         ZStack {
@@ -11,14 +12,16 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
                     durationSection
-                    hapticsSection
+                    feedbackSection
+                    controlsSection
                     sensitivitySection
+                    onboardingSection
                 }
                 .padding(24)
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle("Settings")
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.light)
     }
@@ -54,20 +57,55 @@ struct SettingsView: View {
         }
     }
 
-    private var hapticsSection: some View {
-        settingsPanel(title: "Haptics", symbol: "waveform", accent: AppTheme.Colors.mint) {
-            Toggle(
-                isOn: Binding(
-                    get: { viewModel.settings.hapticsEnabled },
-                    set: { viewModel.setHapticsEnabled($0) }
+    private var feedbackSection: some View {
+        settingsPanel(title: "Feedback", symbol: "waveform", accent: AppTheme.Colors.mint) {
+            VStack(spacing: 14) {
+                toggleRow(
+                    title: "Sounds",
+                    subtitle: "Countdowns and game effects",
+                    isOn: Binding(
+                        get: { viewModel.settings.soundsEnabled },
+                        set: { viewModel.setSoundsEnabled($0) }
+                    ),
+                    tint: AppTheme.Colors.yellow
                 )
-            ) {
-                Text("Feedback taps")
-                    .font(.system(size: 18, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
+
+                toggleRow(
+                    title: "Haptics",
+                    subtitle: "Stronger taps during play",
+                    isOn: Binding(
+                        get: { viewModel.settings.hapticsEnabled },
+                        set: { viewModel.setHapticsEnabled($0) }
+                    ),
+                    tint: AppTheme.Colors.mint
+                )
             }
-            .toggleStyle(.switch)
-            .tint(AppTheme.Colors.mint)
+        }
+    }
+
+    private var controlsSection: some View {
+        settingsPanel(title: "Controls", symbol: "hand.draw.fill", accent: AppTheme.Colors.coral) {
+            VStack(spacing: 14) {
+                toggleRow(
+                    title: "Motion controls",
+                    subtitle: "Tilt down for correct, up to pass",
+                    isOn: Binding(
+                        get: { viewModel.settings.motionControlsEnabled },
+                        set: { viewModel.setMotionControlsEnabled($0) }
+                    ),
+                    tint: AppTheme.Colors.coral
+                )
+
+                toggleRow(
+                    title: "Swipe controls",
+                    subtitle: "Swipe down for correct, up to pass",
+                    isOn: Binding(
+                        get: { viewModel.settings.effectiveSwipeControlsEnabled },
+                        set: { viewModel.setSwipeControlsEnabled($0) }
+                    ),
+                    tint: AppTheme.Colors.blue
+                )
+            }
         }
     }
 
@@ -94,6 +132,14 @@ struct SettingsView: View {
         }
     }
 
+    private var onboardingSection: some View {
+        settingsPanel(title: "Onboarding", symbol: "sparkles", accent: AppTheme.Colors.orange) {
+            DoodleActionButton(title: "Replay how to play", symbol: "play.rectangle.fill", accent: AppTheme.Colors.orange) {
+                router.open(.onboarding)
+            }
+        }
+    }
+
     private func settingsPanel<Content: View>(
         title: String,
         symbol: String,
@@ -109,13 +155,6 @@ struct SettingsView: View {
                 content()
             }
             .padding(20)
-        }
-        .overlay(alignment: .topTrailing) {
-            Circle()
-                .fill(accent)
-                .frame(width: 18, height: 18)
-                .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: 3))
-                .padding(18)
         }
     }
 
@@ -139,6 +178,35 @@ struct SettingsView: View {
         .overlay {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+        }
+    }
+
+    private func toggleRow(title: String, subtitle: String, isOn: Binding<Bool>, tint: Color) -> some View {
+        HStack(spacing: 14) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.system(size: 18, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Text(subtitle)
+                    .font(.system(size: 12, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer()
+
+            Toggle(title, isOn: isOn)
+                .labelsHidden()
+                .toggleStyle(.switch)
+                .tint(tint)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 14)
+        .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                .stroke(AppTheme.Colors.ink, lineWidth: 2)
         }
     }
 }

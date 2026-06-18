@@ -64,7 +64,7 @@ struct DeckEditorView: View {
                 .foregroundStyle(AppTheme.Colors.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("Name it , Color it and Start Playing")
+            Text("Name it, color it, then fill it with cards.")
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
         }
@@ -113,8 +113,8 @@ struct DeckEditorView: View {
                     symbol: "checkmark",
                     accent: viewModel.canSave ? AppTheme.Colors.yellow : AppTheme.Colors.gray.opacity(0.45)
                 ) {
-                    guard viewModel.saveDeck() != nil else { return }
-                    router.goHome()
+                    guard let deck = viewModel.saveDeck() else { return }
+                    router.replaceCurrent(with: .customDeckDetail(deck: deck, mode: .normal))
                 }
                 .simultaneousGesture(TapGesture())
                 .disabled(!viewModel.canSave)

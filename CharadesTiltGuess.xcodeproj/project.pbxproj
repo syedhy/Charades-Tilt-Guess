@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B14C11D2FE4812C00BBD54B /* endCountDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B14C11C2FE4812C00BBD54B /* endCountDown.wav */; };
+		1B14C11F2FE4830100BBD54B /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B14C11E2FE4830100BBD54B /* gameStart.wav */; };
+		1B45660C2FE1DAFE007D28FE /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660B2FE1DAFE007D28FE /* correct.wav */; };
+		1B4566102FE1DC78007D28FE /* timeout.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660F2FE1DC78007D28FE /* timeout.wav */; };
+		1B4566112FE1DC78007D28FE /* pass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660E2FE1DC78007D28FE /* pass.wav */; };
+		1B4566122FE1DC78007D28FE /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660D2FE1DC78007D28FE /* countdown.wav */; };
 		AAA000000000000000000001 /* CharadesTiltGuessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000011 /* CharadesTiltGuessApp.swift */; };
 		AAA000000000000000000002 /* AppMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000012 /* AppMetadata.swift */; };
 		AAA000000000000000000003 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000013 /* HomeView.swift */; };
 		AAA000000000000000000004 /* CharadesTiltGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000014 /* CharadesTiltGuessTests.swift */; };
 		AAA000000000000000000005 /* CharadesTiltGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000015 /* CharadesTiltGuessUITests.swift */; };
 		AAB000000000000000000001 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000011 /* AppRouter.swift */; };
-		AAB000000000000000000002 /* PlaceholderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000012 /* PlaceholderScreen.swift */; };
-		AAB000000000000000000003 /* GameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000013 /* GameSetupView.swift */; };
 		AAB000000000000000000004 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000014 /* GameView.swift */; };
 		AAB000000000000000000005 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000015 /* ResultsView.swift */; };
 		AAB000000000000000000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000016 /* SettingsView.swift */; };
@@ -57,6 +61,20 @@
 		AAI000000000000000000006 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000016 /* SettingsViewModel.swift */; };
 		AAI000000000000000000007 /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000017 /* SettingsStoreTests.swift */; };
 		AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAI000000000000000000018 /* TiltGestureDetectorTests.swift */; };
+		AAJ000000000000000000001 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000021 /* GameMode.swift */; };
+		AAJ000000000000000000002 /* GameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000022 /* GameConfiguration.swift */; };
+		AAJ000000000000000000003 /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000023 /* ChallengeCard.swift */; };
+		AAJ000000000000000000004 /* CardRotationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000024 /* CardRotationStore.swift */; };
+		AAJ000000000000000000005 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000025 /* SoundService.swift */; };
+		AAJ000000000000000000006 /* WikipediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000026 /* WikipediaService.swift */; };
+		AAJ000000000000000000007 /* ModeInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000027 /* ModeInstructionsView.swift */; };
+		AAJ000000000000000000008 /* ModeDeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000028 /* ModeDeckSelectionView.swift */; };
+		AAJ000000000000000000009 /* PasteAndPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000029 /* PasteAndPlayView.swift */; };
+		AAJ000000000000000000010 /* WikipediaModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000030 /* WikipediaModeView.swift */; };
+		AAJ000000000000000000011 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000031 /* OnboardingView.swift */; };
+		AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000032 /* CardRotationStoreTests.swift */; };
+		AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */; };
+		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +95,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B14C11C2FE4812C00BBD54B /* endCountDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
+		1B14C11E2FE4830100BBD54B /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
+		1B45660B2FE1DAFE007D28FE /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		1B45660D2FE1DC78007D28FE /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
+		1B45660E2FE1DC78007D28FE /* pass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
+		1B45660F2FE1DC78007D28FE /* timeout.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timeout.wav; sourceTree = "<group>"; };
 		AAA000000000000000000008 /* CharadesTiltGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharadesTiltGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000009 /* CharadesTiltGuessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000010 /* CharadesTiltGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,8 +110,6 @@
 		AAA000000000000000000014 /* CharadesTiltGuessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharadesTiltGuessTests.swift; sourceTree = "<group>"; };
 		AAA000000000000000000015 /* CharadesTiltGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharadesTiltGuessUITests.swift; sourceTree = "<group>"; };
 		AAB000000000000000000011 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		AAB000000000000000000012 /* PlaceholderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderScreen.swift; sourceTree = "<group>"; };
-		AAB000000000000000000013 /* GameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000014 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000015 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -130,6 +152,20 @@
 		AAI000000000000000000016 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		AAI000000000000000000017 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 		AAI000000000000000000018 /* TiltGestureDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltGestureDetectorTests.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000021 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000022 /* GameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfiguration.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000023 /* ChallengeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCard.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000024 /* CardRotationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStore.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000025 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000026 /* WikipediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaService.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000027 /* ModeInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeInstructionsView.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000028 /* ModeDeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeDeckSelectionView.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000029 /* PasteAndPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteAndPlayView.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000030 /* WikipediaModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaModeView.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000031 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000032 /* CardRotationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStoreTests.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +229,9 @@
 				AAH000000000000000000016 /* GameEngineTests.swift */,
 				AAI000000000000000000017 /* SettingsStoreTests.swift */,
 				AAI000000000000000000018 /* TiltGestureDetectorTests.swift */,
+				AAJ000000000000000000032 /* CardRotationStoreTests.swift */,
+				AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */,
+				AAJ000000000000000000034 /* WikipediaServiceTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -232,6 +271,9 @@
 				AAD000000000000000000012 /* DeckColor.swift */,
 				AAD000000000000000000013 /* DeckType.swift */,
 				AAD000000000000000000014 /* GameWord.swift */,
+				AAJ000000000000000000021 /* GameMode.swift */,
+				AAJ000000000000000000022 /* GameConfiguration.swift */,
+				AAJ000000000000000000023 /* ChallengeCard.swift */,
 				AAH000000000000000000011 /* WordStatus.swift */,
 				AAH000000000000000000012 /* GameSession.swift */,
 				AAH000000000000000000013 /* RoundResult.swift */,
@@ -251,6 +293,7 @@
 				AAB000000000000000000024 /* Settings */,
 				AAB000000000000000000025 /* DeckEditor */,
 				AAG000000000000000000021 /* DeckDetail */,
+				AAJ000000000000000000041 /* Onboarding */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +304,9 @@
 				AAA000000000000000000013 /* HomeView.swift */,
 				AAC000000000000000000015 /* DeckCardView.swift */,
 				AAD000000000000000000018 /* DeckGridView.swift */,
+				AAJ000000000000000000028 /* ModeDeckSelectionView.swift */,
+				AAJ000000000000000000029 /* PasteAndPlayView.swift */,
+				AAJ000000000000000000030 /* WikipediaModeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -268,7 +314,6 @@
 		AAB000000000000000000021 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				AAB000000000000000000012 /* PlaceholderScreen.swift */,
 				AAC000000000000000000012 /* DoodleBackground.swift */,
 				AAC000000000000000000013 /* DoodlePanel.swift */,
 				AAC000000000000000000014 /* DoodleButtons.swift */,
@@ -279,8 +324,8 @@
 		AAB000000000000000000022 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				AAB000000000000000000013 /* GameSetupView.swift */,
 				AAB000000000000000000014 /* GameView.swift */,
+				AAJ000000000000000000027 /* ModeInstructionsView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -309,14 +354,6 @@
 			path = DeckEditor;
 			sourceTree = "<group>";
 		};
-		AAG000000000000000000021 /* DeckDetail */ = {
-			isa = PBXGroup;
-			children = (
-				AAG000000000000000000011 /* CustomDeckDetailView.swift */,
-			);
-			path = DeckDetail;
-			sourceTree = "<group>";
-		};
 		AAC000000000000000000021 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,9 +370,12 @@
 				AAE000000000000000000011 /* CustomDeckStore.swift */,
 				AAG000000000000000000013 /* ClipboardImportService.swift */,
 				AAH000000000000000000014 /* GameEngine.swift */,
+				AAJ000000000000000000024 /* CardRotationStore.swift */,
 				AAI000000000000000000013 /* SettingsStore.swift */,
 				AAI000000000000000000014 /* HapticsManager.swift */,
+				AAJ000000000000000000025 /* SoundService.swift */,
 				AAI000000000000000000015 /* MotionManager.swift */,
+				AAJ000000000000000000026 /* WikipediaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,9 +395,31 @@
 		AAD000000000000000000023 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B14C11E2FE4830100BBD54B /* gameStart.wav */,
+				1B14C11C2FE4812C00BBD54B /* endCountDown.wav */,
+				1B45660D2FE1DC78007D28FE /* countdown.wav */,
+				1B45660E2FE1DC78007D28FE /* pass.wav */,
+				1B45660F2FE1DC78007D28FE /* timeout.wav */,
 				AAD000000000000000000019 /* DefaultDecks.json */,
+				1B45660B2FE1DAFE007D28FE /* correct.wav */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAG000000000000000000021 /* DeckDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AAG000000000000000000011 /* CustomDeckDetailView.swift */,
+			);
+			path = DeckDetail;
+			sourceTree = "<group>";
+		};
+		AAJ000000000000000000041 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AAJ000000000000000000031 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +528,12 @@
 			files = (
 				AAE000000000000000000003 /* Assets.xcassets in Resources */,
 				AAD000000000000000000009 /* DefaultDecks.json in Resources */,
+				1B45660C2FE1DAFE007D28FE /* correct.wav in Resources */,
+				1B4566102FE1DC78007D28FE /* timeout.wav in Resources */,
+				1B14C11D2FE4812C00BBD54B /* endCountDown.wav in Resources */,
+				1B14C11F2FE4830100BBD54B /* gameStart.wav in Resources */,
+				1B4566112FE1DC78007D28FE /* pass.wav in Resources */,
+				1B4566122FE1DC78007D28FE /* countdown.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +562,6 @@
 				AAA000000000000000000002 /* AppMetadata.swift in Sources */,
 				AAA000000000000000000003 /* HomeView.swift in Sources */,
 				AAB000000000000000000001 /* AppRouter.swift in Sources */,
-				AAB000000000000000000002 /* PlaceholderScreen.swift in Sources */,
-				AAB000000000000000000003 /* GameSetupView.swift in Sources */,
 				AAB000000000000000000004 /* GameView.swift in Sources */,
 				AAB000000000000000000005 /* ResultsView.swift in Sources */,
 				AAB000000000000000000006 /* SettingsView.swift in Sources */,
@@ -509,6 +575,9 @@
 				AAD000000000000000000002 /* DeckColor.swift in Sources */,
 				AAD000000000000000000003 /* DeckType.swift in Sources */,
 				AAD000000000000000000004 /* GameWord.swift in Sources */,
+				AAJ000000000000000000001 /* GameMode.swift in Sources */,
+				AAJ000000000000000000002 /* GameConfiguration.swift in Sources */,
+				AAJ000000000000000000003 /* ChallengeCard.swift in Sources */,
 				AAH000000000000000000001 /* WordStatus.swift in Sources */,
 				AAH000000000000000000002 /* GameSession.swift in Sources */,
 				AAH000000000000000000003 /* RoundResult.swift in Sources */,
@@ -517,9 +586,12 @@
 				AAD000000000000000000005 /* DefaultDeckLoader.swift in Sources */,
 				AAD000000000000000000006 /* DeckStore.swift in Sources */,
 				AAH000000000000000000004 /* GameEngine.swift in Sources */,
+				AAJ000000000000000000004 /* CardRotationStore.swift in Sources */,
 				AAI000000000000000000003 /* SettingsStore.swift in Sources */,
 				AAI000000000000000000004 /* HapticsManager.swift in Sources */,
+				AAJ000000000000000000005 /* SoundService.swift in Sources */,
 				AAI000000000000000000005 /* MotionManager.swift in Sources */,
+				AAJ000000000000000000006 /* WikipediaService.swift in Sources */,
 				AAE000000000000000000001 /* CustomDeckStore.swift in Sources */,
 				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
 				AAF000000000000000000001 /* DeckEditorViewModel.swift in Sources */,
@@ -529,6 +601,11 @@
 				AAG000000000000000000003 /* ClipboardImportService.swift in Sources */,
 				AAD000000000000000000008 /* DeckGridView.swift in Sources */,
 				AAG000000000000000000001 /* CustomDeckDetailView.swift in Sources */,
+				AAJ000000000000000000007 /* ModeInstructionsView.swift in Sources */,
+				AAJ000000000000000000008 /* ModeDeckSelectionView.swift in Sources */,
+				AAJ000000000000000000009 /* PasteAndPlayView.swift in Sources */,
+				AAJ000000000000000000010 /* WikipediaModeView.swift in Sources */,
+				AAJ000000000000000000011 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +621,9 @@
 				AAH000000000000000000006 /* GameEngineTests.swift in Sources */,
 				AAI000000000000000000007 /* SettingsStoreTests.swift in Sources */,
 				AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */,
+				AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */,
+				AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */,
+				AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,8 @@ final class CustomDeckDetailViewModel: ObservableObject {
         blankLineCount: 0,
         duplicateCount: 0,
         tooLongLines: [],
-        overDeckLimitCount: 0
+        overDeckLimitCount: 0,
+        maxCardLength: CustomDeckDetailViewModel.maxCardTextLength
     )
     @Published private(set) var saveErrorMessage: String?
     @Published private(set) var deleteErrorMessage: String?
@@ -27,7 +28,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
     init(
         deck: Deck,
         deckStore: DeckStore = DeckStore(),
-        importService: ClipboardImportService = ClipboardImportService(maxCardLength: 50),
+        importService: ClipboardImportService = ClipboardImportService(maxCardLength: 30),
         wordIDProvider: @escaping () -> String = { "word-\(UUID().uuidString)" },
         dateProvider: @escaping () -> Date = Date.init
     ) {
@@ -43,10 +44,6 @@ final class CustomDeckDetailViewModel: ObservableObject {
 
     var trimmedDraftName: String {
         draftName.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-
-    var cardCountText: String {
-        "\(deck.cards.count) \(deck.cards.count == 1 ? "card" : "cards")"
     }
 
     var draftCardCountText: String {
@@ -203,13 +200,14 @@ final class CustomDeckDetailViewModel: ObservableObject {
             blankLineCount: preview.blankLineCount,
             duplicateCount: preview.duplicateCount,
             tooLongLines: preview.tooLongLines,
-            overDeckLimitCount: preview.overDeckLimitCount + preview.cards.count - remainingSlots
+            overDeckLimitCount: preview.overDeckLimitCount + preview.cards.count - remainingSlots,
+            maxCardLength: preview.maxCardLength
         )
     }
 }
 
 extension CustomDeckDetailViewModel {
     static let maxNameLength = 20
-    static let maxCardTextLength = 50
+    static let maxCardTextLength = 30
     static let maxCustomDeckCardCount = 200
 }

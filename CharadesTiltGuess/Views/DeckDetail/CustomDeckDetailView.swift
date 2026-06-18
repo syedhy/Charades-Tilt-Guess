@@ -3,7 +3,9 @@ import UIKit
 
 struct CustomDeckDetailView: View {
     @EnvironmentObject private var router: AppRouter
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @StateObject private var viewModel: CustomDeckDetailViewModel
+    private let mode: GameMode
     @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
     @State private var isShowingUnsavedChangesConfirmation = false
@@ -14,12 +16,14 @@ struct CustomDeckDetailView: View {
     @FocusState private var isNameFocused: Bool
 
     @MainActor
-    init(deck: Deck) {
+    init(deck: Deck, mode: GameMode = .normal) {
+        self.mode = mode
         _viewModel = StateObject(wrappedValue: CustomDeckDetailViewModel(deck: deck))
     }
 
     @MainActor
-    init(viewModel: CustomDeckDetailViewModel) {
+    init(viewModel: CustomDeckDetailViewModel, mode: GameMode = .normal) {
+        self.mode = mode
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
@@ -83,139 +87,6 @@ struct CustomDeckDetailView: View {
             }
             .presentationDetents([.large])
             .presentationDragIndicator(.hidden)
-        }
-    }
-
-    private var detailContent: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
-                detailPanel
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 22)
-            .padding(.bottom, 42)
-        }
-        .scrollIndicators(.hidden)
-    }
-
-    private var detailPanel: some View {
-        DoodlePanel(background: viewModel.deck.color.displayColor.opacity(0.92)) {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                detailControls
-
-                VStack(alignment: .leading, spacing: AppTheme.Spacing.compact) {
-                    Text(viewModel.deck.name)
-                        .font(.system(size: 48, weight: .black, design: .rounded))
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.62)
-
-                    Text(viewModel.cardCountText)
-                        .font(.system(size: 20, weight: .black, design: .rounded))
-                }
-                .foregroundStyle(AppTheme.Colors.ink)
-                .accessibilityIdentifier("customDeckDetailTitle")
-
-                if viewModel.deck.cards.isEmpty {
-                    detailEmptyState
-                } else {
-                    detailCardPreview
-                }
-
-                if let deleteErrorMessage = viewModel.deleteErrorMessage {
-                    Text(deleteErrorMessage)
-                        .font(.system(size: 13, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.coral)
-                }
-            }
-            .padding(AppTheme.Spacing.roomy)
-        }
-    }
-
-    private var detailControls: some View {
-        HStack(spacing: AppTheme.Spacing.standard) {
-            DoodleIconButton(
-                symbol: "trash",
-                accent: AppTheme.Colors.paperBright.opacity(0.66),
-                size: 44,
-                accessibilityLabel: "Delete deck"
-            ) {
-                isShowingDeleteConfirmation = true
-            }
-
-            DoodleIconButton(
-                symbol: "gearshape",
-                accent: AppTheme.Colors.paperBright.opacity(0.66),
-                size: 44,
-                accessibilityLabel: "Edit deck"
-            ) {
-                isEditingDeckIdentity = true
-                viewModel.resetDraft()
-            }
-
-            Spacer()
-
-            DoodleIconButton(
-                symbol: "xmark",
-                accent: AppTheme.Colors.paperBright.opacity(0.78),
-                size: 44,
-                accessibilityLabel: "Close deck"
-            ) {
-                router.goBack()
-            }
-        }
-    }
-
-    private var detailEmptyState: some View {
-        VStack(spacing: AppTheme.Spacing.standard) {
-            EmptyDeckDoodle()
-                .frame(height: 150)
-                .opacity(0.62)
-
-            Text("Uh oh. Your deck is empty.")
-                .font(.system(size: 24, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink)
-                .multilineTextAlignment(.center)
-
-            DoodleActionButton(
-                title: "Add cards",
-                symbol: "plus",
-                accent: AppTheme.Colors.paperBright
-            ) {
-                isEditingDeckIdentity = true
-                viewModel.resetDraft()
-            }
-            .accessibilityIdentifier("addCardsFromEmptyDeckButton")
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, AppTheme.Spacing.compact)
-    }
-
-    private var detailCardPreview: some View {
-        VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-            LazyVGrid(
-                columns: [GridItem(.adaptive(minimum: 116), spacing: 10)],
-                alignment: .leading,
-                spacing: 10
-            ) {
-                ForEach(viewModel.deck.cards.prefix(16)) { card in
-                    WordChip(text: card.text)
-                }
-            }
-
-            if viewModel.deck.cards.count > 16 {
-                Text("+ \(viewModel.deck.cards.count - 16) more")
-                    .font(.system(size: 14, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
-            }
-
-            DoodleActionButton(
-                title: "Play",
-                symbol: "play.fill",
-                accent: AppTheme.Colors.paperBright
-            ) {
-                router.open(.gameSetup(deck: viewModel.deck))
-            }
-            .accessibilityIdentifier("playCustomDeckButton")
         }
     }
 
@@ -316,6 +187,10 @@ struct CustomDeckDetailView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
+
+                Label(mode.title, systemImage: mode.symbolName)
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
 
             playDeckButton
@@ -482,6 +357,7 @@ struct CustomDeckDetailView: View {
                 viewModel.refreshImportPreview(from: "")
                 isShowingPasteSheet = true
             }
+            .accessibilityIdentifier("pasteCardsFromClipboardButton")
 
             DoodleIconButton(
                 symbol: "plus",
@@ -496,6 +372,7 @@ struct CustomDeckDetailView: View {
                     isShowingAddCardSheet = true
                 }
             }
+            .accessibilityIdentifier("addCardManuallyButton")
         }
         .padding(.trailing, 28)
         .padding(.bottom, 26)
@@ -535,11 +412,11 @@ struct CustomDeckDetailView: View {
 
             isNameFocused = false
             hideIdentityEditorImmediately()
-            router.open(.gameSetup(deck: savedDeck))
+            router.startGame(mode: mode, deck: savedDeck, settings: settingsViewModel.settings)
             return
         }
 
-        router.open(.gameSetup(deck: viewModel.deck))
+        router.startGame(mode: mode, deck: viewModel.deck, settings: settingsViewModel.settings)
     }
 
     private func toggleIdentityEditor() {
@@ -637,26 +514,6 @@ private struct ReadOnlyCardRow: View {
                 .stroke(AppTheme.Colors.ink, lineWidth: 2)
         }
         .shadow(color: AppTheme.Colors.ink.opacity(0.10), radius: 0, x: 3, y: 3)
-    }
-}
-
-private struct WordChip: View {
-    let text: String
-
-    var body: some View {
-        Text(text)
-            .font(.system(size: 15, weight: .black, design: .rounded))
-            .foregroundStyle(AppTheme.Colors.ink)
-            .lineLimit(1)
-            .minimumScaleFactor(0.75)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 7)
-            .frame(maxWidth: .infinity)
-            .background(AppTheme.Colors.paperBright.opacity(0.72), in: Capsule())
-            .overlay {
-                Capsule()
-                    .stroke(AppTheme.Colors.ink.opacity(0.48), lineWidth: 2)
-            }
     }
 }
 

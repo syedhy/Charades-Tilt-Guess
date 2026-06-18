@@ -6,10 +6,10 @@ final class DefaultDeckLoaderTests: XCTestCase {
     func testLoadsBundledDefaultDecks() throws {
         let decks = try DefaultDeckLoader().load()
 
-        XCTAssertEqual(decks.count, 4)
+        XCTAssertEqual(decks.count, 16)
         XCTAssertEqual(decks.first?.name, "Tech")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
-        XCTAssertTrue(decks.allSatisfy { $0.cards.count == 24 })
+        XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
     }
 
     func testMissingResourceThrowsHelpfulError() {

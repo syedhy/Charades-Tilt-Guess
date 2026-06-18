@@ -16,8 +16,26 @@ final class SettingsViewModel: ObservableObject {
         persist()
     }
 
+    func setSoundsEnabled(_ isEnabled: Bool) {
+        settings.soundsEnabled = isEnabled
+        persist()
+    }
+
     func setHapticsEnabled(_ isEnabled: Bool) {
         settings.hapticsEnabled = isEnabled
+        persist()
+    }
+
+    func setMotionControlsEnabled(_ isEnabled: Bool) {
+        settings.motionControlsEnabled = isEnabled
+        if !isEnabled {
+            settings.swipeControlsEnabled = true
+        }
+        persist()
+    }
+
+    func setSwipeControlsEnabled(_ isEnabled: Bool) {
+        settings.swipeControlsEnabled = isEnabled
         persist()
     }
 

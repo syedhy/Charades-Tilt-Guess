@@ -213,10 +213,6 @@ struct GameView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .monospacedDigit()
                     .accessibilityIdentifier("gameTimer")
-
-                ScribbleLine()
-                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                    .frame(width: 82, height: 10)
             }
 
             Spacer()
@@ -231,23 +227,13 @@ struct GameView: View {
                     .foregroundStyle(Color(red: 0.92, green: 0.33, blue: 0.52))
                     .monospacedDigit()
             }
-            .overlay(alignment: .bottom) {
-                ScribbleLine()
-                    .stroke(Color(red: 0.92, green: 0.33, blue: 0.52), style: StrokeStyle(lineWidth: 3, lineCap: .round))
-                    .frame(width: 52, height: 8)
-                    .offset(y: 9)
-            }
             .frame(width: 92, alignment: .trailing)
         }
     }
 
     private var wordCard: some View {
         ZStack {
-            HStack(spacing: 28) {
-                BurstMarks()
-                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                    .frame(width: 38, height: 72)
-
+            HStack {
                 Text(viewModel.currentWordText)
                     .font(.system(size: 88, weight: .black, design: .rounded))
                     .minimumScaleFactor(0.28)
@@ -256,11 +242,6 @@ struct GameView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .padding(.horizontal, 10)
                     .accessibilityIdentifier("gameWord")
-
-                BurstMarks()
-                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                    .frame(width: 38, height: 72)
-                    .rotationEffect(.degrees(180))
             }
         }
         .frame(maxWidth: .infinity)
@@ -439,37 +420,5 @@ struct GameView: View {
                 .minimumScaleFactor(0.7)
         }
         .frame(maxWidth: .infinity)
-    }
-}
-
-private struct ScribbleLine: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX + 2, y: rect.midY))
-        path.addCurve(
-            to: CGPoint(x: rect.maxX - 2, y: rect.midY),
-            control1: CGPoint(x: rect.width * 0.28, y: rect.minY),
-            control2: CGPoint(x: rect.width * 0.68, y: rect.maxY)
-        )
-        return path
-    }
-}
-
-private struct BurstMarks: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let midY = rect.midY
-        let maxX = rect.maxX
-
-        path.move(to: CGPoint(x: rect.minX, y: midY - 26))
-        path.addLine(to: CGPoint(x: maxX, y: midY - 12))
-
-        path.move(to: CGPoint(x: rect.minX + 4, y: midY))
-        path.addLine(to: CGPoint(x: maxX, y: midY))
-
-        path.move(to: CGPoint(x: rect.minX, y: midY + 26))
-        path.addLine(to: CGPoint(x: maxX, y: midY + 12))
-
-        return path
     }
 }

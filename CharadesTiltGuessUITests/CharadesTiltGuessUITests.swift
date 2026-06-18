@@ -63,6 +63,25 @@ final class CharadesTiltGuessUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Custom deck"].waitForExistence(timeout: 5))
     }
 
+    func testSettingsCanReplayOnboardingWithoutSystemNavGap() throws {
+        let app = launchApp()
+
+        app.buttons["Settings"].tap()
+        XCTAssertTrue(app.staticTexts["Game defaults"].waitForExistence(timeout: 5))
+
+        let replayButton = app.buttons["Replay how to play"]
+        if !replayButton.waitForExistence(timeout: 1) {
+            app.swipeUp()
+        }
+
+        XCTAssertTrue(replayButton.waitForExistence(timeout: 5))
+        replayButton.tap()
+
+        XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Step 1 of 4"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Back"].exists || app.buttons["onboardingDismissButton"].exists)
+    }
+
     func testCustomDeckSelectionShowsCardsAndAddOptions() throws {
         let app = launchApp()
         let deckName = "UITest \(Int(Date().timeIntervalSince1970) % 10000)"

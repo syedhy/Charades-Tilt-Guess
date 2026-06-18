@@ -36,6 +36,8 @@ struct OnboardingView: View {
             }
         }
         .preferredColorScheme(.light)
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .onAppear {
             withAnimation(.easeInOut(duration: 1.15).repeatForever(autoreverses: true)) {
                 isAnimating.toggle()
@@ -59,10 +61,13 @@ struct OnboardingView: View {
 
             Spacer()
 
-            if isPresentedModally {
-                DoodleIconButton(symbol: "xmark", size: 42, accessibilityLabel: "Close onboarding") {
-                    finish()
-                }
+            DoodleIconButton(
+                symbol: isPresentedModally ? "xmark" : "chevron.left",
+                size: 42,
+                accessibilityLabel: isPresentedModally ? "Close onboarding" : "Back",
+                accessibilityIdentifier: "onboardingDismissButton"
+            ) {
+                finish()
             }
         }
     }

@@ -6,10 +6,9 @@ final class HapticsManager {
     func play(_ status: WordStatus) {
         switch status {
         case .correct:
-            let impact = UIImpactFeedbackGenerator(style: .rigid)
+            let impact = UIImpactFeedbackGenerator(style: .heavy)
             impact.prepare()
-            impact.impactOccurred(intensity: 1.0)
-            UINotificationFeedbackGenerator().notificationOccurred(.success)
+            impact.impactOccurred(intensity: 0.95)
         case .passed:
             let impact = UIImpactFeedbackGenerator(style: .heavy)
             impact.prepare()

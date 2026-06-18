@@ -38,6 +38,8 @@ final class GameViewModel: ObservableObject {
     private let cardRotationStore: CardRotationStore
     private var hasFinished = false
     private var hasStartedSystems = false
+    private var isHoldingFeedbackUntilNeutral = false
+    private var pendingNeutralResult: RoundResult?
     private let onFinish: (RoundResult) -> Void
 
     init(
@@ -132,13 +134,25 @@ final class GameViewModel: ObservableObject {
     }
 
     func mark(_ status: WordStatus) {
+        mark(status, holdFeedbackUntilNeutral: false)
+    }
+
+    private func mark(_ status: WordStatus, holdFeedbackUntilNeutral: Bool) {
         guard !hasFinished, phase == .playing else { return }
+        guard !isHoldingFeedbackUntilNeutral else { return }
 
         feedback = status
         playFeedback(for: status)
 
         let result = engine.markCurrentWord(status)
         syncFromEngine()
+
+        if holdFeedbackUntilNeutral {
+            isHoldingFeedbackUntilNeutral = true
+            pendingNeutralResult = result
+            tiltStatusText = "Return to neutral"
+            return
+        }
 
         Task { [weak self] in
             try? await Task.sleep(for: .milliseconds(240))
@@ -330,6 +344,8 @@ final class GameViewModel: ObservableObject {
         tiltStatusText = "Tilt or swipe to score"
         motionManager.start { [weak self] action in
             self?.handleTiltAction(action)
+        } onNeutralDetected: { [weak self] in
+            self?.completeHeldFeedbackAfterNeutral()
         }
     }
 
@@ -338,11 +354,27 @@ final class GameViewModel: ObservableObject {
 
         switch action {
         case .correct:
-            mark(.correct)
+            mark(.correct, holdFeedbackUntilNeutral: true)
         case .pass:
-            mark(.passed)
+            mark(.passed, holdFeedbackUntilNeutral: true)
         case .neutral:
+            completeHeldFeedbackAfterNeutral()
+        }
+    }
+
+    private func completeHeldFeedbackAfterNeutral() {
+        guard isHoldingFeedbackUntilNeutral else {
             feedback = nil
+            return
+        }
+
+        isHoldingFeedbackUntilNeutral = false
+        feedback = nil
+        tiltStatusText = "Tilt or swipe to score"
+
+        if let pendingNeutralResult {
+            self.pendingNeutralResult = nil
+            finishRound(with: pendingNeutralResult, wasTimeUp: false)
         }
     }
 
@@ -370,6 +402,9 @@ final class GameViewModel: ObservableObject {
         timerTask?.cancel()
         timerTask = nil
         motionManager?.stop()
+        feedback = nil
+        isHoldingFeedbackUntilNeutral = false
+        pendingNeutralResult = nil
 
         if settings.soundsEnabled {
             soundService.play(.timeout, enabled: true)
@@ -397,6 +432,8 @@ final class GameViewModel: ObservableObject {
         phase = .finished
         isPaused = false
         feedback = nil
+        isHoldingFeedbackUntilNeutral = false
+        pendingNeutralResult = nil
         timerTask?.cancel()
         timerTask = nil
         countdownTask?.cancel()

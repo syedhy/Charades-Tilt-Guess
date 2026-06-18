@@ -43,9 +43,9 @@ final class HapticsManager {
     }
 
     func playNeutralReturn() {
-        let impact = UIImpactFeedbackGenerator(style: .light)
+        let impact = UIImpactFeedbackGenerator(style: .medium)
         impact.prepare()
-        impact.impactOccurred(intensity: 0.55)
+        impact.impactOccurred(intensity: 0.78)
     }
 
     func playTimeUp() {

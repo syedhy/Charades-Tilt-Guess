@@ -4,7 +4,7 @@ enum AppRoute: Hashable {
     case settings
     case onboarding
     case deckEditor
-    case customDeckDetail(deck: Deck)
+    case customDeckDetail(deck: Deck, mode: GameMode)
     case modeDeckSelection(mode: GameMode)
     case gameSetup(mode: GameMode, deck: Deck)
     case pasteAndPlay
@@ -136,8 +136,8 @@ struct AppShellView: View {
             }
         case .deckEditor:
             DeckEditorView()
-        case let .customDeckDetail(deck):
-            CustomDeckDetailView(deck: deck)
+        case let .customDeckDetail(deck, mode):
+            CustomDeckDetailView(deck: deck, mode: mode)
         case let .modeDeckSelection(mode):
             ModeDeckSelectionView(mode: mode)
         case let .gameSetup(mode, deck):

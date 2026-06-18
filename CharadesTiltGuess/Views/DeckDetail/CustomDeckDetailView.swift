@@ -4,6 +4,7 @@ import UIKit
 struct CustomDeckDetailView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel: CustomDeckDetailViewModel
+    private let mode: GameMode
     @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
     @State private var isShowingUnsavedChangesConfirmation = false
@@ -14,12 +15,14 @@ struct CustomDeckDetailView: View {
     @FocusState private var isNameFocused: Bool
 
     @MainActor
-    init(deck: Deck) {
+    init(deck: Deck, mode: GameMode = .normal) {
+        self.mode = mode
         _viewModel = StateObject(wrappedValue: CustomDeckDetailViewModel(deck: deck))
     }
 
     @MainActor
-    init(viewModel: CustomDeckDetailViewModel) {
+    init(viewModel: CustomDeckDetailViewModel, mode: GameMode = .normal) {
+        self.mode = mode
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
@@ -183,6 +186,10 @@ struct CustomDeckDetailView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
+
+                Label(mode.title, systemImage: mode.symbolName)
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
 
             playDeckButton
@@ -349,6 +356,7 @@ struct CustomDeckDetailView: View {
                 viewModel.refreshImportPreview(from: "")
                 isShowingPasteSheet = true
             }
+            .accessibilityIdentifier("pasteCardsFromClipboardButton")
 
             DoodleIconButton(
                 symbol: "plus",
@@ -363,6 +371,7 @@ struct CustomDeckDetailView: View {
                     isShowingAddCardSheet = true
                 }
             }
+            .accessibilityIdentifier("addCardManuallyButton")
         }
         .padding(.trailing, 28)
         .padding(.bottom, 26)
@@ -402,11 +411,11 @@ struct CustomDeckDetailView: View {
 
             isNameFocused = false
             hideIdentityEditorImmediately()
-            router.open(.gameSetup(mode: .normal, deck: savedDeck))
+            router.open(.gameSetup(mode: mode, deck: savedDeck))
             return
         }
 
-        router.open(.gameSetup(mode: .normal, deck: viewModel.deck))
+        router.open(.gameSetup(mode: mode, deck: viewModel.deck))
     }
 
     private func toggleIdentityEditor() {

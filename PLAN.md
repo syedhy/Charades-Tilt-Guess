@@ -55,6 +55,7 @@ Interaction plan: add first-launch onboarding with illustrated motion cards, pre
 - Final verification: `xcodebuild -project CharadesTiltGuess.xcodeproj -scheme CharadesTiltGuess -destination 'platform=iOS Simulator,name=iPhone 17' test` passed with 51 unit tests and 4 UI tests.
 - Visual polish screenshot captured at `/tmp/charades-home-final.png`.
 - Final cleanup pass fixed Infinite Mode elapsed-time tracking, crisped action-button shadows, and corrected Paste & Play blank-line feedback.
+- Follow-up fix: deck selection now opens the card-list detail screen before setup; custom decks retain manual add and paste-from-clipboard tools, and Play Deck preserves the selected mode.
 
 ## Future Improvements
 

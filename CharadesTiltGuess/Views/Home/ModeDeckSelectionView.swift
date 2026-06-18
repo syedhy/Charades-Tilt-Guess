@@ -101,7 +101,7 @@ struct ModeDeckSelectionView: View {
                 }
             } else {
                 DeckGridView(decks: decks) { deck in
-                    router.open(.gameSetup(mode: mode, deck: deck))
+                    router.open(.customDeckDetail(deck: deck, mode: mode))
                 }
             }
         }

@@ -17,7 +17,7 @@ struct OnboardingView: View {
                 VStack(spacing: 0) {
                     header
                         .padding(.horizontal, 24)
-                        .padding(.top, max(proxy.safeAreaInsets.top + 12, 24))
+                        .padding(.top, min(max(proxy.safeAreaInsets.top - 24, 20), 36))
 
                     TabView(selection: $page) {
                         ForEach(Array(pages.enumerated()), id: \.element.id) { index, item in
@@ -27,7 +27,7 @@ struct OnboardingView: View {
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))
-                    .padding(.top, 12)
+                    .padding(.top, 8)
 
                     footer
                         .padding(.horizontal, 24)
@@ -75,40 +75,41 @@ struct OnboardingView: View {
     private func onboardingPage(_ item: OnboardingPage, index: Int) -> some View {
         ScrollView {
             VStack(spacing: 14) {
-                DoodlePanel(background: item.accent) {
-                    VStack(spacing: 14) {
-                        HStack {
-                            Text("Step \(index + 1) of \(pages.count)")
-                                .font(.system(size: 12, weight: .black, design: .rounded))
-                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+                VStack(spacing: 14) {
+                    HStack {
+                        Text("Step \(index + 1) of \(pages.count)")
+                            .font(.system(size: 12, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
 
-                            Spacer()
+                        Spacer()
 
-                            Image(systemName: item.symbol)
-                                .font(.system(size: 19, weight: .black))
-                                .foregroundStyle(AppTheme.Colors.ink)
-                        }
-
-                        OnboardingIllustration(kind: item.kind, accent: item.accent, isAnimating: isAnimating)
-                            .frame(height: 174)
-
-                        VStack(spacing: 7) {
-                            Text(item.title)
-                                .font(.system(size: 29, weight: .black, design: .rounded))
-                                .foregroundStyle(AppTheme.Colors.ink)
-                                .multilineTextAlignment(.center)
-                                .fixedSize(horizontal: false, vertical: true)
-
-                            Text(item.caption)
-                                .font(.system(size: 14, weight: .bold, design: .rounded))
-                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
-                                .multilineTextAlignment(.center)
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
+                        Image(systemName: item.symbol)
+                            .font(.system(size: 19, weight: .black))
+                            .foregroundStyle(AppTheme.Colors.ink)
                     }
-                    .padding(20)
-                    .frame(maxWidth: .infinity)
+
+                    OnboardingIllustration(kind: item.kind, accent: item.accent, isAnimating: isAnimating)
+                        .frame(height: 174)
+
+                    VStack(spacing: 14) {
+                        Text(item.title)
+                            .font(.system(size: 29, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text(item.caption)
+                            .font(.system(size: 14, weight: .bold, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
+                .padding(20)
+                .frame(maxWidth: .infinity)
+                .background(OnboardingCardBackground(background: item.accent))
+                .padding(.horizontal, 2)
+                .padding(.bottom, 6)
 
                 VStack(spacing: 8) {
                     ForEach(item.tips) { tip in
@@ -151,6 +152,20 @@ struct OnboardingView: View {
 
     private func finish() {
         onDone()
+    }
+}
+
+private struct OnboardingCardBackground: View {
+    let background: Color
+
+    var body: some View {
+        RoundedRectangle(cornerRadius: AppTheme.Radius.panel, style: .continuous)
+            .fill(background)
+            .overlay {
+                RoundedRectangle(cornerRadius: AppTheme.Radius.panel, style: .continuous)
+                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+            }
+            .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 4, y: 5)
     }
 }
 

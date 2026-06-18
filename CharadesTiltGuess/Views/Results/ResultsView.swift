@@ -12,32 +12,13 @@ struct ResultsView: View {
 
                 VStack(alignment: .leading, spacing: 12) {
                     scoreHeader
-                    statGrid
-
-                    VStack(spacing: 12) {
-                        wordSection(
-                            title: "Correct Cards",
-                            words: result.correctWords,
-                            accent: AppTheme.Colors.mint,
-                            emptyText: "No correct cards yet.",
-                            height: listHeight(for: proxy.size.height)
-                        )
-
-                        wordSection(
-                            title: "Passed Cards",
-                            words: result.passedWords,
-                            accent: AppTheme.Colors.coral,
-                            emptyText: "No passes this round.",
-                            height: listHeight(for: proxy.size.height)
-                        )
-                    }
-
-                    Spacer(minLength: 0)
+                    cardSection
+                        .frame(maxHeight: .infinity)
 
                     actionButtons
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 16)
+                .padding(.top, max(proxy.safeAreaInsets.top + 16, 28))
                 .padding(.bottom, 20)
             }
         }
@@ -47,26 +28,30 @@ struct ResultsView: View {
 
     private var scoreHeader: some View {
         DoodlePanel(background: result.deck.color.displayColor) {
-            HStack(alignment: .center, spacing: 18) {
+            HStack(alignment: .center, spacing: 16) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(result.title)
                         .font(.system(size: 16, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+                        .lineLimit(1)
 
                     Text(result.subtitle)
-                        .font(.system(size: 24, weight: .black, design: .rounded))
+                        .font(.system(size: 21, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.7)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.58)
                 }
+                .layoutPriority(1)
 
                 Spacer()
 
-                VStack(spacing: 0) {
-                    Text("\(result.finalScore)")
-                        .font(.system(size: 70, weight: .black, design: .rounded))
+                VStack(alignment: .trailing, spacing: 0) {
+                    Text(scoreText)
+                        .font(.system(size: 48, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
                         .monospacedDigit()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.46)
                         .accessibilityIdentifier("finalScore")
 
                     Text("score")
@@ -74,94 +59,64 @@ struct ResultsView: View {
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }
             }
-            .padding(20)
-            .frame(height: 132)
+            .padding(.horizontal, 20)
+            .padding(.vertical, 18)
+            .frame(minHeight: 118)
         }
     }
 
-    private var statGrid: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 4), spacing: 8) {
-            statCard(title: "Correct", value: "\(result.correctWords.count)", accent: AppTheme.Colors.mint)
-            statCard(title: "Passed", value: "\(result.passedWords.count)", accent: AppTheme.Colors.coral)
-            statCard(title: "Accuracy", value: "\(result.accuracyPercentage)%", accent: AppTheme.Colors.yellow)
-            statCard(title: "Seen", value: "\(result.cardsSeen)", accent: AppTheme.Colors.blue)
-            statCard(title: "Time", value: timeUsedText, accent: AppTheme.Colors.orange)
-            statCard(title: "Tried", value: "\(result.totalAttempted)", accent: result.deck.color.displayColor)
-            statCard(title: "Best", value: "\(result.bestStreak)", accent: AppTheme.Colors.mint)
-            statCard(title: "Streak", value: "\(result.longestCorrectStreak)", accent: AppTheme.Colors.yellow)
-        }
+    private var scoreText: String {
+        "\(result.correctWords.count)/\(max(result.cardsSeen, result.totalAttempted))"
     }
 
-    private func statCard(title: String, value: String, accent: Color) -> some View {
-        DoodlePanel(background: AppTheme.Colors.paperBright, cornerRadius: 14) {
-            VStack(alignment: .leading, spacing: 3) {
-                Text(value)
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundStyle(accent)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.62)
-                    .monospacedDigit()
-
-                Text(title)
-                    .font(.system(size: 10, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.72)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(10)
-            .frame(height: 70)
-        }
-    }
-
-    private func wordSection(title: String, words: [GameWord], accent: Color, emptyText: String, height: CGFloat) -> some View {
+    private var cardSection: some View {
         DoodlePanel {
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 14) {
                 HStack {
-                    Text(title)
-                        .font(.system(size: 21, weight: .black, design: .rounded))
+                    Text("Cards")
+                        .font(.system(size: 27, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
 
                     Spacer()
 
-                    Text("\(words.count)")
-                        .font(.system(size: 17, weight: .black, design: .rounded))
-                        .foregroundStyle(accent)
+                    Text("\(result.totalAttempted)")
+                        .font(.system(size: 24, weight: .black, design: .rounded))
+                        .foregroundStyle(result.deck.color.displayColor)
                         .monospacedDigit()
                 }
 
                 ScrollView {
-                    if words.isEmpty {
-                        Text(emptyText)
-                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                    if cardEntries.isEmpty {
+                        Text("No cards played yet.")
+                            .font(.system(size: 21, weight: .bold, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(0.54))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.vertical, 8)
                     } else {
-                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-                            ForEach(words) { word in
-                                Text(word.text)
-                                    .font(.system(size: 14, weight: .black, design: .rounded))
-                                    .foregroundStyle(AppTheme.Colors.ink)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.65)
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.vertical, 8)
-                                    .padding(.horizontal, 10)
-                                    .background(accent.opacity(0.24), in: Capsule())
-                                    .overlay {
-                                        Capsule()
-                                            .stroke(AppTheme.Colors.ink.opacity(0.28), lineWidth: 2)
-                                    }
+                        LazyVStack(alignment: .leading, spacing: 8) {
+                            ForEach(cardEntries) { entry in
+                                ResultWordRow(entry: entry)
                             }
                         }
                     }
                 }
-                .scrollIndicators(.visible)
+                .scrollIndicators(.hidden)
             }
             .padding(16)
-            .frame(height: height)
+            .frame(maxHeight: .infinity)
         }
+    }
+
+    private var cardEntries: [ResultCardEntry] {
+        if !result.attempts.isEmpty {
+            return result.attempts.map { attempt in
+                ResultCardEntry(word: attempt.word, status: attempt.status, id: attempt.id)
+            }
+        }
+
+        let correctEntries = result.correctWords.map { ResultCardEntry(word: $0, status: .correct, id: "correct-\($0.id)") }
+        let passedEntries = result.passedWords.map { ResultCardEntry(word: $0, status: .passed, id: "passed-\($0.id)") }
+        return correctEntries + passedEntries
     }
 
     private var actionButtons: some View {
@@ -182,12 +137,32 @@ struct ResultsView: View {
         }
     }
 
-    private var timeUsedText: String {
-        guard result.timeUsed > 0 else { return result.mode == .infinite ? "0s" : "\(result.duration)s" }
-        return "\(result.timeUsed)s"
-    }
+}
 
-    private func listHeight(for availableHeight: CGFloat) -> CGFloat {
-        availableHeight > 800 ? 156 : 132
+private struct ResultCardEntry: Identifiable {
+    let word: GameWord
+    let status: WordStatus
+    let id: String
+}
+
+private struct ResultWordRow: View {
+    let entry: ResultCardEntry
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: entry.status == .correct ? "checkmark.circle.fill" : "xmark.circle.fill")
+                .font(.system(size: 22, weight: .black))
+                .foregroundStyle(entry.status == .correct ? AppTheme.Colors.mint : AppTheme.Colors.coral)
+
+            Text(entry.word.text)
+                .font(.system(size: 25, weight: .black, design: .rounded))
+                .strikethrough(entry.status == .passed, color: AppTheme.Colors.coral)
+                .foregroundStyle(AppTheme.Colors.ink.opacity(entry.status == .passed ? 0.58 : 1))
+                .lineLimit(1)
+                .minimumScaleFactor(0.64)
+
+            Spacer(minLength: 0)
+        }
+        .padding(.vertical, 3)
     }
 }

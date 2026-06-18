@@ -85,6 +85,14 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.draftCards.count, CustomDeckDetailViewModel.maxCustomDeckCardCount)
     }
 
+    func testAddCardRejectsOverLongCards() {
+        let viewModel = makeViewModel()
+        let longCard = String(repeating: "A", count: CustomDeckDetailViewModel.maxCardTextLength + 1)
+
+        XCTAssertFalse(viewModel.addCard(text: longCard))
+        XCTAssertEqual(viewModel.cardErrorMessage, "Keep cards under \(CustomDeckDetailViewModel.maxCardTextLength) characters.")
+    }
+
     func testImportCardsOnlyUsesRemainingCustomDeckSlots() {
         var nextID = 1
         let existingCards = makeCards(count: CustomDeckDetailViewModel.maxCustomDeckCardCount - 1)

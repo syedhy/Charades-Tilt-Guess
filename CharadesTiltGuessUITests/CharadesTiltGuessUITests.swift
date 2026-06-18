@@ -8,21 +8,21 @@ final class CharadesTiltGuessUITests: XCTestCase {
     func testHomeScreenShowsAppTitle() throws {
         let app = launchApp()
 
-        XCTAssertTrue(app.staticTexts["Charades: Tilt & Guess"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["modeButton-normal"].waitForExistence(timeout: 5))
     }
 
     func testHomeScreenScrollsThroughDecks() throws {
         let app = launchApp()
 
-        XCTAssertTrue(app.staticTexts["Charades: Tilt & Guess"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 5))
 
         app.swipeUp()
         app.swipeUp()
         app.swipeDown()
         app.swipeDown()
 
-        XCTAssertTrue(app.staticTexts["Charades: Tilt & Guess"].waitForExistence(timeout: 2))
+        XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 2))
     }
 
     func testCanNavigateThroughButtonGameFlow() throws {
@@ -34,24 +34,19 @@ final class CharadesTiltGuessUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["24 cards"].waitForExistence(timeout: 5))
 
         app.buttons["playDeckButton"].tap()
-        XCTAssertTrue(app.staticTexts["Tech"].waitForExistence(timeout: 5))
-
-        XCTAssertTrue(app.staticTexts["Place the device on your forehead"].waitForExistence(timeout: 5))
-
-        app.buttons["Start round"].tap()
         XCTAssertTrue(app.staticTexts["Ready position"].waitForExistence(timeout: 5))
         app.buttons["manualReadyButton"].tap()
         XCTAssertTrue(app.staticTexts["gameWord"].waitForExistence(timeout: 7))
 
-        app.buttons["Correct"].tap()
+        swipeDown(in: app)
         Thread.sleep(forTimeInterval: 0.6)
 
         let pauseButton = app.buttons["Pause round"]
         XCTAssertTrue(pauseButton.waitForExistence(timeout: 5))
         pauseButton.tap()
 
-        XCTAssertTrue(app.buttons["End Round"].waitForExistence(timeout: 5))
-        app.buttons["End Round"].tap()
+        XCTAssertTrue(app.buttons["pauseEndRoundButton"].waitForExistence(timeout: 5))
+        app.buttons["pauseEndRoundButton"].tap()
         XCTAssertTrue(app.staticTexts["Round complete"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["finalScore"].waitForExistence(timeout: 5))
     }
@@ -81,13 +76,6 @@ final class CharadesTiltGuessUITests: XCTestCase {
         nameField.typeText(deckName)
 
         app.buttons["createCustomDeckButton"].tap()
-        XCTAssertTrue(app.staticTexts["Charades: Tilt & Guess"].waitForExistence(timeout: 5))
-
-        app.buttons["modeButton-normal"].tap()
-        let customDeckButton = app.buttons["\(deckName), 0 prompts"]
-        XCTAssertTrue(customDeckButton.waitForExistence(timeout: 5))
-        customDeckButton.tap()
-
         XCTAssertTrue(app.staticTexts[deckName].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["0 cards"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["addCardManuallyButton"].waitForExistence(timeout: 5))
@@ -102,5 +90,11 @@ final class CharadesTiltGuessUITests: XCTestCase {
         app.launchArguments += ["-CharadesTiltGuess.HasSeenOnboarding", "YES"]
         app.launch()
         return app
+    }
+
+    private func swipeDown(in app: XCUIApplication) {
+        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.42))
+        let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.82))
+        start.press(forDuration: 0.05, thenDragTo: end)
     }
 }

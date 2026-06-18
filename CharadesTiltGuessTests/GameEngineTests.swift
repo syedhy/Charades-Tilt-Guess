@@ -81,15 +81,15 @@ final class GameEngineTests: XCTestCase {
         XCTAssertEqual(engine.session.attempts[1].challenge, .silentAct)
     }
 
-    func testInfiniteModeRefillsWhenDeckIsExhausted() {
+    func testInfiniteModeFinishesWhenDeckIsExhausted() {
         let deck = makeDeck(cards: [GameWord(id: "one", text: "Only Word")])
         var engine = GameEngine(configuration: .infinite(deck: deck), orderedWords: deck.cards)
 
         let result = engine.markCurrentWord(.correct)
 
-        XCTAssertNil(result)
-        XCTAssertEqual(engine.currentWord, deck.cards[0])
-        XCTAssertEqual(engine.session.correctWords, deck.cards)
+        XCTAssertEqual(result?.correctWords, deck.cards)
+        XCTAssertEqual(result?.totalAttempted, 1)
+        XCTAssertEqual(result?.finalScore, 1)
     }
 
     private func makeDeck(cards: [GameWord]? = nil) -> Deck {

@@ -6,7 +6,6 @@ enum AppRoute: Hashable {
     case deckEditor
     case customDeckDetail(deck: Deck, mode: GameMode)
     case modeDeckSelection(mode: GameMode)
-    case gameSetup(mode: GameMode, deck: Deck)
     case pasteAndPlay
     case wikipediaMode
     case results(result: RoundResult)
@@ -37,6 +36,13 @@ final class AppRouter: ObservableObject {
         }
     }
 
+    func replaceCurrent(with route: AppRoute) {
+        if !path.isEmpty {
+            path.removeLast()
+        }
+        path.append(route)
+    }
+
     func startGame(configuration: GameConfiguration) {
         orientationTransitionTask?.cancel()
         activeGame = ActiveGame(configuration: configuration)
@@ -45,6 +51,23 @@ final class AppRouter: ObservableObject {
 
     func startGame(deck: Deck, duration: Int) {
         startGame(configuration: .normal(deck: deck, duration: duration))
+    }
+
+    func startGame(mode: GameMode, deck: Deck, settings: GameSettings) {
+        switch mode {
+        case .normal:
+            startGame(configuration: .normal(deck: deck, duration: settings.defaultDuration))
+        case .infinite:
+            startGame(configuration: .infinite(deck: deck))
+        case .pasteAndPlay:
+            startGame(configuration: .pasteAndPlay(deck: deck, duration: settings.defaultDuration))
+        case .wikipedia:
+            startGame(configuration: .wikipedia(deck: deck, duration: settings.defaultDuration))
+        case .hotPotato:
+            startGame(configuration: .hotPotato(deck: deck, hiddenDuration: settings.defaultDuration))
+        case .challengeCards:
+            startGame(configuration: .challengeCards(deck: deck, duration: settings.defaultDuration))
+        }
     }
 
     func finishGame(result: RoundResult) {
@@ -140,13 +163,6 @@ struct AppShellView: View {
             CustomDeckDetailView(deck: deck, mode: mode)
         case let .modeDeckSelection(mode):
             ModeDeckSelectionView(mode: mode)
-        case let .gameSetup(mode, deck):
-            GameSetupView(
-                mode: mode,
-                deck: deck,
-                settings: settingsViewModel.settings,
-                onStartRound: { configuration in router.startGame(configuration: configuration) }
-            )
         case .pasteAndPlay:
             PasteAndPlayView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)

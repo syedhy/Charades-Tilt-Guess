@@ -6,26 +6,40 @@ final class HapticsManager {
     func play(_ status: WordStatus) {
         switch status {
         case .correct:
-            UIImpactFeedbackGenerator(style: .rigid).impactOccurred(intensity: 0.9)
+            let impact = UIImpactFeedbackGenerator(style: .rigid)
+            impact.prepare()
+            impact.impactOccurred(intensity: 1.0)
+            UINotificationFeedbackGenerator().notificationOccurred(.success)
         case .passed:
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred(intensity: 0.72)
+            let impact = UIImpactFeedbackGenerator(style: .heavy)
+            impact.prepare()
+            impact.impactOccurred(intensity: 0.95)
         }
     }
 
     func playPreparationReady() {
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred(intensity: 0.8)
+        let impact = UIImpactFeedbackGenerator(style: .heavy)
+        impact.prepare()
+        impact.impactOccurred(intensity: 0.92)
     }
 
     func playCountdownTick(urgency: Double = 0.45) {
-        UIImpactFeedbackGenerator(style: .light).impactOccurred(intensity: max(0.25, min(urgency, 1.0)))
+        let impact = UIImpactFeedbackGenerator(style: .medium)
+        impact.prepare()
+        impact.impactOccurred(intensity: max(0.55, min(urgency + 0.22, 1.0)))
     }
 
     func playCountdownStart() {
-        UIImpactFeedbackGenerator(style: .heavy).impactOccurred(intensity: 0.82)
+        let impact = UIImpactFeedbackGenerator(style: .rigid)
+        impact.prepare()
+        impact.impactOccurred(intensity: 1.0)
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
     }
 
     func playPause() {
-        UIImpactFeedbackGenerator(style: .soft).impactOccurred(intensity: 0.55)
+        let impact = UIImpactFeedbackGenerator(style: .medium)
+        impact.prepare()
+        impact.impactOccurred(intensity: 0.78)
     }
 
     func playTimeUp() {

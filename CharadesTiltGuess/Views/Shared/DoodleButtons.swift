@@ -5,6 +5,7 @@ struct DoodleIconButton: View {
     var accent: Color = AppTheme.Colors.paperBright
     var size: CGFloat = 46
     let accessibilityLabel: String
+    var accessibilityIdentifier: String?
     let action: () -> Void
 
     var body: some View {
@@ -23,6 +24,7 @@ struct DoodleIconButton: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(accessibilityLabel)
+        .accessibilityIdentifier(accessibilityIdentifier ?? accessibilityLabel)
     }
 }
 

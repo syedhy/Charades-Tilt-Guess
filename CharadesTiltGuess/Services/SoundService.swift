@@ -4,11 +4,20 @@ import Foundation
 enum SoundEffect: String, CaseIterable {
     case correct
     case pass
-    case countdown
+    case startCountdown
+    case gameStart
+    case endCountdown
     case timeout
 
-    var filename: String {
-        "\(rawValue).wav"
+    var resourceName: String {
+        switch self {
+        case .correct, .pass, .gameStart, .timeout:
+            return rawValue
+        case .startCountdown:
+            return "countdown"
+        case .endCountdown:
+            return "endCountDown"
+        }
     }
 }
 
@@ -19,7 +28,7 @@ final class SoundService {
 
     init(bundle: Bundle = .main) {
         for effect in SoundEffect.allCases {
-            guard let url = bundle.url(forResource: effect.rawValue, withExtension: "wav"),
+            guard let url = bundle.url(forResource: effect.resourceName, withExtension: "wav"),
                   let player = try? AVAudioPlayer(contentsOf: url)
             else {
                 continue

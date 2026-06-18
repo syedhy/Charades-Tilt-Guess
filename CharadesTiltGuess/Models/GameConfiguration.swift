@@ -38,9 +38,7 @@ struct GameConfiguration: Hashable, Identifiable {
 
     var repeatsWhenDeckExhausted: Bool {
         switch mode {
-        case .infinite:
-            return true
-        case .normal, .pasteAndPlay, .hotPotato, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .infinite, .hotPotato, .challengeCards, .wikipedia:
             return false
         }
     }

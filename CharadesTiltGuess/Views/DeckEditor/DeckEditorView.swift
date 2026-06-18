@@ -113,8 +113,8 @@ struct DeckEditorView: View {
                     symbol: "checkmark",
                     accent: viewModel.canSave ? AppTheme.Colors.yellow : AppTheme.Colors.gray.opacity(0.45)
                 ) {
-                    guard viewModel.saveDeck() != nil else { return }
-                    router.goHome()
+                    guard let deck = viewModel.saveDeck() else { return }
+                    router.replaceCurrent(with: .customDeckDetail(deck: deck, mode: .normal))
                 }
                 .simultaneousGesture(TapGesture())
                 .disabled(!viewModel.canSave)

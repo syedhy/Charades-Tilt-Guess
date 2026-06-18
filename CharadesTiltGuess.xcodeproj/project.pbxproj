@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B14C11D2FE4812C00BBD54B /* endCountDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B14C11C2FE4812C00BBD54B /* endCountDown.wav */; };
+		1B14C11F2FE4830100BBD54B /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B14C11E2FE4830100BBD54B /* gameStart.wav */; };
 		1B45660C2FE1DAFE007D28FE /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660B2FE1DAFE007D28FE /* correct.wav */; };
 		1B4566102FE1DC78007D28FE /* timeout.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660F2FE1DC78007D28FE /* timeout.wav */; };
 		1B4566112FE1DC78007D28FE /* pass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B45660E2FE1DC78007D28FE /* pass.wav */; };
@@ -17,7 +19,6 @@
 		AAA000000000000000000004 /* CharadesTiltGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000014 /* CharadesTiltGuessTests.swift */; };
 		AAA000000000000000000005 /* CharadesTiltGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000015 /* CharadesTiltGuessUITests.swift */; };
 		AAB000000000000000000001 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000011 /* AppRouter.swift */; };
-		AAB000000000000000000003 /* GameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000013 /* GameSetupView.swift */; };
 		AAB000000000000000000004 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000014 /* GameView.swift */; };
 		AAB000000000000000000005 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000015 /* ResultsView.swift */; };
 		AAB000000000000000000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB000000000000000000016 /* SettingsView.swift */; };
@@ -73,6 +74,7 @@
 		AAJ000000000000000000011 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000031 /* OnboardingView.swift */; };
 		AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000032 /* CardRotationStoreTests.swift */; };
 		AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */; };
+		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B14C11C2FE4812C00BBD54B /* endCountDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
+		1B14C11E2FE4830100BBD54B /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
 		1B45660B2FE1DAFE007D28FE /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		1B45660D2FE1DC78007D28FE /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
 		1B45660E2FE1DC78007D28FE /* pass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
@@ -106,7 +110,6 @@
 		AAA000000000000000000014 /* CharadesTiltGuessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharadesTiltGuessTests.swift; sourceTree = "<group>"; };
 		AAA000000000000000000015 /* CharadesTiltGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharadesTiltGuessUITests.swift; sourceTree = "<group>"; };
 		AAB000000000000000000011 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		AAB000000000000000000013 /* GameSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSetupView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000014 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000015 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		AAB000000000000000000016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		AAJ000000000000000000031 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000032 /* CardRotationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStoreTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
+		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 				AAI000000000000000000018 /* TiltGestureDetectorTests.swift */,
 				AAJ000000000000000000032 /* CardRotationStoreTests.swift */,
 				AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */,
+				AAJ000000000000000000034 /* WikipediaServiceTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -319,7 +324,6 @@
 		AAB000000000000000000022 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				AAB000000000000000000013 /* GameSetupView.swift */,
 				AAB000000000000000000014 /* GameView.swift */,
 				AAJ000000000000000000027 /* ModeInstructionsView.swift */,
 			);
@@ -391,6 +395,8 @@
 		AAD000000000000000000023 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B14C11E2FE4830100BBD54B /* gameStart.wav */,
+				1B14C11C2FE4812C00BBD54B /* endCountDown.wav */,
 				1B45660D2FE1DC78007D28FE /* countdown.wav */,
 				1B45660E2FE1DC78007D28FE /* pass.wav */,
 				1B45660F2FE1DC78007D28FE /* timeout.wav */,
@@ -524,6 +530,8 @@
 				AAD000000000000000000009 /* DefaultDecks.json in Resources */,
 				1B45660C2FE1DAFE007D28FE /* correct.wav in Resources */,
 				1B4566102FE1DC78007D28FE /* timeout.wav in Resources */,
+				1B14C11D2FE4812C00BBD54B /* endCountDown.wav in Resources */,
+				1B14C11F2FE4830100BBD54B /* gameStart.wav in Resources */,
 				1B4566112FE1DC78007D28FE /* pass.wav in Resources */,
 				1B4566122FE1DC78007D28FE /* countdown.wav in Resources */,
 			);
@@ -554,7 +562,6 @@
 				AAA000000000000000000002 /* AppMetadata.swift in Sources */,
 				AAA000000000000000000003 /* HomeView.swift in Sources */,
 				AAB000000000000000000001 /* AppRouter.swift in Sources */,
-				AAB000000000000000000003 /* GameSetupView.swift in Sources */,
 				AAB000000000000000000004 /* GameView.swift in Sources */,
 				AAB000000000000000000005 /* ResultsView.swift in Sources */,
 				AAB000000000000000000006 /* SettingsView.swift in Sources */,
@@ -616,6 +623,7 @@
 				AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */,
 				AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */,
 				AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */,
+				AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

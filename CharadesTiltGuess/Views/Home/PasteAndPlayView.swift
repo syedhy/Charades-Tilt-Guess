@@ -6,10 +6,15 @@ struct PasteAndPlayView: View {
     let onStart: (GameConfiguration) -> Void
 
     @State private var pastedText = ""
-    @State private var preview = ClipboardImportPreview(cards: [], blankLineCount: 0, duplicateCount: 0, tooLongLines: [], overDeckLimitCount: 0)
-    @State private var selectedDuration = 60
+    @State private var preview = ClipboardImportPreview(
+        cards: [],
+        blankLineCount: 0,
+        duplicateCount: 0,
+        tooLongLines: [],
+        overDeckLimitCount: 0,
+        maxCardLength: 30
+    )
     @State private var pasteMessage: String?
-    @State private var isShowingInstructions = false
 
     private let importService = ClipboardImportService()
 
@@ -20,7 +25,6 @@ struct PasteAndPlayView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
-                    durationPicker
                     pastePanel
                     previewPanel
                     playButton
@@ -31,28 +35,10 @@ struct PasteAndPlayView: View {
             .scrollDismissesKeyboard(.interactively)
             .scrollIndicators(.hidden)
         }
-        .navigationTitle(GameMode.pasteAndPlay.title)
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    isShowingInstructions = true
-                } label: {
-                    Image(systemName: "questionmark.circle.fill")
-                        .font(.system(size: 18, weight: .black))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                }
-                .accessibilityLabel("Paste and Play instructions")
-            }
-        }
-        .sheet(isPresented: $isShowingInstructions) {
-            ModeInstructionsView(mode: .pasteAndPlay)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-        }
         .preferredColorScheme(.light)
         .onAppear {
-            selectedDuration = settings.defaultDuration
             refreshPreview()
         }
         .onChange(of: pastedText) { _, _ in
@@ -62,56 +48,27 @@ struct PasteAndPlayView: View {
 
     private var header: some View {
         DoodlePanel(background: GameMode.pasteAndPlay.accentColor) {
-            VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .center, spacing: 16) {
                 Label("TEMPORARY DECK", systemImage: GameMode.pasteAndPlay.symbolName)
                     .font(.system(size: 12, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+                    .labelStyle(.iconOnly)
+                    .frame(width: 46, height: 46)
+                    .background(AppTheme.Colors.paperBright.opacity(0.72), in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
 
-                Text("Paste a list.\nPlay in seconds.")
-                    .font(.system(size: 40, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .fixedSize(horizontal: false, vertical: true)
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Paste a list")
+                        .font(.system(size: 32, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
 
-                Text("New lines, commas, bullets, and numbered lists all work.")
-                    .font(.system(size: 16, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
-            }
-            .padding(22)
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
-
-    private var durationPicker: some View {
-        DoodlePanel {
-            VStack(alignment: .leading, spacing: 14) {
-                Text("Round length")
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2), spacing: 12) {
-                    ForEach(GameSettings.availableDurations, id: \.self) { duration in
-                        Button {
-                            selectedDuration = duration
-                        } label: {
-                            Text("\(duration)s")
-                                .font(.system(size: 19, weight: .black, design: .rounded))
-                                .foregroundStyle(AppTheme.Colors.ink)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(
-                                    selectedDuration == duration ? GameMode.pasteAndPlay.accentColor : AppTheme.Colors.paper,
-                                    in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                                )
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                                        .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-                                }
-                        }
-                        .buttonStyle(DoodlePressStyle())
-                    }
+                    Text("Lines, commas, bullets, and numbers all work.")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
                 }
             }
             .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -135,7 +92,7 @@ struct PasteAndPlayView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .scrollContentBackground(.hidden)
                     .padding(12)
-                    .frame(minHeight: 172)
+                    .frame(minHeight: 140)
                     .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .overlay {
                         RoundedRectangle(cornerRadius: 18, style: .continuous)
@@ -192,7 +149,7 @@ struct PasteAndPlayView: View {
             accent: preview.cards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.pasteAndPlay.accentColor
         ) {
             guard !preview.cards.isEmpty else { return }
-            onStart(.pasteAndPlay(deck: makeTemporaryDeck(), duration: selectedDuration))
+            onStart(.pasteAndPlay(deck: makeTemporaryDeck(), duration: settings.defaultDuration))
         }
         .disabled(preview.cards.isEmpty)
         .opacity(preview.cards.isEmpty ? 0.62 : 1)

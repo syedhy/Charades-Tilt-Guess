@@ -45,8 +45,6 @@ struct WikipediaModeView: View {
     let onStart: (GameConfiguration) -> Void
 
     @StateObject private var viewModel = WikipediaModeViewModel()
-    @State private var selectedDuration = 60
-    @State private var isShowingInstructions = false
 
     var body: some View {
         ZStack {
@@ -55,7 +53,6 @@ struct WikipediaModeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
-                    durationPicker
                     content
                 }
                 .padding(24)
@@ -63,28 +60,10 @@ struct WikipediaModeView: View {
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle(GameMode.wikipedia.title)
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    isShowingInstructions = true
-                } label: {
-                    Image(systemName: "questionmark.circle.fill")
-                        .font(.system(size: 18, weight: .black))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                }
-                .accessibilityLabel("Wikipedia Mode instructions")
-            }
-        }
-        .sheet(isPresented: $isShowingInstructions) {
-            ModeInstructionsView(mode: .wikipedia)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-        }
         .preferredColorScheme(.light)
         .onAppear {
-            selectedDuration = settings.defaultDuration
             if case .idle = viewModel.state {
                 viewModel.load()
             }
@@ -93,56 +72,26 @@ struct WikipediaModeView: View {
 
     private var header: some View {
         DoodlePanel(background: GameMode.wikipedia.accentColor) {
-            VStack(alignment: .leading, spacing: 12) {
-                Label("RANDOM ARTICLES", systemImage: GameMode.wikipedia.symbolName)
-                    .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
-
-                Text("The internet\nmade the deck.")
-                    .font(.system(size: 40, weight: .black, design: .rounded))
+            HStack(alignment: .center, spacing: 16) {
+                Image(systemName: GameMode.wikipedia.symbolName)
+                    .font(.system(size: 22, weight: .black))
                     .foregroundStyle(AppTheme.Colors.ink)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 46, height: 46)
+                    .background(AppTheme.Colors.paperBright.opacity(0.72), in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
 
-                Text("A fresh pack of public Wikipedia article titles, ready for ridiculous clues.")
-                    .font(.system(size: 16, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
-            }
-            .padding(22)
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-    }
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Wikipedia words")
+                        .font(.system(size: 32, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
 
-    private var durationPicker: some View {
-        DoodlePanel {
-            VStack(alignment: .leading, spacing: 14) {
-                Text("Round length")
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2), spacing: 12) {
-                    ForEach(GameSettings.availableDurations, id: \.self) { duration in
-                        Button {
-                            selectedDuration = duration
-                        } label: {
-                            Text("\(duration)s")
-                                .font(.system(size: 19, weight: .black, design: .rounded))
-                                .foregroundStyle(AppTheme.Colors.ink)
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50)
-                                .background(
-                                    selectedDuration == duration ? GameMode.wikipedia.accentColor : AppTheme.Colors.paper,
-                                    in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                                )
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                                        .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-                                }
-                        }
-                        .buttonStyle(DoodlePressStyle())
-                    }
+                    Text("Short single-word prompts for charades.")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
                 }
             }
             .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
@@ -219,7 +168,7 @@ struct WikipediaModeView: View {
             }
 
             DoodleActionButton(title: "Play Wikipedia", symbol: "play.fill", accent: GameMode.wikipedia.accentColor) {
-                onStart(.wikipedia(deck: makeTemporaryDeck(titles: titles), duration: selectedDuration))
+                onStart(.wikipedia(deck: makeTemporaryDeck(titles: titles), duration: settings.defaultDuration))
             }
             .accessibilityIdentifier("playWikipediaButton")
         }

@@ -21,7 +21,7 @@ struct SettingsView: View {
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle("Settings")
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.light)
     }
@@ -155,13 +155,6 @@ struct SettingsView: View {
                 content()
             }
             .padding(20)
-        }
-        .overlay(alignment: .topTrailing) {
-            Circle()
-                .fill(accent)
-                .frame(width: 18, height: 18)
-                .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: 3))
-                .padding(18)
         }
     }
 

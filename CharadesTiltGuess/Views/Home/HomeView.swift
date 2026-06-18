@@ -2,9 +2,8 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var router: AppRouter
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @StateObject private var viewModel: HomeViewModel
-    @State private var isHeroFloating = false
-    @State private var didStartHeroAnimation = false
 
     @MainActor
     init() {
@@ -23,7 +22,6 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.section) {
                     header
-                    hero
                     quickActions
                     modeSection
                 }
@@ -36,27 +34,30 @@ struct HomeView: View {
         .preferredColorScheme(.light)
         .onAppear {
             viewModel.loadDecks()
-            startHeroAnimationIfNeeded()
         }
     }
 
     private var header: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 7) {
-                Text(AppMetadata.displayName)
+                Text("Charades")
                     .font(.system(size: 37, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.68)
                     .accessibilityIdentifier("appTitle")
 
                 Text("THE POCKET PARTY GAME")
-                    .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.72)
 
                 ScribbleUnderline()
                     .stroke(AppTheme.Colors.coral, style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                    .frame(width: 188, height: 10)
+                    .frame(width: 190, height: 10)
             }
+            .layoutPriority(1)
 
             Spacer(minLength: 8)
 
@@ -64,49 +65,6 @@ struct HomeView: View {
                 router.open(.settings)
             }
         }
-    }
-
-    private var hero: some View {
-        DoodlePanel(background: AppTheme.Colors.paperBright) {
-            ZStack {
-                HStack(spacing: 12) {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("PICK\nA MODE")
-                            .font(.system(size: 34, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                            .lineSpacing(-2)
-
-                        Text("Classic rounds, quick pasted lists, hidden timers, and surprise challenges.")
-                            .font(.system(size: 15, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-
-                    Spacer(minLength: 0)
-
-                    heroDeck
-                }
-                .padding(20)
-            }
-        }
-        .frame(height: 226)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Pick a game mode.")
-    }
-
-    private var heroDeck: some View {
-        ZStack {
-            DoodleGameCard(accent: AppTheme.Colors.coral, symbol: "timer", rotation: -14)
-                .offset(x: -26, y: 12)
-
-            DoodleGameCard(accent: AppTheme.Colors.yellow, symbol: "doc.on.clipboard", rotation: -2)
-                .offset(x: -3, y: -9)
-
-            DoodleGameCard(accent: AppTheme.Colors.mint, symbol: "sparkles", rotation: 13)
-                .offset(x: 28, y: 9)
-        }
-        .frame(width: 150, height: 170)
-        .offset(y: isHeroFloating ? -4 : 4)
     }
 
     private var quickActions: some View {
@@ -122,7 +80,7 @@ struct HomeView: View {
 
                 quickAction(title: "Random", symbol: "shuffle", accent: AppTheme.Colors.paperBright) {
                     guard let deck = viewModel.randomDeck else { return }
-                    router.open(.gameSetup(mode: .normal, deck: deck))
+                    router.startGame(mode: .normal, deck: deck, settings: settingsViewModel.settings)
                 }
             }
 
@@ -177,7 +135,7 @@ struct HomeView: View {
                 columns: [GridItem(.flexible(), spacing: 14), GridItem(.flexible())],
                 spacing: AppTheme.Spacing.standard
             ) {
-                ForEach(GameMode.allCases) { mode in
+                ForEach(GameMode.homeModes) { mode in
                     Button {
                         open(mode)
                     } label: {
@@ -197,17 +155,10 @@ struct HomeView: View {
             router.open(.pasteAndPlay)
         case .wikipedia:
             router.open(.wikipediaMode)
-        case .normal, .infinite, .hotPotato, .challengeCards:
+        case .normal, .infinite:
             router.open(.modeDeckSelection(mode: mode))
-        }
-    }
-
-    private func startHeroAnimationIfNeeded() {
-        guard !didStartHeroAnimation else { return }
-
-        didStartHeroAnimation = true
-        withAnimation(.easeInOut(duration: 2.2).repeatForever(autoreverses: true)) {
-            isHeroFloating.toggle()
+        case .hotPotato, .challengeCards:
+            break
         }
     }
 }
@@ -237,14 +188,8 @@ private struct GameModeCardView: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.76)
 
-                Text(mode.description)
-                    .font(.system(size: 12, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.78)
-
                 Text(mode.purpose.uppercased())
-                    .font(.system(size: 10, weight: .black, design: .rounded))
+                    .font(.system(size: 11, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.48))
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
@@ -252,33 +197,10 @@ private struct GameModeCardView: View {
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .frame(height: 196)
+        .frame(height: 148)
         .background {
             DoodlePanelBackground(background: AppTheme.Colors.paperBright, cornerRadius: AppTheme.Radius.card)
         }
-    }
-}
-
-private struct DoodleGameCard: View {
-    let accent: Color
-    let symbol: String
-    let rotation: Double
-
-    var body: some View {
-        RoundedRectangle(cornerRadius: 14, style: .continuous)
-            .fill(accent)
-            .frame(width: 88, height: 126)
-            .overlay {
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .stroke(AppTheme.Colors.ink, lineWidth: 4)
-            }
-            .overlay {
-                Image(systemName: symbol)
-                    .font(.system(size: 31, weight: .black))
-                    .foregroundStyle(AppTheme.Colors.ink)
-            }
-            .shadow(color: AppTheme.Colors.ink.opacity(0.18), radius: 0, x: 4, y: 5)
-            .rotationEffect(.degrees(rotation))
     }
 }
 

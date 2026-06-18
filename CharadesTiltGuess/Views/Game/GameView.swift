@@ -41,7 +41,7 @@ struct GameView: View {
             case .timeUp:
                 timeUpView
             case .finished:
-                gameplayContent
+                finishedSplashView
             }
 
             if let feedback = viewModel.feedback {
@@ -62,6 +62,7 @@ struct GameView: View {
         .onAppear {
             viewModel.startRoundSystemsIfNeeded()
         }
+        .animation(.easeInOut(duration: 0.18), value: viewModel.phase)
     }
 
     private var deck: Deck {
@@ -70,20 +71,19 @@ struct GameView: View {
 
     private var gameplayBackground: some View {
         ZStack {
-            Color(red: 0.08, green: 0.11, blue: 0.14)
-                .ignoresSafeArea()
+            DoodlePaperBackground()
 
             Canvas { context, size in
-                let lineColor = Color.white.opacity(0.025)
+                let lineColor = AppTheme.Colors.ink.opacity(0.018)
 
-                for y in stride(from: 20.0, through: size.height, by: 24.0) {
+                for y in stride(from: 18.0, through: size.height, by: 32.0) {
                     var path = Path()
                     path.move(to: CGPoint(x: 0, y: y))
                     path.addLine(to: CGPoint(x: size.width, y: y))
                     context.stroke(path, with: .color(lineColor), lineWidth: 1)
                 }
 
-                for x in stride(from: 20.0, through: size.width, by: 24.0) {
+                for x in stride(from: 18.0, through: size.width, by: 32.0) {
                     var path = Path()
                     path.move(to: CGPoint(x: x, y: 0))
                     path.addLine(to: CGPoint(x: x, y: size.height))
@@ -110,14 +110,14 @@ struct GameView: View {
             VStack(spacing: 8) {
                 Text(viewModel.preparationTitle)
                     .font(.system(size: 44, weight: .black, design: .rounded))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AppTheme.Colors.ink)
                     .multilineTextAlignment(.center)
                     .minimumScaleFactor(0.62)
                     .accessibilityIdentifier("preparationTitle")
 
                 Text(viewModel.preparationMessage)
                     .font(.system(size: 18, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.68))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: 500)
@@ -125,7 +125,7 @@ struct GameView: View {
 
             Label(viewModel.tiltStatusText, systemImage: viewModel.isTiltAvailable ? "dot.radiowaves.left.and.right" : "hand.tap.fill")
                 .font(.system(size: 14, weight: .black, design: .rounded))
-                .foregroundStyle(.white.opacity(0.72))
+                .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
 
             if viewModel.shouldShowManualReadyButton {
                 Button {
@@ -178,23 +178,24 @@ struct GameView: View {
                 }
 
                 wordCard
+                    .offset(y: -18)
             }
 
             Spacer(minLength: 0)
 
             tiltStatus
-            actionButtons
         }
-        .padding(.horizontal, 32)
-        .padding(.vertical, 22)
+        .padding(.horizontal, 56)
+        .padding(.top, 70)
+        .padding(.bottom, 42)
     }
 
     private var topBar: some View {
         HStack {
             DoodleIconButton(
                 symbol: viewModel.isPaused ? "play.fill" : "pause.fill",
-                accent: Color.white.opacity(0.32),
-                size: 54,
+                accent: AppTheme.Colors.paperBright.opacity(0.92),
+                size: 66,
                 accessibilityLabel: "Pause round"
             ) {
                 viewModel.togglePause()
@@ -204,50 +205,66 @@ struct GameView: View {
 
             VStack(spacing: 0) {
                 Text(configuration.mode.title.uppercased())
-                    .font(.system(size: 10, weight: .black, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.46))
+                    .font(.system(size: 13, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
 
                 Text(viewModel.timerText)
-                    .font(.system(size: 56, weight: .black, design: .rounded))
-                    .foregroundStyle(.white)
+                    .font(.system(size: 58, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
                     .monospacedDigit()
                     .accessibilityIdentifier("gameTimer")
+
+                ScribbleLine()
+                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .frame(width: 82, height: 10)
             }
 
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
                 Text("Score")
-                    .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.56))
+                    .font(.system(size: 16, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
 
                 Text("\(viewModel.score)")
-                    .font(.system(size: 30, weight: .black, design: .rounded))
-                    .foregroundStyle(deck.color.displayColor)
+                    .font(.system(size: 36, weight: .black, design: .rounded))
+                    .foregroundStyle(Color(red: 0.92, green: 0.33, blue: 0.52))
                     .monospacedDigit()
             }
-            .frame(width: 74, alignment: .trailing)
+            .overlay(alignment: .bottom) {
+                ScribbleLine()
+                    .stroke(Color(red: 0.92, green: 0.33, blue: 0.52), style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                    .frame(width: 52, height: 8)
+                    .offset(y: 9)
+            }
+            .frame(width: 92, alignment: .trailing)
         }
     }
 
     private var wordCard: some View {
-        RoundedRectangle(cornerRadius: 30, style: .continuous)
-            .fill(Color(red: 0.12, green: 0.17, blue: 0.22))
-            .overlay {
-                RoundedRectangle(cornerRadius: 30, style: .continuous)
-                    .stroke(deck.color.displayColor.opacity(0.9), lineWidth: 6)
-            }
-            .overlay {
+        ZStack {
+            HStack(spacing: 28) {
+                BurstMarks()
+                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 5, lineCap: .round))
+                    .frame(width: 38, height: 72)
+
                 Text(viewModel.currentWordText)
-                    .font(.system(size: 74, weight: .black, design: .rounded))
+                    .font(.system(size: 88, weight: .black, design: .rounded))
                     .minimumScaleFactor(0.28)
                     .lineLimit(2)
                     .multilineTextAlignment(.center)
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 36)
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .padding(.horizontal, 10)
                     .accessibilityIdentifier("gameWord")
+
+                BurstMarks()
+                    .stroke(AppTheme.Colors.blue, style: StrokeStyle(lineWidth: 5, lineCap: .round))
+                    .frame(width: 38, height: 72)
+                    .rotationEffect(.degrees(180))
             }
-            .shadow(color: .black.opacity(0.28), radius: 0, x: 6, y: 8)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(minHeight: 170)
     }
 
     private func challengeBanner(_ challenge: ChallengeCard) -> some View {
@@ -278,34 +295,13 @@ struct GameView: View {
         .shadow(color: .black.opacity(0.24), radius: 0, x: 4, y: 5)
     }
 
-    private var actionButtons: some View {
-        HStack(spacing: 16) {
-            Button {
-                viewModel.mark(.passed)
-            } label: {
-                gameActionLabel(title: "Pass", symbol: "arrow.uturn.forward", color: AppTheme.Colors.coral)
-            }
-            .accessibilityIdentifier("passButton")
-
-            Button {
-                viewModel.mark(.correct)
-            } label: {
-                gameActionLabel(title: "Correct", symbol: "checkmark", color: AppTheme.Colors.mint)
-            }
-            .accessibilityIdentifier("correctButton")
-        }
-        .buttonStyle(DoodlePressStyle())
-        .opacity(viewModel.phase == .playing ? 1 : 0.55)
-        .disabled(viewModel.phase != .playing)
-    }
-
     private var tiltStatus: some View {
         Label(
             statusText,
             systemImage: viewModel.isTiltAvailable ? "iphone.gen3.radiowaves.left.and.right" : "hand.draw.fill"
         )
-        .font(.system(size: 13, weight: .black, design: .rounded))
-        .foregroundStyle(.white.opacity(0.68))
+        .font(.system(size: 15, weight: .black, design: .rounded))
+        .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
         .lineLimit(1)
         .minimumScaleFactor(0.72)
         .accessibilityIdentifier("tiltStatus")
@@ -329,7 +325,7 @@ struct GameView: View {
         }
         .foregroundStyle(AppTheme.Colors.ink)
         .frame(maxWidth: .infinity)
-        .frame(height: 64)
+        .frame(height: 54)
         .background(color, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
@@ -372,40 +368,108 @@ struct GameView: View {
         }
     }
 
-    private var pauseOverlay: some View {
-        Color.black.opacity(0.62)
-            .ignoresSafeArea()
-            .overlay {
-                DoodlePanel {
-                    VStack(alignment: .leading, spacing: 18) {
-                        Text("Paused")
-                            .font(.system(size: 42, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
+    private var finishedSplashView: some View {
+        ZStack {
+            deck.color.displayColor
+                .ignoresSafeArea()
 
-                        DoodleActionButton(
-                            title: "Resume",
-                            symbol: "play.fill",
-                            accent: AppTheme.Colors.mint,
-                            action: viewModel.resume
-                        )
+            VStack(spacing: 16) {
+                Image(systemName: "flag.checkered")
+                    .font(.system(size: 52, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 104, height: 104)
+                    .background(AppTheme.Colors.paperBright, in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.bold))
+                    .shadow(color: .black.opacity(0.24), radius: 0, x: 5, y: 7)
 
-                        DoodleActionButton(
-                            title: "End Round",
-                            symbol: "flag.checkered",
-                            accent: AppTheme.Colors.yellow,
-                            action: viewModel.endRound
-                        )
+                Text("Round complete")
+                    .font(.system(size: 58, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .minimumScaleFactor(0.58)
+                    .lineLimit(1)
 
-                        DoodleActionButton(
-                            title: "Exit To Main Menu",
-                            symbol: "house.fill",
-                            accent: AppTheme.Colors.paperBright,
-                            action: onExit
-                        )
-                    }
-                    .padding(26)
-                    .frame(width: 390)
-                }
+                Text("\(viewModel.score) score")
+                    .font(.system(size: 24, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
+                    .monospacedDigit()
             }
+            .padding(.horizontal, 40)
+            .transition(.scale(scale: 0.96).combined(with: .opacity))
+        }
+    }
+
+    private var pauseOverlay: some View {
+        ZStack {
+            Color.black.opacity(0.62)
+                .ignoresSafeArea()
+
+            DoodlePanel {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Paused")
+                        .font(.system(size: 42, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+
+                    HStack(spacing: 14) {
+                        pauseActionButton(title: "Resume", symbol: "play.fill", accent: AppTheme.Colors.mint, action: viewModel.resume)
+                        pauseActionButton(title: "End", symbol: "flag.checkered", accent: AppTheme.Colors.yellow, action: viewModel.endRound)
+                        pauseActionButton(title: "Home", symbol: "house.fill", accent: AppTheme.Colors.paperBright, action: onExit)
+                    }
+                }
+                .padding(26)
+                .frame(width: 430)
+            }
+        }
+    }
+
+    private func pauseActionButton(title: String, symbol: String, accent: Color, action: @escaping () -> Void) -> some View {
+        VStack(spacing: 10) {
+            DoodleIconButton(
+                symbol: symbol,
+                accent: accent,
+                size: 82,
+                accessibilityLabel: title == "End" ? "End Round" : title,
+                accessibilityIdentifier: title == "End" ? "pauseEndRoundButton" : "pause\(title)Button",
+                action: action
+            )
+
+            Text(title)
+                .font(.system(size: 15, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+        }
+        .frame(maxWidth: .infinity)
+    }
+}
+
+private struct ScribbleLine: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.minX + 2, y: rect.midY))
+        path.addCurve(
+            to: CGPoint(x: rect.maxX - 2, y: rect.midY),
+            control1: CGPoint(x: rect.width * 0.28, y: rect.minY),
+            control2: CGPoint(x: rect.width * 0.68, y: rect.maxY)
+        )
+        return path
+    }
+}
+
+private struct BurstMarks: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let midY = rect.midY
+        let maxX = rect.maxX
+
+        path.move(to: CGPoint(x: rect.minX, y: midY - 26))
+        path.addLine(to: CGPoint(x: maxX, y: midY - 12))
+
+        path.move(to: CGPoint(x: rect.minX + 4, y: midY))
+        path.addLine(to: CGPoint(x: maxX, y: midY))
+
+        path.move(to: CGPoint(x: rect.minX, y: midY + 26))
+        path.addLine(to: CGPoint(x: maxX, y: midY + 12))
+
+        return path
     }
 }

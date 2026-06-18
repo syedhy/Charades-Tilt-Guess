@@ -31,4 +31,14 @@ final class ClipboardImportServiceTests: XCTestCase {
         XCTAssertEqual(preview.blankLineCount, 2)
         XCTAssertTrue(preview.summaryMessages.contains("2 blank lines were ignored."))
     }
+
+    func testRejectsCardsLongerThanThirtyCharactersByDefault() {
+        let service = ClipboardImportService()
+        let longCard = String(repeating: "A", count: 31)
+        let preview = service.previewCards(from: "Pizza\n\(longCard)")
+
+        XCTAssertEqual(preview.cards, ["Pizza"])
+        XCTAssertEqual(preview.tooLongLines, [longCard])
+        XCTAssertTrue(preview.summaryMessages.contains("1 card is over 30 characters."))
+    }
 }

@@ -29,6 +29,7 @@ final class GameViewModel: ObservableObject {
     private var timerTask: Task<Void, Never>?
     private var countdownTask: Task<Void, Never>?
     private var timeUpTask: Task<Void, Never>?
+    private var finishPresentationTask: Task<Void, Never>?
     private var motionManager: MotionManager?
     private let configuration: GameConfiguration
     private let settings: GameSettings
@@ -68,6 +69,7 @@ final class GameViewModel: ObservableObject {
         timerTask?.cancel()
         countdownTask?.cancel()
         timeUpTask?.cancel()
+        finishPresentationTask?.cancel()
 
         if let motionManager {
             Task { @MainActor in
@@ -249,7 +251,7 @@ final class GameViewModel: ObservableObject {
                 guard !Task.isCancelled, !self.hasFinished else { return }
                 self.countdownValue = value
                 if self.settings.soundsEnabled {
-                    self.soundService.play(.countdown, enabled: true)
+                    self.soundService.play(.startCountdown, enabled: true)
                 }
                 if self.settings.hapticsEnabled {
                     self.hapticsManager.playCountdownTick(urgency: Double(4 - value) / 3.0)
@@ -260,6 +262,9 @@ final class GameViewModel: ObservableObject {
             guard !Task.isCancelled, !self.hasFinished else { return }
             self.countdownValue = nil
             self.phase = .playing
+            if self.settings.soundsEnabled {
+                self.soundService.play(.gameStart, enabled: true)
+            }
             if self.settings.hapticsEnabled {
                 self.hapticsManager.playCountdownStart()
             }
@@ -299,7 +304,7 @@ final class GameViewModel: ObservableObject {
         guard !configuration.hidesTimer, (1...5).contains(timeRemaining) else { return }
 
         if settings.soundsEnabled {
-            soundService.play(.countdown, enabled: true)
+            soundService.play(.endCountdown, enabled: true)
         }
 
         if settings.hapticsEnabled {
@@ -391,12 +396,15 @@ final class GameViewModel: ObservableObject {
         hasFinished = true
         phase = .finished
         isPaused = false
+        feedback = nil
         timerTask?.cancel()
         timerTask = nil
         countdownTask?.cancel()
         countdownTask = nil
         timeUpTask?.cancel()
         timeUpTask = nil
+        finishPresentationTask?.cancel()
+        finishPresentationTask = nil
         motionManager?.stop()
 
         var finalResult = result
@@ -408,10 +416,18 @@ final class GameViewModel: ObservableObject {
             cardRotationStore.recordSeenCards(seenWords, for: configuration.deck)
         }
 
+        if settings.soundsEnabled, !wasTimeUp {
+            soundService.play(.timeout, enabled: true)
+        }
+
         if settings.hapticsEnabled, !wasTimeUp {
             hapticsManager.playRoundFinished()
         }
 
-        onFinish(finalResult)
+        finishPresentationTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .milliseconds(850))
+            guard let self, !Task.isCancelled else { return }
+            self.onFinish(finalResult)
+        }
     }
 }

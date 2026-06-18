@@ -6,6 +6,7 @@ struct ClipboardImportPreview: Equatable {
     let duplicateCount: Int
     let tooLongLines: [String]
     let overDeckLimitCount: Int
+    let maxCardLength: Int
 
     var hasImportableCards: Bool {
         !cards.isEmpty
@@ -23,7 +24,7 @@ struct ClipboardImportPreview: Equatable {
         }
 
         if !tooLongLines.isEmpty {
-            messages.append("\(tooLongLines.count) \(tooLongLines.count == 1 ? "card is" : "cards are") over 50 characters.")
+            messages.append("\(tooLongLines.count) \(tooLongLines.count == 1 ? "card is" : "cards are") over \(maxCardLength) characters.")
         }
 
         if overDeckLimitCount > 0 {
@@ -37,7 +38,7 @@ struct ClipboardImportPreview: Equatable {
 struct ClipboardImportService {
     let maxCardLength: Int
 
-    init(maxCardLength: Int = 50) {
+    init(maxCardLength: Int = 30) {
         self.maxCardLength = maxCardLength
     }
 
@@ -75,7 +76,8 @@ struct ClipboardImportService {
             blankLineCount: blankLineCount,
             duplicateCount: duplicateCount,
             tooLongLines: tooLongLines,
-            overDeckLimitCount: 0
+            overDeckLimitCount: 0,
+            maxCardLength: maxCardLength
         )
     }
 

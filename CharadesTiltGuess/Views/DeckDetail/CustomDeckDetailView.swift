@@ -3,6 +3,7 @@ import UIKit
 
 struct CustomDeckDetailView: View {
     @EnvironmentObject private var router: AppRouter
+    @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @StateObject private var viewModel: CustomDeckDetailViewModel
     private let mode: GameMode
     @State private var isEditingDeckIdentity = false
@@ -411,11 +412,11 @@ struct CustomDeckDetailView: View {
 
             isNameFocused = false
             hideIdentityEditorImmediately()
-            router.open(.gameSetup(mode: mode, deck: savedDeck))
+            router.startGame(mode: mode, deck: savedDeck, settings: settingsViewModel.settings)
             return
         }
 
-        router.open(.gameSetup(mode: mode, deck: viewModel.deck))
+        router.startGame(mode: mode, deck: viewModel.deck, settings: settingsViewModel.settings)
     }
 
     private func toggleIdentityEditor() {

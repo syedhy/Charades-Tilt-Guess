@@ -10,6 +10,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var id: String { rawValue }
 
+    static let homeModes: [GameMode] = [.normal, .pasteAndPlay, .infinite, .wikipedia]
+
     var title: String {
         switch self {
         case .normal:
@@ -34,13 +36,13 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .pasteAndPlay:
             return "Paste any list and jump into a round in seconds."
         case .infinite:
-            return "No timer. Keep guessing until you end the round."
+            return "No timer. Play until the deck is done."
         case .hotPotato:
             return "Pass the phone around before the hidden timer explodes."
         case .challengeCards:
             return "Classic play, but surprise rules make some cards harder."
         case .wikipedia:
-            return "Play with random article titles from Wikipedia."
+            return "Easy single-word prompts from Wikipedia."
         }
     }
 
@@ -51,13 +53,13 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .pasteAndPlay:
             return "Instant custom lists"
         case .infinite:
-            return "Practice or chill play"
+            return "Finish every card"
         case .hotPotato:
             return "High-pressure group chaos"
         case .challengeCards:
             return "Sillier acting prompts"
         case .wikipedia:
-            return "Unexpected trivia energy"
+            return "Fresh easy words"
         }
     }
 
@@ -141,13 +143,13 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .infinite:
             return ModeInstruction(
                 title: "No timer",
-                summary: "Play continuously until someone ends the round.",
+                summary: "Play through the whole deck without a countdown.",
                 rules: [
                     "Pick any deck and start when everyone is ready.",
-                    "Cards keep rotating, even after the deck is exhausted.",
-                    "Use pause to resume or end the round manually."
+                    "Correct or pass each card.",
+                    "The round ends automatically when every card has appeared."
                 ],
-                scoring: "Results are created when you end the round."
+                scoring: "Correct cards score one point. Passed cards are tracked but do not score."
             )
         case .hotPotato:
             return ModeInstruction(
@@ -173,11 +175,11 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             )
         case .wikipedia:
             return ModeInstruction(
-                title: "Random article titles",
-                summary: "The app loads public random Wikipedia article titles into a temporary deck.",
+                title: "Easy Wikipedia words",
+                summary: "The app builds a temporary deck from simple single-word Wikipedia titles.",
                 rules: [
                     "Load a fresh pack when you enter the mode.",
-                    "Retry if the network fails or Wikipedia returns no usable titles.",
+                    "Only short, single-word prompts are kept.",
                     "The deck is temporary and is not saved."
                 ],
                 scoring: "Scoring matches Normal mode."

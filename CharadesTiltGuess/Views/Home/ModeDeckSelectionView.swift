@@ -3,7 +3,6 @@ import SwiftUI
 struct ModeDeckSelectionView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel = HomeViewModel()
-    @State private var isShowingInstructions = false
 
     let mode: GameMode
 
@@ -26,25 +25,8 @@ struct ModeDeckSelectionView: View {
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle(mode.title)
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    isShowingInstructions = true
-                } label: {
-                    Image(systemName: "questionmark.circle.fill")
-                        .font(.system(size: 18, weight: .black))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                }
-                .accessibilityLabel("\(mode.title) instructions")
-            }
-        }
-        .sheet(isPresented: $isShowingInstructions) {
-            ModeInstructionsView(mode: mode)
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-        }
         .preferredColorScheme(.light)
         .onAppear {
             viewModel.loadDecks()

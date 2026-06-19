@@ -89,7 +89,8 @@ struct GameEngine {
             mode: configuration.mode,
             attempts: session.attempts,
             timeUsed: timeUsed,
-            wasTimeUp: wasTimeUp
+            wasTimeUp: wasTimeUp,
+            sourceDeckIDs: configuration.sourceDeckIDs
         )
     }
 }

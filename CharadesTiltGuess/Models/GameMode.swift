@@ -3,6 +3,7 @@ import SwiftUI
 enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case normal
     case pasteAndPlay
+    case mixAndMatch
     case infinite
     case hotPotato
     case challengeCards
@@ -10,7 +11,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .pasteAndPlay, .infinite, .wikipedia]
+    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia]
 
     var title: String {
         switch self {
@@ -18,6 +19,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Normal"
         case .pasteAndPlay:
             return "Paste & Play"
+        case .mixAndMatch:
+            return "Mix & Match"
         case .infinite:
             return "Infinite"
         case .hotPotato:
@@ -35,6 +38,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Classic timed charades with a deck you choose."
         case .pasteAndPlay:
             return "Paste any list and jump into a round in seconds."
+        case .mixAndMatch:
+            return "Play 50 random cards from all your decks."
         case .infinite:
             return "No timer. Play until the deck is done."
         case .hotPotato:
@@ -52,6 +57,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Fast party rounds"
         case .pasteAndPlay:
             return "Instant custom lists"
+        case .mixAndMatch:
+            return "50 cards, every deck"
         case .infinite:
             return "Finish every card"
         case .hotPotato:
@@ -69,6 +76,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "play.fill"
         case .pasteAndPlay:
             return "doc.on.clipboard"
+        case .mixAndMatch:
+            return "square.stack.3d.up.fill"
         case .infinite:
             return "infinity"
         case .hotPotato:
@@ -86,6 +95,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.mint
         case .pasteAndPlay:
             return AppTheme.Colors.yellow
+        case .mixAndMatch:
+            return AppTheme.Colors.orange
         case .infinite:
             return AppTheme.Colors.blue
         case .hotPotato:
@@ -101,14 +112,14 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal, .infinite, .hotPotato, .challengeCards:
             return true
-        case .pasteAndPlay, .wikipedia:
+        case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
         }
     }
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia:
             return true
         case .infinite, .hotPotato:
             return false
@@ -137,6 +148,17 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "Paste words separated by lines, commas, or numbered list markers.",
                     "Review the parsed cards, then tap Play.",
                     "The deck is temporary and disappears after the session."
+                ],
+                scoring: "Scoring matches Normal mode."
+            )
+        case .mixAndMatch:
+            return ModeInstruction(
+                title: "Mix every deck",
+                summary: "Start with 50 freshly shuffled cards from built-in and custom decks.",
+                rules: [
+                    "The app combines cards from every available deck.",
+                    "Equivalent duplicate words are removed before shuffling.",
+                    "Each new round selects a fresh set of up to 50 cards."
                 ],
                 scoring: "Scoring matches Normal mode."
             )
@@ -175,7 +197,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             )
         case .wikipedia:
             return ModeInstruction(
-                title: "Easy Wikipedia words",
+                title: "Easy Wikipedia",
                 summary: "The app builds a temporary deck from simple single-word Wikipedia titles.",
                 rules: [
                     "Load a fresh pack when you enter the mode.",

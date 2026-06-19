@@ -10,6 +10,8 @@ final class CharadesTiltGuessUITests: XCTestCase {
 
         XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["modeButton-normal"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["modeButton-mixAndMatch"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["modeButton-pasteAndPlay"].exists)
     }
 
     func testHomeScreenScrollsThroughDecks() throws {
@@ -23,6 +25,31 @@ final class CharadesTiltGuessUITests: XCTestCase {
         app.swipeDown()
 
         XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 2))
+    }
+
+    func testMixAndMatchStartsWithEveryDeckSelected() throws {
+        let app = launchApp()
+        let modeButton = app.buttons["modeButton-mixAndMatch"]
+
+        XCTAssertTrue(modeButton.waitForExistence(timeout: 5))
+        if !modeButton.isHittable {
+            app.swipeUp()
+        }
+        modeButton.tap()
+
+        XCTAssertTrue(app.staticTexts["Choose your decks"].waitForExistence(timeout: 5))
+
+        let toggleAllButton = app.buttons["mixAndMatchSelectAllButton"]
+        let startButton = app.buttons["mixAndMatchStartButton"]
+        XCTAssertTrue(toggleAllButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(startButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(startButton.isEnabled)
+
+        toggleAllButton.tap()
+        XCTAssertFalse(startButton.isEnabled)
+
+        toggleAllButton.tap()
+        XCTAssertTrue(startButton.isEnabled)
     }
 
     func testCanNavigateThroughButtonGameFlow() throws {

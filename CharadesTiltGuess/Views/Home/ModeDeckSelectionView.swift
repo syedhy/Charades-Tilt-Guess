@@ -112,6 +112,222 @@ struct ModeDeckSelectionView: View {
     }
 }
 
+struct MixAndMatchSelectionView: View {
+    let settings: GameSettings
+    let onStart: (GameConfiguration) -> Void
+
+    @StateObject private var viewModel = HomeViewModel()
+    @State private var selectedDeckIDs: Set<String> = []
+
+    var body: some View {
+        ZStack {
+            DoodlePaperBackground()
+
+            ScrollView {
+                VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
+                    header
+
+                    if let loadErrorMessage = viewModel.loadErrorMessage {
+                        loadError(message: loadErrorMessage)
+                    } else {
+                        selectionControls
+
+                        if !viewModel.customDecks.isEmpty {
+                            deckSection(title: "Custom Decks", decks: viewModel.customDecks)
+                        }
+
+                        deckSection(title: "Built-In Decks", decks: viewModel.defaultDecks)
+                    }
+                }
+                .padding(24)
+                .padding(.bottom, 96)
+            }
+            .scrollIndicators(.hidden)
+        }
+        .safeAreaInset(edge: .bottom) {
+            startButton
+        }
+        .navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
+        .preferredColorScheme(.light)
+        .onAppear {
+            viewModel.loadDecks()
+            selectedDeckIDs = Set(viewModel.decks.map(\.id))
+        }
+    }
+
+    private var header: some View {
+        DoodlePanel(background: GameMode.mixAndMatch.accentColor) {
+            HStack(alignment: .center, spacing: 16) {
+                Image(systemName: GameMode.mixAndMatch.symbolName)
+                    .font(.system(size: 22, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 46, height: 46)
+                    .background(AppTheme.Colors.paperBright.opacity(0.72), in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Mix & Match")
+                        .font(.system(size: 32, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+
+                    Text("Choose decks for a fresh mix of up to 50 cards.")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
+                }
+            }
+            .padding(18)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    private var selectionControls: some View {
+        HStack(alignment: .center, spacing: 12) {
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Choose your decks")
+                    .font(.system(size: 25, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Text("\(selectedDeckIDs.count) of \(viewModel.decks.count) selected")
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
+            }
+
+            Spacer(minLength: 8)
+
+            Button(action: toggleAllDecks) {
+                Label(
+                    allDecksSelected ? "Unselect all" : "Select all",
+                    systemImage: allDecksSelected ? "square" : "checkmark.square.fill"
+                )
+                .font(.system(size: 14, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+            }
+            .buttonStyle(.plain)
+            .accessibilityIdentifier("mixAndMatchSelectAllButton")
+        }
+    }
+
+    private func deckSection(title: String, decks: [Deck]) -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(title)
+                .font(.system(size: 22, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+
+            ForEach(decks) { deck in
+                deckToggle(deck)
+            }
+        }
+    }
+
+    private func deckToggle(_ deck: Deck) -> some View {
+        Button {
+            if selectedDeckIDs.contains(deck.id) {
+                selectedDeckIDs.remove(deck.id)
+            } else {
+                selectedDeckIDs.insert(deck.id)
+            }
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: deck.symbolName)
+                    .font(.system(size: 20, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 44, height: 44)
+                    .background(deck.color.displayColor, in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: 3))
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(deck.name)
+                        .font(.system(size: 18, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.72)
+
+                    Text("\(deck.cards.count) cards")
+                        .font(.system(size: 12, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+                }
+
+                Spacer(minLength: 8)
+
+                Image(systemName: selectedDeckIDs.contains(deck.id) ? "checkmark.square.fill" : "square")
+                    .font(.system(size: 26, weight: .black))
+                    .foregroundStyle(selectedDeckIDs.contains(deck.id) ? GameMode.mixAndMatch.accentColor : AppTheme.Colors.ink.opacity(0.42))
+            }
+            .padding(.horizontal, 16)
+            .frame(maxWidth: .infinity)
+            .frame(height: 72)
+            .background {
+                DoodlePanelBackground(background: AppTheme.Colors.paperBright, cornerRadius: AppTheme.Radius.card)
+            }
+        }
+        .buttonStyle(DoodlePressStyle(rotation: 0))
+        .accessibilityIdentifier("mixAndMatchDeck-\(deck.id)")
+    }
+
+    private var startButton: some View {
+        DoodleActionButton(
+            title: selectedDeckIDs.isEmpty ? "Select at least one deck" : "Start Mix & Match",
+            symbol: "play.fill",
+            accent: selectedDeckIDs.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.mixAndMatch.accentColor,
+            action: startGame
+        )
+        .disabled(selectedDeckIDs.isEmpty)
+        .accessibilityIdentifier("mixAndMatchStartButton")
+        .padding(.horizontal, 24)
+        .padding(.vertical, 12)
+        .background(AppTheme.Colors.paper.opacity(0.96))
+    }
+
+    private var allDecksSelected: Bool {
+        !viewModel.decks.isEmpty && selectedDeckIDs.count == viewModel.decks.count
+    }
+
+    private func toggleAllDecks() {
+        if allDecksSelected {
+            selectedDeckIDs.removeAll()
+        } else {
+            selectedDeckIDs = Set(viewModel.decks.map(\.id))
+        }
+    }
+
+    private func startGame() {
+        let selectedDecks = viewModel.decks.filter { selectedDeckIDs.contains($0.id) }
+        guard let deck = MixAndMatchDeckFactory().makeDeck(from: selectedDecks) else { return }
+
+        onStart(
+            .mixAndMatch(
+                deck: deck,
+                duration: settings.defaultDuration,
+                sourceDeckIDs: selectedDeckIDs
+            )
+        )
+    }
+
+    private func loadError(message: String) -> some View {
+        DoodlePanel {
+            VStack(alignment: .leading, spacing: 14) {
+                Text("Decks could not load")
+                    .font(.system(size: 22, weight: .black, design: .rounded))
+
+                Text(message)
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
+
+                DoodleActionButton(
+                    title: "Try again",
+                    symbol: "arrow.clockwise",
+                    accent: GameMode.mixAndMatch.accentColor
+                ) {
+                    viewModel.loadDecks()
+                    selectedDeckIDs = Set(viewModel.decks.map(\.id))
+                }
+            }
+            .padding(18)
+        }
+    }
+}
+
 #Preview {
     NavigationStack {
         ModeDeckSelectionView(mode: .normal)

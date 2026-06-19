@@ -7,7 +7,6 @@ final class HomeViewModel: ObservableObject {
     @Published private(set) var loadErrorMessage: String?
 
     private let deckStore: DeckStore
-
     init(deckStore: DeckStore = DeckStore()) {
         self.deckStore = deckStore
         loadDecks()
@@ -32,4 +31,5 @@ final class HomeViewModel: ObservableObject {
     var randomDeck: Deck? {
         decks.randomElement()
     }
+
 }

@@ -6,6 +6,11 @@ final class CharadesTiltGuessTests: XCTestCase {
         XCTAssertEqual(AppMetadata.displayName, "Charades: Tilt & Guess")
     }
 
+    func testHomeModesUseMixAndMatchInsteadOfDuplicatePasteAndPlay() {
+        XCTAssertTrue(GameMode.homeModes.contains(.mixAndMatch))
+        XCTAssertFalse(GameMode.homeModes.contains(.pasteAndPlay))
+    }
+
     @MainActor
     func testRouterPresentsAndFinishesGameFlow() async {
         let router = AppRouter()

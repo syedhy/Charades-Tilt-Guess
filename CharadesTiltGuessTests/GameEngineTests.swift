@@ -92,6 +92,37 @@ final class GameEngineTests: XCTestCase {
         XCTAssertEqual(result?.finalScore, 1)
     }
 
+    func testSpecialModeResultsUseTheShortDeckName() {
+        let deck = makeDeck()
+
+        for mode in [GameMode.pasteAndPlay, .mixAndMatch, .infinite, .wikipedia] {
+            let result = RoundResult(
+                deck: deck,
+                duration: 60,
+                correctWords: [],
+                passedWords: [],
+                mode: mode
+            )
+
+            XCTAssertEqual(result.subtitle, deck.name)
+        }
+    }
+
+    func testMixAndMatchResultKeepsSelectedSourceDecksForReplay() {
+        let deck = makeDeck()
+        let sourceDeckIDs: Set<String> = ["default-tech", "custom-party"]
+        let engine = GameEngine(
+            configuration: .mixAndMatch(
+                deck: deck,
+                duration: 60,
+                sourceDeckIDs: sourceDeckIDs
+            ),
+            orderedWords: deck.cards
+        )
+
+        XCTAssertEqual(engine.finishRound().sourceDeckIDs, sourceDeckIDs)
+    }
+
     private func makeDeck(cards: [GameWord]? = nil) -> Deck {
         Deck(
             id: "test-deck",

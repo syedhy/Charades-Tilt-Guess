@@ -7,6 +7,7 @@ enum AppRoute: Hashable {
     case customDeckDetail(deck: Deck, mode: GameMode)
     case modeDeckSelection(mode: GameMode)
     case pasteAndPlay
+    case mixAndMatch
     case wikipediaMode
     case results(result: RoundResult)
 }
@@ -61,6 +62,14 @@ final class AppRouter: ObservableObject {
             startGame(configuration: .infinite(deck: deck))
         case .pasteAndPlay:
             startGame(configuration: .pasteAndPlay(deck: deck, duration: settings.defaultDuration))
+        case .mixAndMatch:
+            startGame(
+                configuration: .mixAndMatch(
+                    deck: deck,
+                    duration: settings.defaultDuration,
+                    sourceDeckIDs: [deck.id]
+                )
+            )
         case .wikipedia:
             startGame(configuration: .wikipedia(deck: deck, duration: settings.defaultDuration))
         case .hotPotato:
@@ -167,6 +176,10 @@ struct AppShellView: View {
             PasteAndPlayView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)
             }
+        case .mixAndMatch:
+            MixAndMatchSelectionView(settings: settingsViewModel.settings) { configuration in
+                router.startGame(configuration: configuration)
+            }
         case .wikipediaMode:
             WikipediaModeView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)
@@ -175,18 +188,40 @@ struct AppShellView: View {
             ResultsView(
                 result: result,
                 onPlayAgain: {
-                    router.startGame(
-                        configuration: GameConfiguration(
-                            mode: result.mode,
-                            deck: result.deck,
-                            duration: result.mode == .infinite || result.mode == .hotPotato ? nil : result.duration,
-                            hiddenDuration: result.mode == .hotPotato ? result.duration : nil,
-                            isTemporaryDeck: result.deck.type == .custom && result.deck.id.hasPrefix("temp-")
-                        )
-                    )
+                    router.replay(result: result)
                 },
                 onChooseDeck: router.goHome
             )
         }
+    }
+}
+
+private extension AppRouter {
+    func replay(result: RoundResult) {
+        if result.mode == .mixAndMatch {
+            let decks = (try? DeckStore().loadDecks()) ?? [result.deck]
+            let selectedDecks = decks.filter { result.sourceDeckIDs.contains($0.id) }
+            let sourceDecks = selectedDecks.isEmpty ? decks : selectedDecks
+            let deck = MixAndMatchDeckFactory().makeDeck(from: sourceDecks) ?? result.deck
+            startGame(
+                configuration: .mixAndMatch(
+                    deck: deck,
+                    duration: result.duration,
+                    sourceDeckIDs: result.sourceDeckIDs
+                )
+            )
+            return
+        }
+
+        startGame(
+            configuration: GameConfiguration(
+                mode: result.mode,
+                deck: result.deck,
+                duration: result.mode == .infinite || result.mode == .hotPotato ? nil : result.duration,
+                hiddenDuration: result.mode == .hotPotato ? result.duration : nil,
+                isTemporaryDeck: result.deck.type == .custom && result.deck.id.hasPrefix("temp-"),
+                sourceDeckIDs: result.sourceDeckIDs
+            )
+        )
     }
 }

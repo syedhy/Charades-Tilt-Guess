@@ -9,6 +9,7 @@ struct RoundResult: Hashable {
     var attempts: [RoundAttempt] = []
     var timeUsed: Int = 0
     var wasTimeUp: Bool = false
+    var sourceDeckIDs: Set<String> = []
 
     var finalScore: Int {
         correctWords.count
@@ -65,15 +66,7 @@ struct RoundResult: Hashable {
         switch mode {
         case .hotPotato:
             return wasTimeUp ? "The current holder got caught." : "Round ended manually."
-        case .infinite:
-            return "You played until you were ready to stop."
-        case .pasteAndPlay:
-            return "Temporary deck complete."
-        case .challengeCards:
-            return "Challenge round complete."
-        case .wikipedia:
-            return "Wikipedia deck complete."
-        case .normal:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .challengeCards, .wikipedia:
             return deck.name
         }
     }

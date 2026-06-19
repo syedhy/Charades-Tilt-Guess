@@ -65,6 +65,70 @@ final class DefaultDeckLoaderTests: XCTestCase {
         }
     }
 
+    func testMixAndMatchBuildsFreshFiftyCardDeckFromAllDeckTypes() throws {
+        let defaultDeck = makeDeck(
+            id: "default",
+            cards: (0..<35).map { GameWord(id: "default-\($0)", text: "Default \($0)") }
+        )
+        let customDeck = Deck(
+            id: "custom",
+            name: "Custom Deck",
+            cards: (0..<35).map { GameWord(id: "custom-\($0)", text: "Custom \($0)") }
+                + [GameWord(id: "duplicate", text: "  default 0  ")],
+            type: .custom,
+            color: .pink,
+            symbolName: "star"
+        )
+        var firstGenerator = SeededRandomNumberGenerator(seed: 1)
+        var secondGenerator = SeededRandomNumberGenerator(seed: 2)
+
+        let first = try XCTUnwrap(
+            MixAndMatchDeckFactory().makeDeck(
+                from: [defaultDeck, customDeck],
+                using: &firstGenerator
+            )
+        )
+        let second = try XCTUnwrap(
+            MixAndMatchDeckFactory().makeDeck(
+                from: [defaultDeck, customDeck],
+                using: &secondGenerator
+            )
+        )
+
+        XCTAssertEqual(first.cards.count, 50)
+        XCTAssertEqual(Set(first.cards.map { $0.text.lowercased() }).count, 50)
+        XCTAssertTrue(first.cards.contains { $0.id.hasPrefix("default-") })
+        XCTAssertTrue(first.cards.contains { $0.id.hasPrefix("custom-") })
+        XCTAssertNotEqual(first.cards.map(\.id), second.cards.map(\.id))
+        XCTAssertEqual(first.name, "Mix & Match")
+        XCTAssertEqual(first.type, .custom)
+    }
+
+    func testMixAndMatchRemovesEquivalentWordsBeforeShuffling() throws {
+        let firstDeck = makeDeck(
+            id: "first",
+            cards: [GameWord(id: "first-cafe", text: "Café")]
+        )
+        let secondDeck = makeDeck(
+            id: "second",
+            cards: [GameWord(id: "second-cafe", text: "  cafe  ")]
+        )
+        var generator = SeededRandomNumberGenerator(seed: 1)
+
+        let deck = try XCTUnwrap(
+            MixAndMatchDeckFactory().makeDeck(
+                from: [firstDeck, secondDeck],
+                using: &generator
+            )
+        )
+
+        XCTAssertEqual(deck.cards.count, 1)
+        XCTAssertEqual(
+            MixAndMatchDeckFactory().availableCardCount(from: [firstDeck, secondDeck]),
+            1
+        )
+    }
+
     private func makeDeck(
         id: String,
         cards: [GameWord] = [GameWord(id: "word-1", text: "Phone")]
@@ -77,5 +141,18 @@ final class DefaultDeckLoaderTests: XCTestCase {
             color: .mint,
             symbolName: "rectangle.stack"
         )
+    }
+}
+
+private struct SeededRandomNumberGenerator: RandomNumberGenerator {
+    private var state: UInt64
+
+    init(seed: UInt64) {
+        state = seed
+    }
+
+    mutating func next() -> UInt64 {
+        state = state &* 6_364_136_223_846_793_005 &+ 1
+        return state
     }
 }

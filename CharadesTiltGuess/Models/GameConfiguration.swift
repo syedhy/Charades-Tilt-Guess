@@ -7,6 +7,7 @@ struct GameConfiguration: Hashable, Identifiable {
     let duration: Int?
     let hiddenDuration: Int?
     let isTemporaryDeck: Bool
+    let sourceDeckIDs: Set<String>
 
     init(
         id: UUID = UUID(),
@@ -14,7 +15,8 @@ struct GameConfiguration: Hashable, Identifiable {
         deck: Deck,
         duration: Int?,
         hiddenDuration: Int? = nil,
-        isTemporaryDeck: Bool = false
+        isTemporaryDeck: Bool = false,
+        sourceDeckIDs: Set<String> = []
     ) {
         self.id = id
         self.mode = mode
@@ -22,6 +24,7 @@ struct GameConfiguration: Hashable, Identifiable {
         self.duration = duration
         self.hiddenDuration = hiddenDuration
         self.isTemporaryDeck = isTemporaryDeck
+        self.sourceDeckIDs = sourceDeckIDs
     }
 
     var activeDuration: Int? {
@@ -38,7 +41,7 @@ struct GameConfiguration: Hashable, Identifiable {
 
     var repeatsWhenDeckExhausted: Bool {
         switch mode {
-        case .normal, .pasteAndPlay, .infinite, .hotPotato, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia:
             return false
         }
     }
@@ -57,6 +60,20 @@ struct GameConfiguration: Hashable, Identifiable {
 
     static func pasteAndPlay(deck: Deck, duration: Int) -> GameConfiguration {
         GameConfiguration(mode: .pasteAndPlay, deck: deck, duration: duration, isTemporaryDeck: true)
+    }
+
+    static func mixAndMatch(
+        deck: Deck,
+        duration: Int,
+        sourceDeckIDs: Set<String>
+    ) -> GameConfiguration {
+        GameConfiguration(
+            mode: .mixAndMatch,
+            deck: deck,
+            duration: duration,
+            isTemporaryDeck: true,
+            sourceDeckIDs: sourceDeckIDs
+        )
     }
 
     static func infinite(deck: Deck) -> GameConfiguration {

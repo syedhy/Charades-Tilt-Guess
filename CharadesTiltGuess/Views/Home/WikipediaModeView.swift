@@ -81,7 +81,7 @@ struct WikipediaModeView: View {
                     .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Wikipedia words")
+                    Text("Wikipedia")
                         .font(.system(size: 32, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
 

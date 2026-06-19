@@ -197,16 +197,34 @@ struct MixAndMatchSelectionView: View {
 
             Spacer(minLength: 8)
 
-            Button(action: toggleAllDecks) {
-                HStack(spacing: 6) {
-                    Image(systemName: allDecksSelected ? "square" : "checkmark.square.fill")
-                    Text(allDecksSelected ? "Unselect all" : "Select all")
+            Button {
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                    toggleAllDecks()
                 }
-                .font(.system(size: 14, weight: .black, design: .rounded))
+            } label: {
+                ZStack(alignment: .leading) {
+                    // Hidden max-width layout to keep button size completely fixed
+                    HStack(spacing: 6) {
+                        Image(systemName: "checkmark.square.fill")
+                        Text("Unselect all")
+                    }
+                    .font(.system(size: 14, weight: .black, design: .rounded))
+                    .hidden()
+                    
+                    // Visible layout
+                    HStack(spacing: 6) {
+                        Image(systemName: allDecksSelected ? "square" : "checkmark.square.fill")
+                        Text(allDecksSelected ? "Unselect all" : "Select all")
+                    }
+                    .font(.system(size: 14, weight: .black, design: .rounded))
+                }
                 .foregroundStyle(AppTheme.Colors.ink)
-                .frame(width: 120, alignment: .trailing)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(AppTheme.Colors.paperBright, in: Capsule())
+                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
             }
-            .buttonStyle(.plain)
+            .buttonStyle(DoodlePressStyle(rotation: 0))
             .accessibilityIdentifier("mixAndMatchSelectAllButton")
         }
     }

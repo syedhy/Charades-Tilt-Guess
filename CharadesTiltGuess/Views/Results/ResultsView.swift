@@ -29,7 +29,7 @@ struct ResultsView: View {
 
     private var scoreHeader: some View {
         DoodlePanel(background: result.deck.color.displayColor) {
-            HStack(alignment: .center, spacing: 16) {
+            HStack(alignment: .center, spacing: 8) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(result.title)
                         .font(.system(size: 16, weight: .black, design: .rounded))
@@ -42,9 +42,7 @@ struct ResultsView: View {
                         .lineLimit(1)
                         .minimumScaleFactor(0.58)
                 }
-                .layoutPriority(1)
-
-                Spacer()
+                .frame(maxWidth: .infinity, alignment: .leading)
 
                 VStack(alignment: .trailing, spacing: 0) {
                     Text(scoreText)
@@ -52,15 +50,18 @@ struct ResultsView: View {
                         .foregroundStyle(AppTheme.Colors.ink)
                         .monospacedDigit()
                         .lineLimit(1)
-                        .minimumScaleFactor(0.46)
+                        .minimumScaleFactor(0.6)
+                        .allowsTightening(true)
                         .accessibilityIdentifier("finalScore")
 
                     Text("score")
                         .font(.system(size: 12, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }
+                .frame(width: 150, alignment: .trailing)
+                .layoutPriority(1)
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 16)
             .padding(.vertical, 18)
             .frame(minHeight: 108)
         }

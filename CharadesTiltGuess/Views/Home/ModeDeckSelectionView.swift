@@ -20,7 +20,8 @@ struct ModeDeckSelectionView: View {
                         deckSections
                     }
                 }
-                .padding(24)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
                 .padding(.bottom, 32)
             }
             .scrollIndicators(.hidden)
@@ -139,7 +140,8 @@ struct MixAndMatchSelectionView: View {
                         deckSection(title: "Built-In Decks", decks: viewModel.defaultDecks)
                     }
                 }
-                .padding(24)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
                 .padding(.bottom, 96)
             }
             .scrollIndicators(.hidden)

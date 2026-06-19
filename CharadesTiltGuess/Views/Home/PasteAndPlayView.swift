@@ -29,7 +29,8 @@ struct PasteAndPlayView: View {
                     pastePanel
                     previewPanel
                 }
-                .padding(24)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
                 .padding(.bottom, 32)
             }
             .scrollDismissesKeyboard(.interactively)

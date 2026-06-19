@@ -55,7 +55,8 @@ struct WikipediaModeView: View {
                     header
                     content
                 }
-                .padding(24)
+                .padding(.horizontal, 24)
+                .padding(.top, 4)
                 .padding(.bottom, 32)
             }
             .scrollIndicators(.hidden)

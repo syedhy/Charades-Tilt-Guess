@@ -160,25 +160,20 @@ struct MixAndMatchSelectionView: View {
 
     private var header: some View {
         DoodlePanel(background: GameMode.mixAndMatch.accentColor) {
-            HStack(alignment: .center, spacing: 16) {
-                Image(systemName: GameMode.mixAndMatch.symbolName)
-                    .font(.system(size: 22, weight: .black))
+            VStack(alignment: .leading, spacing: 14) {
+                Label(GameMode.mixAndMatch.purpose.uppercased(), systemImage: GameMode.mixAndMatch.symbolName)
+                    .font(.system(size: 12, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
+
+                Text(GameMode.mixAndMatch.title)
+                    .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-                    .frame(width: 46, height: 46)
-                    .background(AppTheme.Colors.paperBright.opacity(0.72), in: Circle())
-                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
 
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("Mix & Match")
-                        .font(.system(size: 32, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-
-                    Text("Choose decks for a fresh mix of random cards.")
-                        .font(.system(size: 14, weight: .bold, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
-                }
+                Text(GameMode.mixAndMatch.description)
+                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
             }
-            .padding(18)
+            .padding(22)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }

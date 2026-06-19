@@ -8,6 +8,7 @@ struct CustomDeckDetailView: View {
     private let mode: GameMode
     @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
+    @State private var isShowingUnsavedChangesAlert = false
     @State private var isShowingAddCardSheet = false
     @State private var isShowingPasteSheet = false
     @State private var toastMessage: String?
@@ -54,7 +55,7 @@ struct CustomDeckDetailView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
-        .background(SwipeBackEnabler())
+        .background(SwipeBackEnabler(canSwipeBack: { !viewModel.hasUnsavedChanges }))
         .preferredColorScheme(.light)
         .alert("Delete deck?", isPresented: $isShowingDeleteConfirmation) {
             Button("Cancel", role: .cancel) {}
@@ -68,6 +69,20 @@ struct CustomDeckDetailView: View {
             }
         } message: {
             Text("This removes \"\(viewModel.deck.name)\" and all of its cards from this device.")
+        }
+        .alert("Unsaved Changes", isPresented: $isShowingUnsavedChangesAlert) {
+            Button("Save", role: .none) {
+                viewModel.saveDraft()
+                isDiscarding = false
+                router.goBack()
+            }
+            Button("Discard", role: .destructive) {
+                isDiscarding = true
+                router.goBack()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("You have unsaved changes. Would you like to save them before leaving?")
         }
         .sheet(isPresented: $isShowingPasteSheet) {
             PasteCardsSheet(viewModel: viewModel)
@@ -114,7 +129,11 @@ struct CustomDeckDetailView: View {
                     size: 46,
                     accessibilityLabel: "Go back"
                 ) {
-                    router.goBack()
+                    if viewModel.hasUnsavedChanges {
+                        isShowingUnsavedChangesAlert = true
+                    } else {
+                        router.goBack()
+                    }
                 }
 
                 if isCustomDeck {
@@ -951,20 +970,31 @@ private struct ToastBanner: View {
 }
 
 struct SwipeBackEnabler: UIViewControllerRepresentable {
+    var canSwipeBack: () -> Bool = { true }
+
     func makeUIViewController(context: Context) -> UIViewController {
-        SwipeBackViewController()
+        let vc = SwipeBackViewController()
+        vc.canSwipeBack = canSwipeBack
+        return vc
     }
     
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        if let vc = uiViewController as? SwipeBackViewController {
+            vc.canSwipeBack = canSwipeBack
+        }
+    }
 }
 
 final class SwipeBackViewController: UIViewController, UIGestureRecognizerDelegate {
+    var canSwipeBack: () -> Bool = { true }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
 
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard canSwipeBack() else { return false }
         return (navigationController?.viewControllers.count ?? 0) > 1
     }
 }

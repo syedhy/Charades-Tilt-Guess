@@ -272,7 +272,7 @@ final class OnboardingViewModel: ObservableObject {
             return max(0, min(100, Int(prog)))
             
         case 1:
-            // Tilt down (positive angle, target >= 34)
+            // Tilt down    (positive angle, target >= 34)
             if angle >= 34 { return 100 }
             if angle <= 0 { return 0 }
             return max(0, min(100, Int((angle / 34) * 100)))

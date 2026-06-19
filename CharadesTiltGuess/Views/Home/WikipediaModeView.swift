@@ -73,25 +73,20 @@ struct WikipediaModeView: View {
 
     private var header: some View {
         DoodlePanel(background: GameMode.wikipedia.accentColor) {
-            HStack(alignment: .center, spacing: 16) {
-                Image(systemName: GameMode.wikipedia.symbolName)
-                    .font(.system(size: 22, weight: .black))
+            VStack(alignment: .leading, spacing: 14) {
+                Label(GameMode.wikipedia.purpose.uppercased(), systemImage: GameMode.wikipedia.symbolName)
+                    .font(.system(size: 12, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
+
+                Text(GameMode.wikipedia.title)
+                    .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-                    .frame(width: 46, height: 46)
-                    .background(AppTheme.Colors.paperBright.opacity(0.72), in: Circle())
-                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
 
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("Wikipedia")
-                        .font(.system(size: 32, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-
-                    Text("Short single-word prompts for charades.")
-                        .font(.system(size: 14, weight: .bold, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
-                }
+                Text(GameMode.wikipedia.description)
+                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
             }
-            .padding(18)
+            .padding(22)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }

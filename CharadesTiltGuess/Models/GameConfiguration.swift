@@ -41,7 +41,7 @@ struct GameConfiguration: Hashable, Identifiable {
 
     var repeatsWhenDeckExhausted: Bool {
         switch mode {
-        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia, .kids:
             return false
         }
     }
@@ -56,6 +56,10 @@ struct GameConfiguration: Hashable, Identifiable {
 
     static func normal(deck: Deck, duration: Int) -> GameConfiguration {
         GameConfiguration(mode: .normal, deck: deck, duration: duration)
+    }
+
+    static func kids(deck: Deck, duration: Int) -> GameConfiguration {
+        GameConfiguration(mode: .kids, deck: deck, duration: duration)
     }
 
     static func pasteAndPlay(deck: Deck, duration: Int) -> GameConfiguration {

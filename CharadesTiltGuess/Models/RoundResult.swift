@@ -66,7 +66,7 @@ struct RoundResult: Hashable {
         switch mode {
         case .hotPotato:
             return wasTimeUp ? "The current holder got caught." : "Round ended manually."
-        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .challengeCards, .wikipedia, .kids:
             return deck.name
         }
     }

@@ -8,10 +8,11 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case hotPotato
     case challengeCards
     case wikipedia
+    case kids
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia]
+    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .kids]
 
     var title: String {
         switch self {
@@ -29,6 +30,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Challenge Cards"
         case .wikipedia:
             return "Wikipedia Mode"
+        case .kids:
+            return "Kids Mode"
         }
     }
 
@@ -48,6 +51,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Classic play, but surprise rules make some cards harder."
         case .wikipedia:
             return "Easy single-word prompts from Wikipedia."
+        case .kids:
+            return "Picture cards for the little ones."
         }
     }
 
@@ -67,6 +72,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Sillier acting prompts"
         case .wikipedia:
             return "Fresh easy words"
+        case .kids:
+            return "Picture charades"
         }
     }
 
@@ -86,6 +93,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "sparkles"
         case .wikipedia:
             return "globe"
+        case .kids:
+            return "face.smiling.fill"
         }
     }
 
@@ -105,12 +114,14 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.orange
         case .wikipedia:
             return Color(red: 0.66, green: 0.58, blue: 0.86)
+        case .kids:
+            return AppTheme.Colors.pink
         }
     }
 
     var usesDeckSelection: Bool {
         switch self {
-        case .normal, .infinite, .hotPotato, .challengeCards:
+        case .normal, .infinite, .hotPotato, .challengeCards, .kids:
             return true
         case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
@@ -119,7 +130,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia:
+        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia, .kids:
             return true
         case .infinite, .hotPotato:
             return false
@@ -203,6 +214,17 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "Load a fresh pack when you enter the mode.",
                     "Only short, single-word prompts are kept.",
                     "The deck is temporary and is not saved."
+                ],
+                scoring: "Scoring matches Normal mode."
+            )
+        case .kids:
+            return ModeInstruction(
+                title: "Picture cards",
+                summary: "Decks with images to help kids act out the words.",
+                rules: [
+                    "Select a kids deck with picture cards.",
+                    "The picture appears large so kids can quickly see what to act.",
+                    "Play just like Normal mode."
                 ],
                 scoring: "Scoring matches Normal mode."
             )

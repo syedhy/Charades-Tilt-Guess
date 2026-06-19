@@ -154,11 +154,16 @@ struct WikipediaModeView: View {
                         }
                     }
 
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 132), spacing: 10)], alignment: .leading, spacing: 10) {
-                        ForEach(titles.prefix(15), id: \.self) { title in
-                            WikipediaTitlePill(text: title)
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 132), spacing: 10)], alignment: .leading, spacing: 10) {
+                            ForEach(titles.prefix(15), id: \.self) { title in
+                                WikipediaTitlePill(text: title)
+                            }
                         }
+                        .padding(.vertical, 4)
                     }
+                    .frame(maxHeight: 180)
+                    .scrollIndicators(.hidden)
                 }
                 .padding(18)
             }

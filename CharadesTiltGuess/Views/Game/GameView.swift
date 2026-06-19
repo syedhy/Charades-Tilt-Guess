@@ -171,7 +171,9 @@ struct GameView: View {
         VStack(spacing: 16) {
             topBar
 
-            Spacer(minLength: 0)
+            if configuration.mode != .kids {
+                Spacer(minLength: 0)
+            }
 
             VStack(spacing: 12) {
                 if let challenge = viewModel.currentChallenge {
@@ -179,16 +181,17 @@ struct GameView: View {
                 }
 
                 wordCard
-                    .offset(y: -18)
+                    .offset(y: configuration.mode == .kids ? 0 : -18)
             }
 
-            Spacer(minLength: 0)
-
-            tiltStatus
+            if configuration.mode != .kids {
+                Spacer(minLength: 0)
+                tiltStatus
+            }
         }
-        .padding(.horizontal, 56)
-        .padding(.top, 70)
-        .padding(.bottom, 42)
+        .padding(.horizontal, configuration.mode == .kids ? 8 : 56)
+        .padding(.top, configuration.mode == .kids ? 24 : 70)
+        .padding(.bottom, configuration.mode == .kids ? 24 : 42)
     }
 
     private var topBar: some View {
@@ -197,31 +200,42 @@ struct GameView: View {
 
             Spacer()
 
-            VStack(spacing: 0) {
-                Text(configuration.mode.title.uppercased())
-                    .font(.system(size: 13, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
+            if configuration.mode != .kids {
+                VStack(spacing: 0) {
+                    Text(configuration.mode.title.uppercased())
+                        .font(.system(size: 13, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
 
-                Text(viewModel.timerText)
-                    .font(.system(size: 58, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .monospacedDigit()
-                    .accessibilityIdentifier("gameTimer")
+                    Text(viewModel.timerText)
+                        .font(.system(size: 58, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .monospacedDigit()
+                        .accessibilityIdentifier("gameTimer")
+                }
             }
 
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
-                Text("Score")
-                    .font(.system(size: 16, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
+                if configuration.mode != .kids {
+                    Text("Score")
+                        .font(.system(size: 16, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
 
-                Text("\(viewModel.score)")
-                    .font(.system(size: 36, weight: .black, design: .rounded))
-                    .foregroundStyle(Color(red: 0.92, green: 0.33, blue: 0.52))
-                    .monospacedDigit()
+                    Text("\(viewModel.score)")
+                        .font(.system(size: 36, weight: .black, design: .rounded))
+                        .foregroundStyle(Color(red: 0.92, green: 0.33, blue: 0.52))
+                        .monospacedDigit()
+                } else {
+                    Text(viewModel.timerText)
+                        .font(.system(size: 48, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.4))
+                        .monospacedDigit()
+                        .accessibilityIdentifier("gameTimer")
+                }
             }
-            .frame(width: 92, alignment: .trailing)
+            .frame(width: configuration.mode == .kids ? nil : 92, alignment: .trailing)
+            .padding(.trailing, configuration.mode == .kids ? 12 : 0)
         }
     }
 
@@ -234,6 +248,7 @@ struct GameView: View {
         ) {
             viewModel.togglePause()
         }
+        .padding(.leading, configuration.mode == .kids ? 12 : 0)
     }
 
     private var feedbackPauseButton: some View {
@@ -246,25 +261,44 @@ struct GameView: View {
             Spacer()
         }
         .padding(.horizontal, 56)
-        .padding(.top, 70)
-        .padding(.bottom, 42)
+        .padding(.top, configuration.mode == .kids ? 24 : 70)
+        .padding(.bottom, configuration.mode == .kids ? 24 : 42)
     }
 
     private var wordCard: some View {
         ZStack {
-            HStack {
-                Text(viewModel.currentWordText)
-                    .font(.system(size: 88, weight: .black, design: .rounded))
-                    .minimumScaleFactor(0.28)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .padding(.horizontal, 10)
-                    .accessibilityIdentifier("gameWord")
+            if configuration.mode == .kids, let imageName = viewModel.currentImageName {
+                VStack(spacing: 52) {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .scaleEffect(1.45)
+                    
+                    Text(viewModel.currentWordText)
+                        .font(.system(size: 44, weight: .black, design: .rounded))
+                        .minimumScaleFactor(0.4)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.85))
+                        .accessibilityIdentifier("gameWord")
+                }
+            } else {
+                HStack {
+                    Text(viewModel.currentWordText)
+                        .font(.system(size: 88, weight: .black, design: .rounded))
+                        .minimumScaleFactor(0.28)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.center)
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .padding(.horizontal, 10)
+                        .accessibilityIdentifier("gameWord")
+                }
             }
         }
         .frame(maxWidth: .infinity)
         .frame(minHeight: 170)
+        .frame(maxHeight: configuration.mode == .kids ? .infinity : nil)
     }
 
     private func challengeBanner(_ challenge: ChallengeCard) -> some View {

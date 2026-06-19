@@ -157,7 +157,7 @@ struct HomeView: View {
             router.open(.wikipediaMode)
         case .mixAndMatch:
             router.open(.mixAndMatch)
-        case .normal, .infinite:
+        case .normal, .infinite, .kids:
             router.open(.modeDeckSelection(mode: mode))
         case .hotPotato, .challengeCards:
             break

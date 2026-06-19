@@ -10,6 +10,7 @@ enum AppTheme {
         static let coral = Color(red: 0.96, green: 0.42, blue: 0.36)
         static let blue = Color(red: 0.37, green: 0.68, blue: 0.92)
         static let orange = Color(red: 1.00, green: 0.58, blue: 0.22)
+        static let pink = Color(red: 0.92, green: 0.43, blue: 0.66)
         static let gray = Color(red: 0.68, green: 0.68, blue: 0.65)
     }
 

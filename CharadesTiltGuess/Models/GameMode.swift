@@ -39,7 +39,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .pasteAndPlay:
             return "Paste any list and jump into a round in seconds."
         case .mixAndMatch:
-            return "Play 50 random cards from all your decks."
+            return "Play a random mix of cards from your decks."
         case .infinite:
             return "No timer. Play until the deck is done."
         case .hotPotato:
@@ -58,7 +58,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .pasteAndPlay:
             return "Instant custom lists"
         case .mixAndMatch:
-            return "50 cards, every deck"
+            return "A fresh mix of cards"
         case .infinite:
             return "Finish every card"
         case .hotPotato:
@@ -154,11 +154,11 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .mixAndMatch:
             return ModeInstruction(
                 title: "Mix every deck",
-                summary: "Start with 50 freshly shuffled cards from built-in and custom decks.",
+                summary: "Start with freshly shuffled cards from built-in and custom decks.",
                 rules: [
-                    "The app combines cards from every available deck.",
+                    "The app combines cards from your chosen decks.",
                     "Equivalent duplicate words are removed before shuffling.",
-                    "Each new round selects a fresh set of up to 50 cards."
+                    "Each new round selects a fresh set of random cards."
                 ],
                 scoring: "Scoring matches Normal mode."
             )

@@ -171,7 +171,7 @@ struct MixAndMatchSelectionView: View {
                         .font(.system(size: 32, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
 
-                    Text("Choose decks for a fresh mix of up to 50 cards.")
+                    Text("Choose decks for a fresh mix of random cards.")
                         .font(.system(size: 14, weight: .bold, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.66))
                 }
@@ -186,6 +186,8 @@ struct MixAndMatchSelectionView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("Choose your decks")
                     .font(.system(size: 25, weight: .black, design: .rounded))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
                     .foregroundStyle(AppTheme.Colors.ink)
 
                 Text("\(selectedDeckIDs.count) of \(viewModel.decks.count) selected")
@@ -196,12 +198,13 @@ struct MixAndMatchSelectionView: View {
             Spacer(minLength: 8)
 
             Button(action: toggleAllDecks) {
-                Label(
-                    allDecksSelected ? "Unselect all" : "Select all",
-                    systemImage: allDecksSelected ? "square" : "checkmark.square.fill"
-                )
+                HStack(spacing: 6) {
+                    Image(systemName: allDecksSelected ? "square" : "checkmark.square.fill")
+                    Text(allDecksSelected ? "Unselect all" : "Select all")
+                }
                 .font(.system(size: 14, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
+                .frame(width: 120, alignment: .trailing)
             }
             .buttonStyle(.plain)
             .accessibilityIdentifier("mixAndMatchSelectAllButton")

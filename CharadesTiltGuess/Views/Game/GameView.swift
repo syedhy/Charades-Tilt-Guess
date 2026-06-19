@@ -46,6 +46,7 @@ struct GameView: View {
 
             if let feedback = viewModel.feedback {
                 feedbackOverlay(for: feedback)
+                feedbackPauseButton
             }
 
             if viewModel.isPaused {
@@ -192,14 +193,7 @@ struct GameView: View {
 
     private var topBar: some View {
         HStack {
-            DoodleIconButton(
-                symbol: viewModel.isPaused ? "play.fill" : "pause.fill",
-                accent: AppTheme.Colors.paperBright.opacity(0.92),
-                size: 66,
-                accessibilityLabel: "Pause round"
-            ) {
-                viewModel.togglePause()
-            }
+            pauseButton
 
             Spacer()
 
@@ -229,6 +223,31 @@ struct GameView: View {
             }
             .frame(width: 92, alignment: .trailing)
         }
+    }
+
+    private var pauseButton: some View {
+        DoodleIconButton(
+            symbol: viewModel.isPaused ? "play.fill" : "pause.fill",
+            accent: AppTheme.Colors.paperBright.opacity(0.92),
+            size: 66,
+            accessibilityLabel: "Pause round"
+        ) {
+            viewModel.togglePause()
+        }
+    }
+
+    private var feedbackPauseButton: some View {
+        VStack {
+            HStack {
+                pauseButton
+                Spacer()
+            }
+
+            Spacer()
+        }
+        .padding(.horizontal, 56)
+        .padding(.top, 70)
+        .padding(.bottom, 42)
     }
 
     private var wordCard: some View {

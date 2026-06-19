@@ -4,373 +4,366 @@ struct OnboardingView: View {
     let isPresentedModally: Bool
     let onDone: () -> Void
 
-    @State private var page = 0
-    @State private var isAnimating = false
-
-    private let pages = OnboardingPage.all
+    @StateObject private var viewModel = OnboardingViewModel()
+    @State private var warningShake = false
 
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                DoodlePaperBackground()
+        ZStack {
+            gameplayBackground
+
+            VStack(spacing: 16) {
+                topBar
+
+                Spacer(minLength: 0)
 
                 VStack(spacing: 0) {
-                    header
-                        .padding(.horizontal, 24)
-                        .padding(.top, min(max(proxy.safeAreaInsets.top - 24, 20), 36))
-
-                    TabView(selection: $page) {
-                        ForEach(Array(pages.enumerated()), id: \.element.id) { index, item in
-                            onboardingPage(item, index: index)
-                                .tag(index)
-                                .padding(.horizontal, 24)
-                        }
-                    }
-                    .tabViewStyle(.page(indexDisplayMode: .never))
-                    .padding(.top, 8)
-
-                    footer
-                        .padding(.horizontal, 24)
-                        .padding(.bottom, max(proxy.safeAreaInsets.bottom + 16, 28))
+                    wordCard
+                        .modifier(ShakeEffect(animatableData: warningShake ? 1 : 0))
                 }
+
+                Spacer(minLength: 0)
+
+                tiltStatus
+            }
+            .padding(.horizontal, 56)
+            .padding(.top, 32)
+            .padding(.bottom, 42)
+
+            if let feedback = viewModel.feedback {
+                feedbackOverlay(for: feedback)
+            }
+            
+            if viewModel.showWrongWayWarning {
+                wrongWayOverlay
+            }
+
+            if viewModel.currentStep == 3 {
+                finishedSplashView
             }
         }
         .preferredColorScheme(.light)
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .navigationBar)
         .onAppear {
-            withAnimation(.easeInOut(duration: 1.15).repeatForever(autoreverses: true)) {
-                isAnimating.toggle()
+            OrientationController.shared.useGameplayLandscape()
+            viewModel.startInteractiveTutorial()
+        }
+        .onDisappear {
+            viewModel.stopInteractiveTutorial()
+        }
+        .onChange(of: viewModel.showWrongWayWarning) { _, show in
+            if show {
+                withAnimation(.default) {
+                    warningShake.toggle()
+                }
             }
         }
     }
 
-    private var header: some View {
-        HStack(alignment: .center, spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text("Charades")
-                    .font(.system(size: 30, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .lineLimit(1)
+    private var gameplayBackground: some View {
+        ZStack {
+            DoodlePaperBackground()
 
-                Text("THE POCKET PARTY GAME")
-                    .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
-                    .lineLimit(1)
+            Canvas { context, size in
+                let lineColor = AppTheme.Colors.ink.opacity(0.018)
+
+                for y in stride(from: 18.0, through: size.height, by: 32.0) {
+                    var path = Path()
+                    path.move(to: CGPoint(x: 0, y: y))
+                    path.addLine(to: CGPoint(x: size.width, y: y))
+                    context.stroke(path, with: .color(lineColor), lineWidth: 1)
+                }
+
+                for x in stride(from: 18.0, through: size.width, by: 32.0) {
+                    var path = Path()
+                    path.move(to: CGPoint(x: x, y: 0))
+                    path.addLine(to: CGPoint(x: x, y: size.height))
+                    context.stroke(path, with: .color(lineColor), lineWidth: 1)
+                }
+            }
+            .ignoresSafeArea()
+            .allowsHitTesting(false)
+        }
+    }
+
+    private var topBar: some View {
+        HStack {
+            Button(action: {
+                OrientationController.shared.useMenuPortrait()
+                onDone()
+            }) {
+                Text("Skip")
+                    .font(.system(size: 24, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+            }
+            .frame(width: 92, alignment: .leading)
+
+            Spacer()
+
+            VStack(spacing: 0) {
+                Text("\(min(viewModel.currentStep + 1, 3))/3")
+                    .font(.system(size: 58, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .monospacedDigit()
             }
 
             Spacer()
 
-            DoodleIconButton(
-                symbol: isPresentedModally ? "xmark" : "chevron.left",
-                size: 42,
-                accessibilityLabel: isPresentedModally ? "Close onboarding" : "Back",
-                accessibilityIdentifier: "onboardingDismissButton"
-            ) {
-                finish()
-            }
+            Text("Skip")
+                .font(.system(size: 24, weight: .black, design: .rounded))
+                .foregroundStyle(.clear)
+                .frame(width: 92, alignment: .trailing)
         }
     }
 
-    private func onboardingPage(_ item: OnboardingPage, index: Int) -> some View {
-        ScrollView {
-            VStack(spacing: 14) {
-                VStack(spacing: 14) {
-                    HStack {
-                        Text("Step \(index + 1) of \(pages.count)")
-                            .font(.system(size: 12, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
-
-                        Spacer()
-
-                        Image(systemName: item.symbol)
-                            .font(.system(size: 19, weight: .black))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                    }
-
-                    OnboardingIllustration(kind: item.kind, accent: item.accent, isAnimating: isAnimating)
-                        .frame(height: 174)
-
-                    VStack(spacing: 14) {
-                        Text(item.title)
-                            .font(.system(size: 29, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        Text(item.caption)
-                            .font(.system(size: 14, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
-                            .multilineTextAlignment(.center)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                }
-                .padding(20)
-                .frame(maxWidth: .infinity)
-                .background(OnboardingCardBackground(background: item.accent))
-                .padding(.horizontal, 10)
-                .padding(.bottom, 6)
-
-                VStack(spacing: 8) {
-                    ForEach(item.tips) { tip in
-                        OnboardingTipRow(tip: tip)
-                    }
-                }
+    private var wordCard: some View {
+        ZStack {
+            HStack {
+                Text(viewModel.instructionText)
+                    .font(.system(size: viewModel.currentStep == 0 ? 56 : 52, weight: .black, design: .rounded))
+                    .minimumScaleFactor(0.2)
+                    .lineLimit(viewModel.currentStep == 0 ? 2 : 1)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(12)
+                    .foregroundStyle(viewModel.showWrongWayWarning ? AppTheme.Colors.coral : viewModel.instructionColor)
+                    .padding(.horizontal, 10)
             }
-            .padding(.top, 8)
-            .padding(.bottom, 10)
         }
-        .scrollIndicators(.hidden)
+        .frame(maxWidth: .infinity)
+        .frame(minHeight: 170)
     }
 
-    private var footer: some View {
-        VStack(spacing: 16) {
-            HStack(spacing: 8) {
-                ForEach(pages.indices, id: \.self) { index in
-                    Capsule()
-                        .fill(index == page ? AppTheme.Colors.ink : AppTheme.Colors.ink.opacity(0.22))
-                        .frame(width: index == page ? 30 : 9, height: 9)
-                        .animation(.snappy(duration: 0.18), value: page)
-                }
-            }
-
-            DoodleActionButton(
-                title: page == pages.count - 1 ? "Start playing" : "Next",
-                symbol: page == pages.count - 1 ? "checkmark" : "arrow.right",
-                accent: pages[page].accent
-            ) {
-                if page == pages.count - 1 {
-                    finish()
-                } else {
-                    withAnimation(.snappy(duration: 0.2)) {
-                        page += 1
-                    }
-                }
-            }
-            .accessibilityIdentifier("onboardingPrimaryButton")
-        }
-    }
-
-    private func finish() {
-        onDone()
-    }
-}
-
-private struct OnboardingCardBackground: View {
-    let background: Color
-
-    var body: some View {
-        RoundedRectangle(cornerRadius: AppTheme.Radius.panel, style: .continuous)
-            .fill(background)
-            .overlay {
-                RoundedRectangle(cornerRadius: AppTheme.Radius.panel, style: .continuous)
-                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-            }
-            .shadow(color: AppTheme.Colors.ink.opacity(0.16), radius: 0, x: 4, y: 5)
-    }
-}
-
-private enum OnboardingIllustrationKind {
-    case deck
-    case hold
-    case gesture
-    case results
-}
-
-private struct OnboardingTip: Identifiable {
-    let id = UUID()
-    let symbol: String
-    let text: String
-}
-
-private struct OnboardingPage: Identifiable {
-    let id = UUID()
-    let title: String
-    let caption: String
-    let accent: Color
-    let symbol: String
-    let kind: OnboardingIllustrationKind
-    let tips: [OnboardingTip]
-
-    static let all = [
-        OnboardingPage(
-            title: "Pick a deck",
-            caption: "Choose a built-in deck, make your own, paste a quick list, or start a Wikipedia round.",
-            accent: AppTheme.Colors.yellow,
-            symbol: "rectangle.stack.fill",
-            kind: .deck,
-            tips: [
-                OnboardingTip(symbol: "plus", text: "Create custom decks anytime."),
-                OnboardingTip(symbol: "doc.on.clipboard", text: "Paste a list when you want to play fast.")
-            ]
-        ),
-        OnboardingPage(
-            title: "Hold it up",
-            caption: "Place the phone on your forehead with the word facing your team.",
-            accent: AppTheme.Colors.blue,
-            symbol: "iphone.gen3.radiowaves.left.and.right",
-            kind: .hold,
-            tips: [
-                OnboardingTip(symbol: "hand.raised.fill", text: "Keep the phone steady before the countdown."),
-                OnboardingTip(symbol: "speaker.wave.2.fill", text: "The start sound tells everyone the round is live.")
-            ]
-        ),
-        OnboardingPage(
-            title: "Tilt to score",
-            caption: "Tilt down when your team guesses it. Tilt up when you want to pass.",
-            accent: AppTheme.Colors.mint,
-            symbol: "arrow.up.and.down",
-            kind: .gesture,
-            tips: [
-                OnboardingTip(symbol: "checkmark", text: "Down means correct."),
-                OnboardingTip(symbol: "arrow.uturn.forward", text: "Up means pass.")
-            ]
-        ),
-        OnboardingPage(
-            title: "See the round",
-            caption: "After the splash, results show your score and every card you played.",
-            accent: DeckColor.pink.displayColor,
-            symbol: "flag.checkered",
-            kind: .results,
-            tips: [
-                OnboardingTip(symbol: "checkmark.circle.fill", text: "Correct cards stay clean and bold."),
-                OnboardingTip(symbol: "xmark.circle.fill", text: "Passed cards are crossed out.")
-            ]
-        )
-    ]
-}
-
-private struct OnboardingTipRow: View {
-    let tip: OnboardingTip
-
-    var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: tip.symbol)
-                .font(.system(size: 15, weight: .black))
-                .foregroundStyle(AppTheme.Colors.ink)
-                .frame(width: 34, height: 34)
-                .background(AppTheme.Colors.paperBright, in: Circle())
-                .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: 2))
-
-            Text(tip.text)
-                .font(.system(size: 15, weight: .black, design: .rounded))
+    private var tiltStatus: some View {
+        VStack(spacing: 8) {
+            Text("Tilt Match: \(viewModel.progressPercentage)%")
+                .font(.system(size: 24, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
-                .fixedSize(horizontal: false, vertical: true)
-
-            Spacer(minLength: 0)
-        }
-        .padding(.horizontal, 14)
-        .frame(minHeight: 46)
-        .background(AppTheme.Colors.paperBright.opacity(0.68), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-    }
-}
-
-private struct OnboardingIllustration: View {
-    let kind: OnboardingIllustrationKind
-    let accent: Color
-    let isAnimating: Bool
-
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 28, style: .continuous)
-                .fill(AppTheme.Colors.paperBright.opacity(0.55))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 28, style: .continuous)
-                        .stroke(AppTheme.Colors.ink.opacity(0.18), lineWidth: 3)
+                .monospacedDigit()
+                
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(AppTheme.Colors.ink.opacity(0.1))
+                    Capsule()
+                        .fill(viewModel.instructionColor)
+                        .frame(width: max(0, min(geo.size.width, geo.size.width * CGFloat(viewModel.progressPercentage) / 100)))
+                        .animation(.linear(duration: 0.1), value: viewModel.progressPercentage)
                 }
-
-            switch kind {
-            case .deck:
-                deckStack
-            case .hold:
-                phone(symbol: "person.crop.circle.fill", label: "Ready")
-                    .offset(y: isAnimating ? -8 : 3)
-            case .gesture:
-                HStack(spacing: 30) {
-                    phone(symbol: "checkmark", label: "Down")
-                        .rotationEffect(.degrees(isAnimating ? 12 : 0))
-                    phone(symbol: "arrow.uturn.forward", label: "Up")
-                        .rotationEffect(.degrees(isAnimating ? -12 : 0))
-                }
-            case .results:
-                resultList
             }
+            .frame(width: 280, height: 16)
         }
     }
 
-    private var deckStack: some View {
-        ZStack {
-            miniCard(color: AppTheme.Colors.coral, symbol: "sparkles")
-                .rotationEffect(.degrees(-10))
-                .offset(x: -44, y: 16)
-            miniCard(color: AppTheme.Colors.yellow, symbol: "film")
-                .rotationEffect(.degrees(3))
-                .offset(x: 0, y: -4)
-            miniCard(color: AppTheme.Colors.mint, symbol: "sportscourt")
-                .rotationEffect(.degrees(10))
-                .offset(x: 46, y: 18)
-        }
-    }
+    private func feedbackOverlay(for feedback: WordStatus) -> some View {
+        let color = feedback == .correct ? AppTheme.Colors.mint : AppTheme.Colors.coral
+        let title = feedback == .correct ? "Great!" : "Perfect!"
 
-    private var resultList: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            resultRow(text: "rocket", isCorrect: true)
-            resultRow(text: "castle", isCorrect: true)
-            resultRow(text: "harbor", isCorrect: false)
-            resultRow(text: "puzzle", isCorrect: true)
-        }
-        .padding(20)
-        .frame(maxWidth: 250)
-    }
-
-    private func phone(symbol: String, label: String) -> some View {
-        RoundedRectangle(cornerRadius: 28, style: .continuous)
-            .fill(AppTheme.Colors.ink)
-            .frame(width: 106, height: 172)
+        return color
+            .ignoresSafeArea()
             .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .fill(AppTheme.Colors.paperBright)
-                    .padding(9)
-            }
-            .overlay {
-                VStack(spacing: 10) {
-                    Image(systemName: symbol)
-                        .font(.system(size: 31, weight: .black))
-
-                    Text(label)
-                        .font(.system(size: 15, weight: .black, design: .rounded))
-                }
-                .foregroundStyle(AppTheme.Colors.ink)
-            }
-            .shadow(color: AppTheme.Colors.ink.opacity(0.2), radius: 0, x: 6, y: 7)
-    }
-
-    private func miniCard(color: Color, symbol: String) -> some View {
-        RoundedRectangle(cornerRadius: 20, style: .continuous)
-            .fill(color)
-            .frame(width: 82, height: 112)
-            .overlay {
-                Image(systemName: symbol)
-                    .font(.system(size: 30, weight: .black))
+                Text(title)
+                    .font(.system(size: 74, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
             }
-            .overlay {
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-            }
-            .shadow(color: AppTheme.Colors.ink.opacity(0.18), radius: 0, x: 5, y: 6)
+            .transition(.opacity)
     }
 
-    private func resultRow(text: String, isCorrect: Bool) -> some View {
-        HStack(spacing: 10) {
-            Image(systemName: isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill")
-                .font(.system(size: 22, weight: .black))
-                .foregroundStyle(isCorrect ? AppTheme.Colors.mint : AppTheme.Colors.coral)
+    private var wrongWayOverlay: some View {
+        AppTheme.Colors.coral.opacity(0.95)
+            .ignoresSafeArea()
+            .overlay {
+                VStack(spacing: 20) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .font(.system(size: 80, weight: .black))
+                    Text("Wrong Way!")
+                        .font(.system(size: 64, weight: .black, design: .rounded))
+                    Text("Tilt the opposite direction")
+                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                }
+                .foregroundStyle(AppTheme.Colors.ink)
+            }
+            .transition(.opacity)
+    }
 
-            Text(text)
-                .font(.system(size: 25, weight: .black, design: .rounded))
-                .strikethrough(!isCorrect, color: AppTheme.Colors.coral)
-                .foregroundStyle(AppTheme.Colors.ink.opacity(isCorrect ? 1 : 0.55))
+    private var finishedSplashView: some View {
+        ZStack {
+            AppTheme.Colors.yellow
+                .ignoresSafeArea()
+
+            VStack(spacing: 16) {
+                Image(systemName: "flag.checkered")
+                    .font(.system(size: 52, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 104, height: 104)
+                    .background(AppTheme.Colors.paperBright, in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.bold))
+                    .shadow(color: .black.opacity(0.24), radius: 0, x: 5, y: 7)
+
+                Text("You're Ready!")
+                    .font(.system(size: 58, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .minimumScaleFactor(0.58)
+                    .lineLimit(1)
+
+                Text("You know how to play")
+                    .font(.system(size: 24, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
+
+                DoodleActionButton(title: "Let's Play", symbol: "play.fill", accent: AppTheme.Colors.mint) {
+                    OrientationController.shared.useMenuPortrait()
+                    onDone()
+                }
+                .frame(width: 280)
+                .padding(.top, 20)
+            }
+            .padding(.horizontal, 40)
+            .transition(.scale(scale: 0.96).combined(with: .opacity))
+        }
+    }
+}
+
+// Custom shake effect for the word card
+struct ShakeEffect: GeometryEffect {
+    var amount: CGFloat = 10
+    var shakesPerUnit = 3
+    var animatableData: CGFloat
+
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(CGAffineTransform(translationX: amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)), y: 0))
+    }
+}
+
+@MainActor
+final class OnboardingViewModel: ObservableObject {
+    @Published var currentStep: Int = 0 // 0 = Hold upright, 1 = Tilt Down, 2 = Tilt Up, 3 = Finished
+    @Published var feedback: WordStatus? = nil
+    @Published var showWrongWayWarning = false
+    @Published var currentAngle: Double = 0.0
+    
+    private var motionManager: MotionManager?
+    
+    var instructionText: String {
+        switch currentStep {
+        case 0: return "Hold phone in LANDSCAPE\n& keep it upright"
+        case 1: return "Tilt DOWN for Correct"
+        case 2: return "Tilt UP for Pass"
+        default: return "Ready!"
+        }
+    }
+    
+    var instructionColor: Color {
+        switch currentStep {
+        case 0: return AppTheme.Colors.ink
+        case 1: return AppTheme.Colors.mint.opacity(0.9)
+        case 2: return AppTheme.Colors.coral.opacity(0.9)
+        default: return AppTheme.Colors.ink
+        }
+    }
+    
+    var progressPercentage: Int {
+        let angle = currentAngle * 180 / .pi // degrees
+        
+        switch currentStep {
+        case 0:
+            // Neutral (around 0 degrees, within +- 18)
+            let distance = abs(angle)
+            if distance <= 18 { return 100 }
+            let prog = 100 - ((distance - 18) / (90 - 18) * 100)
+            return max(0, min(100, Int(prog)))
+            
+        case 1:
+            // Tilt down (positive angle, target >= 34)
+            if angle >= 34 { return 100 }
+            if angle <= 0 { return 0 }
+            return max(0, min(100, Int((angle / 34) * 100)))
+            
+        case 2:
+            // Tilt up (negative angle, target <= -34)
+            if angle <= -34 { return 100 }
+            if angle >= 0 { return 0 }
+            return max(0, min(100, Int((abs(angle) / 34) * 100)))
+            
+        default:
+            return 100
+        }
+    }
+    
+    func startInteractiveTutorial() {
+        motionManager = MotionManager(sensitivity: .relaxed)
+        motionManager?.start(
+            onAction: { [weak self] action in
+                self?.handleAction(action)
+            },
+            onNeutralDetected: { [weak self] in
+                self?.handleNeutral()
+            },
+            onAngleUpdated: { [weak self] angle in
+                self?.currentAngle = angle
+            }
+        )
+    }
+    
+    func stopInteractiveTutorial() {
+        motionManager?.stop()
+        motionManager = nil
+    }
+    
+    private func handleNeutral() {
+        if currentStep == 0 {
+            SoundService.shared.play(.startCountdown, enabled: true)
+            withAnimation(.snappy(duration: 0.4)) {
+                currentStep = 1
+            }
+        }
+    }
+    
+    private func handleAction(_ action: TiltAction) {
+        guard !showWrongWayWarning && feedback == nil else { return }
+
+        if currentStep == 1 {
+            if action == .correct {
+                triggerSuccess(sound: .correct, status: .correct) {
+                    self.currentStep = 2
+                }
+            } else if action == .pass {
+                triggerWrongWay()
+            }
+        } else if currentStep == 2 {
+            if action == .pass {
+                triggerSuccess(sound: .pass, status: .passed) {
+                    self.currentStep = 3
+                }
+            } else if action == .correct {
+                triggerWrongWay()
+            }
+        }
+    }
+    
+    private func triggerWrongWay() {
+        SoundService.shared.play(.pass, enabled: true) // Play pass sound for wrong way in onboarding
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            showWrongWayWarning = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            withAnimation(.snappy(duration: 0.4)) {
+                self.showWrongWayWarning = false
+            }
+        }
+    }
+    
+    private func triggerSuccess(sound: SoundEffect, status: WordStatus, completion: @escaping () -> Void) {
+        SoundService.shared.play(.correct, enabled: true) // Always play correct sound for completing a step
+        
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+            feedback = status
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            withAnimation(.snappy(duration: 0.4)) {
+                self.feedback = nil
+                completion()
+            }
         }
     }
 }

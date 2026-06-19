@@ -187,6 +187,7 @@ final class MotionManager {
     private var detector: TiltGestureDetector
     private var onAction: ((TiltAction) -> Void)?
     private var onNeutralDetected: (() -> Void)?
+    private var onAngleUpdated: ((Double) -> Void)?
     private var orientation: LandscapeTiltOrientation = .landscapeRight
     private var hasDetectedNeutral = false
 
@@ -209,12 +210,14 @@ final class MotionManager {
 
     func start(
         onAction: @escaping (TiltAction) -> Void,
-        onNeutralDetected: (() -> Void)? = nil
+        onNeutralDetected: (() -> Void)? = nil,
+        onAngleUpdated: ((Double) -> Void)? = nil
     ) {
         guard isAvailable, !isRunning else { return }
 
         self.onAction = onAction
         self.onNeutralDetected = onNeutralDetected
+        self.onAngleUpdated = onAngleUpdated
         self.hasDetectedNeutral = false
         self.orientation = LandscapeTiltOrientation(interfaceOrientation: Self.currentInterfaceOrientation)
         detector.reset()
@@ -243,6 +246,8 @@ final class MotionManager {
             // For device tuning, temporarily log roll/pitch/yaw and `angle` here while holding the phone in landscape.
             #endif
 
+            self.onAngleUpdated?(angle)
+
             if let action = self.detector.process(currentAngle: angle) {
                 self.onAction?(action)
             }
@@ -255,6 +260,7 @@ final class MotionManager {
         manager.stopDeviceMotionUpdates()
         onAction = nil
         onNeutralDetected = nil
+        onAngleUpdated = nil
         hasDetectedNeutral = false
         detector.reset()
     }

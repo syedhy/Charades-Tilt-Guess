@@ -202,27 +202,27 @@ struct MixAndMatchSelectionView: View {
                     toggleAllDecks()
                 }
             } label: {
-                ZStack(alignment: .leading) {
+                ZStack {
                     // Hidden max-width layout to keep button size completely fixed
-                    HStack(spacing: 6) {
+                    VStack(spacing: 4) {
                         Image(systemName: "checkmark.square.fill")
-                        Text("Unselect all")
+                            .font(.system(size: 32, weight: .black))
+                        Text("SELECT ALL")
+                            .font(.system(size: 10, weight: .black, design: .rounded))
                     }
-                    .font(.system(size: 14, weight: .black, design: .rounded))
                     .hidden()
                     
                     // Visible layout
-                    HStack(spacing: 6) {
-                        Image(systemName: allDecksSelected ? "square" : "checkmark.square.fill")
-                        Text(allDecksSelected ? "Unselect all" : "Select all")
+                    VStack(spacing: 4) {
+                        Image(systemName: allDecksSelected ? "checkmark.square.fill" : "square")
+                            .font(.system(size: 32, weight: .black))
+                            .foregroundStyle(allDecksSelected ? GameMode.mixAndMatch.accentColor : AppTheme.Colors.ink.opacity(0.25))
+                        
+                        Text(allDecksSelected ? "UNSELECT" : "SELECT ALL")
+                            .font(.system(size: 10, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(allDecksSelected ? 0.6 : 0.4))
                     }
-                    .font(.system(size: 14, weight: .black, design: .rounded))
                 }
-                .foregroundStyle(AppTheme.Colors.ink)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(AppTheme.Colors.paperBright, in: Capsule())
-                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
             }
             .buttonStyle(DoodlePressStyle(rotation: 0))
             .accessibilityIdentifier("mixAndMatchSelectAllButton")

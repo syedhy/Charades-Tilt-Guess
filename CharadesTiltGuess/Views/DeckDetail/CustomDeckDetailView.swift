@@ -8,11 +8,11 @@ struct CustomDeckDetailView: View {
     private let mode: GameMode
     @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
-    @State private var isShowingUnsavedChangesConfirmation = false
     @State private var isShowingAddCardSheet = false
     @State private var isShowingPasteSheet = false
     @State private var toastMessage: String?
     @State private var toastPlacement: ToastPlacement = .top
+    @State private var isDiscarding = false
     @FocusState private var isNameFocused: Bool
 
     @MainActor
@@ -54,27 +54,20 @@ struct CustomDeckDetailView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.hidden, for: .navigationBar)
+        .background(SwipeBackEnabler())
         .preferredColorScheme(.light)
         .alert("Delete deck?", isPresented: $isShowingDeleteConfirmation) {
             Button("Cancel", role: .cancel) {}
             Button("Delete", role: .destructive) {
-                guard viewModel.deleteDeck() else { return }
+                isDiscarding = true
+                guard viewModel.deleteDeck() else { 
+                    isDiscarding = false
+                    return 
+                }
                 router.goHome()
             }
         } message: {
             Text("This removes \"\(viewModel.deck.name)\" and all of its cards from this device.")
-        }
-        .alert("Unsaved changes", isPresented: $isShowingUnsavedChangesConfirmation) {
-            Button("Cancel", role: .cancel) {}
-            Button("Don't Save", role: .destructive) {
-                viewModel.resetDraft()
-                router.goBack()
-            }
-            Button("Save") {
-                saveDeck(leaveOpen: false)
-            }
-        } message: {
-            Text("Save your deck changes before leaving?")
         }
         .sheet(isPresented: $isShowingPasteSheet) {
             PasteCardsSheet(viewModel: viewModel)
@@ -87,6 +80,11 @@ struct CustomDeckDetailView: View {
             }
             .presentationDetents([.large])
             .presentationDragIndicator(.hidden)
+        }
+        .onDisappear {
+            if !isDiscarding && viewModel.hasUnsavedChanges && viewModel.canSaveDraft {
+                viewModel.saveDraft()
+            }
         }
     }
 
@@ -112,11 +110,11 @@ struct CustomDeckDetailView: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .center, spacing: AppTheme.Spacing.standard) {
                 DoodleIconButton(
-                    symbol: "xmark",
+                    symbol: "chevron.left",
                     size: 46,
-                    accessibilityLabel: "Close deck"
+                    accessibilityLabel: "Go back"
                 ) {
-                    closeDeck()
+                    router.goBack()
                 }
 
                 if isCustomDeck {
@@ -376,16 +374,6 @@ struct CustomDeckDetailView: View {
         }
         .padding(.trailing, 28)
         .padding(.bottom, 26)
-    }
-
-    private func closeDeck() {
-        isNameFocused = false
-
-        if viewModel.hasUnsavedChanges {
-            isShowingUnsavedChangesConfirmation = true
-        } else {
-            router.goBack()
-        }
     }
 
     private func saveDeck(leaveOpen: Bool) {
@@ -959,5 +947,24 @@ private struct ToastBanner: View {
             )
         )
         .environmentObject(AppRouter())
+    }
+}
+
+struct SwipeBackEnabler: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        SwipeBackViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+}
+
+final class SwipeBackViewController: UIViewController, UIGestureRecognizerDelegate {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return (navigationController?.viewControllers.count ?? 0) > 1
     }
 }

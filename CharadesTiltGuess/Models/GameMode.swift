@@ -9,10 +9,11 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case challengeCards
     case wikipedia
     case kids
+    case teamVsTeam
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .kids]
+    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .kids, .teamVsTeam]
 
     var title: String {
         switch self {
@@ -32,6 +33,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Wikipedia Mode"
         case .kids:
             return "Kids Mode"
+        case .teamVsTeam:
+            return "Team vs Team"
         }
     }
 
@@ -53,6 +56,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Easy single-word prompts from Wikipedia."
         case .kids:
             return "Picture cards for the little ones."
+        case .teamVsTeam:
+            return "Divide into two teams and compete for the highest score."
         }
     }
 
@@ -71,9 +76,11 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .challengeCards:
             return "Sillier acting prompts"
         case .wikipedia:
-            return "Fresh easy words"
+            return "Fresh words"
         case .kids:
             return "Picture charades"
+        case .teamVsTeam:
+            return "Competitive team play"
         }
     }
 
@@ -95,6 +102,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "globe"
         case .kids:
             return "face.smiling.fill"
+        case .teamVsTeam:
+            return "person.2.fill"
         }
     }
 
@@ -116,12 +125,14 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return Color(red: 0.66, green: 0.58, blue: 0.86)
         case .kids:
             return AppTheme.Colors.pink
+        case .teamVsTeam:
+            return AppTheme.Colors.coral
         }
     }
 
     var usesDeckSelection: Bool {
         switch self {
-        case .normal, .infinite, .hotPotato, .challengeCards, .kids:
+        case .normal, .infinite, .hotPotato, .challengeCards, .kids, .teamVsTeam:
             return true
         case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
@@ -130,7 +141,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia, .kids:
+        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia, .kids, .teamVsTeam:
             return true
         case .infinite, .hotPotato:
             return false
@@ -227,6 +238,17 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "Play just like Normal mode."
                 ],
                 scoring: "Scoring matches Normal mode."
+            )
+        case .teamVsTeam:
+            return ModeInstruction(
+                title: "Team vs Team",
+                summary: "Split into two teams and compete.",
+                rules: [
+                    "Form two teams.",
+                    "Teams alternate turns to guess words.",
+                    "The team with the most points wins."
+                ],
+                scoring: "Correct cards score one point. Passed cards do not score."
             )
         }
     }

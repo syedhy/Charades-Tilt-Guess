@@ -41,7 +41,7 @@ struct GameConfiguration: Hashable, Identifiable {
 
     var repeatsWhenDeckExhausted: Bool {
         switch mode {
-        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia, .kids:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia, .kids, .teamVsTeam:
             return false
         }
     }
@@ -94,6 +94,10 @@ struct GameConfiguration: Hashable, Identifiable {
 
     static func wikipedia(deck: Deck, duration: Int) -> GameConfiguration {
         GameConfiguration(mode: .wikipedia, deck: deck, duration: duration, isTemporaryDeck: true)
+    }
+
+    static func teamVsTeam(deck: Deck, duration: Int) -> GameConfiguration {
+        GameConfiguration(mode: .teamVsTeam, deck: deck, duration: duration)
     }
 }
 

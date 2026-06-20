@@ -9,6 +9,9 @@ enum AppRoute: Hashable {
     case pasteAndPlay
     case mixAndMatch
     case wikipediaMode
+    case teamMatchSelection
+    case teamMatchLobby(state: TeamMatchState)
+    case teamMatchResults(state: TeamMatchState)
     case results(result: RoundResult)
 }
 
@@ -21,6 +24,7 @@ struct ActiveGame: Identifiable, Equatable {
 final class AppRouter: ObservableObject {
     @Published var path = NavigationPath()
     @Published var activeGame: ActiveGame?
+    @Published var activeTeamMatch: TeamMatchState?
 
     private var orientationTransitionTask: Task<Void, Never>?
 
@@ -78,12 +82,23 @@ final class AppRouter: ObservableObject {
             startGame(configuration: .hotPotato(deck: deck, hiddenDuration: settings.defaultDuration))
         case .challengeCards:
             startGame(configuration: .challengeCards(deck: deck, duration: settings.defaultDuration))
+        case .teamVsTeam:
+            startGame(configuration: .teamVsTeam(deck: deck, duration: settings.defaultDuration))
         }
     }
 
     func finishGame(result: RoundResult) {
         dismissGameAfterPortraitTransition {
-            self.path.append(AppRoute.results(result: result))
+            if let matchState = self.activeTeamMatch, result.mode == .teamVsTeam {
+                matchState.recordResult(result)
+                if matchState.isGameOver {
+                    self.path.append(AppRoute.teamMatchResults(state: matchState))
+                } else {
+                    self.path.append(AppRoute.teamMatchLobby(state: matchState))
+                }
+            } else {
+                self.path.append(AppRoute.results(result: result))
+            }
         }
     }
 
@@ -186,6 +201,14 @@ struct AppShellView: View {
             WikipediaModeView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)
             }
+        case .teamMatchSelection:
+            TeamMatchSelectionView(settings: settingsViewModel.settings) { configuration in
+                router.startGame(configuration: configuration)
+            }
+        case let .teamMatchLobby(state):
+            TeamMatchLobbyView(state: state)
+        case let .teamMatchResults(state):
+            TeamMatchResultsView(state: state)
         case let .results(result):
             ResultsView(
                 result: result,

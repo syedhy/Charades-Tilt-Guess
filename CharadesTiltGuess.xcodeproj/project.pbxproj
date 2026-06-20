@@ -75,6 +75,10 @@
 		AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000032 /* CardRotationStoreTests.swift */; };
 		AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */; };
 		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
+		C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */; };
+		C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */; };
+		D5A1B0A896C9861EDBE82C6F /* TeamMatchLobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */; };
+		DBC0983FAE2553ED38B72F4B /* TeamMatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032F9B121F7868CA73091EE7 /* TeamMatchState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,12 +99,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032F9B121F7868CA73091EE7 /* TeamMatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchState.swift; sourceTree = "<group>"; };
 		1B14C11C2FE4812C00BBD54B /* endCountDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
 		1B14C11E2FE4830100BBD54B /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
 		1B45660B2FE1DAFE007D28FE /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		1B45660D2FE1DC78007D28FE /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
 		1B45660E2FE1DC78007D28FE /* pass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
 		1B45660F2FE1DC78007D28FE /* timeout.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timeout.wav; sourceTree = "<group>"; };
+		28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchSelectionView.swift; sourceTree = "<group>"; };
+		2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchLobbyView.swift; sourceTree = "<group>"; };
+		46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchResultsView.swift; sourceTree = "<group>"; };
 		AAA000000000000000000008 /* CharadesTiltGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharadesTiltGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000009 /* CharadesTiltGuessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000010 /* CharadesTiltGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +287,7 @@
 				AAH000000000000000000013 /* RoundResult.swift */,
 				AAI000000000000000000011 /* TiltSensitivity.swift */,
 				AAI000000000000000000012 /* GameSettings.swift */,
+				032F9B121F7868CA73091EE7 /* TeamMatchState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +316,7 @@
 				AAJ000000000000000000028 /* ModeDeckSelectionView.swift */,
 				AAJ000000000000000000029 /* PasteAndPlayView.swift */,
 				AAJ000000000000000000030 /* WikipediaModeView.swift */,
+				28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -326,6 +336,8 @@
 			children = (
 				AAB000000000000000000014 /* GameView.swift */,
 				AAJ000000000000000000027 /* ModeInstructionsView.swift */,
+				2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */,
+				46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -606,6 +618,10 @@
 				AAJ000000000000000000009 /* PasteAndPlayView.swift in Sources */,
 				AAJ000000000000000000010 /* WikipediaModeView.swift in Sources */,
 				AAJ000000000000000000011 /* OnboardingView.swift in Sources */,
+				DBC0983FAE2553ED38B72F4B /* TeamMatchState.swift in Sources */,
+				C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */,
+				D5A1B0A896C9861EDBE82C6F /* TeamMatchLobbyView.swift in Sources */,
+				C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,8 +797,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Charades;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				
-				
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -811,8 +825,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Charades;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				
-				
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

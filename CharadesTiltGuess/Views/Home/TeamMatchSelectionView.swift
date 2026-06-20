@@ -2,7 +2,6 @@ import SwiftUI
 
 struct TeamMatchSelectionView: View {
     let settings: GameSettings
-    let onStart: (GameConfiguration) -> Void
 
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel = HomeViewModel()
@@ -21,7 +20,7 @@ struct TeamMatchSelectionView: View {
                         loadError(message: loadErrorMessage)
                     } else {
                         roundsPicker
-                        
+
                         selectionControls
 
                         if !viewModel.customDecks.isEmpty {
@@ -74,7 +73,7 @@ struct TeamMatchSelectionView: View {
             Text("Number of Rounds")
                 .font(.system(size: 25, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
-            
+
             HStack(spacing: 16) {
                 ForEach([1, 3, 5, 7], id: \.self) { roundCount in
                     Button {
@@ -129,12 +128,12 @@ struct TeamMatchSelectionView: View {
                             .font(.system(size: 10, weight: .black, design: .rounded))
                     }
                     .hidden()
-                    
+
                     VStack(spacing: 4) {
                         Image(systemName: allDecksSelected ? "checkmark.square.fill" : "square")
                             .font(.system(size: 32, weight: .black))
                             .foregroundStyle(allDecksSelected ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.ink.opacity(0.25))
-                        
+
                         Text(allDecksSelected ? "UNSELECT" : "SELECT ALL")
                             .font(.system(size: 10, weight: .black, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(allDecksSelected ? 0.6 : 0.4))
@@ -210,6 +209,7 @@ struct TeamMatchSelectionView: View {
             startMatch()
         }
         .disabled(selectedDeckIDs.isEmpty)
+        .accessibilityIdentifier("teamMatchStartButton")
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
         .background(AppTheme.Colors.paper.opacity(0.96))
@@ -236,7 +236,7 @@ struct TeamMatchSelectionView: View {
             totalRounds: selectedRounds,
             duration: settings.defaultDuration
         )
-        
+
         router.activeTeamMatch = state
         router.open(.teamMatchLobby(state: state))
     }

@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct GameView: View {
     let configuration: GameConfiguration
@@ -267,14 +268,14 @@ struct GameView: View {
 
     private var wordCard: some View {
         ZStack {
-            if configuration.mode == .kids, let imageName = viewModel.currentImageName {
+            if let imageName = availableKidsImageName {
                 VStack(spacing: 52) {
                     Image(imageName)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .scaleEffect(1.45)
-                    
+
                     Text(viewModel.currentWordText)
                         .font(.system(size: 44, weight: .black, design: .rounded))
                         .minimumScaleFactor(0.4)
@@ -299,6 +300,17 @@ struct GameView: View {
         .frame(maxWidth: .infinity)
         .frame(minHeight: 170)
         .frame(maxHeight: configuration.mode == .kids ? .infinity : nil)
+    }
+
+    private var availableKidsImageName: String? {
+        guard configuration.mode == .kids,
+              let imageName = viewModel.currentImageName,
+              UIImage(named: imageName) != nil
+        else {
+            return nil
+        }
+
+        return imageName
     }
 
     private func challengeBanner(_ challenge: ChallengeCard) -> some View {

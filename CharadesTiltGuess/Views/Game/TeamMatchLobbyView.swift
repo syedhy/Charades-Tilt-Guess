@@ -10,9 +10,9 @@ struct TeamMatchLobbyView: View {
 
             VStack(spacing: AppTheme.Spacing.roomy) {
                 Spacer()
-                
+
                 header
-                
+
                 Spacer()
             }
             .padding(.horizontal, 24)
@@ -41,7 +41,7 @@ struct TeamMatchLobbyView: View {
                                 .stroke(AppTheme.Colors.ink, lineWidth: 3)
                         )
                 )
-                
+
             VStack(spacing: 32) {
                 Image(systemName: "hand.point.right.fill")
                     .font(.system(size: 88, weight: .black))
@@ -61,7 +61,8 @@ struct TeamMatchLobbyView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
-                    
+                    .accessibilityIdentifier("teamMatchTurnTitle")
+
                 Text("Pass the device to Team \(state.currentTeam) to begin!")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
@@ -88,7 +89,7 @@ struct TeamMatchLobbyView: View {
             accent: GameMode.teamVsTeam.accentColor
         ) {
             guard let deck = state.currentDeck else { return }
-            
+
             router.startGame(
                 configuration: .teamVsTeam(
                     deck: deck,

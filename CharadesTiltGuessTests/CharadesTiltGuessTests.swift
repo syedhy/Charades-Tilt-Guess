@@ -34,4 +34,46 @@ final class CharadesTiltGuessTests: XCTestCase {
         XCTAssertNil(router.activeGame)
         XCTAssertEqual(router.path.count, 1)
     }
+
+    @MainActor
+    func testTeamMatchAlternatesTeamsAndEndsAfterBothTeamsPlayEveryRound() {
+        let deck = Deck(
+            id: "team-deck",
+            name: "Team Deck",
+            cards: (1...3).map { GameWord(id: "word-\($0)", text: "Word \($0)") },
+            type: .default,
+            color: .mint,
+            symbolName: "person.2.fill"
+        )
+        let state = TeamMatchState(sourceDecks: [deck], totalRounds: 1, duration: 60)
+
+        state.recordResult(
+            RoundResult(
+                deck: deck,
+                duration: 60,
+                correctWords: Array(deck.cards.prefix(2)),
+                passedWords: [],
+                mode: .teamVsTeam
+            )
+        )
+
+        XCTAssertEqual(state.team1Score, 2)
+        XCTAssertEqual(state.currentTeam, 2)
+        XCTAssertFalse(state.isGameOver)
+
+        state.recordResult(
+            RoundResult(
+                deck: deck,
+                duration: 60,
+                correctWords: Array(deck.cards.prefix(1)),
+                passedWords: [],
+                mode: .teamVsTeam
+            )
+        )
+
+        XCTAssertEqual(state.team2Score, 1)
+        XCTAssertEqual(state.currentRound, 2)
+        XCTAssertTrue(state.isGameOver)
+        XCTAssertEqual(state.winnerText, "Team 1 Wins!")
+    }
 }

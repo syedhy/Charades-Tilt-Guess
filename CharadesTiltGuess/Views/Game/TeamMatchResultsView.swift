@@ -10,9 +10,9 @@ struct TeamMatchResultsView: View {
 
             VStack(spacing: AppTheme.Spacing.roomy) {
                 Spacer()
-                
+
                 header
-                
+
                 Spacer()
             }
             .padding(.horizontal, 24)
@@ -117,7 +117,7 @@ struct TeamMatchResultsView: View {
                 router.activeTeamMatch = newState
                 router.openImmediately(.teamMatchLobby(state: newState))
             }
-            
+
             Button {
                 router.activeTeamMatch = nil
                 router.goHome()

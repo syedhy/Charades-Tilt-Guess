@@ -21,12 +21,12 @@ def make_transparent_and_crop(img):
             newData.append(item)
 
     img.putdata(newData)
-    
+
     # Get bounding box of non-transparent pixels
     bbox = img.getbbox()
     if bbox:
         img = img.crop(bbox)
-        
+
     return img
 
 images = glob.glob(os.path.join(src_dir, "kids_animals_*.png"))
@@ -38,20 +38,20 @@ for img_path in images:
     base_name = "_".join(filename.split("_")[:-1])
     if not base_name: # fallback
         base_name = filename.replace(".png", "")
-    
+
     img = Image.open(img_path)
     img = make_transparent_and_crop(img)
-    
+
     # Resize to max dimension 256px to keep app size very small
     img.thumbnail((256, 256), Image.Resampling.LANCZOS)
-    
+
     imageset_dir = os.path.join(dest_dir, f"{base_name}.imageset")
     if not os.path.exists(imageset_dir):
         os.makedirs(imageset_dir)
-        
+
     out_path = os.path.join(imageset_dir, f"{base_name}.png")
     img.save(out_path, "PNG")
-    
+
     # Create Contents.json
     contents = f"""{{
   "images" : [
@@ -68,5 +68,5 @@ for img_path in images:
 }}"""
     with open(os.path.join(imageset_dir, "Contents.json"), "w") as f:
         f.write(contents)
-        
+
     print(f"Processed {base_name}")

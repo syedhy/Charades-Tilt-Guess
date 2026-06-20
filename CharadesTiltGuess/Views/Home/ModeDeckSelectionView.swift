@@ -210,13 +210,13 @@ struct MixAndMatchSelectionView: View {
                             .font(.system(size: 10, weight: .black, design: .rounded))
                     }
                     .hidden()
-                    
+
                     // Visible layout
                     VStack(spacing: 4) {
                         Image(systemName: allDecksSelected ? "checkmark.square.fill" : "square")
                             .font(.system(size: 32, weight: .black))
                             .foregroundStyle(allDecksSelected ? GameMode.mixAndMatch.accentColor : AppTheme.Colors.ink.opacity(0.25))
-                        
+
                         Text(allDecksSelected ? "UNSELECT" : "SELECT ALL")
                             .font(.system(size: 10, weight: .black, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(allDecksSelected ? 0.6 : 0.4))

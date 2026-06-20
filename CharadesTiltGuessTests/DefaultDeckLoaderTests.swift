@@ -6,10 +6,14 @@ final class DefaultDeckLoaderTests: XCTestCase {
     func testLoadsBundledDefaultDecks() throws {
         let decks = try DefaultDeckLoader().load()
 
-        XCTAssertEqual(decks.count, 16)
+        XCTAssertEqual(decks.count, 18)
         XCTAssertEqual(decks.first?.name, "Tech")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
         XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
+        XCTAssertEqual(
+            Set(decks.filter { $0.id.hasPrefix("kids-") }.map(\.id)),
+            ["kids-animals", "kids-food", "kids-tools"]
+        )
     }
 
     func testMissingResourceThrowsHelpfulError() {

@@ -42,35 +42,35 @@ func processImage(_ imagePath: String, outPath: String) {
     if minX > maxX || minY > maxY {
         minX = 0; minY = 0; maxX = width - 1; maxY = height - 1
     }
-    
+
     let cropRect = NSRect(x: minX, y: height - maxY - 1, width: maxX - minX + 1, height: maxY - minY + 1)
-    
+
     // Convert bitmap to cgimage
     guard let cgImage = bitmap.cgImage else { return }
     let cgCropRect = CGRect(x: minX, y: minY, width: maxX - minX + 1, height: maxY - minY + 1)
-    
+
     guard let croppedCgImage = cgImage.cropping(to: cgCropRect) else { return }
     let croppedImage = NSImage(cgImage: croppedCgImage, size: NSSize(width: croppedCgImage.width, height: croppedCgImage.height))
-    
+
     // Scale image
     let maxSize: CGFloat = 256.0
     let origSize = croppedImage.size
     let scale = min(maxSize / origSize.width, maxSize / origSize.height)
     let newSize = NSSize(width: origSize.width * scale, height: origSize.height * scale)
-    
+
     let resizedImage = NSImage(size: newSize)
     resizedImage.lockFocus()
     NSGraphicsContext.current?.imageInterpolation = .high
     croppedImage.draw(in: NSRect(origin: .zero, size: newSize), from: NSRect(origin: .zero, size: origSize), operation: .copy, fraction: 1.0)
     resizedImage.unlockFocus()
-    
+
     // Save to file
     guard let finalTiff = resizedImage.tiffRepresentation,
           let finalBitmap = NSBitmapImageRep(data: finalTiff),
           let pngData = finalBitmap.representation(using: .png, properties: [:]) else {
         return
     }
-    
+
     try? pngData.write(to: URL(fileURLWithPath: outPath))
 }
 
@@ -81,15 +81,15 @@ for file in imageFiles {
     // Extract base name, kids_animals_bear_1781911456371.png -> kids_animals_bear
     let components = file.components(separatedBy: "_")
     let baseName = components.dropLast().joined(separator: "_")
-    
+
     let imagesetDir = destDir + "/\(baseName).imageset"
     try? fm.createDirectory(atPath: imagesetDir, withIntermediateDirectories: true, attributes: nil)
-    
+
     let inPath = srcDir + "/" + file
     let outPath = imagesetDir + "/\(baseName).png"
-    
+
     processImage(inPath, outPath: outPath)
-    
+
     let json = """
 {
   "images" : [

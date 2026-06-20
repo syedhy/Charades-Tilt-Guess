@@ -61,9 +61,9 @@ struct CustomDeckDetailView: View {
             Button("Cancel", role: .cancel) {}
             Button("Delete", role: .destructive) {
                 isDiscarding = true
-                guard viewModel.deleteDeck() else { 
+                guard viewModel.deleteDeck() else {
                     isDiscarding = false
-                    return 
+                    return
                 }
                 router.goHome()
             }
@@ -72,7 +72,10 @@ struct CustomDeckDetailView: View {
         }
         .alert("Unsaved Changes", isPresented: $isShowingUnsavedChangesAlert) {
             Button("Save", role: .none) {
-                viewModel.saveDraft()
+                guard viewModel.saveDraft() != nil else {
+                    isEditingDeckIdentity = true
+                    return
+                }
                 isDiscarding = false
                 router.goBack()
             }
@@ -977,7 +980,7 @@ struct SwipeBackEnabler: UIViewControllerRepresentable {
         vc.canSwipeBack = canSwipeBack
         return vc
     }
-    
+
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         if let vc = uiViewController as? SwipeBackViewController {
             vc.canSwipeBack = canSwipeBack

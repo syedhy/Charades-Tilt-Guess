@@ -41,4 +41,3 @@ decks.extend(new_decks)
 
 with open('CharadesTiltGuess/Resources/DefaultDecks.json', 'w') as f:
     json.dump(decks, f, indent=2)
-

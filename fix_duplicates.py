@@ -12,7 +12,7 @@ for deck in decks:
             new_cards.append(card)
         else:
             print(f"Removed duplicate {card['id']} in deck {deck['id']}")
-    
+
     # If we removed something and it's a kids deck, we might need to pad it to 50
     if deck.get("id").startswith("kids-") and len(new_cards) < 50:
         needed = 50 - len(new_cards)
@@ -24,7 +24,7 @@ for deck in decks:
                 "imageName": f"kids_{deck['id'].split('-')[-1]}_{new_id}"
             })
             print(f"Added {new_id} to {deck['id']} to reach 50.")
-            
+
     deck["cards"] = new_cards
 
 with open("CharadesTiltGuess/Resources/DefaultDecks.json", "w") as f:

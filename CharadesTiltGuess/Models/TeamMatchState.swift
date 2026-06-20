@@ -2,11 +2,11 @@ import Foundation
 
 final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable {
     let id = UUID()
-    
+
     static func == (lhs: TeamMatchState, rhs: TeamMatchState) -> Bool {
         lhs.id == rhs.id
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
@@ -16,10 +16,10 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
 
     @Published var currentRound: Int = 1
     @Published var currentTeam: Int = 1
-    
+
     @Published var team1Score: Int = 0
     @Published var team2Score: Int = 0
-    
+
     @Published var currentDeck: Deck?
 
     init(sourceDecks: [Deck], totalRounds: Int, duration: Int) {
@@ -45,7 +45,7 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
 
     func recordResult(_ result: RoundResult) {
         let score = result.correctWords.count
-        
+
         if currentTeam == 1 {
             team1Score += score
             currentTeam = 2
@@ -63,7 +63,7 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
     private func generateDeckForCurrentRound() {
         var allCards = sourceDecks.flatMap { $0.cards }
         allCards.shuffle()
-        
+
         // Remove duplicates by text, ignoring casing
         var uniqueCards: [GameWord] = []
         var seenTexts = Set<String>()
@@ -74,9 +74,9 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
                 uniqueCards.append(card)
             }
         }
-        
+
         let selectedCards = Array(uniqueCards.prefix(50))
-        
+
         currentDeck = Deck(
             id: "teamMatch-\(UUID().uuidString)",
             name: "Team Match Deck",
@@ -86,12 +86,12 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
             symbolName: "person.2.fill"
         )
     }
-    
+
     private func shuffleCurrentDeck() {
         guard let oldDeck = currentDeck else { return }
         var shuffledCards = oldDeck.cards
         shuffledCards.shuffle()
-        
+
         currentDeck = Deck(
             id: "teamMatch-\(UUID().uuidString)",
             name: "Team Match Deck",

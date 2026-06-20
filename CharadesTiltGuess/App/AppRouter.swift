@@ -104,12 +104,14 @@ final class AppRouter: ObservableObject {
 
     func exitGame() {
         dismissGameAfterPortraitTransition {
+            self.activeTeamMatch = nil
             self.path = NavigationPath()
         }
     }
 
     func goHome() {
         OrientationController.shared.useMenuPortrait()
+        activeTeamMatch = nil
         path = NavigationPath()
     }
 
@@ -157,7 +159,7 @@ struct AppShellView: View {
             }
         }
         .fullScreenCover(isPresented: onboardingBinding) {
-            OnboardingView(isPresentedModally: true) {
+            OnboardingView {
                 hasSeenOnboarding = true
             }
         }
@@ -180,7 +182,7 @@ struct AppShellView: View {
         case .settings:
             SettingsView()
         case .onboarding:
-            OnboardingView(isPresentedModally: false) {
+            OnboardingView {
                 router.goBack()
             }
         case .deckEditor:
@@ -202,9 +204,7 @@ struct AppShellView: View {
                 router.startGame(configuration: configuration)
             }
         case .teamMatchSelection:
-            TeamMatchSelectionView(settings: settingsViewModel.settings) { configuration in
-                router.startGame(configuration: configuration)
-            }
+            TeamMatchSelectionView(settings: settingsViewModel.settings)
         case let .teamMatchLobby(state):
             TeamMatchLobbyView(state: state)
         case let .teamMatchResults(state):

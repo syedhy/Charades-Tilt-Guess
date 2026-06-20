@@ -25,7 +25,7 @@ def make_deck(id_suffix, name, color, symbol, words_list):
             "text": word,
             "imageName": image_name
         })
-    
+
     return {
         "id": id_suffix,
         "name": name,

@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    let isPresentedModally: Bool
     let onDone: () -> Void
 
     @StateObject private var viewModel = OnboardingViewModel()
@@ -32,7 +31,7 @@ struct OnboardingView: View {
             if let feedback = viewModel.feedback {
                 feedbackOverlay(for: feedback)
             }
-            
+
             if viewModel.showWrongWayWarning {
                 wrongWayOverlay
             }
@@ -97,6 +96,7 @@ struct OnboardingView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
             }
             .frame(width: 92, alignment: .leading)
+            .accessibilityIdentifier("onboardingDismissButton")
 
             Spacer()
 
@@ -105,6 +105,7 @@ struct OnboardingView: View {
                     .font(.system(size: 58, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                     .monospacedDigit()
+                    .accessibilityIdentifier("onboardingStepCounter")
             }
 
             Spacer()
@@ -127,6 +128,7 @@ struct OnboardingView: View {
                     .lineSpacing(12)
                     .foregroundStyle(viewModel.showWrongWayWarning ? AppTheme.Colors.coral : viewModel.instructionColor)
                     .padding(.horizontal, 10)
+                    .accessibilityIdentifier("onboardingInstruction")
             }
         }
         .frame(maxWidth: .infinity)
@@ -139,7 +141,7 @@ struct OnboardingView: View {
                 .font(.system(size: 24, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
                 .monospacedDigit()
-                
+
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     Capsule()
@@ -239,9 +241,9 @@ final class OnboardingViewModel: ObservableObject {
     @Published var feedback: WordStatus? = nil
     @Published var showWrongWayWarning = false
     @Published var currentAngle: Double = 0.0
-    
+
     private var motionManager: MotionManager?
-    
+
     var instructionText: String {
         switch currentStep {
         case 0: return "Hold phone in LANDSCAPE\n& keep it upright"
@@ -250,7 +252,7 @@ final class OnboardingViewModel: ObservableObject {
         default: return "Ready!"
         }
     }
-    
+
     var instructionColor: Color {
         switch currentStep {
         case 0: return AppTheme.Colors.ink
@@ -259,10 +261,10 @@ final class OnboardingViewModel: ObservableObject {
         default: return AppTheme.Colors.ink
         }
     }
-    
+
     var progressPercentage: Int {
         let angle = currentAngle * 180 / .pi // degrees
-        
+
         switch currentStep {
         case 0:
             // Neutral (around 0 degrees, within +- 18)
@@ -270,24 +272,24 @@ final class OnboardingViewModel: ObservableObject {
             if distance <= 18 { return 100 }
             let prog = 100 - ((distance - 18) / (90 - 18) * 100)
             return max(0, min(100, Int(prog)))
-            
+
         case 1:
             // Tilt down    (positive angle, target >= 34)
             if angle >= 34 { return 100 }
             if angle <= 0 { return 0 }
             return max(0, min(100, Int((angle / 34) * 100)))
-            
+
         case 2:
             // Tilt up (negative angle, target <= -34)
             if angle <= -34 { return 100 }
             if angle >= 0 { return 0 }
             return max(0, min(100, Int((abs(angle) / 34) * 100)))
-            
+
         default:
             return 100
         }
     }
-    
+
     func startInteractiveTutorial() {
         motionManager = MotionManager(sensitivity: .relaxed)
         motionManager?.start(
@@ -302,12 +304,12 @@ final class OnboardingViewModel: ObservableObject {
             }
         )
     }
-    
+
     func stopInteractiveTutorial() {
         motionManager?.stop()
         motionManager = nil
     }
-    
+
     private func handleNeutral() {
         if currentStep == 0 {
             SoundService.shared.play(.startCountdown, enabled: true)
@@ -316,13 +318,13 @@ final class OnboardingViewModel: ObservableObject {
             }
         }
     }
-    
+
     private func handleAction(_ action: TiltAction) {
         guard !showWrongWayWarning && feedback == nil else { return }
 
         if currentStep == 1 {
             if action == .correct {
-                triggerSuccess(sound: .correct, status: .correct) {
+                triggerSuccess(status: .correct) {
                     self.currentStep = 2
                 }
             } else if action == .pass {
@@ -330,7 +332,7 @@ final class OnboardingViewModel: ObservableObject {
             }
         } else if currentStep == 2 {
             if action == .pass {
-                triggerSuccess(sound: .pass, status: .passed) {
+                triggerSuccess(status: .passed) {
                     self.currentStep = 3
                 }
             } else if action == .correct {
@@ -338,27 +340,27 @@ final class OnboardingViewModel: ObservableObject {
             }
         }
     }
-    
+
     private func triggerWrongWay() {
         SoundService.shared.play(.pass, enabled: true) // Play pass sound for wrong way in onboarding
         withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
             showWrongWayWarning = true
         }
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             withAnimation(.snappy(duration: 0.4)) {
                 self.showWrongWayWarning = false
             }
         }
     }
-    
-    private func triggerSuccess(sound: SoundEffect, status: WordStatus, completion: @escaping () -> Void) {
+
+    private func triggerSuccess(status: WordStatus, completion: @escaping () -> Void) {
         SoundService.shared.play(.correct, enabled: true) // Always play correct sound for completing a step
-        
+
         withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
             feedback = status
         }
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             withAnimation(.snappy(duration: 0.4)) {
                 self.feedback = nil

@@ -104,9 +104,30 @@ final class CharadesTiltGuessUITests: XCTestCase {
         XCTAssertTrue(replayButton.waitForExistence(timeout: 5))
         replayButton.tap()
 
-        XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["Step 1 of 4"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.buttons["Back"].exists || app.buttons["onboardingDismissButton"].exists)
+        XCTAssertTrue(app.staticTexts["onboardingInstruction"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["onboardingStepCounter"].label, "1/3")
+        XCTAssertTrue(app.buttons["onboardingDismissButton"].exists)
+    }
+
+    func testTeamMatchStartsWithTwoTeamsAndSelectedDecks() throws {
+        let app = launchApp()
+        let modeButton = app.buttons["modeButton-teamVsTeam"]
+
+        XCTAssertTrue(modeButton.waitForExistence(timeout: 5))
+        if !modeButton.isHittable {
+            app.swipeUp()
+        }
+        modeButton.tap()
+
+        XCTAssertTrue(app.staticTexts["Choose your decks"].waitForExistence(timeout: 5))
+        let startButton = app.buttons["teamMatchStartButton"]
+        XCTAssertTrue(startButton.waitForExistence(timeout: 5))
+        XCTAssertTrue(startButton.isEnabled)
+        startButton.tap()
+
+        XCTAssertTrue(app.staticTexts["Round 1 of 3"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["teamMatchTurnTitle"].waitForExistence(timeout: 5))
+        XCTAssertEqual(app.staticTexts["teamMatchTurnTitle"].label, "Team 1's\nTurn")
     }
 
     func testCustomDeckSelectionShowsCardsAndAddOptions() throws {

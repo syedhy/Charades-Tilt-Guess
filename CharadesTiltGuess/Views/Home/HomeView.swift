@@ -24,6 +24,7 @@ struct HomeView: View {
                     header
                     quickActions
                     modeSection
+                    coffeeButton
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 18)
@@ -164,6 +165,39 @@ struct HomeView: View {
         case .hotPotato, .challengeCards:
             break
         }
+    }
+
+    private var coffeeButton: some View {
+        Button(action: {
+            // Functionality will be added later.
+        }) {
+            HStack(spacing: 16) {
+                Image(systemName: "cup.and.saucer.fill")
+                    .font(.system(size: 28, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.ink)
+                    .frame(width: 52, height: 52)
+                    .background(AppTheme.Colors.yellow, in: Circle())
+                    .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard))
+
+                Text("Buy me a coffee")
+                    .font(.system(size: 22, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Spacer()
+
+                Image(systemName: "heart.fill")
+                    .font(.system(size: 22, weight: .black))
+                    .foregroundStyle(AppTheme.Colors.pink)
+            }
+            .padding(.horizontal, 18)
+            .padding(.vertical, 14)
+            .frame(maxWidth: .infinity)
+            .background {
+                DoodlePanelBackground(background: AppTheme.Colors.paperBright, cornerRadius: AppTheme.Radius.card)
+            }
+        }
+        .buttonStyle(DoodlePressStyle(rotation: 1.0))
+        .accessibilityIdentifier("buyMeACoffeeButton")
     }
 
 }

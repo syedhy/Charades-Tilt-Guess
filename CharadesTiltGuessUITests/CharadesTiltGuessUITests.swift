@@ -27,6 +27,18 @@ final class CharadesTiltGuessUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Charades"].waitForExistence(timeout: 2))
     }
 
+    func testHomeScreenIncludesCoffeePlaceholder() throws {
+        let app = launchApp()
+        let coffeeButton = app.buttons["buyMeACoffeeButton"]
+
+        XCTAssertTrue(coffeeButton.waitForExistence(timeout: 5))
+        if !coffeeButton.isHittable {
+            app.swipeUp()
+            app.swipeUp()
+        }
+        XCTAssertTrue(coffeeButton.isHittable)
+    }
+
     func testMixAndMatchStartsWithEveryDeckSelected() throws {
         let app = launchApp()
         let modeButton = app.buttons["modeButton-mixAndMatch"]

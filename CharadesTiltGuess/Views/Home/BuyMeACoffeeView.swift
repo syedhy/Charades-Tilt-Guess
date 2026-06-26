@@ -41,7 +41,7 @@ struct BuyMeACoffeeView: View {
                     .font(.system(size: 36, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                 
-                Text("If you're enjoying the game, consider supporting the development!")
+                Text("If you're enjoying the game , consider supporting the development!!")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))

@@ -257,18 +257,45 @@ struct GameView: View {
     }
 
     private var feedbackPauseButton: some View {
-        VStack {
+        VStack(spacing: 16) {
             HStack {
                 pauseButton
                     .padding(.leading, configuration.mode == .kids ? 16 : 0)
-                Spacer()
-            }
 
-            Spacer()
+                Spacer()
+
+                if configuration.mode != .kids {
+                    VStack(spacing: 0) {
+                        Text(configuration.mode.title.uppercased())
+                            .font(.system(size: 13, weight: .black, design: .rounded))
+                        Text(viewModel.timerText)
+                            .font(.system(size: 58, weight: .black, design: .rounded))
+                    }
+                    .hidden()
+                }
+
+                Spacer()
+
+                VStack(alignment: .trailing, spacing: 2) {
+                    if configuration.mode != .kids {
+                        Text("Score")
+                            .font(.system(size: 16, weight: .black, design: .rounded))
+                        Text("\(viewModel.score)")
+                            .font(.system(size: 36, weight: .black, design: .rounded))
+                    } else {
+                        Text(viewModel.timerText)
+                            .font(.system(size: 48, weight: .black, design: .rounded))
+                    }
+                }
+                .frame(width: configuration.mode == .kids ? nil : 92, alignment: .trailing)
+                .hidden()
+            }
+            .padding(.horizontal, 56)
+            .padding(.top, configuration.mode == .kids ? 24 : 70)
+
+            Spacer(minLength: 0)
         }
-        .padding(.horizontal, 56)
-        .padding(.top, configuration.mode == .kids ? 24 : 70)
-        .padding(.bottom, configuration.mode == .kids ? 24 : 42)
+        .padding(.bottom, configuration.mode == .kids ? 24 : 0)
     }
 
     private var wordCard: some View {
@@ -359,9 +386,6 @@ struct GameView: View {
     }
 
     private var statusText: String {
-        if viewModel.shouldShowSwipeControls {
-            return "\(viewModel.tiltStatusText) - Swipe up to pass, down for correct"
-        }
 
         return viewModel.tiltStatusText
     }
@@ -410,7 +434,7 @@ struct GameView: View {
                     .foregroundStyle(AppTheme.Colors.ink)
                     .minimumScaleFactor(0.6)
 
-                Text(configuration.mode == .hotPotato ? "Current holder loses" : "Pencils down")
+                Text("Pencils down")
                     .font(.system(size: 24, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
             }

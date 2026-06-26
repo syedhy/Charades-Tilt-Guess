@@ -17,7 +17,9 @@ struct SettingsView: View {
                     sensitivitySection
                     onboardingSection
                 }
-                .padding(24)
+                .padding(.horizontal, 24)
+                .padding(.bottom, 24)
+                .padding(.top, 8)
             }
             .scrollIndicators(.hidden)
         }
@@ -28,11 +30,11 @@ struct SettingsView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Game defaults")
+            Text("Game Settings")
                 .font(.system(size: 40, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
 
-            Text("These apply to new rounds.")
+            Text("Configure your game preferences")
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
         }

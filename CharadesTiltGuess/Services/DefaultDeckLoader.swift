@@ -12,25 +12,42 @@ enum DefaultDeckLoaderError: Error, Equatable {
 
 struct DefaultDeckLoader {
     private let bundle: Bundle
-    private let resourceName: String
+    
+    // Maintain the desired display order of default decks
+    private let defaultDeckIDs = [
+        "default-tech", "default-movies", "default-food", "default-sports", 
+        "default-animals", "default-countries", "default-celebrities", 
+        "default-tv-shows", "default-cartoons", "default-science", 
+        "default-school", "default-history", "default-easy", "default-hard",
+        "kids-animals", "kids-tools", "kids-food"
+    ]
 
-    init(bundle: Bundle = .main, resourceName: String = "DefaultDecks") {
+    init(bundle: Bundle = .main) {
         self.bundle = bundle
-        self.resourceName = resourceName
     }
 
     func load() throws -> [Deck] {
-        guard let url = bundle.url(forResource: resourceName, withExtension: "json") else {
-            throw DefaultDeckLoaderError.resourceNotFound(resourceName)
+        var allDecks: [Deck] = []
+        
+        for id in defaultDeckIDs {
+            // Because they are in an Xcode group and not a folder reference, they are flattened in the bundle.
+            guard let url = bundle.url(forResource: id, withExtension: "json") else {
+                throw DefaultDeckLoaderError.resourceNotFound(id)
+            }
+            
+            do {
+                let data = try Data(contentsOf: url)
+                let decks = try load(from: data)
+                allDecks.append(contentsOf: decks)
+            } catch let error as DefaultDeckLoaderError {
+                throw error
+            } catch {
+                throw DefaultDeckLoaderError.invalidData
+            }
         }
-
-        do {
-            return try load(from: Data(contentsOf: url))
-        } catch let error as DefaultDeckLoaderError {
-            throw error
-        } catch {
-            throw DefaultDeckLoaderError.invalidData
-        }
+        
+        try validate(allDecks)
+        return allDecks
     }
 
     func load(from data: Data) throws -> [Deck] {
@@ -42,7 +59,6 @@ struct DefaultDeckLoader {
             throw DefaultDeckLoaderError.invalidData
         }
 
-        try validate(decks)
         return decks
     }
 

@@ -1,0 +1,1012 @@
+[
+    {
+        "id": "default-easy",
+        "name": "Easy",
+        "description": "Simple cards for warmups and new players.",
+        "cards": [
+            {
+                "id": "default-easy-expanded-000",
+                "text": "Apple"
+            },
+            {
+                "id": "default-easy-expanded-001",
+                "text": "Ball"
+            },
+            {
+                "id": "default-easy-expanded-002",
+                "text": "Cat"
+            },
+            {
+                "id": "default-easy-expanded-003",
+                "text": "Dog"
+            },
+            {
+                "id": "default-easy-expanded-004",
+                "text": "Elephant"
+            },
+            {
+                "id": "default-easy-expanded-005",
+                "text": "Fish"
+            },
+            {
+                "id": "default-easy-expanded-006",
+                "text": "Goat"
+            },
+            {
+                "id": "default-easy-expanded-007",
+                "text": "Hat"
+            },
+            {
+                "id": "default-easy-expanded-008",
+                "text": "Ice"
+            },
+            {
+                "id": "default-easy-expanded-009",
+                "text": "Juice"
+            },
+            {
+                "id": "default-easy-expanded-010",
+                "text": "Kite"
+            },
+            {
+                "id": "default-easy-expanded-011",
+                "text": "Lion"
+            },
+            {
+                "id": "default-easy-expanded-012",
+                "text": "Monkey"
+            },
+            {
+                "id": "default-easy-expanded-013",
+                "text": "Nut"
+            },
+            {
+                "id": "default-easy-expanded-014",
+                "text": "Owl"
+            },
+            {
+                "id": "default-easy-expanded-015",
+                "text": "Pig"
+            },
+            {
+                "id": "default-easy-expanded-016",
+                "text": "Queen"
+            },
+            {
+                "id": "default-easy-expanded-017",
+                "text": "Rabbit"
+            },
+            {
+                "id": "default-easy-expanded-018",
+                "text": "Sun"
+            },
+            {
+                "id": "default-easy-expanded-019",
+                "text": "Tree"
+            },
+            {
+                "id": "default-easy-expanded-020",
+                "text": "Umbrella"
+            },
+            {
+                "id": "default-easy-expanded-021",
+                "text": "Van"
+            },
+            {
+                "id": "default-easy-expanded-022",
+                "text": "Water"
+            },
+            {
+                "id": "default-easy-expanded-023",
+                "text": "Xylophone"
+            },
+            {
+                "id": "default-easy-expanded-024",
+                "text": "Yoyo"
+            },
+            {
+                "id": "default-easy-expanded-025",
+                "text": "Zebra"
+            },
+            {
+                "id": "default-easy-expanded-026",
+                "text": "Ant"
+            },
+            {
+                "id": "default-easy-expanded-027",
+                "text": "Bird"
+            },
+            {
+                "id": "default-easy-expanded-028",
+                "text": "Car"
+            },
+            {
+                "id": "default-easy-expanded-029",
+                "text": "Door"
+            },
+            {
+                "id": "default-easy-expanded-030",
+                "text": "Egg"
+            },
+            {
+                "id": "default-easy-expanded-031",
+                "text": "Frog"
+            },
+            {
+                "id": "default-easy-expanded-032",
+                "text": "Girl"
+            },
+            {
+                "id": "default-easy-expanded-033",
+                "text": "House"
+            },
+            {
+                "id": "default-easy-expanded-034",
+                "text": "Igloo"
+            },
+            {
+                "id": "default-easy-expanded-035",
+                "text": "Jam"
+            },
+            {
+                "id": "default-easy-expanded-036",
+                "text": "Key"
+            },
+            {
+                "id": "default-easy-expanded-037",
+                "text": "Leaf"
+            },
+            {
+                "id": "default-easy-expanded-038",
+                "text": "Mouse"
+            },
+            {
+                "id": "default-easy-expanded-039",
+                "text": "Nest"
+            },
+            {
+                "id": "default-easy-expanded-040",
+                "text": "Orange"
+            },
+            {
+                "id": "default-easy-expanded-041",
+                "text": "Pen"
+            },
+            {
+                "id": "default-easy-expanded-042",
+                "text": "Quilt"
+            },
+            {
+                "id": "default-easy-expanded-043",
+                "text": "Rose"
+            },
+            {
+                "id": "default-easy-expanded-044",
+                "text": "Shoe"
+            },
+            {
+                "id": "default-easy-expanded-045",
+                "text": "Table"
+            },
+            {
+                "id": "default-easy-expanded-046",
+                "text": "Unicorn"
+            },
+            {
+                "id": "default-easy-expanded-047",
+                "text": "Violin"
+            },
+            {
+                "id": "default-easy-expanded-048",
+                "text": "Window"
+            },
+            {
+                "id": "default-easy-expanded-049",
+                "text": "Fox"
+            },
+            {
+                "id": "default-easy-expanded-050",
+                "text": "Yak"
+            },
+            {
+                "id": "default-easy-expanded-051",
+                "text": "Zoo"
+            },
+            {
+                "id": "default-easy-expanded-052",
+                "text": "Baby"
+            },
+            {
+                "id": "default-easy-expanded-053",
+                "text": "Book"
+            },
+            {
+                "id": "default-easy-expanded-054",
+                "text": "Chair"
+            },
+            {
+                "id": "default-easy-expanded-055",
+                "text": "Desk"
+            },
+            {
+                "id": "default-easy-expanded-056",
+                "text": "Eye"
+            },
+            {
+                "id": "default-easy-expanded-057",
+                "text": "Foot"
+            },
+            {
+                "id": "default-easy-expanded-058",
+                "text": "Hand"
+            },
+            {
+                "id": "default-easy-expanded-059",
+                "text": "Knee"
+            },
+            {
+                "id": "default-easy-expanded-060",
+                "text": "Leg"
+            },
+            {
+                "id": "default-easy-expanded-061",
+                "text": "Mouth"
+            },
+            {
+                "id": "default-easy-expanded-062",
+                "text": "Nose"
+            },
+            {
+                "id": "default-easy-expanded-063",
+                "text": "Ear"
+            },
+            {
+                "id": "default-easy-expanded-064",
+                "text": "Hair"
+            },
+            {
+                "id": "default-easy-expanded-065",
+                "text": "Head"
+            },
+            {
+                "id": "default-easy-expanded-066",
+                "text": "Arm"
+            },
+            {
+                "id": "default-easy-expanded-067",
+                "text": "Back"
+            },
+            {
+                "id": "default-easy-expanded-068",
+                "text": "Stomach"
+            },
+            {
+                "id": "default-easy-expanded-069",
+                "text": "Toe"
+            },
+            {
+                "id": "default-easy-expanded-070",
+                "text": "Finger"
+            },
+            {
+                "id": "default-easy-expanded-071",
+                "text": "Thumb"
+            },
+            {
+                "id": "default-easy-expanded-072",
+                "text": "Nail"
+            },
+            {
+                "id": "default-easy-expanded-073",
+                "text": "Tooth"
+            },
+            {
+                "id": "default-easy-expanded-074",
+                "text": "Lip"
+            },
+            {
+                "id": "default-easy-expanded-075",
+                "text": "Tongue"
+            },
+            {
+                "id": "default-easy-expanded-076",
+                "text": "Chin"
+            },
+            {
+                "id": "default-easy-expanded-077",
+                "text": "Cheek"
+            },
+            {
+                "id": "default-easy-expanded-078",
+                "text": "Eyebrow"
+            },
+            {
+                "id": "default-easy-expanded-079",
+                "text": "Eyelash"
+            },
+            {
+                "id": "default-easy-expanded-080",
+                "text": "Forehead"
+            },
+            {
+                "id": "default-easy-expanded-081",
+                "text": "Neck"
+            },
+            {
+                "id": "default-easy-expanded-082",
+                "text": "Shoulder"
+            },
+            {
+                "id": "default-easy-expanded-083",
+                "text": "Elbow"
+            },
+            {
+                "id": "default-easy-expanded-084",
+                "text": "Wrist"
+            },
+            {
+                "id": "default-easy-expanded-085",
+                "text": "Hip"
+            },
+            {
+                "id": "default-easy-expanded-086",
+                "text": "Thigh"
+            },
+            {
+                "id": "default-easy-expanded-087",
+                "text": "Calf"
+            },
+            {
+                "id": "default-easy-expanded-088",
+                "text": "Ankle"
+            },
+            {
+                "id": "default-easy-expanded-089",
+                "text": "Heel"
+            },
+            {
+                "id": "default-easy-expanded-091",
+                "text": "Sock"
+            },
+            {
+                "id": "default-easy-expanded-092",
+                "text": "Shirt"
+            },
+            {
+                "id": "default-easy-expanded-093",
+                "text": "Pants"
+            },
+            {
+                "id": "default-easy-expanded-094",
+                "text": "Dress"
+            },
+            {
+                "id": "default-easy-expanded-095",
+                "text": "Skirt"
+            },
+            {
+                "id": "default-easy-expanded-096",
+                "text": "Coat"
+            },
+            {
+                "id": "default-easy-expanded-097",
+                "text": "Jacket"
+            },
+            {
+                "id": "default-easy-expanded-099",
+                "text": "Cap"
+            },
+            {
+                "id": "default-easy-expanded-100",
+                "text": "Glove"
+            },
+            {
+                "id": "default-easy-expanded-101",
+                "text": "Mitten"
+            },
+            {
+                "id": "default-easy-expanded-102",
+                "text": "Scarf"
+            },
+            {
+                "id": "default-easy-expanded-103",
+                "text": "Belt"
+            },
+            {
+                "id": "default-easy-expanded-104",
+                "text": "Tie"
+            },
+            {
+                "id": "default-easy-expanded-105",
+                "text": "Glasses"
+            },
+            {
+                "id": "default-easy-expanded-106",
+                "text": "Watch"
+            },
+            {
+                "id": "default-easy-expanded-107",
+                "text": "Ring"
+            },
+            {
+                "id": "default-easy-expanded-108",
+                "text": "Necklace"
+            },
+            {
+                "id": "default-easy-expanded-109",
+                "text": "Bracelet"
+            },
+            {
+                "id": "default-easy-expanded-110",
+                "text": "Earring"
+            },
+            {
+                "id": "default-easy-expanded-111",
+                "text": "Bag"
+            },
+            {
+                "id": "default-easy-expanded-112",
+                "text": "Purse"
+            },
+            {
+                "id": "default-easy-expanded-113",
+                "text": "Wallet"
+            },
+            {
+                "id": "default-easy-expanded-114",
+                "text": "Backpack"
+            },
+            {
+                "id": "default-easy-expanded-115",
+                "text": "Suitcase"
+            },
+            {
+                "id": "default-easy-expanded-118",
+                "text": "Phone"
+            },
+            {
+                "id": "default-easy-expanded-119",
+                "text": "Computer"
+            },
+            {
+                "id": "default-easy-expanded-120",
+                "text": "TV"
+            },
+            {
+                "id": "default-easy-expanded-121",
+                "text": "Radio"
+            },
+            {
+                "id": "default-easy-expanded-122",
+                "text": "Camera"
+            },
+            {
+                "id": "default-easy-expanded-125",
+                "text": "Pencil"
+            },
+            {
+                "id": "default-easy-expanded-126",
+                "text": "Paper"
+            },
+            {
+                "id": "default-easy-expanded-127",
+                "text": "Notebook"
+            },
+            {
+                "id": "default-easy-expanded-128",
+                "text": "Eraser"
+            },
+            {
+                "id": "default-easy-expanded-129",
+                "text": "Ruler"
+            },
+            {
+                "id": "default-easy-expanded-130",
+                "text": "Scissors"
+            },
+            {
+                "id": "default-easy-expanded-131",
+                "text": "Glue"
+            },
+            {
+                "id": "default-easy-expanded-132",
+                "text": "Tape"
+            },
+            {
+                "id": "default-easy-expanded-133",
+                "text": "Stapler"
+            },
+            {
+                "id": "default-easy-expanded-134",
+                "text": "Clip"
+            },
+            {
+                "id": "default-easy-expanded-135",
+                "text": "Pin"
+            },
+            {
+                "id": "default-easy-expanded-136",
+                "text": "Needle"
+            },
+            {
+                "id": "default-easy-expanded-137",
+                "text": "Thread"
+            },
+            {
+                "id": "default-easy-expanded-138",
+                "text": "Button"
+            },
+            {
+                "id": "default-easy-expanded-139",
+                "text": "Zipper"
+            },
+            {
+                "id": "default-easy-expanded-140",
+                "text": "Pocket"
+            },
+            {
+                "id": "default-easy-expanded-141",
+                "text": "Collar"
+            },
+            {
+                "id": "default-easy-expanded-142",
+                "text": "Sleeve"
+            },
+            {
+                "id": "default-easy-expanded-143",
+                "text": "Cuff"
+            },
+            {
+                "id": "default-easy-expanded-144",
+                "text": "Hem"
+            },
+            {
+                "id": "default-easy-expanded-145",
+                "text": "Seam"
+            },
+            {
+                "id": "default-easy-expanded-146",
+                "text": "Pattern"
+            },
+            {
+                "id": "default-easy-expanded-147",
+                "text": "Stripe"
+            },
+            {
+                "id": "default-easy-expanded-148",
+                "text": "Dot"
+            },
+            {
+                "id": "default-easy-expanded-149",
+                "text": "Plaid"
+            },
+            {
+                "id": "default-easy-expanded-150",
+                "text": "Check"
+            },
+            {
+                "id": "default-easy-expanded-151",
+                "text": "Solid"
+            },
+            {
+                "id": "default-easy-expanded-152",
+                "text": "Color"
+            },
+            {
+                "id": "default-easy-expanded-153",
+                "text": "Red"
+            },
+            {
+                "id": "default-easy-expanded-154",
+                "text": "Blue"
+            },
+            {
+                "id": "default-easy-expanded-155",
+                "text": "Green"
+            },
+            {
+                "id": "default-easy-expanded-156",
+                "text": "Yellow"
+            },
+            {
+                "id": "default-easy-expanded-158",
+                "text": "Purple"
+            },
+            {
+                "id": "default-easy-expanded-159",
+                "text": "Pink"
+            },
+            {
+                "id": "default-easy-expanded-160",
+                "text": "Brown"
+            },
+            {
+                "id": "default-easy-expanded-161",
+                "text": "Black"
+            },
+            {
+                "id": "default-easy-expanded-162",
+                "text": "White"
+            },
+            {
+                "id": "default-easy-expanded-163",
+                "text": "Gray"
+            },
+            {
+                "id": "default-easy-expanded-164",
+                "text": "Silver"
+            },
+            {
+                "id": "default-easy-expanded-165",
+                "text": "Gold"
+            },
+            {
+                "id": "default-easy-expanded-166",
+                "text": "Circle"
+            },
+            {
+                "id": "default-easy-expanded-167",
+                "text": "Square"
+            },
+            {
+                "id": "default-easy-expanded-168",
+                "text": "Triangle"
+            },
+            {
+                "id": "default-easy-expanded-169",
+                "text": "Rectangle"
+            },
+            {
+                "id": "default-easy-expanded-170",
+                "text": "Oval"
+            },
+            {
+                "id": "default-easy-expanded-171",
+                "text": "Star"
+            },
+            {
+                "id": "default-easy-expanded-172",
+                "text": "Heart"
+            },
+            {
+                "id": "default-easy-expanded-173",
+                "text": "Diamond"
+            },
+            {
+                "id": "default-easy-expanded-174",
+                "text": "Cross"
+            },
+            {
+                "id": "default-easy-expanded-175",
+                "text": "Arrow"
+            },
+            {
+                "id": "default-easy-expanded-176",
+                "text": "Line"
+            },
+            {
+                "id": "default-easy-expanded-177",
+                "text": "Shape"
+            },
+            {
+                "id": "default-easy-expanded-178",
+                "text": "Size"
+            },
+            {
+                "id": "default-easy-expanded-179",
+                "text": "Big"
+            },
+            {
+                "id": "default-easy-expanded-180",
+                "text": "Small"
+            },
+            {
+                "id": "default-easy-expanded-181",
+                "text": "Tall"
+            },
+            {
+                "id": "default-easy-expanded-182",
+                "text": "Short"
+            },
+            {
+                "id": "default-easy-expanded-183",
+                "text": "Long"
+            },
+            {
+                "id": "default-easy-expanded-184",
+                "text": "Thick"
+            },
+            {
+                "id": "default-easy-expanded-185",
+                "text": "Thin"
+            },
+            {
+                "id": "default-easy-expanded-186",
+                "text": "Wide"
+            },
+            {
+                "id": "default-easy-expanded-187",
+                "text": "Narrow"
+            },
+            {
+                "id": "default-easy-expanded-188",
+                "text": "Heavy"
+            },
+            {
+                "id": "default-easy-expanded-189",
+                "text": "Light"
+            },
+            {
+                "id": "default-easy-expanded-190",
+                "text": "Hot"
+            },
+            {
+                "id": "default-easy-expanded-191",
+                "text": "Cold"
+            },
+            {
+                "id": "default-easy-expanded-192",
+                "text": "Warm"
+            },
+            {
+                "id": "default-easy-expanded-193",
+                "text": "Cool"
+            },
+            {
+                "id": "default-easy-expanded-194",
+                "text": "Wet"
+            },
+            {
+                "id": "default-easy-expanded-195",
+                "text": "Dry"
+            },
+            {
+                "id": "default-easy-expanded-196",
+                "text": "Soft"
+            },
+            {
+                "id": "default-easy-expanded-197",
+                "text": "Hard"
+            },
+            {
+                "id": "default-easy-expanded-198",
+                "text": "Smooth"
+            },
+            {
+                "id": "default-easy-expanded-199",
+                "text": "Rough"
+            },
+            {
+                "id": "default-easy-expanded-200",
+                "text": "Sharp"
+            },
+            {
+                "id": "default-easy-expanded-201",
+                "text": "Dull"
+            },
+            {
+                "id": "default-easy-expanded-202",
+                "text": "Clean"
+            },
+            {
+                "id": "default-easy-expanded-203",
+                "text": "Dirty"
+            },
+            {
+                "id": "default-easy-expanded-204",
+                "text": "Sweet"
+            },
+            {
+                "id": "default-easy-expanded-205",
+                "text": "Sour"
+            },
+            {
+                "id": "default-easy-expanded-206",
+                "text": "Salty"
+            },
+            {
+                "id": "default-easy-expanded-207",
+                "text": "Bitter"
+            },
+            {
+                "id": "default-easy-expanded-208",
+                "text": "Spicy"
+            },
+            {
+                "id": "default-easy-expanded-209",
+                "text": "Tasty"
+            },
+            {
+                "id": "default-easy-expanded-210",
+                "text": "Yummy"
+            },
+            {
+                "id": "default-easy-expanded-211",
+                "text": "Good"
+            },
+            {
+                "id": "default-easy-expanded-212",
+                "text": "Bad"
+            },
+            {
+                "id": "default-easy-expanded-213",
+                "text": "Happy"
+            },
+            {
+                "id": "default-easy-expanded-214",
+                "text": "Sad"
+            },
+            {
+                "id": "default-easy-expanded-215",
+                "text": "Angry"
+            },
+            {
+                "id": "default-easy-expanded-216",
+                "text": "Scared"
+            },
+            {
+                "id": "default-easy-expanded-217",
+                "text": "Surprised"
+            },
+            {
+                "id": "default-easy-expanded-218",
+                "text": "Excited"
+            },
+            {
+                "id": "default-easy-expanded-219",
+                "text": "Tired"
+            },
+            {
+                "id": "default-easy-expanded-220",
+                "text": "Sleepy"
+            },
+            {
+                "id": "default-easy-expanded-221",
+                "text": "Awake"
+            },
+            {
+                "id": "default-easy-expanded-222",
+                "text": "Hungry"
+            },
+            {
+                "id": "default-easy-expanded-223",
+                "text": "Thirsty"
+            },
+            {
+                "id": "default-easy-expanded-224",
+                "text": "Full"
+            },
+            {
+                "id": "default-easy-expanded-225",
+                "text": "Empty"
+            },
+            {
+                "id": "default-easy-expanded-226",
+                "text": "Fast"
+            },
+            {
+                "id": "default-easy-expanded-227",
+                "text": "Slow"
+            },
+            {
+                "id": "default-easy-expanded-228",
+                "text": "Loud"
+            },
+            {
+                "id": "default-easy-expanded-229",
+                "text": "Quiet"
+            },
+            {
+                "id": "default-easy-expanded-230",
+                "text": "High"
+            },
+            {
+                "id": "default-easy-expanded-231",
+                "text": "Low"
+            },
+            {
+                "id": "default-easy-expanded-232",
+                "text": "Up"
+            },
+            {
+                "id": "default-easy-expanded-233",
+                "text": "Down"
+            },
+            {
+                "id": "default-easy-expanded-234",
+                "text": "In"
+            },
+            {
+                "id": "default-easy-expanded-235",
+                "text": "Out"
+            },
+            {
+                "id": "default-easy-expanded-236",
+                "text": "On"
+            },
+            {
+                "id": "default-easy-expanded-237",
+                "text": "Off"
+            },
+            {
+                "id": "default-easy-expanded-238",
+                "text": "Over"
+            },
+            {
+                "id": "default-easy-expanded-239",
+                "text": "Under"
+            },
+            {
+                "id": "default-easy-expanded-240",
+                "text": "Front"
+            },
+            {
+                "id": "default-easy-expanded-242",
+                "text": "Left"
+            },
+            {
+                "id": "default-easy-expanded-243",
+                "text": "Right"
+            },
+            {
+                "id": "default-easy-expanded-244",
+                "text": "Here"
+            },
+            {
+                "id": "default-easy-expanded-245",
+                "text": "There"
+            },
+            {
+                "id": "default-easy-expanded-246",
+                "text": "Near"
+            },
+            {
+                "id": "default-easy-expanded-247",
+                "text": "Far"
+            },
+            {
+                "id": "default-easy-expanded-248",
+                "text": "Now"
+            },
+            {
+                "id": "default-easy-expanded-249",
+                "text": "Then"
+            },
+            {
+                "id": "default-easy-expanded-250",
+                "text": "Always"
+            },
+            {
+                "id": "default-easy-expanded-251",
+                "text": "Never"
+            },
+            {
+                "id": "default-easy-expanded-252",
+                "text": "Sometimes"
+            },
+            {
+                "id": "default-easy-expanded-253",
+                "text": "Often"
+            },
+            {
+                "id": "default-easy-expanded-254",
+                "text": "Rarely"
+            },
+            {
+                "id": "default-easy-expanded-255",
+                "text": "Yes"
+            },
+            {
+                "id": "default-easy-expanded-256",
+                "text": "No"
+            },
+            {
+                "id": "default-easy-expanded-257",
+                "text": "Maybe"
+            }
+        ],
+        "type": "default",
+        "color": "mint",
+        "symbolName": "face.smiling.fill"
+    }
+]

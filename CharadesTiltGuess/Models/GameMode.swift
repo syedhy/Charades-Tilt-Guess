@@ -5,8 +5,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case pasteAndPlay
     case mixAndMatch
     case infinite
-    case hotPotato
-    case challengeCards
     case wikipedia
     case kids
     case teamVsTeam
@@ -25,10 +23,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Mix & Match"
         case .infinite:
             return "Infinite"
-        case .hotPotato:
-            return "Hot Potato"
-        case .challengeCards:
-            return "Challenge Cards"
         case .wikipedia:
             return "Wikipedia Mode"
         case .kids:
@@ -41,23 +35,19 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     var description: String {
         switch self {
         case .normal:
-            return "Classic timed charades with a deck you choose."
+            return "Classic timed charades with a deck you choose"
         case .pasteAndPlay:
-            return "Paste any list and jump into a round in seconds."
+            return "Paste any list and jump into a round in seconds"
         case .mixAndMatch:
-            return "Play a random mix of cards from your decks."
+            return "Play a random mix of cards from your decks"
         case .infinite:
-            return "No timer. Play until the deck is done."
-        case .hotPotato:
-            return "Pass the phone around before the hidden timer explodes."
-        case .challengeCards:
-            return "Classic play, but surprise rules make some cards harder."
+            return "No timer! Play until the deck is done"
         case .wikipedia:
-            return "Easy single-word prompts from Wikipedia."
+            return "Random words from Wikipedia"
         case .kids:
-            return "Picture cards for the little ones."
+            return "Picture cards for the little ones"
         case .teamVsTeam:
-            return "Divide into two teams and compete for the highest score."
+            return "Divide into two teams and compete for the highest score"
         }
     }
 
@@ -71,10 +61,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "A fresh mix of cards"
         case .infinite:
             return "Finish every card"
-        case .hotPotato:
-            return "High-pressure group chaos"
-        case .challengeCards:
-            return "Sillier acting prompts"
         case .wikipedia:
             return "Fresh words"
         case .kids:
@@ -94,10 +80,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "square.stack.3d.up.fill"
         case .infinite:
             return "infinity"
-        case .hotPotato:
-            return "timer"
-        case .challengeCards:
-            return "sparkles"
         case .wikipedia:
             return "globe"
         case .kids:
@@ -117,10 +99,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.orange
         case .infinite:
             return AppTheme.Colors.blue
-        case .hotPotato:
-            return AppTheme.Colors.coral
-        case .challengeCards:
-            return AppTheme.Colors.orange
         case .wikipedia:
             return Color(red: 0.66, green: 0.58, blue: 0.86)
         case .kids:
@@ -132,7 +110,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var usesDeckSelection: Bool {
         switch self {
-        case .normal, .infinite, .hotPotato, .challengeCards, .kids, .teamVsTeam:
+        case .normal, .infinite, .kids, .teamVsTeam:
             return true
         case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
@@ -141,9 +119,9 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .mixAndMatch, .challengeCards, .wikipedia, .kids, .teamVsTeam:
+        case .normal, .pasteAndPlay, .mixAndMatch, .wikipedia, .kids, .teamVsTeam:
             return true
-        case .infinite, .hotPotato:
+        case .infinite:
             return false
         }
     }
@@ -194,28 +172,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "The round ends automatically when every card has appeared."
                 ],
                 scoring: "Correct cards score one point. Passed cards are tracked but do not score."
-            )
-        case .hotPotato:
-            return ModeInstruction(
-                title: "Hidden timer",
-                summary: "Players pass the phone around. Whoever holds it when time expires loses.",
-                rules: [
-                    "Choose a deck, then start without knowing the timer length.",
-                    "After each guess or pass, hand the phone to the next player.",
-                    "When Time Up appears, the current holder loses."
-                ],
-                scoring: "Correct and passed cards are tracked, but the main outcome is survival."
-            )
-        case .challengeCards:
-            return ModeInstruction(
-                title: "Surprise rules",
-                summary: "Some cards carry a challenge like silent acting or one-word clues.",
-                rules: [
-                    "Play like Normal mode.",
-                    "When a challenge banner appears, follow that rule for the current card.",
-                    "New challenges can be added without changing the game loop."
-                ],
-                scoring: "Correct challenge cards score the same as normal cards."
             )
         case .wikipedia:
             return ModeInstruction(

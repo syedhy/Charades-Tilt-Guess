@@ -1,0 +1,1014 @@
+[
+    {
+        "id": "kids-tools",
+        "name": "Tools",
+        "description": "A fun deck about tools for kids!",
+        "cards": [
+            {
+                "id": "kids-tools-expanded-000",
+                "text": "Hammer"
+            },
+            {
+                "id": "kids-tools-expanded-001",
+                "text": "Screwdriver"
+            },
+            {
+                "id": "kids-tools-expanded-002",
+                "text": "Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-003",
+                "text": "Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-004",
+                "text": "Saw"
+            },
+            {
+                "id": "kids-tools-expanded-005",
+                "text": "Drill"
+            },
+            {
+                "id": "kids-tools-expanded-006",
+                "text": "Tape Measure"
+            },
+            {
+                "id": "kids-tools-expanded-007",
+                "text": "Level"
+            },
+            {
+                "id": "kids-tools-expanded-008",
+                "text": "Square"
+            },
+            {
+                "id": "kids-tools-expanded-009",
+                "text": "Chisel"
+            },
+            {
+                "id": "kids-tools-expanded-010",
+                "text": "File"
+            },
+            {
+                "id": "kids-tools-expanded-011",
+                "text": "Rasp"
+            },
+            {
+                "id": "kids-tools-expanded-012",
+                "text": "Plane"
+            },
+            {
+                "id": "kids-tools-expanded-013",
+                "text": "Clamp"
+            },
+            {
+                "id": "kids-tools-expanded-014",
+                "text": "Vise"
+            },
+            {
+                "id": "kids-tools-expanded-015",
+                "text": "Anvil"
+            },
+            {
+                "id": "kids-tools-expanded-016",
+                "text": "Crowbar"
+            },
+            {
+                "id": "kids-tools-expanded-017",
+                "text": "Pry Bar"
+            },
+            {
+                "id": "kids-tools-expanded-018",
+                "text": "Nail Puller"
+            },
+            {
+                "id": "kids-tools-expanded-019",
+                "text": "Mallet"
+            },
+            {
+                "id": "kids-tools-expanded-020",
+                "text": "Sledgehammer"
+            },
+            {
+                "id": "kids-tools-expanded-021",
+                "text": "Axe"
+            },
+            {
+                "id": "kids-tools-expanded-022",
+                "text": "Hatchet"
+            },
+            {
+                "id": "kids-tools-expanded-023",
+                "text": "Machete"
+            },
+            {
+                "id": "kids-tools-expanded-024",
+                "text": "Knife"
+            },
+            {
+                "id": "kids-tools-expanded-025",
+                "text": "Scissors"
+            },
+            {
+                "id": "kids-tools-expanded-026",
+                "text": "Shears"
+            },
+            {
+                "id": "kids-tools-expanded-027",
+                "text": "Snips"
+            },
+            {
+                "id": "kids-tools-expanded-028",
+                "text": "Bolt Cutters"
+            },
+            {
+                "id": "kids-tools-expanded-029",
+                "text": "Wire Strippers"
+            },
+            {
+                "id": "kids-tools-expanded-030",
+                "text": "Crimpers"
+            },
+            {
+                "id": "kids-tools-expanded-031",
+                "text": "Soldering Iron"
+            },
+            {
+                "id": "kids-tools-expanded-032",
+                "text": "Welder"
+            },
+            {
+                "id": "kids-tools-expanded-033",
+                "text": "Torch"
+            },
+            {
+                "id": "kids-tools-expanded-034",
+                "text": "Heat Gun"
+            },
+            {
+                "id": "kids-tools-expanded-035",
+                "text": "Glue Gun"
+            },
+            {
+                "id": "kids-tools-expanded-036",
+                "text": "Stapler"
+            },
+            {
+                "id": "kids-tools-expanded-037",
+                "text": "Nail Gun"
+            },
+            {
+                "id": "kids-tools-expanded-038",
+                "text": "Riveter"
+            },
+            {
+                "id": "kids-tools-expanded-039",
+                "text": "Air Compressor"
+            },
+            {
+                "id": "kids-tools-expanded-040",
+                "text": "Generator"
+            },
+            {
+                "id": "kids-tools-expanded-041",
+                "text": "Pump"
+            },
+            {
+                "id": "kids-tools-expanded-042",
+                "text": "Vacuum"
+            },
+            {
+                "id": "kids-tools-expanded-043",
+                "text": "Blower"
+            },
+            {
+                "id": "kids-tools-expanded-044",
+                "text": "Pressure Washer"
+            },
+            {
+                "id": "kids-tools-expanded-045",
+                "text": "Lawn Mower"
+            },
+            {
+                "id": "kids-tools-expanded-046",
+                "text": "Weed Trimmer"
+            },
+            {
+                "id": "kids-tools-expanded-047",
+                "text": "Chainsaw"
+            },
+            {
+                "id": "kids-tools-expanded-048",
+                "text": "Leaf Blower"
+            },
+            {
+                "id": "kids-tools-expanded-049",
+                "text": "Snow Blower"
+            },
+            {
+                "id": "kids-tools-expanded-050",
+                "text": "Tiller"
+            },
+            {
+                "id": "kids-tools-expanded-051",
+                "text": "Cultivator"
+            },
+            {
+                "id": "kids-tools-expanded-052",
+                "text": "Edger"
+            },
+            {
+                "id": "kids-tools-expanded-053",
+                "text": "Hedge Trimmer"
+            },
+            {
+                "id": "kids-tools-expanded-054",
+                "text": "Pruners"
+            },
+            {
+                "id": "kids-tools-expanded-055",
+                "text": "Loppers"
+            },
+            {
+                "id": "kids-tools-expanded-056",
+                "text": "Pole Saw"
+            },
+            {
+                "id": "kids-tools-expanded-057",
+                "text": "Rake"
+            },
+            {
+                "id": "kids-tools-expanded-058",
+                "text": "Hoe"
+            },
+            {
+                "id": "kids-tools-expanded-059",
+                "text": "Shovel"
+            },
+            {
+                "id": "kids-tools-expanded-060",
+                "text": "Spade"
+            },
+            {
+                "id": "kids-tools-expanded-061",
+                "text": "Pitchfork"
+            },
+            {
+                "id": "kids-tools-expanded-062",
+                "text": "Trowel"
+            },
+            {
+                "id": "kids-tools-expanded-063",
+                "text": "Wheelbarrow"
+            },
+            {
+                "id": "kids-tools-expanded-064",
+                "text": "Cart"
+            },
+            {
+                "id": "kids-tools-expanded-065",
+                "text": "Hand Truck"
+            },
+            {
+                "id": "kids-tools-expanded-066",
+                "text": "Dolly"
+            },
+            {
+                "id": "kids-tools-expanded-067",
+                "text": "Ladder"
+            },
+            {
+                "id": "kids-tools-expanded-068",
+                "text": "Scaffolding"
+            },
+            {
+                "id": "kids-tools-expanded-069",
+                "text": "Sawhorse"
+            },
+            {
+                "id": "kids-tools-expanded-070",
+                "text": "Workbench"
+            },
+            {
+                "id": "kids-tools-expanded-071",
+                "text": "Toolbox"
+            },
+            {
+                "id": "kids-tools-expanded-072",
+                "text": "Tool Bag"
+            },
+            {
+                "id": "kids-tools-expanded-073",
+                "text": "Tool Belt"
+            },
+            {
+                "id": "kids-tools-expanded-074",
+                "text": "Bucket"
+            },
+            {
+                "id": "kids-tools-expanded-075",
+                "text": "Mop"
+            },
+            {
+                "id": "kids-tools-expanded-076",
+                "text": "Broom"
+            },
+            {
+                "id": "kids-tools-expanded-077",
+                "text": "Dustpan"
+            },
+            {
+                "id": "kids-tools-expanded-078",
+                "text": "Sponge"
+            },
+            {
+                "id": "kids-tools-expanded-079",
+                "text": "Brush"
+            },
+            {
+                "id": "kids-tools-expanded-080",
+                "text": "Squeegee"
+            },
+            {
+                "id": "kids-tools-expanded-081",
+                "text": "Plunger"
+            },
+            {
+                "id": "kids-tools-expanded-082",
+                "text": "Snake"
+            },
+            {
+                "id": "kids-tools-expanded-083",
+                "text": "Auger"
+            },
+            {
+                "id": "kids-tools-expanded-084",
+                "text": "Pipe Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-085",
+                "text": "Basin Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-086",
+                "text": "Flaring Tool"
+            },
+            {
+                "id": "kids-tools-expanded-087",
+                "text": "Tube Cutter"
+            },
+            {
+                "id": "kids-tools-expanded-088",
+                "text": "Bender"
+            },
+            {
+                "id": "kids-tools-expanded-089",
+                "text": "Threading Tool"
+            },
+            {
+                "id": "kids-tools-expanded-090",
+                "text": "Soldering Kit"
+            },
+            {
+                "id": "kids-tools-expanded-091",
+                "text": "Multimeter"
+            },
+            {
+                "id": "kids-tools-expanded-092",
+                "text": "Voltage Tester"
+            },
+            {
+                "id": "kids-tools-expanded-093",
+                "text": "Circuit Tester"
+            },
+            {
+                "id": "kids-tools-expanded-094",
+                "text": "Wire Nuts"
+            },
+            {
+                "id": "kids-tools-expanded-095",
+                "text": "Electrical Tape"
+            },
+            {
+                "id": "kids-tools-expanded-096",
+                "text": "Zip Ties"
+            },
+            {
+                "id": "kids-tools-expanded-097",
+                "text": "Duct Tape"
+            },
+            {
+                "id": "kids-tools-expanded-098",
+                "text": "Masking Tape"
+            },
+            {
+                "id": "kids-tools-expanded-099",
+                "text": "Painter's Tape"
+            },
+            {
+                "id": "kids-tools-expanded-100",
+                "text": "Packing Tape"
+            },
+            {
+                "id": "kids-tools-expanded-101",
+                "text": "Glue"
+            },
+            {
+                "id": "kids-tools-expanded-102",
+                "text": "Epoxy"
+            },
+            {
+                "id": "kids-tools-expanded-103",
+                "text": "Caulk"
+            },
+            {
+                "id": "kids-tools-expanded-104",
+                "text": "Putty"
+            },
+            {
+                "id": "kids-tools-expanded-105",
+                "text": "Spackle"
+            },
+            {
+                "id": "kids-tools-expanded-106",
+                "text": "Sandpaper"
+            },
+            {
+                "id": "kids-tools-expanded-107",
+                "text": "Steel Wool"
+            },
+            {
+                "id": "kids-tools-expanded-108",
+                "text": "Wire Brush"
+            },
+            {
+                "id": "kids-tools-expanded-109",
+                "text": "Scraper"
+            },
+            {
+                "id": "kids-tools-expanded-110",
+                "text": "Putty Knife"
+            },
+            {
+                "id": "kids-tools-expanded-112",
+                "text": "Float"
+            },
+            {
+                "id": "kids-tools-expanded-114",
+                "text": "Groover"
+            },
+            {
+                "id": "kids-tools-expanded-115",
+                "text": "Screed"
+            },
+            {
+                "id": "kids-tools-expanded-116",
+                "text": "Darby"
+            },
+            {
+                "id": "kids-tools-expanded-117",
+                "text": "Bull Float"
+            },
+            {
+                "id": "kids-tools-expanded-118",
+                "text": "Tamp"
+            },
+            {
+                "id": "kids-tools-expanded-120",
+                "text": "Mixer"
+            },
+            {
+                "id": "kids-tools-expanded-124",
+                "text": "Pickaxe"
+            },
+            {
+                "id": "kids-tools-expanded-125",
+                "text": "Mattock"
+            },
+            {
+                "id": "kids-tools-expanded-126",
+                "text": "Post Hole Digger"
+            },
+            {
+                "id": "kids-tools-expanded-127",
+                "text": "Tamper"
+            },
+            {
+                "id": "kids-tools-expanded-129",
+                "text": "Wedge"
+            },
+            {
+                "id": "kids-tools-expanded-130",
+                "text": "Maul"
+            },
+            {
+                "id": "kids-tools-expanded-131",
+                "text": "Splitting Axe"
+            },
+            {
+                "id": "kids-tools-expanded-132",
+                "text": "Broadaxe"
+            },
+            {
+                "id": "kids-tools-expanded-133",
+                "text": "Adze"
+            },
+            {
+                "id": "kids-tools-expanded-134",
+                "text": "Drawknife"
+            },
+            {
+                "id": "kids-tools-expanded-135",
+                "text": "Spokeshave"
+            },
+            {
+                "id": "kids-tools-expanded-137",
+                "text": "Gouge"
+            },
+            {
+                "id": "kids-tools-expanded-139",
+                "text": "Carving Knife"
+            },
+            {
+                "id": "kids-tools-expanded-140",
+                "text": "Whittling Knife"
+            },
+            {
+                "id": "kids-tools-expanded-141",
+                "text": "Jackknife"
+            },
+            {
+                "id": "kids-tools-expanded-142",
+                "text": "Pocket Knife"
+            },
+            {
+                "id": "kids-tools-expanded-143",
+                "text": "Swiss Army Knife"
+            },
+            {
+                "id": "kids-tools-expanded-144",
+                "text": "Multi-tool"
+            },
+            {
+                "id": "kids-tools-expanded-146",
+                "text": "Needle-nose Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-147",
+                "text": "Linesman Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-148",
+                "text": "Slip-joint Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-149",
+                "text": "Locking Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-150",
+                "text": "Water Pump Pliers"
+            },
+            {
+                "id": "kids-tools-expanded-151",
+                "text": "Diagonal Cutters"
+            },
+            {
+                "id": "kids-tools-expanded-152",
+                "text": "End Nippers"
+            },
+            {
+                "id": "kids-tools-expanded-155",
+                "text": "Adjustable Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-157",
+                "text": "Monkey Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-158",
+                "text": "Spanner"
+            },
+            {
+                "id": "kids-tools-expanded-159",
+                "text": "Socket Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-160",
+                "text": "Ratchet"
+            },
+            {
+                "id": "kids-tools-expanded-161",
+                "text": "Socket"
+            },
+            {
+                "id": "kids-tools-expanded-162",
+                "text": "Extension"
+            },
+            {
+                "id": "kids-tools-expanded-163",
+                "text": "Universal Joint"
+            },
+            {
+                "id": "kids-tools-expanded-164",
+                "text": "Breaker Bar"
+            },
+            {
+                "id": "kids-tools-expanded-165",
+                "text": "Torque Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-166",
+                "text": "Hex Key"
+            },
+            {
+                "id": "kids-tools-expanded-167",
+                "text": "Allen Wrench"
+            },
+            {
+                "id": "kids-tools-expanded-168",
+                "text": "Torx Key"
+            },
+            {
+                "id": "kids-tools-expanded-170",
+                "text": "Phillips"
+            },
+            {
+                "id": "kids-tools-expanded-171",
+                "text": "Flathead"
+            },
+            {
+                "id": "kids-tools-expanded-172",
+                "text": "Robertson"
+            },
+            {
+                "id": "kids-tools-expanded-173",
+                "text": "Torx"
+            },
+            {
+                "id": "kids-tools-expanded-174",
+                "text": "Hex"
+            },
+            {
+                "id": "kids-tools-expanded-175",
+                "text": "Jeweler's Screwdriver"
+            },
+            {
+                "id": "kids-tools-expanded-176",
+                "text": "Precision Screwdriver"
+            },
+            {
+                "id": "kids-tools-expanded-178",
+                "text": "Impact Driver"
+            },
+            {
+                "id": "kids-tools-expanded-179",
+                "text": "Hammer Drill"
+            },
+            {
+                "id": "kids-tools-expanded-180",
+                "text": "Rotary Hammer"
+            },
+            {
+                "id": "kids-tools-expanded-181",
+                "text": "Drill Press"
+            },
+            {
+                "id": "kids-tools-expanded-182",
+                "text": "Bit"
+            },
+            {
+                "id": "kids-tools-expanded-183",
+                "text": "Wood Bit"
+            },
+            {
+                "id": "kids-tools-expanded-184",
+                "text": "Masonry Bit"
+            },
+            {
+                "id": "kids-tools-expanded-185",
+                "text": "Metal Bit"
+            },
+            {
+                "id": "kids-tools-expanded-186",
+                "text": "Spade Bit"
+            },
+            {
+                "id": "kids-tools-expanded-187",
+                "text": "Auger Bit"
+            },
+            {
+                "id": "kids-tools-expanded-188",
+                "text": "Hole Saw"
+            },
+            {
+                "id": "kids-tools-expanded-189",
+                "text": "Countersink"
+            },
+            {
+                "id": "kids-tools-expanded-190",
+                "text": "Step Bit"
+            },
+            {
+                "id": "kids-tools-expanded-191",
+                "text": "Screwdriver Bit"
+            },
+            {
+                "id": "kids-tools-expanded-192",
+                "text": "Router"
+            },
+            {
+                "id": "kids-tools-expanded-194",
+                "text": "Table Saw"
+            },
+            {
+                "id": "kids-tools-expanded-195",
+                "text": "Circular Saw"
+            },
+            {
+                "id": "kids-tools-expanded-196",
+                "text": "Miter Saw"
+            },
+            {
+                "id": "kids-tools-expanded-197",
+                "text": "Jigsaw"
+            },
+            {
+                "id": "kids-tools-expanded-198",
+                "text": "Band Saw"
+            },
+            {
+                "id": "kids-tools-expanded-199",
+                "text": "Scroll Saw"
+            },
+            {
+                "id": "kids-tools-expanded-200",
+                "text": "Reciprocating Saw"
+            },
+            {
+                "id": "kids-tools-expanded-201",
+                "text": "Panel Saw"
+            },
+            {
+                "id": "kids-tools-expanded-202",
+                "text": "Track Saw"
+            },
+            {
+                "id": "kids-tools-expanded-203",
+                "text": "Radial Arm Saw"
+            },
+            {
+                "id": "kids-tools-expanded-204",
+                "text": "Chop Saw"
+            },
+            {
+                "id": "kids-tools-expanded-205",
+                "text": "Tile Saw"
+            },
+            {
+                "id": "kids-tools-expanded-206",
+                "text": "Wet Saw"
+            },
+            {
+                "id": "kids-tools-expanded-207",
+                "text": "Concrete Saw"
+            },
+            {
+                "id": "kids-tools-expanded-210",
+                "text": "Hand Saw"
+            },
+            {
+                "id": "kids-tools-expanded-211",
+                "text": "Crosscut Saw"
+            },
+            {
+                "id": "kids-tools-expanded-212",
+                "text": "Rip Saw"
+            },
+            {
+                "id": "kids-tools-expanded-213",
+                "text": "Backsaw"
+            },
+            {
+                "id": "kids-tools-expanded-214",
+                "text": "Coping Saw"
+            },
+            {
+                "id": "kids-tools-expanded-215",
+                "text": "Hacksaw"
+            },
+            {
+                "id": "kids-tools-expanded-216",
+                "text": "Keyhole Saw"
+            },
+            {
+                "id": "kids-tools-expanded-217",
+                "text": "Bow Saw"
+            },
+            {
+                "id": "kids-tools-expanded-218",
+                "text": "Pruning Saw"
+            },
+            {
+                "id": "kids-tools-expanded-219",
+                "text": "Veneer Saw"
+            },
+            {
+                "id": "kids-tools-expanded-220",
+                "text": "Flush Cut Saw"
+            },
+            {
+                "id": "kids-tools-expanded-221",
+                "text": "Japanese Saw"
+            },
+            {
+                "id": "kids-tools-expanded-222",
+                "text": "Dovetail Saw"
+            },
+            {
+                "id": "kids-tools-expanded-223",
+                "text": "Tenon Saw"
+            },
+            {
+                "id": "kids-tools-expanded-224",
+                "text": "Gent's Saw"
+            },
+            {
+                "id": "kids-tools-expanded-225",
+                "text": "Fret Saw"
+            },
+            {
+                "id": "kids-tools-extra-226",
+                "text": "Needle"
+            },
+            {
+                "id": "kids-tools-extra-227",
+                "text": "Thread"
+            },
+            {
+                "id": "kids-tools-extra-228",
+                "text": "Thimble"
+            },
+            {
+                "id": "kids-tools-extra-229",
+                "text": "Measuring Tape"
+            },
+            {
+                "id": "kids-tools-extra-230",
+                "text": "Pins"
+            },
+            {
+                "id": "kids-tools-extra-231",
+                "text": "Pincushion"
+            },
+            {
+                "id": "kids-tools-extra-234",
+                "text": "Seam Ripper"
+            },
+            {
+                "id": "kids-tools-extra-235",
+                "text": "Iron"
+            },
+            {
+                "id": "kids-tools-extra-236",
+                "text": "Ironing Board"
+            },
+            {
+                "id": "kids-tools-extra-237",
+                "text": "Sewing Machine"
+            },
+            {
+                "id": "kids-tools-extra-238",
+                "text": "Serger"
+            },
+            {
+                "id": "kids-tools-extra-239",
+                "text": "Bobbin"
+            },
+            {
+                "id": "kids-tools-extra-240",
+                "text": "Spool"
+            },
+            {
+                "id": "kids-tools-extra-241",
+                "text": "Chalk"
+            },
+            {
+                "id": "kids-tools-extra-242",
+                "text": "Pattern"
+            },
+            {
+                "id": "kids-tools-extra-243",
+                "text": "Rotary Cutter"
+            },
+            {
+                "id": "kids-tools-extra-244",
+                "text": "Cutting Mat"
+            },
+            {
+                "id": "kids-tools-extra-245",
+                "text": "Ruler"
+            },
+            {
+                "id": "kids-tools-extra-246",
+                "text": "French Curve"
+            },
+            {
+                "id": "kids-tools-extra-247",
+                "text": "Tailor's Ham"
+            },
+            {
+                "id": "kids-tools-extra-248",
+                "text": "Tracing Wheel"
+            },
+            {
+                "id": "kids-tools-extra-249",
+                "text": "Tracing Paper"
+            },
+            {
+                "id": "kids-tools-extra-250",
+                "text": "Needle Threader"
+            },
+            {
+                "id": "kids-tools-extra-251",
+                "text": "Bodkin"
+            },
+            {
+                "id": "kids-tools-extra-252",
+                "text": "Awl"
+            },
+            {
+                "id": "kids-tools-extra-253",
+                "text": "Pinking Shears"
+            },
+            {
+                "id": "kids-tools-extra-254",
+                "text": "Applique Scissors"
+            },
+            {
+                "id": "kids-tools-extra-255",
+                "text": "Embroidery Hoop"
+            },
+            {
+                "id": "kids-tools-extra-256",
+                "text": "Embroidery Scissors"
+            },
+            {
+                "id": "kids-tools-extra-257",
+                "text": "Punch Needle"
+            },
+            {
+                "id": "kids-tools-extra-258",
+                "text": "Latch Hook"
+            },
+            {
+                "id": "kids-tools-extra-259",
+                "text": "Crochet Hook"
+            },
+            {
+                "id": "kids-tools-extra-260",
+                "text": "Knitting Needles"
+            },
+            {
+                "id": "kids-tools-extra-261",
+                "text": "Yarn"
+            },
+            {
+                "id": "kids-tools-extra-262",
+                "text": "Wool"
+            },
+            {
+                "id": "kids-tools-extra-263",
+                "text": "Cotton"
+            },
+            {
+                "id": "kids-tools-extra-264",
+                "text": "Silk"
+            },
+            {
+                "id": "kids-tools-extra-265",
+                "text": "Linen"
+            },
+            {
+                "id": "kids-tools-extra-266",
+                "text": "Polyester"
+            },
+            {
+                "id": "kids-tools-extra-267",
+                "text": "Nylon"
+            },
+            {
+                "id": "kids-tools-extra-268",
+                "text": "Rayon"
+            },
+            {
+                "id": "kids-tools-extra-269",
+                "text": "Spandex"
+            }
+        ],
+        "type": "default",
+        "color": "gray",
+        "symbolName": "hammer.fill",
+        "createdDate": 1718841600,
+        "updatedDate": 1718841600
+    }
+]

@@ -1,0 +1,1012 @@
+[
+    {
+        "id": "default-science",
+        "name": "Science",
+        "description": "Lab, space, and discovery prompts.",
+        "cards": [
+            {
+                "id": "default-science-expanded-000",
+                "text": "Atom"
+            },
+            {
+                "id": "default-science-expanded-001",
+                "text": "Molecule"
+            },
+            {
+                "id": "default-science-expanded-002",
+                "text": "Element"
+            },
+            {
+                "id": "default-science-expanded-003",
+                "text": "Compound"
+            },
+            {
+                "id": "default-science-expanded-004",
+                "text": "Proton"
+            },
+            {
+                "id": "default-science-expanded-005",
+                "text": "Neutron"
+            },
+            {
+                "id": "default-science-expanded-006",
+                "text": "Electron"
+            },
+            {
+                "id": "default-science-expanded-007",
+                "text": "Nucleus"
+            },
+            {
+                "id": "default-science-expanded-008",
+                "text": "Isotope"
+            },
+            {
+                "id": "default-science-expanded-009",
+                "text": "Ion"
+            },
+            {
+                "id": "default-science-expanded-010",
+                "text": "Plasma"
+            },
+            {
+                "id": "default-science-expanded-011",
+                "text": "Gas"
+            },
+            {
+                "id": "default-science-expanded-012",
+                "text": "Liquid"
+            },
+            {
+                "id": "default-science-expanded-013",
+                "text": "Solid"
+            },
+            {
+                "id": "default-science-expanded-014",
+                "text": "Gravity"
+            },
+            {
+                "id": "default-science-expanded-015",
+                "text": "Magnetism"
+            },
+            {
+                "id": "default-science-expanded-016",
+                "text": "Electricity"
+            },
+            {
+                "id": "default-science-expanded-017",
+                "text": "Energy"
+            },
+            {
+                "id": "default-science-expanded-018",
+                "text": "Force"
+            },
+            {
+                "id": "default-science-expanded-019",
+                "text": "Motion"
+            },
+            {
+                "id": "default-science-expanded-020",
+                "text": "Velocity"
+            },
+            {
+                "id": "default-science-expanded-021",
+                "text": "Acceleration"
+            },
+            {
+                "id": "default-science-expanded-022",
+                "text": "Friction"
+            },
+            {
+                "id": "default-science-expanded-023",
+                "text": "Inertia"
+            },
+            {
+                "id": "default-science-expanded-024",
+                "text": "Momentum"
+            },
+            {
+                "id": "default-science-expanded-025",
+                "text": "Work"
+            },
+            {
+                "id": "default-science-expanded-026",
+                "text": "Power"
+            },
+            {
+                "id": "default-science-expanded-027",
+                "text": "Heat"
+            },
+            {
+                "id": "default-science-expanded-028",
+                "text": "Temperature"
+            },
+            {
+                "id": "default-science-expanded-029",
+                "text": "Thermodynamics"
+            },
+            {
+                "id": "default-science-expanded-030",
+                "text": "Entropy"
+            },
+            {
+                "id": "default-science-expanded-031",
+                "text": "Radiation"
+            },
+            {
+                "id": "default-science-expanded-032",
+                "text": "Light"
+            },
+            {
+                "id": "default-science-expanded-033",
+                "text": "Sound"
+            },
+            {
+                "id": "default-science-expanded-034",
+                "text": "Wave"
+            },
+            {
+                "id": "default-science-expanded-035",
+                "text": "Frequency"
+            },
+            {
+                "id": "default-science-expanded-036",
+                "text": "Wavelength"
+            },
+            {
+                "id": "default-science-expanded-037",
+                "text": "Amplitude"
+            },
+            {
+                "id": "default-science-expanded-038",
+                "text": "Spectrum"
+            },
+            {
+                "id": "default-science-expanded-039",
+                "text": "Optics"
+            },
+            {
+                "id": "default-science-expanded-040",
+                "text": "Lens"
+            },
+            {
+                "id": "default-science-expanded-041",
+                "text": "Prism"
+            },
+            {
+                "id": "default-science-expanded-042",
+                "text": "Mirror"
+            },
+            {
+                "id": "default-science-expanded-043",
+                "text": "Reflection"
+            },
+            {
+                "id": "default-science-expanded-044",
+                "text": "Refraction"
+            },
+            {
+                "id": "default-science-expanded-045",
+                "text": "Diffraction"
+            },
+            {
+                "id": "default-science-expanded-046",
+                "text": "Interference"
+            },
+            {
+                "id": "default-science-expanded-047",
+                "text": "Polarization"
+            },
+            {
+                "id": "default-science-expanded-048",
+                "text": "Laser"
+            },
+            {
+                "id": "default-science-expanded-049",
+                "text": "Quantum"
+            },
+            {
+                "id": "default-science-expanded-050",
+                "text": "Relativity"
+            },
+            {
+                "id": "default-science-expanded-051",
+                "text": "String Theory"
+            },
+            {
+                "id": "default-science-expanded-052",
+                "text": "Black Hole"
+            },
+            {
+                "id": "default-science-expanded-053",
+                "text": "Galaxy"
+            },
+            {
+                "id": "default-science-expanded-054",
+                "text": "Star"
+            },
+            {
+                "id": "default-science-expanded-055",
+                "text": "Planet"
+            },
+            {
+                "id": "default-science-expanded-056",
+                "text": "Moon"
+            },
+            {
+                "id": "default-science-expanded-057",
+                "text": "Asteroid"
+            },
+            {
+                "id": "default-science-expanded-058",
+                "text": "Comet"
+            },
+            {
+                "id": "default-science-expanded-059",
+                "text": "Meteor"
+            },
+            {
+                "id": "default-science-expanded-060",
+                "text": "Orbit"
+            },
+            {
+                "id": "default-science-expanded-061",
+                "text": "Eclipse"
+            },
+            {
+                "id": "default-science-expanded-062",
+                "text": "Tide"
+            },
+            {
+                "id": "default-science-expanded-063",
+                "text": "Atmosphere"
+            },
+            {
+                "id": "default-science-expanded-064",
+                "text": "Weather"
+            },
+            {
+                "id": "default-science-expanded-065",
+                "text": "Climate"
+            },
+            {
+                "id": "default-science-expanded-066",
+                "text": "Cloud"
+            },
+            {
+                "id": "default-science-expanded-067",
+                "text": "Rain"
+            },
+            {
+                "id": "default-science-expanded-068",
+                "text": "Snow"
+            },
+            {
+                "id": "default-science-expanded-069",
+                "text": "Wind"
+            },
+            {
+                "id": "default-science-expanded-070",
+                "text": "Storm"
+            },
+            {
+                "id": "default-science-expanded-071",
+                "text": "Hurricane"
+            },
+            {
+                "id": "default-science-expanded-072",
+                "text": "Tornado"
+            },
+            {
+                "id": "default-science-expanded-073",
+                "text": "Earthquake"
+            },
+            {
+                "id": "default-science-expanded-074",
+                "text": "Volcano"
+            },
+            {
+                "id": "default-science-expanded-075",
+                "text": "Tectonic Plate"
+            },
+            {
+                "id": "default-science-expanded-076",
+                "text": "Mantle"
+            },
+            {
+                "id": "default-science-expanded-077",
+                "text": "Core"
+            },
+            {
+                "id": "default-science-expanded-078",
+                "text": "Crust"
+            },
+            {
+                "id": "default-science-expanded-079",
+                "text": "Mineral"
+            },
+            {
+                "id": "default-science-expanded-080",
+                "text": "Rock"
+            },
+            {
+                "id": "default-science-expanded-081",
+                "text": "Fossil"
+            },
+            {
+                "id": "default-science-expanded-082",
+                "text": "Dinosaur"
+            },
+            {
+                "id": "default-science-expanded-083",
+                "text": "Evolution"
+            },
+            {
+                "id": "default-science-expanded-084",
+                "text": "Natural Selection"
+            },
+            {
+                "id": "default-science-expanded-085",
+                "text": "Genetics"
+            },
+            {
+                "id": "default-science-expanded-086",
+                "text": "DNA"
+            },
+            {
+                "id": "default-science-expanded-087",
+                "text": "RNA"
+            },
+            {
+                "id": "default-science-expanded-088",
+                "text": "Gene"
+            },
+            {
+                "id": "default-science-expanded-089",
+                "text": "Chromosome"
+            },
+            {
+                "id": "default-science-expanded-090",
+                "text": "Mutation"
+            },
+            {
+                "id": "default-science-expanded-091",
+                "text": "Cell"
+            },
+            {
+                "id": "default-science-expanded-092",
+                "text": "Membrane"
+            },
+            {
+                "id": "default-science-expanded-093",
+                "text": "Cytoplasm"
+            },
+            {
+                "id": "default-science-expanded-094",
+                "text": "Organelle"
+            },
+            {
+                "id": "default-science-expanded-095",
+                "text": "Mitochondria"
+            },
+            {
+                "id": "default-science-expanded-097",
+                "text": "Ribosome"
+            },
+            {
+                "id": "default-science-expanded-098",
+                "text": "Endoplasmic Reticulum"
+            },
+            {
+                "id": "default-science-expanded-099",
+                "text": "Golgi Apparatus"
+            },
+            {
+                "id": "default-science-expanded-100",
+                "text": "Lysosome"
+            },
+            {
+                "id": "default-science-expanded-101",
+                "text": "Chloroplast"
+            },
+            {
+                "id": "default-science-expanded-102",
+                "text": "Vacuole"
+            },
+            {
+                "id": "default-science-expanded-103",
+                "text": "Tissue"
+            },
+            {
+                "id": "default-science-expanded-104",
+                "text": "Organ"
+            },
+            {
+                "id": "default-science-expanded-105",
+                "text": "System"
+            },
+            {
+                "id": "default-science-expanded-106",
+                "text": "Organism"
+            },
+            {
+                "id": "default-science-expanded-107",
+                "text": "Species"
+            },
+            {
+                "id": "default-science-expanded-108",
+                "text": "Population"
+            },
+            {
+                "id": "default-science-expanded-109",
+                "text": "Community"
+            },
+            {
+                "id": "default-science-expanded-110",
+                "text": "Ecosystem"
+            },
+            {
+                "id": "default-science-expanded-111",
+                "text": "Biome"
+            },
+            {
+                "id": "default-science-expanded-112",
+                "text": "Biosphere"
+            },
+            {
+                "id": "default-science-expanded-113",
+                "text": "Ecology"
+            },
+            {
+                "id": "default-science-expanded-114",
+                "text": "Environment"
+            },
+            {
+                "id": "default-science-expanded-115",
+                "text": "Pollution"
+            },
+            {
+                "id": "default-science-expanded-116",
+                "text": "Conservation"
+            },
+            {
+                "id": "default-science-expanded-117",
+                "text": "Sustainability"
+            },
+            {
+                "id": "default-science-expanded-118",
+                "text": "Renewable Energy"
+            },
+            {
+                "id": "default-science-expanded-119",
+                "text": "Solar Power"
+            },
+            {
+                "id": "default-science-expanded-120",
+                "text": "Wind Power"
+            },
+            {
+                "id": "default-science-expanded-121",
+                "text": "Hydroelectric Power"
+            },
+            {
+                "id": "default-science-expanded-122",
+                "text": "Geothermal Power"
+            },
+            {
+                "id": "default-science-expanded-123",
+                "text": "Nuclear Power"
+            },
+            {
+                "id": "default-science-expanded-124",
+                "text": "Fossil Fuel"
+            },
+            {
+                "id": "default-science-expanded-125",
+                "text": "Coal"
+            },
+            {
+                "id": "default-science-expanded-126",
+                "text": "Oil"
+            },
+            {
+                "id": "default-science-expanded-127",
+                "text": "Natural Gas"
+            },
+            {
+                "id": "default-science-expanded-128",
+                "text": "Carbon Footprint"
+            },
+            {
+                "id": "default-science-expanded-129",
+                "text": "Greenhouse Effect"
+            },
+            {
+                "id": "default-science-expanded-130",
+                "text": "Global Warming"
+            },
+            {
+                "id": "default-science-expanded-131",
+                "text": "Climate Change"
+            },
+            {
+                "id": "default-science-expanded-132",
+                "text": "Ozone Layer"
+            },
+            {
+                "id": "default-science-expanded-133",
+                "text": "Acid Rain"
+            },
+            {
+                "id": "default-science-expanded-134",
+                "text": "Deforestation"
+            },
+            {
+                "id": "default-science-expanded-135",
+                "text": "Desertification"
+            },
+            {
+                "id": "default-science-expanded-136",
+                "text": "Biodiversity"
+            },
+            {
+                "id": "default-science-expanded-137",
+                "text": "Extinction"
+            },
+            {
+                "id": "default-science-expanded-138",
+                "text": "Endangered Species"
+            },
+            {
+                "id": "default-science-expanded-139",
+                "text": "Habitat"
+            },
+            {
+                "id": "default-science-expanded-140",
+                "text": "Niche"
+            },
+            {
+                "id": "default-science-expanded-141",
+                "text": "Food Chain"
+            },
+            {
+                "id": "default-science-expanded-142",
+                "text": "Food Web"
+            },
+            {
+                "id": "default-science-expanded-143",
+                "text": "Producer"
+            },
+            {
+                "id": "default-science-expanded-144",
+                "text": "Consumer"
+            },
+            {
+                "id": "default-science-expanded-145",
+                "text": "Decomposer"
+            },
+            {
+                "id": "default-science-expanded-146",
+                "text": "Herbivore"
+            },
+            {
+                "id": "default-science-expanded-147",
+                "text": "Carnivore"
+            },
+            {
+                "id": "default-science-expanded-148",
+                "text": "Omnivore"
+            },
+            {
+                "id": "default-science-expanded-149",
+                "text": "Predator"
+            },
+            {
+                "id": "default-science-expanded-150",
+                "text": "Prey"
+            },
+            {
+                "id": "default-science-expanded-151",
+                "text": "Parasite"
+            },
+            {
+                "id": "default-science-expanded-152",
+                "text": "Host"
+            },
+            {
+                "id": "default-science-expanded-153",
+                "text": "Symbiosis"
+            },
+            {
+                "id": "default-science-expanded-154",
+                "text": "Mutualism"
+            },
+            {
+                "id": "default-science-expanded-155",
+                "text": "Commensalism"
+            },
+            {
+                "id": "default-science-expanded-156",
+                "text": "Parasitism"
+            },
+            {
+                "id": "default-science-expanded-157",
+                "text": "Photosynthesis"
+            },
+            {
+                "id": "default-science-expanded-158",
+                "text": "Respiration"
+            },
+            {
+                "id": "default-science-expanded-159",
+                "text": "Transpiration"
+            },
+            {
+                "id": "default-science-expanded-160",
+                "text": "Evaporation"
+            },
+            {
+                "id": "default-science-expanded-161",
+                "text": "Condensation"
+            },
+            {
+                "id": "default-science-expanded-162",
+                "text": "Precipitation"
+            },
+            {
+                "id": "default-science-expanded-163",
+                "text": "Infiltration"
+            },
+            {
+                "id": "default-science-expanded-164",
+                "text": "Runoff"
+            },
+            {
+                "id": "default-science-expanded-165",
+                "text": "Water Cycle"
+            },
+            {
+                "id": "default-science-expanded-166",
+                "text": "Carbon Cycle"
+            },
+            {
+                "id": "default-science-expanded-167",
+                "text": "Nitrogen Cycle"
+            },
+            {
+                "id": "default-science-expanded-168",
+                "text": "Phosphorus Cycle"
+            },
+            {
+                "id": "default-science-expanded-169",
+                "text": "Sulfur Cycle"
+            },
+            {
+                "id": "default-science-expanded-170",
+                "text": "Oxygen Cycle"
+            },
+            {
+                "id": "default-science-expanded-171",
+                "text": "Rock Cycle"
+            },
+            {
+                "id": "default-science-expanded-172",
+                "text": "Magma"
+            },
+            {
+                "id": "default-science-expanded-173",
+                "text": "Lava"
+            },
+            {
+                "id": "default-science-expanded-174",
+                "text": "Igneous Rock"
+            },
+            {
+                "id": "default-science-expanded-175",
+                "text": "Sedimentary Rock"
+            },
+            {
+                "id": "default-science-expanded-176",
+                "text": "Metamorphic Rock"
+            },
+            {
+                "id": "default-science-expanded-177",
+                "text": "Weathering"
+            },
+            {
+                "id": "default-science-expanded-178",
+                "text": "Erosion"
+            },
+            {
+                "id": "default-science-expanded-179",
+                "text": "Deposition"
+            },
+            {
+                "id": "default-science-expanded-180",
+                "text": "Glacier"
+            },
+            {
+                "id": "default-science-expanded-181",
+                "text": "Ice Age"
+            },
+            {
+                "id": "default-science-expanded-182",
+                "text": "Continental Drift"
+            },
+            {
+                "id": "default-science-expanded-183",
+                "text": "Pangea"
+            },
+            {
+                "id": "default-science-expanded-184",
+                "text": "Plate Tectonics"
+            },
+            {
+                "id": "default-science-expanded-185",
+                "text": "Subduction"
+            },
+            {
+                "id": "default-science-expanded-186",
+                "text": "Seafloor Spreading"
+            },
+            {
+                "id": "default-science-expanded-187",
+                "text": "Magnetic Reversal"
+            },
+            {
+                "id": "default-science-expanded-188",
+                "text": "Paleontology"
+            },
+            {
+                "id": "default-science-expanded-189",
+                "text": "Geology"
+            },
+            {
+                "id": "default-science-expanded-190",
+                "text": "Meteorology"
+            },
+            {
+                "id": "default-science-expanded-191",
+                "text": "Oceanography"
+            },
+            {
+                "id": "default-science-expanded-192",
+                "text": "Astronomy"
+            },
+            {
+                "id": "default-science-expanded-193",
+                "text": "Cosmology"
+            },
+            {
+                "id": "default-science-expanded-194",
+                "text": "Physics"
+            },
+            {
+                "id": "default-science-expanded-195",
+                "text": "Chemistry"
+            },
+            {
+                "id": "default-science-expanded-196",
+                "text": "Biology"
+            },
+            {
+                "id": "default-science-expanded-197",
+                "text": "Botany"
+            },
+            {
+                "id": "default-science-expanded-198",
+                "text": "Zoology"
+            },
+            {
+                "id": "default-science-expanded-199",
+                "text": "Anatomy"
+            },
+            {
+                "id": "default-science-expanded-200",
+                "text": "Physiology"
+            },
+            {
+                "id": "default-science-expanded-201",
+                "text": "Medicine"
+            },
+            {
+                "id": "default-science-expanded-202",
+                "text": "Pharmacology"
+            },
+            {
+                "id": "default-science-expanded-203",
+                "text": "Toxicology"
+            },
+            {
+                "id": "default-science-expanded-204",
+                "text": "Pathology"
+            },
+            {
+                "id": "default-science-expanded-205",
+                "text": "Immunology"
+            },
+            {
+                "id": "default-science-expanded-206",
+                "text": "Microbiology"
+            },
+            {
+                "id": "default-science-expanded-207",
+                "text": "Virology"
+            },
+            {
+                "id": "default-science-expanded-208",
+                "text": "Bacteriology"
+            },
+            {
+                "id": "default-science-expanded-209",
+                "text": "Mycology"
+            },
+            {
+                "id": "default-science-expanded-210",
+                "text": "Parasitology"
+            },
+            {
+                "id": "default-science-expanded-214",
+                "text": "Taxonomy"
+            },
+            {
+                "id": "default-science-expanded-215",
+                "text": "Systematics"
+            },
+            {
+                "id": "default-science-expanded-216",
+                "text": "Phylogeny"
+            },
+            {
+                "id": "default-science-extra-218",
+                "text": "Astrophysics"
+            },
+            {
+                "id": "default-science-extra-220",
+                "text": "Stellar Astronomy"
+            },
+            {
+                "id": "default-science-extra-221",
+                "text": "Planetary Science"
+            },
+            {
+                "id": "default-science-extra-222",
+                "text": "Galactic Astronomy"
+            },
+            {
+                "id": "default-science-extra-223",
+                "text": "Extragalactic Astronomy"
+            },
+            {
+                "id": "default-science-extra-224",
+                "text": "Physical Cosmology"
+            },
+            {
+                "id": "default-science-extra-225",
+                "text": "Observational Astronomy"
+            },
+            {
+                "id": "default-science-extra-226",
+                "text": "Theoretical Astronomy"
+            },
+            {
+                "id": "default-science-extra-229",
+                "text": "Astrobiology"
+            },
+            {
+                "id": "default-science-extra-230",
+                "text": "Biochemistry"
+            },
+            {
+                "id": "default-science-extra-231",
+                "text": "Bioinformatics"
+            },
+            {
+                "id": "default-science-extra-232",
+                "text": "Biophysics"
+            },
+            {
+                "id": "default-science-extra-234",
+                "text": "Cell Biology"
+            },
+            {
+                "id": "default-science-extra-235",
+                "text": "Chronobiology"
+            },
+            {
+                "id": "default-science-extra-236",
+                "text": "Cryobiology"
+            },
+            {
+                "id": "default-science-extra-237",
+                "text": "Developmental Biology"
+            },
+            {
+                "id": "default-science-extra-239",
+                "text": "Evolutionary Biology"
+            },
+            {
+                "id": "default-science-extra-241",
+                "text": "Histology"
+            },
+            {
+                "id": "default-science-extra-242",
+                "text": "Human Biology"
+            },
+            {
+                "id": "default-science-extra-244",
+                "text": "Marine Biology"
+            },
+            {
+                "id": "default-science-extra-246",
+                "text": "Molecular Biology"
+            },
+            {
+                "id": "default-science-extra-248",
+                "text": "Neurobiology"
+            },
+            {
+                "id": "default-science-extra-254",
+                "text": "Structural Biology"
+            },
+            {
+                "id": "default-science-extra-259",
+                "text": "Analytical Chemistry"
+            },
+            {
+                "id": "default-science-extra-260",
+                "text": "Astrochemistry"
+            },
+            {
+                "id": "default-science-extra-262",
+                "text": "Crystallography"
+            },
+            {
+                "id": "default-science-extra-263",
+                "text": "Environmental Chemistry"
+            },
+            {
+                "id": "default-science-extra-264",
+                "text": "Food Chemistry"
+            },
+            {
+                "id": "default-science-extra-265",
+                "text": "Geochemistry"
+            },
+            {
+                "id": "default-science-extra-266",
+                "text": "Green Chemistry"
+            },
+            {
+                "id": "default-science-extra-267",
+                "text": "Inorganic Chemistry"
+            },
+            {
+                "id": "default-science-extra-268",
+                "text": "Materials Science"
+            },
+            {
+                "id": "default-science-extra-269",
+                "text": "Medicinal Chemistry"
+            },
+            {
+                "id": "default-science-extra-270",
+                "text": "Nuclear Chemistry"
+            },
+            {
+                "id": "default-science-extra-271",
+                "text": "Organic Chemistry"
+            },
+            {
+                "id": "default-science-extra-272",
+                "text": "Photochemistry"
+            },
+            {
+                "id": "default-science-extra-273",
+                "text": "Physical Chemistry"
+            }
+        ],
+        "type": "default",
+        "color": "blue",
+        "symbolName": "atom"
+    }
+]

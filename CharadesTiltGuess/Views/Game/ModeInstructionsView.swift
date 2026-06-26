@@ -100,5 +100,5 @@ struct ModeInstructionsView: View {
 }
 
 #Preview {
-    ModeInstructionsView(mode: .challengeCards)
+    ModeInstructionsView(mode: .normal)
 }

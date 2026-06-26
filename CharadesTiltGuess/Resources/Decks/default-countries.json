@@ -1,0 +1,800 @@
+[
+    {
+        "id": "default-countries",
+        "name": "Countries",
+        "description": "Places, flags, and travel clues.",
+        "cards": [
+            {
+                "id": "default-countries-expanded-000",
+                "text": "United States"
+            },
+            {
+                "id": "default-countries-expanded-001",
+                "text": "Canada"
+            },
+            {
+                "id": "default-countries-expanded-002",
+                "text": "Mexico"
+            },
+            {
+                "id": "default-countries-expanded-003",
+                "text": "Brazil"
+            },
+            {
+                "id": "default-countries-expanded-004",
+                "text": "Argentina"
+            },
+            {
+                "id": "default-countries-expanded-005",
+                "text": "Colombia"
+            },
+            {
+                "id": "default-countries-expanded-006",
+                "text": "Peru"
+            },
+            {
+                "id": "default-countries-expanded-007",
+                "text": "Chile"
+            },
+            {
+                "id": "default-countries-expanded-008",
+                "text": "Venezuela"
+            },
+            {
+                "id": "default-countries-expanded-009",
+                "text": "Ecuador"
+            },
+            {
+                "id": "default-countries-expanded-010",
+                "text": "Bolivia"
+            },
+            {
+                "id": "default-countries-expanded-011",
+                "text": "Paraguay"
+            },
+            {
+                "id": "default-countries-expanded-012",
+                "text": "Uruguay"
+            },
+            {
+                "id": "default-countries-expanded-013",
+                "text": "Guyana"
+            },
+            {
+                "id": "default-countries-expanded-014",
+                "text": "Suriname"
+            },
+            {
+                "id": "default-countries-expanded-015",
+                "text": "United Kingdom"
+            },
+            {
+                "id": "default-countries-expanded-016",
+                "text": "France"
+            },
+            {
+                "id": "default-countries-expanded-017",
+                "text": "Germany"
+            },
+            {
+                "id": "default-countries-expanded-018",
+                "text": "Italy"
+            },
+            {
+                "id": "default-countries-expanded-019",
+                "text": "Spain"
+            },
+            {
+                "id": "default-countries-expanded-020",
+                "text": "Portugal"
+            },
+            {
+                "id": "default-countries-expanded-021",
+                "text": "Netherlands"
+            },
+            {
+                "id": "default-countries-expanded-022",
+                "text": "Belgium"
+            },
+            {
+                "id": "default-countries-expanded-023",
+                "text": "Switzerland"
+            },
+            {
+                "id": "default-countries-expanded-024",
+                "text": "Austria"
+            },
+            {
+                "id": "default-countries-expanded-025",
+                "text": "Sweden"
+            },
+            {
+                "id": "default-countries-expanded-026",
+                "text": "Norway"
+            },
+            {
+                "id": "default-countries-expanded-027",
+                "text": "Denmark"
+            },
+            {
+                "id": "default-countries-expanded-028",
+                "text": "Finland"
+            },
+            {
+                "id": "default-countries-expanded-029",
+                "text": "Ireland"
+            },
+            {
+                "id": "default-countries-expanded-030",
+                "text": "Iceland"
+            },
+            {
+                "id": "default-countries-expanded-031",
+                "text": "Greece"
+            },
+            {
+                "id": "default-countries-expanded-032",
+                "text": "Turkey"
+            },
+            {
+                "id": "default-countries-expanded-033",
+                "text": "Poland"
+            },
+            {
+                "id": "default-countries-expanded-034",
+                "text": "Czech Republic"
+            },
+            {
+                "id": "default-countries-expanded-035",
+                "text": "Slovakia"
+            },
+            {
+                "id": "default-countries-expanded-036",
+                "text": "Hungary"
+            },
+            {
+                "id": "default-countries-expanded-037",
+                "text": "Romania"
+            },
+            {
+                "id": "default-countries-expanded-038",
+                "text": "Bulgaria"
+            },
+            {
+                "id": "default-countries-expanded-039",
+                "text": "Serbia"
+            },
+            {
+                "id": "default-countries-expanded-040",
+                "text": "Croatia"
+            },
+            {
+                "id": "default-countries-expanded-041",
+                "text": "Bosnia and Herzegovina"
+            },
+            {
+                "id": "default-countries-expanded-042",
+                "text": "Montenegro"
+            },
+            {
+                "id": "default-countries-expanded-043",
+                "text": "Albania"
+            },
+            {
+                "id": "default-countries-expanded-044",
+                "text": "North Macedonia"
+            },
+            {
+                "id": "default-countries-expanded-045",
+                "text": "Slovenia"
+            },
+            {
+                "id": "default-countries-expanded-046",
+                "text": "Russia"
+            },
+            {
+                "id": "default-countries-expanded-047",
+                "text": "Ukraine"
+            },
+            {
+                "id": "default-countries-expanded-048",
+                "text": "Belarus"
+            },
+            {
+                "id": "default-countries-expanded-049",
+                "text": "Moldova"
+            },
+            {
+                "id": "default-countries-expanded-050",
+                "text": "Lithuania"
+            },
+            {
+                "id": "default-countries-expanded-051",
+                "text": "Latvia"
+            },
+            {
+                "id": "default-countries-expanded-052",
+                "text": "Estonia"
+            },
+            {
+                "id": "default-countries-expanded-053",
+                "text": "Georgia"
+            },
+            {
+                "id": "default-countries-expanded-054",
+                "text": "Armenia"
+            },
+            {
+                "id": "default-countries-expanded-055",
+                "text": "Azerbaijan"
+            },
+            {
+                "id": "default-countries-expanded-056",
+                "text": "Kazakhstan"
+            },
+            {
+                "id": "default-countries-expanded-057",
+                "text": "Uzbekistan"
+            },
+            {
+                "id": "default-countries-expanded-058",
+                "text": "Turkmenistan"
+            },
+            {
+                "id": "default-countries-expanded-059",
+                "text": "Kyrgyzstan"
+            },
+            {
+                "id": "default-countries-expanded-060",
+                "text": "Tajikistan"
+            },
+            {
+                "id": "default-countries-expanded-061",
+                "text": "China"
+            },
+            {
+                "id": "default-countries-expanded-062",
+                "text": "Japan"
+            },
+            {
+                "id": "default-countries-expanded-063",
+                "text": "South Korea"
+            },
+            {
+                "id": "default-countries-expanded-064",
+                "text": "North Korea"
+            },
+            {
+                "id": "default-countries-expanded-065",
+                "text": "Taiwan"
+            },
+            {
+                "id": "default-countries-expanded-066",
+                "text": "Mongolia"
+            },
+            {
+                "id": "default-countries-expanded-067",
+                "text": "India"
+            },
+            {
+                "id": "default-countries-expanded-068",
+                "text": "Pakistan"
+            },
+            {
+                "id": "default-countries-expanded-069",
+                "text": "Bangladesh"
+            },
+            {
+                "id": "default-countries-expanded-070",
+                "text": "Sri Lanka"
+            },
+            {
+                "id": "default-countries-expanded-071",
+                "text": "Nepal"
+            },
+            {
+                "id": "default-countries-expanded-072",
+                "text": "Bhutan"
+            },
+            {
+                "id": "default-countries-expanded-073",
+                "text": "Maldives"
+            },
+            {
+                "id": "default-countries-expanded-074",
+                "text": "Afghanistan"
+            },
+            {
+                "id": "default-countries-expanded-075",
+                "text": "Iran"
+            },
+            {
+                "id": "default-countries-expanded-076",
+                "text": "Iraq"
+            },
+            {
+                "id": "default-countries-expanded-077",
+                "text": "Syria"
+            },
+            {
+                "id": "default-countries-expanded-078",
+                "text": "Lebanon"
+            },
+            {
+                "id": "default-countries-expanded-079",
+                "text": "Jordan"
+            },
+            {
+                "id": "default-countries-expanded-080",
+                "text": "Israel"
+            },
+            {
+                "id": "default-countries-expanded-081",
+                "text": "Palestine"
+            },
+            {
+                "id": "default-countries-expanded-082",
+                "text": "Saudi Arabia"
+            },
+            {
+                "id": "default-countries-expanded-083",
+                "text": "Yemen"
+            },
+            {
+                "id": "default-countries-expanded-084",
+                "text": "Oman"
+            },
+            {
+                "id": "default-countries-expanded-085",
+                "text": "United Arab Emirates"
+            },
+            {
+                "id": "default-countries-expanded-086",
+                "text": "Qatar"
+            },
+            {
+                "id": "default-countries-expanded-087",
+                "text": "Bahrain"
+            },
+            {
+                "id": "default-countries-expanded-088",
+                "text": "Kuwait"
+            },
+            {
+                "id": "default-countries-expanded-089",
+                "text": "Egypt"
+            },
+            {
+                "id": "default-countries-expanded-090",
+                "text": "Libya"
+            },
+            {
+                "id": "default-countries-expanded-091",
+                "text": "Tunisia"
+            },
+            {
+                "id": "default-countries-expanded-092",
+                "text": "Algeria"
+            },
+            {
+                "id": "default-countries-expanded-093",
+                "text": "Morocco"
+            },
+            {
+                "id": "default-countries-expanded-094",
+                "text": "Sudan"
+            },
+            {
+                "id": "default-countries-expanded-095",
+                "text": "South Sudan"
+            },
+            {
+                "id": "default-countries-expanded-096",
+                "text": "Ethiopia"
+            },
+            {
+                "id": "default-countries-expanded-097",
+                "text": "Eritrea"
+            },
+            {
+                "id": "default-countries-expanded-098",
+                "text": "Djibouti"
+            },
+            {
+                "id": "default-countries-expanded-099",
+                "text": "Somalia"
+            },
+            {
+                "id": "default-countries-expanded-100",
+                "text": "Kenya"
+            },
+            {
+                "id": "default-countries-expanded-101",
+                "text": "Tanzania"
+            },
+            {
+                "id": "default-countries-expanded-102",
+                "text": "Uganda"
+            },
+            {
+                "id": "default-countries-expanded-103",
+                "text": "Rwanda"
+            },
+            {
+                "id": "default-countries-expanded-104",
+                "text": "Burundi"
+            },
+            {
+                "id": "default-countries-expanded-105",
+                "text": "Congo"
+            },
+            {
+                "id": "default-countries-expanded-106",
+                "text": "Democratic Republic of the Congo"
+            },
+            {
+                "id": "default-countries-expanded-107",
+                "text": "Central African Republic"
+            },
+            {
+                "id": "default-countries-expanded-108",
+                "text": "Cameroon"
+            },
+            {
+                "id": "default-countries-expanded-109",
+                "text": "Chad"
+            },
+            {
+                "id": "default-countries-expanded-110",
+                "text": "Niger"
+            },
+            {
+                "id": "default-countries-expanded-111",
+                "text": "Nigeria"
+            },
+            {
+                "id": "default-countries-expanded-112",
+                "text": "Benin"
+            },
+            {
+                "id": "default-countries-expanded-113",
+                "text": "Togo"
+            },
+            {
+                "id": "default-countries-expanded-114",
+                "text": "Ghana"
+            },
+            {
+                "id": "default-countries-expanded-115",
+                "text": "Ivory Coast"
+            },
+            {
+                "id": "default-countries-expanded-116",
+                "text": "Liberia"
+            },
+            {
+                "id": "default-countries-expanded-117",
+                "text": "Sierra Leone"
+            },
+            {
+                "id": "default-countries-expanded-118",
+                "text": "Guinea"
+            },
+            {
+                "id": "default-countries-expanded-119",
+                "text": "Guinea-Bissau"
+            },
+            {
+                "id": "default-countries-expanded-120",
+                "text": "Senegal"
+            },
+            {
+                "id": "default-countries-expanded-121",
+                "text": "Gambia"
+            },
+            {
+                "id": "default-countries-expanded-122",
+                "text": "Mauritania"
+            },
+            {
+                "id": "default-countries-expanded-123",
+                "text": "Mali"
+            },
+            {
+                "id": "default-countries-expanded-124",
+                "text": "Burkina Faso"
+            },
+            {
+                "id": "default-countries-expanded-125",
+                "text": "Cape Verde"
+            },
+            {
+                "id": "default-countries-expanded-126",
+                "text": "Sao Tome and Principe"
+            },
+            {
+                "id": "default-countries-expanded-127",
+                "text": "Equatorial Guinea"
+            },
+            {
+                "id": "default-countries-expanded-128",
+                "text": "Gabon"
+            },
+            {
+                "id": "default-countries-expanded-129",
+                "text": "Angola"
+            },
+            {
+                "id": "default-countries-expanded-130",
+                "text": "Zambia"
+            },
+            {
+                "id": "default-countries-expanded-131",
+                "text": "Zimbabwe"
+            },
+            {
+                "id": "default-countries-expanded-132",
+                "text": "Malawi"
+            },
+            {
+                "id": "default-countries-expanded-133",
+                "text": "Mozambique"
+            },
+            {
+                "id": "default-countries-expanded-134",
+                "text": "Madagascar"
+            },
+            {
+                "id": "default-countries-expanded-135",
+                "text": "Comoros"
+            },
+            {
+                "id": "default-countries-expanded-136",
+                "text": "Seychelles"
+            },
+            {
+                "id": "default-countries-expanded-137",
+                "text": "Mauritius"
+            },
+            {
+                "id": "default-countries-expanded-138",
+                "text": "South Africa"
+            },
+            {
+                "id": "default-countries-expanded-139",
+                "text": "Lesotho"
+            },
+            {
+                "id": "default-countries-expanded-140",
+                "text": "Eswatini"
+            },
+            {
+                "id": "default-countries-expanded-141",
+                "text": "Namibia"
+            },
+            {
+                "id": "default-countries-expanded-142",
+                "text": "Botswana"
+            },
+            {
+                "id": "default-countries-expanded-143",
+                "text": "Australia"
+            },
+            {
+                "id": "default-countries-expanded-144",
+                "text": "New Zealand"
+            },
+            {
+                "id": "default-countries-expanded-145",
+                "text": "Papua New Guinea"
+            },
+            {
+                "id": "default-countries-expanded-146",
+                "text": "Fiji"
+            },
+            {
+                "id": "default-countries-expanded-147",
+                "text": "Solomon Islands"
+            },
+            {
+                "id": "default-countries-expanded-148",
+                "text": "Vanuatu"
+            },
+            {
+                "id": "default-countries-expanded-149",
+                "text": "New Caledonia"
+            },
+            {
+                "id": "default-countries-expanded-150",
+                "text": "Samoa"
+            },
+            {
+                "id": "default-countries-expanded-151",
+                "text": "Tonga"
+            },
+            {
+                "id": "default-countries-expanded-152",
+                "text": "Kiribati"
+            },
+            {
+                "id": "default-countries-expanded-153",
+                "text": "Tuvalu"
+            },
+            {
+                "id": "default-countries-expanded-154",
+                "text": "Nauru"
+            },
+            {
+                "id": "default-countries-expanded-155",
+                "text": "Marshall Islands"
+            },
+            {
+                "id": "default-countries-expanded-156",
+                "text": "Micronesia"
+            },
+            {
+                "id": "default-countries-expanded-157",
+                "text": "Palau"
+            },
+            {
+                "id": "default-countries-expanded-158",
+                "text": "Indonesia"
+            },
+            {
+                "id": "default-countries-expanded-159",
+                "text": "Malaysia"
+            },
+            {
+                "id": "default-countries-expanded-160",
+                "text": "Singapore"
+            },
+            {
+                "id": "default-countries-expanded-161",
+                "text": "Brunei"
+            },
+            {
+                "id": "default-countries-expanded-162",
+                "text": "Philippines"
+            },
+            {
+                "id": "default-countries-expanded-163",
+                "text": "Vietnam"
+            },
+            {
+                "id": "default-countries-expanded-164",
+                "text": "Laos"
+            },
+            {
+                "id": "default-countries-expanded-165",
+                "text": "Cambodia"
+            },
+            {
+                "id": "default-countries-expanded-166",
+                "text": "Thailand"
+            },
+            {
+                "id": "default-countries-expanded-167",
+                "text": "Myanmar"
+            },
+            {
+                "id": "default-countries-expanded-168",
+                "text": "East Timor"
+            },
+            {
+                "id": "default-countries-expanded-169",
+                "text": "Cyprus"
+            },
+            {
+                "id": "default-countries-expanded-170",
+                "text": "Malta"
+            },
+            {
+                "id": "default-countries-expanded-171",
+                "text": "Luxembourg"
+            },
+            {
+                "id": "default-countries-expanded-172",
+                "text": "Liechtenstein"
+            },
+            {
+                "id": "default-countries-expanded-173",
+                "text": "Monaco"
+            },
+            {
+                "id": "default-countries-expanded-174",
+                "text": "San Marino"
+            },
+            {
+                "id": "default-countries-expanded-175",
+                "text": "Andorra"
+            },
+            {
+                "id": "default-countries-expanded-176",
+                "text": "Vatican City"
+            },
+            {
+                "id": "default-countries-expanded-177",
+                "text": "Antigua and Barbuda"
+            },
+            {
+                "id": "default-countries-expanded-178",
+                "text": "Bahamas"
+            },
+            {
+                "id": "default-countries-expanded-179",
+                "text": "Barbados"
+            },
+            {
+                "id": "default-countries-expanded-180",
+                "text": "Belize"
+            },
+            {
+                "id": "default-countries-expanded-181",
+                "text": "Costa Rica"
+            },
+            {
+                "id": "default-countries-expanded-182",
+                "text": "Cuba"
+            },
+            {
+                "id": "default-countries-expanded-183",
+                "text": "Dominica"
+            },
+            {
+                "id": "default-countries-expanded-184",
+                "text": "Dominican Republic"
+            },
+            {
+                "id": "default-countries-expanded-185",
+                "text": "El Salvador"
+            },
+            {
+                "id": "default-countries-expanded-186",
+                "text": "Grenada"
+            },
+            {
+                "id": "default-countries-expanded-187",
+                "text": "Guatemala"
+            },
+            {
+                "id": "default-countries-expanded-188",
+                "text": "Haiti"
+            },
+            {
+                "id": "default-countries-expanded-189",
+                "text": "Honduras"
+            },
+            {
+                "id": "default-countries-expanded-190",
+                "text": "Jamaica"
+            },
+            {
+                "id": "default-countries-expanded-191",
+                "text": "Nicaragua"
+            },
+            {
+                "id": "default-countries-expanded-192",
+                "text": "Panama"
+            },
+            {
+                "id": "default-countries-expanded-193",
+                "text": "Saint Kitts and Nevis"
+            },
+            {
+                "id": "default-countries-expanded-194",
+                "text": "Saint Lucia"
+            },
+            {
+                "id": "default-countries-expanded-195",
+                "text": "Saint Vincent and the Grenadines"
+            },
+            {
+                "id": "default-countries-expanded-196",
+                "text": "Trinidad and Tobago"
+            }
+        ],
+        "type": "default",
+        "color": "mint",
+        "symbolName": "globe.asia.australia.fill"
+    }
+]

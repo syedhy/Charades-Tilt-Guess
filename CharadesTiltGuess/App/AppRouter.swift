@@ -79,10 +79,6 @@ final class AppRouter: ObservableObject {
             )
         case .wikipedia:
             startGame(configuration: .wikipedia(deck: deck, duration: settings.defaultDuration))
-        case .hotPotato:
-            startGame(configuration: .hotPotato(deck: deck, hiddenDuration: settings.defaultDuration))
-        case .challengeCards:
-            startGame(configuration: .challengeCards(deck: deck, duration: settings.defaultDuration))
         case .teamVsTeam:
             startGame(configuration: .teamVsTeam(deck: deck, duration: settings.defaultDuration))
         }
@@ -245,8 +241,8 @@ private extension AppRouter {
             configuration: GameConfiguration(
                 mode: result.mode,
                 deck: result.deck,
-                duration: result.mode == .infinite || result.mode == .hotPotato ? nil : result.duration,
-                hiddenDuration: result.mode == .hotPotato ? result.duration : nil,
+                duration: result.mode == .infinite ? nil : result.duration,
+                hiddenDuration: nil,
                 isTemporaryDeck: result.deck.type == .custom && result.deck.id.hasPrefix("temp-"),
                 sourceDeckIDs: result.sourceDeckIDs
             )

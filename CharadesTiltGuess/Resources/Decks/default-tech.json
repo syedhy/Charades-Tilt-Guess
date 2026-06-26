@@ -1,0 +1,1012 @@
+[
+    {
+        "id": "default-tech",
+        "name": "Tech",
+        "description": "Everyday gadgets, apps, and digital life.",
+        "cards": [
+            {
+                "id": "default-tech-expanded-000",
+                "text": "Smartphone"
+            },
+            {
+                "id": "default-tech-expanded-001",
+                "text": "Laptop"
+            },
+            {
+                "id": "default-tech-expanded-002",
+                "text": "Wi-Fi"
+            },
+            {
+                "id": "default-tech-expanded-003",
+                "text": "Bluetooth"
+            },
+            {
+                "id": "default-tech-expanded-004",
+                "text": "Robot"
+            },
+            {
+                "id": "default-tech-expanded-005",
+                "text": "Video Call"
+            },
+            {
+                "id": "default-tech-expanded-006",
+                "text": "Password"
+            },
+            {
+                "id": "default-tech-expanded-007",
+                "text": "Touchscreen"
+            },
+            {
+                "id": "default-tech-expanded-008",
+                "text": "Drone"
+            },
+            {
+                "id": "default-tech-expanded-009",
+                "text": "Virtual Reality"
+            },
+            {
+                "id": "default-tech-expanded-010",
+                "text": "Smartwatch"
+            },
+            {
+                "id": "default-tech-expanded-011",
+                "text": "Podcast"
+            },
+            {
+                "id": "default-tech-expanded-012",
+                "text": "Cloud Storage"
+            },
+            {
+                "id": "default-tech-expanded-013",
+                "text": "QR Code"
+            },
+            {
+                "id": "default-tech-expanded-014",
+                "text": "Wireless Charger"
+            },
+            {
+                "id": "default-tech-expanded-015",
+                "text": "Keyboard"
+            },
+            {
+                "id": "default-tech-expanded-016",
+                "text": "Computer Mouse"
+            },
+            {
+                "id": "default-tech-expanded-017",
+                "text": "Headphones"
+            },
+            {
+                "id": "default-tech-expanded-018",
+                "text": "Face ID"
+            },
+            {
+                "id": "default-tech-expanded-019",
+                "text": "Streaming"
+            },
+            {
+                "id": "default-tech-expanded-020",
+                "text": "App Store"
+            },
+            {
+                "id": "default-tech-expanded-021",
+                "text": "Power Bank"
+            },
+            {
+                "id": "default-tech-expanded-022",
+                "text": "3D Printer"
+            },
+            {
+                "id": "default-tech-expanded-023",
+                "text": "Tablet"
+            },
+            {
+                "id": "default-tech-expanded-024",
+                "text": "Router"
+            },
+            {
+                "id": "default-tech-expanded-025",
+                "text": "Server"
+            },
+            {
+                "id": "default-tech-expanded-026",
+                "text": "Artificial Intelligence"
+            },
+            {
+                "id": "default-tech-expanded-027",
+                "text": "Augmented Reality"
+            },
+            {
+                "id": "default-tech-expanded-028",
+                "text": "Webcam"
+            },
+            {
+                "id": "default-tech-expanded-029",
+                "text": "Microphone"
+            },
+            {
+                "id": "default-tech-expanded-030",
+                "text": "Monitor"
+            },
+            {
+                "id": "default-tech-expanded-031",
+                "text": "USB Drive"
+            },
+            {
+                "id": "default-tech-expanded-032",
+                "text": "Cybersecurity"
+            },
+            {
+                "id": "default-tech-expanded-033",
+                "text": "Algorithm"
+            },
+            {
+                "id": "default-tech-expanded-034",
+                "text": "Coding"
+            },
+            {
+                "id": "default-tech-expanded-035",
+                "text": "Database"
+            },
+            {
+                "id": "default-tech-expanded-036",
+                "text": "Hacker"
+            },
+            {
+                "id": "default-tech-expanded-037",
+                "text": "Motherboard"
+            },
+            {
+                "id": "default-tech-expanded-038",
+                "text": "Processor"
+            },
+            {
+                "id": "default-tech-expanded-039",
+                "text": "Graphics Card"
+            },
+            {
+                "id": "default-tech-expanded-040",
+                "text": "RAM"
+            },
+            {
+                "id": "default-tech-expanded-041",
+                "text": "SSD"
+            },
+            {
+                "id": "default-tech-expanded-042",
+                "text": "Operating System"
+            },
+            {
+                "id": "default-tech-expanded-043",
+                "text": "Software"
+            },
+            {
+                "id": "default-tech-expanded-044",
+                "text": "Hardware"
+            },
+            {
+                "id": "default-tech-expanded-045",
+                "text": "Browser"
+            },
+            {
+                "id": "default-tech-expanded-046",
+                "text": "Search Engine"
+            },
+            {
+                "id": "default-tech-expanded-047",
+                "text": "Social Media"
+            },
+            {
+                "id": "default-tech-expanded-048",
+                "text": "Hashtag"
+            },
+            {
+                "id": "default-tech-expanded-049",
+                "text": "Viral"
+            },
+            {
+                "id": "default-tech-expanded-050",
+                "text": "Influencer"
+            },
+            {
+                "id": "default-tech-expanded-051",
+                "text": "Vlog"
+            },
+            {
+                "id": "default-tech-expanded-052",
+                "text": "Meme"
+            },
+            {
+                "id": "default-tech-expanded-053",
+                "text": "Emoji"
+            },
+            {
+                "id": "default-tech-expanded-054",
+                "text": "GIF"
+            },
+            {
+                "id": "default-tech-expanded-055",
+                "text": "Pixel"
+            },
+            {
+                "id": "default-tech-expanded-056",
+                "text": "Resolution"
+            },
+            {
+                "id": "default-tech-expanded-057",
+                "text": "HDMI"
+            },
+            {
+                "id": "default-tech-expanded-058",
+                "text": "Ethernet"
+            },
+            {
+                "id": "default-tech-expanded-059",
+                "text": "Bandwidth"
+            },
+            {
+                "id": "default-tech-expanded-060",
+                "text": "IP Address"
+            },
+            {
+                "id": "default-tech-expanded-061",
+                "text": "Firewall"
+            },
+            {
+                "id": "default-tech-expanded-062",
+                "text": "Encryption"
+            },
+            {
+                "id": "default-tech-expanded-063",
+                "text": "Malware"
+            },
+            {
+                "id": "default-tech-expanded-064",
+                "text": "Antivirus"
+            },
+            {
+                "id": "default-tech-expanded-065",
+                "text": "Phishing"
+            },
+            {
+                "id": "default-tech-expanded-066",
+                "text": "Spam"
+            },
+            {
+                "id": "default-tech-expanded-067",
+                "text": "Cookie"
+            },
+            {
+                "id": "default-tech-expanded-068",
+                "text": "Cache"
+            },
+            {
+                "id": "default-tech-expanded-069",
+                "text": "Reboot"
+            },
+            {
+                "id": "default-tech-expanded-070",
+                "text": "Update"
+            },
+            {
+                "id": "default-tech-expanded-071",
+                "text": "Upgrade"
+            },
+            {
+                "id": "default-tech-expanded-072",
+                "text": "Backup"
+            },
+            {
+                "id": "default-tech-expanded-073",
+                "text": "Sync"
+            },
+            {
+                "id": "default-tech-expanded-074",
+                "text": "Glitch"
+            },
+            {
+                "id": "default-tech-expanded-075",
+                "text": "Bug"
+            },
+            {
+                "id": "default-tech-expanded-076",
+                "text": "Debug"
+            },
+            {
+                "id": "default-tech-expanded-077",
+                "text": "Compiler"
+            },
+            {
+                "id": "default-tech-expanded-078",
+                "text": "Framework"
+            },
+            {
+                "id": "default-tech-expanded-079",
+                "text": "API"
+            },
+            {
+                "id": "default-tech-expanded-080",
+                "text": "Open Source"
+            },
+            {
+                "id": "default-tech-expanded-081",
+                "text": "Blockchain"
+            },
+            {
+                "id": "default-tech-expanded-082",
+                "text": "Cryptocurrency"
+            },
+            {
+                "id": "default-tech-expanded-083",
+                "text": "NFT"
+            },
+            {
+                "id": "default-tech-expanded-084",
+                "text": "Metaverse"
+            },
+            {
+                "id": "default-tech-expanded-085",
+                "text": "Avatar"
+            },
+            {
+                "id": "default-tech-expanded-086",
+                "text": "Selfie"
+            },
+            {
+                "id": "default-tech-expanded-087",
+                "text": "Filter"
+            },
+            {
+                "id": "default-tech-expanded-088",
+                "text": "Notifications"
+            },
+            {
+                "id": "default-tech-expanded-089",
+                "text": "Inbox"
+            },
+            {
+                "id": "default-tech-expanded-090",
+                "text": "Outbox"
+            },
+            {
+                "id": "default-tech-expanded-091",
+                "text": "Draft"
+            },
+            {
+                "id": "default-tech-expanded-092",
+                "text": "Attachment"
+            },
+            {
+                "id": "default-tech-expanded-093",
+                "text": "Download"
+            },
+            {
+                "id": "default-tech-expanded-094",
+                "text": "Upload"
+            },
+            {
+                "id": "default-tech-expanded-096",
+                "text": "Latency"
+            },
+            {
+                "id": "default-tech-expanded-097",
+                "text": "Ping"
+            },
+            {
+                "id": "default-tech-expanded-098",
+                "text": "Server Farm"
+            },
+            {
+                "id": "default-tech-expanded-099",
+                "text": "Data Center"
+            },
+            {
+                "id": "default-tech-expanded-100",
+                "text": "Cloud Computing"
+            },
+            {
+                "id": "default-tech-expanded-101",
+                "text": "Machine Learning"
+            },
+            {
+                "id": "default-tech-expanded-102",
+                "text": "Neural Network"
+            },
+            {
+                "id": "default-tech-expanded-103",
+                "text": "Deep Learning"
+            },
+            {
+                "id": "default-tech-expanded-104",
+                "text": "Quantum Computing"
+            },
+            {
+                "id": "default-tech-expanded-105",
+                "text": "Nanotechnology"
+            },
+            {
+                "id": "default-tech-expanded-106",
+                "text": "Biometrics"
+            },
+            {
+                "id": "default-tech-expanded-107",
+                "text": "Fingerprint Scanner"
+            },
+            {
+                "id": "default-tech-expanded-108",
+                "text": "Iris Scanner"
+            },
+            {
+                "id": "default-tech-expanded-109",
+                "text": "Smart Home"
+            },
+            {
+                "id": "default-tech-expanded-110",
+                "text": "Smart Speaker"
+            },
+            {
+                "id": "default-tech-expanded-111",
+                "text": "Smart Thermostat"
+            },
+            {
+                "id": "default-tech-expanded-112",
+                "text": "Smart Bulb"
+            },
+            {
+                "id": "default-tech-expanded-113",
+                "text": "IoT"
+            },
+            {
+                "id": "default-tech-expanded-114",
+                "text": "Wearable"
+            },
+            {
+                "id": "default-tech-expanded-115",
+                "text": "Fitness Tracker"
+            },
+            {
+                "id": "default-tech-expanded-116",
+                "text": "E-reader"
+            },
+            {
+                "id": "default-tech-expanded-117",
+                "text": "Digital Camera"
+            },
+            {
+                "id": "default-tech-expanded-118",
+                "text": "Action Camera"
+            },
+            {
+                "id": "default-tech-expanded-119",
+                "text": "Camcorder"
+            },
+            {
+                "id": "default-tech-expanded-120",
+                "text": "Projector"
+            },
+            {
+                "id": "default-tech-expanded-121",
+                "text": "Smart TV"
+            },
+            {
+                "id": "default-tech-expanded-122",
+                "text": "Set-Top Box"
+            },
+            {
+                "id": "default-tech-expanded-123",
+                "text": "Game Console"
+            },
+            {
+                "id": "default-tech-expanded-124",
+                "text": "Controller"
+            },
+            {
+                "id": "default-tech-expanded-125",
+                "text": "Joystick"
+            },
+            {
+                "id": "default-tech-expanded-126",
+                "text": "VR Headset"
+            },
+            {
+                "id": "default-tech-expanded-127",
+                "text": "AR Glasses"
+            },
+            {
+                "id": "default-tech-expanded-128",
+                "text": "Haptic Feedback"
+            },
+            {
+                "id": "default-tech-expanded-129",
+                "text": "Stylus"
+            },
+            {
+                "id": "default-tech-expanded-130",
+                "text": "Touchpad"
+            },
+            {
+                "id": "default-tech-expanded-131",
+                "text": "Trackpad"
+            },
+            {
+                "id": "default-tech-expanded-132",
+                "text": "Docking Station"
+            },
+            {
+                "id": "default-tech-expanded-133",
+                "text": "External Hard Drive"
+            },
+            {
+                "id": "default-tech-expanded-134",
+                "text": "Flash Drive"
+            },
+            {
+                "id": "default-tech-expanded-135",
+                "text": "Memory Card"
+            },
+            {
+                "id": "default-tech-expanded-136",
+                "text": "Battery"
+            },
+            {
+                "id": "default-tech-expanded-137",
+                "text": "Adapter"
+            },
+            {
+                "id": "default-tech-expanded-138",
+                "text": "Cable"
+            },
+            {
+                "id": "default-tech-expanded-139",
+                "text": "Dongle"
+            },
+            {
+                "id": "default-tech-expanded-141",
+                "text": "Modem"
+            },
+            {
+                "id": "default-tech-expanded-142",
+                "text": "Switch"
+            },
+            {
+                "id": "default-tech-expanded-143",
+                "text": "Hub"
+            },
+            {
+                "id": "default-tech-expanded-144",
+                "text": "Access Point"
+            },
+            {
+                "id": "default-tech-expanded-145",
+                "text": "Extender"
+            },
+            {
+                "id": "default-tech-expanded-146",
+                "text": "Repeater"
+            },
+            {
+                "id": "default-tech-expanded-147",
+                "text": "Mesh Network"
+            },
+            {
+                "id": "default-tech-expanded-148",
+                "text": "Intranet"
+            },
+            {
+                "id": "default-tech-expanded-149",
+                "text": "Extranet"
+            },
+            {
+                "id": "default-tech-expanded-150",
+                "text": "VPN"
+            },
+            {
+                "id": "default-tech-expanded-151",
+                "text": "Proxy"
+            },
+            {
+                "id": "default-tech-expanded-152",
+                "text": "DNS"
+            },
+            {
+                "id": "default-tech-expanded-153",
+                "text": "Domain"
+            },
+            {
+                "id": "default-tech-expanded-154",
+                "text": "URL"
+            },
+            {
+                "id": "default-tech-expanded-155",
+                "text": "HTML"
+            },
+            {
+                "id": "default-tech-expanded-156",
+                "text": "CSS"
+            },
+            {
+                "id": "default-tech-expanded-157",
+                "text": "JavaScript"
+            },
+            {
+                "id": "default-tech-expanded-158",
+                "text": "Python"
+            },
+            {
+                "id": "default-tech-expanded-159",
+                "text": "Java"
+            },
+            {
+                "id": "default-tech-expanded-160",
+                "text": "C++"
+            },
+            {
+                "id": "default-tech-expanded-161",
+                "text": "Ruby"
+            },
+            {
+                "id": "default-tech-expanded-162",
+                "text": "Swift"
+            },
+            {
+                "id": "default-tech-expanded-163",
+                "text": "Kotlin"
+            },
+            {
+                "id": "default-tech-expanded-164",
+                "text": "PHP"
+            },
+            {
+                "id": "default-tech-expanded-165",
+                "text": "SQL"
+            },
+            {
+                "id": "default-tech-expanded-166",
+                "text": "NoSQL"
+            },
+            {
+                "id": "default-tech-expanded-167",
+                "text": "Frontend"
+            },
+            {
+                "id": "default-tech-expanded-168",
+                "text": "Backend"
+            },
+            {
+                "id": "default-tech-expanded-169",
+                "text": "Full Stack"
+            },
+            {
+                "id": "default-tech-expanded-170",
+                "text": "UI"
+            },
+            {
+                "id": "default-tech-expanded-171",
+                "text": "UX"
+            },
+            {
+                "id": "default-tech-expanded-172",
+                "text": "Agile"
+            },
+            {
+                "id": "default-tech-expanded-173",
+                "text": "Scrum"
+            },
+            {
+                "id": "default-tech-expanded-174",
+                "text": "Sprint"
+            },
+            {
+                "id": "default-tech-expanded-175",
+                "text": "Git"
+            },
+            {
+                "id": "default-tech-expanded-176",
+                "text": "GitHub"
+            },
+            {
+                "id": "default-tech-expanded-177",
+                "text": "Repository"
+            },
+            {
+                "id": "default-tech-expanded-178",
+                "text": "Commit"
+            },
+            {
+                "id": "default-tech-expanded-179",
+                "text": "Push"
+            },
+            {
+                "id": "default-tech-expanded-180",
+                "text": "Pull Request"
+            },
+            {
+                "id": "default-tech-expanded-181",
+                "text": "Merge"
+            },
+            {
+                "id": "default-tech-expanded-182",
+                "text": "Branch"
+            },
+            {
+                "id": "default-tech-expanded-183",
+                "text": "Deploy"
+            },
+            {
+                "id": "default-tech-expanded-184",
+                "text": "Hosting"
+            },
+            {
+                "id": "default-tech-expanded-185",
+                "text": "Domain Name"
+            },
+            {
+                "id": "default-tech-expanded-186",
+                "text": "SSL"
+            },
+            {
+                "id": "default-tech-expanded-187",
+                "text": "HTTPS"
+            },
+            {
+                "id": "default-tech-expanded-188",
+                "text": "FTP"
+            },
+            {
+                "id": "default-tech-expanded-189",
+                "text": "TCP/IP"
+            },
+            {
+                "id": "default-tech-extra-190",
+                "text": "Virtual Assistant"
+            },
+            {
+                "id": "default-tech-extra-191",
+                "text": "Smart Glasses"
+            },
+            {
+                "id": "default-tech-extra-192",
+                "text": "Biometric"
+            },
+            {
+                "id": "default-tech-extra-193",
+                "text": "Cyber Attack"
+            },
+            {
+                "id": "default-tech-extra-194",
+                "text": "Data Breach"
+            },
+            {
+                "id": "default-tech-extra-195",
+                "text": "E-commerce"
+            },
+            {
+                "id": "default-tech-extra-196",
+                "text": "Fintech"
+            },
+            {
+                "id": "default-tech-extra-197",
+                "text": "Cryptographic"
+            },
+            {
+                "id": "default-tech-extra-198",
+                "text": "Decentralized"
+            },
+            {
+                "id": "default-tech-extra-199",
+                "text": "Ledger"
+            },
+            {
+                "id": "default-tech-extra-200",
+                "text": "Token"
+            },
+            {
+                "id": "default-tech-extra-201",
+                "text": "Smart Contract"
+            },
+            {
+                "id": "default-tech-extra-202",
+                "text": "Deepfake"
+            },
+            {
+                "id": "default-tech-extra-203",
+                "text": "Chatbot"
+            },
+            {
+                "id": "default-tech-extra-204",
+                "text": "Machine Vision"
+            },
+            {
+                "id": "default-tech-extra-205",
+                "text": "Natural Language Processing"
+            },
+            {
+                "id": "default-tech-extra-206",
+                "text": "Autonomous Vehicle"
+            },
+            {
+                "id": "default-tech-extra-207",
+                "text": "Drone Delivery"
+            },
+            {
+                "id": "default-tech-extra-208",
+                "text": "3D Scanning"
+            },
+            {
+                "id": "default-tech-extra-209",
+                "text": "Hologram"
+            },
+            {
+                "id": "default-tech-extra-211",
+                "text": "Wearable Tech"
+            },
+            {
+                "id": "default-tech-extra-212",
+                "text": "Fitness App"
+            },
+            {
+                "id": "default-tech-extra-213",
+                "text": "Digital Twin"
+            },
+            {
+                "id": "default-tech-extra-214",
+                "text": "Quantum Supremacy"
+            },
+            {
+                "id": "default-tech-extra-215",
+                "text": "Qubit"
+            },
+            {
+                "id": "default-tech-extra-216",
+                "text": "Exascale Computing"
+            },
+            {
+                "id": "default-tech-extra-217",
+                "text": "Edge Computing"
+            },
+            {
+                "id": "default-tech-extra-218",
+                "text": "5G Network"
+            },
+            {
+                "id": "default-tech-extra-219",
+                "text": "Li-Fi"
+            },
+            {
+                "id": "default-tech-extra-220",
+                "text": "Satellite Internet"
+            },
+            {
+                "id": "default-tech-extra-221",
+                "text": "Microchip"
+            },
+            {
+                "id": "default-tech-extra-222",
+                "text": "Semiconductor"
+            },
+            {
+                "id": "default-tech-extra-223",
+                "text": "Transistor"
+            },
+            {
+                "id": "default-tech-extra-224",
+                "text": "Circuit Board"
+            },
+            {
+                "id": "default-tech-extra-225",
+                "text": "Nanobot"
+            },
+            {
+                "id": "default-tech-extra-226",
+                "text": "Biotechnology"
+            },
+            {
+                "id": "default-tech-extra-227",
+                "text": "CRISPR"
+            },
+            {
+                "id": "default-tech-extra-228",
+                "text": "Gene Editing"
+            },
+            {
+                "id": "default-tech-extra-229",
+                "text": "Telemedicine"
+            },
+            {
+                "id": "default-tech-extra-230",
+                "text": "Health Tech"
+            },
+            {
+                "id": "default-tech-extra-231",
+                "text": "Smart City"
+            },
+            {
+                "id": "default-tech-extra-232",
+                "text": "Smart Grid"
+            },
+            {
+                "id": "default-tech-extra-233",
+                "text": "Renewable Energy"
+            },
+            {
+                "id": "default-tech-extra-234",
+                "text": "Carbon Capture"
+            },
+            {
+                "id": "default-tech-extra-235",
+                "text": "Space Tourism"
+            },
+            {
+                "id": "default-tech-extra-236",
+                "text": "Reusable Rocket"
+            },
+            {
+                "id": "default-tech-extra-237",
+                "text": "Hyperloop"
+            },
+            {
+                "id": "default-tech-extra-238",
+                "text": "Maglev"
+            },
+            {
+                "id": "default-tech-extra-239",
+                "text": "Electric Vehicle"
+            },
+            {
+                "id": "default-tech-extra-240",
+                "text": "Battery Swap"
+            },
+            {
+                "id": "default-tech-extra-241",
+                "text": "Solid State Battery"
+            },
+            {
+                "id": "default-tech-extra-242",
+                "text": "Graphene"
+            },
+            {
+                "id": "default-tech-extra-243",
+                "text": "Carbon Nanotube"
+            },
+            {
+                "id": "default-tech-extra-244",
+                "text": "Superconductor"
+            },
+            {
+                "id": "default-tech-extra-245",
+                "text": "Metamaterial"
+            },
+            {
+                "id": "default-tech-extra-246",
+                "text": "Brain-Computer Interface"
+            },
+            {
+                "id": "default-tech-extra-247",
+                "text": "Neuralink"
+            },
+            {
+                "id": "default-tech-extra-248",
+                "text": "Exoskeleton"
+            },
+            {
+                "id": "default-tech-extra-249",
+                "text": "Prosthetics"
+            },
+            {
+                "id": "default-tech-extra-250",
+                "text": "Bionics"
+            },
+            {
+                "id": "default-tech-extra-251",
+                "text": "Cybernetics"
+            },
+            {
+                "id": "default-tech-extra-252",
+                "text": "Robotics"
+            }
+        ],
+        "type": "default",
+        "color": "mint",
+        "symbolName": "laptopcomputer"
+    }
+]

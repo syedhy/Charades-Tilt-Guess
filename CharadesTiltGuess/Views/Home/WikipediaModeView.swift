@@ -50,16 +50,14 @@ struct WikipediaModeView: View {
         ZStack {
             DoodlePaperBackground()
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                    header
-                    content
-                }
-                .padding(.horizontal, 24)
-                .padding(.top, 4)
-                .padding(.bottom, 32)
+            VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
+                header
+                content
+                Spacer(minLength: 0)
             }
-            .scrollIndicators(.hidden)
+            .padding(.horizontal, 24)
+            .padding(.top, 4)
+            .padding(.bottom, 32)
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
@@ -79,8 +77,10 @@ struct WikipediaModeView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
 
                 Text(GameMode.wikipedia.title)
-                    .font(.system(size: 40, weight: .black, design: .rounded))
+                    .font(.system(size: 34, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
 
                 Text(GameMode.wikipedia.description)
                     .font(.system(size: 16, weight: .bold, design: .rounded))
@@ -161,8 +161,9 @@ struct WikipediaModeView: View {
                             }
                         }
                         .padding(.vertical, 4)
+                        .padding(.horizontal, 2)
                     }
-                    .frame(maxHeight: 180)
+                    .frame(maxHeight: .infinity)
                     .scrollIndicators(.hidden)
                 }
                 .padding(18)
@@ -195,17 +196,17 @@ private struct WikipediaTitlePill: View {
 
     var body: some View {
         Text(text)
-            .font(.system(size: 15, weight: .black, design: .rounded))
+            .font(.system(size: 14, weight: .black, design: .rounded))
             .foregroundStyle(AppTheme.Colors.ink)
             .lineLimit(1)
-            .minimumScaleFactor(0.72)
-            .padding(.horizontal, 13)
+            .minimumScaleFactor(0.5)
+            .padding(.horizontal, 16)
             .padding(.vertical, 8)
             .frame(maxWidth: .infinity)
             .background(AppTheme.Colors.paper, in: Capsule())
             .overlay {
                 Capsule()
-                    .stroke(AppTheme.Colors.ink.opacity(0.42), lineWidth: 2)
+                    .strokeBorder(AppTheme.Colors.ink.opacity(0.42), lineWidth: 2)
             }
     }
 }

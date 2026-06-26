@@ -16,11 +16,25 @@ class StoreKitManager: ObservableObject {
         "tip.large"
     ]
     
+    private var updatesTask: Task<Void, Never>? = nil
+    
     init() {
+        updatesTask = Task.detached {
+            for await update in Transaction.updates {
+                if case .verified(let transaction) = update {
+                    await transaction.finish()
+                }
+            }
+        }
+        
         Task {
             await fetchProducts()
             isLoadingProducts = false
         }
+    }
+    
+    deinit {
+        updatesTask?.cancel()
     }
     
     func fetchProducts() async {

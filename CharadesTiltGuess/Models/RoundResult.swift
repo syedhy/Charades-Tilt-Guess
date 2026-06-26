@@ -55,19 +55,11 @@ struct RoundResult: Hashable {
     }
 
     var title: String {
-        if mode == .hotPotato, wasTimeUp {
-            return "Holder loses"
-        }
 
         return wasTimeUp ? "Time up" : "Round complete"
     }
 
     var subtitle: String {
-        switch mode {
-        case .hotPotato:
-            return wasTimeUp ? "The current holder got caught." : "Round ended manually."
-        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .challengeCards, .wikipedia, .kids, .teamVsTeam:
-            return deck.name
-        }
+        return deck.name
     }
 }

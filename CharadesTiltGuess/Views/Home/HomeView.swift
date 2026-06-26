@@ -126,10 +126,6 @@ struct HomeView: View {
                 Text("Game Modes")
                     .font(.system(size: 30, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-
-                Text("Choose the rhythm for this round.")
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
 
             LazyVGrid(
@@ -162,8 +158,7 @@ struct HomeView: View {
             router.open(.teamMatchSelection)
         case .normal, .infinite, .kids:
             router.open(.modeDeckSelection(mode: mode))
-        case .hotPotato, .challengeCards:
-            break
+
         }
     }
 

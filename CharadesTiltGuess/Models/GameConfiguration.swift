@@ -36,18 +36,18 @@ struct GameConfiguration: Hashable, Identifiable {
     }
 
     var hidesTimer: Bool {
-        mode == .hotPotato
+        false
     }
 
     var repeatsWhenDeckExhausted: Bool {
         switch mode {
-        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .hotPotato, .challengeCards, .wikipedia, .kids, .teamVsTeam:
+        case .normal, .pasteAndPlay, .mixAndMatch, .infinite, .wikipedia, .kids, .teamVsTeam:
             return false
         }
     }
 
     var usesChallenges: Bool {
-        mode == .challengeCards
+        false
     }
 
     var displayDuration: Int {
@@ -82,14 +82,6 @@ struct GameConfiguration: Hashable, Identifiable {
 
     static func infinite(deck: Deck) -> GameConfiguration {
         GameConfiguration(mode: .infinite, deck: deck, duration: nil)
-    }
-
-    static func hotPotato(deck: Deck, hiddenDuration: Int) -> GameConfiguration {
-        GameConfiguration(mode: .hotPotato, deck: deck, duration: nil, hiddenDuration: hiddenDuration)
-    }
-
-    static func challengeCards(deck: Deck, duration: Int) -> GameConfiguration {
-        GameConfiguration(mode: .challengeCards, deck: deck, duration: duration)
     }
 
     static func wikipedia(deck: Deck, duration: Int) -> GameConfiguration {

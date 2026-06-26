@@ -1,0 +1,1012 @@
+[
+    {
+        "id": "default-cartoons",
+        "name": "Cartoons",
+        "description": "Animated icons for every age.",
+        "cards": [
+            {
+                "id": "default-cartoons-expanded-000",
+                "text": "SpongeBob"
+            },
+            {
+                "id": "default-cartoons-expanded-001",
+                "text": "Mickey Mouse"
+            },
+            {
+                "id": "default-cartoons-expanded-002",
+                "text": "Bugs Bunny"
+            },
+            {
+                "id": "default-cartoons-expanded-003",
+                "text": "Homer Simpson"
+            },
+            {
+                "id": "default-cartoons-expanded-004",
+                "text": "Tom and Jerry"
+            },
+            {
+                "id": "default-cartoons-expanded-005",
+                "text": "Scooby-Doo"
+            },
+            {
+                "id": "default-cartoons-expanded-006",
+                "text": "Pikachu"
+            },
+            {
+                "id": "default-cartoons-expanded-007",
+                "text": "Batman"
+            },
+            {
+                "id": "default-cartoons-expanded-008",
+                "text": "Spider-Man"
+            },
+            {
+                "id": "default-cartoons-expanded-009",
+                "text": "Superman"
+            },
+            {
+                "id": "default-cartoons-expanded-010",
+                "text": "Wonder Woman"
+            },
+            {
+                "id": "default-cartoons-expanded-011",
+                "text": "Iron Man"
+            },
+            {
+                "id": "default-cartoons-expanded-012",
+                "text": "Captain America"
+            },
+            {
+                "id": "default-cartoons-expanded-013",
+                "text": "Thor"
+            },
+            {
+                "id": "default-cartoons-expanded-014",
+                "text": "Hulk"
+            },
+            {
+                "id": "default-cartoons-expanded-015",
+                "text": "Black Widow"
+            },
+            {
+                "id": "default-cartoons-expanded-016",
+                "text": "Wolverine"
+            },
+            {
+                "id": "default-cartoons-expanded-017",
+                "text": "Cyclops"
+            },
+            {
+                "id": "default-cartoons-expanded-018",
+                "text": "Storm"
+            },
+            {
+                "id": "default-cartoons-expanded-019",
+                "text": "Rogue"
+            },
+            {
+                "id": "default-cartoons-expanded-020",
+                "text": "Gambit"
+            },
+            {
+                "id": "default-cartoons-expanded-021",
+                "text": "Beast"
+            },
+            {
+                "id": "default-cartoons-expanded-022",
+                "text": "Jean Grey"
+            },
+            {
+                "id": "default-cartoons-expanded-023",
+                "text": "Professor X"
+            },
+            {
+                "id": "default-cartoons-expanded-024",
+                "text": "Magneto"
+            },
+            {
+                "id": "default-cartoons-expanded-025",
+                "text": "Mystique"
+            },
+            {
+                "id": "default-cartoons-expanded-026",
+                "text": "Sabretooth"
+            },
+            {
+                "id": "default-cartoons-expanded-027",
+                "text": "Juggernaut"
+            },
+            {
+                "id": "default-cartoons-expanded-028",
+                "text": "Toad"
+            },
+            {
+                "id": "default-cartoons-expanded-029",
+                "text": "Blob"
+            },
+            {
+                "id": "default-cartoons-expanded-030",
+                "text": "Pyro"
+            },
+            {
+                "id": "default-cartoons-expanded-031",
+                "text": "Avalanche"
+            },
+            {
+                "id": "default-cartoons-expanded-032",
+                "text": "Destiny"
+            },
+            {
+                "id": "default-cartoons-expanded-033",
+                "text": "Mastermind"
+            },
+            {
+                "id": "default-cartoons-expanded-034",
+                "text": "Emma Frost"
+            },
+            {
+                "id": "default-cartoons-expanded-035",
+                "text": "Sebastian Shaw"
+            },
+            {
+                "id": "default-cartoons-expanded-036",
+                "text": "Donald Duck"
+            },
+            {
+                "id": "default-cartoons-expanded-037",
+                "text": "Goofy"
+            },
+            {
+                "id": "default-cartoons-expanded-038",
+                "text": "Pluto"
+            },
+            {
+                "id": "default-cartoons-expanded-039",
+                "text": "Minnie Mouse"
+            },
+            {
+                "id": "default-cartoons-expanded-040",
+                "text": "Daisy Duck"
+            },
+            {
+                "id": "default-cartoons-expanded-041",
+                "text": "Huey"
+            },
+            {
+                "id": "default-cartoons-expanded-042",
+                "text": "Dewey"
+            },
+            {
+                "id": "default-cartoons-expanded-043",
+                "text": "Louie"
+            },
+            {
+                "id": "default-cartoons-expanded-044",
+                "text": "Scrooge McDuck"
+            },
+            {
+                "id": "default-cartoons-expanded-045",
+                "text": "Launchpad McQuack"
+            },
+            {
+                "id": "default-cartoons-expanded-046",
+                "text": "Darkwing Duck"
+            },
+            {
+                "id": "default-cartoons-expanded-047",
+                "text": "Goliath"
+            },
+            {
+                "id": "default-cartoons-expanded-048",
+                "text": "Hudson"
+            },
+            {
+                "id": "default-cartoons-expanded-049",
+                "text": "Brooklyn"
+            },
+            {
+                "id": "default-cartoons-expanded-050",
+                "text": "Broadway"
+            },
+            {
+                "id": "default-cartoons-expanded-051",
+                "text": "Lexington"
+            },
+            {
+                "id": "default-cartoons-expanded-052",
+                "text": "Bronx"
+            },
+            {
+                "id": "default-cartoons-expanded-053",
+                "text": "Demona"
+            },
+            {
+                "id": "default-cartoons-expanded-054",
+                "text": "Macbeth"
+            },
+            {
+                "id": "default-cartoons-expanded-055",
+                "text": "Xanatos"
+            },
+            {
+                "id": "default-cartoons-expanded-056",
+                "text": "Eliza Maza"
+            },
+            {
+                "id": "default-cartoons-expanded-057",
+                "text": "Matt Bluestone"
+            },
+            {
+                "id": "default-cartoons-expanded-058",
+                "text": "Martin Hacker"
+            },
+            {
+                "id": "default-cartoons-expanded-059",
+                "text": "Arthur Pendragon"
+            },
+            {
+                "id": "default-cartoons-expanded-060",
+                "text": "Merlin"
+            },
+            {
+                "id": "default-cartoons-expanded-061",
+                "text": "Guenevere"
+            },
+            {
+                "id": "default-cartoons-expanded-062",
+                "text": "Lancelot"
+            },
+            {
+                "id": "default-cartoons-expanded-063",
+                "text": "Gawain"
+            },
+            {
+                "id": "default-cartoons-expanded-064",
+                "text": "Percival"
+            },
+            {
+                "id": "default-cartoons-expanded-065",
+                "text": "Galahad"
+            },
+            {
+                "id": "default-cartoons-expanded-066",
+                "text": "Tristan"
+            },
+            {
+                "id": "default-cartoons-expanded-067",
+                "text": "Isolde"
+            },
+            {
+                "id": "default-cartoons-expanded-068",
+                "text": "Morgan le Fay"
+            },
+            {
+                "id": "default-cartoons-expanded-069",
+                "text": "Mordred"
+            },
+            {
+                "id": "default-cartoons-expanded-070",
+                "text": "Robin Hood"
+            },
+            {
+                "id": "default-cartoons-expanded-071",
+                "text": "Little John"
+            },
+            {
+                "id": "default-cartoons-expanded-072",
+                "text": "Friar Tuck"
+            },
+            {
+                "id": "default-cartoons-expanded-073",
+                "text": "Will Scarlet"
+            },
+            {
+                "id": "default-cartoons-expanded-074",
+                "text": "Much the Miller's Son"
+            },
+            {
+                "id": "default-cartoons-expanded-075",
+                "text": "Alan-a-Dale"
+            },
+            {
+                "id": "default-cartoons-expanded-076",
+                "text": "Maid Marian"
+            },
+            {
+                "id": "default-cartoons-expanded-077",
+                "text": "Sheriff of Nottingham"
+            },
+            {
+                "id": "default-cartoons-expanded-078",
+                "text": "Prince John"
+            },
+            {
+                "id": "default-cartoons-expanded-079",
+                "text": "King Richard"
+            },
+            {
+                "id": "default-cartoons-expanded-080",
+                "text": "Peter Pan"
+            },
+            {
+                "id": "default-cartoons-expanded-081",
+                "text": "Wendy Darling"
+            },
+            {
+                "id": "default-cartoons-expanded-082",
+                "text": "John Darling"
+            },
+            {
+                "id": "default-cartoons-expanded-083",
+                "text": "Michael Darling"
+            },
+            {
+                "id": "default-cartoons-expanded-084",
+                "text": "Tinker Bell"
+            },
+            {
+                "id": "default-cartoons-expanded-085",
+                "text": "Captain Hook"
+            },
+            {
+                "id": "default-cartoons-expanded-086",
+                "text": "Mr Smee"
+            },
+            {
+                "id": "default-cartoons-expanded-087",
+                "text": "Tiger Lily"
+            },
+            {
+                "id": "default-cartoons-expanded-088",
+                "text": "Tick-Tock the Crocodile"
+            },
+            {
+                "id": "default-cartoons-expanded-089",
+                "text": "Aladdin"
+            },
+            {
+                "id": "default-cartoons-expanded-090",
+                "text": "Jasmine"
+            },
+            {
+                "id": "default-cartoons-expanded-091",
+                "text": "Genie"
+            },
+            {
+                "id": "default-cartoons-expanded-092",
+                "text": "Jafar"
+            },
+            {
+                "id": "default-cartoons-expanded-093",
+                "text": "Iago"
+            },
+            {
+                "id": "default-cartoons-expanded-094",
+                "text": "Abu"
+            },
+            {
+                "id": "default-cartoons-expanded-095",
+                "text": "Magic Carpet"
+            },
+            {
+                "id": "default-cartoons-expanded-096",
+                "text": "Sultan"
+            },
+            {
+                "id": "default-cartoons-expanded-097",
+                "text": "Rajah"
+            },
+            {
+                "id": "default-cartoons-expanded-098",
+                "text": "Hercules"
+            },
+            {
+                "id": "default-cartoons-expanded-099",
+                "text": "Megara"
+            },
+            {
+                "id": "default-cartoons-expanded-100",
+                "text": "Phil"
+            },
+            {
+                "id": "default-cartoons-expanded-101",
+                "text": "Pegasus"
+            },
+            {
+                "id": "default-cartoons-expanded-102",
+                "text": "Hades"
+            },
+            {
+                "id": "default-cartoons-expanded-103",
+                "text": "Pain"
+            },
+            {
+                "id": "default-cartoons-expanded-104",
+                "text": "Panic"
+            },
+            {
+                "id": "default-cartoons-expanded-105",
+                "text": "Zeus"
+            },
+            {
+                "id": "default-cartoons-expanded-106",
+                "text": "Hera"
+            },
+            {
+                "id": "default-cartoons-expanded-107",
+                "text": "Ares"
+            },
+            {
+                "id": "default-cartoons-expanded-108",
+                "text": "Athena"
+            },
+            {
+                "id": "default-cartoons-expanded-109",
+                "text": "Apollo"
+            },
+            {
+                "id": "default-cartoons-expanded-110",
+                "text": "Artemis"
+            },
+            {
+                "id": "default-cartoons-expanded-111",
+                "text": "Hermes"
+            },
+            {
+                "id": "default-cartoons-expanded-112",
+                "text": "Aphrodite"
+            },
+            {
+                "id": "default-cartoons-expanded-113",
+                "text": "Hephaestus"
+            },
+            {
+                "id": "default-cartoons-expanded-114",
+                "text": "Poseidon"
+            },
+            {
+                "id": "default-cartoons-expanded-115",
+                "text": "Demeter"
+            },
+            {
+                "id": "default-cartoons-expanded-116",
+                "text": "Dionysus"
+            },
+            {
+                "id": "default-cartoons-expanded-117",
+                "text": "Hestia"
+            },
+            {
+                "id": "default-cartoons-expanded-118",
+                "text": "Persephone"
+            },
+            {
+                "id": "default-cartoons-expanded-119",
+                "text": "Eros"
+            },
+            {
+                "id": "default-cartoons-expanded-120",
+                "text": "Mulan"
+            },
+            {
+                "id": "default-cartoons-expanded-121",
+                "text": "Mushu"
+            },
+            {
+                "id": "default-cartoons-expanded-122",
+                "text": "Cri-Kee"
+            },
+            {
+                "id": "default-cartoons-expanded-123",
+                "text": "Shang"
+            },
+            {
+                "id": "default-cartoons-expanded-124",
+                "text": "Shan Yu"
+            },
+            {
+                "id": "default-cartoons-expanded-125",
+                "text": "Emperor"
+            },
+            {
+                "id": "default-cartoons-expanded-126",
+                "text": "Yao"
+            },
+            {
+                "id": "default-cartoons-expanded-127",
+                "text": "Ling"
+            },
+            {
+                "id": "default-cartoons-expanded-128",
+                "text": "Chien-Po"
+            },
+            {
+                "id": "default-cartoons-expanded-129",
+                "text": "Fa Zhou"
+            },
+            {
+                "id": "default-cartoons-expanded-130",
+                "text": "Fa Li"
+            },
+            {
+                "id": "default-cartoons-expanded-131",
+                "text": "Grandmother Fa"
+            },
+            {
+                "id": "default-cartoons-expanded-132",
+                "text": "Matchmaker"
+            },
+            {
+                "id": "default-cartoons-expanded-133",
+                "text": "Tarzan"
+            },
+            {
+                "id": "default-cartoons-expanded-134",
+                "text": "Jane"
+            },
+            {
+                "id": "default-cartoons-expanded-135",
+                "text": "Terk"
+            },
+            {
+                "id": "default-cartoons-expanded-136",
+                "text": "Tantor"
+            },
+            {
+                "id": "default-cartoons-expanded-137",
+                "text": "Kala"
+            },
+            {
+                "id": "default-cartoons-expanded-138",
+                "text": "Kerchak"
+            },
+            {
+                "id": "default-cartoons-expanded-139",
+                "text": "Clayton"
+            },
+            {
+                "id": "default-cartoons-expanded-140",
+                "text": "Professor Porter"
+            },
+            {
+                "id": "default-cartoons-expanded-141",
+                "text": "Simba"
+            },
+            {
+                "id": "default-cartoons-expanded-142",
+                "text": "Nala"
+            },
+            {
+                "id": "default-cartoons-expanded-143",
+                "text": "Mufasa"
+            },
+            {
+                "id": "default-cartoons-expanded-144",
+                "text": "Sarabi"
+            },
+            {
+                "id": "default-cartoons-expanded-145",
+                "text": "Scar"
+            },
+            {
+                "id": "default-cartoons-expanded-146",
+                "text": "Shenzi"
+            },
+            {
+                "id": "default-cartoons-expanded-147",
+                "text": "Banzai"
+            },
+            {
+                "id": "default-cartoons-expanded-148",
+                "text": "Ed"
+            },
+            {
+                "id": "default-cartoons-expanded-149",
+                "text": "Timon"
+            },
+            {
+                "id": "default-cartoons-expanded-150",
+                "text": "Pumbaa"
+            },
+            {
+                "id": "default-cartoons-expanded-151",
+                "text": "Rafiki"
+            },
+            {
+                "id": "default-cartoons-expanded-152",
+                "text": "Zazu"
+            },
+            {
+                "id": "default-cartoons-expanded-153",
+                "text": "Pocahontas"
+            },
+            {
+                "id": "default-cartoons-expanded-154",
+                "text": "John Smith"
+            },
+            {
+                "id": "default-cartoons-expanded-155",
+                "text": "Meeko"
+            },
+            {
+                "id": "default-cartoons-expanded-156",
+                "text": "Flit"
+            },
+            {
+                "id": "default-cartoons-expanded-157",
+                "text": "Percy"
+            },
+            {
+                "id": "default-cartoons-expanded-158",
+                "text": "Chief Powhatan"
+            },
+            {
+                "id": "default-cartoons-expanded-159",
+                "text": "Nakoma"
+            },
+            {
+                "id": "default-cartoons-expanded-160",
+                "text": "Kocoum"
+            },
+            {
+                "id": "default-cartoons-expanded-161",
+                "text": "Governor Ratcliffe"
+            },
+            {
+                "id": "default-cartoons-expanded-162",
+                "text": "Thomas"
+            },
+            {
+                "id": "default-cartoons-expanded-163",
+                "text": "Ariel"
+            },
+            {
+                "id": "default-cartoons-expanded-164",
+                "text": "Flounder"
+            },
+            {
+                "id": "default-cartoons-expanded-165",
+                "text": "Sebastian"
+            },
+            {
+                "id": "default-cartoons-expanded-166",
+                "text": "Scuttle"
+            },
+            {
+                "id": "default-cartoons-expanded-167",
+                "text": "Ursula"
+            },
+            {
+                "id": "default-cartoons-expanded-168",
+                "text": "King Triton"
+            },
+            {
+                "id": "default-cartoons-expanded-169",
+                "text": "Prince Eric"
+            },
+            {
+                "id": "default-cartoons-expanded-170",
+                "text": "Grimsby"
+            },
+            {
+                "id": "default-cartoons-expanded-171",
+                "text": "Carlotta"
+            },
+            {
+                "id": "default-cartoons-expanded-172",
+                "text": "Chef Louis"
+            },
+            {
+                "id": "default-cartoons-expanded-173",
+                "text": "Flotsam"
+            },
+            {
+                "id": "default-cartoons-expanded-174",
+                "text": "Jetsam"
+            },
+            {
+                "id": "default-cartoons-expanded-175",
+                "text": "Belle"
+            },
+            {
+                "id": "default-cartoons-expanded-177",
+                "text": "Gaston"
+            },
+            {
+                "id": "default-cartoons-expanded-178",
+                "text": "Lefou"
+            },
+            {
+                "id": "default-cartoons-expanded-179",
+                "text": "Maurice"
+            },
+            {
+                "id": "default-cartoons-expanded-180",
+                "text": "Lumiere"
+            },
+            {
+                "id": "default-cartoons-expanded-181",
+                "text": "Cogsworth"
+            },
+            {
+                "id": "default-cartoons-expanded-182",
+                "text": "Mrs Potts"
+            },
+            {
+                "id": "default-cartoons-expanded-183",
+                "text": "Chip"
+            },
+            {
+                "id": "default-cartoons-expanded-184",
+                "text": "Featherduster"
+            },
+            {
+                "id": "default-cartoons-expanded-185",
+                "text": "Wardrobe"
+            },
+            {
+                "id": "default-cartoons-expanded-186",
+                "text": "Stove"
+            },
+            {
+                "id": "default-cartoons-expanded-187",
+                "text": "Cinderella"
+            },
+            {
+                "id": "default-cartoons-expanded-188",
+                "text": "Prince Charming"
+            },
+            {
+                "id": "default-cartoons-expanded-189",
+                "text": "Fairy Godmother"
+            },
+            {
+                "id": "default-cartoons-expanded-190",
+                "text": "Lady Tremaine"
+            },
+            {
+                "id": "default-cartoons-expanded-191",
+                "text": "Anastasia"
+            },
+            {
+                "id": "default-cartoons-expanded-192",
+                "text": "Drizella"
+            },
+            {
+                "id": "default-cartoons-expanded-193",
+                "text": "Jaq"
+            },
+            {
+                "id": "default-cartoons-expanded-194",
+                "text": "Gus"
+            },
+            {
+                "id": "default-cartoons-expanded-195",
+                "text": "Lucifer"
+            },
+            {
+                "id": "default-cartoons-expanded-196",
+                "text": "Bruno"
+            },
+            {
+                "id": "default-cartoons-expanded-197",
+                "text": "Major"
+            },
+            {
+                "id": "default-cartoons-expanded-198",
+                "text": "Aurora"
+            },
+            {
+                "id": "default-cartoons-expanded-199",
+                "text": "Prince Phillip"
+            },
+            {
+                "id": "default-cartoons-expanded-200",
+                "text": "Flora"
+            },
+            {
+                "id": "default-cartoons-expanded-201",
+                "text": "Fauna"
+            },
+            {
+                "id": "default-cartoons-expanded-202",
+                "text": "Merryweather"
+            },
+            {
+                "id": "default-cartoons-expanded-203",
+                "text": "Maleficent"
+            },
+            {
+                "id": "default-cartoons-expanded-204",
+                "text": "Diablo"
+            },
+            {
+                "id": "default-cartoons-expanded-205",
+                "text": "King Stefan"
+            },
+            {
+                "id": "default-cartoons-expanded-206",
+                "text": "Queen Leah"
+            },
+            {
+                "id": "default-cartoons-expanded-207",
+                "text": "King Hubert"
+            },
+            {
+                "id": "default-cartoons-expanded-208",
+                "text": "Snow White"
+            },
+            {
+                "id": "default-cartoons-expanded-209",
+                "text": "Prince"
+            },
+            {
+                "id": "default-cartoons-expanded-210",
+                "text": "Evil Queen"
+            },
+            {
+                "id": "default-cartoons-expanded-211",
+                "text": "Magic Mirror"
+            },
+            {
+                "id": "default-cartoons-expanded-212",
+                "text": "Huntsman"
+            },
+            {
+                "id": "default-cartoons-expanded-213",
+                "text": "Doc"
+            },
+            {
+                "id": "default-cartoons-expanded-214",
+                "text": "Grumpy"
+            },
+            {
+                "id": "default-cartoons-expanded-215",
+                "text": "Happy"
+            },
+            {
+                "id": "default-cartoons-expanded-216",
+                "text": "Sleepy"
+            },
+            {
+                "id": "default-cartoons-expanded-217",
+                "text": "Bashful"
+            },
+            {
+                "id": "default-cartoons-expanded-218",
+                "text": "Sneezy"
+            },
+            {
+                "id": "default-cartoons-expanded-219",
+                "text": "Dopey"
+            },
+            {
+                "id": "default-cartoons-extra-221",
+                "text": "Daffy Duck"
+            },
+            {
+                "id": "default-cartoons-extra-222",
+                "text": "Porky Pig"
+            },
+            {
+                "id": "default-cartoons-extra-223",
+                "text": "Elmer Fudd"
+            },
+            {
+                "id": "default-cartoons-extra-224",
+                "text": "Tweety"
+            },
+            {
+                "id": "default-cartoons-extra-225",
+                "text": "Sylvester"
+            },
+            {
+                "id": "default-cartoons-extra-226",
+                "text": "Wile E. Coyote"
+            },
+            {
+                "id": "default-cartoons-extra-227",
+                "text": "Road Runner"
+            },
+            {
+                "id": "default-cartoons-extra-228",
+                "text": "Yosemite Sam"
+            },
+            {
+                "id": "default-cartoons-extra-229",
+                "text": "Foghorn Leghorn"
+            },
+            {
+                "id": "default-cartoons-extra-230",
+                "text": "Marvin the Martian"
+            },
+            {
+                "id": "default-cartoons-extra-231",
+                "text": "Pepe Le Pew"
+            },
+            {
+                "id": "default-cartoons-extra-232",
+                "text": "Speedy Gonzales"
+            },
+            {
+                "id": "default-cartoons-extra-233",
+                "text": "Tasmanian Devil"
+            },
+            {
+                "id": "default-cartoons-extra-234",
+                "text": "Granny"
+            },
+            {
+                "id": "default-cartoons-extra-235",
+                "text": "Gossamer"
+            },
+            {
+                "id": "default-cartoons-extra-236",
+                "text": "Michigan J. Frog"
+            },
+            {
+                "id": "default-cartoons-extra-243",
+                "text": "Pete"
+            },
+            {
+                "id": "default-cartoons-extra-244",
+                "text": "Clarabelle Cow"
+            },
+            {
+                "id": "default-cartoons-extra-245",
+                "text": "Horace Horsecollar"
+            },
+            {
+                "id": "default-cartoons-extra-250",
+                "text": "Webby Vanderquack"
+            },
+            {
+                "id": "default-cartoons-extra-292",
+                "text": "Mr. Smee"
+            },
+            {
+                "id": "default-cartoons-patch-240",
+                "text": "Rick"
+            },
+            {
+                "id": "default-cartoons-patch-241",
+                "text": "Morty"
+            },
+            {
+                "id": "default-cartoons-patch-242",
+                "text": "Summer"
+            },
+            {
+                "id": "default-cartoons-patch-243",
+                "text": "Beth"
+            },
+            {
+                "id": "default-cartoons-patch-244",
+                "text": "Jerry"
+            },
+            {
+                "id": "default-cartoons-patch-245",
+                "text": "Homer"
+            },
+            {
+                "id": "default-cartoons-patch-246",
+                "text": "Marge"
+            },
+            {
+                "id": "default-cartoons-patch-247",
+                "text": "Bart"
+            },
+            {
+                "id": "default-cartoons-patch-248",
+                "text": "Lisa"
+            },
+            {
+                "id": "default-cartoons-patch-249",
+                "text": "Maggie"
+            }
+        ],
+        "type": "default",
+        "color": "yellow",
+        "symbolName": "wand.and.stars"
+    }
+]

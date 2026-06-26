@@ -64,7 +64,7 @@ struct DeckEditorView: View {
                 .foregroundStyle(AppTheme.Colors.ink)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("Name it, color it, then fill it with cards.")
+            Text("Name it! Color it! then fill it with cards")
                 .font(.system(size: 15, weight: .bold, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
         }
@@ -85,7 +85,7 @@ struct DeckEditorView: View {
                 Text("Starter shell")
                     .font(.system(size: 18, weight: .black, design: .rounded))
 
-                Text("Cards are coming next. For now, this saves the deck identity locally.")
+                Text("This is how your Deck\nwill look when it's ready")
                     .font(.system(size: 13, weight: .bold, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.62))
                     .fixedSize(horizontal: false, vertical: true)

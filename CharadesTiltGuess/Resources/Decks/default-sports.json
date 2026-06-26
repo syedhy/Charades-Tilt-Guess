@@ -1,0 +1,1012 @@
+[
+    {
+        "id": "default-sports",
+        "name": "Sports",
+        "description": "Games, athletes, and action-packed clues.",
+        "cards": [
+            {
+                "id": "default-sports-expanded-000",
+                "text": "Soccer"
+            },
+            {
+                "id": "default-sports-expanded-001",
+                "text": "Basketball"
+            },
+            {
+                "id": "default-sports-expanded-002",
+                "text": "Tennis"
+            },
+            {
+                "id": "default-sports-expanded-003",
+                "text": "Baseball"
+            },
+            {
+                "id": "default-sports-expanded-004",
+                "text": "Golf"
+            },
+            {
+                "id": "default-sports-expanded-005",
+                "text": "Football"
+            },
+            {
+                "id": "default-sports-expanded-006",
+                "text": "Volleyball"
+            },
+            {
+                "id": "default-sports-expanded-007",
+                "text": "Hockey"
+            },
+            {
+                "id": "default-sports-expanded-008",
+                "text": "Cricket"
+            },
+            {
+                "id": "default-sports-expanded-009",
+                "text": "Rugby"
+            },
+            {
+                "id": "default-sports-expanded-010",
+                "text": "Boxing"
+            },
+            {
+                "id": "default-sports-expanded-011",
+                "text": "Wrestling"
+            },
+            {
+                "id": "default-sports-expanded-012",
+                "text": "MMA"
+            },
+            {
+                "id": "default-sports-expanded-013",
+                "text": "Karate"
+            },
+            {
+                "id": "default-sports-expanded-014",
+                "text": "Judo"
+            },
+            {
+                "id": "default-sports-expanded-015",
+                "text": "Taekwondo"
+            },
+            {
+                "id": "default-sports-expanded-016",
+                "text": "Fencing"
+            },
+            {
+                "id": "default-sports-expanded-017",
+                "text": "Archery"
+            },
+            {
+                "id": "default-sports-expanded-018",
+                "text": "Shooting"
+            },
+            {
+                "id": "default-sports-expanded-019",
+                "text": "Weightlifting"
+            },
+            {
+                "id": "default-sports-expanded-020",
+                "text": "Powerlifting"
+            },
+            {
+                "id": "default-sports-expanded-021",
+                "text": "Bodybuilding"
+            },
+            {
+                "id": "default-sports-expanded-022",
+                "text": "Gymnastics"
+            },
+            {
+                "id": "default-sports-expanded-023",
+                "text": "Figure Skating"
+            },
+            {
+                "id": "default-sports-expanded-024",
+                "text": "Speed Skating"
+            },
+            {
+                "id": "default-sports-expanded-025",
+                "text": "Skiing"
+            },
+            {
+                "id": "default-sports-expanded-026",
+                "text": "Snowboarding"
+            },
+            {
+                "id": "default-sports-expanded-027",
+                "text": "Surfing"
+            },
+            {
+                "id": "default-sports-expanded-028",
+                "text": "Skateboarding"
+            },
+            {
+                "id": "default-sports-expanded-029",
+                "text": "BMX"
+            },
+            {
+                "id": "default-sports-expanded-030",
+                "text": "Motocross"
+            },
+            {
+                "id": "default-sports-expanded-031",
+                "text": "Auto Racing"
+            },
+            {
+                "id": "default-sports-expanded-032",
+                "text": "Formula 1"
+            },
+            {
+                "id": "default-sports-expanded-033",
+                "text": "NASCAR"
+            },
+            {
+                "id": "default-sports-expanded-034",
+                "text": "IndyCar"
+            },
+            {
+                "id": "default-sports-expanded-035",
+                "text": "Rally"
+            },
+            {
+                "id": "default-sports-expanded-036",
+                "text": "Karting"
+            },
+            {
+                "id": "default-sports-expanded-037",
+                "text": "Cycling"
+            },
+            {
+                "id": "default-sports-expanded-038",
+                "text": "Mountain Biking"
+            },
+            {
+                "id": "default-sports-expanded-039",
+                "text": "Track and Field"
+            },
+            {
+                "id": "default-sports-expanded-040",
+                "text": "Marathon"
+            },
+            {
+                "id": "default-sports-expanded-041",
+                "text": "Sprint"
+            },
+            {
+                "id": "default-sports-expanded-042",
+                "text": "Hurdles"
+            },
+            {
+                "id": "default-sports-expanded-043",
+                "text": "Relay"
+            },
+            {
+                "id": "default-sports-expanded-044",
+                "text": "Long Jump"
+            },
+            {
+                "id": "default-sports-expanded-045",
+                "text": "High Jump"
+            },
+            {
+                "id": "default-sports-expanded-046",
+                "text": "Triple Jump"
+            },
+            {
+                "id": "default-sports-expanded-047",
+                "text": "Pole Vault"
+            },
+            {
+                "id": "default-sports-expanded-048",
+                "text": "Shot Put"
+            },
+            {
+                "id": "default-sports-expanded-049",
+                "text": "Discus"
+            },
+            {
+                "id": "default-sports-expanded-050",
+                "text": "Javelin"
+            },
+            {
+                "id": "default-sports-expanded-051",
+                "text": "Hammer Throw"
+            },
+            {
+                "id": "default-sports-expanded-052",
+                "text": "Decathlon"
+            },
+            {
+                "id": "default-sports-expanded-053",
+                "text": "Heptathlon"
+            },
+            {
+                "id": "default-sports-expanded-054",
+                "text": "Triathlon"
+            },
+            {
+                "id": "default-sports-expanded-055",
+                "text": "Ironman"
+            },
+            {
+                "id": "default-sports-expanded-056",
+                "text": "Swimming"
+            },
+            {
+                "id": "default-sports-expanded-057",
+                "text": "Diving"
+            },
+            {
+                "id": "default-sports-expanded-058",
+                "text": "Water Polo"
+            },
+            {
+                "id": "default-sports-expanded-059",
+                "text": "Rowing"
+            },
+            {
+                "id": "default-sports-expanded-060",
+                "text": "Canoeing"
+            },
+            {
+                "id": "default-sports-expanded-061",
+                "text": "Kayaking"
+            },
+            {
+                "id": "default-sports-expanded-062",
+                "text": "Sailing"
+            },
+            {
+                "id": "default-sports-expanded-063",
+                "text": "Windsurfing"
+            },
+            {
+                "id": "default-sports-expanded-064",
+                "text": "Kitesurfing"
+            },
+            {
+                "id": "default-sports-expanded-065",
+                "text": "Badminton"
+            },
+            {
+                "id": "default-sports-expanded-066",
+                "text": "Table Tennis"
+            },
+            {
+                "id": "default-sports-expanded-067",
+                "text": "Squash"
+            },
+            {
+                "id": "default-sports-expanded-068",
+                "text": "Racquetball"
+            },
+            {
+                "id": "default-sports-expanded-069",
+                "text": "Handball"
+            },
+            {
+                "id": "default-sports-expanded-070",
+                "text": "Lacrosse"
+            },
+            {
+                "id": "default-sports-expanded-071",
+                "text": "Field Hockey"
+            },
+            {
+                "id": "default-sports-expanded-072",
+                "text": "Ice Hockey"
+            },
+            {
+                "id": "default-sports-expanded-073",
+                "text": "Bandy"
+            },
+            {
+                "id": "default-sports-expanded-074",
+                "text": "Curling"
+            },
+            {
+                "id": "default-sports-expanded-075",
+                "text": "Bobsleigh"
+            },
+            {
+                "id": "default-sports-expanded-076",
+                "text": "Skeleton"
+            },
+            {
+                "id": "default-sports-expanded-077",
+                "text": "Luge"
+            },
+            {
+                "id": "default-sports-expanded-078",
+                "text": "Ski Jumping"
+            },
+            {
+                "id": "default-sports-expanded-079",
+                "text": "Biathlon"
+            },
+            {
+                "id": "default-sports-expanded-080",
+                "text": "Cross-Country Skiing"
+            },
+            {
+                "id": "default-sports-expanded-081",
+                "text": "Alpine Skiing"
+            },
+            {
+                "id": "default-sports-expanded-082",
+                "text": "Freestyle Skiing"
+            },
+            {
+                "id": "default-sports-expanded-083",
+                "text": "Snowmobiling"
+            },
+            {
+                "id": "default-sports-expanded-084",
+                "text": "Dog Sledding"
+            },
+            {
+                "id": "default-sports-expanded-085",
+                "text": "Equestrian"
+            },
+            {
+                "id": "default-sports-expanded-086",
+                "text": "Horse Racing"
+            },
+            {
+                "id": "default-sports-expanded-087",
+                "text": "Polo"
+            },
+            {
+                "id": "default-sports-expanded-088",
+                "text": "Rodeo"
+            },
+            {
+                "id": "default-sports-expanded-089",
+                "text": "Bull Riding"
+            },
+            {
+                "id": "default-sports-expanded-090",
+                "text": "Dressage"
+            },
+            {
+                "id": "default-sports-expanded-091",
+                "text": "Show Jumping"
+            },
+            {
+                "id": "default-sports-expanded-092",
+                "text": "Eventing"
+            },
+            {
+                "id": "default-sports-expanded-093",
+                "text": "Gymkhana"
+            },
+            {
+                "id": "default-sports-expanded-094",
+                "text": "Vaulting"
+            },
+            {
+                "id": "default-sports-expanded-095",
+                "text": "Endurance"
+            },
+            {
+                "id": "default-sports-expanded-096",
+                "text": "Darts"
+            },
+            {
+                "id": "default-sports-expanded-097",
+                "text": "Billiards"
+            },
+            {
+                "id": "default-sports-expanded-098",
+                "text": "Pool"
+            },
+            {
+                "id": "default-sports-expanded-099",
+                "text": "Snooker"
+            },
+            {
+                "id": "default-sports-expanded-100",
+                "text": "Bowling"
+            },
+            {
+                "id": "default-sports-expanded-101",
+                "text": "Bocce"
+            },
+            {
+                "id": "default-sports-expanded-102",
+                "text": "Petanque"
+            },
+            {
+                "id": "default-sports-expanded-103",
+                "text": "Croquet"
+            },
+            {
+                "id": "default-sports-expanded-104",
+                "text": "Gateball"
+            },
+            {
+                "id": "default-sports-expanded-105",
+                "text": "Woodball"
+            },
+            {
+                "id": "default-sports-expanded-107",
+                "text": "Mini Golf"
+            },
+            {
+                "id": "default-sports-expanded-108",
+                "text": "Frisbee"
+            },
+            {
+                "id": "default-sports-expanded-109",
+                "text": "Ultimate Frisbee"
+            },
+            {
+                "id": "default-sports-expanded-110",
+                "text": "Disc Golf"
+            },
+            {
+                "id": "default-sports-expanded-111",
+                "text": "Boomerang"
+            },
+            {
+                "id": "default-sports-expanded-112",
+                "text": "Kite Flying"
+            },
+            {
+                "id": "default-sports-expanded-113",
+                "text": "Tug of War"
+            },
+            {
+                "id": "default-sports-expanded-114",
+                "text": "Arm Wrestling"
+            },
+            {
+                "id": "default-sports-expanded-115",
+                "text": "Sumo"
+            },
+            {
+                "id": "default-sports-expanded-116",
+                "text": "Kabaddi"
+            },
+            {
+                "id": "default-sports-expanded-117",
+                "text": "Sepak Takraw"
+            },
+            {
+                "id": "default-sports-expanded-118",
+                "text": "Bossaball"
+            },
+            {
+                "id": "default-sports-expanded-119",
+                "text": "Footvolley"
+            },
+            {
+                "id": "default-sports-expanded-120",
+                "text": "Beach Volleyball"
+            },
+            {
+                "id": "default-sports-expanded-121",
+                "text": "Beach Soccer"
+            },
+            {
+                "id": "default-sports-expanded-122",
+                "text": "Water Skiing"
+            },
+            {
+                "id": "default-sports-expanded-123",
+                "text": "Wakeboarding"
+            },
+            {
+                "id": "default-sports-expanded-124",
+                "text": "Kneeboarding"
+            },
+            {
+                "id": "default-sports-expanded-125",
+                "text": "Barefoot Skiing"
+            },
+            {
+                "id": "default-sports-expanded-126",
+                "text": "Parasailing"
+            },
+            {
+                "id": "default-sports-expanded-127",
+                "text": "Paragliding"
+            },
+            {
+                "id": "default-sports-expanded-128",
+                "text": "Hang Gliding"
+            },
+            {
+                "id": "default-sports-expanded-129",
+                "text": "Skydiving"
+            },
+            {
+                "id": "default-sports-expanded-130",
+                "text": "BASE Jumping"
+            },
+            {
+                "id": "default-sports-expanded-131",
+                "text": "Bungee Jumping"
+            },
+            {
+                "id": "default-sports-expanded-132",
+                "text": "Rock Climbing"
+            },
+            {
+                "id": "default-sports-expanded-133",
+                "text": "Bouldering"
+            },
+            {
+                "id": "default-sports-expanded-134",
+                "text": "Mountaineering"
+            },
+            {
+                "id": "default-sports-expanded-135",
+                "text": "Alpinism"
+            },
+            {
+                "id": "default-sports-expanded-136",
+                "text": "Ice Climbing"
+            },
+            {
+                "id": "default-sports-expanded-137",
+                "text": "Canyoning"
+            },
+            {
+                "id": "default-sports-expanded-138",
+                "text": "Caving"
+            },
+            {
+                "id": "default-sports-expanded-139",
+                "text": "Spelunking"
+            },
+            {
+                "id": "default-sports-expanded-140",
+                "text": "Parkour"
+            },
+            {
+                "id": "default-sports-expanded-141",
+                "text": "Freerunning"
+            },
+            {
+                "id": "default-sports-expanded-143",
+                "text": "Trampolining"
+            },
+            {
+                "id": "default-sports-expanded-144",
+                "text": "Tumbling"
+            },
+            {
+                "id": "default-sports-expanded-145",
+                "text": "Cheerleading"
+            },
+            {
+                "id": "default-sports-expanded-146",
+                "text": "Acrobatics"
+            },
+            {
+                "id": "default-sports-expanded-147",
+                "text": "Juggling"
+            },
+            {
+                "id": "default-sports-expanded-148",
+                "text": "Baton Twirling"
+            },
+            {
+                "id": "default-sports-expanded-149",
+                "text": "Color Guard"
+            },
+            {
+                "id": "default-sports-expanded-150",
+                "text": "Marching Band"
+            },
+            {
+                "id": "default-sports-expanded-151",
+                "text": "Drum and Bugle Corps"
+            },
+            {
+                "id": "default-sports-expanded-152",
+                "text": "Drill Team"
+            },
+            {
+                "id": "default-sports-expanded-153",
+                "text": "Dance"
+            },
+            {
+                "id": "default-sports-expanded-154",
+                "text": "Ballet"
+            },
+            {
+                "id": "default-sports-expanded-155",
+                "text": "Tap"
+            },
+            {
+                "id": "default-sports-expanded-156",
+                "text": "Jazz"
+            },
+            {
+                "id": "default-sports-expanded-157",
+                "text": "Hip Hop"
+            },
+            {
+                "id": "default-sports-expanded-158",
+                "text": "Contemporary"
+            },
+            {
+                "id": "default-sports-expanded-159",
+                "text": "Modern"
+            },
+            {
+                "id": "default-sports-expanded-160",
+                "text": "Lyrical"
+            },
+            {
+                "id": "default-sports-expanded-161",
+                "text": "Ballroom"
+            },
+            {
+                "id": "default-sports-expanded-162",
+                "text": "Latin"
+            },
+            {
+                "id": "default-sports-expanded-163",
+                "text": "Swing"
+            },
+            {
+                "id": "default-sports-expanded-164",
+                "text": "Salsa"
+            },
+            {
+                "id": "default-sports-expanded-165",
+                "text": "Tango"
+            },
+            {
+                "id": "default-sports-expanded-166",
+                "text": "Waltz"
+            },
+            {
+                "id": "default-sports-expanded-167",
+                "text": "Foxtrot"
+            },
+            {
+                "id": "default-sports-expanded-168",
+                "text": "Quickstep"
+            },
+            {
+                "id": "default-sports-expanded-169",
+                "text": "Rumba"
+            },
+            {
+                "id": "default-sports-expanded-170",
+                "text": "Cha Cha"
+            },
+            {
+                "id": "default-sports-expanded-171",
+                "text": "Samba"
+            },
+            {
+                "id": "default-sports-expanded-172",
+                "text": "Jive"
+            },
+            {
+                "id": "default-sports-expanded-173",
+                "text": "Paso Doble"
+            },
+            {
+                "id": "default-sports-expanded-174",
+                "text": "Mambo"
+            },
+            {
+                "id": "default-sports-expanded-175",
+                "text": "Merengue"
+            },
+            {
+                "id": "default-sports-expanded-176",
+                "text": "Bachata"
+            },
+            {
+                "id": "default-sports-expanded-177",
+                "text": "Cumbia"
+            },
+            {
+                "id": "default-sports-expanded-178",
+                "text": "Reggaeton"
+            },
+            {
+                "id": "default-sports-expanded-179",
+                "text": "Zumba"
+            },
+            {
+                "id": "default-sports-expanded-180",
+                "text": "Aerobics"
+            },
+            {
+                "id": "default-sports-expanded-181",
+                "text": "Pilates"
+            },
+            {
+                "id": "default-sports-expanded-182",
+                "text": "Yoga"
+            },
+            {
+                "id": "default-sports-expanded-183",
+                "text": "Tai Chi"
+            },
+            {
+                "id": "default-sports-expanded-184",
+                "text": "Qigong"
+            },
+            {
+                "id": "default-sports-expanded-185",
+                "text": "Martial Arts"
+            },
+            {
+                "id": "default-sports-extra-200",
+                "text": "Short Track"
+            },
+            {
+                "id": "default-sports-extra-201",
+                "text": "Synchronized Skating"
+            },
+            {
+                "id": "default-sports-extra-204",
+                "text": "Ringette"
+            },
+            {
+                "id": "default-sports-extra-205",
+                "text": "Broomball"
+            },
+            {
+                "id": "default-sports-extra-208",
+                "text": "Telemark Skiing"
+            },
+            {
+                "id": "default-sports-extra-209",
+                "text": "Skijoring"
+            },
+            {
+                "id": "default-sports-extra-210",
+                "text": "Snowkiting"
+            },
+            {
+                "id": "default-sports-extra-211",
+                "text": "Ice Fishing"
+            },
+            {
+                "id": "default-sports-extra-212",
+                "text": "Ice Sailing"
+            },
+            {
+                "id": "default-sports-extra-213",
+                "text": "Ice Yachting"
+            },
+            {
+                "id": "default-sports-extra-214",
+                "text": "Ice Speedway"
+            },
+            {
+                "id": "default-sports-extra-215",
+                "text": "Ice Racing"
+            },
+            {
+                "id": "default-sports-extra-216",
+                "text": "Ice Canoeing"
+            },
+            {
+                "id": "default-sports-extra-217",
+                "text": "Ice Boating"
+            },
+            {
+                "id": "default-sports-extra-218",
+                "text": "Ice Surfing"
+            },
+            {
+                "id": "default-sports-extra-220",
+                "text": "Ice Diving"
+            },
+            {
+                "id": "default-sports-extra-221",
+                "text": "Ice Swimming"
+            },
+            {
+                "id": "default-sports-extra-222",
+                "text": "Ice Golf"
+            },
+            {
+                "id": "default-sports-extra-223",
+                "text": "Ice Tennis"
+            },
+            {
+                "id": "default-sports-extra-224",
+                "text": "Ice Volleyball"
+            },
+            {
+                "id": "default-sports-extra-225",
+                "text": "Ice Baseball"
+            },
+            {
+                "id": "default-sports-extra-226",
+                "text": "Ice Football"
+            },
+            {
+                "id": "default-sports-extra-227",
+                "text": "Ice Rugby"
+            },
+            {
+                "id": "default-sports-extra-228",
+                "text": "Ice Basketball"
+            },
+            {
+                "id": "default-sports-extra-229",
+                "text": "Ice Netball"
+            },
+            {
+                "id": "default-sports-extra-230",
+                "text": "Ice Handball"
+            },
+            {
+                "id": "default-sports-extra-231",
+                "text": "Ice Water Polo"
+            },
+            {
+                "id": "default-sports-extra-232",
+                "text": "Ice Rowing"
+            },
+            {
+                "id": "default-sports-extra-234",
+                "text": "Ice Kayaking"
+            },
+            {
+                "id": "default-sports-extra-236",
+                "text": "Ice Windsurfing"
+            },
+            {
+                "id": "default-sports-extra-237",
+                "text": "Ice Kitesurfing"
+            },
+            {
+                "id": "default-sports-extra-239",
+                "text": "Ice Paddleboarding"
+            },
+            {
+                "id": "default-sports-extra-240",
+                "text": "Ice Wakeboarding"
+            },
+            {
+                "id": "default-sports-extra-241",
+                "text": "Ice Kneeboarding"
+            },
+            {
+                "id": "default-sports-extra-242",
+                "text": "Ice Barefooting"
+            },
+            {
+                "id": "default-sports-extra-243",
+                "text": "Ice Parasailing"
+            },
+            {
+                "id": "default-sports-extra-244",
+                "text": "Ice Paragliding"
+            },
+            {
+                "id": "default-sports-extra-245",
+                "text": "Ice Hang Gliding"
+            },
+            {
+                "id": "default-sports-extra-246",
+                "text": "Ice Skydiving"
+            },
+            {
+                "id": "default-sports-extra-247",
+                "text": "Ice BASE Jumping"
+            },
+            {
+                "id": "default-sports-extra-248",
+                "text": "Ice Bungee Jumping"
+            },
+            {
+                "id": "default-sports-extra-249",
+                "text": "Ice Rock Climbing"
+            },
+            {
+                "id": "default-sports-extra-250",
+                "text": "Ice Bouldering"
+            },
+            {
+                "id": "default-sports-extra-251",
+                "text": "Ice Mountaineering"
+            },
+            {
+                "id": "default-sports-extra-252",
+                "text": "Ice Alpinism"
+            },
+            {
+                "id": "default-sports-extra-253",
+                "text": "Ice Canyoning"
+            },
+            {
+                "id": "default-sports-extra-254",
+                "text": "Ice Caving"
+            },
+            {
+                "id": "default-sports-extra-255",
+                "text": "Ice Spelunking"
+            },
+            {
+                "id": "default-sports-extra-256",
+                "text": "Ice Parkour"
+            },
+            {
+                "id": "default-sports-extra-257",
+                "text": "Ice Freerunning"
+            },
+            {
+                "id": "default-sports-extra-258",
+                "text": "Ice Gymnastics"
+            },
+            {
+                "id": "default-sports-extra-259",
+                "text": "Ice Trampolining"
+            },
+            {
+                "id": "default-sports-extra-260",
+                "text": "Ice Tumbling"
+            },
+            {
+                "id": "default-sports-extra-261",
+                "text": "Ice Cheerleading"
+            },
+            {
+                "id": "default-sports-extra-262",
+                "text": "Ice Acrobatics"
+            },
+            {
+                "id": "default-sports-extra-263",
+                "text": "Ice Juggling"
+            },
+            {
+                "id": "default-sports-extra-264",
+                "text": "Ice Baton Twirling"
+            },
+            {
+                "id": "default-sports-extra-265",
+                "text": "Ice Color Guard"
+            },
+            {
+                "id": "default-sports-extra-266",
+                "text": "Ice Marching Band"
+            },
+            {
+                "id": "default-sports-extra-267",
+                "text": "Ice Drum and Bugle Corps"
+            },
+            {
+                "id": "default-sports-extra-268",
+                "text": "Ice Drill Team"
+            },
+            {
+                "id": "default-sports-extra-269",
+                "text": "Ice Dance"
+            },
+            {
+                "id": "default-sports-extra-270",
+                "text": "Ice Ballet"
+            },
+            {
+                "id": "default-sports-extra-271",
+                "text": "Ice Tap"
+            },
+            {
+                "id": "default-sports-extra-272",
+                "text": "Ice Jazz"
+            },
+            {
+                "id": "default-sports-extra-273",
+                "text": "Ice Hip Hop"
+            }
+        ],
+        "type": "default",
+        "color": "blue",
+        "symbolName": "figure.run"
+    }
+]

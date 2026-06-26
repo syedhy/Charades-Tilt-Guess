@@ -114,5 +114,13 @@ struct BuyMeACoffeeView: View {
             }
         }
         .navigationBarHidden(true)
+        .alert("Purchase Failed", isPresented: Binding<Bool>(
+            get: { storeKitManager.purchaseError != nil },
+            set: { if !$0 { storeKitManager.purchaseError = nil } }
+        )) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(storeKitManager.purchaseError?.localizedDescription ?? "An unknown error occurred.")
+        }
     }
 }

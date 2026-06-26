@@ -88,7 +88,6 @@ struct OnboardingView: View {
     private var topBar: some View {
         HStack {
             Button(action: {
-                OrientationController.shared.useMenuPortrait()
                 onDone()
             }) {
                 Text("Skip")
@@ -212,7 +211,6 @@ struct OnboardingView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
 
                 DoodleActionButton(title: "Let's Play", symbol: "play.fill", accent: AppTheme.Colors.mint) {
-                    OrientationController.shared.useMenuPortrait()
                     onDone()
                 }
                 .frame(width: 280)

@@ -3,6 +3,7 @@ import SwiftUI
 struct ModeDeckSelectionView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel = HomeViewModel()
+    @State private var showingLimitAlert = false
 
     let mode: GameMode
 
@@ -31,6 +32,11 @@ struct ModeDeckSelectionView: View {
         .preferredColorScheme(.light)
         .onAppear {
             viewModel.loadDecks()
+        }
+        .alert("Deck Limit Reached", isPresented: $showingLimitAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("You can only have 20 custom decks at a time. Delete an old one to create a new one.")
         }
     }
 
@@ -64,7 +70,11 @@ struct ModeDeckSelectionView: View {
 
             if mode != .kids {
                 DoodleActionButton(title: "Add custom deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
-                    router.openImmediately(.deckEditor)
+                    if viewModel.canCreateNewDeck {
+                        router.openImmediately(.deckEditor)
+                    } else {
+                        showingLimitAlert = true
+                    }
                 }
             }
         }

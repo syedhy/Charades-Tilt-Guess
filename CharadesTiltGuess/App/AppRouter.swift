@@ -112,6 +112,16 @@ final class AppRouter: ObservableObject {
         path = NavigationPath()
     }
 
+    func dismissOnboarding(completion: @escaping @MainActor () -> Void) {
+        OrientationController.shared.useMenuPortrait()
+        orientationTransitionTask?.cancel()
+        orientationTransitionTask = Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(360))
+            guard !Task.isCancelled else { return }
+            completion()
+        }
+    }
+
     func goBack() {
         guard !path.isEmpty else { return }
         path.removeLast()
@@ -156,8 +166,10 @@ struct AppShellView: View {
             }
         }
         .fullScreenCover(isPresented: onboardingBinding) {
-            OnboardingView {
-                hasSeenOnboarding = true
+            OnboardingCoordinatorView {
+                router.dismissOnboarding {
+                    hasSeenOnboarding = true
+                }
             }
         }
     }
@@ -179,8 +191,10 @@ struct AppShellView: View {
         case .settings:
             SettingsView()
         case .onboarding:
-            OnboardingView {
-                router.goBack()
+            OnboardingCoordinatorView {
+                router.dismissOnboarding {
+                    router.goBack()
+                }
             }
         case .deckEditor:
             DeckEditorView()

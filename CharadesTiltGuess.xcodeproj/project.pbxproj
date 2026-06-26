@@ -17,6 +17,7 @@
 		4C9E4679F8ADFFDD50FC176C /* default-tech.json in Resources */ = {isa = PBXBuildFile; fileRef = FB5835266EA2BFCC0B2E5C7E /* default-tech.json */; };
 		5180AE57DC32247A202A7BF8 /* default-food.json in Resources */ = {isa = PBXBuildFile; fileRef = 678F539163FBAEFAD6000827 /* default-food.json */; };
 		5A9D53B880BCAFBEBA5015F4 /* default-hard.json in Resources */ = {isa = PBXBuildFile; fileRef = B9FE01940853EA4570787E64 /* default-hard.json */; };
+		5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */; };
 		6F208C72EC7AACDF18B75C30 /* default-school.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BD66528C3CBB528FE1605 /* default-school.json */; };
 		8451797B5A2B7410175BD565 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 48C37B80ACA61339B912EC5F /* correct.wav */; };
 		A20E24B30E5B9AA47926CAFA /* default-cartoons.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C4A4C32836CD0F6F5D446D4 /* default-cartoons.json */; };
@@ -84,6 +85,7 @@
 		B6B413665BA77DF37E308FAA /* default-animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED42CE8F49D0E95353F0564 /* default-animals.json */; };
 		BAA190C8EFF1B4AE17B2BDC7 /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53C8647A2CC5815C08616C69 /* gameStart.wav */; };
 		C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */; };
+		C55030FAA1DF0B60E7A9FF65 /* OnboardingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */; };
 		C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */; };
 		CCE80A49BA7B46EA526290D7 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */; };
 		CFF0184B2B979AC9A2CB66F2 /* default-countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7F1944E77609CF32F99F0D /* default-countries.json */; };
@@ -120,6 +122,7 @@
 		032F9B121F7868CA73091EE7 /* TeamMatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchState.swift; sourceTree = "<group>"; };
 		07ED1EE7DB5981FECD1924CF /* kids-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "kids-animals.json"; sourceTree = "<group>"; };
 		1711D193FD7F4A0A60532CE0 /* pass.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = pass.wav; sourceTree = "<group>"; };
+		1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		1B1FB19D2FEEE5EB001B031B /* Tips.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
 		1C8BA844ECA1A4AC897CC843 /* kids-tools.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "kids-tools.json"; sourceTree = "<group>"; };
 		28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchSelectionView.swift; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		6CF586EF0228243A1AA5FCA9 /* countdown.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = countdown.wav; sourceTree = "<group>"; };
 		6E65C14F1D8DF525C2CF622E /* default-sports.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-sports.json"; sourceTree = "<group>"; };
 		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-science.json"; sourceTree = "<group>"; };
+		78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
+		860558B3159DDE727387BC26 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		91E0776020540DF6907BA087 /* endCountDown.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = endCountDown.wav; sourceTree = "<group>"; };
 		9B7F1944E77609CF32F99F0D /* default-countries.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-countries.json"; sourceTree = "<group>"; };
 		AA559C6888A3874D5EBF0074 /* default-easy.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-easy.json"; sourceTree = "<group>"; };
@@ -211,6 +216,7 @@
 		D14A901910F9A51A304823A3 /* default-history.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-history.json"; sourceTree = "<group>"; };
 		E21275D30ABB637D57FB8D20 /* default-movies.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-movies.json"; sourceTree = "<group>"; };
 		E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		E409A6800FC8331B00EC3398 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
 		F89CEF609C4FC9542912954B /* Tips.storekit */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
 		FB5835266EA2BFCC0B2E5C7E /* default-tech.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-tech.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -508,6 +514,10 @@
 			isa = PBXGroup;
 			children = (
 				AAJ000000000000000000031 /* OnboardingView.swift */,
+				1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */,
+				78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */,
+				860558B3159DDE727387BC26 /* OnboardingSplashView.swift */,
+				E409A6800FC8331B00EC3398 /* OnboardingCoordinatorView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -718,6 +728,8 @@
 				C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */,
 				DA2DDE4245A0F7AC5DA7B550 /* BuyMeACoffeeView.swift in Sources */,
 				CCE80A49BA7B46EA526290D7 /* StoreKitManager.swift in Sources */,
+				C55030FAA1DF0B60E7A9FF65 /* OnboardingSplashView.swift in Sources */,
+				5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

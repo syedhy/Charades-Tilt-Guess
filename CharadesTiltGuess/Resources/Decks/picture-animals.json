@@ -1,0 +1,264 @@
+[
+    {
+        "id": "picture-animals",
+        "name": "Animals",
+        "description": "A fun picture deck about animals!",
+        "cards": [
+            {
+                "id": "picture-animals-000",
+                "text": "Alligator",
+                "imageName": "kids_animals_alligator"
+            },
+            {
+                "id": "picture-animals-001",
+                "text": "Bat",
+                "imageName": "kids_animals_bat"
+            },
+            {
+                "id": "picture-animals-002",
+                "text": "Bear",
+                "imageName": "kids_animals_bear"
+            },
+            {
+                "id": "picture-animals-003",
+                "text": "Camel",
+                "imageName": "kids_animals_camel"
+            },
+            {
+                "id": "picture-animals-004",
+                "text": "Cat",
+                "imageName": "kids_animals_cat"
+            },
+            {
+                "id": "picture-animals-005",
+                "text": "Chicken",
+                "imageName": "kids_animals_chicken"
+            },
+            {
+                "id": "picture-animals-006",
+                "text": "Cow",
+                "imageName": "kids_animals_cow"
+            },
+            {
+                "id": "picture-animals-007",
+                "text": "Crocodile",
+                "imageName": "kids_animals_crocodile"
+            },
+            {
+                "id": "picture-animals-008",
+                "text": "Deer",
+                "imageName": "kids_animals_deer"
+            },
+            {
+                "id": "picture-animals-009",
+                "text": "Dog",
+                "imageName": "kids_animals_dog"
+            },
+            {
+                "id": "picture-animals-010",
+                "text": "Dolphin",
+                "imageName": "kids_animals_dolphin"
+            },
+            {
+                "id": "picture-animals-011",
+                "text": "Duck",
+                "imageName": "kids_animals_duck"
+            },
+            {
+                "id": "picture-animals-012",
+                "text": "Eagle",
+                "imageName": "kids_animals_eagle"
+            },
+            {
+                "id": "picture-animals-013",
+                "text": "Elephant",
+                "imageName": "kids_animals_elephant"
+            },
+            {
+                "id": "picture-animals-014",
+                "text": "Flamingo",
+                "imageName": "kids_animals_flamingo"
+            },
+            {
+                "id": "picture-animals-015",
+                "text": "Frog",
+                "imageName": "kids_animals_frog"
+            },
+            {
+                "id": "picture-animals-016",
+                "text": "Giraffe",
+                "imageName": "kids_animals_giraffe"
+            },
+            {
+                "id": "picture-animals-017",
+                "text": "Goat",
+                "imageName": "kids_animals_goat"
+            },
+            {
+                "id": "picture-animals-018",
+                "text": "Goose",
+                "imageName": "kids_animals_goose"
+            },
+            {
+                "id": "picture-animals-019",
+                "text": "Gorilla",
+                "imageName": "kids_animals_gorilla"
+            },
+            {
+                "id": "picture-animals-020",
+                "text": "Hawk",
+                "imageName": "kids_animals_hawk"
+            },
+            {
+                "id": "picture-animals-021",
+                "text": "Hippo",
+                "imageName": "kids_animals_hippo"
+            },
+            {
+                "id": "picture-animals-022",
+                "text": "Horse",
+                "imageName": "kids_animals_horse"
+            },
+            {
+                "id": "picture-animals-023",
+                "text": "Kangaroo",
+                "imageName": "kids_animals_kangaroo"
+            },
+            {
+                "id": "picture-animals-024",
+                "text": "Koala",
+                "imageName": "kids_animals_koala"
+            },
+            {
+                "id": "picture-animals-025",
+                "text": "Lion",
+                "imageName": "kids_animals_lion"
+            },
+            {
+                "id": "picture-animals-026",
+                "text": "Monkey",
+                "imageName": "kids_animals_monkey"
+            },
+            {
+                "id": "picture-animals-027",
+                "text": "Moose",
+                "imageName": "kids_animals_moose"
+            },
+            {
+                "id": "picture-animals-028",
+                "text": "Mouse",
+                "imageName": "kids_animals_mouse"
+            },
+            {
+                "id": "picture-animals-029",
+                "text": "Octopus",
+                "imageName": "kids_animals_octopus"
+            },
+            {
+                "id": "picture-animals-030",
+                "text": "Ostrich",
+                "imageName": "kids_animals_ostrich"
+            },
+            {
+                "id": "picture-animals-031",
+                "text": "Owl",
+                "imageName": "kids_animals_owl"
+            },
+            {
+                "id": "picture-animals-032",
+                "text": "Panda",
+                "imageName": "kids_animals_panda"
+            },
+            {
+                "id": "picture-animals-033",
+                "text": "Parrot",
+                "imageName": "kids_animals_parrot"
+            },
+            {
+                "id": "picture-animals-034",
+                "text": "Peacock",
+                "imageName": "kids_animals_peacock"
+            },
+            {
+                "id": "picture-animals-035",
+                "text": "Penguin",
+                "imageName": "kids_animals_penguin"
+            },
+            {
+                "id": "picture-animals-036",
+                "text": "Pig",
+                "imageName": "kids_animals_pig"
+            },
+            {
+                "id": "picture-animals-037",
+                "text": "Rabbit",
+                "imageName": "kids_animals_rabbit"
+            },
+            {
+                "id": "picture-animals-038",
+                "text": "Rat",
+                "imageName": "kids_animals_rat"
+            },
+            {
+                "id": "picture-animals-039",
+                "text": "Rhino",
+                "imageName": "kids_animals_rhino"
+            },
+            {
+                "id": "picture-animals-040",
+                "text": "Rooster",
+                "imageName": "kids_animals_rooster"
+            },
+            {
+                "id": "picture-animals-041",
+                "text": "Shark",
+                "imageName": "kids_animals_shark"
+            },
+            {
+                "id": "picture-animals-042",
+                "text": "Sheep",
+                "imageName": "kids_animals_sheep"
+            },
+            {
+                "id": "picture-animals-043",
+                "text": "Snake",
+                "imageName": "kids_animals_snake"
+            },
+            {
+                "id": "picture-animals-044",
+                "text": "Squirrel",
+                "imageName": "kids_animals_squirrel"
+            },
+            {
+                "id": "picture-animals-045",
+                "text": "Swan",
+                "imageName": "kids_animals_swan"
+            },
+            {
+                "id": "picture-animals-046",
+                "text": "Tiger",
+                "imageName": "kids_animals_tiger"
+            },
+            {
+                "id": "picture-animals-047",
+                "text": "Turtle",
+                "imageName": "kids_animals_turtle"
+            },
+            {
+                "id": "picture-animals-048",
+                "text": "Whale",
+                "imageName": "kids_animals_whale"
+            },
+            {
+                "id": "picture-animals-049",
+                "text": "Zebra",
+                "imageName": "kids_animals_zebra"
+            }
+        ],
+        "type": "default",
+        "color": "mint",
+        "symbolName": "pawprint.fill",
+        "createdDate": 1718841600,
+        "updatedDate": 1718841600
+    }
+]

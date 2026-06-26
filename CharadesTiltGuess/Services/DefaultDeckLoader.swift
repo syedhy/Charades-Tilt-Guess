@@ -19,7 +19,7 @@ struct DefaultDeckLoader {
         "default-animals", "default-countries", "default-celebrities", 
         "default-tv-shows", "default-cartoons", "default-science", 
         "default-school", "default-history", "default-easy", "default-hard",
-        "kids-animals", "kids-tools", "kids-food"
+        "picture-animals", "picture-tools", "picture-food"
     ]
 
     init(bundle: Bundle = .main) {
@@ -55,6 +55,9 @@ struct DefaultDeckLoader {
 
         do {
             decks = try JSONDecoder().decode([Deck].self, from: data)
+            try validate(decks)
+        } catch let error as DefaultDeckLoaderError {
+            throw error
         } catch {
             throw DefaultDeckLoaderError.invalidData
         }

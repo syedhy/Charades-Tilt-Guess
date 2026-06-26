@@ -6,12 +6,12 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case mixAndMatch
     case infinite
     case wikipedia
-    case kids
+    case picture
     case teamVsTeam
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .kids, .teamVsTeam]
+    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .picture, .teamVsTeam]
 
     var title: String {
         switch self {
@@ -25,7 +25,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Infinite"
         case .wikipedia:
             return "Wikipedia Mode"
-        case .kids:
+        case .picture:
             return "Picture Mode"
         case .teamVsTeam:
             return "Team vs Team"
@@ -44,8 +44,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "No timer! Play until the deck is done"
         case .wikipedia:
             return "Random words from Wikipedia"
-        case .kids:
-            return "Picture cards for the little ones"
+        case .picture:
+            return "Image-based cards for quick guessing"
         case .teamVsTeam:
             return "Divide into two teams and compete for the highest score"
         }
@@ -63,7 +63,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Finish every card"
         case .wikipedia:
             return "Fresh words"
-        case .kids:
+        case .picture:
             return "Picture charades"
         case .teamVsTeam:
             return "Competitive team play"
@@ -82,7 +82,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "infinity"
         case .wikipedia:
             return "globe"
-        case .kids:
+        case .picture:
             return "face.smiling.fill"
         case .teamVsTeam:
             return "person.2.fill"
@@ -101,7 +101,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.blue
         case .wikipedia:
             return Color(red: 0.66, green: 0.58, blue: 0.86)
-        case .kids:
+        case .picture:
             return AppTheme.Colors.pink
         case .teamVsTeam:
             return AppTheme.Colors.coral
@@ -110,7 +110,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var usesDeckSelection: Bool {
         switch self {
-        case .normal, .infinite, .kids, .teamVsTeam:
+        case .normal, .infinite, .picture, .teamVsTeam:
             return true
         case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
@@ -119,7 +119,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .mixAndMatch, .wikipedia, .kids, .teamVsTeam:
+        case .normal, .pasteAndPlay, .mixAndMatch, .wikipedia, .picture, .teamVsTeam:
             return true
         case .infinite:
             return false
@@ -184,7 +184,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                 ],
                 scoring: "Scoring matches Normal mode."
             )
-        case .kids:
+        case .picture:
             return ModeInstruction(
                 title: "Picture cards",
                 summary: "Decks with images to help act out the words.",

@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+__MACOSX/
 
 # Xcode
 build/
@@ -9,6 +10,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.xcresult
 
 # Swift Package Manager
 .build/
@@ -25,8 +27,15 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output/
 
+# Python & Scripts
+venv/
+*.log
+
+# Scratch and Temp
+scratch/
+tmp/
+
 # Local environment
 *.local
 .env
 .env.*
-

@@ -53,11 +53,10 @@ struct WikipediaModeView: View {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                 header
                 content
-                Spacer(minLength: 0)
             }
             .padding(.horizontal, 24)
             .padding(.top, 4)
-            .padding(.bottom, 32)
+            .padding(.bottom, 12)
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
@@ -95,16 +94,22 @@ struct WikipediaModeView: View {
     private var content: some View {
         switch viewModel.state {
         case .idle, .loading:
-            statePanel(title: "Loading titles", message: "Fetching a fresh set from Wikipedia.", symbol: "arrow.triangle.2.circlepath") {
-                ProgressView()
-                    .tint(AppTheme.Colors.ink)
-                    .scaleEffect(1.2)
+            VStack {
+                statePanel(title: "Loading titles", message: "Fetching a fresh set from Wikipedia.", symbol: "arrow.triangle.2.circlepath") {
+                    ProgressView()
+                        .tint(AppTheme.Colors.ink)
+                        .scaleEffect(1.2)
+                }
+                Spacer(minLength: 0)
             }
         case let .failed(message):
-            statePanel(title: "Could not load", message: message, symbol: "wifi.exclamationmark") {
-                DoodleActionButton(title: "Try again", symbol: "arrow.clockwise", accent: GameMode.wikipedia.accentColor) {
-                    viewModel.load()
+            VStack {
+                statePanel(title: "Could not load", message: message, symbol: "wifi.exclamationmark") {
+                    DoodleActionButton(title: "Try again", symbol: "arrow.clockwise", accent: GameMode.wikipedia.accentColor) {
+                        viewModel.load()
+                    }
                 }
+                Spacer(minLength: 0)
             }
         case let .loaded(titles):
             loadedPanel(titles: titles)
@@ -139,7 +144,7 @@ struct WikipediaModeView: View {
     }
 
     private func loadedPanel(titles: [String]) -> some View {
-        VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
+        VStack(alignment: .leading, spacing: 12) {
             DoodlePanel(background: AppTheme.Colors.paperBright) {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
                     HStack {
@@ -156,7 +161,7 @@ struct WikipediaModeView: View {
 
                     ScrollView {
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 132), spacing: 10)], alignment: .leading, spacing: 10) {
-                            ForEach(titles.prefix(15), id: \.self) { title in
+                            ForEach(titles, id: \.self) { title in
                                 WikipediaTitlePill(text: title)
                             }
                         }

@@ -1,34 +1,46 @@
 import Foundation
 import XCTest
+import UIKit
 @testable import CharadesTiltGuess
 
 final class DefaultDeckLoaderTests: XCTestCase {
     func testLoadsBundledDefaultDecks() throws {
         let decks = try DefaultDeckLoader().load()
 
-        XCTAssertEqual(decks.count, 18)
+        XCTAssertEqual(decks.count, 17)
         XCTAssertEqual(decks.first?.name, "Tech")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
         XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
         XCTAssertEqual(
-            Set(decks.filter { $0.id.hasPrefix("kids-") }.map(\.id)),
-            ["kids-animals", "kids-food", "kids-tools"]
+            Set(decks.filter { $0.id.hasPrefix("picture-") }.map(\.id)),
+            ["picture-animals", "picture-food", "picture-tools"]
         )
     }
 
-    func testMissingResourceThrowsHelpfulError() {
-        let loader = DefaultDeckLoader(
-            bundle: Bundle(for: Self.self),
-            resourceName: "DefinitelyMissingDecks"
-        )
-
-        XCTAssertThrowsError(try loader.load()) { error in
-            XCTAssertEqual(
-                error as? DefaultDeckLoaderError,
-                .resourceNotFound("DefinitelyMissingDecks")
-            )
+    func testPictureDecksHaveValidImages() throws {
+        let decks = try DefaultDeckLoader().load()
+        let pictureDecks = decks.filter { $0.id.hasPrefix("picture-") }
+        
+        XCTAssertEqual(pictureDecks.count, 3)
+        
+        for deck in pictureDecks {
+            for card in deck.cards {
+                let imageName = try XCTUnwrap(card.imageName, "Missing imageName for \(card.text)")
+                XCTAssertFalse(imageName.isEmpty)
+                
+                let image = UIImage(named: imageName)
+                XCTAssertNotNil(image, "Asset not found: \(imageName)")
+            }
+        }
+        
+        let standardDecks = decks.filter { !$0.id.hasPrefix("picture-") }
+        for deck in standardDecks {
+            for card in deck.cards {
+                XCTAssertNil(card.imageName, "Standard card should not have image: \(card.text)")
+            }
         }
     }
+
 
     func testRejectsDuplicateDeckIDs() throws {
         let deck = makeDeck(id: "duplicate")

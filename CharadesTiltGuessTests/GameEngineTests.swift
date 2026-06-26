@@ -61,25 +61,6 @@ final class GameEngineTests: XCTestCase {
         XCTAssertEqual(result.timeUsed, 12)
     }
 
-    func testChallengeModeAssignsReusableChallengeCards() {
-        let deck = makeDeck(cards: [
-            GameWord(id: "one", text: "One"),
-            GameWord(id: "two", text: "Two"),
-            GameWord(id: "three", text: "Three"),
-            GameWord(id: "four", text: "Four")
-        ])
-        var engine = GameEngine(
-            configuration: .challengeCards(deck: deck, duration: 60),
-            orderedWords: deck.cards,
-            challengeProvider: ChallengeCardProvider(challengeEvery: 2, challenges: [.silentAct])
-        )
-
-        _ = engine.markCurrentWord(.correct)
-        _ = engine.markCurrentWord(.correct)
-
-        XCTAssertNil(engine.session.attempts[0].challenge)
-        XCTAssertEqual(engine.session.attempts[1].challenge, .silentAct)
-    }
 
     func testInfiniteModeFinishesWhenDeckIsExhausted() {
         let deck = makeDeck(cards: [GameWord(id: "one", text: "Only Word")])

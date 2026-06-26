@@ -166,7 +166,7 @@ struct HomeView: View {
             router.open(.mixAndMatch)
         case .teamVsTeam:
             router.open(.teamMatchSelection)
-        case .normal, .infinite, .kids:
+        case .normal, .infinite, .picture:
             router.open(.modeDeckSelection(mode: mode))
 
         }

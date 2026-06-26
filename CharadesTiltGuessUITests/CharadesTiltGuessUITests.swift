@@ -68,9 +68,9 @@ final class CharadesTiltGuessUITests: XCTestCase {
         let app = launchApp()
 
         app.buttons["modeButton-normal"].tap()
-        app.buttons["Tech, 24 prompts"].tap()
+        app.buttons["Tech, 250 prompts"].tap()
         XCTAssertTrue(app.staticTexts["Tech"].waitForExistence(timeout: 5))
-        XCTAssertTrue(app.staticTexts["24 cards"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["250 cards"].waitForExistence(timeout: 5))
 
         app.buttons["playDeckButton"].tap()
         XCTAssertTrue(app.staticTexts["Ready position"].waitForExistence(timeout: 5))
@@ -94,7 +94,7 @@ final class CharadesTiltGuessUITests: XCTestCase {
         let app = launchApp()
 
         app.buttons["Settings"].tap()
-        XCTAssertTrue(app.staticTexts["Game defaults"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Game Settings"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["Round length"].waitForExistence(timeout: 5))
 
         app.navigationBars.buttons.element(boundBy: 0).tap()
@@ -106,7 +106,7 @@ final class CharadesTiltGuessUITests: XCTestCase {
         let app = launchApp()
 
         app.buttons["Settings"].tap()
-        XCTAssertTrue(app.staticTexts["Game defaults"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Game Settings"].waitForExistence(timeout: 5))
 
         let replayButton = app.buttons["Replay how to play"]
         if !replayButton.waitForExistence(timeout: 1) {
@@ -115,6 +115,10 @@ final class CharadesTiltGuessUITests: XCTestCase {
 
         XCTAssertTrue(replayButton.waitForExistence(timeout: 5))
         replayButton.tap()
+
+        let tutorialButton = app.buttons["Interactive Tutorial"]
+        XCTAssertTrue(tutorialButton.waitForExistence(timeout: 5))
+        tutorialButton.tap()
 
         XCTAssertTrue(app.staticTexts["onboardingInstruction"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["onboardingStepCounter"].label, "1/3")

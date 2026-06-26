@@ -81,7 +81,7 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         let viewModel = makeViewModel(cards: makeCards(count: CustomDeckDetailViewModel.maxCustomDeckCardCount))
 
         XCTAssertFalse(viewModel.addCard(text: "One Too Many"))
-        XCTAssertEqual(viewModel.cardErrorMessage, "Custom decks can have up to 200 cards.")
+        XCTAssertEqual(viewModel.cardErrorMessage, "Custom decks can have up to \(CustomDeckDetailViewModel.maxCustomDeckCardCount) cards.")
         XCTAssertEqual(viewModel.draftCards.count, CustomDeckDetailViewModel.maxCustomDeckCardCount)
     }
 
@@ -126,7 +126,7 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         let viewModel = makeViewModel(cards: tooManyCards)
 
         XCTAssertNil(viewModel.saveDraft())
-        XCTAssertEqual(viewModel.saveErrorMessage, "Custom decks can have up to 200 cards.")
+        XCTAssertEqual(viewModel.saveErrorMessage, "Custom decks can have up to \(CustomDeckDetailViewModel.maxCustomDeckCardCount) cards.")
     }
 
     func testSaveDraftPersistsEditedDeck() throws {

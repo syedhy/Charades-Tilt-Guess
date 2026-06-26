@@ -63,8 +63,8 @@ final class AppRouter: ObservableObject {
         switch mode {
         case .normal:
             startGame(configuration: .normal(deck: deck, duration: settings.defaultDuration))
-        case .kids:
-            startGame(configuration: .kids(deck: deck, duration: settings.defaultDuration))
+        case .picture:
+            startGame(configuration: .picture(deck: deck, duration: settings.defaultDuration))
         case .infinite:
             startGame(configuration: .infinite(deck: deck))
         case .pasteAndPlay:

@@ -62,13 +62,13 @@ struct ModeDeckSelectionView: View {
 
     private var deckSections: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-            if !viewModel.customDecks.isEmpty && mode != .kids {
+            if !viewModel.customDecks.isEmpty && mode != .picture {
                 deckSection(title: "Custom Decks", decks: viewModel.customDecks)
             }
 
-            deckSection(title: "Built-In Decks", decks: mode == .kids ? viewModel.defaultDecks.filter { $0.id.hasPrefix("kids-") } : viewModel.defaultDecks.filter { !$0.id.hasPrefix("kids-") })
+            deckSection(title: "Built-In Decks", decks: mode == .picture ? viewModel.defaultDecks.filter { $0.id.hasPrefix("picture-") } : viewModel.defaultDecks.filter { !$0.id.hasPrefix("picture-") })
 
-            if mode != .kids {
+            if mode != .picture {
                 DoodleActionButton(title: "Add custom deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
                     if viewModel.canCreateNewDeck {
                         router.openImmediately(.deckEditor)

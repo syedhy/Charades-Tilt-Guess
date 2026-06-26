@@ -1,6 +1,4 @@
 import SwiftUI
-import StoreKit
-
 struct SettingsView: View {
     @EnvironmentObject private var viewModel: SettingsViewModel
     @EnvironmentObject private var router: AppRouter

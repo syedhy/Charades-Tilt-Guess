@@ -172,9 +172,9 @@ struct GameView: View {
         VStack(spacing: 16) {
             topBar
                 .padding(.horizontal, 56)
-                .padding(.top, configuration.mode == .kids ? 24 : 70)
+                .padding(.top, configuration.mode == .picture ? 24 : 70)
 
-            if configuration.mode != .kids {
+            if configuration.mode != .picture {
                 Spacer(minLength: 0)
             }
 
@@ -184,11 +184,11 @@ struct GameView: View {
                 }
 
                 wordCard
-                    .offset(y: configuration.mode == .kids ? 0 : -18)
+                    .offset(y: configuration.mode == .picture ? 0 : -18)
             }
-            .padding(.horizontal, configuration.mode == .kids ? 8 : 56)
+            .padding(.horizontal, configuration.mode == .picture ? 8 : 56)
 
-            if configuration.mode != .kids {
+            if configuration.mode != .picture {
                 Spacer(minLength: 0)
                 tiltStatus
                     .padding(.horizontal, 56)
@@ -197,17 +197,17 @@ struct GameView: View {
                 Spacer(minLength: 0)
             }
         }
-        .padding(.bottom, configuration.mode == .kids ? 24 : 0)
+        .padding(.bottom, configuration.mode == .picture ? 24 : 0)
     }
 
     private var topBar: some View {
         HStack {
             pauseButton
-                .padding(.leading, configuration.mode == .kids ? 16 : 0)
+                .padding(.leading, configuration.mode == .picture ? 16 : 0)
 
             Spacer()
 
-            if configuration.mode != .kids {
+            if configuration.mode != .picture {
                 VStack(spacing: 0) {
                     Text(configuration.mode.title.uppercased())
                         .font(.system(size: 13, weight: .black, design: .rounded))
@@ -224,7 +224,7 @@ struct GameView: View {
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
-                if configuration.mode != .kids {
+                if configuration.mode != .picture {
                     Text("Score")
                         .font(.system(size: 16, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
@@ -241,7 +241,7 @@ struct GameView: View {
                         .accessibilityIdentifier("gameTimer")
                 }
             }
-            .frame(width: configuration.mode == .kids ? nil : 92, alignment: .trailing)
+            .frame(width: configuration.mode == .picture ? nil : 92, alignment: .trailing)
         }
     }
 
@@ -260,11 +260,11 @@ struct GameView: View {
         VStack(spacing: 16) {
             HStack {
                 pauseButton
-                    .padding(.leading, configuration.mode == .kids ? 16 : 0)
+                    .padding(.leading, configuration.mode == .picture ? 16 : 0)
 
                 Spacer()
 
-                if configuration.mode != .kids {
+                if configuration.mode != .picture {
                     VStack(spacing: 0) {
                         Text(configuration.mode.title.uppercased())
                             .font(.system(size: 13, weight: .black, design: .rounded))
@@ -277,7 +277,7 @@ struct GameView: View {
                 Spacer()
 
                 VStack(alignment: .trailing, spacing: 2) {
-                    if configuration.mode != .kids {
+                    if configuration.mode != .picture {
                         Text("Score")
                             .font(.system(size: 16, weight: .black, design: .rounded))
                         Text("\(viewModel.score)")
@@ -287,20 +287,20 @@ struct GameView: View {
                             .font(.system(size: 48, weight: .black, design: .rounded))
                     }
                 }
-                .frame(width: configuration.mode == .kids ? nil : 92, alignment: .trailing)
+                .frame(width: configuration.mode == .picture ? nil : 92, alignment: .trailing)
                 .hidden()
             }
             .padding(.horizontal, 56)
-            .padding(.top, configuration.mode == .kids ? 24 : 70)
+            .padding(.top, configuration.mode == .picture ? 24 : 70)
 
             Spacer(minLength: 0)
         }
-        .padding(.bottom, configuration.mode == .kids ? 24 : 0)
+        .padding(.bottom, configuration.mode == .picture ? 24 : 0)
     }
 
     private var wordCard: some View {
         ZStack {
-            if let imageName = availableKidsImageName {
+            if let imageName = availablePictureImageName {
                 VStack(spacing: 52) {
                     Image(imageName)
                         .resizable()
@@ -331,11 +331,11 @@ struct GameView: View {
         }
         .frame(maxWidth: .infinity)
         .frame(minHeight: 170)
-        .frame(maxHeight: configuration.mode == .kids ? .infinity : nil)
+        .frame(maxHeight: configuration.mode == .picture ? .infinity : nil)
     }
 
-    private var availableKidsImageName: String? {
-        guard configuration.mode == .kids,
+    private var availablePictureImageName: String? {
+        guard configuration.mode == .picture,
               let imageName = viewModel.currentImageName,
               UIImage(named: imageName) != nil
         else {

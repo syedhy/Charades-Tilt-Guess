@@ -26,7 +26,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .wikipedia:
             return "Wikipedia Mode"
         case .kids:
-            return "Kids Mode"
+            return "Picture Mode"
         case .teamVsTeam:
             return "Team vs Team"
         }
@@ -187,10 +187,10 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         case .kids:
             return ModeInstruction(
                 title: "Picture cards",
-                summary: "Decks with images to help kids act out the words.",
+                summary: "Decks with images to help act out the words.",
                 rules: [
-                    "Select a kids deck with picture cards.",
-                    "The picture appears large so kids can quickly see what to act.",
+                    "Select a picture deck with image cards.",
+                    "The picture appears large so you can quickly see what to act.",
                     "Play just like Normal mode."
                 ],
                 scoring: "Scoring matches Normal mode."

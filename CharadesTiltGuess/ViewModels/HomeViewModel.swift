@@ -24,6 +24,10 @@ final class HomeViewModel: ObservableObject {
         }
     }
 
+    var canCreateNewDeck: Bool {
+        customDecks.count < 20
+    }
+
     var decks: [Deck] {
         customDecks + defaultDecks
     }

@@ -4,6 +4,7 @@ struct HomeView: View {
     @EnvironmentObject private var router: AppRouter
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @StateObject private var viewModel: HomeViewModel
+    @State private var showingLimitAlert = false
 
     @MainActor
     init() {
@@ -35,6 +36,11 @@ struct HomeView: View {
         .preferredColorScheme(.light)
         .onAppear {
             viewModel.loadDecks()
+        }
+        .alert("Deck Limit Reached", isPresented: $showingLimitAlert) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("You can only have 20 custom decks at a time. Delete an old one to create a new one.")
         }
     }
 
@@ -76,7 +82,11 @@ struct HomeView: View {
 
             HStack(spacing: 12) {
                 quickAction(title: "Add Deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
-                    router.openImmediately(.deckEditor)
+                    if viewModel.canCreateNewDeck {
+                        router.openImmediately(.deckEditor)
+                    } else {
+                        showingLimitAlert = true
+                    }
                 }
 
                 quickAction(title: "Random", symbol: "shuffle", accent: AppTheme.Colors.paperBright) {

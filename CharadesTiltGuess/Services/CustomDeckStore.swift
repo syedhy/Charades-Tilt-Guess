@@ -6,6 +6,8 @@ enum CustomDeckStoreError: Error, Equatable {
     case duplicateDeckID(String)
     case emptyDeckName(String)
     case emptyWord(deckID: String, wordID: String)
+    case deckLimitReached(Int)
+    case cardLimitReached(deckID: String, limit: Int)
 }
 
 struct CustomDeckStore {
@@ -73,6 +75,13 @@ struct CustomDeckStore {
     }
 
     private func validate(_ decks: [Deck]) throws {
+        let maxDecks = 20
+        let maxCards = 250
+
+        guard decks.count <= maxDecks else {
+            throw CustomDeckStoreError.deckLimitReached(maxDecks)
+        }
+
         var deckIDs = Set<String>()
 
         for deck in decks {
@@ -86,6 +95,10 @@ struct CustomDeckStore {
 
             guard !deck.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
                 throw CustomDeckStoreError.emptyDeckName(deck.id)
+            }
+
+            guard deck.cards.count <= maxCards else {
+                throw CustomDeckStoreError.cardLimitReached(deckID: deck.id, limit: maxCards)
             }
 
             for word in deck.cards {

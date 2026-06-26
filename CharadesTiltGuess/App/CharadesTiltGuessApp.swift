@@ -53,7 +53,11 @@ final class OrientationController {
             return
         }
 
-        windowScene.windows.first?.rootViewController?.setNeedsUpdateOfSupportedInterfaceOrientations()
+        var topController = windowScene.windows.first?.rootViewController
+        while let presented = topController?.presentedViewController {
+            topController = presented
+        }
+        topController?.setNeedsUpdateOfSupportedInterfaceOrientations()
         windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: requestedOrientation)) { _ in }
     }
 }

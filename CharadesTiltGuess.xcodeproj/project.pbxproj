@@ -77,7 +77,9 @@
 		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
 		C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */; };
 		C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */; };
+		CCE80A49BA7B46EA526290D7 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */; };
 		D5A1B0A896C9861EDBE82C6F /* TeamMatchLobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */; };
+		DA2DDE4245A0F7AC5DA7B550 /* BuyMeACoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */; };
 		DBC0983FAE2553ED38B72F4B /* TeamMatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032F9B121F7868CA73091EE7 /* TeamMatchState.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,11 +104,14 @@
 		032F9B121F7868CA73091EE7 /* TeamMatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchState.swift; sourceTree = "<group>"; };
 		1B14C11C2FE4812C00BBD54B /* endCountDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
 		1B14C11E2FE4830100BBD54B /* gameStart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
+		1B1FB19D2FEEE5EB001B031B /* Tips.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
 		1B45660B2FE1DAFE007D28FE /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		1B45660D2FE1DC78007D28FE /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
 		1B45660E2FE1DC78007D28FE /* pass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
 		1B45660F2FE1DC78007D28FE /* timeout.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timeout.wav; sourceTree = "<group>"; };
 		28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchSelectionView.swift; sourceTree = "<group>"; };
+		29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BuyMeACoffeeView.swift; sourceTree = "<group>"; };
+		2BE63BEE7463D32D6FA629DC /* BuyMeACoffeeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BuyMeACoffeeView.swift; sourceTree = "<group>"; };
 		2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchLobbyView.swift; sourceTree = "<group>"; };
 		46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchResultsView.swift; sourceTree = "<group>"; };
 		AAA000000000000000000008 /* CharadesTiltGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharadesTiltGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +179,8 @@
 		AAJ000000000000000000032 /* CardRotationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStoreTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
+		E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		F89CEF609C4FC9542912954B /* Tips.storekit */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,10 +211,12 @@
 		AAA000000000000000000021 = {
 			isa = PBXGroup;
 			children = (
+				1B1FB19D2FEEE5EB001B031B /* Tips.storekit */,
 				AAA000000000000000000022 /* CharadesTiltGuess */,
 				AAA000000000000000000023 /* CharadesTiltGuessTests */,
 				AAA000000000000000000024 /* CharadesTiltGuessUITests */,
 				AAA000000000000000000025 /* Products */,
+				F89CEF609C4FC9542912954B /* Tips.storekit */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,6 +326,8 @@
 				AAJ000000000000000000029 /* PasteAndPlayView.swift */,
 				AAJ000000000000000000030 /* WikipediaModeView.swift */,
 				28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */,
+				29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */,
+				2BE63BEE7463D32D6FA629DC /* BuyMeACoffeeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -388,6 +399,7 @@
 				AAJ000000000000000000025 /* SoundService.swift */,
 				AAI000000000000000000015 /* MotionManager.swift */,
 				AAJ000000000000000000026 /* WikipediaService.swift */,
+				E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -622,6 +634,8 @@
 				C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */,
 				D5A1B0A896C9861EDBE82C6F /* TeamMatchLobbyView.swift in Sources */,
 				C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */,
+				DA2DDE4245A0F7AC5DA7B550 /* BuyMeACoffeeView.swift in Sources */,
+				CCE80A49BA7B46EA526290D7 /* StoreKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +862,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -872,7 +886,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -895,7 +909,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -918,7 +932,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

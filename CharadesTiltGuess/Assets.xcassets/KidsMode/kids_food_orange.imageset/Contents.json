@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "kids_food_orange.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

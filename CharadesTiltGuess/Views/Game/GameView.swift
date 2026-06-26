@@ -171,6 +171,8 @@ struct GameView: View {
     private var gameplayContent: some View {
         VStack(spacing: 16) {
             topBar
+                .padding(.horizontal, 56)
+                .padding(.top, configuration.mode == .kids ? 24 : 70)
 
             if configuration.mode != .kids {
                 Spacer(minLength: 0)
@@ -184,20 +186,24 @@ struct GameView: View {
                 wordCard
                     .offset(y: configuration.mode == .kids ? 0 : -18)
             }
+            .padding(.horizontal, configuration.mode == .kids ? 8 : 56)
 
             if configuration.mode != .kids {
                 Spacer(minLength: 0)
                 tiltStatus
+                    .padding(.horizontal, 56)
+                    .padding(.bottom, 42)
+            } else {
+                Spacer(minLength: 0)
             }
         }
-        .padding(.horizontal, configuration.mode == .kids ? 8 : 56)
-        .padding(.top, configuration.mode == .kids ? 24 : 70)
-        .padding(.bottom, configuration.mode == .kids ? 24 : 42)
+        .padding(.bottom, configuration.mode == .kids ? 24 : 0)
     }
 
     private var topBar: some View {
         HStack {
             pauseButton
+                .padding(.leading, configuration.mode == .kids ? 16 : 0)
 
             Spacer()
 
@@ -236,7 +242,6 @@ struct GameView: View {
                 }
             }
             .frame(width: configuration.mode == .kids ? nil : 92, alignment: .trailing)
-            .padding(.trailing, configuration.mode == .kids ? 12 : 0)
         }
     }
 
@@ -249,13 +254,13 @@ struct GameView: View {
         ) {
             viewModel.togglePause()
         }
-        .padding(.leading, configuration.mode == .kids ? 12 : 0)
     }
 
     private var feedbackPauseButton: some View {
         VStack {
             HStack {
                 pauseButton
+                    .padding(.leading, configuration.mode == .kids ? 16 : 0)
                 Spacer()
             }
 

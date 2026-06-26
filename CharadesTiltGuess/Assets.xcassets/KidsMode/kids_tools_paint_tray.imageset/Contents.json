@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "kids_tools_paint_tray.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

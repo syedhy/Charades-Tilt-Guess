@@ -28,19 +28,30 @@ struct TeamMatchLobbyView: View {
 
     private var header: some View {
         VStack(spacing: 32) {
-            Text("Round \(state.currentRound) of \(state.totalRounds)")
-                .font(.system(size: 24, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
-                .padding(.horizontal, 24)
-                .padding(.vertical, 12)
-                .background(
-                    Capsule()
-                        .fill(AppTheme.Colors.paperBright)
-                        .overlay(
-                            Capsule()
-                                .stroke(AppTheme.Colors.ink, lineWidth: 3)
-                        )
-                )
+            HStack(spacing: 16) {
+                DoodleIconButton(
+                    symbol: "xmark",
+                    accent: AppTheme.Colors.paperBright,
+                    size: 48,
+                    accessibilityLabel: "Exit Game"
+                ) {
+                    router.goHome()
+                }
+
+                Text("Round \(state.currentRound) of \(state.totalRounds)")
+                    .font(.system(size: 24, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 12)
+                    .background(
+                        Capsule()
+                            .fill(AppTheme.Colors.paperBright)
+                            .overlay(
+                                Capsule()
+                                    .stroke(AppTheme.Colors.ink, lineWidth: 4)
+                            )
+                    )
+            }
 
             VStack(spacing: 32) {
                 Image(systemName: "hand.point.right.fill")

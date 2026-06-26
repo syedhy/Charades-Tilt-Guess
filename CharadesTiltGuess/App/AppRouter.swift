@@ -13,6 +13,7 @@ enum AppRoute: Hashable {
     case teamMatchLobby(state: TeamMatchState)
     case teamMatchResults(state: TeamMatchState)
     case results(result: RoundResult)
+    case buyMeACoffee
 }
 
 struct ActiveGame: Identifiable, Equatable {
@@ -217,6 +218,8 @@ struct AppShellView: View {
                 },
                 onChooseDeck: router.goHome
             )
+        case .buyMeACoffee:
+            BuyMeACoffeeView()
         }
     }
 }

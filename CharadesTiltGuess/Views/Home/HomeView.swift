@@ -169,7 +169,7 @@ struct HomeView: View {
 
     private var coffeeButton: some View {
         Button(action: {
-            // Functionality will be added later.
+            router.open(.buyMeACoffee)
         }) {
             HStack(spacing: 16) {
                 Image(systemName: "cup.and.saucer.fill")

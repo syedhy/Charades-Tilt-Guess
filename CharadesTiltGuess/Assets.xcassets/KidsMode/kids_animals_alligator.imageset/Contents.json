@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "kids_animals_alligator.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

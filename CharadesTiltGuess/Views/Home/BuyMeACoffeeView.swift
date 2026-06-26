@@ -66,13 +66,16 @@ struct BuyMeACoffeeView: View {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .font(.system(size: 32))
                             .foregroundStyle(.orange)
-                        Text("Could not load options.")
+                        Text(storeKitManager.productLoadErrorMessage ?? "Could not load options.")
                             .font(.system(size: 18, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                        Text("Please check your network, or run this app in the iOS Simulator to load local mock products.")
-                            .font(.system(size: 14, weight: .medium, design: .rounded))
                             .multilineTextAlignment(.center)
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                        if storeKitManager.productLoadErrorMessage == nil {
+                            Text("Please check your network, or run this app in the iOS Simulator to load local mock products.")
+                                .font(.system(size: 14, weight: .medium, design: .rounded))
+                                .multilineTextAlignment(.center)
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+                        }
                     }
                     .padding(.top, 32)
                     .padding(.horizontal, 24)

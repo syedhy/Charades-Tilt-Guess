@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0FCC5F072FA2B22EA14440F0 /* endCountDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91E0776020540DF6907BA087 /* endCountDown.wav */; };
-		20392A226DF68F56937C1832 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */; };
+		20392A226DF68F56937C1832 /* CharadesTiltGuess/PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */; };
 		2B9A8CE0CEA7CBCC200731A4 /* timeout.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2A150590C1A7E8EADCE1C2BA /* timeout.wav */; };
 		30B647C5FCE8EA3A70A88B64 /* default-sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C14F1D8DF525C2CF622E /* default-sports.json */; };
 		39D89CE77F50E4C8052CD4B2 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6CF586EF0228243A1AA5FCA9 /* countdown.wav */; };
@@ -121,33 +121,33 @@
 
 /* Begin PBXFileReference section */
 		032F9B121F7868CA73091EE7 /* TeamMatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchState.swift; sourceTree = "<group>"; };
-		07ED1EE7DB5981FECD1924CF /* picture-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "picture-animals.json"; path = "picture-animals.json"; sourceTree = "<group>"; };
-		1711D193FD7F4A0A60532CE0 /* pass.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = pass.wav; sourceTree = "<group>"; };
+		07ED1EE7DB5981FECD1924CF /* picture-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-animals.json"; sourceTree = "<group>"; };
+		1711D193FD7F4A0A60532CE0 /* pass.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
 		1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		1B1FB19D2FEEE5EB001B031B /* Tips.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
-		1C8BA844ECA1A4AC897CC843 /* picture-tools.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "picture-tools.json"; path = "picture-tools.json"; sourceTree = "<group>"; };
-		23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = CharadesTiltGuess/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		1C8BA844ECA1A4AC897CC843 /* picture-tools.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-tools.json"; sourceTree = "<group>"; };
+		23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = CharadesTiltGuess/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchSelectionView.swift; sourceTree = "<group>"; };
 		29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BuyMeACoffeeView.swift; sourceTree = "<group>"; };
-		2A150590C1A7E8EADCE1C2BA /* timeout.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = timeout.wav; sourceTree = "<group>"; };
+		2A150590C1A7E8EADCE1C2BA /* timeout.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = timeout.wav; sourceTree = "<group>"; };
 		2BE63BEE7463D32D6FA629DC /* BuyMeACoffeeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BuyMeACoffeeView.swift; sourceTree = "<group>"; };
 		2D2F1F17B8913B027F98DC82 /* TeamMatchLobbyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchLobbyView.swift; sourceTree = "<group>"; };
-		3C4A4C32836CD0F6F5D446D4 /* default-cartoons.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-cartoons.json"; sourceTree = "<group>"; };
-		3ED42CE8F49D0E95353F0564 /* default-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-animals.json"; sourceTree = "<group>"; };
+		3C4A4C32836CD0F6F5D446D4 /* default-cartoons.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-cartoons.json"; sourceTree = "<group>"; };
+		3ED42CE8F49D0E95353F0564 /* default-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-animals.json"; sourceTree = "<group>"; };
 		46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchResultsView.swift; sourceTree = "<group>"; };
-		48C37B80ACA61339B912EC5F /* correct.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = correct.wav; sourceTree = "<group>"; };
-		4E8BD66528C3CBB528FE1605 /* default-school.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-school.json"; sourceTree = "<group>"; };
-		53C8647A2CC5815C08616C69 /* gameStart.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = gameStart.wav; sourceTree = "<group>"; };
-		66A179E888D24A1D9C12F221 /* default-tv-shows.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-tv-shows.json"; sourceTree = "<group>"; };
-		678F539163FBAEFAD6000827 /* default-food.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-food.json"; sourceTree = "<group>"; };
-		6CF586EF0228243A1AA5FCA9 /* countdown.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = countdown.wav; sourceTree = "<group>"; };
-		6E65C14F1D8DF525C2CF622E /* default-sports.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-sports.json"; sourceTree = "<group>"; };
-		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-science.json"; sourceTree = "<group>"; };
+		48C37B80ACA61339B912EC5F /* correct.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		4E8BD66528C3CBB528FE1605 /* default-school.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-school.json"; sourceTree = "<group>"; };
+		53C8647A2CC5815C08616C69 /* gameStart.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
+		66A179E888D24A1D9C12F221 /* default-tv-shows.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-tv-shows.json"; sourceTree = "<group>"; };
+		678F539163FBAEFAD6000827 /* default-food.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-food.json"; sourceTree = "<group>"; };
+		6CF586EF0228243A1AA5FCA9 /* countdown.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
+		6E65C14F1D8DF525C2CF622E /* default-sports.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-sports.json"; sourceTree = "<group>"; };
+		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-science.json"; sourceTree = "<group>"; };
 		78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
 		860558B3159DDE727387BC26 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
-		91E0776020540DF6907BA087 /* endCountDown.wav */ = {isa = PBXFileReference; includeInIndex = 1; path = endCountDown.wav; sourceTree = "<group>"; };
-		9B7F1944E77609CF32F99F0D /* default-countries.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-countries.json"; sourceTree = "<group>"; };
-		AA559C6888A3874D5EBF0074 /* default-easy.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-easy.json"; sourceTree = "<group>"; };
+		91E0776020540DF6907BA087 /* endCountDown.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
+		9B7F1944E77609CF32F99F0D /* default-countries.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-countries.json"; sourceTree = "<group>"; };
+		AA559C6888A3874D5EBF0074 /* default-easy.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-easy.json"; sourceTree = "<group>"; };
 		AAA000000000000000000008 /* CharadesTiltGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharadesTiltGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000009 /* CharadesTiltGuessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA000000000000000000010 /* CharadesTiltGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharadesTiltGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,15 +212,14 @@
 		AAJ000000000000000000032 /* CardRotationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStoreTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
-		B9FE01940853EA4570787E64 /* default-hard.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-hard.json"; sourceTree = "<group>"; };
-		C4AF703DB647F2C207AF6363 /* picture-food.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "picture-food.json"; path = "picture-food.json"; sourceTree = "<group>"; };
-		C9544FF4C8B71975D9E49017 /* default-celebrities.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-celebrities.json"; sourceTree = "<group>"; };
-		D14A901910F9A51A304823A3 /* default-history.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-history.json"; sourceTree = "<group>"; };
-		E21275D30ABB637D57FB8D20 /* default-movies.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-movies.json"; sourceTree = "<group>"; };
+		B9FE01940853EA4570787E64 /* default-hard.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-hard.json"; sourceTree = "<group>"; };
+		C4AF703DB647F2C207AF6363 /* picture-food.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-food.json"; sourceTree = "<group>"; };
+		C9544FF4C8B71975D9E49017 /* default-celebrities.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-celebrities.json"; sourceTree = "<group>"; };
+		D14A901910F9A51A304823A3 /* default-history.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-history.json"; sourceTree = "<group>"; };
+		E21275D30ABB637D57FB8D20 /* default-movies.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-movies.json"; sourceTree = "<group>"; };
 		E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		E409A6800FC8331B00EC3398 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
-
-		FB5835266EA2BFCC0B2E5C7E /* default-tech.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "default-tech.json"; sourceTree = "<group>"; };
+		FB5835266EA2BFCC0B2E5C7E /* default-tech.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-tech.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +257,6 @@
 				48C37B80ACA61339B912EC5F /* correct.wav */,
 				1711D193FD7F4A0A60532CE0 /* pass.wav */,
 			);
-			name = SoundEffects;
 			path = SoundEffects;
 			sourceTree = "<group>";
 		};
@@ -283,7 +281,6 @@
 				E21275D30ABB637D57FB8D20 /* default-movies.json */,
 				FB5835266EA2BFCC0B2E5C7E /* default-tech.json */,
 			);
-			name = Decks;
 			path = Decks;
 			sourceTree = "<group>";
 		};
@@ -295,8 +292,7 @@
 				AAA000000000000000000023 /* CharadesTiltGuessTests */,
 				AAA000000000000000000024 /* CharadesTiltGuessUITests */,
 				AAA000000000000000000025 /* Products */,
-
-				23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */,
+				23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */,
 			);
 			sourceTree = "<group>";
 		};
@@ -589,7 +585,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2650;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					AAA000000000000000000017 = {
 						CreatedOnToolsVersion = 26.0;
@@ -653,7 +649,7 @@
 				39D89CE77F50E4C8052CD4B2 /* countdown.wav in Resources */,
 				8451797B5A2B7410175BD565 /* correct.wav in Resources */,
 				E6D079B92AEFF7E42AB00D78 /* pass.wav in Resources */,
-				20392A226DF68F56937C1832 /* PrivacyInfo.xcprivacy in Resources */,
+				20392A226DF68F56937C1832 /* CharadesTiltGuess/PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +810,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -877,6 +874,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = K554G79ZZY;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -904,7 +902,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Charades;
@@ -932,7 +929,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Charades;
@@ -960,7 +956,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -984,7 +979,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1007,7 +1001,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1030,7 +1023,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K554G79ZZY;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

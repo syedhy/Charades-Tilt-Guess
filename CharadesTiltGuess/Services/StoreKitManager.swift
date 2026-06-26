@@ -7,6 +7,7 @@ class StoreKitManager: ObservableObject {
     @Published var isPurchasing: Bool = false
     @Published var isLoadingProducts: Bool = true
     @Published var purchaseError: Error? = nil
+    @Published var productLoadErrorMessage: String? = nil
     @Published var hasTipped: Bool = false
     
     // Define the product IDs based on the 3 tiers
@@ -42,8 +43,9 @@ class StoreKitManager: ObservableObject {
             let storeProducts = try await Product.products(for: productIds)
             // Sort products by price
             products = storeProducts.sorted { $0.price < $1.price }
+            productLoadErrorMessage = nil
         } catch {
-            print("Failed to fetch products: \(error)")
+            productLoadErrorMessage = "Could not load tip options. Please try again later."
         }
     }
     

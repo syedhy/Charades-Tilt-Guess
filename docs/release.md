@@ -4,7 +4,7 @@
 - [ ] **Name**: Charades Tilt Guess
 - [ ] **Subtitle**: Tilt-to-guess party game
 - [ ] **Description**: Play the classic game of charades with a modern twist! Tilt your phone up or down to guess the words. Features custom decks, Picture Mode, and Wikipedia Mode.
-- [ ] **Keywords**: charades, party game, tilt, guess, offline game, picture mode
+- [ ] **Keywords**: charades, party game, tilt, guess, word game, picture mode
 - [ ] **Age Rating**: Set appropriately (no mature content). Answer NO to gambling, violence, etc.
 - [ ] **Data Privacy Label**: Select **"Data Not Collected"**.
 

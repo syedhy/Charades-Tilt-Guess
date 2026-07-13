@@ -62,7 +62,11 @@ struct GameView: View {
                 }
         )
         .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
             viewModel.startRoundSystemsIfNeeded()
+        }
+        .onDisappear {
+            UIApplication.shared.isIdleTimerDisabled = false
         }
         .animation(.easeInOut(duration: 0.18), value: viewModel.phase)
     }

@@ -10,11 +10,11 @@ enum TiltSensitivity: String, Codable, CaseIterable, Hashable, Identifiable {
     var displayName: String {
         switch self {
         case .relaxed:
-            "Low Sensitivity"
+            "High Sensitivity"
         case .normal:
             "Medium Sensitivity"
         case .strict:
-            "High Sensitivity"
+            "Low Sensitivity"
         }
     }
 

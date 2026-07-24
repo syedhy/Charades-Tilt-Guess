@@ -16,6 +16,7 @@ struct TeamMatchSelectionView: View {
     @State private var playersPerTeam: Int = 4
     @State private var isCustomPlayers: Bool = false
     @State private var selectedDeckIDs: Set<String> = []
+    @State private var currentTeamPresets: [TeamInfo] = TeamInfo.randomPresets(count: 2)
 
     var body: some View {
         ZStack {
@@ -85,6 +86,7 @@ struct TeamMatchSelectionView: View {
                     Button {
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                             numberOfTeams = count
+                            currentTeamPresets = TeamInfo.randomPresets(count: count)
                         }
                     } label: {
                         Text("\(count)")
@@ -150,7 +152,7 @@ struct TeamMatchSelectionView: View {
                 HStack(spacing: 8) {
                     Image(systemName: "person.badge.plus")
                         .font(.system(size: 16, weight: .black))
-                    Text(isCustomPlayers || playersPerTeam > 5 ? "Custom Count (\(playersPerTeam) Players)" : "Custom Player Count (6+)")
+                    Text(isCustomPlayers || playersPerTeam > 5 ? "Custom Player Count (\(playersPerTeam))" : "Custom Player Count")
                         .font(.system(size: 16, weight: .black, design: .rounded))
                 }
                 .foregroundStyle((isCustomPlayers || playersPerTeam > 5) ? .white : AppTheme.Colors.ink)
@@ -230,30 +232,23 @@ struct TeamMatchSelectionView: View {
                 ]
 
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(0..<numberOfTeams, id: \.self) { index in
-                        let preset = TeamInfo.defaultPresets[index % TeamInfo.defaultPresets.count]
+                    ForEach(currentTeamPresets) { team in
                         HStack(spacing: 10) {
-                            Text(preset.icon)
+                            Text(team.icon)
                                 .font(.system(size: 26))
 
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(preset.name)
-                                    .font(.system(size: 17, weight: .black, design: .rounded))
-                                    .foregroundStyle(AppTheme.Colors.ink)
-                                    .lineLimit(1)
-                                    .minimumScaleFactor(0.8)
-
-                                Text("Team \(index + 1)")
-                                    .font(.system(size: 11, weight: .bold, design: .rounded))
-                                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
-                            }
+                            Text(team.name)
+                                .font(.system(size: 18, weight: .black, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.8)
 
                             Spacer(minLength: 0)
                         }
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 10)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 12)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(preset.color.displayColor.opacity(0.35), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .background(team.color.displayColor.opacity(0.35), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                         .overlay(
                             RoundedRectangle(cornerRadius: 16, style: .continuous)
                                 .stroke(AppTheme.Colors.ink, lineWidth: 2.5)
@@ -465,7 +460,8 @@ struct TeamMatchSelectionView: View {
             numberOfTeams: numberOfTeams,
             playersPerTeam: playersPerTeam,
             sourceDecks: selectedDecks,
-            duration: settings.defaultDuration
+            duration: settings.defaultDuration,
+            customTeams: currentTeamPresets
         )
 
         router.activeTeamMatch = state

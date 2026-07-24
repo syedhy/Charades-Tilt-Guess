@@ -12,8 +12,41 @@ struct TeamInfo: Identifiable, Hashable, Equatable {
         ("Lions", "🦁", .yellow),
         ("Rhinos", "🦏", .mint),
         ("Eagles", "🦅", .blue),
-        ("Wolves", "🐺", .purple)
+        ("Wolves", "🐺", .purple),
+        ("Dragons", "🐉", .coral),
+        ("Sharks", "🦈", .blue),
+        ("Bears", "🐻", .orange),
+        ("Foxes", "🦊", .yellow),
+        ("Gorillas", "🦍", .mint),
+        ("Panthers", "🐆", .purple),
+        ("Flamingos", "🦩", .pink),
+        ("Bison", "🦬", .orange),
+        ("Falcons", "🦅", .yellow),
+        ("Cobras", "🐍", .mint),
+        ("Hornets", "🐝", .yellow),
+        ("Mammoths", "🦣", .purple),
+        ("Stallions", "🐎", .coral),
+        ("Kangaroos", "🦘", .orange),
+        ("Owls", "🦉", .blue),
+        ("Octopuses", "🐙", .purple),
+        ("Dolphins", "🐬", .mint),
+        ("Cheetahs", "🐆", .orange),
+        ("Gators", "🐊", .mint)
     ]
+
+    static func randomPresets(count: Int) -> [TeamInfo] {
+        let clampedCount = max(2, min(5, count))
+        let shuffled = defaultPresets.shuffled().prefix(clampedCount)
+        return shuffled.enumerated().map { index, preset in
+            TeamInfo(
+                id: index + 1,
+                name: preset.name,
+                icon: preset.icon,
+                color: preset.color,
+                score: 0
+            )
+        }
+    }
 }
 
 final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable {
@@ -43,29 +76,20 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
     var team1Score: Int { teams.indices.contains(0) ? teams[0].score : 0 }
     var team2Score: Int { teams.indices.contains(1) ? teams[1].score : 0 }
 
-    init(numberOfTeams: Int = 2, playersPerTeam: Int = 4, sourceDecks: [Deck], duration: Int) {
+    init(numberOfTeams: Int = 2, playersPerTeam: Int = 4, sourceDecks: [Deck], duration: Int, customTeams: [TeamInfo]? = nil) {
         let clampedTeams = max(2, min(5, numberOfTeams))
-        let clampedPlayers = max(1, min(10, playersPerTeam))
+        let clampedPlayers = max(1, min(15, playersPerTeam))
 
         self.numberOfTeams = clampedTeams
         self.playersPerTeam = clampedPlayers
         self.sourceDecks = sourceDecks
         self.duration = duration
 
-        var generatedTeams: [TeamInfo] = []
-        for index in 0..<clampedTeams {
-            let preset = TeamInfo.defaultPresets[index % TeamInfo.defaultPresets.count]
-            generatedTeams.append(
-                TeamInfo(
-                    id: index + 1,
-                    name: preset.name,
-                    icon: preset.icon,
-                    color: preset.color,
-                    score: 0
-                )
-            )
+        if let customTeams = customTeams, customTeams.count == clampedTeams {
+            self.teams = customTeams
+        } else {
+            self.teams = TeamInfo.randomPresets(count: clampedTeams)
         }
-        self.teams = generatedTeams
 
         generateDeckForCurrentRound()
     }

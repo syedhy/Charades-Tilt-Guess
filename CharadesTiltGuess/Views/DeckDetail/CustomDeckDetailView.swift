@@ -211,9 +211,11 @@ struct CustomDeckDetailView: View {
                     .lineLimit(2)
                     .minimumScaleFactor(0.68)
 
-                Label(mode.title, systemImage: mode.symbolName)
-                    .font(.system(size: 13, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
+                if !fromMyDecks {
+                    Label(mode.title, systemImage: mode.symbolName)
+                        .font(.system(size: 13, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
+                }
             }
 
             playDeckButton
@@ -223,10 +225,12 @@ struct CustomDeckDetailView: View {
     private var playDeckButton: some View {
         VStack(spacing: 10) {
             if fromMyDecks || mode == .emoji {
-                Text("PLAY THIS DECK")
-                    .font(.system(size: 12, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                if !fromMyDecks {
+                    Text("PLAY THIS DECK")
+                        .font(.system(size: 12, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
 
                 let mainMode: GameMode = viewModel.deck.isEmojiDeck ? .emoji : .normal
                 let mainTitle = viewModel.deck.isEmojiDeck ? "Emoji Mode" : "Normal Mode"

@@ -72,7 +72,7 @@ struct PasteAndPlayView: View {
     private var pastePanel: some View {
         DoodlePanel {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
-                DoodleActionButton(title: "Paste clipboard", symbol: "doc.on.clipboard", accent: AppTheme.Colors.yellow) {
+                DoodleActionButton(title: "Paste from Clipboard", symbol: "doc.on.clipboard", accent: AppTheme.Colors.yellow) {
                     let clipboardText = UIPasteboard.general.string ?? ""
                     pastedText = clipboardText
                     pasteMessage = clipboardText.isEmpty ? "Clipboard is empty." : nil

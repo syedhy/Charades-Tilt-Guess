@@ -694,7 +694,7 @@ private struct AddCardSheet: View {
         DoodlePanel(background: AppTheme.Colors.yellow) {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
                 HStack {
-                    Text("Card Prompt / Emojis")
+                    Text(viewModel.deck.isEmojiDeck ? "Card Emojis" : "Card Name")
                         .font(.system(size: 17, weight: .black, design: .rounded))
 
                     Spacer()
@@ -704,7 +704,7 @@ private struct AddCardSheet: View {
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }
 
-                TextField("Pizza or 🦇👨", text: $cardText)
+                TextField(viewModel.deck.isEmojiDeck ? "🧙‍♂️ ⚡ 🦉" : "Pizza", text: $cardText)
                     .font(.system(size: 22, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                     .textInputAutocapitalization(.words)
@@ -727,7 +727,7 @@ private struct AddCardSheet: View {
                         .font(.system(size: 14, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
 
-                    TextField("Batman (Revealed on results)", text: $cardMeaning)
+                    TextField(viewModel.deck.isEmojiDeck ? "Harry Potter" : "Optional description", text: $cardMeaning)
                         .font(.system(size: 16, weight: .bold, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
                         .padding(.horizontal, AppTheme.Spacing.standard)
@@ -875,7 +875,7 @@ private struct PasteCardsSheet: View {
                 }
 
                 DoodleActionButton(
-                    title: "Paste Cards from Clipboard",
+                    title: "Paste from Clipboard",
                     symbol: "doc.on.clipboard",
                     accent: AppTheme.Colors.yellow
                 ) {
@@ -911,7 +911,7 @@ private struct PasteCardsSheet: View {
                 if isEmoji {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("• 1 card per line")
-                        Text("• 2–3 emojis, then dash (-), then answer")
+                        Text("• 2–3 emojis , then dash (-) , then answer")
                     }
                     .font(.system(size: 13, weight: .bold, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
@@ -921,7 +921,7 @@ private struct PasteCardsSheet: View {
                             .font(.system(size: 11, weight: .black, design: .rounded))
                             .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
 
-                        Text("🍿 🎬 - Movie\n🚀 🌕 - Moonshot\n🔥 🍕 - Hot Pizza")
+                        Text("🧙‍♂️ ⚡ 🦉 - Harry Potter\n🚢 🧊 💔 - Titanic\n💍 🌋 👁️ - The Lord of the Rings")
                             .font(.system(size: 13, weight: .black, design: .monospaced))
                             .foregroundStyle(AppTheme.Colors.ink)
                             .padding(8)

@@ -172,11 +172,17 @@ struct MixAndMatchSelectionView: View {
                     } else {
                         selectionControls
 
-                        if !viewModel.customDecks.isEmpty {
-                            deckSection(title: "Custom Decks", decks: viewModel.customDecks)
+                        if !customNonEmojiDecks.isEmpty {
+                            deckSection(title: "Custom Decks", decks: customNonEmojiDecks)
                         }
 
-                        deckSection(title: "Built-In Decks", decks: viewModel.defaultDecks)
+                        if !defaultNonEmojiDecks.isEmpty {
+                            deckSection(title: "Built-In Decks", decks: defaultNonEmojiDecks)
+                        }
+
+                        if !emojiDecks.isEmpty {
+                            deckSection(title: "Emoji Decks", decks: emojiDecks)
+                        }
                     }
                 }
                 .padding(.horizontal, 24)
@@ -195,6 +201,18 @@ struct MixAndMatchSelectionView: View {
             viewModel.loadDecks()
             selectedDeckIDs = Set(viewModel.decks.map(\.id))
         }
+    }
+
+    private var customNonEmojiDecks: [Deck] {
+        viewModel.customDecks.filter { !$0.isEmojiDeck }
+    }
+
+    private var defaultNonEmojiDecks: [Deck] {
+        viewModel.defaultDecks.filter { !$0.isEmojiDeck }
+    }
+
+    private var emojiDecks: [Deck] {
+        viewModel.decks.filter { $0.isEmojiDeck }
     }
 
     private var header: some View {
@@ -294,11 +312,23 @@ struct MixAndMatchSelectionView: View {
                     .overlay(Circle().stroke(AppTheme.Colors.ink, lineWidth: 3))
 
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(deck.name)
-                        .font(.system(size: 18, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.72)
+                    HStack(spacing: 6) {
+                        Text(deck.name)
+                            .font(.system(size: 18, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.72)
+
+                        if deck.isEmojiDeck {
+                            Text("EMOJI")
+                                .font(.system(size: 9, weight: .black, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink)
+                                .padding(.horizontal, 6)
+                                .padding(.vertical, 3)
+                                .background(AppTheme.Colors.yellow, in: Capsule())
+                                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 1.5))
+                        }
+                    }
 
                     Text("\(deck.cards.count) cards")
                         .font(.system(size: 12, weight: .black, design: .rounded))

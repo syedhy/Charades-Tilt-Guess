@@ -22,6 +22,7 @@ struct DeckGridView: View {
                         detail: "\(deck.cards.count) prompts",
                         symbol: deck.symbolName,
                         accent: deck.color.displayColor,
+                        isEmoji: deck.isEmojiDeck,
                         rotation: rotation
                     )
                 }

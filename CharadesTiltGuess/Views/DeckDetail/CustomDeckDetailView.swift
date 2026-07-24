@@ -227,6 +227,7 @@ struct CustomDeckDetailView: View {
                 playDeck(mode: .normal)
             }
             .disabled(viewModel.draftCards.isEmpty)
+            .accessibilityIdentifier("playDeckButton")
 
             if !viewModel.draftCards.isEmpty {
                 HStack(spacing: 12) {
@@ -249,6 +250,7 @@ struct CustomDeckDetailView: View {
                         )
                     }
                     .buttonStyle(DoodlePressStyle())
+                    .accessibilityIdentifier("playInfiniteDeckButton")
 
                     Button {
                         playTeamMatch()
@@ -269,11 +271,11 @@ struct CustomDeckDetailView: View {
                         )
                     }
                     .buttonStyle(DoodlePressStyle())
+                    .accessibilityIdentifier("playTeamsDeckButton")
                 }
             }
         }
         .opacity(viewModel.draftCards.isEmpty ? 0.62 : 1)
-        .accessibilityIdentifier("playDeckButton")
     }
 
     private var editFormPanel: some View {

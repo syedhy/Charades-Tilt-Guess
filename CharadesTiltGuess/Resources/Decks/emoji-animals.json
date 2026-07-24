@@ -26,7 +26,7 @@
             { "id": "em-a-020", "text": "🦇洞", "meaning": "Bat in Cave" }
         ],
         "type": "default",
-        "color": "green",
+        "color": "mint",
         "symbolName": "leaf.fill"
     }
 ]

@@ -89,9 +89,14 @@ struct HomeView: View {
                     }
                 }
 
-                quickAction(title: "Random", symbol: "shuffle", accent: AppTheme.Colors.paperBright) {
-                    guard let deck = viewModel.randomDeck else { return }
-                    router.startGame(mode: .normal, deck: deck, settings: settingsViewModel.settings)
+                quickAction(title: "My Decks", symbol: "rectangle.stack.fill", accent: AppTheme.Colors.paperBright) {
+                    if let firstCustom = viewModel.customDecks.first {
+                        router.open(.customDeckDetail(deck: firstCustom, mode: .normal))
+                    } else if viewModel.canCreateNewDeck {
+                        router.openImmediately(.deckEditor)
+                    } else {
+                        showingLimitAlert = true
+                    }
                 }
             }
 
@@ -166,7 +171,7 @@ struct HomeView: View {
             router.open(.mixAndMatch)
         case .teamVsTeam:
             router.open(.teamMatchSelection)
-        case .normal, .infinite, .picture:
+        case .normal, .infinite, .emoji:
             router.open(.modeDeckSelection(mode: mode))
 
         }

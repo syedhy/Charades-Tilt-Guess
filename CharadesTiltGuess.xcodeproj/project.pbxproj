@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0567AF143F2D580531720A78 /* emoji-movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 58F02A54C132727C4D028EE4 /* emoji-movies.json */; };
 		0FCC5F072FA2B22EA14440F0 /* endCountDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91E0776020540DF6907BA087 /* endCountDown.wav */; };
-		20392A226DF68F56937C1832 /* CharadesTiltGuess/PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */; };
+		20392A226DF68F56937C1832 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */; };
 		2B9A8CE0CEA7CBCC200731A4 /* timeout.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2A150590C1A7E8EADCE1C2BA /* timeout.wav */; };
 		30B647C5FCE8EA3A70A88B64 /* default-sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C14F1D8DF525C2CF622E /* default-sports.json */; };
 		39D89CE77F50E4C8052CD4B2 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6CF586EF0228243A1AA5FCA9 /* countdown.wav */; };
-		3DB699507610E55D3C3570F2 /* picture-tools.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C8BA844ECA1A4AC897CC843 /* picture-tools.json */; };
 		40F5775E8EB363B54BB0959F /* default-celebrities.json in Resources */ = {isa = PBXBuildFile; fileRef = C9544FF4C8B71975D9E49017 /* default-celebrities.json */; };
 		4A17E6A6C7149F8C0EABE66B /* default-movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E21275D30ABB637D57FB8D20 /* default-movies.json */; };
 		4C9E4679F8ADFFDD50FC176C /* default-tech.json in Resources */ = {isa = PBXBuildFile; fileRef = FB5835266EA2BFCC0B2E5C7E /* default-tech.json */; };
 		5180AE57DC32247A202A7BF8 /* default-food.json in Resources */ = {isa = PBXBuildFile; fileRef = 678F539163FBAEFAD6000827 /* default-food.json */; };
+		589CDF95A05DEDD3C803235E /* emoji-food.json in Resources */ = {isa = PBXBuildFile; fileRef = 22C1983614BB6B2495FD8FD1 /* emoji-food.json */; };
 		5A9D53B880BCAFBEBA5015F4 /* default-hard.json in Resources */ = {isa = PBXBuildFile; fileRef = B9FE01940853EA4570787E64 /* default-hard.json */; };
 		5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */; };
 		6F208C72EC7AACDF18B75C30 /* default-school.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BD66528C3CBB528FE1605 /* default-school.json */; };
 		8451797B5A2B7410175BD565 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 48C37B80ACA61339B912EC5F /* correct.wav */; };
+		9D7E42DD715347241C1CD096 /* emoji-animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 65C40385AF2C867E4A5CB8D7 /* emoji-animals.json */; };
 		A20E24B30E5B9AA47926CAFA /* default-cartoons.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C4A4C32836CD0F6F5D446D4 /* default-cartoons.json */; };
 		AAA000000000000000000001 /* CharadesTiltGuessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000011 /* CharadesTiltGuessApp.swift */; };
 		AAA000000000000000000002 /* AppMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000000012 /* AppMetadata.swift */; };
@@ -85,6 +87,7 @@
 		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
 		B6B413665BA77DF37E308FAA /* default-animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED42CE8F49D0E95353F0564 /* default-animals.json */; };
 		BAA190C8EFF1B4AE17B2BDC7 /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53C8647A2CC5815C08616C69 /* gameStart.wav */; };
+		BD83A95899F4BB7D32458C59 /* emoji-places.json in Resources */ = {isa = PBXBuildFile; fileRef = C5DE951730D51B83D1CFF4B7 /* emoji-places.json */; };
 		C313D0AAC9C6749B22788953 /* TeamMatchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E87D233B39F7DC333D0C84 /* TeamMatchResultsView.swift */; };
 		C55030FAA1DF0B60E7A9FF65 /* OnboardingSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */; };
 		C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */; };
@@ -96,9 +99,8 @@
 		D759AF3683D6F2EA10A6E275 /* default-science.json in Resources */ = {isa = PBXBuildFile; fileRef = 74F415F8E7B2D8D932CA0B4A /* default-science.json */; };
 		DA2DDE4245A0F7AC5DA7B550 /* BuyMeACoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */; };
 		DBC0983FAE2553ED38B72F4B /* TeamMatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032F9B121F7868CA73091EE7 /* TeamMatchState.swift */; };
+		E19BA25DA41002015DE6E09C /* emoji-pop.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C7213D1B544528C8F07612D /* emoji-pop.json */; };
 		E6D079B92AEFF7E42AB00D78 /* pass.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1711D193FD7F4A0A60532CE0 /* pass.wav */; };
-		EF16E0944483BFBF669C2F5E /* picture-food.json in Resources */ = {isa = PBXBuildFile; fileRef = C4AF703DB647F2C207AF6363 /* picture-food.json */; };
-		FD2D9EACD391C48E9171F9A1 /* picture-animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 07ED1EE7DB5981FECD1924CF /* picture-animals.json */; };
 		FDDF4DDC67E1F4D049C62A75 /* default-history.json in Resources */ = {isa = PBXBuildFile; fileRef = D14A901910F9A51A304823A3 /* default-history.json */; };
 /* End PBXBuildFile section */
 
@@ -121,12 +123,11 @@
 
 /* Begin PBXFileReference section */
 		032F9B121F7868CA73091EE7 /* TeamMatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchState.swift; sourceTree = "<group>"; };
-		07ED1EE7DB5981FECD1924CF /* picture-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-animals.json"; sourceTree = "<group>"; };
 		1711D193FD7F4A0A60532CE0 /* pass.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = pass.wav; sourceTree = "<group>"; };
 		1B18B6D17D993D87193F8561 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		1B1FB19D2FEEE5EB001B031B /* Tips.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tips.storekit; sourceTree = "<group>"; };
-		1C8BA844ECA1A4AC897CC843 /* picture-tools.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-tools.json"; sourceTree = "<group>"; };
-		23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = CharadesTiltGuess/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		22C1983614BB6B2495FD8FD1 /* emoji-food.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-food.json"; sourceTree = "<group>"; };
+		23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; path = CharadesTiltGuess/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeamMatchSelectionView.swift; sourceTree = "<group>"; };
 		29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BuyMeACoffeeView.swift; sourceTree = "<group>"; };
 		2A150590C1A7E8EADCE1C2BA /* timeout.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = timeout.wav; sourceTree = "<group>"; };
@@ -138,6 +139,8 @@
 		48C37B80ACA61339B912EC5F /* correct.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		4E8BD66528C3CBB528FE1605 /* default-school.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-school.json"; sourceTree = "<group>"; };
 		53C8647A2CC5815C08616C69 /* gameStart.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = gameStart.wav; sourceTree = "<group>"; };
+		58F02A54C132727C4D028EE4 /* emoji-movies.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-movies.json"; sourceTree = "<group>"; };
+		65C40385AF2C867E4A5CB8D7 /* emoji-animals.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-animals.json"; sourceTree = "<group>"; };
 		66A179E888D24A1D9C12F221 /* default-tv-shows.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-tv-shows.json"; sourceTree = "<group>"; };
 		678F539163FBAEFAD6000827 /* default-food.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-food.json"; sourceTree = "<group>"; };
 		6CF586EF0228243A1AA5FCA9 /* countdown.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-science.json"; sourceTree = "<group>"; };
 		78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
 		860558B3159DDE727387BC26 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
+		8C7213D1B544528C8F07612D /* emoji-pop.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-pop.json"; sourceTree = "<group>"; };
 		91E0776020540DF6907BA087 /* endCountDown.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
 		9B7F1944E77609CF32F99F0D /* default-countries.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-countries.json"; sourceTree = "<group>"; };
 		AA559C6888A3874D5EBF0074 /* default-easy.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-easy.json"; sourceTree = "<group>"; };
@@ -213,7 +217,7 @@
 		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
 		B9FE01940853EA4570787E64 /* default-hard.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-hard.json"; sourceTree = "<group>"; };
-		C4AF703DB647F2C207AF6363 /* picture-food.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "picture-food.json"; sourceTree = "<group>"; };
+		C5DE951730D51B83D1CFF4B7 /* emoji-places.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-places.json"; sourceTree = "<group>"; };
 		C9544FF4C8B71975D9E49017 /* default-celebrities.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-celebrities.json"; sourceTree = "<group>"; };
 		D14A901910F9A51A304823A3 /* default-history.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-history.json"; sourceTree = "<group>"; };
 		E21275D30ABB637D57FB8D20 /* default-movies.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-movies.json"; sourceTree = "<group>"; };
@@ -263,7 +267,6 @@
 		9C2E19EAD4526C82EE5706DF /* Decks */ = {
 			isa = PBXGroup;
 			children = (
-				C4AF703DB647F2C207AF6363 /* picture-food.json */,
 				4E8BD66528C3CBB528FE1605 /* default-school.json */,
 				3C4A4C32836CD0F6F5D446D4 /* default-cartoons.json */,
 				66A179E888D24A1D9C12F221 /* default-tv-shows.json */,
@@ -271,8 +274,6 @@
 				B9FE01940853EA4570787E64 /* default-hard.json */,
 				D14A901910F9A51A304823A3 /* default-history.json */,
 				6E65C14F1D8DF525C2CF622E /* default-sports.json */,
-				1C8BA844ECA1A4AC897CC843 /* picture-tools.json */,
-				07ED1EE7DB5981FECD1924CF /* picture-animals.json */,
 				3ED42CE8F49D0E95353F0564 /* default-animals.json */,
 				C9544FF4C8B71975D9E49017 /* default-celebrities.json */,
 				678F539163FBAEFAD6000827 /* default-food.json */,
@@ -280,6 +281,11 @@
 				74F415F8E7B2D8D932CA0B4A /* default-science.json */,
 				E21275D30ABB637D57FB8D20 /* default-movies.json */,
 				FB5835266EA2BFCC0B2E5C7E /* default-tech.json */,
+				58F02A54C132727C4D028EE4 /* emoji-movies.json */,
+				65C40385AF2C867E4A5CB8D7 /* emoji-animals.json */,
+				8C7213D1B544528C8F07612D /* emoji-pop.json */,
+				22C1983614BB6B2495FD8FD1 /* emoji-food.json */,
+				C5DE951730D51B83D1CFF4B7 /* emoji-places.json */,
 			);
 			path = Decks;
 			sourceTree = "<group>";
@@ -292,7 +298,7 @@
 				AAA000000000000000000023 /* CharadesTiltGuessTests */,
 				AAA000000000000000000024 /* CharadesTiltGuessUITests */,
 				AAA000000000000000000025 /* Products */,
-				23D9283DE64ECE12D8331F23 /* CharadesTiltGuess/PrivacyInfo.xcprivacy */,
+				23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */,
 			);
 			sourceTree = "<group>";
 		};
@@ -626,7 +632,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE000000000000000000003 /* Assets.xcassets in Resources */,
-				EF16E0944483BFBF669C2F5E /* picture-food.json in Resources */,
 				6F208C72EC7AACDF18B75C30 /* default-school.json in Resources */,
 				A20E24B30E5B9AA47926CAFA /* default-cartoons.json in Resources */,
 				D0387D4A93F470624FFD7461 /* default-tv-shows.json in Resources */,
@@ -634,8 +639,6 @@
 				5A9D53B880BCAFBEBA5015F4 /* default-hard.json in Resources */,
 				FDDF4DDC67E1F4D049C62A75 /* default-history.json in Resources */,
 				30B647C5FCE8EA3A70A88B64 /* default-sports.json in Resources */,
-				3DB699507610E55D3C3570F2 /* picture-tools.json in Resources */,
-				FD2D9EACD391C48E9171F9A1 /* picture-animals.json in Resources */,
 				B6B413665BA77DF37E308FAA /* default-animals.json in Resources */,
 				40F5775E8EB363B54BB0959F /* default-celebrities.json in Resources */,
 				5180AE57DC32247A202A7BF8 /* default-food.json in Resources */,
@@ -649,7 +652,12 @@
 				39D89CE77F50E4C8052CD4B2 /* countdown.wav in Resources */,
 				8451797B5A2B7410175BD565 /* correct.wav in Resources */,
 				E6D079B92AEFF7E42AB00D78 /* pass.wav in Resources */,
-				20392A226DF68F56937C1832 /* CharadesTiltGuess/PrivacyInfo.xcprivacy in Resources */,
+				20392A226DF68F56937C1832 /* PrivacyInfo.xcprivacy in Resources */,
+				0567AF143F2D580531720A78 /* emoji-movies.json in Resources */,
+				9D7E42DD715347241C1CD096 /* emoji-animals.json in Resources */,
+				E19BA25DA41002015DE6E09C /* emoji-pop.json in Resources */,
+				589CDF95A05DEDD3C803235E /* emoji-food.json in Resources */,
+				BD83A95899F4BB7D32458C59 /* emoji-places.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

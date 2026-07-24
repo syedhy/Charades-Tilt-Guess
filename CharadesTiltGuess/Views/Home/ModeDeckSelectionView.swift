@@ -62,19 +62,21 @@ struct ModeDeckSelectionView: View {
 
     private var deckSections: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-            if !viewModel.customDecks.isEmpty && mode != .picture {
+            if !viewModel.customDecks.isEmpty {
                 deckSection(title: "Custom Decks", decks: viewModel.customDecks)
             }
 
-            deckSection(title: "Built-In Decks", decks: mode == .picture ? viewModel.defaultDecks.filter { $0.id.hasPrefix("picture-") } : viewModel.defaultDecks.filter { !$0.id.hasPrefix("picture-") })
+            let filteredDefaultDecks = mode == .emoji 
+                ? viewModel.defaultDecks.filter { $0.id.hasPrefix("emoji-") }
+                : viewModel.defaultDecks.filter { !$0.id.hasPrefix("emoji-") }
 
-            if mode != .picture {
-                DoodleActionButton(title: "Add custom deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
-                    if viewModel.canCreateNewDeck {
-                        router.openImmediately(.deckEditor)
-                    } else {
-                        showingLimitAlert = true
-                    }
+            deckSection(title: "Built-In Decks", decks: filteredDefaultDecks)
+
+            DoodleActionButton(title: "Add custom deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
+                if viewModel.canCreateNewDeck {
+                    router.openImmediately(.deckEditor)
+                } else {
+                    showingLimitAlert = true
                 }
             }
         }

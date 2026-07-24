@@ -15,11 +15,11 @@ struct DefaultDeckLoader {
     
     // Maintain the desired display order of default decks
     private let defaultDeckIDs = [
+        "emoji-movies", "emoji-animals", "emoji-pop", "emoji-food", "emoji-places",
         "default-tech", "default-movies", "default-food", "default-sports", 
         "default-animals", "default-countries", "default-celebrities", 
         "default-tv-shows", "default-cartoons", "default-science", 
-        "default-school", "default-history", "default-easy", "default-hard",
-        "picture-animals", "picture-tools", "picture-food"
+        "default-school", "default-history", "default-easy", "default-hard"
     ]
 
     init(bundle: Bundle = .main) {

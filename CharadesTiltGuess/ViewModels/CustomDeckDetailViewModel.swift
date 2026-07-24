@@ -102,14 +102,17 @@ final class CustomDeckDetailViewModel: ObservableObject {
     }
 
     @discardableResult
-    func addCard(text: String) -> Bool {
+    func addCard(text: String, meaning: String? = nil) -> Bool {
         if let message = cardValidationMessage(for: text) {
             cardErrorMessage = message
             return false
         }
 
         let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
-        draftCards.insert(GameWord(id: wordIDProvider(), text: trimmedText), at: 0)
+        let trimmedMeaning = meaning?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let finalMeaning = (trimmedMeaning?.isEmpty == false) ? trimmedMeaning : nil
+
+        draftCards.insert(GameWord(id: wordIDProvider(), text: trimmedText, meaning: finalMeaning), at: 0)
         cardErrorMessage = nil
         saveErrorMessage = nil
         refreshImportPreview(from: "")

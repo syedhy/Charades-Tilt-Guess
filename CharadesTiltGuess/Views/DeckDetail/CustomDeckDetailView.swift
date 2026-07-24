@@ -218,14 +218,60 @@ struct CustomDeckDetailView: View {
     }
 
     private var playDeckButton: some View {
-        DoodleActionButton(
-            title: viewModel.draftCards.isEmpty ? "Add cards to play" : "Play deck",
-            symbol: viewModel.draftCards.isEmpty ? "exclamationmark.circle.fill" : "play.fill",
-            accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : viewModel.draftColor.displayColor
-        ) {
-            playDeck()
+        VStack(spacing: 8) {
+            DoodleActionButton(
+                title: viewModel.draftCards.isEmpty ? "Add cards to play" : "Play (Normal Mode)",
+                symbol: viewModel.draftCards.isEmpty ? "exclamationmark.circle.fill" : "play.fill",
+                accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : viewModel.draftColor.displayColor
+            ) {
+                playDeck(mode: .normal)
+            }
+            .disabled(viewModel.draftCards.isEmpty)
+
+            if !viewModel.draftCards.isEmpty {
+                HStack(spacing: 12) {
+                    Button {
+                        playDeck(mode: .infinite)
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: "infinity")
+                            Text("Infinite")
+                        }
+                        .font(.system(size: 15, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 48)
+                        .background(AppTheme.Colors.paperBright)
+                        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
+                                .stroke(AppTheme.Colors.ink, lineWidth: 3)
+                        )
+                    }
+                    .buttonStyle(DoodlePressStyle())
+
+                    Button {
+                        playTeamMatch()
+                    } label: {
+                        HStack(spacing: 6) {
+                            Image(systemName: "person.2.fill")
+                            Text("Teams")
+                        }
+                        .font(.system(size: 15, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 48)
+                        .background(AppTheme.Colors.paperBright)
+                        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
+                                .stroke(AppTheme.Colors.ink, lineWidth: 3)
+                        )
+                    }
+                    .buttonStyle(DoodlePressStyle())
+                }
+            }
         }
-        .disabled(viewModel.draftCards.isEmpty)
         .opacity(viewModel.draftCards.isEmpty ? 0.62 : 1)
         .accessibilityIdentifier("playDeckButton")
     }
@@ -413,7 +459,7 @@ struct CustomDeckDetailView: View {
         }
     }
 
-    private func playDeck() {
+    private func playDeck(mode playMode: GameMode = .normal) {
         if isCustomDeck && viewModel.hasUnsavedChanges {
             guard let savedDeck = viewModel.saveDraft() else {
                 isEditingDeckIdentity = true
@@ -422,11 +468,32 @@ struct CustomDeckDetailView: View {
 
             isNameFocused = false
             hideIdentityEditorImmediately()
-            router.startGame(mode: mode, deck: savedDeck, settings: settingsViewModel.settings)
+            router.startGame(mode: playMode, deck: savedDeck, settings: settingsViewModel.settings)
             return
         }
 
-        router.startGame(mode: mode, deck: viewModel.deck, settings: settingsViewModel.settings)
+        router.startGame(mode: playMode, deck: viewModel.deck, settings: settingsViewModel.settings)
+    }
+
+    private func playTeamMatch() {
+        let deck: Deck
+        if isCustomDeck && viewModel.hasUnsavedChanges {
+            guard let savedDeck = viewModel.saveDraft() else {
+                isEditingDeckIdentity = true
+                return
+            }
+            deck = savedDeck
+        } else {
+            deck = viewModel.deck
+        }
+
+        let state = TeamMatchState(
+            sourceDecks: [deck],
+            totalRounds: 4,
+            duration: settingsViewModel.settings.defaultDuration
+        )
+        router.activeTeamMatch = state
+        router.open(.teamMatchLobby(state: state))
     }
 
     private func toggleIdentityEditor() {
@@ -562,6 +629,7 @@ private struct AddCardSheet: View {
     @ObservedObject var viewModel: CustomDeckDetailViewModel
     let onDismiss: () -> Void
     @State private var cardText = ""
+    @State private var cardMeaning = ""
     @State private var toastMessage: String?
     @FocusState private var isCardFocused: Bool
 
@@ -624,7 +692,7 @@ private struct AddCardSheet: View {
         DoodlePanel(background: AppTheme.Colors.yellow) {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
                 HStack {
-                    Text("Name of card")
+                    Text("Card Prompt / Emojis")
                         .font(.system(size: 17, weight: .black, design: .rounded))
 
                     Spacer()
@@ -634,7 +702,7 @@ private struct AddCardSheet: View {
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }
 
-                TextField("Pizza", text: $cardText)
+                TextField("Pizza or 🦇👨", text: $cardText)
                     .font(.system(size: 22, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
                     .textInputAutocapitalization(.words)
@@ -651,6 +719,26 @@ private struct AddCardSheet: View {
                             .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
                     }
                     .accessibilityIdentifier("manualCardTextField")
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Meaning / Answer (Optional)")
+                        .font(.system(size: 14, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+
+                    TextField("Batman (Revealed on results)", text: $cardMeaning)
+                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .padding(.horizontal, AppTheme.Spacing.standard)
+                        .frame(height: 48)
+                        .background(
+                            AppTheme.Colors.paper,
+                            in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                        )
+                        .overlay {
+                            RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                                .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                        }
+                }
 
                 if let cardErrorMessage = viewModel.cardValidationMessage(for: cardText), !cardText.isEmpty {
                     Text(cardErrorMessage)
@@ -670,8 +758,9 @@ private struct AddCardSheet: View {
             accent: viewModel.canAddCard(text: cardText) ? AppTheme.Colors.mint : AppTheme.Colors.gray.opacity(0.42)
         ) {
             let addedText = cardText.trimmingCharacters(in: .whitespacesAndNewlines)
-            guard viewModel.addCard(text: cardText) else { return }
+            guard viewModel.addCard(text: cardText, meaning: cardMeaning) else { return }
             cardText = ""
+            cardMeaning = ""
             isCardFocused = true
             showAddedToast(for: addedText)
         }

@@ -7,38 +7,10 @@ final class DefaultDeckLoaderTests: XCTestCase {
     func testLoadsBundledDefaultDecks() throws {
         let decks = try DefaultDeckLoader().load()
 
-        XCTAssertEqual(decks.count, 17)
-        XCTAssertEqual(decks.first?.name, "Tech")
+        XCTAssertEqual(decks.count, 19)
+        XCTAssertEqual(decks.first?.name, "Emoji Movies")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
         XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
-        XCTAssertEqual(
-            Set(decks.filter { $0.id.hasPrefix("picture-") }.map(\.id)),
-            ["picture-animals", "picture-food", "picture-tools"]
-        )
-    }
-
-    func testPictureDecksHaveValidImages() throws {
-        let decks = try DefaultDeckLoader().load()
-        let pictureDecks = decks.filter { $0.id.hasPrefix("picture-") }
-        
-        XCTAssertEqual(pictureDecks.count, 3)
-        
-        for deck in pictureDecks {
-            for card in deck.cards {
-                let imageName = try XCTUnwrap(card.imageName, "Missing imageName for \(card.text)")
-                XCTAssertFalse(imageName.isEmpty)
-                
-                let image = UIImage(named: imageName)
-                XCTAssertNotNil(image, "Asset not found: \(imageName)")
-            }
-        }
-        
-        let standardDecks = decks.filter { !$0.id.hasPrefix("picture-") }
-        for deck in standardDecks {
-            for card in deck.cards {
-                XCTAssertNil(card.imageName, "Standard card should not have image: \(card.text)")
-            }
-        }
     }
 
 

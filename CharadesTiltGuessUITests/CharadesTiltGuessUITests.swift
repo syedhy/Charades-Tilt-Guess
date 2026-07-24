@@ -141,7 +141,7 @@ final class CharadesTiltGuessUITests: XCTestCase {
         XCTAssertTrue(startButton.isEnabled)
         startButton.tap()
 
-        XCTAssertTrue(app.staticTexts["Round 1 of 3"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Turn 1 of 4"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.staticTexts["teamMatchTurnTitle"].waitForExistence(timeout: 5))
         XCTAssertEqual(app.staticTexts["teamMatchTurnTitle"].label, "Team 1's\nTurn")
     }

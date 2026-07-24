@@ -1,0 +1,32 @@
+[
+    {
+        "id": "emoji-movies",
+        "name": "Emoji Movies",
+        "description": "Guess famous movies represented by emojis!",
+        "cards": [
+            { "id": "em-m-001", "text": "🦇👨", "meaning": "Batman" },
+            { "id": "em-m-002", "text": "🕷️👨", "meaning": "Spider-Man" },
+            { "id": "em-m-003", "text": "🚢🧊💔", "meaning": "Titanic" },
+            { "id": "em-m-004", "text": "👻🚫", "meaning": "Ghostbusters" },
+            { "id": "em-m-005", "text": "🦁👑", "meaning": "The Lion King" },
+            { "id": "em-m-006", "text": "🧙‍♂️⚡👓", "meaning": "Harry Potter" },
+            { "id": "em-m-007", "text": "🏴‍☠️🚢", "meaning": "Pirates of the Caribbean" },
+            { "id": "em-m-008", "text": "🦖🦕🏝️", "meaning": "Jurassic Park" },
+            { "id": "em-m-009", "text": "🤠🧸🚀", "meaning": "Toy Story" },
+            { "id": "em-m-010", "text": "🔴💊🔵💊", "meaning": "The Matrix" },
+            { "id": "em-m-011", "text": "🍫🏭", "meaning": "Willy Wonka" },
+            { "id": "em-m-012", "text": "🎈🏠👴", "meaning": "Up" },
+            { "id": "em-m-013", "text": "🔎🐟", "meaning": "Finding Nemo" },
+            { "id": "em-m-014", "text": "🐼🥋", "meaning": "Kung Fu Panda" },
+            { "id": "em-m-015", "text": "🥊🐅👁️", "meaning": "Rocky" },
+            { "id": "em-m-016", "text": "🦈🌊", "meaning": "Jaws" },
+            { "id": "em-m-017", "text": "💍🌋👀", "meaning": "Lord of the Rings" },
+            { "id": "em-m-018", "text": "🚗🤖", "meaning": "Transformers" },
+            { "id": "em-m-019", "text": "🌌⚔️", "meaning": "Star Wars" },
+            { "id": "em-m-020", "text": "🧑‍🚀🌕", "meaning": "Interstellar" }
+        ],
+        "type": "default",
+        "color": "purple",
+        "symbolName": "film"
+    }
+]

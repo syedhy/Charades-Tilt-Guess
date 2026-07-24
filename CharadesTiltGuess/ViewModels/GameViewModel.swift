@@ -17,7 +17,6 @@ final class GameViewModel: ObservableObject {
     @Published private(set) var elapsedSeconds = 0
     @Published private(set) var countdownValue: Int?
     @Published private(set) var currentWordText: String
-    @Published private(set) var currentImageName: String?
     @Published private(set) var currentChallenge: ChallengeCard?
     @Published private(set) var score: Int = 0
     @Published private(set) var passedCount: Int = 0
@@ -60,7 +59,6 @@ final class GameViewModel: ObservableObject {
         self.engine = engine
         self.timeRemaining = configuration.activeDuration ?? 0
         self.currentWordText = engine.currentWord?.text ?? "No cards"
-        self.currentImageName = engine.currentWord?.imageName
         self.currentChallenge = engine.currentChallenge
         self.settings = settings.normalized
         self.hapticsManager = hapticsManager
@@ -395,7 +393,6 @@ final class GameViewModel: ObservableObject {
 
     private func syncFromEngine() {
         currentWordText = engine.currentWord?.text ?? "All done"
-        currentImageName = engine.currentWord?.imageName
         currentChallenge = engine.currentChallenge
         score = engine.session.score
         passedCount = engine.session.passedWords.count

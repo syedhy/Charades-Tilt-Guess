@@ -6,7 +6,7 @@ struct TeamMatchSelectionView: View {
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel = HomeViewModel()
     @State private var selectedDeckIDs: Set<String> = []
-    @State private var selectedRounds: Int = 3
+    @State private var selectedPlayersPerTeam: Int = 4
 
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct TeamMatchSelectionView: View {
                     if let loadErrorMessage = viewModel.loadErrorMessage {
                         loadError(message: loadErrorMessage)
                     } else {
-                        roundsPicker
+                        playersPicker
 
                         selectionControls
 
@@ -68,33 +68,62 @@ struct TeamMatchSelectionView: View {
         }
     }
 
-    private var roundsPicker: some View {
+    private var playersPicker: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Number of Rounds")
-                .font(.system(size: 25, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink)
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Players per Team")
+                    .font(.system(size: 25, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
 
-            HStack(spacing: 16) {
-                ForEach([1, 3, 5, 7], id: \.self) { roundCount in
+                Text("Each player gets 1 turn (\(selectedPlayersPerTeam) turns total per team)")
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
+            }
+
+            HStack(spacing: 12) {
+                ForEach([1, 2, 3, 4, 5], id: \.self) { count in
                     Button {
-                        selectedRounds = roundCount
+                        selectedPlayersPerTeam = count
                     } label: {
-                        Text("\(roundCount)")
-                            .font(.system(size: 22, weight: .black, design: .rounded))
-                            .foregroundStyle(selectedRounds == roundCount ? .white : AppTheme.Colors.ink)
+                        Text("\(count)")
+                            .font(.system(size: 20, weight: .black, design: .rounded))
+                            .foregroundStyle(selectedPlayersPerTeam == count ? .white : AppTheme.Colors.ink)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 60)
+                            .frame(height: 52)
                             .background(
-                                selectedRounds == roundCount ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
+                                selectedPlayersPerTeam == count ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
                             )
                             .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
                             .overlay(
                                 RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                    .stroke(AppTheme.Colors.ink, lineWidth: selectedRounds == roundCount ? 0 : 3)
+                                    .stroke(AppTheme.Colors.ink, lineWidth: selectedPlayersPerTeam == count ? 0 : 3)
                             )
                     }
                     .buttonStyle(DoodlePressStyle(rotation: 0))
                 }
+            }
+
+            HStack(spacing: 16) {
+                Text("Custom:")
+                    .font(.system(size: 16, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Stepper(
+                    value: $selectedPlayersPerTeam,
+                    in: 1...20
+                ) {
+                    Text("\(selectedPlayersPerTeam) players")
+                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(AppTheme.Colors.paperBright)
+                .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
+                .overlay(
+                    RoundedRectangle(cornerRadius: AppTheme.Radius.card)
+                        .stroke(AppTheme.Colors.ink, lineWidth: 3)
+                )
             }
         }
     }
@@ -233,7 +262,7 @@ struct TeamMatchSelectionView: View {
 
         let state = TeamMatchState(
             sourceDecks: selectedDecks,
-            totalRounds: selectedRounds,
+            totalRounds: selectedPlayersPerTeam,
             duration: settings.defaultDuration
         )
 

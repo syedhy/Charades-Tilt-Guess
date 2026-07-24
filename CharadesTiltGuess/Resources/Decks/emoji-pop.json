@@ -1,0 +1,32 @@
+[
+    {
+        "id": "emoji-pop",
+        "name": "Emoji Pop Songs & Culture",
+        "description": "Guess famous songs and pop culture icons!",
+        "cards": [
+            { "id": "em-p-001", "text": "🌧️☔", "meaning": "Umbrella (Rihanna)" },
+            { "id": "em-p-002", "text": "👁️🐅", "meaning": "Eye of the Tiger" },
+            { "id": "em-p-003", "text": "🧊👶", "meaning": "Ice Ice Baby" },
+            { "id": "em-p-004", "text": "🔥🎆", "meaning": "Firework (Katy Perry)" },
+            { "id": "em-p-005", "text": "💎✨", "meaning": "Diamonds (Rihanna)" },
+            { "id": "em-p-006", "text": "👑💃", "meaning": "Dancing Queen (ABBA)" },
+            { "id": "em-p-007", "text": "🧟‍♂️🕺", "meaning": "Thriller (Michael Jackson)" },
+            { "id": "em-p-008", "text": "🔨⏰", "meaning": "U Can't Touch This (MC Hammer)" },
+            { "id": "em-p-009", "text": "🚀👨", "meaning": "Rocket Man (Elton John)" },
+            { "id": "em-p-010", "text": "☀️🕶️", "meaning": "Here Comes The Sun" },
+            { "id": "em-p-011", "text": "🎸🤘", "meaning": "Rock and Roll" },
+            { "id": "em-p-012", "text": "🌊⛵", "meaning": "Smooth Sailing" },
+            { "id": "em-p-013", "text": "💔🏨", "meaning": "Heartbreak Hotel" },
+            { "id": "em-p-014", "text": " Sweet 🍬 👧", "meaning": "Sweet Child O' Mine" },
+            { "id": "em-p-015", "text": "📱🤙", "meaning": "Call Me Maybe" },
+            { "id": "em-p-016", "text": " Bad 😈 🩸", "meaning": "Bad Blood (Taylor Swift)" },
+            { "id": "em-p-017", "text": " Rolling 🎲 🌊", "meaning": "Rolling in the Deep" },
+            { "id": "em-p-018", "text": " Star 🌟 👨", "meaning": "Starman (David Bowie)" },
+            { "id": "em-p-019", "text": " Purple 🟣 🌧️", "meaning": "Purple Rain (Prince)" },
+            { "id": "em-p-020", "text": " Radio 📻 📻", "meaning": "Radio Ga Ga (Queen)" }
+        ],
+        "type": "default",
+        "color": "pink",
+        "symbolName": "music.note"
+    }
+]

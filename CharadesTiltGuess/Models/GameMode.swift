@@ -2,21 +2,23 @@ import SwiftUI
 
 enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case normal
+    case emoji
     case pasteAndPlay
     case mixAndMatch
     case infinite
     case wikipedia
-    case picture
     case teamVsTeam
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .mixAndMatch, .infinite, .wikipedia, .picture, .teamVsTeam]
+    static let homeModes: [GameMode] = [.normal, .emoji, .mixAndMatch, .infinite, .wikipedia, .teamVsTeam]
 
     var title: String {
         switch self {
         case .normal:
             return "Normal"
+        case .emoji:
+            return "Emoji Mode"
         case .pasteAndPlay:
             return "Paste & Play"
         case .mixAndMatch:
@@ -25,8 +27,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Infinite"
         case .wikipedia:
             return "Wikipedia Mode"
-        case .picture:
-            return "Picture Mode"
         case .teamVsTeam:
             return "Team vs Team"
         }
@@ -36,6 +36,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal:
             return "Classic timed charades with a deck you choose"
+        case .emoji:
+            return "Guess the secret meaning behind emoji puzzles"
         case .pasteAndPlay:
             return "Paste any list and jump into a round in seconds"
         case .mixAndMatch:
@@ -44,8 +46,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "No timer! Play until the deck is done"
         case .wikipedia:
             return "Random words from Wikipedia"
-        case .picture:
-            return "Image-based cards for quick guessing"
         case .teamVsTeam:
             return "Divide into two teams and compete for the highest score"
         }
@@ -55,6 +55,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal:
             return "Fast party rounds"
+        case .emoji:
+            return "Emoji puzzles"
         case .pasteAndPlay:
             return "Instant custom lists"
         case .mixAndMatch:
@@ -63,8 +65,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Finish every card"
         case .wikipedia:
             return "Fresh words"
-        case .picture:
-            return "Picture charades"
         case .teamVsTeam:
             return "Competitive team play"
         }
@@ -74,6 +74,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal:
             return "play.fill"
+        case .emoji:
+            return "face.smiling.fill"
         case .pasteAndPlay:
             return "doc.on.clipboard"
         case .mixAndMatch:
@@ -82,8 +84,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "infinity"
         case .wikipedia:
             return "globe"
-        case .picture:
-            return "face.smiling.fill"
         case .teamVsTeam:
             return "person.2.fill"
         }
@@ -93,6 +93,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal:
             return AppTheme.Colors.mint
+        case .emoji:
+            return AppTheme.Colors.yellow
         case .pasteAndPlay:
             return AppTheme.Colors.yellow
         case .mixAndMatch:
@@ -101,8 +103,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.blue
         case .wikipedia:
             return Color(red: 0.66, green: 0.58, blue: 0.86)
-        case .picture:
-            return AppTheme.Colors.pink
         case .teamVsTeam:
             return AppTheme.Colors.coral
         }
@@ -110,7 +110,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var usesDeckSelection: Bool {
         switch self {
-        case .normal, .infinite, .picture, .teamVsTeam:
+        case .normal, .emoji, .infinite, .teamVsTeam:
             return true
         case .pasteAndPlay, .mixAndMatch, .wikipedia:
             return false
@@ -119,7 +119,7 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .pasteAndPlay, .mixAndMatch, .wikipedia, .picture, .teamVsTeam:
+        case .normal, .emoji, .pasteAndPlay, .mixAndMatch, .wikipedia, .teamVsTeam:
             return true
         case .infinite:
             return false
@@ -139,6 +139,18 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "The score is your correct count before time runs out."
                 ],
                 scoring: "Correct cards score one point. Passed cards are tracked but do not score."
+            )
+        case .emoji:
+            return ModeInstruction(
+                title: "Emoji Charades",
+                summary: "Guess the secret meaning behind the emojis on screen.",
+                rules: [
+                    "Hold the phone on your forehead.",
+                    "Your team acts out or describes the emoji puzzle.",
+                    "Tilt down for correct, tilt up to pass.",
+                    "Check results at the end of the round to reveal all emoji meanings!"
+                ],
+                scoring: "Correct cards score one point. Secret meanings revealed in round results."
             )
         case .pasteAndPlay:
             return ModeInstruction(
@@ -181,17 +193,6 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                     "Load a fresh pack when you enter the mode.",
                     "Only short, single-word prompts are kept.",
                     "The deck is temporary and is not saved."
-                ],
-                scoring: "Scoring matches Normal mode."
-            )
-        case .picture:
-            return ModeInstruction(
-                title: "Picture cards",
-                summary: "Decks with images to help act out the words.",
-                rules: [
-                    "Select a picture deck with image cards.",
-                    "The picture appears large so you can quickly see what to act.",
-                    "Play just like Normal mode."
                 ],
                 scoring: "Scoring matches Normal mode."
             )

@@ -38,7 +38,7 @@ struct TeamMatchLobbyView: View {
                     router.goHome()
                 }
 
-                Text("Round \(state.currentRound) of \(state.totalRounds)")
+                Text("Turn \(state.currentRound) of \(state.totalRounds)")
                     .font(.system(size: 24, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
                     .padding(.horizontal, 24)

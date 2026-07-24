@@ -156,12 +156,22 @@ private struct ResultWordRow: View {
                 .font(.system(size: 22, weight: .black))
                 .foregroundStyle(entry.status == .correct ? AppTheme.Colors.mint : AppTheme.Colors.coral)
 
-            Text(entry.word.text)
-                .font(.system(size: 25, weight: .black, design: .rounded))
-                .strikethrough(entry.status == .passed, color: AppTheme.Colors.coral)
-                .foregroundStyle(AppTheme.Colors.ink.opacity(entry.status == .passed ? 0.58 : 1))
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 8) {
+                    Text(entry.word.text)
+                        .font(.system(size: 25, weight: .black, design: .rounded))
+                        .strikethrough(entry.status == .passed, color: AppTheme.Colors.coral)
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(entry.status == .passed ? 0.58 : 1))
+
+                    if let meaning = entry.word.meaning, !meaning.isEmpty {
+                        Text("➔ \(meaning)")
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.65))
+                    }
+                }
                 .lineLimit(1)
                 .minimumScaleFactor(0.64)
+            }
 
             Spacer(minLength: 0)
         }

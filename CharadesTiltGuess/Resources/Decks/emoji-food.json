@@ -1,0 +1,32 @@
+[
+    {
+        "id": "emoji-food",
+        "name": "Emoji Food & Drinks",
+        "description": "Guess food items and dishes represented by emojis!",
+        "cards": [
+            { "id": "em-f-001", "text": "🍔🍟🥤", "meaning": "Fast Food Combo" },
+            { "id": "em-f-002", "text": "🍕🇮🇹", "meaning": "Italian Pizza" },
+            { "id": "em-f-003", "text": "☕🍩", "meaning": "Coffee & Donuts" },
+            { "id": "em-f-004", "text": "🌮🇲🇽", "meaning": "Mexican Tacos" },
+            { "id": "em-f-005", "text": "🍣🇯🇵", "meaning": "Japanese Sushi" },
+            { "id": "em-f-006", "text": "🍿🥤🎬", "meaning": "Movie Snacks" },
+            { "id": "em-f-007", "text": "🎂🕯️🎉", "meaning": "Birthday Cake" },
+            { "id": "em-f-008", "text": "🥞🍯", "meaning": "Pancakes with Syrup" },
+            { "id": "em-f-009", "text": "🌭⚾", "meaning": "Ballpark Hot Dog" },
+            { "id": "em-f-010", "text": "🍦☀️", "meaning": "Summer Ice Cream" },
+            { "id": "em-f-011", "text": "🍍🍕", "meaning": "Hawaiian Pizza" },
+            { "id": "em-f-012", "text": "🍝🥩", "meaning": "Spaghetti & Meatballs" },
+            { "id": "em-f-013", "text": "🥐🇫🇷", "meaning": "French Croissant" },
+            { "id": "em-f-014", "text": "🥑🍞", "meaning": "Avocado Toast" },
+            { "id": "em-f-015", "text": "🧀🐭", "meaning": "Mice & Cheese" },
+            { "id": "em-f-016", "text": "🍷🧀", "meaning": "Wine and Cheese" },
+            { "id": "em-f-017", "text": "🥓🥚", "meaning": "Bacon and Eggs" },
+            { "id": "em-f-018", "text": "🍜🍥", "meaning": "Ramen Noodle Bowl" },
+            { "id": "em-f-019", "text": "🍓🍨", "meaning": "Strawberry Sundae" },
+            { "id": "em-f-020", "text": "🍪🥛", "meaning": "Cookies and Milk" }
+        ],
+        "type": "default",
+        "color": "orange",
+        "symbolName": "fork.knife"
+    }
+]

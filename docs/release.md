@@ -3,7 +3,7 @@
 ## 1. App Store Connect Metadata
 - [ ] **Name**: Charades Tilt Guess
 - [ ] **Subtitle**: Tilt-to-guess party game
-- [ ] **Description**: Play the classic game of charades with a modern twist! Tilt your phone up or down to guess the words. Features custom decks, Picture Mode, and Wikipedia Mode.
+- [ ] **Description**: Play the classic game of charades with a modern twist! Tilt your phone up or down to guess the words. Features custom decks and Picture Mode.
 - [ ] **Keywords**: charades, party game, tilt, guess, word game, picture mode
 - [ ] **Age Rating**: Set appropriately (no mature content). Answer NO to gambling, violence, etc.
 - [ ] **Data Privacy Label**: Select **"Data Not Collected"**.
@@ -21,7 +21,6 @@
 
 ## 4. Pre-Launch Testing Checklist
 - [ ] **Physical iPhone Testing**: Verify tilt controls work accurately on a physical device.
-- [ ] **Network Failure Test**: Turn off Wi-Fi/Cellular and verify Wikipedia Mode shows the proper error and doesn't crash.
 - [ ] **StoreKit Sandbox Testing**: Verify the Tip Jar works by using a Sandbox Apple ID on a physical device. TestFlight / sandbox IAP testing should be used before launch. Testers are not charged real money in the sandbox.
 - [ ] **App Icon Verification**: Verify `AppIcon.appiconset` contains NO alpha channels/transparency (will cause rejection).
 - [ ] **PrivacyInfo.xcprivacy**: Verify the Privacy Manifest is correctly included in the App Target.

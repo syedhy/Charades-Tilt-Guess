@@ -131,14 +131,18 @@ struct TeamMatchResultsView: View {
                 symbol: "arrow.counterclockwise",
                 accent: GameMode.teamVsTeam.accentColor
             ) {
+                let resetTeams = state.teams.map { team in
+                    TeamInfo(id: team.id, name: team.name, icon: team.icon, color: team.color, score: 0)
+                }
                 let newState = TeamMatchState(
                     numberOfTeams: state.numberOfTeams,
                     playersPerTeam: state.playersPerTeam,
                     sourceDecks: state.sourceDecks,
-                    duration: state.duration
+                    duration: state.duration,
+                    customTeams: resetTeams
                 )
                 router.activeTeamMatch = newState
-                router.openImmediately(.teamMatchLobby(state: newState))
+                router.replaceCurrent(with: .teamMatchLobby(state: newState))
             }
 
             Button {

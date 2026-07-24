@@ -1,0 +1,988 @@
+[
+    {
+        "id": "emoji-cartoon",
+        "name": "Cartoon Shows",
+        "description": "Guess famous Cartoon shows from emojis!",
+        "cards": [
+            {
+                "id": "em-cs-001",
+                "text": "🧽🍍🌊",
+                "meaning": "SpongeBob SquarePants"
+            },
+            {
+                "id": "em-cs-002",
+                "text": "🐱🐭🧀",
+                "meaning": "Tom and Jerry"
+            },
+            {
+                "id": "em-cs-003",
+                "text": "🐶👻🔍",
+                "meaning": "Scooby-Doo"
+            },
+            {
+                "id": "em-cs-004",
+                "text": "👦⌚👽",
+                "meaning": "Ben 10"
+            },
+            {
+                "id": "em-cs-005",
+                "text": "🗡️👦🐶",
+                "meaning": "Adventure Time"
+            },
+            {
+                "id": "em-cs-006",
+                "text": "👧👧👧💥",
+                "meaning": "The Powerpuff Girls"
+            },
+            {
+                "id": "em-cs-007",
+                "text": "👦🧪🔬",
+                "meaning": "Dexter's Laboratory"
+            },
+            {
+                "id": "em-cs-008",
+                "text": "🐶👻🏚️",
+                "meaning": "Courage the Cowardly Dog"
+            },
+            {
+                "id": "em-cs-009",
+                "text": "👦👦🔨",
+                "meaning": "Phineas and Ferb"
+            },
+            {
+                "id": "em-cs-010",
+                "text": "🦸⚔️🏙️",
+                "meaning": "Teen Titans"
+            },
+            {
+                "id": "em-cs-011",
+                "text": "👨‍👩‍👧‍👦🍕📺",
+                "meaning": "The Simpsons"
+            },
+            {
+                "id": "em-cs-012",
+                "text": "👨‍👩‍👦‍👦🛋️🍺",
+                "meaning": "Family Guy"
+            },
+            {
+                "id": "em-cs-013",
+                "text": "👴👨‍👦🚀🧪",
+                "meaning": "Rick and Morty"
+            },
+            {
+                "id": "em-cs-014",
+                "text": "🌪️🏹💨",
+                "meaning": "Avatar: The Last Airbender"
+            },
+            {
+                "id": "em-cs-015",
+                "text": "🚀🤖👁️",
+                "meaning": "Futurama"
+            },
+            {
+                "id": "em-cs-016",
+                "text": "🧱🪵🛏️",
+                "meaning": "The Flintstones"
+            },
+            {
+                "id": "em-cs-017",
+                "text": "🚀🛸🌌",
+                "meaning": "The Jetsons"
+            },
+            {
+                "id": "em-cs-018",
+                "text": "🏎️🏁😂",
+                "meaning": "Wacky Races"
+            },
+            {
+                "id": "em-cs-019",
+                "text": "🐺🏃💨",
+                "meaning": "Road Runner"
+            },
+            {
+                "id": "em-cs-020",
+                "text": "🦆🎩💰",
+                "meaning": "DuckTales"
+            },
+            {
+                "id": "em-cs-021",
+                "text": "🐻🍯🌳",
+                "meaning": "The New Adventures of Winnie the Pooh"
+            },
+            {
+                "id": "em-cs-022",
+                "text": "🐭👑🎈",
+                "meaning": "Mickey Mouse Clubhouse"
+            },
+            {
+                "id": "em-cs-023",
+                "text": "🐱🐭🔨",
+                "meaning": "The Tom and Jerry Show"
+            },
+            {
+                "id": "em-cs-024",
+                "text": "🐰🦆🥕",
+                "meaning": "Looney Tunes"
+            },
+            {
+                "id": "em-cs-025",
+                "text": "🐱🐟🎒",
+                "meaning": "The Amazing World of Gumball"
+            },
+            {
+                "id": "em-cs-026",
+                "text": "👦🐱💎",
+                "meaning": "Steven Universe"
+            },
+            {
+                "id": "em-cs-027",
+                "text": "🌲👁️📕",
+                "meaning": "Gravity Falls"
+            },
+            {
+                "id": "em-cs-028",
+                "text": "🦝🐦🎮",
+                "meaning": "Regular Show"
+            },
+            {
+                "id": "em-cs-029",
+                "text": "🐻‍❄️🐼🐻",
+                "meaning": "We Bare Bears"
+            },
+            {
+                "id": "em-cs-030",
+                "text": "🏈👦🏫",
+                "meaning": "Hey Arnold!"
+            },
+            {
+                "id": "em-cs-031",
+                "text": "👶🍼🧱",
+                "meaning": "Rugrats"
+            },
+            {
+                "id": "em-cs-032",
+                "text": "👦🧚✨",
+                "meaning": "The Fairly OddParents"
+            },
+            {
+                "id": "em-cs-033",
+                "text": "👦👻⚡",
+                "meaning": "Danny Phantom"
+            },
+            {
+                "id": "em-cs-034",
+                "text": "🕵️‍♀️🧡🌍",
+                "meaning": "Kim Possible"
+            },
+            {
+                "id": "em-cs-035",
+                "text": "🕶️💪🕶️",
+                "meaning": "Johnny Bravo"
+            },
+            {
+                "id": "em-cs-036",
+                "text": "👨‍🍳🍔🍟",
+                "meaning": "Bob's Burgers"
+            },
+            {
+                "id": "em-cs-037",
+                "text": "🐴🍸🎭",
+                "meaning": "BoJack Horseman"
+            },
+            {
+                "id": "em-cs-038",
+                "text": "🏫❄️🧢",
+                "meaning": "South Park"
+            },
+            {
+                "id": "em-cs-039",
+                "text": "👨🥩🏡",
+                "meaning": "King of the Hill"
+            },
+            {
+                "id": "em-cs-040",
+                "text": "🦅🇺🇸💼",
+                "meaning": "American Dad!"
+            },
+            {
+                "id": "em-cs-041",
+                "text": "🐢🥷🍕",
+                "meaning": "Teenage Mutant Ninja Turtles"
+            },
+            {
+                "id": "em-cs-042",
+                "text": "🚗🤖⚡",
+                "meaning": "Transformers"
+            },
+            {
+                "id": "em-cs-043",
+                "text": "🐱⚔️🛡️",
+                "meaning": "ThunderCats"
+            },
+            {
+                "id": "em-cs-044",
+                "text": "👨💪⚔️",
+                "meaning": "He-Man and the Masters of the Universe"
+            },
+            {
+                "id": "em-cs-045",
+                "text": "👸🗡️🦄",
+                "meaning": "She-Ra: Princess of Power"
+            },
+            {
+                "id": "em-cs-046",
+                "text": "🪖🎖️🥷",
+                "meaning": "G.I. Joe"
+            },
+            {
+                "id": "em-cs-047",
+                "text": "🦇🏙️🌙",
+                "meaning": "Batman: The Animated Series"
+            },
+            {
+                "id": "em-cs-048",
+                "text": "🕷️🕸️🏙️",
+                "meaning": "Spider-Man: The Animated Series"
+            },
+            {
+                "id": "em-cs-049",
+                "text": "🦸‍♂️👓☄️",
+                "meaning": "Superman: The Animated Series"
+            },
+            {
+                "id": "em-cs-050",
+                "text": "🛡️⚡🏹",
+                "meaning": "Justice League"
+            },
+            {
+                "id": "em-cs-051",
+                "text": "❌👥⚡",
+                "meaning": "X-Men: The Animated Series"
+            },
+            {
+                "id": "em-cs-052",
+                "text": "🦸‍♂️🩸💥",
+                "meaning": "Invincible"
+            },
+            {
+                "id": "em-cs-053",
+                "text": "👦🤖🧬",
+                "meaning": "Generator Rex"
+            },
+            {
+                "id": "em-cs-054",
+                "text": "🐉👦🏹",
+                "meaning": "American Dragon: Jake Long"
+            },
+            {
+                "id": "em-cs-055",
+                "text": "👧🔮🪄",
+                "meaning": "Star vs. the Forces of Evil"
+            },
+            {
+                "id": "em-cs-056",
+                "text": "🦉🏠🪄",
+                "meaning": "The Owl House"
+            },
+            {
+                "id": "em-cs-057",
+                "text": "🐸🐸🏡",
+                "meaning": "Amphibia"
+            },
+            {
+                "id": "em-cs-058",
+                "text": "👧🎒🐒",
+                "meaning": "Dora the Explorer"
+            },
+            {
+                "id": "em-cs-059",
+                "text": "🐶🚒🚓",
+                "meaning": "PAW Patrol"
+            },
+            {
+                "id": "em-cs-060",
+                "text": "🐷🌧️🪵",
+                "meaning": "Peppa Pig"
+            },
+            {
+                "id": "em-cs-061",
+                "text": "🐶🇦🇺🦴",
+                "meaning": "Bluey"
+            },
+            {
+                "id": "em-cs-062",
+                "text": "🚂🚃💨",
+                "meaning": "Thomas & Friends"
+            },
+            {
+                "id": "em-cs-063",
+                "text": "👦🌎🦖",
+                "meaning": "Go, Diego, Go!"
+            },
+            {
+                "id": "em-cs-064",
+                "text": "🚌🔬👩‍🏫",
+                "meaning": "The Magic School Bus"
+            },
+            {
+                "id": "em-cs-065",
+                "text": "🤓👓📻",
+                "meaning": "Arthur"
+            },
+            {
+                "id": "em-cs-066",
+                "text": "🐵🎈🎨",
+                "meaning": "Curious George"
+            },
+            {
+                "id": "em-cs-067",
+                "text": "🌍🦁👧",
+                "meaning": "The Wild Thornberrys"
+            },
+            {
+                "id": "em-cs-068",
+                "text": "👦🚀🌌",
+                "meaning": "Jimmy Neutron: Boy Genius"
+            },
+            {
+                "id": "em-cs-069",
+                "text": "👽🛸🧠",
+                "meaning": "Invader Zim"
+            },
+            {
+                "id": "em-cs-070",
+                "text": "👦👦👦",
+                "meaning": "Ed, Edd n Eddy"
+            },
+            {
+                "id": "em-cs-071",
+                "text": "💀👦👧",
+                "meaning": "The Grim Adventures of Billy & Mandy"
+            },
+            {
+                "id": "em-cs-072",
+                "text": "⛺🦓🐘",
+                "meaning": "Camp Lazlo"
+            },
+            {
+                "id": "em-cs-073",
+                "text": "🤖👧🏠",
+                "meaning": "My Life as a Teenage Robot"
+            },
+            {
+                "id": "em-cs-074",
+                "text": "🐱🐕🦴",
+                "meaning": "CatDog"
+            },
+            {
+                "id": "em-cs-075",
+                "text": "🦫🪵🪵",
+                "meaning": "The Angry Beavers"
+            },
+            {
+                "id": "em-cs-076",
+                "text": "🐮🐔🌾",
+                "meaning": "Cow and Chicken"
+            },
+            {
+                "id": "em-cs-077",
+                "text": "🐸🎤🎭",
+                "meaning": "The Muppet Show"
+            },
+            {
+                "id": "em-cs-078",
+                "text": "🐻🧺🌲",
+                "meaning": "Yogi Bear"
+            },
+            {
+                "id": "em-cs-079",
+                "text": "🐕‍🦺🔎🎩",
+                "meaning": "Inspector Gadget"
+            },
+            {
+                "id": "em-cs-080",
+                "text": "🏎️🏁⚡",
+                "meaning": "Speed Racer"
+            },
+            {
+                "id": "em-cs-081",
+                "text": "🧜‍♀️🐠🐚",
+                "meaning": "The Little Mermaid TV Series"
+            },
+            {
+                "id": "em-cs-082",
+                "text": "🧞🪔🏜️",
+                "meaning": "Aladdin TV Series"
+            },
+            {
+                "id": "em-cs-083",
+                "text": "🦁👑🛡️",
+                "meaning": "The Lion Guard"
+            },
+            {
+                "id": "em-cs-084",
+                "text": "🏄🌊🏝️",
+                "meaning": "Stoked"
+            },
+            {
+                "id": "em-cs-085",
+                "text": "⛺🌲😱",
+                "meaning": "Total Drama"
+            },
+            {
+                "id": "em-cs-086",
+                "text": "🎸🎤👥",
+                "meaning": "Jem and the Holograms"
+            },
+            {
+                "id": "em-cs-087",
+                "text": "🦄🌈👑",
+                "meaning": "My Little Pony: Friendship Is Magic"
+            },
+            {
+                "id": "em-cs-088",
+                "text": "🐻🌈☁️",
+                "meaning": "Care Bears"
+            },
+            {
+                "id": "em-cs-089",
+                "text": "🔵🍄🍄",
+                "meaning": "The Smurfs"
+            },
+            {
+                "id": "em-cs-090",
+                "text": "🧱🏗️👷‍♂️",
+                "meaning": "Bob the Builder"
+            },
+            {
+                "id": "em-cs-091",
+                "text": "🚒🔥🚨",
+                "meaning": "Fireman Sam"
+            },
+            {
+                "id": "em-cs-092",
+                "text": "📦📮🐱",
+                "meaning": "Postman Pat"
+            },
+            {
+                "id": "em-cs-093",
+                "text": "🐧🧊❄️",
+                "meaning": "Pingu"
+            },
+            {
+                "id": "em-cs-094",
+                "text": "🐑🚜🌾",
+                "meaning": "Shaun the Sheep"
+            },
+            {
+                "id": "em-cs-095",
+                "text": "🧀🐶🛠️",
+                "meaning": "Wallace and Gromit"
+            },
+            {
+                "id": "em-cs-096",
+                "text": "🐱🍕📺",
+                "meaning": "Garfield and Friends"
+            },
+            {
+                "id": "em-cs-097",
+                "text": "🐶🔴🦴",
+                "meaning": "Clifford the Big Red Dog"
+            },
+            {
+                "id": "em-cs-098",
+                "text": "🐱🎩🧹",
+                "meaning": "The Cat in the Hat Knows a Lot About That!"
+            },
+            {
+                "id": "em-cs-099",
+                "text": "🦍🍌🎮",
+                "meaning": "Donkey Kong Country"
+            },
+            {
+                "id": "em-cs-100",
+                "text": "🍄👨⭐",
+                "meaning": "The Super Mario Bros. Super Show!"
+            },
+            {
+                "id": "em-cs-101",
+                "text": "🦔💨👟",
+                "meaning": "Sonic the Hedgehog"
+            },
+            {
+                "id": "em-cs-102",
+                "text": "🕹️👾🎮",
+                "meaning": "Captain N: The Game Master"
+            },
+            {
+                "id": "em-cs-103",
+                "text": "🥷🗡️📜",
+                "meaning": "Ninjago"
+            },
+            {
+                "id": "em-cs-104",
+                "text": "🧱⭐⚔️",
+                "meaning": "Lego Star Wars"
+            },
+            {
+                "id": "em-cs-105",
+                "text": "🦸‍♂️🦸‍♀️🏫",
+                "meaning": "DC Super Hero Girls"
+            },
+            {
+                "id": "em-cs-106",
+                "text": "🐞🐈⬛✨",
+                "meaning": "Miraculous: Tales of Ladybug & Cat Noir"
+            },
+            {
+                "id": "em-cs-107",
+                "text": "🧑‍🦰🎒📜",
+                "meaning": "Carmen Sandiego"
+            },
+            {
+                "id": "em-cs-108",
+                "text": "🐉👦🪽",
+                "meaning": "DreamWorks Dragons"
+            },
+            {
+                "id": "em-cs-109",
+                "text": "🐼🥋🥟",
+                "meaning": "Kung Fu Panda: Legends of Awesomeness"
+            },
+            {
+                "id": "em-cs-110",
+                "text": "🐧🕵️‍♂️🦭",
+                "meaning": "The Penguins of Madagascar"
+            },
+            {
+                "id": "em-cs-111",
+                "text": "👑🐒🌴",
+                "meaning": "All Hail King Julien"
+            },
+            {
+                "id": "em-cs-112",
+                "text": "🐱🥾⚔️",
+                "meaning": "The Adventures of Puss in Boots"
+            },
+            {
+                "id": "em-cs-113",
+                "text": "🦔💨⚡",
+                "meaning": "Sonic Boom"
+            },
+            {
+                "id": "em-cs-114",
+                "text": "🦖👧🔬",
+                "meaning": "Dino Dana"
+            },
+            {
+                "id": "em-cs-115",
+                "text": "🤖🦾🏙️",
+                "meaning": "Big Hero 6: The Series"
+            },
+            {
+                "id": "em-cs-116",
+                "text": "🏰🪜💇‍♀️",
+                "meaning": "Tangled: The Series"
+            },
+            {
+                "id": "em-cs-117",
+                "text": "👸👗👑",
+                "meaning": "Sofia the First"
+            },
+            {
+                "id": "em-cs-118",
+                "text": "👸💃🎸",
+                "meaning": "Elena of Avalor"
+            },
+            {
+                "id": "em-cs-119",
+                "text": "🦁🐗😂",
+                "meaning": "The Lion King's Timon & Pumbaa"
+            },
+            {
+                "id": "em-cs-120",
+                "text": "🐿️🐿️🎤",
+                "meaning": "Alvin and the Chipmunks"
+            },
+            {
+                "id": "em-cs-121",
+                "text": "🦔💨💙",
+                "meaning": "Sonic X"
+            },
+            {
+                "id": "em-cs-122",
+                "text": "🤖🌌⚔️",
+                "meaning": "Voltron: Legendary Defender"
+            },
+            {
+                "id": "em-cs-123",
+                "text": "🟠🐉💥",
+                "meaning": "Dragon Ball"
+            },
+            {
+                "id": "em-cs-124",
+                "text": "⚡🐭🔴",
+                "meaning": "Pokémon The Series"
+            },
+            {
+                "id": "em-cs-125",
+                "text": "🎴🃏🐉",
+                "meaning": "Yu-Gi-Oh! Duel Monsters"
+            },
+            {
+                "id": "em-cs-126",
+                "text": "🏴‍☠️👒🍖",
+                "meaning": "One Piece"
+            },
+            {
+                "id": "em-cs-127",
+                "text": "🟠🥷🦊",
+                "meaning": "Naruto Shippuden"
+            },
+            {
+                "id": "em-cs-128",
+                "text": "👁️👹⚔️",
+                "meaning": "Jujutsu Kaisen"
+            },
+            {
+                "id": "em-cs-129",
+                "text": "👨‍👦📜🗡️",
+                "meaning": "Demon Slayer"
+            },
+            {
+                "id": "em-cs-130",
+                "text": "⚔️🧗‍♂️👹",
+                "meaning": "Attack on Titan"
+            },
+            {
+                "id": "em-cs-131",
+                "text": "🦹‍♂️🦸‍♂️🏫",
+                "meaning": "My Hero Academia"
+            },
+            {
+                "id": "em-cs-132",
+                "text": "🕵️👨‍👩‍👧💣",
+                "meaning": "Spy x Family"
+            },
+            {
+                "id": "em-cs-133",
+                "text": "👧🌪️🏠",
+                "meaning": "The Wizard of Oz Animated"
+            },
+            {
+                "id": "em-cs-134",
+                "text": "🐶🐾🌭",
+                "meaning": "Goof Troop"
+            },
+            {
+                "id": "em-cs-135",
+                "text": "🐻✈️🌴",
+                "meaning": "TaleSpin"
+            },
+            {
+                "id": "em-cs-136",
+                "text": "🦇🦸‍♂️🕶️",
+                "meaning": "Darkwing Duck"
+            },
+            {
+                "id": "em-cs-137",
+                "text": "🐿️🔍🕵️‍♂️",
+                "meaning": "Chip 'n Dale: Rescue Rangers"
+            },
+            {
+                "id": "em-cs-138",
+                "text": "🐻🧃🏰",
+                "meaning": "Disney's Adventures of the Gummi Bears"
+            },
+            {
+                "id": "em-cs-139",
+                "text": "🏰🗿🌙",
+                "meaning": "Gargoyles"
+            },
+            {
+                "id": "em-cs-140",
+                "text": "👦🎒📓",
+                "meaning": "Doug"
+            },
+            {
+                "id": "em-cs-141",
+                "text": "🏫👦👦",
+                "meaning": "Recess"
+            },
+            {
+                "id": "em-cs-142",
+                "text": "👧👦🎒",
+                "meaning": "Pepper Ann"
+            },
+            {
+                "id": "em-cs-143",
+                "text": "🐶🏫🎓",
+                "meaning": "Teacher's Pet"
+            },
+            {
+                "id": "em-cs-144",
+                "text": "👨‍👩‍👧‍👦🏠📻",
+                "meaning": "The Proud Family"
+            },
+            {
+                "id": "em-cs-145",
+                "text": "👽🚀🏢",
+                "meaning": "Lloyd in Space"
+            },
+            {
+                "id": "em-cs-146",
+                "text": "👦🏄‍♂️🌊",
+                "meaning": "Rocket Power"
+            },
+            {
+                "id": "em-cs-147",
+                "text": "👧📓🏫",
+                "meaning": "As Told by Ginger"
+            },
+            {
+                "id": "em-cs-148",
+                "text": "👦🎒📺",
+                "meaning": "All Grown Up!"
+            },
+            {
+                "id": "em-cs-149",
+                "text": "🐯👦🎭",
+                "meaning": "El Tigre: The Adventures of Manny Rivera"
+            },
+            {
+                "id": "em-cs-150",
+                "text": "👦🐱🛸",
+                "meaning": "Kid vs. Kat"
+            },
+            {
+                "id": "em-cs-151",
+                "text": "👦🥷💥",
+                "meaning": "Randy Cunningham: 9th Grade Ninja"
+            },
+            {
+                "id": "em-cs-152",
+                "text": "👦🍞🦆",
+                "meaning": "Breadwinners"
+            },
+            {
+                "id": "em-cs-153",
+                "text": "🐍🐖🌾",
+                "meaning": "Sanjay and Craig"
+            },
+            {
+                "id": "em-cs-154",
+                "text": "👦🏠🏠",
+                "meaning": "The Loud House"
+            },
+            {
+                "id": "em-cs-155",
+                "text": "👧👧🏠",
+                "meaning": "The Casagrandes"
+            },
+            {
+                "id": "em-cs-156",
+                "text": "🌽🏡🚜",
+                "meaning": "Big City Greens"
+            },
+            {
+                "id": "em-cs-157",
+                "text": "👧👻🏚️",
+                "meaning": "The Ghost and Molly McGee"
+            },
+            {
+                "id": "em-cs-158",
+                "text": "🦝🌳🏠",
+                "meaning": "Over the Garden Wall"
+            },
+            {
+                "id": "em-cs-159",
+                "text": "🐱⚔️❤️",
+                "meaning": "Mao Mao: Heroes of Pure Heart"
+            },
+            {
+                "id": "em-cs-160",
+                "text": "🧙‍♂️🐉🏰",
+                "meaning": "The Dragon Prince"
+            },
+            {
+                "id": "em-cs-161",
+                "text": "🤖👦⚔️",
+                "meaning": "Sym-Bionic Titan"
+            },
+            {
+                "id": "em-cs-162",
+                "text": "🥷🗡️⛩️",
+                "meaning": "Samurai Jack"
+            },
+            {
+                "id": "em-cs-163",
+                "text": "🐉⚔️🪨",
+                "meaning": "Xiaolin Showdown"
+            },
+            {
+                "id": "em-cs-164",
+                "text": "🏎️🏎️⚡",
+                "meaning": "Hot Wheels Battle Force 5"
+            },
+            {
+                "id": "em-cs-165",
+                "text": "🚗🤖💥",
+                "meaning": "Transformers: Prime"
+            },
+            {
+                "id": "em-cs-166",
+                "text": "🤖🦾⚙️",
+                "meaning": "Megas XLR"
+            },
+            {
+                "id": "em-cs-167",
+                "text": "🐱✈️🚔",
+                "meaning": "SWAT Kats: The Radical Squadron"
+            },
+            {
+                "id": "em-cs-168",
+                "text": "🦈🎸🏙️",
+                "meaning": "Street Sharks"
+            },
+            {
+                "id": "em-cs-169",
+                "text": "🦖🥷💥",
+                "meaning": "Extreme Dinosaurs"
+            },
+            {
+                "id": "em-cs-170",
+                "text": "🏍️🐭🌕",
+                "meaning": "Biker Mice from Mars"
+            },
+            {
+                "id": "em-cs-171",
+                "text": "🌍💍💨",
+                "meaning": "Captain Planet and the Planeteers"
+            },
+            {
+                "id": "em-cs-172",
+                "text": "🕵️‍♂️💼🔍",
+                "meaning": "Where in the World Is Carmen Sandiego?"
+            },
+            {
+                "id": "em-cs-173",
+                "text": "👓🏫📚",
+                "meaning": "Daria"
+            },
+            {
+                "id": "em-cs-174",
+                "text": "🏫🧬😂",
+                "meaning": "Clone High"
+            },
+            {
+                "id": "em-cs-175",
+                "text": "🛋️🍻📺",
+                "meaning": "Beavis and Butt-Head"
+            },
+            {
+                "id": "em-cs-176",
+                "text": "👨‍👩‍👧🏈🍺",
+                "meaning": "The Cleveland Show"
+            },
+            {
+                "id": "em-cs-177",
+                "text": "💼🕶️🚀",
+                "meaning": "Archer"
+            },
+            {
+                "id": "em-cs-178",
+                "text": "👨‍⚕️🧪🧠",
+                "meaning": "The Venture Bros."
+            },
+            {
+                "id": "em-cs-179",
+                "text": "🥤🍟🥩",
+                "meaning": "Aqua Teen Hunger Force"
+            },
+            {
+                "id": "em-cs-180",
+                "text": "🪵🏕️🐻",
+                "meaning": "Camp Camp"
+            },
+            {
+                "id": "em-cs-181",
+                "text": "⚔️🏰🐉",
+                "meaning": "Disenchantment"
+            },
+            {
+                "id": "em-cs-182",
+                "text": "🚀🌌🤖",
+                "meaning": "Final Space"
+            },
+            {
+                "id": "em-cs-183",
+                "text": "👽🏠😂",
+                "meaning": "Solar Opposites"
+            },
+            {
+                "id": "em-cs-184",
+                "text": "😈🏨✨",
+                "meaning": "Hazbin Hotel"
+            },
+            {
+                "id": "em-cs-185",
+                "text": "😈🔴🏢",
+                "meaning": "Helluva Boss"
+            },
+            {
+                "id": "em-cs-186",
+                "text": "🦸‍♂️💥🏙️",
+                "meaning": "The Boys Presents: Diabolical"
+            },
+            {
+                "id": "em-cs-187",
+                "text": "💎⚙️⚔️",
+                "meaning": "Arcane"
+            },
+            {
+                "id": "em-cs-188",
+                "text": "🥷⚔️🩸",
+                "meaning": "Blue Eye Samurai"
+            },
+            {
+                "id": "em-cs-189",
+                "text": "🧛‍♂️🏰🗡️",
+                "meaning": "Castlevania"
+            },
+            {
+                "id": "em-cs-190",
+                "text": "🤖🌆💉",
+                "meaning": "Cyberpunk: Edgerunners"
+            },
+            {
+                "id": "em-cs-191",
+                "text": "🐉🩸⚔️",
+                "meaning": "DOTA: Dragon's Blood"
+            },
+            {
+                "id": "em-cs-192",
+                "text": "⚔️🐉📜",
+                "meaning": "The Legend of Vox Machina"
+            },
+            {
+                "id": "em-cs-193",
+                "text": "🦸‍♂️🛩️🌎",
+                "meaning": "My Adventures with Superman"
+            },
+            {
+                "id": "em-cs-194",
+                "text": "🦇🧥🌧️",
+                "meaning": "Batman: Caped Crusader"
+            },
+            {
+                "id": "em-cs-195",
+                "text": "🥷🐢⚔️",
+                "meaning": "Tales of the Teenage Mutant Ninja Turtles"
+            }
+        ],
+        "type": "default",
+        "color": "coral",
+        "symbolName": "tv.fill",
+        "isEmoji": true
+    }
+]

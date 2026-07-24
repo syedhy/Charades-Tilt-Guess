@@ -1,0 +1,513 @@
+[
+    {
+        "id": "emoji-countries",
+        "name": "Countries",
+        "description": "Guess Countries from around the world!",
+        "cards": [
+            {
+                "id": "em-c-001",
+                "text": "🕌🐅🥭",
+                "meaning": "India"
+            },
+            {
+                "id": "em-c-002",
+                "text": "🍣🗻🌸",
+                "meaning": "Japan"
+            },
+            {
+                "id": "em-c-003",
+                "text": "🐉🥢🏯",
+                "meaning": "China"
+            },
+            {
+                "id": "em-c-004",
+                "text": "🐪🔺☀️",
+                "meaning": "Egypt"
+            },
+            {
+                "id": "em-c-005",
+                "text": "⚽🌴🦜",
+                "meaning": "Brazil"
+            },
+            {
+                "id": "em-c-006",
+                "text": "🦘🐨🌏",
+                "meaning": "Australia"
+            },
+            {
+                "id": "em-c-007",
+                "text": "🍁🦫🏒",
+                "meaning": "Canada"
+            },
+            {
+                "id": "em-c-008",
+                "text": "🍕🍝🏛️",
+                "meaning": "Italy"
+            },
+            {
+                "id": "em-c-009",
+                "text": "🌮🌵🪅",
+                "meaning": "Mexico"
+            },
+            {
+                "id": "em-c-010",
+                "text": "🗼🥖🍷",
+                "meaning": "France"
+            },
+            {
+                "id": "em-c-011",
+                "text": "🗽🍔🦅",
+                "meaning": "United States"
+            },
+            {
+                "id": "em-c-012",
+                "text": "☕🌧️👑",
+                "meaning": "United Kingdom"
+            },
+            {
+                "id": "em-c-013",
+                "text": "🍺🥨🏎️",
+                "meaning": "Germany"
+            },
+            {
+                "id": "em-c-014",
+                "text": "💃🐂🥘",
+                "meaning": "Spain"
+            },
+            {
+                "id": "em-c-015",
+                "text": "🐻🪆❄️",
+                "meaning": "Russia"
+            },
+            {
+                "id": "em-c-016",
+                "text": "🌷🚲🧀",
+                "meaning": "Netherlands"
+            },
+            {
+                "id": "em-c-017",
+                "text": "🏔️🧀🍫",
+                "meaning": "Switzerland"
+            },
+            {
+                "id": "em-c-018",
+                "text": "🏛️🏺🏺",
+                "meaning": "Greece"
+            },
+            {
+                "id": "em-c-019",
+                "text": "🍫🧇🍟",
+                "meaning": "Belgium"
+            },
+            {
+                "id": "em-c-020",
+                "text": "☘️🍺🎻",
+                "meaning": "Ireland"
+            },
+            {
+                "id": "em-c-021",
+                "text": "🥬🍚🎙️",
+                "meaning": "South Korea"
+            },
+            {
+                "id": "em-c-022",
+                "text": "🍜🛵⛩️",
+                "meaning": "Vietnam"
+            },
+            {
+                "id": "em-c-023",
+                "text": "🌴🏗️🏢",
+                "meaning": "United Arab Emirates"
+            },
+            {
+                "id": "em-c-024",
+                "text": "🏜️🛢️🕌",
+                "meaning": "Saudi Arabia"
+            },
+            {
+                "id": "em-c-025",
+                "text": "🐘🌴🕌",
+                "meaning": "Thailand"
+            },
+            {
+                "id": "em-c-026",
+                "text": "🌋🌴🏝️",
+                "meaning": "Indonesia"
+            },
+            {
+                "id": "em-c-027",
+                "text": "🥩🍷⚽",
+                "meaning": "Argentina"
+            },
+            {
+                "id": "em-c-028",
+                "text": "🦙🏔️☀️",
+                "meaning": "Peru"
+            },
+            {
+                "id": "em-c-029",
+                "text": "🌶️🏔️🌊",
+                "meaning": "Chile"
+            },
+            {
+                "id": "em-c-030",
+                "text": "☕🇨🇴🦜",
+                "meaning": "Colombia"
+            },
+            {
+                "id": "em-c-031",
+                "text": "🇳🇿🥝🏉",
+                "meaning": "New Zealand"
+            },
+            {
+                "id": "em-c-032",
+                "text": "🦁🐆🐘",
+                "meaning": "South Africa"
+            },
+            {
+                "id": "em-c-033",
+                "text": "🏃‍♂️🦁🦒",
+                "meaning": "Kenya"
+            },
+            {
+                "id": "em-c-034",
+                "text": "🏰🧛‍♂️🍷",
+                "meaning": "Romania"
+            },
+            {
+                "id": "em-c-035",
+                "text": "🕌☕🧿",
+                "meaning": "Turkey"
+            },
+            {
+                "id": "em-c-036",
+                "text": "🇳🇴❄️🛷",
+                "meaning": "Norway"
+            },
+            {
+                "id": "em-c-037",
+                "text": "🇸🇪🫎🏬",
+                "meaning": "Sweden"
+            },
+            {
+                "id": "em-c-038",
+                "text": "🇩🇰🧜‍♀️🧩",
+                "meaning": "Denmark"
+            },
+            {
+                "id": "em-c-039",
+                "text": "🇫🇮♨️❄️",
+                "meaning": "Finland"
+            },
+            {
+                "id": "em-c-040",
+                "text": "🧊🌋♨️",
+                "meaning": "Iceland"
+            },
+            {
+                "id": "em-c-041",
+                "text": "🏔️🧘‍♂️📜",
+                "meaning": "Nepal"
+            },
+            {
+                "id": "em-c-042",
+                "text": "🍵🌴🇱🇰",
+                "meaning": "Sri Lanka"
+            },
+            {
+                "id": "em-c-043",
+                "text": "🛺🕌🏏",
+                "meaning": "Pakistan"
+            },
+            {
+                "id": "em-c-044",
+                "text": "🌾🐅🚤",
+                "meaning": "Bangladesh"
+            },
+            {
+                "id": "em-c-045",
+                "text": "🕌🏺📍",
+                "meaning": "Iran"
+            },
+            {
+                "id": "em-c-046",
+                "text": "🏛️🏜️🏺",
+                "meaning": "Jordan"
+            },
+            {
+                "id": "em-c-047",
+                "text": "🏜️🕌🍵",
+                "meaning": "Morocco"
+            },
+            {
+                "id": "em-c-048",
+                "text": "☕⛰️🏃‍♂️",
+                "meaning": "Ethiopia"
+            },
+            {
+                "id": "em-c-049",
+                "text": "🍿🇳🇬🦅",
+                "meaning": "Nigeria"
+            },
+            {
+                "id": "em-c-050",
+                "text": "🪆🏰🥟",
+                "meaning": "Poland"
+            },
+            {
+                "id": "em-c-051",
+                "text": "🏰🌻🌾",
+                "meaning": "Ukraine"
+            },
+            {
+                "id": "em-c-052",
+                "text": "🍺🏰🇨🇿",
+                "meaning": "Czech Republic"
+            },
+            {
+                "id": "em-c-053",
+                "text": "🇭🇺♨️🏰",
+                "meaning": "Hungary"
+            },
+            {
+                "id": "em-c-054",
+                "text": "🇭🇷🏖️🌊",
+                "meaning": "Croatia"
+            },
+            {
+                "id": "em-c-055",
+                "text": "🐴🏇🏹",
+                "meaning": "Mongolia"
+            },
+            {
+                "id": "em-c-056",
+                "text": "🏝️🥭🥭",
+                "meaning": "Philippines"
+            },
+            {
+                "id": "em-c-057",
+                "text": "🏢🏢🌴",
+                "meaning": "Malaysia"
+            },
+            {
+                "id": "em-c-058",
+                "text": "🦁🏙️⚓",
+                "meaning": "Singapore"
+            },
+            {
+                "id": "em-c-059",
+                "text": "💃🚗🇨🇺",
+                "meaning": "Cuba"
+            },
+            {
+                "id": "em-c-060",
+                "text": "🏖️🍹🎵",
+                "meaning": "Jamaica"
+            },
+            {
+                "id": "em-c-061",
+                "text": "🌋🦥🦜",
+                "meaning": "Costa Rica"
+            },
+            {
+                "id": "em-c-062",
+                "text": "🚢🌊🇵🇦",
+                "meaning": "Panama"
+            },
+            {
+                "id": "em-c-063",
+                "text": "🦙🌵⛰️",
+                "meaning": "Bolivia"
+            },
+            {
+                "id": "em-c-064",
+                "text": "🧉🥩⚽",
+                "meaning": "Uruguay"
+            },
+            {
+                "id": "em-c-065",
+                "text": "🌲🇱🇧📜",
+                "meaning": "Lebanon"
+            },
+            {
+                "id": "em-c-066",
+                "text": "🎰🏰🏎️",
+                "meaning": "Monaco"
+            },
+            {
+                "id": "em-c-067",
+                "text": "⛪🇻🇦🇻🇦",
+                "meaning": "Vatican City"
+            },
+            {
+                "id": "em-c-068",
+                "text": "🇲🇬🐒🌴",
+                "meaning": "Madagascar"
+            },
+            {
+                "id": "em-c-069",
+                "text": "🦤🏝️🌊",
+                "meaning": "Mauritius"
+            },
+            {
+                "id": "em-c-070",
+                "text": "🏖️🏝️🌊",
+                "meaning": "Maldives"
+            },
+            {
+                "id": "em-c-071",
+                "text": "🐉🏰⛰️",
+                "meaning": "Bhutan"
+            },
+            {
+                "id": "em-c-072",
+                "text": "🏔️🏜️🇦🇫",
+                "meaning": "Afghanistan"
+            },
+            {
+                "id": "em-c-073",
+                "text": "🍷🌊🐟",
+                "meaning": "Portugal"
+            },
+            {
+                "id": "em-c-074",
+                "text": "⛷️🏔️🎻",
+                "meaning": "Austria"
+            },
+            {
+                "id": "em-c-075",
+                "text": "🏰🇰🇭🗿",
+                "meaning": "Cambodia"
+            },
+            {
+                "id": "em-c-076",
+                "text": "🏙️🧋🇹🇼",
+                "meaning": "Taiwan"
+            },
+            {
+                "id": "em-c-077",
+                "text": "🌴🏖️🇫🇯",
+                "meaning": "Fiji"
+            },
+            {
+                "id": "em-c-078",
+                "text": "🏔️⛷️🇦🇩",
+                "meaning": "Andorra"
+            },
+            {
+                "id": "em-c-079",
+                "text": "🍫🇬🇭🌴",
+                "meaning": "Ghana"
+            },
+            {
+                "id": "em-c-080",
+                "text": "🦍🇺🇬🌿",
+                "meaning": "Uganda"
+            },
+            {
+                "id": "em-c-081",
+                "text": "🐆⛰️🇹🇿",
+                "meaning": "Tanzania"
+            },
+            {
+                "id": "em-c-082",
+                "text": "🏜️🏛️🇨🇾",
+                "meaning": "Cyprus"
+            },
+            {
+                "id": "em-c-083",
+                "text": "🏰🇲🇹🛡️",
+                "meaning": "Malta"
+            },
+            {
+                "id": "em-c-084",
+                "text": "🇦🇱🦅⚔️",
+                "meaning": "Albania"
+            },
+            {
+                "id": "em-c-085",
+                "text": "🇦🇿🔥🛢️",
+                "meaning": "Azerbaijan"
+            },
+            {
+                "id": "em-c-086",
+                "text": "🍷🇬🇪🥟",
+                "meaning": "Georgia"
+            },
+            {
+                "id": "em-c-087",
+                "text": "🇦🇲⛰️🍇",
+                "meaning": "Armenia"
+            },
+            {
+                "id": "em-c-088",
+                "text": "🏜️🐎🦅",
+                "meaning": "Kazakhstan"
+            },
+            {
+                "id": "em-c-089",
+                "text": "🌋🏖️🇪🇨",
+                "meaning": "Ecuador"
+            },
+            {
+                "id": "em-c-090",
+                "text": "🌊⚡🇻🇪",
+                "meaning": "Venezuela"
+            },
+            {
+                "id": "em-c-091",
+                "text": "🏛️🗿🇲🇽",
+                "meaning": "Guatemala"
+            },
+            {
+                "id": "em-c-092",
+                "text": "🇵🇷🏖️🎶",
+                "meaning": "Puerto Rico"
+            },
+            {
+                "id": "em-c-093",
+                "text": "🇱🇺🏰🪙",
+                "meaning": "Luxembourg"
+            },
+            {
+                "id": "em-c-094",
+                "text": "🇸🇰🏰🏔️",
+                "meaning": "Slovakia"
+            },
+            {
+                "id": "em-c-095",
+                "text": "🇸🇮🏔️🇸🇮",
+                "meaning": "Slovenia"
+            },
+            {
+                "id": "em-c-096",
+                "text": "🇧🇬🌹🏛️",
+                "meaning": "Bulgaria"
+            },
+            {
+                "id": "em-c-097",
+                "text": "🦍🇷🇼🌿",
+                "meaning": "Rwanda"
+            },
+            {
+                "id": "em-c-098",
+                "text": "🚀🇰🇵🏰",
+                "meaning": "North Korea"
+            },
+            {
+                "id": "em-c-099",
+                "text": "🧊🐧🇦🇶",
+                "meaning": "Antarctica"
+            },
+            {
+                "id": "em-c-100",
+                "text": "🏜️🏛️🇮🇶",
+                "meaning": "Iraq"
+            }
+        ],
+        "type": "default",
+        "color": "mint",
+        "symbolName": "globe",
+        "isEmoji": true
+    }
+]

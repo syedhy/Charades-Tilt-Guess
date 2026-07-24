@@ -45,7 +45,17 @@ final class CharadesTiltGuessTests: XCTestCase {
             color: .mint,
             symbolName: "person.2.fill"
         )
-        let state = TeamMatchState(sourceDecks: [deck], totalRounds: 1, duration: 60)
+        let customTeams = [
+            TeamInfo(id: 1, name: "Tigers", icon: "🐅", color: .orange),
+            TeamInfo(id: 2, name: "Lions", icon: "🦁", color: .yellow)
+        ]
+        let state = TeamMatchState(
+            numberOfTeams: 2,
+            playersPerTeam: 1,
+            sourceDecks: [deck],
+            duration: 60,
+            customTeams: customTeams
+        )
 
         state.recordResult(
             RoundResult(

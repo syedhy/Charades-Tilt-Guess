@@ -13,7 +13,9 @@ final class CustomDeckDetailViewModel: ObservableObject {
         duplicateCount: 0,
         tooLongLines: [],
         overDeckLimitCount: 0,
-        maxCardLength: CustomDeckDetailViewModel.maxCardTextLength
+        maxCardLength: CustomDeckDetailViewModel.maxCardTextLength,
+        invalidEmojiCardsCount: 0,
+        missingMeaningCardsCount: 0
     )
     @Published private(set) var saveErrorMessage: String?
     @Published private(set) var deleteErrorMessage: String?
@@ -68,7 +70,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
         draftCards = deck.cards
         cardErrorMessage = nil
         saveErrorMessage = nil
-        importPreview = importService.previewCards(from: "", existingCards: draftCards)
+        importPreview = importService.previewCards(from: "", existingCards: draftCards, isEmoji: deck.isEmojiDeck)
     }
 
     func cardCharacterCountText(for text: String) -> String {
@@ -137,14 +139,14 @@ final class CustomDeckDetailViewModel: ObservableObject {
 
     func refreshImportPreview(from text: String) {
         importPreview = importPreviewLimitedToRemainingSlots(
-            importService.previewCards(from: text, existingCards: draftCards)
+            importService.previewCards(from: text, existingCards: draftCards, isEmoji: deck.isEmojiDeck)
         )
     }
 
     @discardableResult
     func importCards(from text: String) -> Int {
         let preview = importPreviewLimitedToRemainingSlots(
-            importService.previewCards(from: text, existingCards: draftCards)
+            importService.previewCards(from: text, existingCards: draftCards, isEmoji: deck.isEmojiDeck)
         )
         importPreview = preview
 
@@ -155,7 +157,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
             return 0
         }
 
-        let newCards = preview.cards.map { GameWord(id: wordIDProvider(), text: $0) }
+        let newCards = preview.cards.map { GameWord(id: wordIDProvider(), text: $0.text, meaning: $0.meaning) }
         draftCards.insert(contentsOf: newCards, at: 0)
         cardErrorMessage = nil
         saveErrorMessage = nil
@@ -215,7 +217,9 @@ final class CustomDeckDetailViewModel: ObservableObject {
             duplicateCount: preview.duplicateCount,
             tooLongLines: preview.tooLongLines,
             overDeckLimitCount: preview.overDeckLimitCount + preview.cards.count - remainingSlots,
-            maxCardLength: preview.maxCardLength
+            maxCardLength: preview.maxCardLength,
+            invalidEmojiCardsCount: preview.invalidEmojiCardsCount,
+            missingMeaningCardsCount: preview.missingMeaningCardsCount
         )
     }
 }

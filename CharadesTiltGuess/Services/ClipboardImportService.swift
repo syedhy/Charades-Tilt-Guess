@@ -1,12 +1,19 @@
 import Foundation
 
+struct ParsedCard: Equatable, Hashable {
+    let text: String
+    let meaning: String?
+}
+
 struct ClipboardImportPreview: Equatable {
-    let cards: [String]
+    let cards: [ParsedCard]
     let blankLineCount: Int
     let duplicateCount: Int
     let tooLongLines: [String]
     let overDeckLimitCount: Int
     let maxCardLength: Int
+    let invalidEmojiCardsCount: Int
+    let missingMeaningCardsCount: Int
 
     var hasImportableCards: Bool {
         !cards.isEmpty
@@ -31,6 +38,14 @@ struct ClipboardImportPreview: Equatable {
             messages.append("\(overDeckLimitCount) \(overDeckLimitCount == 1 ? "card was" : "cards were") skipped because custom decks are limited to 1500 cards.")
         }
 
+        if invalidEmojiCardsCount > 0 {
+            messages.append("\(invalidEmojiCardsCount) \(invalidEmojiCardsCount == 1 ? "card" : "cards") skipped (no emoji found).")
+        }
+
+        if missingMeaningCardsCount > 0 {
+            messages.append("\(missingMeaningCardsCount) \(missingMeaningCardsCount == 1 ? "card" : "cards") skipped (missing meaning/answer).")
+        }
+
         return messages
     }
 }
@@ -42,33 +57,100 @@ struct ClipboardImportService {
         self.maxCardLength = maxCardLength
     }
 
-    func previewCards(from text: String, existingCards: [GameWord] = []) -> ClipboardImportPreview {
-        var cards: [String] = []
+    func previewCards(from text: String, existingCards: [GameWord] = [], isEmoji: Bool = false) -> ClipboardImportPreview {
+        var cards: [ParsedCard] = []
         var blankLineCount = 0
         var duplicateCount = 0
         var tooLongLines: [String] = []
+        var invalidEmojiCardsCount = 0
+        var missingMeaningCardsCount = 0
         var seen = Set(existingCards.map { normalized($0.text) })
 
-        for rawLine in candidateCardTexts(from: text) {
+        let lines = text.components(separatedBy: .newlines)
+        for rawLine in lines {
             let trimmedLine = rawLine.trimmingCharacters(in: .whitespacesAndNewlines)
-
             guard !trimmedLine.isEmpty else {
                 blankLineCount += 1
                 continue
             }
 
-            guard trimmedLine.count <= maxCardLength else {
-                tooLongLines.append(trimmedLine)
+            let lineWithoutMarker = strippingListMarker(from: trimmedLine)
+            guard !lineWithoutMarker.isEmpty else {
+                blankLineCount += 1
                 continue
             }
 
-            let normalizedLine = normalized(trimmedLine)
-            guard seen.insert(normalizedLine).inserted else {
-                duplicateCount += 1
-                continue
+            let candidates: [ParsedCard]
+            if isEmoji {
+                // For emoji mode, allow :, -, or , as separators
+                let separators = [":", " - ", ","]
+                var bestSeparatorIndex: String.Index? = nil
+                var matchedSeparator: String = ""
+
+                for sep in separators {
+                    if let range = lineWithoutMarker.range(of: sep) {
+                        let index = range.lowerBound
+                        if bestSeparatorIndex == nil || index < bestSeparatorIndex! {
+                            bestSeparatorIndex = index
+                            matchedSeparator = sep
+                        }
+                    }
+                }
+
+                if let index = bestSeparatorIndex {
+                    let left = String(lineWithoutMarker[..<index]).trimmingCharacters(in: .whitespacesAndNewlines)
+                    let right = String(lineWithoutMarker[lineWithoutMarker.index(index, offsetBy: matchedSeparator.count)...]).trimmingCharacters(in: .whitespacesAndNewlines)
+                    candidates = [ParsedCard(text: left, meaning: right.isEmpty ? nil : right)]
+                } else {
+                    candidates = [ParsedCard(text: lineWithoutMarker, meaning: nil)]
+                }
+            } else {
+                // For normal decks, clues/meanings do not exist.
+                // If line contains commas, split by comma for multiple cards per line.
+                if lineWithoutMarker.contains(",") {
+                    let parts = lineWithoutMarker.split(separator: ",", omittingEmptySubsequences: false)
+                    candidates = parts.compactMap { part in
+                        let item = strippingListMarker(from: String(part)).trimmingCharacters(in: .whitespacesAndNewlines)
+                        return item.isEmpty ? nil : ParsedCard(text: item, meaning: nil)
+                    }
+                } else {
+                    candidates = [ParsedCard(text: lineWithoutMarker, meaning: nil)]
+                }
             }
 
-            cards.append(trimmedLine)
+            for candidate in candidates {
+                let itemText = candidate.text
+                let itemMeaning = candidate.meaning
+
+                guard !itemText.isEmpty else {
+                    blankLineCount += 1
+                    continue
+                }
+
+                guard itemText.count <= maxCardLength else {
+                    tooLongLines.append(itemText)
+                    continue
+                }
+
+                if isEmoji {
+                    if !itemText.containsEmoji {
+                        invalidEmojiCardsCount += 1
+                        continue
+                    }
+                    if itemMeaning == nil || itemMeaning!.isEmpty {
+                        missingMeaningCardsCount += 1
+                        continue
+                    }
+                }
+
+                let normalizedLine = normalized(itemText)
+                guard seen.insert(normalizedLine).inserted else {
+                    duplicateCount += 1
+                    continue
+                }
+
+                cards.append(ParsedCard(text: itemText, meaning: itemMeaning))
+            }
         }
 
         return ClipboardImportPreview(
@@ -77,20 +159,14 @@ struct ClipboardImportService {
             duplicateCount: duplicateCount,
             tooLongLines: tooLongLines,
             overDeckLimitCount: 0,
-            maxCardLength: maxCardLength
+            maxCardLength: maxCardLength,
+            invalidEmojiCardsCount: invalidEmojiCardsCount,
+            missingMeaningCardsCount: missingMeaningCardsCount
         )
     }
 
     private func normalized(_ text: String) -> String {
         text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-    }
-
-    private func candidateCardTexts(from text: String) -> [String] {
-        text.components(separatedBy: .newlines)
-            .flatMap { line in
-                line.split(separator: ",", omittingEmptySubsequences: false).map(String.init)
-            }
-            .map(strippingListMarker)
     }
 
     private func strippingListMarker(from rawText: String) -> String {

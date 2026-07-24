@@ -837,6 +837,7 @@ private struct PasteCardsSheet: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
                     header
+                    formattingGuide
                     importButton
                     textInput
                     preview
@@ -866,7 +867,7 @@ private struct PasteCardsSheet: View {
                         dismiss()
                     }
 
-                    Text("Paste cards")
+                    Text("Paste Cards")
                         .font(.system(size: 30, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
                         .lineLimit(1)
@@ -874,7 +875,7 @@ private struct PasteCardsSheet: View {
                 }
 
                 DoodleActionButton(
-                    title: "Paste clipboard",
+                    title: "Paste Cards from Clipboard",
                     symbol: "doc.on.clipboard",
                     accent: AppTheme.Colors.yellow
                 ) {
@@ -891,6 +892,62 @@ private struct PasteCardsSheet: View {
                 }
             }
             .padding(AppTheme.Spacing.roomy)
+        }
+    }
+
+    private var formattingGuide: some View {
+        let isEmoji = viewModel.deck.isEmojiDeck
+
+        return DoodlePanel(background: AppTheme.Colors.paperBright) {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 8) {
+                    Image(systemName: "info.circle.fill")
+                        .foregroundStyle(isEmoji ? AppTheme.Colors.yellow : AppTheme.Colors.mint)
+                    Text("Paste Format Guide")
+                        .font(.system(size: 16, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                }
+
+                if isEmoji {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("• 1 card per line")
+                        Text("• 2–3 emojis, then dash (-), then answer")
+                    }
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Example Format:")
+                            .font(.system(size: 11, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+
+                        Text("🍿 🎬 - Movie\n🚀 🌕 - Moonshot\n🔥 🍕 - Hot Pizza")
+                            .font(.system(size: 13, weight: .black, design: .monospaced))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .padding(8)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+                } else {
+                    Text("• Paste 1 card name per line")
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.72))
+
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Example Format:")
+                            .font(.system(size: 11, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+
+                        Text("Pizza\nFootball\nSpider-Man")
+                            .font(.system(size: 13, weight: .black, design: .monospaced))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .padding(8)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(AppTheme.Colors.paper, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    }
+                }
+            }
+            .padding(14)
         }
     }
 
@@ -929,7 +986,8 @@ private struct PasteCardsSheet: View {
                 }
 
                 if viewModel.importPreview.cards.isEmpty {
-                    Text("Apple\nFootball\nPizza\nSpider-Man")
+                    let exampleText = viewModel.deck.isEmojiDeck ? "🍕 - Pizza\n🎬 - Movie" : "Apple\nFootball\nPizza"
+                    Text(exampleText)
                         .font(.system(size: 17, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.34))
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -942,7 +1000,8 @@ private struct PasteCardsSheet: View {
                         spacing: 10
                     ) {
                         ForEach(viewModel.importPreview.cards.prefix(12), id: \.self) { card in
-                            ImportPreviewChip(text: card)
+                            let displayText = card.meaning != nil ? "\(card.text) - \(card.meaning!)" : card.text
+                            ImportPreviewChip(text: displayText)
                         }
                     }
 

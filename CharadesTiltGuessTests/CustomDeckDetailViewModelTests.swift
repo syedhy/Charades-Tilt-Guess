@@ -60,7 +60,12 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
 
         viewModel.refreshImportPreview(from: pastedText)
 
-        XCTAssertEqual(viewModel.importPreview.cards, ["Apple", "Football", "Shah Rukh Khan"])
+        let expected = [
+            ParsedCard(text: "Apple", meaning: nil),
+            ParsedCard(text: "Football", meaning: nil),
+            ParsedCard(text: "Shah Rukh Khan", meaning: nil)
+        ]
+        XCTAssertEqual(viewModel.importPreview.cards, expected)
         XCTAssertEqual(viewModel.importPreview.blankLineCount, 1)
         XCTAssertEqual(viewModel.importPreview.duplicateCount, 1)
         XCTAssertEqual(viewModel.importPreview.tooLongLines, [longLine])
@@ -109,7 +114,7 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
 
         viewModel.refreshImportPreview(from: pastedText)
 
-        XCTAssertEqual(viewModel.importPreview.cards, ["Apple"])
+        XCTAssertEqual(viewModel.importPreview.cards, [ParsedCard(text: "Apple", meaning: nil)])
         XCTAssertEqual(viewModel.importPreview.overDeckLimitCount, 2)
         XCTAssertEqual(
             viewModel.importPreview.summaryMessages.last,

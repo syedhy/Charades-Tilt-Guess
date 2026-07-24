@@ -1,0 +1,1013 @@
+[
+    {
+        "id": "emoji-disney",
+        "name": "Disney",
+        "description": "Guess disney characters from emojis!",
+        "cards": [
+            {
+                "id": "em-dc-001",
+                "text": "🐭🎩",
+                "meaning": "Mickey Mouse"
+            },
+            {
+                "id": "em-dc-002",
+                "text": "🐭🎀",
+                "meaning": "Minnie Mouse"
+            },
+            {
+                "id": "em-dc-003",
+                "text": "🦆💙",
+                "meaning": "Donald Duck"
+            },
+            {
+                "id": "em-dc-004",
+                "text": "🐶🧢",
+                "meaning": "Goofy"
+            },
+            {
+                "id": "em-dc-005",
+                "text": "🐶🦴",
+                "meaning": "Pluto"
+            },
+            {
+                "id": "em-dc-006",
+                "text": "🦆🎀",
+                "meaning": "Daisy Duck"
+            },
+            {
+                "id": "em-dc-007",
+                "text": "🐿️🌰",
+                "meaning": "Chip 'n' Dale"
+            },
+            {
+                "id": "em-dc-008",
+                "text": "🤠⭐",
+                "meaning": "Woody"
+            },
+            {
+                "id": "em-dc-009",
+                "text": "🚀🧑‍🚀",
+                "meaning": "Buzz Lightyear"
+            },
+            {
+                "id": "em-dc-010",
+                "text": "🐎⭐",
+                "meaning": "Bullseye"
+            },
+            {
+                "id": "em-dc-011",
+                "text": "🐖🪙",
+                "meaning": "Hamm"
+            },
+            {
+                "id": "em-dc-012",
+                "text": "🦖😱",
+                "meaning": "Rex"
+            },
+            {
+                "id": "em-dc-013",
+                "text": "🐶🦯",
+                "meaning": "Slinky Dog"
+            },
+            {
+                "id": "em-dc-014",
+                "text": "🥔👁️",
+                "meaning": "Mr. Potato Head"
+            },
+            {
+                "id": "em-dc-015",
+                "text": "👁️🟢",
+                "meaning": "Mike Wazowski"
+            },
+            {
+                "id": "em-dc-016",
+                "text": "👹💙",
+                "meaning": "James P. Sullivan"
+            },
+            {
+                "id": "em-dc-017",
+                "text": "👧🚪",
+                "meaning": "Boo"
+            },
+            {
+                "id": "em-dc-018",
+                "text": "🦎👓",
+                "meaning": "Randall Boggs"
+            },
+            {
+                "id": "em-dc-019",
+                "text": "🏎️⚡",
+                "meaning": "Lightning McQueen"
+            },
+            {
+                "id": "em-dc-020",
+                "text": "🛻🟤",
+                "meaning": "Tow Mater"
+            },
+            {
+                "id": "em-dc-021",
+                "text": "💙🚗",
+                "meaning": "Sally Carrera"
+            },
+            {
+                "id": "em-dc-022",
+                "text": "🏎️👴",
+                "meaning": "Doc Hudson"
+            },
+            {
+                "id": "em-dc-023",
+                "text": "🐠🧡",
+                "meaning": "Nemo"
+            },
+            {
+                "id": "em-dc-024",
+                "text": "🐠🟦",
+                "meaning": "Dory"
+            },
+            {
+                "id": "em-dc-025",
+                "text": "🐠🧡👨",
+                "meaning": "Marlin"
+            },
+            {
+                "id": "em-dc-026",
+                "text": "🐢🌊",
+                "meaning": "Crush"
+            },
+            {
+                "id": "em-dc-027",
+                "text": "🐙🕶️",
+                "meaning": "Hank"
+            },
+            {
+                "id": "em-dc-028",
+                "text": "🐀👨‍🍳",
+                "meaning": "Remy"
+            },
+            {
+                "id": "em-dc-029",
+                "text": "🍝👨",
+                "meaning": "Linguini"
+            },
+            {
+                "id": "em-dc-030",
+                "text": "👨‍🍳🇫🇷",
+                "meaning": "Colette"
+            },
+            {
+                "id": "em-dc-031",
+                "text": "📝🍷",
+                "meaning": "Anton Ego"
+            },
+            {
+                "id": "em-dc-032",
+                "text": "🎈👴",
+                "meaning": "Carl Fredricksen"
+            },
+            {
+                "id": "em-dc-033",
+                "text": "🎈👦",
+                "meaning": "Russell"
+            },
+            {
+                "id": "em-dc-034",
+                "text": "🐶🗣️",
+                "meaning": "Dug"
+            },
+            {
+                "id": "em-dc-035",
+                "text": "🐦🎈",
+                "meaning": "Kevin"
+            },
+            {
+                "id": "em-dc-036",
+                "text": "🤖🌱",
+                "meaning": "WALL-E"
+            },
+            {
+                "id": "em-dc-037",
+                "text": "🤖🤍",
+                "meaning": "EVE"
+            },
+            {
+                "id": "em-dc-038",
+                "text": "🧠😊",
+                "meaning": "Joy"
+            },
+            {
+                "id": "em-dc-039",
+                "text": "🧠😢",
+                "meaning": "Sadness"
+            },
+            {
+                "id": "em-dc-040",
+                "text": "🧠😡",
+                "meaning": "Anger"
+            },
+            {
+                "id": "em-dc-041",
+                "text": "🧠🤢",
+                "meaning": "Disgust"
+            },
+            {
+                "id": "em-dc-042",
+                "text": "🧠😨",
+                "meaning": "Fear"
+            },
+            {
+                "id": "em-dc-043",
+                "text": "🧠🧡",
+                "meaning": "Anxiety"
+            },
+            {
+                "id": "em-dc-044",
+                "text": "🐘🍭",
+                "meaning": "Bing Bong"
+            },
+            {
+                "id": "em-dc-045",
+                "text": "🦸‍♂️💪",
+                "meaning": "Mr. Incredible"
+            },
+            {
+                "id": "em-dc-046",
+                "text": "🦸‍♀️🥨",
+                "meaning": "Elastigirl"
+            },
+            {
+                "id": "em-dc-047",
+                "text": "💨👦",
+                "meaning": "Dash"
+            },
+            {
+                "id": "em-dc-048",
+                "text": "💜🛡️",
+                "meaning": "Violet Parr"
+            },
+            {
+                "id": "em-dc-049",
+                "text": "👶🔥",
+                "meaning": "Jack-Jack"
+            },
+            {
+                "id": "em-dc-050",
+                "text": "🧊🦸‍♂️",
+                "meaning": "Frozone"
+            },
+            {
+                "id": "em-dc-051",
+                "text": "👓🧥",
+                "meaning": "Edna Mode"
+            },
+            {
+                "id": "em-dc-052",
+                "text": "💀🎸",
+                "meaning": "Miguel"
+            },
+            {
+                "id": "em-dc-053",
+                "text": "💀🎩",
+                "meaning": "Héctor"
+            },
+            {
+                "id": "em-dc-054",
+                "text": "💀🎤",
+                "meaning": "Ernesto de la Cruz"
+            },
+            {
+                "id": "em-dc-055",
+                "text": "🐶💀",
+                "meaning": "Dante"
+            },
+            {
+                "id": "em-dc-056",
+                "text": "🤍🤖",
+                "meaning": "Baymax"
+            },
+            {
+                "id": "em-dc-057",
+                "text": "👦🤖",
+                "meaning": "Hiro Hamada"
+            },
+            {
+                "id": "em-dc-058",
+                "text": "🦁👑",
+                "meaning": "Simba"
+            },
+            {
+                "id": "em-dc-059",
+                "text": "🦁👑👑",
+                "meaning": "Mufasa"
+            },
+            {
+                "id": "em-dc-060",
+                "text": "🦁👁️",
+                "meaning": "Scar"
+            },
+            {
+                "id": "em-dc-061",
+                "text": "🦁👧",
+                "meaning": "Nala"
+            },
+            {
+                "id": "em-dc-062",
+                "text": "🐗🐛",
+                "meaning": "Pumbaa"
+            },
+            {
+                "id": "em-dc-063",
+                "text": "🦦🐛",
+                "meaning": "Timon"
+            },
+            {
+                "id": "em-dc-064",
+                "text": "🐒🪄",
+                "meaning": "Rafiki"
+            },
+            {
+                "id": "em-dc-065",
+                "text": "🕊️👑",
+                "meaning": "Zazu"
+            },
+            {
+                "id": "em-dc-066",
+                "text": "🧞🪔",
+                "meaning": "Genie"
+            },
+            {
+                "id": "em-dc-067",
+                "text": "🪔🤴",
+                "meaning": "Aladdin"
+            },
+            {
+                "id": "em-dc-068",
+                "text": "👸🪔",
+                "meaning": "Jasmine"
+            },
+            {
+                "id": "em-dc-069",
+                "text": "🐍🪔",
+                "meaning": "Jafar"
+            },
+            {
+                "id": "em-dc-070",
+                "text": "🦜🐍",
+                "meaning": "Iago"
+            },
+            {
+                "id": "em-dc-071",
+                "text": "🐒🧢",
+                "meaning": "Abu"
+            },
+            {
+                "id": "em-dc-072",
+                "text": "🐯🪔",
+                "meaning": "Rajah"
+            },
+            {
+                "id": "em-dc-073",
+                "text": "🧜‍♀️🐚",
+                "meaning": "Ariel"
+            },
+            {
+                "id": "em-dc-074",
+                "text": "🦀🎶",
+                "meaning": "Sebastian"
+            },
+            {
+                "id": "em-dc-075",
+                "text": "🐠💛",
+                "meaning": "Flounder"
+            },
+            {
+                "id": "em-dc-076",
+                "text": "🐙💜",
+                "meaning": "Ursula"
+            },
+            {
+                "id": "em-dc-077",
+                "text": "🤴🌊",
+                "meaning": "Prince Eric"
+            },
+            {
+                "id": "em-dc-078",
+                "text": "🧜‍♂️🔱",
+                "meaning": "King Triton"
+            },
+            {
+                "id": "em-dc-079",
+                "text": "🌹📚",
+                "meaning": "Belle"
+            },
+            {
+                "id": "em-dc-080",
+                "text": "👹🌹",
+                "meaning": "Beast"
+            },
+            {
+                "id": "em-dc-081",
+                "text": "🕯️🕺",
+                "meaning": "Lumière"
+            },
+            {
+                "id": "em-dc-082",
+                "text": "🕰️🎩",
+                "meaning": "Cogsworth"
+            },
+            {
+                "id": "em-dc-083",
+                "text": "☕👵",
+                "meaning": "Mrs. Potts"
+            },
+            {
+                "id": "em-dc-084",
+                "text": "☕👦",
+                "meaning": "Chip"
+            },
+            {
+                "id": "em-dc-085",
+                "text": "💪🥚",
+                "meaning": "Gaston"
+            },
+            {
+                "id": "em-dc-086",
+                "text": "❄️👸",
+                "meaning": "Elsa"
+            },
+            {
+                "id": "em-dc-087",
+                "text": "👩‍🦰❄️",
+                "meaning": "Anna"
+            },
+            {
+                "id": "em-dc-088",
+                "text": "☃️🥕",
+                "meaning": "Olaf"
+            },
+            {
+                "id": "em-dc-089",
+                "text": "🦌🧊",
+                "meaning": "Sven"
+            },
+            {
+                "id": "em-dc-090",
+                "text": "🛷🧊",
+                "meaning": "Kristoff"
+            },
+            {
+                "id": "em-dc-091",
+                "text": "👑👹",
+                "meaning": "Shrek"
+            },
+            {
+                "id": "em-dc-092",
+                "text": "🫏🧇",
+                "meaning": "Donkey"
+            },
+            {
+                "id": "em-dc-093",
+                "text": "🐱⚔️",
+                "meaning": "Puss in Boots"
+            },
+            {
+                "id": "em-dc-094",
+                "text": "👸👹",
+                "meaning": "Fiona"
+            },
+            {
+                "id": "em-dc-095",
+                "text": "🌊🪝",
+                "meaning": "Maui"
+            },
+            {
+                "id": "em-dc-096",
+                "text": "🌊🐚",
+                "meaning": "Moana"
+            },
+            {
+                "id": "em-dc-097",
+                "text": "🐓🌊",
+                "meaning": "Heihei"
+            },
+            {
+                "id": "em-dc-098",
+                "text": "🦀✨",
+                "meaning": "Tamatoa"
+            },
+            {
+                "id": "em-dc-099",
+                "text": "🐉⚔️",
+                "meaning": "Mulan"
+            },
+            {
+                "id": "em-dc-100",
+                "text": "🐉🔴",
+                "meaning": "Mushu"
+            },
+            {
+                "id": "em-dc-101",
+                "text": "🦗🍀",
+                "meaning": "Cricket"
+            },
+            {
+                "id": "em-dc-102",
+                "text": "⚔️🥁",
+                "meaning": "Li Shang"
+            },
+            {
+                "id": "em-dc-103",
+                "text": "💇🏰",
+                "meaning": "Rapunzel"
+            },
+            {
+                "id": "em-dc-104",
+                "text": "🍳👨",
+                "meaning": "Flynn Rider"
+            },
+            {
+                "id": "em-dc-105",
+                "text": "🦎🎨",
+                "meaning": "Pascal"
+            },
+            {
+                "id": "em-dc-106",
+                "text": "🐴⚔️",
+                "meaning": "Maximus"
+            },
+            {
+                "id": "em-dc-107",
+                "text": "🌺👽",
+                "meaning": "Stitch"
+            },
+            {
+                "id": "em-dc-108",
+                "text": "🌺🏄‍♀️",
+                "meaning": "Lilo"
+            },
+            {
+                "id": "em-dc-109",
+                "text": "🤴🦙",
+                "meaning": "Kuzco"
+            },
+            {
+                "id": "em-dc-110",
+                "text": "🧪👵",
+                "meaning": "Yzma"
+            },
+            {
+                "id": "em-dc-111",
+                "text": "🧑‍🍳🍳",
+                "meaning": "Kronk"
+            },
+            {
+                "id": "em-dc-112",
+                "text": "🤪⛏️",
+                "meaning": "Dopey"
+            },
+            {
+                "id": "em-dc-113",
+                "text": "🍎👸",
+                "meaning": "Snow White"
+            },
+            {
+                "id": "em-dc-114",
+                "text": "🍎🪞",
+                "meaning": "Evil Queen"
+            },
+            {
+                "id": "em-dc-115",
+                "text": "👠🕛",
+                "meaning": "Cinderella"
+            },
+            {
+                "id": "em-dc-116",
+                "text": "🪄👵",
+                "meaning": "Fairy Godmother"
+            },
+            {
+                "id": "em-dc-117",
+                "text": "👸💤",
+                "meaning": "Aurora"
+            },
+            {
+                "id": "em-dc-118",
+                "text": "🐉🖤",
+                "meaning": "Maleficent"
+            },
+            {
+                "id": "em-dc-119",
+                "text": "🤴⚔️",
+                "meaning": "Prince Phillip"
+            },
+            {
+                "id": "em-dc-120",
+                "text": "🪵🤥",
+                "meaning": "Pinocchio"
+            },
+            {
+                "id": "em-dc-121",
+                "text": "🦗🎩",
+                "meaning": "Jiminy Cricket"
+            },
+            {
+                "id": "em-dc-122",
+                "text": "🐘👂",
+                "meaning": "Dumbo"
+            },
+            {
+                "id": "em-dc-123",
+                "text": "🦌🌲",
+                "meaning": "Bambi"
+            },
+            {
+                "id": "em-dc-124",
+                "text": "🐰🐾",
+                "meaning": "Thumper"
+            },
+            {
+                "id": "em-dc-125",
+                "text": "🦨🌸",
+                "meaning": "Flower"
+            },
+            {
+                "id": "em-dc-126",
+                "text": "🗡️🟢",
+                "meaning": "Peter Pan"
+            },
+            {
+                "id": "em-dc-127",
+                "text": "🧚‍♀️✨",
+                "meaning": "Tinker Bell"
+            },
+            {
+                "id": "em-dc-128",
+                "text": "👧🛌",
+                "meaning": "Wendy"
+            },
+            {
+                "id": "em-dc-129",
+                "text": "🪝🐊",
+                "meaning": "Captain Hook"
+            },
+            {
+                "id": "em-dc-130",
+                "text": "🏴‍☠️🧭",
+                "meaning": "Captain Jack Sparrow"
+            },
+            {
+                "id": "em-dc-131",
+                "text": "🐻🍯",
+                "meaning": "Winnie the Pooh"
+            },
+            {
+                "id": "em-dc-132",
+                "text": "🐯🧡",
+                "meaning": "Tigger"
+            },
+            {
+                "id": "em-dc-133",
+                "text": "🐷🩷",
+                "meaning": "Piglet"
+            },
+            {
+                "id": "em-dc-134",
+                "text": "🫏🌧️",
+                "meaning": "Eeyore"
+            },
+            {
+                "id": "em-dc-135",
+                "text": "🦘👶",
+                "meaning": "Kanga & Roo"
+            },
+            {
+                "id": "em-dc-136",
+                "text": "👦🎈",
+                "meaning": "Christopher Robin"
+            },
+            {
+                "id": "em-dc-137",
+                "text": "🐻🛶",
+                "meaning": "Baloo"
+            },
+            {
+                "id": "em-dc-138",
+                "text": "👦🌴",
+                "meaning": "Mowgli"
+            },
+            {
+                "id": "em-dc-139",
+                "text": "🐅🔥",
+                "meaning": "Shere Khan"
+            },
+            {
+                "id": "em-dc-140",
+                "text": "🐆🖤",
+                "meaning": "Bagheera"
+            },
+            {
+                "id": "em-dc-141",
+                "text": "🦍🌴",
+                "meaning": "Tarzan"
+            },
+            {
+                "id": "em-dc-142",
+                "text": "👩‍🎨🌴",
+                "meaning": "Jane Porter"
+            },
+            {
+                "id": "em-dc-143",
+                "text": "🦍💅",
+                "meaning": "Terk"
+            },
+            {
+                "id": "em-dc-144",
+                "text": "🐶🐾",
+                "meaning": "Lady"
+            },
+            {
+                "id": "em-dc-145",
+                "text": "🐶🍝",
+                "meaning": "Tramp"
+            },
+            {
+                "id": "em-dc-146",
+                "text": "🐶⚫⚪",
+                "meaning": "Pongo"
+            },
+            {
+                "id": "em-dc-147",
+                "text": "🦹‍♀️🧥",
+                "meaning": "Cruella de Vil"
+            },
+            {
+                "id": "em-dc-148",
+                "text": "🦊🏹",
+                "meaning": "Robin Hood"
+            },
+            {
+                "id": "em-dc-149",
+                "text": "🦊👑",
+                "meaning": "Maid Marian"
+            },
+            {
+                "id": "em-dc-150",
+                "text": "🦊🐶",
+                "meaning": "Tod & Copper"
+            },
+            {
+                "id": "em-dc-151",
+                "text": "🎩🐇",
+                "meaning": "Mad Hatter"
+            },
+            {
+                "id": "em-dc-152",
+                "text": "🐱😸",
+                "meaning": "Cheshire Cat"
+            },
+            {
+                "id": "em-dc-153",
+                "text": "👑♥️",
+                "meaning": "Queen of Hearts"
+            },
+            {
+                "id": "em-dc-154",
+                "text": "👧🕳️",
+                "meaning": "Alice"
+            },
+            {
+                "id": "em-dc-155",
+                "text": "🔔🏰",
+                "meaning": "Quasimodo"
+            },
+            {
+                "id": "em-dc-156",
+                "text": "💃🎪",
+                "meaning": "Esmeralda"
+            },
+            {
+                "id": "em-dc-157",
+                "text": "🦸‍♂️🏛️",
+                "meaning": "Hercules"
+            },
+            {
+                "id": "em-dc-158",
+                "text": "🔥💀",
+                "meaning": "Hades"
+            },
+            {
+                "id": "em-dc-159",
+                "text": "🐴🪽",
+                "meaning": "Pegasus"
+            },
+            {
+                "id": "em-dc-160",
+                "text": "😈👹",
+                "meaning": "Pain & Panic"
+            },
+            {
+                "id": "em-dc-161",
+                "text": "🦅🍃",
+                "meaning": "Pocahontas"
+            },
+            {
+                "id": "em-dc-162",
+                "text": "🦝🍃",
+                "meaning": "Meeko"
+            },
+            {
+                "id": "em-dc-163",
+                "text": "🐸👑",
+                "meaning": "Tiana"
+            },
+            {
+                "id": "em-dc-164",
+                "text": "🐸🎷",
+                "meaning": "Prince Naveen"
+            },
+            {
+                "id": "em-dc-165",
+                "text": "🐊🎷",
+                "meaning": "Louis"
+            },
+            {
+                "id": "em-dc-166",
+                "text": "🎩💀",
+                "meaning": "Dr. Facilier"
+            },
+            {
+                "id": "em-dc-167",
+                "text": "🏹👩‍🦰",
+                "meaning": "Merida"
+            },
+            {
+                "id": "em-dc-168",
+                "text": "🐻👑",
+                "meaning": "Queen Elinor"
+            },
+            {
+                "id": "em-dc-169",
+                "text": "⚡🐶",
+                "meaning": "Bolt"
+            },
+            {
+                "id": "em-dc-170",
+                "text": "🥋🐼",
+                "meaning": "Po"
+            },
+            {
+                "id": "em-dc-171",
+                "text": "🥋🦯",
+                "meaning": "Master Shifu"
+            },
+            {
+                "id": "em-dc-172",
+                "text": "🐅🥋",
+                "meaning": "Tigress"
+            },
+            {
+                "id": "em-dc-173",
+                "text": "🦣❄️",
+                "meaning": "Manny"
+            },
+            {
+                "id": "em-dc-174",
+                "text": "🦥🌰",
+                "meaning": "Sid"
+            },
+            {
+                "id": "em-dc-175",
+                "text": "🐯❄️",
+                "meaning": "Diego"
+            },
+            {
+                "id": "em-dc-176",
+                "text": "🐿️🌰",
+                "meaning": "Scrat"
+            },
+            {
+                "id": "em-dc-177",
+                "text": "🟡🍌",
+                "meaning": "Minion Stuart"
+            },
+            {
+                "id": "em-dc-178",
+                "text": "😈🕶️",
+                "meaning": "Gru"
+            },
+            {
+                "id": "em-dc-179",
+                "text": "🦄👧",
+                "meaning": "Agnes"
+            },
+            {
+                "id": "em-dc-180",
+                "text": "🦁🗽",
+                "meaning": "Alex"
+            },
+            {
+                "id": "em-dc-181",
+                "text": "🦓🏃‍♂️",
+                "meaning": "Marty"
+            },
+            {
+                "id": "em-dc-182",
+                "text": "🦒💊",
+                "meaning": "Melman"
+            },
+            {
+                "id": "em-dc-183",
+                "text": "🦛🌊",
+                "meaning": "Gloria"
+            },
+            {
+                "id": "em-dc-184",
+                "text": "🐧🫡",
+                "meaning": "Skipper"
+            },
+            {
+                "id": "em-dc-185",
+                "text": "👑🐒",
+                "meaning": "King Julien"
+            },
+            {
+                "id": "em-dc-186",
+                "text": "🐉👦",
+                "meaning": "Hiccup"
+            },
+            {
+                "id": "em-dc-187",
+                "text": "🐉🖤",
+                "meaning": "Toothless"
+            },
+            {
+                "id": "em-dc-188",
+                "text": "🎮👾",
+                "meaning": "Wreck-It Ralph"
+            },
+            {
+                "id": "em-dc-189",
+                "text": "🍭🏎️",
+                "meaning": "Vanellope von Schweetz"
+            },
+            {
+                "id": "em-dc-190",
+                "text": "🦊🐰",
+                "meaning": "Nick Wilde"
+            },
+            {
+                "id": "em-dc-191",
+                "text": "🐰🚓",
+                "meaning": "Judy Hopps"
+            },
+            {
+                "id": "em-dc-192",
+                "text": "🦥⏱️",
+                "meaning": "Flash"
+            },
+            {
+                "id": "em-dc-193",
+                "text": "🏠🦋",
+                "meaning": "Mirabel Madrigal"
+            },
+            {
+                "id": "em-dc-194",
+                "text": "⏳🐀",
+                "meaning": "Bruno Madrigal"
+            },
+            {
+                "id": "em-dc-195",
+                "text": "🌸🌸",
+                "meaning": "Isabela Madrigal"
+            },
+            {
+                "id": "em-dc-196",
+                "text": "💪🏋️‍♀️",
+                "meaning": "Luisa Madrigal"
+            },
+            {
+                "id": "em-dc-197",
+                "text": "🌧️☀️",
+                "meaning": "Pepa Madrigal"
+            },
+            {
+                "id": "em-dc-198",
+                "text": "👑🗡️",
+                "meaning": "Prince Hans"
+            },
+            {
+                "id": "em-dc-199",
+                "text": "⛄❄️",
+                "meaning": "Marshmallow"
+            },
+            {
+                "id": "em-dc-200",
+                "text": "🐟🤖",
+                "meaning": "Minion (Megamind)"
+            }
+        ],
+        "type": "default",
+        "color": "pink",
+        "symbolName": "sparkles",
+        "isEmoji": true
+    }
+]

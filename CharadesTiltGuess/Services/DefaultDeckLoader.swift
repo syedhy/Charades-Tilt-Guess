@@ -15,7 +15,8 @@ struct DefaultDeckLoader {
     
     // Maintain the desired display order of default decks
     private let defaultDeckIDs = [
-        "emoji-movies", "emoji-animals", "emoji-pop", "emoji-food", "emoji-places",
+        "emoji-general", "emoji-movies", "emoji-disney", "emoji-cartoon",
+        "emoji-food", "emoji-pokemon", "emoji-mythology", "emoji-countries",
         "default-tech", "default-movies", "default-food", "default-sports", 
         "default-animals", "default-countries", "default-celebrities", 
         "default-tv-shows", "default-cartoons", "default-science", 

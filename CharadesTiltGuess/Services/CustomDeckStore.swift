@@ -76,7 +76,7 @@ struct CustomDeckStore {
 
     private func validate(_ decks: [Deck]) throws {
         let maxDecks = 20
-        let maxCards = 250
+        let maxCards = 1500
 
         guard decks.count <= maxDecks else {
             throw CustomDeckStoreError.deckLimitReached(maxDecks)

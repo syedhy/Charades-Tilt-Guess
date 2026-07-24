@@ -4,1006 +4,256 @@
         "name": "School",
         "description": "Classroom life and campus clues.",
         "cards": [
-            {
-                "id": "default-school-expanded-000",
-                "text": "Teacher"
-            },
-            {
-                "id": "default-school-expanded-001",
-                "text": "Student"
-            },
-            {
-                "id": "default-school-expanded-002",
-                "text": "Classroom"
-            },
-            {
-                "id": "default-school-expanded-003",
-                "text": "Desk"
-            },
-            {
-                "id": "default-school-expanded-004",
-                "text": "Chair"
-            },
-            {
-                "id": "default-school-expanded-005",
-                "text": "Whiteboard"
-            },
-            {
-                "id": "default-school-expanded-006",
-                "text": "Blackboard"
-            },
-            {
-                "id": "default-school-expanded-007",
-                "text": "Chalk"
-            },
-            {
-                "id": "default-school-expanded-008",
-                "text": "Eraser"
-            },
-            {
-                "id": "default-school-expanded-009",
-                "text": "Marker"
-            },
-            {
-                "id": "default-school-expanded-010",
-                "text": "Pen"
-            },
-            {
-                "id": "default-school-expanded-011",
-                "text": "Pencil"
-            },
-            {
-                "id": "default-school-expanded-012",
-                "text": "Notebook"
-            },
-            {
-                "id": "default-school-expanded-013",
-                "text": "Paper"
-            },
-            {
-                "id": "default-school-expanded-014",
-                "text": "Book"
-            },
-            {
-                "id": "default-school-expanded-015",
-                "text": "Textbook"
-            },
-            {
-                "id": "default-school-expanded-016",
-                "text": "Dictionary"
-            },
-            {
-                "id": "default-school-expanded-017",
-                "text": "Encyclopedia"
-            },
-            {
-                "id": "default-school-expanded-018",
-                "text": "Atlas"
-            },
-            {
-                "id": "default-school-expanded-019",
-                "text": "Globe"
-            },
-            {
-                "id": "default-school-expanded-020",
-                "text": "Map"
-            },
-            {
-                "id": "default-school-expanded-021",
-                "text": "Poster"
-            },
-            {
-                "id": "default-school-expanded-022",
-                "text": "Bulletin Board"
-            },
-            {
-                "id": "default-school-expanded-023",
-                "text": "Calendar"
-            },
-            {
-                "id": "default-school-expanded-024",
-                "text": "Clock"
-            },
-            {
-                "id": "default-school-expanded-025",
-                "text": "Bell"
-            },
-            {
-                "id": "default-school-expanded-026",
-                "text": "Locker"
-            },
-            {
-                "id": "default-school-expanded-027",
-                "text": "Hallway"
-            },
-            {
-                "id": "default-school-expanded-028",
-                "text": "Cafeteria"
-            },
-            {
-                "id": "default-school-expanded-029",
-                "text": "Gymnasium"
-            },
-            {
-                "id": "default-school-expanded-030",
-                "text": "Library"
-            },
-            {
-                "id": "default-school-expanded-031",
-                "text": "Auditorium"
-            },
-            {
-                "id": "default-school-expanded-032",
-                "text": "Playground"
-            },
-            {
-                "id": "default-school-expanded-033",
-                "text": "School Bus"
-            },
-            {
-                "id": "default-school-expanded-034",
-                "text": "Principal"
-            },
-            {
-                "id": "default-school-expanded-035",
-                "text": "Vice Principal"
-            },
-            {
-                "id": "default-school-expanded-036",
-                "text": "Counselor"
-            },
-            {
-                "id": "default-school-expanded-037",
-                "text": "Nurse"
-            },
-            {
-                "id": "default-school-expanded-038",
-                "text": "Janitor"
-            },
-            {
-                "id": "default-school-expanded-039",
-                "text": "Secretary"
-            },
-            {
-                "id": "default-school-expanded-040",
-                "text": "Librarian"
-            },
-            {
-                "id": "default-school-expanded-041",
-                "text": "Coach"
-            },
-            {
-                "id": "default-school-expanded-042",
-                "text": "Homework"
-            },
-            {
-                "id": "default-school-expanded-043",
-                "text": "Assignment"
-            },
-            {
-                "id": "default-school-expanded-044",
-                "text": "Project"
-            },
-            {
-                "id": "default-school-expanded-045",
-                "text": "Essay"
-            },
-            {
-                "id": "default-school-expanded-046",
-                "text": "Report"
-            },
-            {
-                "id": "default-school-expanded-047",
-                "text": "Test"
-            },
-            {
-                "id": "default-school-expanded-048",
-                "text": "Exam"
-            },
-            {
-                "id": "default-school-expanded-049",
-                "text": "Quiz"
-            },
-            {
-                "id": "default-school-expanded-050",
-                "text": "Pop Quiz"
-            },
-            {
-                "id": "default-school-expanded-051",
-                "text": "Grade"
-            },
-            {
-                "id": "default-school-expanded-052",
-                "text": "Report Card"
-            },
-            {
-                "id": "default-school-expanded-053",
-                "text": "Transcript"
-            },
-            {
-                "id": "default-school-expanded-054",
-                "text": "Diploma"
-            },
-            {
-                "id": "default-school-expanded-055",
-                "text": "Degree"
-            },
-            {
-                "id": "default-school-expanded-056",
-                "text": "Graduation"
-            },
-            {
-                "id": "default-school-expanded-057",
-                "text": "Ceremony"
-            },
-            {
-                "id": "default-school-expanded-058",
-                "text": "Prom"
-            },
-            {
-                "id": "default-school-expanded-059",
-                "text": "Homecoming"
-            },
-            {
-                "id": "default-school-expanded-060",
-                "text": "Dance"
-            },
-            {
-                "id": "default-school-expanded-061",
-                "text": "Pep Rally"
-            },
-            {
-                "id": "default-school-expanded-062",
-                "text": "Assembly"
-            },
-            {
-                "id": "default-school-expanded-063",
-                "text": "Field Trip"
-            },
-            {
-                "id": "default-school-expanded-064",
-                "text": "Recess"
-            },
-            {
-                "id": "default-school-expanded-065",
-                "text": "Lunch"
-            },
-            {
-                "id": "default-school-expanded-066",
-                "text": "Study Hall"
-            },
-            {
-                "id": "default-school-expanded-067",
-                "text": "Detention"
-            },
-            {
-                "id": "default-school-expanded-068",
-                "text": "Suspension"
-            },
-            {
-                "id": "default-school-expanded-069",
-                "text": "Expulsion"
-            },
-            {
-                "id": "default-school-expanded-070",
-                "text": "Truancy"
-            },
-            {
-                "id": "default-school-expanded-071",
-                "text": "Absence"
-            },
-            {
-                "id": "default-school-expanded-072",
-                "text": "Tardy"
-            },
-            {
-                "id": "default-school-expanded-073",
-                "text": "Attendance"
-            },
-            {
-                "id": "default-school-expanded-074",
-                "text": "Roll Call"
-            },
-            {
-                "id": "default-school-expanded-075",
-                "text": "Schedule"
-            },
-            {
-                "id": "default-school-expanded-076",
-                "text": "Timetable"
-            },
-            {
-                "id": "default-school-expanded-077",
-                "text": "Period"
-            },
-            {
-                "id": "default-school-expanded-078",
-                "text": "Subject"
-            },
-            {
-                "id": "default-school-expanded-079",
-                "text": "Class"
-            },
-            {
-                "id": "default-school-expanded-080",
-                "text": "Course"
-            },
-            {
-                "id": "default-school-expanded-081",
-                "text": "Curriculum"
-            },
-            {
-                "id": "default-school-expanded-082",
-                "text": "Syllabus"
-            },
-            {
-                "id": "default-school-expanded-083",
-                "text": "Lesson"
-            },
-            {
-                "id": "default-school-expanded-084",
-                "text": "Lecture"
-            },
-            {
-                "id": "default-school-expanded-085",
-                "text": "Seminar"
-            },
-            {
-                "id": "default-school-expanded-086",
-                "text": "Workshop"
-            },
-            {
-                "id": "default-school-expanded-087",
-                "text": "Lab"
-            },
-            {
-                "id": "default-school-expanded-088",
-                "text": "Experiment"
-            },
-            {
-                "id": "default-school-expanded-089",
-                "text": "Research"
-            },
-            {
-                "id": "default-school-expanded-090",
-                "text": "Presentation"
-            },
-            {
-                "id": "default-school-expanded-091",
-                "text": "Discussion"
-            },
-            {
-                "id": "default-school-expanded-092",
-                "text": "Debate"
-            },
-            {
-                "id": "default-school-expanded-093",
-                "text": "Group Work"
-            },
-            {
-                "id": "default-school-expanded-094",
-                "text": "Partner"
-            },
-            {
-                "id": "default-school-expanded-095",
-                "text": "Classmate"
-            },
-            {
-                "id": "default-school-expanded-096",
-                "text": "Peer"
-            },
-            {
-                "id": "default-school-expanded-097",
-                "text": "Friend"
-            },
-            {
-                "id": "default-school-expanded-098",
-                "text": "Bully"
-            },
-            {
-                "id": "default-school-expanded-099",
-                "text": "Clique"
-            },
-            {
-                "id": "default-school-expanded-100",
-                "text": "Club"
-            },
-            {
-                "id": "default-school-expanded-101",
-                "text": "Team"
-            },
-            {
-                "id": "default-school-expanded-102",
-                "text": "Sport"
-            },
-            {
-                "id": "default-school-expanded-103",
-                "text": "Band"
-            },
-            {
-                "id": "default-school-expanded-104",
-                "text": "Choir"
-            },
-            {
-                "id": "default-school-expanded-105",
-                "text": "Orchestra"
-            },
-            {
-                "id": "default-school-expanded-106",
-                "text": "Drama"
-            },
-            {
-                "id": "default-school-expanded-107",
-                "text": "Theater"
-            },
-            {
-                "id": "default-school-expanded-108",
-                "text": "Art"
-            },
-            {
-                "id": "default-school-expanded-109",
-                "text": "Music"
-            },
-            {
-                "id": "default-school-expanded-110",
-                "text": "Physical Education"
-            },
-            {
-                "id": "default-school-expanded-111",
-                "text": "Gym"
-            },
-            {
-                "id": "default-school-expanded-112",
-                "text": "Health"
-            },
-            {
-                "id": "default-school-expanded-113",
-                "text": "Math"
-            },
-            {
-                "id": "default-school-expanded-114",
-                "text": "Algebra"
-            },
-            {
-                "id": "default-school-expanded-115",
-                "text": "Geometry"
-            },
-            {
-                "id": "default-school-expanded-116",
-                "text": "Calculus"
-            },
-            {
-                "id": "default-school-expanded-117",
-                "text": "Statistics"
-            },
-            {
-                "id": "default-school-expanded-118",
-                "text": "Science"
-            },
-            {
-                "id": "default-school-expanded-119",
-                "text": "Biology"
-            },
-            {
-                "id": "default-school-expanded-120",
-                "text": "Chemistry"
-            },
-            {
-                "id": "default-school-expanded-121",
-                "text": "Physics"
-            },
-            {
-                "id": "default-school-expanded-122",
-                "text": "Earth Science"
-            },
-            {
-                "id": "default-school-expanded-123",
-                "text": "History"
-            },
-            {
-                "id": "default-school-expanded-124",
-                "text": "Geography"
-            },
-            {
-                "id": "default-school-expanded-125",
-                "text": "Social Studies"
-            },
-            {
-                "id": "default-school-expanded-126",
-                "text": "Civics"
-            },
-            {
-                "id": "default-school-expanded-127",
-                "text": "Government"
-            },
-            {
-                "id": "default-school-expanded-128",
-                "text": "Economics"
-            },
-            {
-                "id": "default-school-expanded-129",
-                "text": "English"
-            },
-            {
-                "id": "default-school-expanded-130",
-                "text": "Literature"
-            },
-            {
-                "id": "default-school-expanded-131",
-                "text": "Grammar"
-            },
-            {
-                "id": "default-school-expanded-132",
-                "text": "Writing"
-            },
-            {
-                "id": "default-school-expanded-133",
-                "text": "Reading"
-            },
-            {
-                "id": "default-school-expanded-134",
-                "text": "Spelling"
-            },
-            {
-                "id": "default-school-expanded-135",
-                "text": "Vocabulary"
-            },
-            {
-                "id": "default-school-expanded-136",
-                "text": "Foreign Language"
-            },
-            {
-                "id": "default-school-expanded-137",
-                "text": "Spanish"
-            },
-            {
-                "id": "default-school-expanded-138",
-                "text": "French"
-            },
-            {
-                "id": "default-school-expanded-139",
-                "text": "German"
-            },
-            {
-                "id": "default-school-expanded-140",
-                "text": "Latin"
-            },
-            {
-                "id": "default-school-expanded-141",
-                "text": "Chinese"
-            },
-            {
-                "id": "default-school-expanded-142",
-                "text": "Japanese"
-            },
-            {
-                "id": "default-school-expanded-143",
-                "text": "Computer Science"
-            },
-            {
-                "id": "default-school-expanded-144",
-                "text": "Coding"
-            },
-            {
-                "id": "default-school-expanded-145",
-                "text": "Programming"
-            },
-            {
-                "id": "default-school-expanded-146",
-                "text": "Typing"
-            },
-            {
-                "id": "default-school-expanded-147",
-                "text": "Home Economics"
-            },
-            {
-                "id": "default-school-expanded-148",
-                "text": "Shop Class"
-            },
-            {
-                "id": "default-school-expanded-149",
-                "text": "Woodworking"
-            },
-            {
-                "id": "default-school-expanded-150",
-                "text": "Metalworking"
-            },
-            {
-                "id": "default-school-expanded-151",
-                "text": "Auto Shop"
-            },
-            {
-                "id": "default-school-expanded-152",
-                "text": "Driver's Ed"
-            },
-            {
-                "id": "default-school-expanded-153",
-                "text": "First Aid"
-            },
-            {
-                "id": "default-school-expanded-154",
-                "text": "CPR"
-            },
-            {
-                "id": "default-school-expanded-155",
-                "text": "Sex Ed"
-            },
-            {
-                "id": "default-school-expanded-156",
-                "text": "Psychology"
-            },
-            {
-                "id": "default-school-expanded-157",
-                "text": "Sociology"
-            },
-            {
-                "id": "default-school-expanded-158",
-                "text": "Philosophy"
-            },
-            {
-                "id": "default-school-expanded-159",
-                "text": "Art History"
-            },
-            {
-                "id": "default-school-expanded-160",
-                "text": "Music Theory"
-            },
-            {
-                "id": "default-school-expanded-161",
-                "text": "Photography"
-            },
-            {
-                "id": "default-school-expanded-162",
-                "text": "Journalism"
-            },
-            {
-                "id": "default-school-expanded-163",
-                "text": "Yearbook"
-            },
-            {
-                "id": "default-school-expanded-164",
-                "text": "Newspaper"
-            },
-            {
-                "id": "default-school-expanded-165",
-                "text": "Student Council"
-            },
-            {
-                "id": "default-school-expanded-166",
-                "text": "Debate Team"
-            },
-            {
-                "id": "default-school-expanded-167",
-                "text": "Mathlete"
-            },
-            {
-                "id": "default-school-expanded-168",
-                "text": "Science Olympiad"
-            },
-            {
-                "id": "default-school-expanded-169",
-                "text": "Spelling Bee"
-            },
-            {
-                "id": "default-school-expanded-170",
-                "text": "Science Fair"
-            },
-            {
-                "id": "default-school-expanded-171",
-                "text": "Talent Show"
-            },
-            {
-                "id": "default-school-expanded-172",
-                "text": "School Play"
-            },
-            {
-                "id": "default-school-expanded-173",
-                "text": "Musical"
-            },
-            {
-                "id": "default-school-expanded-174",
-                "text": "Concert"
-            },
-            {
-                "id": "default-school-expanded-175",
-                "text": "Recital"
-            },
-            {
-                "id": "default-school-expanded-176",
-                "text": "Exhibition"
-            },
-            {
-                "id": "default-school-expanded-177",
-                "text": "Tournament"
-            },
-            {
-                "id": "default-school-expanded-178",
-                "text": "Championship"
-            },
-            {
-                "id": "default-school-expanded-179",
-                "text": "Trophy"
-            },
-            {
-                "id": "default-school-expanded-180",
-                "text": "Medal"
-            },
-            {
-                "id": "default-school-expanded-181",
-                "text": "Ribbon"
-            },
-            {
-                "id": "default-school-expanded-182",
-                "text": "Certificate"
-            },
-            {
-                "id": "default-school-expanded-183",
-                "text": "Award"
-            },
-            {
-                "id": "default-school-expanded-184",
-                "text": "Scholarship"
-            },
-            {
-                "id": "default-school-expanded-185",
-                "text": "Grant"
-            },
-            {
-                "id": "default-school-expanded-186",
-                "text": "Loan"
-            },
-            {
-                "id": "default-school-expanded-187",
-                "text": "Tuition"
-            },
-            {
-                "id": "default-school-expanded-188",
-                "text": "Fee"
-            },
-            {
-                "id": "default-school-expanded-189",
-                "text": "Donation"
-            },
-            {
-                "id": "default-school-expanded-190",
-                "text": "Fundraiser"
-            },
-            {
-                "id": "default-school-expanded-191",
-                "text": "Bake Sale"
-            },
-            {
-                "id": "default-school-expanded-192",
-                "text": "Car Wash"
-            },
-            {
-                "id": "default-school-expanded-193",
-                "text": "Raffle"
-            },
-            {
-                "id": "default-school-expanded-194",
-                "text": "Auction"
-            },
-            {
-                "id": "default-school-expanded-195",
-                "text": "Carnival"
-            },
-            {
-                "id": "default-school-expanded-196",
-                "text": "Festival"
-            },
-            {
-                "id": "default-school-expanded-197",
-                "text": "Fair"
-            },
-            {
-                "id": "default-school-expanded-198",
-                "text": "Parade"
-            },
-            {
-                "id": "default-school-expanded-199",
-                "text": "Spirit Week"
-            },
-            {
-                "id": "default-school-expanded-200",
-                "text": "Pajama Day"
-            },
-            {
-                "id": "default-school-expanded-201",
-                "text": "Crazy Hair Day"
-            },
-            {
-                "id": "default-school-expanded-202",
-                "text": "Twin Day"
-            },
-            {
-                "id": "default-school-expanded-203",
-                "text": "Decades Day"
-            },
-            {
-                "id": "default-school-expanded-204",
-                "text": "Color War"
-            },
-            {
-                "id": "default-school-expanded-205",
-                "text": "Field Day"
-            },
-            {
-                "id": "default-school-expanded-206",
-                "text": "Sports Day"
-            },
-            {
-                "id": "default-school-expanded-207",
-                "text": "Olympics"
-            },
-            {
-                "id": "default-school-expanded-208",
-                "text": "Triathlon"
-            },
-            {
-                "id": "default-school-expanded-209",
-                "text": "Marathon"
-            },
-            {
-                "id": "default-school-expanded-210",
-                "text": "Fun Run"
-            },
-            {
-                "id": "default-school-expanded-211",
-                "text": "Walkathon"
-            },
-            {
-                "id": "default-school-expanded-212",
-                "text": "Readathon"
-            },
-            {
-                "id": "default-school-expanded-213",
-                "text": "Spellathon"
-            },
-            {
-                "id": "default-school-expanded-214",
-                "text": "Mathathon"
-            },
-            {
-                "id": "default-school-expanded-215",
-                "text": "Hackathon"
-            },
-            {
-                "id": "default-school-expanded-216",
-                "text": "Game Jam"
-            },
-            {
-                "id": "default-school-extra-217",
-                "text": "Preschool"
-            },
-            {
-                "id": "default-school-extra-218",
-                "text": "Kindergarten"
-            },
-            {
-                "id": "default-school-extra-219",
-                "text": "Elementary School"
-            },
-            {
-                "id": "default-school-extra-220",
-                "text": "Middle School"
-            },
-            {
-                "id": "default-school-extra-221",
-                "text": "Junior High"
-            },
-            {
-                "id": "default-school-extra-222",
-                "text": "High School"
-            },
-            {
-                "id": "default-school-extra-223",
-                "text": "College"
-            },
-            {
-                "id": "default-school-extra-224",
-                "text": "University"
-            },
-            {
-                "id": "default-school-extra-225",
-                "text": "Graduate School"
-            },
-            {
-                "id": "default-school-extra-226",
-                "text": "Vocational School"
-            },
-            {
-                "id": "default-school-extra-227",
-                "text": "Trade School"
-            },
-            {
-                "id": "default-school-extra-228",
-                "text": "Art School"
-            },
-            {
-                "id": "default-school-extra-229",
-                "text": "Music School"
-            },
-            {
-                "id": "default-school-extra-230",
-                "text": "Culinary School"
-            },
-            {
-                "id": "default-school-extra-231",
-                "text": "Law School"
-            },
-            {
-                "id": "default-school-extra-232",
-                "text": "Medical School"
-            },
-            {
-                "id": "default-school-extra-233",
-                "text": "Business School"
-            },
-            {
-                "id": "default-school-extra-234",
-                "text": "Engineering School"
-            },
-            {
-                "id": "default-school-extra-235",
-                "text": "Architecture School"
-            },
-            {
-                "id": "default-school-extra-236",
-                "text": "Nursing School"
-            },
-            {
-                "id": "default-school-extra-237",
-                "text": "Education School"
-            },
-            {
-                "id": "default-school-extra-238",
-                "text": "Theology School"
-            },
-            {
-                "id": "default-school-extra-239",
-                "text": "Seminary"
-            },
-            {
-                "id": "default-school-extra-240",
-                "text": "Conservatory"
-            },
-            {
-                "id": "default-school-extra-241",
-                "text": "Academy"
-            },
-            {
-                "id": "default-school-extra-242",
-                "text": "Institute"
-            },
-            {
-                "id": "default-school-extra-243",
-                "text": "Charter School"
-            },
-            {
-                "id": "default-school-extra-244",
-                "text": "Magnet School"
-            },
-            {
-                "id": "default-school-extra-245",
-                "text": "Private School"
-            },
-            {
-                "id": "default-school-extra-246",
-                "text": "Public School"
-            },
-            {
-                "id": "default-school-extra-247",
-                "text": "Boarding School"
-            },
-            {
-                "id": "default-school-extra-248",
-                "text": "Day School"
-            },
-            {
-                "id": "default-school-extra-249",
-                "text": "Parochial School"
-            }
+            {"id": "default-school-expanded-000", "text": "Teacher"},
+            {"id": "default-school-expanded-001", "text": "Student"},
+            {"id": "default-school-expanded-002", "text": "Classroom"},
+            {"id": "default-school-expanded-003", "text": "Desk"},
+            {"id": "default-school-expanded-004", "text": "Chair"},
+            {"id": "default-school-expanded-005", "text": "Whiteboard"},
+            {"id": "default-school-expanded-006", "text": "Blackboard"},
+            {"id": "default-school-expanded-007", "text": "Chalk"},
+            {"id": "default-school-expanded-008", "text": "Eraser"},
+            {"id": "default-school-expanded-009", "text": "Marker"},
+            {"id": "default-school-expanded-010", "text": "Pen"},
+            {"id": "default-school-expanded-011", "text": "Pencil"},
+            {"id": "default-school-expanded-012", "text": "Notebook"},
+            {"id": "default-school-expanded-013", "text": "Paper"},
+            {"id": "default-school-expanded-014", "text": "Book"},
+            {"id": "default-school-expanded-015", "text": "Textbook"},
+            {"id": "default-school-expanded-016", "text": "Dictionary"},
+            {"id": "default-school-expanded-017", "text": "Encyclopedia"},
+            {"id": "default-school-expanded-018", "text": "Atlas"},
+            {"id": "default-school-expanded-019", "text": "Globe"},
+            {"id": "default-school-expanded-020", "text": "Map"},
+            {"id": "default-school-expanded-021", "text": "Poster"},
+            {"id": "default-school-expanded-022", "text": "Bulletin Board"},
+            {"id": "default-school-expanded-023", "text": "Calendar"},
+            {"id": "default-school-expanded-024", "text": "Clock"},
+            {"id": "default-school-expanded-025", "text": "Bell"},
+            {"id": "default-school-expanded-026", "text": "Locker"},
+            {"id": "default-school-expanded-027", "text": "Hallway"},
+            {"id": "default-school-expanded-028", "text": "Cafeteria"},
+            {"id": "default-school-expanded-029", "text": "Gymnasium"},
+            {"id": "default-school-expanded-030", "text": "Library"},
+            {"id": "default-school-expanded-031", "text": "Auditorium"},
+            {"id": "default-school-expanded-032", "text": "Playground"},
+            {"id": "default-school-expanded-033", "text": "School Bus"},
+            {"id": "default-school-expanded-034", "text": "Principal"},
+            {"id": "default-school-expanded-035", "text": "Vice Principal"},
+            {"id": "default-school-expanded-036", "text": "Counselor"},
+            {"id": "default-school-expanded-037", "text": "Nurse"},
+            {"id": "default-school-expanded-038", "text": "Janitor"},
+            {"id": "default-school-expanded-039", "text": "Secretary"},
+            {"id": "default-school-expanded-040", "text": "Librarian"},
+            {"id": "default-school-expanded-041", "text": "Coach"},
+            {"id": "default-school-expanded-042", "text": "Homework"},
+            {"id": "default-school-expanded-043", "text": "Assignment"},
+            {"id": "default-school-expanded-044", "text": "Project"},
+            {"id": "default-school-expanded-045", "text": "Essay"},
+            {"id": "default-school-expanded-046", "text": "Report"},
+            {"id": "default-school-expanded-047", "text": "Test"},
+            {"id": "default-school-expanded-048", "text": "Exam"},
+            {"id": "default-school-expanded-049", "text": "Quiz"},
+            {"id": "default-school-expanded-050", "text": "Pop Quiz"},
+            {"id": "default-school-expanded-051", "text": "Grade"},
+            {"id": "default-school-expanded-052", "text": "Report Card"},
+            {"id": "default-school-expanded-053", "text": "Transcript"},
+            {"id": "default-school-expanded-054", "text": "Diploma"},
+            {"id": "default-school-expanded-055", "text": "Degree"},
+            {"id": "default-school-expanded-056", "text": "Graduation"},
+            {"id": "default-school-expanded-057", "text": "Ceremony"},
+            {"id": "default-school-expanded-058", "text": "Prom"},
+            {"id": "default-school-expanded-059", "text": "Homecoming"},
+            {"id": "default-school-expanded-060", "text": "Dance"},
+            {"id": "default-school-expanded-061", "text": "Pep Rally"},
+            {"id": "default-school-expanded-062", "text": "Assembly"},
+            {"id": "default-school-expanded-063", "text": "Field Trip"},
+            {"id": "default-school-expanded-064", "text": "Recess"},
+            {"id": "default-school-expanded-065", "text": "Lunch"},
+            {"id": "default-school-expanded-066", "text": "Study Hall"},
+            {"id": "default-school-expanded-067", "text": "Detention"},
+            {"id": "default-school-expanded-068", "text": "Suspension"},
+            {"id": "default-school-expanded-069", "text": "Expulsion"},
+            {"id": "default-school-expanded-070", "text": "Truancy"},
+            {"id": "default-school-expanded-071", "text": "Absence"},
+            {"id": "default-school-expanded-072", "text": "Tardy"},
+            {"id": "default-school-expanded-073", "text": "Attendance"},
+            {"id": "default-school-expanded-074", "text": "Roll Call"},
+            {"id": "default-school-expanded-075", "text": "Schedule"},
+            {"id": "default-school-expanded-076", "text": "Timetable"},
+            {"id": "default-school-expanded-077", "text": "Period"},
+            {"id": "default-school-expanded-078", "text": "Subject"},
+            {"id": "default-school-expanded-079", "text": "Class"},
+            {"id": "default-school-expanded-080", "text": "Course"},
+            {"id": "default-school-expanded-081", "text": "Curriculum"},
+            {"id": "default-school-expanded-082", "text": "Syllabus"},
+            {"id": "default-school-expanded-083", "text": "Lesson"},
+            {"id": "default-school-expanded-084", "text": "Lecture"},
+            {"id": "default-school-expanded-085", "text": "Seminar"},
+            {"id": "default-school-expanded-086", "text": "Workshop"},
+            {"id": "default-school-expanded-087", "text": "Lab"},
+            {"id": "default-school-expanded-088", "text": "Experiment"},
+            {"id": "default-school-expanded-089", "text": "Research"},
+            {"id": "default-school-expanded-090", "text": "Presentation"},
+            {"id": "default-school-expanded-091", "text": "Discussion"},
+            {"id": "default-school-expanded-092", "text": "Debate"},
+            {"id": "default-school-expanded-093", "text": "Group Work"},
+            {"id": "default-school-expanded-094", "text": "Partner"},
+            {"id": "default-school-expanded-095", "text": "Classmate"},
+            {"id": "default-school-expanded-096", "text": "Peer"},
+            {"id": "default-school-expanded-097", "text": "Friend"},
+            {"id": "default-school-expanded-098", "text": "Bully"},
+            {"id": "default-school-expanded-099", "text": "Clique"},
+            {"id": "default-school-expanded-100", "text": "Club"},
+            {"id": "default-school-expanded-101", "text": "Team"},
+            {"id": "default-school-expanded-102", "text": "Sport"},
+            {"id": "default-school-expanded-103", "text": "Band"},
+            {"id": "default-school-expanded-104", "text": "Choir"},
+            {"id": "default-school-expanded-105", "text": "Orchestra"},
+            {"id": "default-school-expanded-106", "text": "Drama"},
+            {"id": "default-school-expanded-107", "text": "Theater"},
+            {"id": "default-school-expanded-108", "text": "Art"},
+            {"id": "default-school-expanded-109", "text": "Music"},
+            {"id": "default-school-expanded-110", "text": "Physical Education"},
+            {"id": "default-school-expanded-111", "text": "Gym"},
+            {"id": "default-school-expanded-112", "text": "Health"},
+            {"id": "default-school-expanded-113", "text": "Math"},
+            {"id": "default-school-expanded-114", "text": "Algebra"},
+            {"id": "default-school-expanded-115", "text": "Geometry"},
+            {"id": "default-school-expanded-116", "text": "Calculus"},
+            {"id": "default-school-expanded-117", "text": "Statistics"},
+            {"id": "default-school-expanded-118", "text": "Science"},
+            {"id": "default-school-expanded-119", "text": "Biology"},
+            {"id": "default-school-expanded-120", "text": "Chemistry"},
+            {"id": "default-school-expanded-121", "text": "Physics"},
+            {"id": "default-school-expanded-122", "text": "Earth Science"},
+            {"id": "default-school-expanded-123", "text": "History"},
+            {"id": "default-school-expanded-124", "text": "Geography"},
+            {"id": "default-school-expanded-125", "text": "Social Studies"},
+            {"id": "default-school-expanded-126", "text": "Civics"},
+            {"id": "default-school-expanded-127", "text": "Government"},
+            {"id": "default-school-expanded-128", "text": "Economics"},
+            {"id": "default-school-expanded-129", "text": "English"},
+            {"id": "default-school-expanded-130", "text": "Literature"},
+            {"id": "default-school-expanded-131", "text": "Grammar"},
+            {"id": "default-school-expanded-132", "text": "Writing"},
+            {"id": "default-school-expanded-133", "text": "Reading"},
+            {"id": "default-school-expanded-134", "text": "Spelling"},
+            {"id": "default-school-expanded-135", "text": "Vocabulary"},
+            {"id": "default-school-expanded-136", "text": "Foreign Language"},
+            {"id": "default-school-expanded-137", "text": "Spanish"},
+            {"id": "default-school-expanded-138", "text": "French"},
+            {"id": "default-school-expanded-139", "text": "German"},
+            {"id": "default-school-expanded-140", "text": "Latin"},
+            {"id": "default-school-expanded-141", "text": "Chinese"},
+            {"id": "default-school-expanded-142", "text": "Japanese"},
+            {"id": "default-school-expanded-143", "text": "Computer Science"},
+            {"id": "default-school-expanded-144", "text": "Coding"},
+            {"id": "default-school-expanded-145", "text": "Programming"},
+            {"id": "default-school-expanded-146", "text": "Typing"},
+            {"id": "default-school-expanded-147", "text": "Home Economics"},
+            {"id": "default-school-expanded-148", "text": "Shop Class"},
+            {"id": "default-school-expanded-149", "text": "Woodworking"},
+            {"id": "default-school-expanded-150", "text": "Metalworking"},
+            {"id": "default-school-expanded-151", "text": "Auto Shop"},
+            {"id": "default-school-expanded-152", "text": "Driver's Ed"},
+            {"id": "default-school-expanded-153", "text": "First Aid"},
+            {"id": "default-school-expanded-154", "text": "CPR"},
+            {"id": "default-school-expanded-155", "text": "Sex Ed"},
+            {"id": "default-school-expanded-156", "text": "Psychology"},
+            {"id": "default-school-expanded-157", "text": "Sociology"},
+            {"id": "default-school-expanded-158", "text": "Philosophy"},
+            {"id": "default-school-expanded-159", "text": "Art History"},
+            {"id": "default-school-expanded-160", "text": "Music Theory"},
+            {"id": "default-school-expanded-161", "text": "Photography"},
+            {"id": "default-school-expanded-162", "text": "Journalism"},
+            {"id": "default-school-expanded-163", "text": "Yearbook"},
+            {"id": "default-school-expanded-164", "text": "Newspaper"},
+            {"id": "default-school-expanded-165", "text": "Student Council"},
+            {"id": "default-school-expanded-166", "text": "Debate Team"},
+            {"id": "default-school-expanded-167", "text": "Mathlete"},
+            {"id": "default-school-expanded-168", "text": "Science Olympiad"},
+            {"id": "default-school-expanded-169", "text": "Spelling Bee"},
+            {"id": "default-school-expanded-170", "text": "Science Fair"},
+            {"id": "default-school-expanded-171", "text": "Talent Show"},
+            {"id": "default-school-expanded-172", "text": "School Play"},
+            {"id": "default-school-expanded-173", "text": "Musical"},
+            {"id": "default-school-expanded-174", "text": "Concert"},
+            {"id": "default-school-expanded-175", "text": "Recital"},
+            {"id": "default-school-expanded-176", "text": "Exhibition"},
+            {"id": "default-school-expanded-177", "text": "Tournament"},
+            {"id": "default-school-expanded-178", "text": "Championship"},
+            {"id": "default-school-expanded-179", "text": "Trophy"},
+            {"id": "default-school-expanded-180", "text": "Medal"},
+            {"id": "default-school-expanded-181", "text": "Ribbon"},
+            {"id": "default-school-expanded-182", "text": "Certificate"},
+            {"id": "default-school-expanded-183", "text": "Award"},
+            {"id": "default-school-expanded-184", "text": "Scholarship"},
+            {"id": "default-school-expanded-185", "text": "Grant"},
+            {"id": "default-school-expanded-186", "text": "Loan"},
+            {"id": "default-school-expanded-187", "text": "Tuition"},
+            {"id": "default-school-expanded-188", "text": "Fee"},
+            {"id": "default-school-expanded-189", "text": "Donation"},
+            {"id": "default-school-expanded-190", "text": "Fundraiser"},
+            {"id": "default-school-expanded-191", "text": "Bake Sale"},
+            {"id": "default-school-expanded-192", "text": "Car Wash"},
+            {"id": "default-school-expanded-193", "text": "Raffle"},
+            {"id": "default-school-expanded-194", "text": "Auction"},
+            {"id": "default-school-expanded-195", "text": "Carnival"},
+            {"id": "default-school-expanded-196", "text": "Festival"},
+            {"id": "default-school-expanded-197", "text": "Fair"},
+            {"id": "default-school-expanded-198", "text": "Parade"},
+            {"id": "default-school-expanded-199", "text": "Spirit Week"},
+            {"id": "default-school-expanded-200", "text": "Pajama Day"},
+            {"id": "default-school-expanded-201", "text": "Crazy Hair Day"},
+            {"id": "default-school-expanded-202", "text": "Twin Day"},
+            {"id": "default-school-expanded-203", "text": "Decades Day"},
+            {"id": "default-school-expanded-204", "text": "Color War"},
+            {"id": "default-school-expanded-205", "text": "Field Day"},
+            {"id": "default-school-expanded-206", "text": "Sports Day"},
+            {"id": "default-school-expanded-207", "text": "Olympics"},
+            {"id": "default-school-expanded-208", "text": "Triathlon"},
+            {"id": "default-school-expanded-209", "text": "Marathon"},
+            {"id": "default-school-expanded-210", "text": "Fun Run"},
+            {"id": "default-school-expanded-211", "text": "Walkathon"},
+            {"id": "default-school-expanded-212", "text": "Readathon"},
+            {"id": "default-school-expanded-213", "text": "Spellathon"},
+            {"id": "default-school-expanded-214", "text": "Mathathon"},
+            {"id": "default-school-expanded-215", "text": "Hackathon"},
+            {"id": "default-school-expanded-216", "text": "Game Jam"},
+            {"id": "default-school-extra-217", "text": "Preschool"},
+            {"id": "default-school-extra-218", "text": "Kindergarten"},
+            {"id": "default-school-extra-219", "text": "Elementary School"},
+            {"id": "default-school-extra-220", "text": "Middle School"},
+            {"id": "default-school-extra-221", "text": "Junior High"},
+            {"id": "default-school-extra-222", "text": "High School"},
+            {"id": "default-school-extra-223", "text": "College"},
+            {"id": "default-school-extra-224", "text": "University"},
+            {"id": "default-school-extra-225", "text": "Graduate School"},
+            {"id": "default-school-extra-226", "text": "Vocational School"},
+            {"id": "default-school-extra-227", "text": "Trade School"},
+            {"id": "default-school-extra-228", "text": "Art School"},
+            {"id": "default-school-extra-229", "text": "Music School"},
+            {"id": "default-school-extra-230", "text": "Culinary School"},
+            {"id": "default-school-extra-231", "text": "Law School"},
+            {"id": "default-school-extra-232", "text": "Medical School"},
+            {"id": "default-school-extra-233", "text": "Business School"},
+            {"id": "default-school-extra-234", "text": "Engineering School"},
+            {"id": "default-school-extra-235", "text": "Architecture School"},
+            {"id": "default-school-extra-236", "text": "Nursing School"},
+            {"id": "default-school-extra-237", "text": "Education School"},
+            {"id": "default-school-extra-238", "text": "Theology School"},
+            {"id": "default-school-extra-239", "text": "Seminary"},
+            {"id": "default-school-extra-240", "text": "Conservatory"},
+            {"id": "default-school-extra-241", "text": "Academy"},
+            {"id": "default-school-extra-242", "text": "Institute"},
+            {"id": "default-school-extra-243", "text": "Charter School"},
+            {"id": "default-school-extra-244", "text": "Magnet School"},
+            {"id": "default-school-extra-245", "text": "Private School"},
+            {"id": "default-school-extra-246", "text": "Public School"},
+            {"id": "default-school-extra-247", "text": "Boarding School"},
+            {"id": "default-school-extra-248", "text": "Day School"},
+            {"id": "default-school-extra-249", "text": "Parochial School"}
         ],
         "type": "default",
         "color": "gray",

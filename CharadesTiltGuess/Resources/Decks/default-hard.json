@@ -4,1006 +4,256 @@
         "name": "Hard",
         "description": "Complex concepts for brave guessers.",
         "cards": [
-            {
-                "id": "default-hard-expanded-000",
-                "text": "Quixotic"
-            },
-            {
-                "id": "default-hard-expanded-001",
-                "text": "Ephemeral"
-            },
-            {
-                "id": "default-hard-expanded-002",
-                "text": "Serendipity"
-            },
-            {
-                "id": "default-hard-expanded-003",
-                "text": "Obfuscate"
-            },
-            {
-                "id": "default-hard-expanded-004",
-                "text": "Syzygy"
-            },
-            {
-                "id": "default-hard-expanded-005",
-                "text": "Lugubrious"
-            },
-            {
-                "id": "default-hard-expanded-006",
-                "text": "Cacophony"
-            },
-            {
-                "id": "default-hard-expanded-007",
-                "text": "Mellifluous"
-            },
-            {
-                "id": "default-hard-expanded-008",
-                "text": "Defenestration"
-            },
-            {
-                "id": "default-hard-expanded-009",
-                "text": "Ennui"
-            },
-            {
-                "id": "default-hard-expanded-010",
-                "text": "Schadenfreude"
-            },
-            {
-                "id": "default-hard-expanded-011",
-                "text": "Petrichor"
-            },
-            {
-                "id": "default-hard-expanded-012",
-                "text": "Lethologica"
-            },
-            {
-                "id": "default-hard-expanded-013",
-                "text": "Apophenia"
-            },
-            {
-                "id": "default-hard-expanded-014",
-                "text": "Pareidolia"
-            },
-            {
-                "id": "default-hard-expanded-015",
-                "text": "Sonder"
-            },
-            {
-                "id": "default-hard-expanded-016",
-                "text": "Vellichor"
-            },
-            {
-                "id": "default-hard-expanded-017",
-                "text": "Rubatosis"
-            },
-            {
-                "id": "default-hard-expanded-018",
-                "text": "Kenopsia"
-            },
-            {
-                "id": "default-hard-expanded-019",
-                "text": "Jouska"
-            },
-            {
-                "id": "default-hard-expanded-020",
-                "text": "Chrysalism"
-            },
-            {
-                "id": "default-hard-expanded-021",
-                "text": "Anecdoche"
-            },
-            {
-                "id": "default-hard-expanded-022",
-                "text": "Ellipsism"
-            },
-            {
-                "id": "default-hard-expanded-023",
-                "text": "Kuebiko"
-            },
-            {
-                "id": "default-hard-expanded-024",
-                "text": "Lachesism"
-            },
-            {
-                "id": "default-hard-expanded-025",
-                "text": "Exulansis"
-            },
-            {
-                "id": "default-hard-expanded-026",
-                "text": "Adronitis"
-            },
-            {
-                "id": "default-hard-expanded-027",
-                "text": "Ruckkehrunruhe"
-            },
-            {
-                "id": "default-hard-expanded-028",
-                "text": "Monachopsis"
-            },
-            {
-                "id": "default-hard-expanded-029",
-                "text": "Occhiolism"
-            },
-            {
-                "id": "default-hard-expanded-030",
-                "text": "Silience"
-            },
-            {
-                "id": "default-hard-expanded-031",
-                "text": "Ilinx"
-            },
-            {
-                "id": "default-hard-expanded-032",
-                "text": "Zenosyne"
-            },
-            {
-                "id": "default-hard-expanded-033",
-                "text": "Opia"
-            },
-            {
-                "id": "default-hard-expanded-034",
-                "text": "Altschmerz"
-            },
-            {
-                "id": "default-hard-expanded-035",
-                "text": "Anemoia"
-            },
-            {
-                "id": "default-hard-expanded-036",
-                "text": "Onism"
-            },
-            {
-                "id": "default-hard-expanded-037",
-                "text": "Liberosis"
-            },
-            {
-                "id": "default-hard-expanded-038",
-                "text": "Nodus Tollens"
-            },
-            {
-                "id": "default-hard-expanded-039",
-                "text": "Ambedo"
-            },
-            {
-                "id": "default-hard-expanded-040",
-                "text": "Klexos"
-            },
-            {
-                "id": "default-hard-expanded-041",
-                "text": "L'appel du vide"
-            },
-            {
-                "id": "default-hard-expanded-042",
-                "text": "Deja vu"
-            },
-            {
-                "id": "default-hard-expanded-043",
-                "text": "Jamais vu"
-            },
-            {
-                "id": "default-hard-expanded-044",
-                "text": "Presque vu"
-            },
-            {
-                "id": "default-hard-expanded-045",
-                "text": "Esprit de l'escalier"
-            },
-            {
-                "id": "default-hard-expanded-046",
-                "text": "Treppenwitz"
-            },
-            {
-                "id": "default-hard-expanded-047",
-                "text": "Torschlusspanik"
-            },
-            {
-                "id": "default-hard-expanded-048",
-                "text": "Fernweh"
-            },
-            {
-                "id": "default-hard-expanded-049",
-                "text": "Wanderlust"
-            },
-            {
-                "id": "default-hard-expanded-050",
-                "text": "Sehnsucht"
-            },
-            {
-                "id": "default-hard-expanded-051",
-                "text": "Weltschmerz"
-            },
-            {
-                "id": "default-hard-expanded-052",
-                "text": "Waldeinsamkeit"
-            },
-            {
-                "id": "default-hard-expanded-053",
-                "text": "Gemutlichkeit"
-            },
-            {
-                "id": "default-hard-expanded-054",
-                "text": "Hygge"
-            },
-            {
-                "id": "default-hard-expanded-055",
-                "text": "Lagom"
-            },
-            {
-                "id": "default-hard-expanded-056",
-                "text": "Ikigai"
-            },
-            {
-                "id": "default-hard-expanded-057",
-                "text": "Tsundoku"
-            },
-            {
-                "id": "default-hard-expanded-058",
-                "text": "Komorebi"
-            },
-            {
-                "id": "default-hard-expanded-059",
-                "text": "Wabi-sabi"
-            },
-            {
-                "id": "default-hard-expanded-060",
-                "text": "Yugen"
-            },
-            {
-                "id": "default-hard-expanded-061",
-                "text": "Mono no aware"
-            },
-            {
-                "id": "default-hard-expanded-062",
-                "text": "Koi No Yokan"
-            },
-            {
-                "id": "default-hard-expanded-063",
-                "text": "Boketto"
-            },
-            {
-                "id": "default-hard-expanded-064",
-                "text": "Shinrin-yoku"
-            },
-            {
-                "id": "default-hard-expanded-065",
-                "text": "Ukiyo"
-            },
-            {
-                "id": "default-hard-expanded-066",
-                "text": "Age-otori"
-            },
-            {
-                "id": "default-hard-expanded-067",
-                "text": "Arigata-meiwaku"
-            },
-            {
-                "id": "default-hard-expanded-068",
-                "text": "Bakkushan"
-            },
-            {
-                "id": "default-hard-expanded-069",
-                "text": "Kuidaore"
-            },
-            {
-                "id": "default-hard-expanded-070",
-                "text": "Kintsugi"
-            },
-            {
-                "id": "default-hard-expanded-071",
-                "text": "Meraki"
-            },
-            {
-                "id": "default-hard-expanded-072",
-                "text": "Philotimo"
-            },
-            {
-                "id": "default-hard-expanded-073",
-                "text": "Saudade"
-            },
-            {
-                "id": "default-hard-expanded-074",
-                "text": "Desenrascan\u00e7o"
-            },
-            {
-                "id": "default-hard-expanded-075",
-                "text": "Cafun\u00e9"
-            },
-            {
-                "id": "default-hard-expanded-076",
-                "text": "Sobremesa"
-            },
-            {
-                "id": "default-hard-expanded-077",
-                "text": "Estrenar"
-            },
-            {
-                "id": "default-hard-expanded-078",
-                "text": "Madrugada"
-            },
-            {
-                "id": "default-hard-expanded-079",
-                "text": "Desvelado"
-            },
-            {
-                "id": "default-hard-expanded-080",
-                "text": "Friolero"
-            },
-            {
-                "id": "default-hard-expanded-081",
-                "text": "Te Quiero"
-            },
-            {
-                "id": "default-hard-expanded-082",
-                "text": "Te Amo"
-            },
-            {
-                "id": "default-hard-expanded-083",
-                "text": "Gezellig"
-            },
-            {
-                "id": "default-hard-expanded-084",
-                "text": "Uitwaaien"
-            },
-            {
-                "id": "default-hard-expanded-085",
-                "text": "Gedogen"
-            },
-            {
-                "id": "default-hard-expanded-086",
-                "text": "Polderen"
-            },
-            {
-                "id": "default-hard-expanded-087",
-                "text": "Sisu"
-            },
-            {
-                "id": "default-hard-expanded-088",
-                "text": "Kalsarikannit"
-            },
-            {
-                "id": "default-hard-expanded-089",
-                "text": "Toska"
-            },
-            {
-                "id": "default-hard-expanded-090",
-                "text": "Poshlost"
-            },
-            {
-                "id": "default-hard-expanded-091",
-                "text": "Razliubit"
-            },
-            {
-                "id": "default-hard-expanded-092",
-                "text": "Yurodivy"
-            },
-            {
-                "id": "default-hard-expanded-093",
-                "text": "Gluckschmerz"
-            },
-            {
-                "id": "default-hard-expanded-094",
-                "text": "Fremdschamen"
-            },
-            {
-                "id": "default-hard-expanded-095",
-                "text": "Backpfeifengesicht"
-            },
-            {
-                "id": "default-hard-expanded-096",
-                "text": "Schwarmerei"
-            },
-            {
-                "id": "default-hard-expanded-097",
-                "text": "Verschlimmbessern"
-            },
-            {
-                "id": "default-hard-expanded-098",
-                "text": "Kummerspeck"
-            },
-            {
-                "id": "default-hard-expanded-099",
-                "text": "Schnapsidee"
-            },
-            {
-                "id": "default-hard-expanded-102",
-                "text": "Zeitgeist"
-            },
-            {
-                "id": "default-hard-expanded-103",
-                "text": "Doppelganger"
-            },
-            {
-                "id": "default-hard-expanded-106",
-                "text": "Angst"
-            },
-            {
-                "id": "default-hard-expanded-107",
-                "text": "Kindergarten"
-            },
-            {
-                "id": "default-hard-expanded-108",
-                "text": "Poltergeist"
-            },
-            {
-                "id": "default-hard-expanded-109",
-                "text": "Rucksack"
-            },
-            {
-                "id": "default-hard-expanded-110",
-                "text": "Delicatessen"
-            },
-            {
-                "id": "default-hard-expanded-111",
-                "text": "Pretzel"
-            },
-            {
-                "id": "default-hard-expanded-112",
-                "text": "Bratwurst"
-            },
-            {
-                "id": "default-hard-expanded-113",
-                "text": "Sauerkraut"
-            },
-            {
-                "id": "default-hard-expanded-114",
-                "text": "Schnitzel"
-            },
-            {
-                "id": "default-hard-expanded-115",
-                "text": "Strudel"
-            },
-            {
-                "id": "default-hard-expanded-116",
-                "text": "Gummy Bear"
-            },
-            {
-                "id": "default-hard-expanded-117",
-                "text": "Hamburger"
-            },
-            {
-                "id": "default-hard-expanded-118",
-                "text": "Frankfurter"
-            },
-            {
-                "id": "default-hard-expanded-119",
-                "text": "Wiener"
-            },
-            {
-                "id": "default-hard-expanded-120",
-                "text": "Poodle"
-            },
-            {
-                "id": "default-hard-expanded-121",
-                "text": "Dachshund"
-            },
-            {
-                "id": "default-hard-expanded-122",
-                "text": "Rottweiler"
-            },
-            {
-                "id": "default-hard-expanded-123",
-                "text": "Schnauzer"
-            },
-            {
-                "id": "default-hard-expanded-124",
-                "text": "Doberman"
-            },
-            {
-                "id": "default-hard-expanded-125",
-                "text": "Pinscher"
-            },
-            {
-                "id": "default-hard-expanded-126",
-                "text": "Spitz"
-            },
-            {
-                "id": "default-hard-expanded-127",
-                "text": "Husky"
-            },
-            {
-                "id": "default-hard-expanded-128",
-                "text": "Malamute"
-            },
-            {
-                "id": "default-hard-expanded-129",
-                "text": "Samoyed"
-            },
-            {
-                "id": "default-hard-expanded-130",
-                "text": "Chow Chow"
-            },
-            {
-                "id": "default-hard-expanded-131",
-                "text": "Akita"
-            },
-            {
-                "id": "default-hard-expanded-132",
-                "text": "Shiba Inu"
-            },
-            {
-                "id": "default-hard-expanded-133",
-                "text": "Pug"
-            },
-            {
-                "id": "default-hard-expanded-134",
-                "text": "Bulldog"
-            },
-            {
-                "id": "default-hard-expanded-135",
-                "text": "Mastiff"
-            },
-            {
-                "id": "default-hard-expanded-136",
-                "text": "Boxer"
-            },
-            {
-                "id": "default-hard-expanded-137",
-                "text": "Great Dane"
-            },
-            {
-                "id": "default-hard-expanded-138",
-                "text": "Saint Bernard"
-            },
-            {
-                "id": "default-hard-expanded-139",
-                "text": "Newfoundland"
-            },
-            {
-                "id": "default-hard-expanded-140",
-                "text": "Bernese Mountain Dog"
-            },
-            {
-                "id": "default-hard-extra-225",
-                "text": "Abnegation"
-            },
-            {
-                "id": "default-hard-extra-226",
-                "text": "Aggrandize"
-            },
-            {
-                "id": "default-hard-extra-227",
-                "text": "Alacrity"
-            },
-            {
-                "id": "default-hard-extra-228",
-                "text": "Anachronism"
-            },
-            {
-                "id": "default-hard-extra-229",
-                "text": "Antithesis"
-            },
-            {
-                "id": "default-hard-extra-230",
-                "text": "Apocryphal"
-            },
-            {
-                "id": "default-hard-extra-231",
-                "text": "Approbation"
-            },
-            {
-                "id": "default-hard-extra-232",
-                "text": "Ascetic"
-            },
-            {
-                "id": "default-hard-extra-233",
-                "text": "Assiduous"
-            },
-            {
-                "id": "default-hard-extra-234",
-                "text": "Beguile"
-            },
-            {
-                "id": "default-hard-extra-235",
-                "text": "Blandishment"
-            },
-            {
-                "id": "default-hard-extra-236",
-                "text": "Bowdlerize"
-            },
-            {
-                "id": "default-hard-extra-237",
-                "text": "Cajole"
-            },
-            {
-                "id": "default-hard-extra-238",
-                "text": "Callous"
-            },
-            {
-                "id": "default-hard-extra-239",
-                "text": "Calumny"
-            },
-            {
-                "id": "default-hard-extra-240",
-                "text": "Camaraderie"
-            },
-            {
-                "id": "default-hard-extra-241",
-                "text": "Capitulate"
-            },
-            {
-                "id": "default-hard-extra-242",
-                "text": "Carping"
-            },
-            {
-                "id": "default-hard-extra-243",
-                "text": "Catalyst"
-            },
-            {
-                "id": "default-hard-extra-244",
-                "text": "Catharsis"
-            },
-            {
-                "id": "default-hard-extra-245",
-                "text": "Caustic"
-            },
-            {
-                "id": "default-hard-extra-246",
-                "text": "Cavil"
-            },
-            {
-                "id": "default-hard-extra-247",
-                "text": "Celerity"
-            },
-            {
-                "id": "default-hard-extra-248",
-                "text": "Chauvinist"
-            },
-            {
-                "id": "default-hard-extra-249",
-                "text": "Chicanery"
-            },
-            {
-                "id": "default-hard-extra-250",
-                "text": "Circumlocution"
-            },
-            {
-                "id": "default-hard-extra-251",
-                "text": "Clairvoyant"
-            },
-            {
-                "id": "default-hard-extra-252",
-                "text": "Clemency"
-            },
-            {
-                "id": "default-hard-extra-253",
-                "text": "Coalesce"
-            },
-            {
-                "id": "default-hard-extra-254",
-                "text": "Cogent"
-            },
-            {
-                "id": "default-hard-extra-255",
-                "text": "Cognizant"
-            },
-            {
-                "id": "default-hard-extra-256",
-                "text": "Commensurate"
-            },
-            {
-                "id": "default-hard-extra-257",
-                "text": "Compendium"
-            },
-            {
-                "id": "default-hard-extra-258",
-                "text": "Complacent"
-            },
-            {
-                "id": "default-hard-extra-259",
-                "text": "Complaisant"
-            },
-            {
-                "id": "default-hard-extra-260",
-                "text": "Compunction"
-            },
-            {
-                "id": "default-hard-extra-261",
-                "text": "Concomitant"
-            },
-            {
-                "id": "default-hard-extra-262",
-                "text": "Conflagration"
-            },
-            {
-                "id": "default-hard-extra-263",
-                "text": "Confound"
-            },
-            {
-                "id": "default-hard-extra-264",
-                "text": "Congenial"
-            },
-            {
-                "id": "default-hard-extra-265",
-                "text": "Consonant"
-            },
-            {
-                "id": "default-hard-extra-266",
-                "text": "Contrite"
-            },
-            {
-                "id": "default-hard-extra-267",
-                "text": "Contumacious"
-            },
-            {
-                "id": "default-hard-extra-268",
-                "text": "Conundrum"
-            },
-            {
-                "id": "default-hard-extra-269",
-                "text": "Copious"
-            },
-            {
-                "id": "default-hard-extra-270",
-                "text": "Corpulent"
-            },
-            {
-                "id": "default-hard-extra-271",
-                "text": "Corroborate"
-            },
-            {
-                "id": "default-hard-extra-272",
-                "text": "Cosmopolitan"
-            },
-            {
-                "id": "default-hard-extra-273",
-                "text": "Coterie"
-            },
-            {
-                "id": "default-hard-extra-274",
-                "text": "Craven"
-            },
-            {
-                "id": "default-hard-extra-275",
-                "text": "Credulous"
-            },
-            {
-                "id": "default-hard-extra-276",
-                "text": "Culpable"
-            },
-            {
-                "id": "default-hard-extra-277",
-                "text": "Cupidity"
-            },
-            {
-                "id": "default-hard-extra-278",
-                "text": "Curmudgeon"
-            },
-            {
-                "id": "default-hard-extra-279",
-                "text": "Cursory"
-            },
-            {
-                "id": "default-hard-extra-280",
-                "text": "Dearth"
-            },
-            {
-                "id": "default-hard-extra-281",
-                "text": "Debacle"
-            },
-            {
-                "id": "default-hard-extra-282",
-                "text": "Debilitate"
-            },
-            {
-                "id": "default-hard-extra-283",
-                "text": "Decorous"
-            },
-            {
-                "id": "default-hard-extra-284",
-                "text": "Defame"
-            },
-            {
-                "id": "default-hard-extra-285",
-                "text": "Deleterious"
-            },
-            {
-                "id": "default-hard-extra-286",
-                "text": "Delineate"
-            },
-            {
-                "id": "default-hard-extra-287",
-                "text": "Demagogue"
-            },
-            {
-                "id": "default-hard-extra-288",
-                "text": "Demur"
-            },
-            {
-                "id": "default-hard-extra-289",
-                "text": "Denigrate"
-            },
-            {
-                "id": "default-hard-extra-290",
-                "text": "Deprecate"
-            },
-            {
-                "id": "default-hard-extra-291",
-                "text": "Deride"
-            },
-            {
-                "id": "default-hard-extra-292",
-                "text": "Derivate"
-            },
-            {
-                "id": "default-hard-extra-293",
-                "text": "Desiccate"
-            },
-            {
-                "id": "default-hard-extra-294",
-                "text": "Desultory"
-            },
-            {
-                "id": "default-hard-extra-295",
-                "text": "Diatribe"
-            },
-            {
-                "id": "default-hard-extra-296",
-                "text": "Didactic"
-            },
-            {
-                "id": "default-hard-extra-297",
-                "text": "Diffident"
-            },
-            {
-                "id": "default-hard-extra-298",
-                "text": "Dilatory"
-            },
-            {
-                "id": "default-hard-extra-299",
-                "text": "Dilettante"
-            },
-            {
-                "id": "default-hard-extra-300",
-                "text": "Dirge"
-            },
-            {
-                "id": "default-hard-extra-301",
-                "text": "Disabuse"
-            },
-            {
-                "id": "default-hard-extra-302",
-                "text": "Discern"
-            },
-            {
-                "id": "default-hard-extra-303",
-                "text": "Discrepant"
-            },
-            {
-                "id": "default-hard-extra-304",
-                "text": "Disparage"
-            },
-            {
-                "id": "default-hard-extra-305",
-                "text": "Disparate"
-            },
-            {
-                "id": "default-hard-extra-306",
-                "text": "Dissemble"
-            },
-            {
-                "id": "default-hard-extra-307",
-                "text": "Disseminate"
-            },
-            {
-                "id": "default-hard-extra-308",
-                "text": "Dissonance"
-            },
-            {
-                "id": "default-hard-extra-309",
-                "text": "Divergent"
-            },
-            {
-                "id": "default-hard-extra-310",
-                "text": "Dogmatic"
-            },
-            {
-                "id": "default-hard-extra-311",
-                "text": "Ebullient"
-            },
-            {
-                "id": "default-hard-extra-312",
-                "text": "Eclectic"
-            },
-            {
-                "id": "default-hard-extra-313",
-                "text": "Efficacy"
-            },
-            {
-                "id": "default-hard-extra-314",
-                "text": "Effrontery"
-            },
-            {
-                "id": "default-hard-extra-315",
-                "text": "Elegy"
-            },
-            {
-                "id": "default-hard-extra-316",
-                "text": "Elicit"
-            },
-            {
-                "id": "default-hard-extra-317",
-                "text": "Embellish"
-            },
-            {
-                "id": "default-hard-extra-318",
-                "text": "Empirical"
-            },
-            {
-                "id": "default-hard-extra-319",
-                "text": "Emulate"
-            },
-            {
-                "id": "default-hard-extra-320",
-                "text": "Endemic"
-            },
-            {
-                "id": "default-hard-extra-321",
-                "text": "Enervate"
-            },
-            {
-                "id": "default-hard-extra-322",
-                "text": "Engender"
-            },
-            {
-                "id": "default-hard-extra-323",
-                "text": "Enigma"
-            },
-            {
-                "id": "default-hard-extra-325",
-                "text": "Epicure"
-            },
-            {
-                "id": "default-hard-extra-326",
-                "text": "Equanimity"
-            },
-            {
-                "id": "default-hard-extra-327",
-                "text": "Equivocate"
-            },
-            {
-                "id": "default-hard-extra-328",
-                "text": "Erudite"
-            },
-            {
-                "id": "default-hard-extra-329",
-                "text": "Esoteric"
-            },
-            {
-                "id": "default-hard-extra-330",
-                "text": "Eulogy"
-            },
-            {
-                "id": "default-hard-extra-331",
-                "text": "Euphemism"
-            },
-            {
-                "id": "default-hard-extra-332",
-                "text": "Exacerbate"
-            },
-            {
-                "id": "default-hard-extra-333",
-                "text": "Exculpate"
-            },
-            {
-                "id": "default-hard-extra-334",
-                "text": "Exigent"
-            },
-            {
-                "id": "default-hard-extra-335",
-                "text": "Exonerate"
-            },
-            {
-                "id": "default-hard-extra-336",
-                "text": "Exorbitant"
-            },
-            {
-                "id": "default-hard-extra-337",
-                "text": "Extraneous"
-            },
-            {
-                "id": "default-hard-extra-338",
-                "text": "Extrapolate"
-            }
+            {"id": "default-hard-expanded-000", "text": "Quixotic"},
+            {"id": "default-hard-expanded-001", "text": "Ephemeral"},
+            {"id": "default-hard-expanded-002", "text": "Serendipity"},
+            {"id": "default-hard-expanded-003", "text": "Obfuscate"},
+            {"id": "default-hard-expanded-004", "text": "Syzygy"},
+            {"id": "default-hard-expanded-005", "text": "Lugubrious"},
+            {"id": "default-hard-expanded-006", "text": "Cacophony"},
+            {"id": "default-hard-expanded-007", "text": "Mellifluous"},
+            {"id": "default-hard-expanded-008", "text": "Defenestration"},
+            {"id": "default-hard-expanded-009", "text": "Ennui"},
+            {"id": "default-hard-expanded-010", "text": "Schadenfreude"},
+            {"id": "default-hard-expanded-011", "text": "Petrichor"},
+            {"id": "default-hard-expanded-012", "text": "Lethologica"},
+            {"id": "default-hard-expanded-013", "text": "Apophenia"},
+            {"id": "default-hard-expanded-014", "text": "Pareidolia"},
+            {"id": "default-hard-expanded-015", "text": "Sonder"},
+            {"id": "default-hard-expanded-016", "text": "Vellichor"},
+            {"id": "default-hard-expanded-017", "text": "Rubatosis"},
+            {"id": "default-hard-expanded-018", "text": "Kenopsia"},
+            {"id": "default-hard-expanded-019", "text": "Jouska"},
+            {"id": "default-hard-expanded-020", "text": "Chrysalism"},
+            {"id": "default-hard-expanded-021", "text": "Anecdoche"},
+            {"id": "default-hard-expanded-022", "text": "Ellipsism"},
+            {"id": "default-hard-expanded-023", "text": "Kuebiko"},
+            {"id": "default-hard-expanded-024", "text": "Lachesism"},
+            {"id": "default-hard-expanded-025", "text": "Exulansis"},
+            {"id": "default-hard-expanded-026", "text": "Adronitis"},
+            {"id": "default-hard-expanded-027", "text": "Ruckkehrunruhe"},
+            {"id": "default-hard-expanded-028", "text": "Monachopsis"},
+            {"id": "default-hard-expanded-029", "text": "Occhiolism"},
+            {"id": "default-hard-expanded-030", "text": "Silience"},
+            {"id": "default-hard-expanded-031", "text": "Ilinx"},
+            {"id": "default-hard-expanded-032", "text": "Zenosyne"},
+            {"id": "default-hard-expanded-033", "text": "Opia"},
+            {"id": "default-hard-expanded-034", "text": "Altschmerz"},
+            {"id": "default-hard-expanded-035", "text": "Anemoia"},
+            {"id": "default-hard-expanded-036", "text": "Onism"},
+            {"id": "default-hard-expanded-037", "text": "Liberosis"},
+            {"id": "default-hard-expanded-038", "text": "Nodus Tollens"},
+            {"id": "default-hard-expanded-039", "text": "Ambedo"},
+            {"id": "default-hard-expanded-040", "text": "Klexos"},
+            {"id": "default-hard-expanded-041", "text": "L'appel du vide"},
+            {"id": "default-hard-expanded-042", "text": "Deja vu"},
+            {"id": "default-hard-expanded-043", "text": "Jamais vu"},
+            {"id": "default-hard-expanded-044", "text": "Presque vu"},
+            {"id": "default-hard-expanded-045", "text": "Esprit de l'escalier"},
+            {"id": "default-hard-expanded-046", "text": "Treppenwitz"},
+            {"id": "default-hard-expanded-047", "text": "Torschlusspanik"},
+            {"id": "default-hard-expanded-048", "text": "Fernweh"},
+            {"id": "default-hard-expanded-049", "text": "Wanderlust"},
+            {"id": "default-hard-expanded-050", "text": "Sehnsucht"},
+            {"id": "default-hard-expanded-051", "text": "Weltschmerz"},
+            {"id": "default-hard-expanded-052", "text": "Waldeinsamkeit"},
+            {"id": "default-hard-expanded-053", "text": "Gemutlichkeit"},
+            {"id": "default-hard-expanded-054", "text": "Hygge"},
+            {"id": "default-hard-expanded-055", "text": "Lagom"},
+            {"id": "default-hard-expanded-056", "text": "Ikigai"},
+            {"id": "default-hard-expanded-057", "text": "Tsundoku"},
+            {"id": "default-hard-expanded-058", "text": "Komorebi"},
+            {"id": "default-hard-expanded-059", "text": "Wabi-sabi"},
+            {"id": "default-hard-expanded-060", "text": "Yugen"},
+            {"id": "default-hard-expanded-061", "text": "Mono no aware"},
+            {"id": "default-hard-expanded-062", "text": "Koi No Yokan"},
+            {"id": "default-hard-expanded-063", "text": "Boketto"},
+            {"id": "default-hard-expanded-064", "text": "Shinrin-yoku"},
+            {"id": "default-hard-expanded-065", "text": "Ukiyo"},
+            {"id": "default-hard-expanded-066", "text": "Age-otori"},
+            {"id": "default-hard-expanded-067", "text": "Arigata-meiwaku"},
+            {"id": "default-hard-expanded-068", "text": "Bakkushan"},
+            {"id": "default-hard-expanded-069", "text": "Kuidaore"},
+            {"id": "default-hard-expanded-070", "text": "Kintsugi"},
+            {"id": "default-hard-expanded-071", "text": "Meraki"},
+            {"id": "default-hard-expanded-072", "text": "Philotimo"},
+            {"id": "default-hard-expanded-073", "text": "Saudade"},
+            {"id": "default-hard-expanded-074", "text": "Desenrascanço"},
+            {"id": "default-hard-expanded-075", "text": "Cafuné"},
+            {"id": "default-hard-expanded-076", "text": "Sobremesa"},
+            {"id": "default-hard-expanded-077", "text": "Estrenar"},
+            {"id": "default-hard-expanded-078", "text": "Madrugada"},
+            {"id": "default-hard-expanded-079", "text": "Desvelado"},
+            {"id": "default-hard-expanded-080", "text": "Friolero"},
+            {"id": "default-hard-expanded-081", "text": "Te Quiero"},
+            {"id": "default-hard-expanded-082", "text": "Te Amo"},
+            {"id": "default-hard-expanded-083", "text": "Gezellig"},
+            {"id": "default-hard-expanded-084", "text": "Uitwaaien"},
+            {"id": "default-hard-expanded-085", "text": "Gedogen"},
+            {"id": "default-hard-expanded-086", "text": "Polderen"},
+            {"id": "default-hard-expanded-087", "text": "Sisu"},
+            {"id": "default-hard-expanded-088", "text": "Kalsarikannit"},
+            {"id": "default-hard-expanded-089", "text": "Toska"},
+            {"id": "default-hard-expanded-090", "text": "Poshlost"},
+            {"id": "default-hard-expanded-091", "text": "Razliubit"},
+            {"id": "default-hard-expanded-092", "text": "Yurodivy"},
+            {"id": "default-hard-expanded-093", "text": "Gluckschmerz"},
+            {"id": "default-hard-expanded-094", "text": "Fremdschamen"},
+            {"id": "default-hard-expanded-095", "text": "Backpfeifengesicht"},
+            {"id": "default-hard-expanded-096", "text": "Schwarmerei"},
+            {"id": "default-hard-expanded-097", "text": "Verschlimmbessern"},
+            {"id": "default-hard-expanded-098", "text": "Kummerspeck"},
+            {"id": "default-hard-expanded-099", "text": "Schnapsidee"},
+            {"id": "default-hard-expanded-102", "text": "Zeitgeist"},
+            {"id": "default-hard-expanded-103", "text": "Doppelganger"},
+            {"id": "default-hard-expanded-106", "text": "Angst"},
+            {"id": "default-hard-expanded-107", "text": "Kindergarten"},
+            {"id": "default-hard-expanded-108", "text": "Poltergeist"},
+            {"id": "default-hard-expanded-109", "text": "Rucksack"},
+            {"id": "default-hard-expanded-110", "text": "Delicatessen"},
+            {"id": "default-hard-expanded-111", "text": "Pretzel"},
+            {"id": "default-hard-expanded-112", "text": "Bratwurst"},
+            {"id": "default-hard-expanded-113", "text": "Sauerkraut"},
+            {"id": "default-hard-expanded-114", "text": "Schnitzel"},
+            {"id": "default-hard-expanded-115", "text": "Strudel"},
+            {"id": "default-hard-expanded-116", "text": "Gummy Bear"},
+            {"id": "default-hard-expanded-117", "text": "Hamburger"},
+            {"id": "default-hard-expanded-118", "text": "Frankfurter"},
+            {"id": "default-hard-expanded-119", "text": "Wiener"},
+            {"id": "default-hard-expanded-120", "text": "Poodle"},
+            {"id": "default-hard-expanded-121", "text": "Dachshund"},
+            {"id": "default-hard-expanded-122", "text": "Rottweiler"},
+            {"id": "default-hard-expanded-123", "text": "Schnauzer"},
+            {"id": "default-hard-expanded-124", "text": "Doberman"},
+            {"id": "default-hard-expanded-125", "text": "Pinscher"},
+            {"id": "default-hard-expanded-126", "text": "Spitz"},
+            {"id": "default-hard-expanded-127", "text": "Husky"},
+            {"id": "default-hard-expanded-128", "text": "Malamute"},
+            {"id": "default-hard-expanded-129", "text": "Samoyed"},
+            {"id": "default-hard-expanded-130", "text": "Chow Chow"},
+            {"id": "default-hard-expanded-131", "text": "Akita"},
+            {"id": "default-hard-expanded-132", "text": "Shiba Inu"},
+            {"id": "default-hard-expanded-133", "text": "Pug"},
+            {"id": "default-hard-expanded-134", "text": "Bulldog"},
+            {"id": "default-hard-expanded-135", "text": "Mastiff"},
+            {"id": "default-hard-expanded-136", "text": "Boxer"},
+            {"id": "default-hard-expanded-137", "text": "Great Dane"},
+            {"id": "default-hard-expanded-138", "text": "Saint Bernard"},
+            {"id": "default-hard-expanded-139", "text": "Newfoundland"},
+            {"id": "default-hard-expanded-140", "text": "Bernese Mountain Dog"},
+            {"id": "default-hard-extra-225", "text": "Abnegation"},
+            {"id": "default-hard-extra-226", "text": "Aggrandize"},
+            {"id": "default-hard-extra-227", "text": "Alacrity"},
+            {"id": "default-hard-extra-228", "text": "Anachronism"},
+            {"id": "default-hard-extra-229", "text": "Antithesis"},
+            {"id": "default-hard-extra-230", "text": "Apocryphal"},
+            {"id": "default-hard-extra-231", "text": "Approbation"},
+            {"id": "default-hard-extra-232", "text": "Ascetic"},
+            {"id": "default-hard-extra-233", "text": "Assiduous"},
+            {"id": "default-hard-extra-234", "text": "Beguile"},
+            {"id": "default-hard-extra-235", "text": "Blandishment"},
+            {"id": "default-hard-extra-236", "text": "Bowdlerize"},
+            {"id": "default-hard-extra-237", "text": "Cajole"},
+            {"id": "default-hard-extra-238", "text": "Callous"},
+            {"id": "default-hard-extra-239", "text": "Calumny"},
+            {"id": "default-hard-extra-240", "text": "Camaraderie"},
+            {"id": "default-hard-extra-241", "text": "Capitulate"},
+            {"id": "default-hard-extra-242", "text": "Carping"},
+            {"id": "default-hard-extra-243", "text": "Catalyst"},
+            {"id": "default-hard-extra-244", "text": "Catharsis"},
+            {"id": "default-hard-extra-245", "text": "Caustic"},
+            {"id": "default-hard-extra-246", "text": "Cavil"},
+            {"id": "default-hard-extra-247", "text": "Celerity"},
+            {"id": "default-hard-extra-248", "text": "Chauvinist"},
+            {"id": "default-hard-extra-249", "text": "Chicanery"},
+            {"id": "default-hard-extra-250", "text": "Circumlocution"},
+            {"id": "default-hard-extra-251", "text": "Clairvoyant"},
+            {"id": "default-hard-extra-252", "text": "Clemency"},
+            {"id": "default-hard-extra-253", "text": "Coalesce"},
+            {"id": "default-hard-extra-254", "text": "Cogent"},
+            {"id": "default-hard-extra-255", "text": "Cognizant"},
+            {"id": "default-hard-extra-256", "text": "Commensurate"},
+            {"id": "default-hard-extra-257", "text": "Compendium"},
+            {"id": "default-hard-extra-258", "text": "Complacent"},
+            {"id": "default-hard-extra-259", "text": "Complaisant"},
+            {"id": "default-hard-extra-260", "text": "Compunction"},
+            {"id": "default-hard-extra-261", "text": "Concomitant"},
+            {"id": "default-hard-extra-262", "text": "Conflagration"},
+            {"id": "default-hard-extra-263", "text": "Confound"},
+            {"id": "default-hard-extra-264", "text": "Congenial"},
+            {"id": "default-hard-extra-265", "text": "Consonant"},
+            {"id": "default-hard-extra-266", "text": "Contrite"},
+            {"id": "default-hard-extra-267", "text": "Contumacious"},
+            {"id": "default-hard-extra-268", "text": "Conundrum"},
+            {"id": "default-hard-extra-269", "text": "Copious"},
+            {"id": "default-hard-extra-270", "text": "Corpulent"},
+            {"id": "default-hard-extra-271", "text": "Corroborate"},
+            {"id": "default-hard-extra-272", "text": "Cosmopolitan"},
+            {"id": "default-hard-extra-273", "text": "Coterie"},
+            {"id": "default-hard-extra-274", "text": "Craven"},
+            {"id": "default-hard-extra-275", "text": "Credulous"},
+            {"id": "default-hard-extra-276", "text": "Culpable"},
+            {"id": "default-hard-extra-277", "text": "Cupidity"},
+            {"id": "default-hard-extra-278", "text": "Curmudgeon"},
+            {"id": "default-hard-extra-279", "text": "Cursory"},
+            {"id": "default-hard-extra-280", "text": "Dearth"},
+            {"id": "default-hard-extra-281", "text": "Debacle"},
+            {"id": "default-hard-extra-282", "text": "Debilitate"},
+            {"id": "default-hard-extra-283", "text": "Decorous"},
+            {"id": "default-hard-extra-284", "text": "Defame"},
+            {"id": "default-hard-extra-285", "text": "Deleterious"},
+            {"id": "default-hard-extra-286", "text": "Delineate"},
+            {"id": "default-hard-extra-287", "text": "Demagogue"},
+            {"id": "default-hard-extra-288", "text": "Demur"},
+            {"id": "default-hard-extra-289", "text": "Denigrate"},
+            {"id": "default-hard-extra-290", "text": "Deprecate"},
+            {"id": "default-hard-extra-291", "text": "Deride"},
+            {"id": "default-hard-extra-292", "text": "Derivate"},
+            {"id": "default-hard-extra-293", "text": "Desiccate"},
+            {"id": "default-hard-extra-294", "text": "Desultory"},
+            {"id": "default-hard-extra-295", "text": "Diatribe"},
+            {"id": "default-hard-extra-296", "text": "Didactic"},
+            {"id": "default-hard-extra-297", "text": "Diffident"},
+            {"id": "default-hard-extra-298", "text": "Dilatory"},
+            {"id": "default-hard-extra-299", "text": "Dilettante"},
+            {"id": "default-hard-extra-300", "text": "Dirge"},
+            {"id": "default-hard-extra-301", "text": "Disabuse"},
+            {"id": "default-hard-extra-302", "text": "Discern"},
+            {"id": "default-hard-extra-303", "text": "Discrepant"},
+            {"id": "default-hard-extra-304", "text": "Disparage"},
+            {"id": "default-hard-extra-305", "text": "Disparate"},
+            {"id": "default-hard-extra-306", "text": "Dissemble"},
+            {"id": "default-hard-extra-307", "text": "Disseminate"},
+            {"id": "default-hard-extra-308", "text": "Dissonance"},
+            {"id": "default-hard-extra-309", "text": "Divergent"},
+            {"id": "default-hard-extra-310", "text": "Dogmatic"},
+            {"id": "default-hard-extra-311", "text": "Ebullient"},
+            {"id": "default-hard-extra-312", "text": "Eclectic"},
+            {"id": "default-hard-extra-313", "text": "Efficacy"},
+            {"id": "default-hard-extra-314", "text": "Effrontery"},
+            {"id": "default-hard-extra-315", "text": "Elegy"},
+            {"id": "default-hard-extra-316", "text": "Elicit"},
+            {"id": "default-hard-extra-317", "text": "Embellish"},
+            {"id": "default-hard-extra-318", "text": "Empirical"},
+            {"id": "default-hard-extra-319", "text": "Emulate"},
+            {"id": "default-hard-extra-320", "text": "Endemic"},
+            {"id": "default-hard-extra-321", "text": "Enervate"},
+            {"id": "default-hard-extra-322", "text": "Engender"},
+            {"id": "default-hard-extra-323", "text": "Enigma"},
+            {"id": "default-hard-extra-325", "text": "Epicure"},
+            {"id": "default-hard-extra-326", "text": "Equanimity"},
+            {"id": "default-hard-extra-327", "text": "Equivocate"},
+            {"id": "default-hard-extra-328", "text": "Erudite"},
+            {"id": "default-hard-extra-329", "text": "Esoteric"},
+            {"id": "default-hard-extra-330", "text": "Eulogy"},
+            {"id": "default-hard-extra-331", "text": "Euphemism"},
+            {"id": "default-hard-extra-332", "text": "Exacerbate"},
+            {"id": "default-hard-extra-333", "text": "Exculpate"},
+            {"id": "default-hard-extra-334", "text": "Exigent"},
+            {"id": "default-hard-extra-335", "text": "Exonerate"},
+            {"id": "default-hard-extra-336", "text": "Exorbitant"},
+            {"id": "default-hard-extra-337", "text": "Extraneous"},
+            {"id": "default-hard-extra-338", "text": "Extrapolate"}
         ],
         "type": "default",
         "color": "coral",

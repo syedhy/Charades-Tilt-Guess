@@ -4,756 +4,156 @@
         "name": "Mythology",
         "description": "Guess mythological characters emojis!",
         "cards": [
-            {
-                "id": "em-my-001",
-                "text": "⚡👑🏛️",
-                "meaning": "Zeus"
-            },
-            {
-                "id": "em-my-002",
-                "text": "🔱🌊🐴",
-                "meaning": "Poseidon"
-            },
-            {
-                "id": "em-my-003",
-                "text": "💀🔥👑",
-                "meaning": "Hades"
-            },
-            {
-                "id": "em-my-004",
-                "text": "🔨⚡🌩️",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-my-005",
-                "text": "🐍😈🎭",
-                "meaning": "Loki"
-            },
-            {
-                "id": "em-my-006",
-                "text": "🐍👩👁️",
-                "meaning": "Medusa"
-            },
-            {
-                "id": "em-my-007",
-                "text": "🐂🏛️🌀",
-                "meaning": "Minotaur"
-            },
-            {
-                "id": "em-my-008",
-                "text": "🔥🦅✨",
-                "meaning": "Phoenix"
-            },
-            {
-                "id": "em-my-009",
-                "text": "🪽🐎✨",
-                "meaning": "Pegasus"
-            },
-            {
-                "id": "em-my-010",
-                "text": "🐶🐶🐶",
-                "meaning": "Cerberus"
-            },
-            {
-                "id": "em-my-011",
-                "text": "👁️🐺🧙‍♂️",
-                "meaning": "Odin"
-            },
-            {
-                "id": "em-my-012",
-                "text": "☀️🏹🎼",
-                "meaning": "Apollo"
-            },
-            {
-                "id": "em-my-013",
-                "text": "🏹🌙🦌",
-                "meaning": "Artemis"
-            },
-            {
-                "id": "em-my-014",
-                "text": "🦉🛡️🏛️",
-                "meaning": "Athena"
-            },
-            {
-                "id": "em-my-015",
-                "text": "⚔️🛡️🩸",
-                "meaning": "Ares"
-            },
-            {
-                "id": "em-my-016",
-                "text": "🕊️🐚💖",
-                "meaning": "Aphrodite"
-            },
-            {
-                "id": "em-my-017",
-                "text": "🪽👟📨",
-                "meaning": "Hermes"
-            },
-            {
-                "id": "em-my-018",
-                "text": "🔨🔥🌋",
-                "meaning": "Hephaestus"
-            },
-            {
-                "id": "em-my-019",
-                "text": "🍇🍷🎭",
-                "meaning": "Dionysus"
-            },
-            {
-                "id": "em-my-020",
-                "text": "👑🦚🏛️",
-                "meaning": "Hera"
-            },
-            {
-                "id": "em-my-021",
-                "text": "💘🏹💖",
-                "meaning": "Eros"
-            },
-            {
-                "id": "em-my-022",
-                "text": "🌾🍎🚜",
-                "meaning": "Demeter"
-            },
-            {
-                "id": "em-my-023",
-                "text": "🦁🦁💪",
-                "meaning": "Hercules"
-            },
-            {
-                "id": "em-my-024",
-                "text": "🗡️🛡️🦶",
-                "meaning": "Achilles"
-            },
-            {
-                "id": "em-my-025",
-                "text": "🐴🪵⚔️",
-                "meaning": "Trojan Horse"
-            },
-            {
-                "id": "em-my-026",
-                "text": "📦⚠️💀",
-                "meaning": "Pandora's Box"
-            },
-            {
-                "id": "em-my-027",
-                "text": "🪽☀️🕯️",
-                "meaning": "Icarus"
-            },
-            {
-                "id": "em-my-028",
-                "text": "🪞🥀💧",
-                "meaning": "Narcissus"
-            },
-            {
-                "id": "em-my-029",
-                "text": "👑🧈✨",
-                "meaning": "King Midas"
-            },
-            {
-                "id": "em-my-030",
-                "text": "🌍🏋️‍♂️🗿",
-                "meaning": "Atlas"
-            },
-            {
-                "id": "em-my-031",
-                "text": "🔥🦅🪨",
-                "meaning": "Prometheus"
-            },
-            {
-                "id": "em-my-032",
-                "text": "🐑✨🪙",
-                "meaning": "Golden Fleece"
-            },
-            {
-                "id": "em-my-033",
-                "text": "👨‍🐴🏹",
-                "meaning": "Centaur"
-            },
-            {
-                "id": "em-my-034",
-                "text": "👁️🪨🗿",
-                "meaning": "Cyclops"
-            },
-            {
-                "id": "em-my-035",
-                "text": "🧜‍♀️🪨🎶",
-                "meaning": "Siren"
-            },
-            {
-                "id": "em-my-036",
-                "text": "🦁🦅🗿",
-                "meaning": "Sphinx"
-            },
-            {
-                "id": "em-my-037",
-                "text": "🐍🐍🐍",
-                "meaning": "Hydra"
-            },
-            {
-                "id": "em-my-038",
-                "text": "🦁🐐🐍",
-                "meaning": "Chimera"
-            },
-            {
-                "id": "em-my-039",
-                "text": "🐙🌊⛵",
-                "meaning": "Kraken"
-            },
-            {
-                "id": "em-my-040",
-                "text": "🌈🌉🛡️",
-                "meaning": "Heimdall"
-            },
-            {
-                "id": "em-my-041",
-                "text": "🪽⚔️👸",
-                "meaning": "Valkyrie"
-            },
-            {
-                "id": "em-my-042",
-                "text": "🌳🌍🍃",
-                "meaning": "Yggdrasil"
-            },
-            {
-                "id": "em-my-043",
-                "text": "🐺⛓️🌕",
-                "meaning": "Fenrir"
-            },
-            {
-                "id": "em-my-044",
-                "text": "🐍🌊🌊",
-                "meaning": "Jormungandr"
-            },
-            {
-                "id": "em-my-045",
-                "text": "🐱🐱🛷",
-                "meaning": "Freya"
-            },
-            {
-                "id": "em-my-046",
-                "text": "⚔️🏰🍻",
-                "meaning": "Valhalla"
-            },
-            {
-                "id": "em-my-047",
-                "text": "🦮🐕‍🦺🦮",
-                "meaning": "Anubis"
-            },
-            {
-                "id": "em-my-048",
-                "text": "☀️🦅👁️",
-                "meaning": "Ra"
-            },
-            {
-                "id": "em-my-049",
-                "text": "👑🧟‍♂️🌾",
-                "meaning": "Osiris"
-            },
-            {
-                "id": "em-my-050",
-                "text": "🪽🪄👑",
-                "meaning": "Isis"
-            },
-            {
-                "id": "em-my-051",
-                "text": "🦅👑👁️",
-                "meaning": "Horus"
-            },
-            {
-                "id": "em-my-052",
-                "text": "🏜️🌪️🦮",
-                "meaning": "Seth"
-            },
-            {
-                "id": "em-my-053",
-                "text": "🐱👑☀️",
-                "meaning": "Bastet"
-            },
-            {
-                "id": "em-my-054",
-                "text": "🪲☀️✨",
-                "meaning": "Scarab"
-            },
-            {
-                "id": "em-my-055",
-                "text": "🪈🐘🌺",
-                "meaning": "Ganesha"
-            },
-            {
-                "id": "em-my-056",
-                "text": "🔱👁️🐍",
-                "meaning": "Shiva"
-            },
-            {
-                "id": "em-my-057",
-                "text": "🪷🐍🪩",
-                "meaning": "Vishnu"
-            },
-            {
-                "id": "em-my-058",
-                "text": "🐒🏹👑",
-                "meaning": "Hanuman"
-            },
-            {
-                "id": "em-my-059",
-                "text": "🪈🦚🩵",
-                "meaning": "Krishna"
-            },
-            {
-                "id": "em-my-060",
-                "text": "🗡️👅🩸",
-                "meaning": "Kali"
-            },
-            {
-                "id": "em-my-061",
-                "text": "🐅⚔️🛡️",
-                "meaning": "Durga"
-            },
-            {
-                "id": "em-my-062",
-                "text": "🪷🪔🪙",
-                "meaning": "Lakshmi"
-            },
-            {
-                "id": "em-my-063",
-                "text": "🪕🦢📜",
-                "meaning": "Saraswati"
-            },
-            {
-                "id": "em-my-064",
-                "text": "👑👹🏹",
-                "meaning": "Ravana"
-            },
-            {
-                "id": "em-my-065",
-                "text": "🦅🔥🐍",
-                "meaning": "Garuda"
-            },
-            {
-                "id": "em-my-066",
-                "text": "🐉☁️🌊",
-                "meaning": "Chinese Dragon"
-            },
-            {
-                "id": "em-my-067",
-                "text": "🐒🪄☁️",
-                "meaning": "Sun Wukong"
-            },
-            {
-                "id": "em-my-068",
-                "text": "☀️⛩️🇯🇵",
-                "meaning": "Amaterasu"
-            },
-            {
-                "id": "em-my-069",
-                "text": "🦊🔥📜",
-                "meaning": "Kitsune"
-            },
-            {
-                "id": "em-my-070",
-                "text": "👹🔨🪵",
-                "meaning": "Oni"
-            },
-            {
-                "id": "em-my-071",
-                "text": "⚡🥁🌩️",
-                "meaning": "Raijin"
-            },
-            {
-                "id": "em-my-072",
-                "text": "💨🌪️🎒",
-                "meaning": "Fujin"
-            },
-            {
-                "id": "em-my-073",
-                "text": "🥒🥒🥒",
-                "meaning": "Kappa"
-            },
-            {
-                "id": "em-my-074",
-                "text": "🐍🪽🦅",
-                "meaning": "Quetzalcoatl"
-            },
-            {
-                "id": "em-my-075",
-                "text": "🗡️🪨👑",
-                "meaning": "Excalibur"
-            },
-            {
-                "id": "em-my-076",
-                "text": "🧙‍♂️👑🪄",
-                "meaning": "Merlin"
-            },
-            {
-                "id": "em-my-077",
-                "text": "🛡️🏆⚔️",
-                "meaning": "Holy Grail"
-            },
-            {
-                "id": "em-my-078",
-                "text": "🦄✨🪽",
-                "meaning": "Unicorn"
-            },
-            {
-                "id": "em-my-079",
-                "text": "🧜‍♀️🐚🌊",
-                "meaning": "Mermaid"
-            },
-            {
-                "id": "em-my-080",
-                "text": "👣❄️🏔️",
-                "meaning": "Yeti"
-            },
-            {
-                "id": "em-my-081",
-                "text": "👣🌲🪵",
-                "meaning": "Bigfoot"
-            },
-            {
-                "id": "em-my-082",
-                "text": "🧛‍♂️🩸🦇",
-                "meaning": "Vampire"
-            },
-            {
-                "id": "em-my-083",
-                "text": "🐺🌕🩸",
-                "meaning": "Werewolf"
-            },
-            {
-                "id": "em-my-084",
-                "text": "☘️🌈🪙",
-                "meaning": "Leprechaun"
-            },
-            {
-                "id": "em-my-085",
-                "text": "🗣️👻😱",
-                "meaning": "Banshee"
-            },
-            {
-                "id": "em-my-086",
-                "text": "🦅🦁🏰",
-                "meaning": "Griffin"
-            },
-            {
-                "id": "em-my-087",
-                "text": "🪨🗿🏰",
-                "meaning": "Gargoyle"
-            },
-            {
-                "id": "em-my-088",
-                "text": "💀⛵🪙",
-                "meaning": "Charon"
-            },
-            {
-                "id": "em-my-089",
-                "text": "⛵🌊🌀",
-                "meaning": "Charybdis"
-            },
-            {
-                "id": "em-my-090",
-                "text": "🪨🧗‍♂️🔁",
-                "meaning": "Sisyphus"
-            },
-            {
-                "id": "em-my-091",
-                "text": "🍏🐍🌳",
-                "meaning": "Garden of Eden"
-            },
-            {
-                "id": "em-my-092",
-                "text": "🌊🚢🕊️",
-                "meaning": "Noah's Ark"
-            },
-            {
-                "id": "em-my-093",
-                "text": "🧱🏗️☁️",
-                "meaning": "Tower of Babel"
-            },
-            {
-                "id": "em-my-094",
-                "text": "🪨🏺📜",
-                "meaning": "Ten Commandments"
-            },
-            {
-                "id": "em-my-095",
-                "text": "👑🦁⚔️",
-                "meaning": "King David"
-            },
-            {
-                "id": "em-my-096",
-                "text": "💪💇‍♂️🏛️",
-                "meaning": "Samson"
-            },
-            {
-                "id": "em-my-097",
-                "text": "🐋🧔🌊",
-                "meaning": "Jonah"
-            },
-            {
-                "id": "em-my-098",
-                "text": "👼🪽⚔️",
-                "meaning": "Archangel Michael"
-            },
-            {
-                "id": "em-my-099",
-                "text": "🔥👿🐍",
-                "meaning": "Lucifer"
-            },
-            {
-                "id": "em-my-100",
-                "text": "🕊️✨🙏",
-                "meaning": "Holy Spirit"
-            },
-            {
-                "id": "em-my-101",
-                "text": "👑🏰🤺",
-                "meaning": "King Arthur"
-            },
-            {
-                "id": "em-my-102",
-                "text": "🛡️⚔️🌹",
-                "meaning": "Lancelot"
-            },
-            {
-                "id": "em-my-103",
-                "text": "🐲🗡️🛡️",
-                "meaning": "Saint George"
-            },
-            {
-                "id": "em-my-104",
-                "text": "🏹💰🌳",
-                "meaning": "Robin Hood"
-            },
-            {
-                "id": "em-my-105",
-                "text": "🚢🏝️📜",
-                "meaning": "Odysseus"
-            },
-            {
-                "id": "em-my-106",
-                "text": "🐏✨🌊",
-                "meaning": "Jason and the Argonauts"
-            },
-            {
-                "id": "em-my-107",
-                "text": "🗡️🧵🏛️",
-                "meaning": "Theseus"
-            },
-            {
-                "id": "em-my-108",
-                "text": "🛡️🪞👩‍🦲",
-                "meaning": "Perseus"
-            },
-            {
-                "id": "em-my-109",
-                "text": "🍎🔥🏛️",
-                "meaning": "Helen of Troy"
-            },
-            {
-                "id": "em-my-110",
-                "text": "🎻🔥🏛️",
-                "meaning": "Orpheus"
-            },
-            {
-                "id": "em-my-111",
-                "text": "🌾🌸💀",
-                "meaning": "Persephone"
-            },
-            {
-                "id": "em-my-112",
-                "text": "🕯️🏛️⚖️",
-                "meaning": "Nemesis"
-            },
-            {
-                "id": "em-my-113",
-                "text": "⚖️👁️🏛️",
-                "meaning": "Themis"
-            },
-            {
-                "id": "em-my-114",
-                "text": "🌙🦉🏛️",
-                "meaning": "Hecate"
-            },
-            {
-                "id": "em-my-115",
-                "text": "🏛️🔥🕯️",
-                "meaning": "Hestia"
-            },
-            {
-                "id": "em-my-116",
-                "text": "🌊🐉🐚",
-                "meaning": "Triton"
-            },
-            {
-                "id": "em-my-117",
-                "text": "🪈🐐🌲",
-                "meaning": "Pan"
-            },
-            {
-                "id": "em-my-118",
-                "text": "🌸🏹👧",
-                "meaning": "Flora"
-            },
-            {
-                "id": "em-my-119",
-                "text": "👥🚪🔑",
-                "meaning": "Janus"
-            },
-            {
-                "id": "em-my-120",
-                "text": "👑🌾🪐",
-                "meaning": "Saturn"
-            },
-            {
-                "id": "em-my-121",
-                "text": "🔨🌩️🐐",
-                "meaning": "Mjolnir"
-            },
-            {
-                "id": "em-my-122",
-                "text": "🗡️🛡️🐺",
-                "meaning": "Tyr"
-            },
-            {
-                "id": "em-my-123",
-                "text": "🏹❄️⛷️",
-                "meaning": "Ullr"
-            },
-            {
-                "id": "em-my-124",
-                "text": "🍏🧝‍♀️✨",
-                "meaning": "Idunn"
-            },
-            {
-                "id": "em-my-125",
-                "text": "🌊🚤🪙",
-                "meaning": "Njord"
-            },
-            {
-                "id": "em-my-126",
-                "text": "☠️🏰❄️",
-                "meaning": "Hel"
-            },
-            {
-                "id": "em-my-127",
-                "text": "📜🪨✨",
-                "meaning": "Runes"
-            },
-            {
-                "id": "em-my-128",
-                "text": "🧟‍♂️❄️⚔️",
-                "meaning": "Draugr"
-            },
-            {
-                "id": "em-my-129",
-                "text": "🪶📜🦅",
-                "meaning": "Thoth"
-            },
-            {
-                "id": "em-my-130",
-                "text": "🦛🐊🫀",
-                "meaning": "Ammit"
-            },
-            {
-                "id": "em-my-131",
-                "text": "🦁🔥☀️",
-                "meaning": "Sekhmet"
-            },
-            {
-                "id": "em-my-132",
-                "text": "🐄☀️🌾",
-                "meaning": "Hathor"
-            },
-            {
-                "id": "em-my-133",
-                "text": "📜💀⚖️",
-                "meaning": "Book of the Dead"
-            },
-            {
-                "id": "em-my-134",
-                "text": "🏺🧟‍♂️📜",
-                "meaning": "Mummy"
-            },
-            {
-                "id": "em-my-135",
-                "text": "👑🪷🏛️",
-                "meaning": "Brahma"
-            },
-            {
-                "id": "em-my-136",
-                "text": "🗡️🐒🏰",
-                "meaning": "Rama"
-            },
-            {
-                "id": "em-my-137",
-                "text": "🏹🌺👑",
-                "meaning": "Sita"
-            },
-            {
-                "id": "em-my-138",
-                "text": "🐍🩵🌊",
-                "meaning": "Shesha"
-            },
-            {
-                "id": "em-my-139",
-                "text": "🌕🐰⛩️",
-                "meaning": "Moon Rabbit"
-            },
-            {
-                "id": "em-my-140",
-                "text": "🐉🐢🌊",
-                "meaning": "Genbu"
-            },
-            {
-                "id": "em-my-141",
-                "text": "🐯⚪🍃",
-                "meaning": "Byakko"
-            },
-            {
-                "id": "em-my-142",
-                "text": "🦅🔴🔥",
-                "meaning": "Suzaku"
-            },
-            {
-                "id": "em-my-143",
-                "text": "🐉🔵⚡",
-                "meaning": "Seiryu"
-            },
-            {
-                "id": "em-my-144",
-                "text": "🦊🩸🌲",
-                "meaning": "Wendigo"
-            },
-            {
-                "id": "em-my-145",
-                "text": "🦅🪨🌩️",
-                "meaning": "Thunderbird"
-            },
-            {
-                "id": "em-my-146",
-                "text": "🐐🐍🩸",
-                "meaning": "Chupacabra"
-            },
-            {
-                "id": "em-my-147",
-                "text": "蜥🔥🪨",
-                "meaning": "Salamander"
-            },
-            {
-                "id": "em-my-148",
-                "text": "🐴🌊🌾",
-                "meaning": "Kelpie"
-            },
-            {
-                "id": "em-my-149",
-                "text": "🧚‍♀️✨🍃",
-                "meaning": "Pixie"
-            },
-            {
-                "id": "em-my-150",
-                "text": "🧌🪨🌉",
-                "meaning": "Troll"
-            }
+            {"id": "em-my-001", "text": "⚡👑🏛️", "meaning": "Zeus"},
+            {"id": "em-my-002", "text": "🔱🌊🐴", "meaning": "Poseidon"},
+            {"id": "em-my-003", "text": "💀🔥👑", "meaning": "Hades"},
+            {"id": "em-my-004", "text": "🔨⚡🌩️", "meaning": "Thor"},
+            {"id": "em-my-005", "text": "🐍😈🎭", "meaning": "Loki"},
+            {"id": "em-my-006", "text": "🐍👩👁️", "meaning": "Medusa"},
+            {"id": "em-my-007", "text": "🐂🏛️🌀", "meaning": "Minotaur"},
+            {"id": "em-my-008", "text": "🔥🦅✨", "meaning": "Phoenix"},
+            {"id": "em-my-009", "text": "🪽🐎✨", "meaning": "Pegasus"},
+            {"id": "em-my-010", "text": "🐶🐶🐶", "meaning": "Cerberus"},
+            {"id": "em-my-011", "text": "👁️🐺🧙‍♂️", "meaning": "Odin"},
+            {"id": "em-my-012", "text": "☀️🏹🎼", "meaning": "Apollo"},
+            {"id": "em-my-013", "text": "🏹🌙🦌", "meaning": "Artemis"},
+            {"id": "em-my-014", "text": "🦉🛡️🏛️", "meaning": "Athena"},
+            {"id": "em-my-015", "text": "⚔️🛡️🩸", "meaning": "Ares"},
+            {"id": "em-my-016", "text": "🕊️🐚💖", "meaning": "Aphrodite"},
+            {"id": "em-my-017", "text": "🪽👟📨", "meaning": "Hermes"},
+            {"id": "em-my-018", "text": "🔨🔥🌋", "meaning": "Hephaestus"},
+            {"id": "em-my-019", "text": "🍇🍷🎭", "meaning": "Dionysus"},
+            {"id": "em-my-020", "text": "👑🦚🏛️", "meaning": "Hera"},
+            {"id": "em-my-021", "text": "💘🏹💖", "meaning": "Eros"},
+            {"id": "em-my-022", "text": "🌾🍎🚜", "meaning": "Demeter"},
+            {"id": "em-my-023", "text": "🦁🦁💪", "meaning": "Hercules"},
+            {"id": "em-my-024", "text": "🗡️🛡️🦶", "meaning": "Achilles"},
+            {"id": "em-my-025", "text": "🐴🪵⚔️", "meaning": "Trojan Horse"},
+            {"id": "em-my-026", "text": "📦⚠️💀", "meaning": "Pandora's Box"},
+            {"id": "em-my-027", "text": "🪽☀️🕯️", "meaning": "Icarus"},
+            {"id": "em-my-028", "text": "🪞🥀💧", "meaning": "Narcissus"},
+            {"id": "em-my-029", "text": "👑🧈✨", "meaning": "King Midas"},
+            {"id": "em-my-030", "text": "🌍🏋️‍♂️🗿", "meaning": "Atlas"},
+            {"id": "em-my-031", "text": "🔥🦅🪨", "meaning": "Prometheus"},
+            {"id": "em-my-032", "text": "🐑✨🪙", "meaning": "Golden Fleece"},
+            {"id": "em-my-033", "text": "👨‍🐴🏹", "meaning": "Centaur"},
+            {"id": "em-my-034", "text": "👁️🪨🗿", "meaning": "Cyclops"},
+            {"id": "em-my-035", "text": "🧜‍♀️🪨🎶", "meaning": "Siren"},
+            {"id": "em-my-036", "text": "🦁🦅🗿", "meaning": "Sphinx"},
+            {"id": "em-my-037", "text": "🐍🐍🐍", "meaning": "Hydra"},
+            {"id": "em-my-038", "text": "🦁🐐🐍", "meaning": "Chimera"},
+            {"id": "em-my-039", "text": "🐙🌊⛵", "meaning": "Kraken"},
+            {"id": "em-my-040", "text": "🌈🌉🛡️", "meaning": "Heimdall"},
+            {"id": "em-my-041", "text": "🪽⚔️👸", "meaning": "Valkyrie"},
+            {"id": "em-my-042", "text": "🌳🌍🍃", "meaning": "Yggdrasil"},
+            {"id": "em-my-043", "text": "🐺⛓️🌕", "meaning": "Fenrir"},
+            {"id": "em-my-044", "text": "🐍🌊🌊", "meaning": "Jormungandr"},
+            {"id": "em-my-045", "text": "🐱🐱🛷", "meaning": "Freya"},
+            {"id": "em-my-046", "text": "⚔️🏰🍻", "meaning": "Valhalla"},
+            {"id": "em-my-047", "text": "🦮🐕‍🦺🦮", "meaning": "Anubis"},
+            {"id": "em-my-048", "text": "☀️🦅👁️", "meaning": "Ra"},
+            {"id": "em-my-049", "text": "👑🧟‍♂️🌾", "meaning": "Osiris"},
+            {"id": "em-my-050", "text": "🪽🪄👑", "meaning": "Isis"},
+            {"id": "em-my-051", "text": "🦅👑👁️", "meaning": "Horus"},
+            {"id": "em-my-052", "text": "🏜️🌪️🦮", "meaning": "Seth"},
+            {"id": "em-my-053", "text": "🐱👑☀️", "meaning": "Bastet"},
+            {"id": "em-my-054", "text": "🪲☀️✨", "meaning": "Scarab"},
+            {"id": "em-my-055", "text": "🪈🐘🌺", "meaning": "Ganesha"},
+            {"id": "em-my-056", "text": "🔱👁️🐍", "meaning": "Shiva"},
+            {"id": "em-my-057", "text": "🪷🐍🪩", "meaning": "Vishnu"},
+            {"id": "em-my-058", "text": "🐒🏹👑", "meaning": "Hanuman"},
+            {"id": "em-my-059", "text": "🪈🦚🩵", "meaning": "Krishna"},
+            {"id": "em-my-060", "text": "🗡️👅🩸", "meaning": "Kali"},
+            {"id": "em-my-061", "text": "🐅⚔️🛡️", "meaning": "Durga"},
+            {"id": "em-my-062", "text": "🪷🪔🪙", "meaning": "Lakshmi"},
+            {"id": "em-my-063", "text": "🪕🦢📜", "meaning": "Saraswati"},
+            {"id": "em-my-064", "text": "👑👹🏹", "meaning": "Ravana"},
+            {"id": "em-my-065", "text": "🦅🔥🐍", "meaning": "Garuda"},
+            {"id": "em-my-066", "text": "🐉☁️🌊", "meaning": "Chinese Dragon"},
+            {"id": "em-my-067", "text": "🐒🪄☁️", "meaning": "Sun Wukong"},
+            {"id": "em-my-068", "text": "☀️⛩️🇯🇵", "meaning": "Amaterasu"},
+            {"id": "em-my-069", "text": "🦊🔥📜", "meaning": "Kitsune"},
+            {"id": "em-my-070", "text": "👹🔨🪵", "meaning": "Oni"},
+            {"id": "em-my-071", "text": "⚡🥁🌩️", "meaning": "Raijin"},
+            {"id": "em-my-072", "text": "💨🌪️🎒", "meaning": "Fujin"},
+            {"id": "em-my-073", "text": "🥒🥒🥒", "meaning": "Kappa"},
+            {"id": "em-my-074", "text": "🐍🪽🦅", "meaning": "Quetzalcoatl"},
+            {"id": "em-my-075", "text": "🗡️🪨👑", "meaning": "Excalibur"},
+            {"id": "em-my-076", "text": "🧙‍♂️👑🪄", "meaning": "Merlin"},
+            {"id": "em-my-077", "text": "🛡️🏆⚔️", "meaning": "Holy Grail"},
+            {"id": "em-my-078", "text": "🦄✨🪽", "meaning": "Unicorn"},
+            {"id": "em-my-079", "text": "🧜‍♀️🐚🌊", "meaning": "Mermaid"},
+            {"id": "em-my-080", "text": "👣❄️🏔️", "meaning": "Yeti"},
+            {"id": "em-my-081", "text": "👣🌲🪵", "meaning": "Bigfoot"},
+            {"id": "em-my-082", "text": "🧛‍♂️🩸🦇", "meaning": "Vampire"},
+            {"id": "em-my-083", "text": "🐺🌕🩸", "meaning": "Werewolf"},
+            {"id": "em-my-084", "text": "☘️🌈🪙", "meaning": "Leprechaun"},
+            {"id": "em-my-085", "text": "🗣️👻😱", "meaning": "Banshee"},
+            {"id": "em-my-086", "text": "🦅🦁🏰", "meaning": "Griffin"},
+            {"id": "em-my-087", "text": "🪨🗿🏰", "meaning": "Gargoyle"},
+            {"id": "em-my-088", "text": "💀⛵🪙", "meaning": "Charon"},
+            {"id": "em-my-089", "text": "⛵🌊🌀", "meaning": "Charybdis"},
+            {"id": "em-my-090", "text": "🪨🧗‍♂️🔁", "meaning": "Sisyphus"},
+            {"id": "em-my-091", "text": "🍏🐍🌳", "meaning": "Garden of Eden"},
+            {"id": "em-my-092", "text": "🌊🚢🕊️", "meaning": "Noah's Ark"},
+            {"id": "em-my-093", "text": "🧱🏗️☁️", "meaning": "Tower of Babel"},
+            {"id": "em-my-094", "text": "🪨🏺📜", "meaning": "Ten Commandments"},
+            {"id": "em-my-095", "text": "👑🦁⚔️", "meaning": "King David"},
+            {"id": "em-my-096", "text": "💪💇‍♂️🏛️", "meaning": "Samson"},
+            {"id": "em-my-097", "text": "🐋🧔🌊", "meaning": "Jonah"},
+            {"id": "em-my-098", "text": "👼🪽⚔️", "meaning": "Archangel Michael"},
+            {"id": "em-my-099", "text": "🔥👿🐍", "meaning": "Lucifer"},
+            {"id": "em-my-100", "text": "🕊️✨🙏", "meaning": "Holy Spirit"},
+            {"id": "em-my-101", "text": "👑🏰🤺", "meaning": "King Arthur"},
+            {"id": "em-my-102", "text": "🛡️⚔️🌹", "meaning": "Lancelot"},
+            {"id": "em-my-103", "text": "🐲🗡️🛡️", "meaning": "Saint George"},
+            {"id": "em-my-104", "text": "🏹💰🌳", "meaning": "Robin Hood"},
+            {"id": "em-my-105", "text": "🚢🏝️📜", "meaning": "Odysseus"},
+            {"id": "em-my-106", "text": "🐏✨🌊", "meaning": "Jason and the Argonauts"},
+            {"id": "em-my-107", "text": "🗡️🧵🏛️", "meaning": "Theseus"},
+            {"id": "em-my-108", "text": "🛡️🪞👩‍🦲", "meaning": "Perseus"},
+            {"id": "em-my-109", "text": "🍎🔥🏛️", "meaning": "Helen of Troy"},
+            {"id": "em-my-110", "text": "🎻🔥🏛️", "meaning": "Orpheus"},
+            {"id": "em-my-111", "text": "🌾🌸💀", "meaning": "Persephone"},
+            {"id": "em-my-112", "text": "🕯️🏛️⚖️", "meaning": "Nemesis"},
+            {"id": "em-my-113", "text": "⚖️👁️🏛️", "meaning": "Themis"},
+            {"id": "em-my-114", "text": "🌙🦉🏛️", "meaning": "Hecate"},
+            {"id": "em-my-115", "text": "🏛️🔥🕯️", "meaning": "Hestia"},
+            {"id": "em-my-116", "text": "🌊🐉🐚", "meaning": "Triton"},
+            {"id": "em-my-117", "text": "🪈🐐🌲", "meaning": "Pan"},
+            {"id": "em-my-118", "text": "🌸🏹👧", "meaning": "Flora"},
+            {"id": "em-my-119", "text": "👥🚪🔑", "meaning": "Janus"},
+            {"id": "em-my-120", "text": "👑🌾🪐", "meaning": "Saturn"},
+            {"id": "em-my-121", "text": "🔨🌩️🐐", "meaning": "Mjolnir"},
+            {"id": "em-my-122", "text": "🗡️🛡️🐺", "meaning": "Tyr"},
+            {"id": "em-my-123", "text": "🏹❄️⛷️", "meaning": "Ullr"},
+            {"id": "em-my-124", "text": "🍏🧝‍♀️✨", "meaning": "Idunn"},
+            {"id": "em-my-125", "text": "🌊🚤🪙", "meaning": "Njord"},
+            {"id": "em-my-126", "text": "☠️🏰❄️", "meaning": "Hel"},
+            {"id": "em-my-127", "text": "📜🪨✨", "meaning": "Runes"},
+            {"id": "em-my-128", "text": "🧟‍♂️❄️⚔️", "meaning": "Draugr"},
+            {"id": "em-my-129", "text": "🪶📜🦅", "meaning": "Thoth"},
+            {"id": "em-my-130", "text": "🦛🐊🫀", "meaning": "Ammit"},
+            {"id": "em-my-131", "text": "🦁🔥☀️", "meaning": "Sekhmet"},
+            {"id": "em-my-132", "text": "🐄☀️🌾", "meaning": "Hathor"},
+            {"id": "em-my-133", "text": "📜💀⚖️", "meaning": "Book of the Dead"},
+            {"id": "em-my-134", "text": "🏺🧟‍♂️📜", "meaning": "Mummy"},
+            {"id": "em-my-135", "text": "👑🪷🏛️", "meaning": "Brahma"},
+            {"id": "em-my-136", "text": "🗡️🐒🏰", "meaning": "Rama"},
+            {"id": "em-my-137", "text": "🏹🌺👑", "meaning": "Sita"},
+            {"id": "em-my-138", "text": "🐍🩵🌊", "meaning": "Shesha"},
+            {"id": "em-my-139", "text": "🌕🐰⛩️", "meaning": "Moon Rabbit"},
+            {"id": "em-my-140", "text": "🐉🐢🌊", "meaning": "Genbu"},
+            {"id": "em-my-141", "text": "🐯⚪🍃", "meaning": "Byakko"},
+            {"id": "em-my-142", "text": "🦅🔴🔥", "meaning": "Suzaku"},
+            {"id": "em-my-143", "text": "🐉🔵⚡", "meaning": "Seiryu"},
+            {"id": "em-my-144", "text": "🦊🩸🌲", "meaning": "Wendigo"},
+            {"id": "em-my-145", "text": "🦅🪨🌩️", "meaning": "Thunderbird"},
+            {"id": "em-my-146", "text": "🐐🐍🩸", "meaning": "Chupacabra"},
+            {"id": "em-my-147", "text": "蜥🔥🪨", "meaning": "Salamander"},
+            {"id": "em-my-148", "text": "🐴🌊🌾", "meaning": "Kelpie"},
+            {"id": "em-my-149", "text": "🧚‍♀️✨🍃", "meaning": "Pixie"},
+            {"id": "em-my-150", "text": "🧌🪨🌉", "meaning": "Troll"}
         ],
         "type": "default",
         "color": "blue",

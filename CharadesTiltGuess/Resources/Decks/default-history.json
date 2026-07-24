@@ -4,1006 +4,256 @@
         "name": "History",
         "description": "People, places, and moments from the past.",
         "cards": [
-            {
-                "id": "default-history-expanded-000",
-                "text": "Pyramids"
-            },
-            {
-                "id": "default-history-expanded-001",
-                "text": "Gladiator"
-            },
-            {
-                "id": "default-history-expanded-002",
-                "text": "Knights"
-            },
-            {
-                "id": "default-history-expanded-003",
-                "text": "Samurai"
-            },
-            {
-                "id": "default-history-expanded-004",
-                "text": "Vikings"
-            },
-            {
-                "id": "default-history-expanded-005",
-                "text": "Pharaoh"
-            },
-            {
-                "id": "default-history-expanded-006",
-                "text": "Cleopatra"
-            },
-            {
-                "id": "default-history-expanded-007",
-                "text": "Julius Caesar"
-            },
-            {
-                "id": "default-history-expanded-008",
-                "text": "Alexander the Great"
-            },
-            {
-                "id": "default-history-expanded-009",
-                "text": "Genghis Khan"
-            },
-            {
-                "id": "default-history-expanded-010",
-                "text": "Napoleon"
-            },
-            {
-                "id": "default-history-expanded-011",
-                "text": "George Washington"
-            },
-            {
-                "id": "default-history-expanded-012",
-                "text": "Abraham Lincoln"
-            },
-            {
-                "id": "default-history-expanded-013",
-                "text": "Winston Churchill"
-            },
-            {
-                "id": "default-history-expanded-014",
-                "text": "Adolf Hitler"
-            },
-            {
-                "id": "default-history-expanded-015",
-                "text": "Joseph Stalin"
-            },
-            {
-                "id": "default-history-expanded-016",
-                "text": "Mao Zedong"
-            },
-            {
-                "id": "default-history-expanded-017",
-                "text": "Fidel Castro"
-            },
-            {
-                "id": "default-history-expanded-018",
-                "text": "Che Guevara"
-            },
-            {
-                "id": "default-history-expanded-019",
-                "text": "Nelson Mandela"
-            },
-            {
-                "id": "default-history-expanded-020",
-                "text": "Mahatma Gandhi"
-            },
-            {
-                "id": "default-history-expanded-021",
-                "text": "Martin Luther King Jr"
-            },
-            {
-                "id": "default-history-expanded-022",
-                "text": "Malcolm X"
-            },
-            {
-                "id": "default-history-expanded-023",
-                "text": "Rosa Parks"
-            },
-            {
-                "id": "default-history-expanded-024",
-                "text": "Harriet Tubman"
-            },
-            {
-                "id": "default-history-expanded-025",
-                "text": "Frederick Douglass"
-            },
-            {
-                "id": "default-history-expanded-026",
-                "text": "Susan B Anthony"
-            },
-            {
-                "id": "default-history-expanded-027",
-                "text": "Elizabeth Cady Stanton"
-            },
-            {
-                "id": "default-history-expanded-028",
-                "text": "Sojourner Truth"
-            },
-            {
-                "id": "default-history-expanded-029",
-                "text": "Joan of Arc"
-            },
-            {
-                "id": "default-history-expanded-030",
-                "text": "Queen Elizabeth I"
-            },
-            {
-                "id": "default-history-expanded-031",
-                "text": "Queen Victoria"
-            },
-            {
-                "id": "default-history-expanded-032",
-                "text": "Marie Antoinette"
-            },
-            {
-                "id": "default-history-expanded-033",
-                "text": "Catherine the Great"
-            },
-            {
-                "id": "default-history-expanded-034",
-                "text": "Empress Wu Zetian"
-            },
-            {
-                "id": "default-history-expanded-035",
-                "text": "Hatshepsut"
-            },
-            {
-                "id": "default-history-expanded-036",
-                "text": "Nefertiti"
-            },
-            {
-                "id": "default-history-expanded-037",
-                "text": "Boudicca"
-            },
-            {
-                "id": "default-history-expanded-039",
-                "text": "Sacagawea"
-            },
-            {
-                "id": "default-history-expanded-040",
-                "text": "Pocahontas"
-            },
-            {
-                "id": "default-history-expanded-041",
-                "text": "Amelia Earhart"
-            },
-            {
-                "id": "default-history-expanded-042",
-                "text": "Marie Curie"
-            },
-            {
-                "id": "default-history-expanded-043",
-                "text": "Florence Nightingale"
-            },
-            {
-                "id": "default-history-expanded-044",
-                "text": "Clara Barton"
-            },
-            {
-                "id": "default-history-expanded-045",
-                "text": "Helen Keller"
-            },
-            {
-                "id": "default-history-expanded-046",
-                "text": "Anne Frank"
-            },
-            {
-                "id": "default-history-expanded-047",
-                "text": "Mother Teresa"
-            },
-            {
-                "id": "default-history-expanded-048",
-                "text": "Princess Diana"
-            },
-            {
-                "id": "default-history-expanded-049",
-                "text": "Margaret Thatcher"
-            },
-            {
-                "id": "default-history-expanded-050",
-                "text": "Golda Meir"
-            },
-            {
-                "id": "default-history-expanded-051",
-                "text": "Indira Gandhi"
-            },
-            {
-                "id": "default-history-expanded-052",
-                "text": "Benazir Bhutto"
-            },
-            {
-                "id": "default-history-expanded-053",
-                "text": "Eva Peron"
-            },
-            {
-                "id": "default-history-expanded-054",
-                "text": "Frida Kahlo"
-            },
-            {
-                "id": "default-history-expanded-055",
-                "text": "Georgia O'Keeffe"
-            },
-            {
-                "id": "default-history-expanded-056",
-                "text": "Mary Cassatt"
-            },
-            {
-                "id": "default-history-expanded-057",
-                "text": "Artemisia Gentileschi"
-            },
-            {
-                "id": "default-history-expanded-058",
-                "text": "Sofonisba Anguissola"
-            },
-            {
-                "id": "default-history-expanded-059",
-                "text": "Elisabeth Vigee Le Brun"
-            },
-            {
-                "id": "default-history-expanded-060",
-                "text": "Angelica Kauffman"
-            },
-            {
-                "id": "default-history-expanded-061",
-                "text": "Rosa Bonheur"
-            },
-            {
-                "id": "default-history-expanded-062",
-                "text": "Berthe Morisot"
-            },
-            {
-                "id": "default-history-expanded-064",
-                "text": "Suzanne Valadon"
-            },
-            {
-                "id": "default-history-expanded-065",
-                "text": "Sonia Delaunay"
-            },
-            {
-                "id": "default-history-expanded-066",
-                "text": "Natalia Goncharova"
-            },
-            {
-                "id": "default-history-expanded-067",
-                "text": "Lyubov Popova"
-            },
-            {
-                "id": "default-history-expanded-068",
-                "text": "Varvara Stepanova"
-            },
-            {
-                "id": "default-history-expanded-069",
-                "text": "Alexandra Exter"
-            },
-            {
-                "id": "default-history-expanded-070",
-                "text": "Olga Rozanova"
-            },
-            {
-                "id": "default-history-expanded-071",
-                "text": "Nadezhda Udaltsova"
-            },
-            {
-                "id": "default-history-expanded-072",
-                "text": "Maria Ender"
-            },
-            {
-                "id": "default-history-expanded-073",
-                "text": "Ksenia Ender"
-            },
-            {
-                "id": "default-history-expanded-074",
-                "text": "Zinaida Serebriakova"
-            },
-            {
-                "id": "default-history-expanded-075",
-                "text": "Vera Mukhina"
-            },
-            {
-                "id": "default-history-expanded-076",
-                "text": "Anna Golubkina"
-            },
-            {
-                "id": "default-history-expanded-077",
-                "text": "Sarra Lebedeva"
-            },
-            {
-                "id": "default-history-expanded-078",
-                "text": "Beatrice Wood"
-            },
-            {
-                "id": "default-history-expanded-079",
-                "text": "Florine Stettheimer"
-            },
-            {
-                "id": "default-history-expanded-080",
-                "text": "Romaine Brooks"
-            },
-            {
-                "id": "default-history-expanded-081",
-                "text": "Gluck"
-            },
-            {
-                "id": "default-history-expanded-082",
-                "text": "Marie Laurencin"
-            },
-            {
-                "id": "default-history-expanded-083",
-                "text": "Tamara de Lempicka"
-            },
-            {
-                "id": "default-history-expanded-084",
-                "text": "Dora Maar"
-            },
-            {
-                "id": "default-history-expanded-085",
-                "text": "Leonora Carrington"
-            },
-            {
-                "id": "default-history-expanded-086",
-                "text": "Remedios Varo"
-            },
-            {
-                "id": "default-history-expanded-088",
-                "text": "Diego Rivera"
-            },
-            {
-                "id": "default-history-expanded-089",
-                "text": "David Alfaro Siqueiros"
-            },
-            {
-                "id": "default-history-expanded-090",
-                "text": "Jose Clemente Orozco"
-            },
-            {
-                "id": "default-history-expanded-091",
-                "text": "Rufino Tamayo"
-            },
-            {
-                "id": "default-history-expanded-092",
-                "text": "Francisco Toledo"
-            },
-            {
-                "id": "default-history-expanded-093",
-                "text": "Rodolfo Morales"
-            },
-            {
-                "id": "default-history-expanded-094",
-                "text": "Gunther Gerzso"
-            },
-            {
-                "id": "default-history-expanded-095",
-                "text": "Mathias Goeritz"
-            },
-            {
-                "id": "default-history-expanded-096",
-                "text": "Pedro Coronel"
-            },
-            {
-                "id": "default-history-expanded-097",
-                "text": "Rafael Coronel"
-            },
-            {
-                "id": "default-history-expanded-100",
-                "text": "Alice Rahon"
-            },
-            {
-                "id": "default-history-expanded-101",
-                "text": "Kati Horna"
-            },
-            {
-                "id": "default-history-expanded-102",
-                "text": "Lola Alvarez Bravo"
-            },
-            {
-                "id": "default-history-expanded-103",
-                "text": "Tina Modotti"
-            },
-            {
-                "id": "default-history-expanded-104",
-                "text": "Graciela Iturbide"
-            },
-            {
-                "id": "default-history-expanded-105",
-                "text": "Mariana Yampolsky"
-            },
-            {
-                "id": "default-history-expanded-106",
-                "text": "Manuel Alvarez Bravo"
-            },
-            {
-                "id": "default-history-expanded-107",
-                "text": "Gabriel Figueroa"
-            },
-            {
-                "id": "default-history-expanded-108",
-                "text": "Emilio Fernandez"
-            },
-            {
-                "id": "default-history-expanded-109",
-                "text": "Ismael Rodriguez"
-            },
-            {
-                "id": "default-history-expanded-110",
-                "text": "Roberto Gavaldon"
-            },
-            {
-                "id": "default-history-expanded-111",
-                "text": "Julio Bracho"
-            },
-            {
-                "id": "default-history-expanded-112",
-                "text": "Luis Bunuel"
-            },
-            {
-                "id": "default-history-expanded-113",
-                "text": "Alejandro Jodorowsky"
-            },
-            {
-                "id": "default-history-expanded-114",
-                "text": "Arturo Ripstein"
-            },
-            {
-                "id": "default-history-expanded-115",
-                "text": "Felipe Cazals"
-            },
-            {
-                "id": "default-history-expanded-116",
-                "text": "Jorge Fons"
-            },
-            {
-                "id": "default-history-expanded-117",
-                "text": "Paul Leduc"
-            },
-            {
-                "id": "default-history-expanded-118",
-                "text": "Jaime Humberto Hermosillo"
-            },
-            {
-                "id": "default-history-expanded-119",
-                "text": "Alfonso Arau"
-            },
-            {
-                "id": "default-history-expanded-120",
-                "text": "Alfonso Cuaron"
-            },
-            {
-                "id": "default-history-expanded-121",
-                "text": "Guillermo del Toro"
-            },
-            {
-                "id": "default-history-expanded-122",
-                "text": "Alejandro Gonzalez Inarritu"
-            },
-            {
-                "id": "default-history-expanded-123",
-                "text": "Carlos Reygadas"
-            },
-            {
-                "id": "default-history-expanded-124",
-                "text": "Amat Escalante"
-            },
-            {
-                "id": "default-history-expanded-125",
-                "text": "Michel Franco"
-            },
-            {
-                "id": "default-history-expanded-126",
-                "text": "Fernando Eimbcke"
-            },
-            {
-                "id": "default-history-expanded-127",
-                "text": "Eugenio Derbez"
-            },
-            {
-                "id": "default-history-expanded-128",
-                "text": "Gael Garcia Bernal"
-            },
-            {
-                "id": "default-history-expanded-129",
-                "text": "Diego Luna"
-            },
-            {
-                "id": "default-history-expanded-130",
-                "text": "Salma Hayek"
-            },
-            {
-                "id": "default-history-expanded-131",
-                "text": "Demian Bichir"
-            },
-            {
-                "id": "default-history-expanded-132",
-                "text": "Katy Jurado"
-            },
-            {
-                "id": "default-history-expanded-133",
-                "text": "Dolores del Rio"
-            },
-            {
-                "id": "default-history-expanded-134",
-                "text": "Maria Felix"
-            },
-            {
-                "id": "default-history-expanded-135",
-                "text": "Pedro Infante"
-            },
-            {
-                "id": "default-history-expanded-136",
-                "text": "Jorge Negrete"
-            },
-            {
-                "id": "default-history-expanded-137",
-                "text": "Javier Solis"
-            },
-            {
-                "id": "default-history-expanded-138",
-                "text": "Jose Alfredo Jimenez"
-            },
-            {
-                "id": "default-history-expanded-139",
-                "text": "Vicente Fernandez"
-            },
-            {
-                "id": "default-history-expanded-140",
-                "text": "Alejandro Fernandez"
-            },
-            {
-                "id": "default-history-expanded-141",
-                "text": "Pepe Aguilar"
-            },
-            {
-                "id": "default-history-expanded-142",
-                "text": "Antonio Aguilar"
-            },
-            {
-                "id": "default-history-expanded-143",
-                "text": "Flor Silvestre"
-            },
-            {
-                "id": "default-history-expanded-144",
-                "text": "Lucha Villa"
-            },
-            {
-                "id": "default-history-expanded-145",
-                "text": "Amalia Mendoza"
-            },
-            {
-                "id": "default-history-expanded-146",
-                "text": "Chavela Vargas"
-            },
-            {
-                "id": "default-history-expanded-147",
-                "text": "Lola Beltran"
-            },
-            {
-                "id": "default-history-expanded-148",
-                "text": "Juan Gabriel"
-            },
-            {
-                "id": "default-history-expanded-149",
-                "text": "Rocio Durcal"
-            },
-            {
-                "id": "default-history-expanded-150",
-                "text": "Jose Jose"
-            },
-            {
-                "id": "default-history-expanded-151",
-                "text": "Luis Miguel"
-            },
-            {
-                "id": "default-history-expanded-152",
-                "text": "Cristian Castro"
-            },
-            {
-                "id": "default-history-expanded-153",
-                "text": "Alejandro Sanz"
-            },
-            {
-                "id": "default-history-expanded-154",
-                "text": "Ricky Martin"
-            },
-            {
-                "id": "default-history-expanded-155",
-                "text": "Enrique Iglesias"
-            },
-            {
-                "id": "default-history-expanded-156",
-                "text": "Shakira"
-            },
-            {
-                "id": "default-history-expanded-157",
-                "text": "Jennifer Lopez"
-            },
-            {
-                "id": "default-history-expanded-158",
-                "text": "Marc Anthony"
-            },
-            {
-                "id": "default-history-expanded-159",
-                "text": "Romeo Santos"
-            },
-            {
-                "id": "default-history-expanded-160",
-                "text": "Prince Royce"
-            },
-            {
-                "id": "default-history-expanded-161",
-                "text": "Aventura"
-            },
-            {
-                "id": "default-history-expanded-162",
-                "text": "Wisin y Yandel"
-            },
-            {
-                "id": "default-history-expanded-163",
-                "text": "Daddy Yankee"
-            },
-            {
-                "id": "default-history-expanded-164",
-                "text": "Don Omar"
-            },
-            {
-                "id": "default-history-expanded-165",
-                "text": "Tego Calderon"
-            },
-            {
-                "id": "default-history-expanded-166",
-                "text": "Vico C"
-            },
-            {
-                "id": "default-history-expanded-167",
-                "text": "Residente"
-            },
-            {
-                "id": "default-history-expanded-168",
-                "text": "Calle 13"
-            },
-            {
-                "id": "default-history-expanded-169",
-                "text": "Bad Bunny"
-            },
-            {
-                "id": "default-history-expanded-170",
-                "text": "J Balvin"
-            },
-            {
-                "id": "default-history-expanded-171",
-                "text": "Maluma"
-            },
-            {
-                "id": "default-history-expanded-172",
-                "text": "Ozuna"
-            },
-            {
-                "id": "default-history-expanded-173",
-                "text": "Anuel AA"
-            },
-            {
-                "id": "default-history-expanded-174",
-                "text": "Karol G"
-            },
-            {
-                "id": "default-history-expanded-175",
-                "text": "Natti Natasha"
-            },
-            {
-                "id": "default-history-expanded-176",
-                "text": "Becky G"
-            },
-            {
-                "id": "default-history-expanded-177",
-                "text": "Rosalia"
-            },
-            {
-                "id": "default-history-expanded-178",
-                "text": "C Tangana"
-            },
-            {
-                "id": "default-history-expanded-179",
-                "text": "Jhay Cortez"
-            },
-            {
-                "id": "default-history-expanded-180",
-                "text": "Rauw Alejandro"
-            },
-            {
-                "id": "default-history-expanded-181",
-                "text": "Myke Towers"
-            },
-            {
-                "id": "default-history-expanded-182",
-                "text": "Sech"
-            },
-            {
-                "id": "default-history-expanded-183",
-                "text": "Dalex"
-            },
-            {
-                "id": "default-history-expanded-184",
-                "text": "Lenny Tavarez"
-            },
-            {
-                "id": "default-history-expanded-185",
-                "text": "Justin Quiles"
-            },
-            {
-                "id": "default-history-expanded-186",
-                "text": "Feid"
-            },
-            {
-                "id": "default-history-expanded-187",
-                "text": "Mora"
-            },
-            {
-                "id": "default-history-expanded-188",
-                "text": "Juhn"
-            },
-            {
-                "id": "default-history-expanded-189",
-                "text": "Eladio Carrion"
-            },
-            {
-                "id": "default-history-expanded-190",
-                "text": "Brytiago"
-            },
-            {
-                "id": "default-history-expanded-191",
-                "text": "Jon Z"
-            },
-            {
-                "id": "default-history-expanded-192",
-                "text": "Miky Woodz"
-            },
-            {
-                "id": "default-history-expanded-193",
-                "text": "Darell"
-            },
-            {
-                "id": "default-history-expanded-194",
-                "text": "Nio Garcia"
-            },
-            {
-                "id": "default-history-expanded-195",
-                "text": "Casper Magico"
-            },
-            {
-                "id": "default-history-extra-196",
-                "text": "Ancient Egypt"
-            },
-            {
-                "id": "default-history-extra-197",
-                "text": "Ancient Greece"
-            },
-            {
-                "id": "default-history-extra-198",
-                "text": "Ancient Rome"
-            },
-            {
-                "id": "default-history-extra-199",
-                "text": "Ancient China"
-            },
-            {
-                "id": "default-history-extra-200",
-                "text": "Ancient India"
-            },
-            {
-                "id": "default-history-extra-201",
-                "text": "Mesopotamia"
-            },
-            {
-                "id": "default-history-extra-202",
-                "text": "Babylon"
-            },
-            {
-                "id": "default-history-extra-203",
-                "text": "Sumer"
-            },
-            {
-                "id": "default-history-extra-204",
-                "text": "Assyria"
-            },
-            {
-                "id": "default-history-extra-205",
-                "text": "Persian Empire"
-            },
-            {
-                "id": "default-history-extra-206",
-                "text": "Macedonian Empire"
-            },
-            {
-                "id": "default-history-extra-207",
-                "text": "Han Dynasty"
-            },
-            {
-                "id": "default-history-extra-208",
-                "text": "Tang Dynasty"
-            },
-            {
-                "id": "default-history-extra-209",
-                "text": "Song Dynasty"
-            },
-            {
-                "id": "default-history-extra-210",
-                "text": "Ming Dynasty"
-            },
-            {
-                "id": "default-history-extra-211",
-                "text": "Qing Dynasty"
-            },
-            {
-                "id": "default-history-extra-212",
-                "text": "Maurya Empire"
-            },
-            {
-                "id": "default-history-extra-213",
-                "text": "Gupta Empire"
-            },
-            {
-                "id": "default-history-extra-214",
-                "text": "Mughal Empire"
-            },
-            {
-                "id": "default-history-extra-215",
-                "text": "Maya Civilization"
-            },
-            {
-                "id": "default-history-extra-216",
-                "text": "Aztec Empire"
-            },
-            {
-                "id": "default-history-extra-217",
-                "text": "Inca Empire"
-            },
-            {
-                "id": "default-history-extra-218",
-                "text": "Olmec Civilization"
-            },
-            {
-                "id": "default-history-extra-219",
-                "text": "Toltec Civilization"
-            },
-            {
-                "id": "default-history-extra-220",
-                "text": "Zapotec Civilization"
-            },
-            {
-                "id": "default-history-extra-221",
-                "text": "Teotihuacan"
-            },
-            {
-                "id": "default-history-extra-222",
-                "text": "Byzantine Empire"
-            },
-            {
-                "id": "default-history-extra-223",
-                "text": "Holy Roman Empire"
-            },
-            {
-                "id": "default-history-extra-224",
-                "text": "Ottoman Empire"
-            },
-            {
-                "id": "default-history-extra-225",
-                "text": "Safavid Empire"
-            },
-            {
-                "id": "default-history-extra-227",
-                "text": "British Empire"
-            },
-            {
-                "id": "default-history-extra-228",
-                "text": "French Empire"
-            },
-            {
-                "id": "default-history-extra-229",
-                "text": "Spanish Empire"
-            },
-            {
-                "id": "default-history-extra-230",
-                "text": "Portuguese Empire"
-            },
-            {
-                "id": "default-history-extra-231",
-                "text": "Dutch Empire"
-            },
-            {
-                "id": "default-history-extra-232",
-                "text": "Russian Empire"
-            },
-            {
-                "id": "default-history-extra-233",
-                "text": "Austro-Hungarian Empire"
-            },
-            {
-                "id": "default-history-extra-234",
-                "text": "German Empire"
-            },
-            {
-                "id": "default-history-extra-235",
-                "text": "Japanese Empire"
-            },
-            {
-                "id": "default-history-extra-236",
-                "text": "Viking Age"
-            },
-            {
-                "id": "default-history-extra-237",
-                "text": "Middle Ages"
-            },
-            {
-                "id": "default-history-extra-238",
-                "text": "Renaissance"
-            },
-            {
-                "id": "default-history-extra-239",
-                "text": "Reformation"
-            },
-            {
-                "id": "default-history-extra-240",
-                "text": "Age of Discovery"
-            },
-            {
-                "id": "default-history-extra-241",
-                "text": "Enlightenment"
-            },
-            {
-                "id": "default-history-extra-242",
-                "text": "Industrial Revolution"
-            },
-            {
-                "id": "default-history-extra-243",
-                "text": "French Revolution"
-            },
-            {
-                "id": "default-history-extra-244",
-                "text": "American Revolution"
-            },
-            {
-                "id": "default-history-extra-245",
-                "text": "Russian Revolution"
-            },
-            {
-                "id": "default-history-extra-246",
-                "text": "Chinese Revolution"
-            },
-            {
-                "id": "default-history-extra-247",
-                "text": "World War I"
-            },
-            {
-                "id": "default-history-extra-248",
-                "text": "World War II"
-            },
-            {
-                "id": "default-history-extra-249",
-                "text": "Cold War"
-            },
-            {
-                "id": "default-history-extra-250",
-                "text": "Korean War"
-            },
-            {
-                "id": "default-history-extra-251",
-                "text": "Vietnam War"
-            },
-            {
-                "id": "default-history-extra-252",
-                "text": "Gulf War"
-            },
-            {
-                "id": "default-history-extra-253",
-                "text": "Iraq War"
-            },
-            {
-                "id": "default-history-extra-254",
-                "text": "War in Afghanistan"
-            },
-            {
-                "id": "default-history-extra-255",
-                "text": "Syrian Civil War"
-            }
+            {"id": "default-history-expanded-000", "text": "Pyramids"},
+            {"id": "default-history-expanded-001", "text": "Gladiator"},
+            {"id": "default-history-expanded-002", "text": "Knights"},
+            {"id": "default-history-expanded-003", "text": "Samurai"},
+            {"id": "default-history-expanded-004", "text": "Vikings"},
+            {"id": "default-history-expanded-005", "text": "Pharaoh"},
+            {"id": "default-history-expanded-006", "text": "Cleopatra"},
+            {"id": "default-history-expanded-007", "text": "Julius Caesar"},
+            {"id": "default-history-expanded-008", "text": "Alexander the Great"},
+            {"id": "default-history-expanded-009", "text": "Genghis Khan"},
+            {"id": "default-history-expanded-010", "text": "Napoleon"},
+            {"id": "default-history-expanded-011", "text": "George Washington"},
+            {"id": "default-history-expanded-012", "text": "Abraham Lincoln"},
+            {"id": "default-history-expanded-013", "text": "Winston Churchill"},
+            {"id": "default-history-expanded-014", "text": "Adolf Hitler"},
+            {"id": "default-history-expanded-015", "text": "Joseph Stalin"},
+            {"id": "default-history-expanded-016", "text": "Mao Zedong"},
+            {"id": "default-history-expanded-017", "text": "Fidel Castro"},
+            {"id": "default-history-expanded-018", "text": "Che Guevara"},
+            {"id": "default-history-expanded-019", "text": "Nelson Mandela"},
+            {"id": "default-history-expanded-020", "text": "Mahatma Gandhi"},
+            {"id": "default-history-expanded-021", "text": "Martin Luther King Jr"},
+            {"id": "default-history-expanded-022", "text": "Malcolm X"},
+            {"id": "default-history-expanded-023", "text": "Rosa Parks"},
+            {"id": "default-history-expanded-024", "text": "Harriet Tubman"},
+            {"id": "default-history-expanded-025", "text": "Frederick Douglass"},
+            {"id": "default-history-expanded-026", "text": "Susan B Anthony"},
+            {"id": "default-history-expanded-027", "text": "Elizabeth Cady Stanton"},
+            {"id": "default-history-expanded-028", "text": "Sojourner Truth"},
+            {"id": "default-history-expanded-029", "text": "Joan of Arc"},
+            {"id": "default-history-expanded-030", "text": "Queen Elizabeth I"},
+            {"id": "default-history-expanded-031", "text": "Queen Victoria"},
+            {"id": "default-history-expanded-032", "text": "Marie Antoinette"},
+            {"id": "default-history-expanded-033", "text": "Catherine the Great"},
+            {"id": "default-history-expanded-034", "text": "Empress Wu Zetian"},
+            {"id": "default-history-expanded-035", "text": "Hatshepsut"},
+            {"id": "default-history-expanded-036", "text": "Nefertiti"},
+            {"id": "default-history-expanded-037", "text": "Boudicca"},
+            {"id": "default-history-expanded-039", "text": "Sacagawea"},
+            {"id": "default-history-expanded-040", "text": "Pocahontas"},
+            {"id": "default-history-expanded-041", "text": "Amelia Earhart"},
+            {"id": "default-history-expanded-042", "text": "Marie Curie"},
+            {"id": "default-history-expanded-043", "text": "Florence Nightingale"},
+            {"id": "default-history-expanded-044", "text": "Clara Barton"},
+            {"id": "default-history-expanded-045", "text": "Helen Keller"},
+            {"id": "default-history-expanded-046", "text": "Anne Frank"},
+            {"id": "default-history-expanded-047", "text": "Mother Teresa"},
+            {"id": "default-history-expanded-048", "text": "Princess Diana"},
+            {"id": "default-history-expanded-049", "text": "Margaret Thatcher"},
+            {"id": "default-history-expanded-050", "text": "Golda Meir"},
+            {"id": "default-history-expanded-051", "text": "Indira Gandhi"},
+            {"id": "default-history-expanded-052", "text": "Benazir Bhutto"},
+            {"id": "default-history-expanded-053", "text": "Eva Peron"},
+            {"id": "default-history-expanded-054", "text": "Frida Kahlo"},
+            {"id": "default-history-expanded-055", "text": "Georgia O'Keeffe"},
+            {"id": "default-history-expanded-056", "text": "Mary Cassatt"},
+            {"id": "default-history-expanded-057", "text": "Artemisia Gentileschi"},
+            {"id": "default-history-expanded-058", "text": "Sofonisba Anguissola"},
+            {"id": "default-history-expanded-059", "text": "Elisabeth Vigee Le Brun"},
+            {"id": "default-history-expanded-060", "text": "Angelica Kauffman"},
+            {"id": "default-history-expanded-061", "text": "Rosa Bonheur"},
+            {"id": "default-history-expanded-062", "text": "Berthe Morisot"},
+            {"id": "default-history-expanded-064", "text": "Suzanne Valadon"},
+            {"id": "default-history-expanded-065", "text": "Sonia Delaunay"},
+            {"id": "default-history-expanded-066", "text": "Natalia Goncharova"},
+            {"id": "default-history-expanded-067", "text": "Lyubov Popova"},
+            {"id": "default-history-expanded-068", "text": "Varvara Stepanova"},
+            {"id": "default-history-expanded-069", "text": "Alexandra Exter"},
+            {"id": "default-history-expanded-070", "text": "Olga Rozanova"},
+            {"id": "default-history-expanded-071", "text": "Nadezhda Udaltsova"},
+            {"id": "default-history-expanded-072", "text": "Maria Ender"},
+            {"id": "default-history-expanded-073", "text": "Ksenia Ender"},
+            {"id": "default-history-expanded-074", "text": "Zinaida Serebriakova"},
+            {"id": "default-history-expanded-075", "text": "Vera Mukhina"},
+            {"id": "default-history-expanded-076", "text": "Anna Golubkina"},
+            {"id": "default-history-expanded-077", "text": "Sarra Lebedeva"},
+            {"id": "default-history-expanded-078", "text": "Beatrice Wood"},
+            {"id": "default-history-expanded-079", "text": "Florine Stettheimer"},
+            {"id": "default-history-expanded-080", "text": "Romaine Brooks"},
+            {"id": "default-history-expanded-081", "text": "Gluck"},
+            {"id": "default-history-expanded-082", "text": "Marie Laurencin"},
+            {"id": "default-history-expanded-083", "text": "Tamara de Lempicka"},
+            {"id": "default-history-expanded-084", "text": "Dora Maar"},
+            {"id": "default-history-expanded-085", "text": "Leonora Carrington"},
+            {"id": "default-history-expanded-086", "text": "Remedios Varo"},
+            {"id": "default-history-expanded-088", "text": "Diego Rivera"},
+            {"id": "default-history-expanded-089", "text": "David Alfaro Siqueiros"},
+            {"id": "default-history-expanded-090", "text": "Jose Clemente Orozco"},
+            {"id": "default-history-expanded-091", "text": "Rufino Tamayo"},
+            {"id": "default-history-expanded-092", "text": "Francisco Toledo"},
+            {"id": "default-history-expanded-093", "text": "Rodolfo Morales"},
+            {"id": "default-history-expanded-094", "text": "Gunther Gerzso"},
+            {"id": "default-history-expanded-095", "text": "Mathias Goeritz"},
+            {"id": "default-history-expanded-096", "text": "Pedro Coronel"},
+            {"id": "default-history-expanded-097", "text": "Rafael Coronel"},
+            {"id": "default-history-expanded-100", "text": "Alice Rahon"},
+            {"id": "default-history-expanded-101", "text": "Kati Horna"},
+            {"id": "default-history-expanded-102", "text": "Lola Alvarez Bravo"},
+            {"id": "default-history-expanded-103", "text": "Tina Modotti"},
+            {"id": "default-history-expanded-104", "text": "Graciela Iturbide"},
+            {"id": "default-history-expanded-105", "text": "Mariana Yampolsky"},
+            {"id": "default-history-expanded-106", "text": "Manuel Alvarez Bravo"},
+            {"id": "default-history-expanded-107", "text": "Gabriel Figueroa"},
+            {"id": "default-history-expanded-108", "text": "Emilio Fernandez"},
+            {"id": "default-history-expanded-109", "text": "Ismael Rodriguez"},
+            {"id": "default-history-expanded-110", "text": "Roberto Gavaldon"},
+            {"id": "default-history-expanded-111", "text": "Julio Bracho"},
+            {"id": "default-history-expanded-112", "text": "Luis Bunuel"},
+            {"id": "default-history-expanded-113", "text": "Alejandro Jodorowsky"},
+            {"id": "default-history-expanded-114", "text": "Arturo Ripstein"},
+            {"id": "default-history-expanded-115", "text": "Felipe Cazals"},
+            {"id": "default-history-expanded-116", "text": "Jorge Fons"},
+            {"id": "default-history-expanded-117", "text": "Paul Leduc"},
+            {"id": "default-history-expanded-118", "text": "Jaime Humberto Hermosillo"},
+            {"id": "default-history-expanded-119", "text": "Alfonso Arau"},
+            {"id": "default-history-expanded-120", "text": "Alfonso Cuaron"},
+            {"id": "default-history-expanded-121", "text": "Guillermo del Toro"},
+            {"id": "default-history-expanded-122", "text": "Alejandro Gonzalez Inarritu"},
+            {"id": "default-history-expanded-123", "text": "Carlos Reygadas"},
+            {"id": "default-history-expanded-124", "text": "Amat Escalante"},
+            {"id": "default-history-expanded-125", "text": "Michel Franco"},
+            {"id": "default-history-expanded-126", "text": "Fernando Eimbcke"},
+            {"id": "default-history-expanded-127", "text": "Eugenio Derbez"},
+            {"id": "default-history-expanded-128", "text": "Gael Garcia Bernal"},
+            {"id": "default-history-expanded-129", "text": "Diego Luna"},
+            {"id": "default-history-expanded-130", "text": "Salma Hayek"},
+            {"id": "default-history-expanded-131", "text": "Demian Bichir"},
+            {"id": "default-history-expanded-132", "text": "Katy Jurado"},
+            {"id": "default-history-expanded-133", "text": "Dolores del Rio"},
+            {"id": "default-history-expanded-134", "text": "Maria Felix"},
+            {"id": "default-history-expanded-135", "text": "Pedro Infante"},
+            {"id": "default-history-expanded-136", "text": "Jorge Negrete"},
+            {"id": "default-history-expanded-137", "text": "Javier Solis"},
+            {"id": "default-history-expanded-138", "text": "Jose Alfredo Jimenez"},
+            {"id": "default-history-expanded-139", "text": "Vicente Fernandez"},
+            {"id": "default-history-expanded-140", "text": "Alejandro Fernandez"},
+            {"id": "default-history-expanded-141", "text": "Pepe Aguilar"},
+            {"id": "default-history-expanded-142", "text": "Antonio Aguilar"},
+            {"id": "default-history-expanded-143", "text": "Flor Silvestre"},
+            {"id": "default-history-expanded-144", "text": "Lucha Villa"},
+            {"id": "default-history-expanded-145", "text": "Amalia Mendoza"},
+            {"id": "default-history-expanded-146", "text": "Chavela Vargas"},
+            {"id": "default-history-expanded-147", "text": "Lola Beltran"},
+            {"id": "default-history-expanded-148", "text": "Juan Gabriel"},
+            {"id": "default-history-expanded-149", "text": "Rocio Durcal"},
+            {"id": "default-history-expanded-150", "text": "Jose Jose"},
+            {"id": "default-history-expanded-151", "text": "Luis Miguel"},
+            {"id": "default-history-expanded-152", "text": "Cristian Castro"},
+            {"id": "default-history-expanded-153", "text": "Alejandro Sanz"},
+            {"id": "default-history-expanded-154", "text": "Ricky Martin"},
+            {"id": "default-history-expanded-155", "text": "Enrique Iglesias"},
+            {"id": "default-history-expanded-156", "text": "Shakira"},
+            {"id": "default-history-expanded-157", "text": "Jennifer Lopez"},
+            {"id": "default-history-expanded-158", "text": "Marc Anthony"},
+            {"id": "default-history-expanded-159", "text": "Romeo Santos"},
+            {"id": "default-history-expanded-160", "text": "Prince Royce"},
+            {"id": "default-history-expanded-161", "text": "Aventura"},
+            {"id": "default-history-expanded-162", "text": "Wisin y Yandel"},
+            {"id": "default-history-expanded-163", "text": "Daddy Yankee"},
+            {"id": "default-history-expanded-164", "text": "Don Omar"},
+            {"id": "default-history-expanded-165", "text": "Tego Calderon"},
+            {"id": "default-history-expanded-166", "text": "Vico C"},
+            {"id": "default-history-expanded-167", "text": "Residente"},
+            {"id": "default-history-expanded-168", "text": "Calle 13"},
+            {"id": "default-history-expanded-169", "text": "Bad Bunny"},
+            {"id": "default-history-expanded-170", "text": "J Balvin"},
+            {"id": "default-history-expanded-171", "text": "Maluma"},
+            {"id": "default-history-expanded-172", "text": "Ozuna"},
+            {"id": "default-history-expanded-173", "text": "Anuel AA"},
+            {"id": "default-history-expanded-174", "text": "Karol G"},
+            {"id": "default-history-expanded-175", "text": "Natti Natasha"},
+            {"id": "default-history-expanded-176", "text": "Becky G"},
+            {"id": "default-history-expanded-177", "text": "Rosalia"},
+            {"id": "default-history-expanded-178", "text": "C Tangana"},
+            {"id": "default-history-expanded-179", "text": "Jhay Cortez"},
+            {"id": "default-history-expanded-180", "text": "Rauw Alejandro"},
+            {"id": "default-history-expanded-181", "text": "Myke Towers"},
+            {"id": "default-history-expanded-182", "text": "Sech"},
+            {"id": "default-history-expanded-183", "text": "Dalex"},
+            {"id": "default-history-expanded-184", "text": "Lenny Tavarez"},
+            {"id": "default-history-expanded-185", "text": "Justin Quiles"},
+            {"id": "default-history-expanded-186", "text": "Feid"},
+            {"id": "default-history-expanded-187", "text": "Mora"},
+            {"id": "default-history-expanded-188", "text": "Juhn"},
+            {"id": "default-history-expanded-189", "text": "Eladio Carrion"},
+            {"id": "default-history-expanded-190", "text": "Brytiago"},
+            {"id": "default-history-expanded-191", "text": "Jon Z"},
+            {"id": "default-history-expanded-192", "text": "Miky Woodz"},
+            {"id": "default-history-expanded-193", "text": "Darell"},
+            {"id": "default-history-expanded-194", "text": "Nio Garcia"},
+            {"id": "default-history-expanded-195", "text": "Casper Magico"},
+            {"id": "default-history-extra-196", "text": "Ancient Egypt"},
+            {"id": "default-history-extra-197", "text": "Ancient Greece"},
+            {"id": "default-history-extra-198", "text": "Ancient Rome"},
+            {"id": "default-history-extra-199", "text": "Ancient China"},
+            {"id": "default-history-extra-200", "text": "Ancient India"},
+            {"id": "default-history-extra-201", "text": "Mesopotamia"},
+            {"id": "default-history-extra-202", "text": "Babylon"},
+            {"id": "default-history-extra-203", "text": "Sumer"},
+            {"id": "default-history-extra-204", "text": "Assyria"},
+            {"id": "default-history-extra-205", "text": "Persian Empire"},
+            {"id": "default-history-extra-206", "text": "Macedonian Empire"},
+            {"id": "default-history-extra-207", "text": "Han Dynasty"},
+            {"id": "default-history-extra-208", "text": "Tang Dynasty"},
+            {"id": "default-history-extra-209", "text": "Song Dynasty"},
+            {"id": "default-history-extra-210", "text": "Ming Dynasty"},
+            {"id": "default-history-extra-211", "text": "Qing Dynasty"},
+            {"id": "default-history-extra-212", "text": "Maurya Empire"},
+            {"id": "default-history-extra-213", "text": "Gupta Empire"},
+            {"id": "default-history-extra-214", "text": "Mughal Empire"},
+            {"id": "default-history-extra-215", "text": "Maya Civilization"},
+            {"id": "default-history-extra-216", "text": "Aztec Empire"},
+            {"id": "default-history-extra-217", "text": "Inca Empire"},
+            {"id": "default-history-extra-218", "text": "Olmec Civilization"},
+            {"id": "default-history-extra-219", "text": "Toltec Civilization"},
+            {"id": "default-history-extra-220", "text": "Zapotec Civilization"},
+            {"id": "default-history-extra-221", "text": "Teotihuacan"},
+            {"id": "default-history-extra-222", "text": "Byzantine Empire"},
+            {"id": "default-history-extra-223", "text": "Holy Roman Empire"},
+            {"id": "default-history-extra-224", "text": "Ottoman Empire"},
+            {"id": "default-history-extra-225", "text": "Safavid Empire"},
+            {"id": "default-history-extra-227", "text": "British Empire"},
+            {"id": "default-history-extra-228", "text": "French Empire"},
+            {"id": "default-history-extra-229", "text": "Spanish Empire"},
+            {"id": "default-history-extra-230", "text": "Portuguese Empire"},
+            {"id": "default-history-extra-231", "text": "Dutch Empire"},
+            {"id": "default-history-extra-232", "text": "Russian Empire"},
+            {"id": "default-history-extra-233", "text": "Austro-Hungarian Empire"},
+            {"id": "default-history-extra-234", "text": "German Empire"},
+            {"id": "default-history-extra-235", "text": "Japanese Empire"},
+            {"id": "default-history-extra-236", "text": "Viking Age"},
+            {"id": "default-history-extra-237", "text": "Middle Ages"},
+            {"id": "default-history-extra-238", "text": "Renaissance"},
+            {"id": "default-history-extra-239", "text": "Reformation"},
+            {"id": "default-history-extra-240", "text": "Age of Discovery"},
+            {"id": "default-history-extra-241", "text": "Enlightenment"},
+            {"id": "default-history-extra-242", "text": "Industrial Revolution"},
+            {"id": "default-history-extra-243", "text": "French Revolution"},
+            {"id": "default-history-extra-244", "text": "American Revolution"},
+            {"id": "default-history-extra-245", "text": "Russian Revolution"},
+            {"id": "default-history-extra-246", "text": "Chinese Revolution"},
+            {"id": "default-history-extra-247", "text": "World War I"},
+            {"id": "default-history-extra-248", "text": "World War II"},
+            {"id": "default-history-extra-249", "text": "Cold War"},
+            {"id": "default-history-extra-250", "text": "Korean War"},
+            {"id": "default-history-extra-251", "text": "Vietnam War"},
+            {"id": "default-history-extra-252", "text": "Gulf War"},
+            {"id": "default-history-extra-253", "text": "Iraq War"},
+            {"id": "default-history-extra-254", "text": "War in Afghanistan"},
+            {"id": "default-history-extra-255", "text": "Syrian Civil War"}
         ],
         "type": "default",
         "color": "orange",

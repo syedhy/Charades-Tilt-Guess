@@ -90,9 +90,9 @@ final class AppRouter: ObservableObject {
             if let matchState = self.activeTeamMatch, result.mode == .teamVsTeam {
                 matchState.recordResult(result)
                 if matchState.isGameOver {
-                    self.path.append(AppRoute.teamMatchResults(state: matchState))
+                    self.replaceCurrent(with: AppRoute.teamMatchResults(state: matchState))
                 } else {
-                    self.path.append(AppRoute.teamMatchLobby(state: matchState))
+                    self.replaceCurrent(with: AppRoute.teamMatchLobby(state: matchState))
                 }
             } else {
                 self.path.append(AppRoute.results(result: result))

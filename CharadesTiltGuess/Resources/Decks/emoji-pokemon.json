@@ -1,0 +1,1013 @@
+[
+    {
+        "id": "emoji-pokemon",
+        "name": "Pokémon",
+        "description": "Guess famous Pokemons from emojis!",
+        "cards": [
+            {
+                "id": "em-p-001",
+                "text": "⚡🐭✨",
+                "meaning": "Pikachu"
+            },
+            {
+                "id": "em-p-002",
+                "text": "🔥🐉💥",
+                "meaning": "Charizard"
+            },
+            {
+                "id": "em-p-003",
+                "text": "🌱🦖🐸",
+                "meaning": "Bulbasaur"
+            },
+            {
+                "id": "em-p-004",
+                "text": "🐢💧🕶️",
+                "meaning": "Squirtle"
+            },
+            {
+                "id": "em-p-005",
+                "text": "🦊✨🐾",
+                "meaning": "Eevee"
+            },
+            {
+                "id": "em-p-006",
+                "text": "😴🐻🛑",
+                "meaning": "Snorlax"
+            },
+            {
+                "id": "em-p-007",
+                "text": "🎤🎈🩷",
+                "meaning": "Jigglypuff"
+            },
+            {
+                "id": "em-p-008",
+                "text": "🤕🦆🌊",
+                "meaning": "Psyduck"
+            },
+            {
+                "id": "em-p-009",
+                "text": "👻😈🟣",
+                "meaning": "Gengar"
+            },
+            {
+                "id": "em-p-010",
+                "text": "🧬🟣💥",
+                "meaning": "Mewtwo"
+            },
+            {
+                "id": "em-p-011",
+                "text": "🔥🦎🔥",
+                "meaning": "Charmander"
+            },
+            {
+                "id": "em-p-012",
+                "text": "🌱🐢🌳",
+                "meaning": "Torterra"
+            },
+            {
+                "id": "em-p-013",
+                "text": "💧🚀🐢",
+                "meaning": "Blastoise"
+            },
+            {
+                "id": "em-p-014",
+                "text": "🐛🦋✨",
+                "meaning": "Butterfree"
+            },
+            {
+                "id": "em-p-015",
+                "text": "🐝🗡️⚡",
+                "meaning": "Beedrill"
+            },
+            {
+                "id": "em-p-016",
+                "text": "🐦🌪️💨",
+                "meaning": "Pidgeot"
+            },
+            {
+                "id": "em-p-017",
+                "text": "🐀🦷💥",
+                "meaning": "Raticate"
+            },
+            {
+                "id": "em-p-018",
+                "text": "🐍💜👁️",
+                "meaning": "Arbok"
+            },
+            {
+                "id": "em-p-019",
+                "text": "⚡🐭⚡",
+                "meaning": "Raichu"
+            },
+            {
+                "id": "em-p-020",
+                "text": "🏜️🦔🛡️",
+                "meaning": "Sandslash"
+            },
+            {
+                "id": "em-p-021",
+                "text": "👑👸🏻🦏",
+                "meaning": "Nidoqueen"
+            },
+            {
+                "id": "em-p-022",
+                "text": "👑🤴🏻🦏",
+                "meaning": "Nidoking"
+            },
+            {
+                "id": "em-p-023",
+                "text": "🦊🔥💨",
+                "meaning": "Vulpix"
+            },
+            {
+                "id": "em-p-024",
+                "text": "🦊🔥✨",
+                "meaning": "Ninetales"
+            },
+            {
+                "id": "em-p-025",
+                "text": "🦇🟣🩸",
+                "meaning": "Golbat"
+            },
+            {
+                "id": "em-p-026",
+                "text": "🌱🌸🦖",
+                "meaning": "Vileplume"
+            },
+            {
+                "id": "em-p-027",
+                "text": "🍄🦀👾",
+                "meaning": "Parasect"
+            },
+            {
+                "id": "em-p-028",
+                "text": "🦋🟣✨",
+                "meaning": "Venomoth"
+            },
+            {
+                "id": "em-p-029",
+                "text": "🐱🪙😼",
+                "meaning": "Meowth"
+            },
+            {
+                "id": "em-p-030",
+                "text": "🐱👑✨",
+                "meaning": "Persian"
+            },
+            {
+                "id": "em-p-031",
+                "text": "🐒🥊😡",
+                "meaning": "Primeape"
+            },
+            {
+                "id": "em-p-032",
+                "text": "🐕🔥👮",
+                "meaning": "Growlithe"
+            },
+            {
+                "id": "em-p-033",
+                "text": "🐕🔥💨",
+                "meaning": "Arcanine"
+            },
+            {
+                "id": "em-p-034",
+                "text": "🌀🐸🍥",
+                "meaning": "Poliwrath"
+            },
+            {
+                "id": "em-p-035",
+                "text": "🧠🔮🥄",
+                "meaning": "Kadabra"
+            },
+            {
+                "id": "em-p-036",
+                "text": "🧠🔮🥄🥄",
+                "meaning": "Alakazam"
+            },
+            {
+                "id": "em-p-037",
+                "text": "💪🦾🤼",
+                "meaning": "Machamp"
+            },
+            {
+                "id": "em-p-038",
+                "text": "🌱🪴🌾",
+                "meaning": "Victreebel"
+            },
+            {
+                "id": "em-p-039",
+                "text": "🪼🌊⚡",
+                "meaning": "Tentacruel"
+            },
+            {
+                "id": "em-p-040",
+                "text": "🪨🗿💪",
+                "meaning": "Geodude"
+            },
+            {
+                "id": "em-p-041",
+                "text": "🪨🗿💥",
+                "meaning": "Golem"
+            },
+            {
+                "id": "em-p-042",
+                "text": "🐴🔥🐴",
+                "meaning": "Ponyta"
+            },
+            {
+                "id": "em-p-043",
+                "text": "🐴🔥🦄",
+                "meaning": "Rapidash"
+            },
+            {
+                "id": "em-p-044",
+                "text": "🦥🌊🐚",
+                "meaning": "Slowpoke"
+            },
+            {
+                "id": "em-p-045",
+                "text": "🦥🐚👑",
+                "meaning": "Slowbro"
+            },
+            {
+                "id": "em-p-046",
+                "text": "🧲⚡⚙️",
+                "meaning": "Magneton"
+            },
+            {
+                "id": "em-p-047",
+                "text": "🦆🧅🧄",
+                "meaning": "Farfetch'd"
+            },
+            {
+                "id": "em-p-048",
+                "text": "🐦🐦🐦",
+                "meaning": "Dodrio"
+            },
+            {
+                "id": "em-p-049",
+                "text": "🦭🧊🌊",
+                "meaning": "Dewgong"
+            },
+            {
+                "id": "em-p-050",
+                "text": "🟣🦠☣️",
+                "meaning": "Muk"
+            },
+            {
+                "id": "em-p-051",
+                "text": "🦪💜🛡️",
+                "meaning": "Cloyster"
+            },
+            {
+                "id": "em-p-052",
+                "text": "👻👅👅",
+                "meaning": "Haunter"
+            },
+            {
+                "id": "em-p-053",
+                "text": "🐍🪨🦴",
+                "meaning": "Onix"
+            },
+            {
+                "id": "em-p-054",
+                "text": "🧠😴💤",
+                "meaning": "Drowzee"
+            },
+            {
+                "id": "em-p-055",
+                "text": "🧠😴🔮",
+                "meaning": "Hypno"
+            },
+            {
+                "id": "em-p-056",
+                "text": "🦀🥊🌊",
+                "meaning": "Kingler"
+            },
+            {
+                "id": "em-p-057",
+                "text": "💣💥⚡",
+                "meaning": "Voltorb"
+            },
+            {
+                "id": "em-p-058",
+                "text": "💣💥🙃",
+                "meaning": "Electrode"
+            },
+            {
+                "id": "em-p-059",
+                "text": "🌴🥚🌴",
+                "meaning": "Exeggutor"
+            },
+            {
+                "id": "em-p-060",
+                "text": "🦴💀🦕",
+                "meaning": "Marowak"
+            },
+            {
+                "id": "em-p-061",
+                "text": "🥊🥋🔥",
+                "meaning": "Hitmonlee"
+            },
+            {
+                "id": "em-p-062",
+                "text": "🥊🥋💥",
+                "meaning": "Hitmonchan"
+            },
+            {
+                "id": "em-p-063",
+                "text": "👅👅💗",
+                "meaning": "Lickitung"
+            },
+            {
+                "id": "em-p-064",
+                "text": "🟣☣️☠️",
+                "meaning": "Weezing"
+            },
+            {
+                "id": "em-p-065",
+                "text": "🦏🪨🛡️",
+                "meaning": "Rhydon"
+            },
+            {
+                "id": "em-p-066",
+                "text": "🥚🩺🩷",
+                "meaning": "Chansey"
+            },
+            {
+                "id": "em-p-067",
+                "text": "🌿🌀🌿",
+                "meaning": "Tangela"
+            },
+            {
+                "id": "em-p-068",
+                "text": "🦘👶🍼",
+                "meaning": "Kangaskhan"
+            },
+            {
+                "id": "em-p-069",
+                "text": "🐴🌊👑",
+                "meaning": "Seadra"
+            },
+            {
+                "id": "em-p-070",
+                "text": "🐟🐟✨",
+                "meaning": "Goldeen"
+            },
+            {
+                "id": "em-p-071",
+                "text": "⭐🌊🔮",
+                "meaning": "Starmie"
+            },
+            {
+                "id": "em-p-072",
+                "text": "🤡🎭🪄",
+                "meaning": "Mr. Mime"
+            },
+            {
+                "id": "em-p-073",
+                "text": "⚔️🦗🍃",
+                "meaning": "Scyther"
+            },
+            {
+                "id": "em-p-074",
+                "text": "💋💃❄️",
+                "meaning": "Jynx"
+            },
+            {
+                "id": "em-p-075",
+                "text": "⚡🔌👹",
+                "meaning": "Electabuzz"
+            },
+            {
+                "id": "em-p-076",
+                "text": "🔥🦆🌋",
+                "meaning": "Magmar"
+            },
+            {
+                "id": "em-p-077",
+                "text": "🪲⚔️🌳",
+                "meaning": "Pinsir"
+            },
+            {
+                "id": "em-p-078",
+                "text": "🐂🐂🏃",
+                "meaning": "Tauros"
+            },
+            {
+                "id": "em-p-079",
+                "text": "🐟💦😵",
+                "meaning": "Magikarp"
+            },
+            {
+                "id": "em-p-080",
+                "text": "🐲🌊🐉",
+                "meaning": "Gyarados"
+            },
+            {
+                "id": "em-p-081",
+                "text": "🦕🌊⛵",
+                "meaning": "Lapras"
+            },
+            {
+                "id": "em-p-082",
+                "text": "🧬🧬✨",
+                "meaning": "Ditto"
+            },
+            {
+                "id": "em-p-083",
+                "text": "💧🦊🧜",
+                "meaning": "Vaporeon"
+            },
+            {
+                "id": "em-p-084",
+                "text": "⚡🦊🐕",
+                "meaning": "Jolteon"
+            },
+            {
+                "id": "em-p-085",
+                "text": "🔥🦊🐩",
+                "meaning": "Flareon"
+            },
+            {
+                "id": "em-p-086",
+                "text": "💻👾🤖",
+                "meaning": "Porygon"
+            },
+            {
+                "id": "em-p-087",
+                "text": "🐚🪨🦑",
+                "meaning": "Omastar"
+            },
+            {
+                "id": "em-p-088",
+                "text": "🦴🦀🦕",
+                "meaning": "Kabutops"
+            },
+            {
+                "id": "em-p-089",
+                "text": "🦅🦖🪨",
+                "meaning": "Aerodactyl"
+            },
+            {
+                "id": "em-p-090",
+                "text": "❄️🦅🧊",
+                "meaning": "Articuno"
+            },
+            {
+                "id": "em-p-091",
+                "text": "⚡🦅⚡",
+                "meaning": "Zapdos"
+            },
+            {
+                "id": "em-p-092",
+                "text": "🔥🦅🔥",
+                "meaning": "Moltres"
+            },
+            {
+                "id": "em-p-093",
+                "text": "🐍🐉🐉",
+                "meaning": "Dratini"
+            },
+            {
+                "id": "em-p-094",
+                "text": "🐉🧡🪽",
+                "meaning": "Dragonite"
+            },
+            {
+                "id": "em-p-095",
+                "text": "🐱💖✨",
+                "meaning": "Mew"
+            },
+            {
+                "id": "em-p-096",
+                "text": "🌱🍃🌱",
+                "meaning": "Chikorita"
+            },
+            {
+                "id": "em-p-097",
+                "text": "🔥🐭💥",
+                "meaning": "Cyndaquil"
+            },
+            {
+                "id": "em-p-098",
+                "text": "🐊💧💙",
+                "meaning": "Totodile"
+            },
+            {
+                "id": "em-p-099",
+                "text": "🦉👓⏰",
+                "meaning": "Hoothoot"
+            },
+            {
+                "id": "em-p-100",
+                "text": "🐞🔴✨",
+                "meaning": "Ledyba"
+            },
+            {
+                "id": "em-p-101",
+                "text": "🕸️🕷️🔴",
+                "meaning": "Ariados"
+            },
+            {
+                "id": "em-p-102",
+                "text": "🦇🦇🟣",
+                "meaning": "Crobat"
+            },
+            {
+                "id": "em-p-103",
+                "text": "🪼⚡💡",
+                "meaning": "Lanturn"
+            },
+            {
+                "id": "em-p-104",
+                "text": "🐣⚡🐭",
+                "meaning": "Pichu"
+            },
+            {
+                "id": "em-p-105",
+                "text": "🥚🍼✨",
+                "meaning": "Togepi"
+            },
+            {
+                "id": "em-p-106",
+                "text": "🐥🎈🕊️",
+                "meaning": "Natu"
+            },
+            {
+                "id": "em-p-107",
+                "text": "🐑⚡☁️",
+                "meaning": "Mareep"
+            },
+            {
+                "id": "em-p-108",
+                "text": "🐑⚡💡",
+                "meaning": "Ampharos"
+            },
+            {
+                "id": "em-p-109",
+                "text": "🌸💃🌱",
+                "meaning": "Bellossom"
+            },
+            {
+                "id": "em-p-110",
+                "text": "🐸🟢🌊",
+                "meaning": "Politoed"
+            },
+            {
+                "id": "em-p-111",
+                "text": "🌾🌱☀️",
+                "meaning": "Sunkern"
+            },
+            {
+                "id": "em-p-112",
+                "text": "🐉🐝🌪️",
+                "meaning": "Yanma"
+            },
+            {
+                "id": "em-p-113",
+                "text": "🧠🔮🐈",
+                "meaning": "Espeon"
+            },
+            {
+                "id": "em-p-114",
+                "text": "🌙🦊🖤",
+                "meaning": "Umbreon"
+            },
+            {
+                "id": "em-p-115",
+                "text": "🐦‍⬛👑🎩",
+                "meaning": "Murkrow"
+            },
+            {
+                "id": "em-p-116",
+                "text": "🧠🔮🦥",
+                "meaning": "Slowking"
+            },
+            {
+                "id": "em-p-117",
+                "text": "👻🖤🧠",
+                "meaning": "Misdreavus"
+            },
+            {
+                "id": "em-p-118",
+                "text": "❓🔤👁️",
+                "meaning": "Unown"
+            },
+            {
+                "id": "em-p-119",
+                "text": "🦒🔁🟡",
+                "meaning": "Girafarig"
+            },
+            {
+                "id": "em-p-120",
+                "text": "🌰⚙️🛡️",
+                "meaning": "Forretress"
+            },
+            {
+                "id": "em-p-121",
+                "text": "🐛🪽🕳️",
+                "meaning": "Dunsparce"
+            },
+            {
+                "id": "em-p-122",
+                "text": "🦂🤖🪓",
+                "meaning": "Gligar"
+            },
+            {
+                "id": "em-p-123",
+                "text": "🐍螺🪨",
+                "meaning": "Steelix"
+            },
+            {
+                "id": "em-p-124",
+                "text": "🐕🦴🖤",
+                "meaning": "Houndoom"
+            },
+            {
+                "id": "em-p-125",
+                "text": "⚔️⚙️🐜",
+                "meaning": "Scizor"
+            },
+            {
+                "id": "em-p-126",
+                "text": "🪲⚔️🛡️",
+                "meaning": "Heracross"
+            },
+            {
+                "id": "em-p-127",
+                "text": "🦔❄️🧊",
+                "meaning": "Swinub"
+            },
+            {
+                "id": "em-p-128",
+                "text": "🦣❄️🧊",
+                "meaning": "Piloswine"
+            },
+            {
+                "id": "em-p-129",
+                "text": "🪸🌊🪨",
+                "meaning": "Corsola"
+            },
+            {
+                "id": "em-p-130",
+                "text": "🐧🧊🎯",
+                "meaning": "Delibird"
+            },
+            {
+                "id": "em-p-131",
+                "text": "🐠🪽🌊",
+                "meaning": "Mantine"
+            },
+            {
+                "id": "em-p-132",
+                "text": "🦅⚙️🛡️",
+                "meaning": "Skarmory"
+            },
+            {
+                "id": "em-p-133",
+                "text": "🐕🔥😈",
+                "meaning": "Houndour"
+            },
+            {
+                "id": "em-p-134",
+                "text": "🐉🌊🐴",
+                "meaning": "Kingdra"
+            },
+            {
+                "id": "em-p-135",
+                "text": "🐘⚙️🪨",
+                "meaning": "Donphan"
+            },
+            {
+                "id": "em-p-136",
+                "text": "🥊🥋🌀",
+                "meaning": "Hitmontop"
+            },
+            {
+                "id": "em-p-137",
+                "text": "🐮🥛🥛",
+                "meaning": "Miltank"
+            },
+            {
+                "id": "em-p-138",
+                "text": "🩺🩷✨",
+                "meaning": "Blissey"
+            },
+            {
+                "id": "em-p-139",
+                "text": "⚡🐯⚡",
+                "meaning": "Raikou"
+            },
+            {
+                "id": "em-p-140",
+                "text": "🔥🦁🔥",
+                "meaning": "Entei"
+            },
+            {
+                "id": "em-p-141",
+                "text": "💧🐆🌊",
+                "meaning": "Suicune"
+            },
+            {
+                "id": "em-p-142",
+                "text": "🦖🟢🪨",
+                "meaning": "Larvitar"
+            },
+            {
+                "id": "em-p-143",
+                "text": "🦖🟢🌋",
+                "meaning": "Tyranitar"
+            },
+            {
+                "id": "em-p-144",
+                "text": "🦅🌊🌊",
+                "meaning": "Lugia"
+            },
+            {
+                "id": "em-p-145",
+                "text": "🌈🦅🔥",
+                "meaning": "Ho-Oh"
+            },
+            {
+                "id": "em-p-146",
+                "text": "🌱⏳🧚",
+                "meaning": "Celebi"
+            },
+            {
+                "id": "em-p-147",
+                "text": "🦎🌱🦎",
+                "meaning": "Treecko"
+            },
+            {
+                "id": "em-p-148",
+                "text": "🐣🔥🐔",
+                "meaning": "Torchic"
+            },
+            {
+                "id": "em-p-149",
+                "text": "🐟💧🦎",
+                "meaning": "Mudkip"
+            },
+            {
+                "id": "em-p-150",
+                "text": "🐔🔥🥊",
+                "meaning": "Blaziken"
+            },
+            {
+                "id": "em-p-151",
+                "text": "🐊💧🛡️",
+                "meaning": "Swampert"
+            },
+            {
+                "id": "em-p-152",
+                "text": "🐕🖤🐺",
+                "meaning": "Mightyena"
+            },
+            {
+                "id": "em-p-153",
+                "text": "🦋🌈🌸",
+                "meaning": "Beautifly"
+            },
+            {
+                "id": "em-p-154",
+                "text": "🦆🌧️🧢",
+                "meaning": "Ludicolo"
+            },
+            {
+                "id": "em-p-155",
+                "text": "🧚‍♀️🌱💃",
+                "meaning": "Gardevoir"
+            },
+            {
+                "id": "em-p-156",
+                "text": "🍄🦥🦥",
+                "meaning": "Slaking"
+            },
+            {
+                "id": "em-p-157",
+                "text": "📢🗣️🔊",
+                "meaning": "Exploud"
+            },
+            {
+                "id": "em-p-158",
+                "text": "🥊🤼‍♂️🥋",
+                "meaning": "Hariyama"
+            },
+            {
+                "id": "em-p-159",
+                "text": "👻💎👁️",
+                "meaning": "Sableye"
+            },
+            {
+                "id": "em-p-160",
+                "text": "⚔️⚙️🛡️",
+                "meaning": "Aron"
+            },
+            {
+                "id": "em-p-161",
+                "text": "🦖⚙️🛡️",
+                "meaning": "Aggron"
+            },
+            {
+                "id": "em-p-162",
+                "text": "🧘‍♀️🔮🧘",
+                "meaning": "Medicham"
+            },
+            {
+                "id": "em-p-163",
+                "text": "⚡⚡🐭",
+                "meaning": "Minun"
+            },
+            {
+                "id": "em-p-164",
+                "text": "🦈🌋🌊",
+                "meaning": "Sharpedo"
+            },
+            {
+                "id": "em-p-165",
+                "text": "🐋🌊🐋",
+                "meaning": "Wailord"
+            },
+            {
+                "id": "em-p-166",
+                "text": "🐪🌋🔥",
+                "meaning": "Camerupt"
+            },
+            {
+                "id": "em-p-167",
+                "text": "🐢🌋🪨",
+                "meaning": "Torkoal"
+            },
+            {
+                "id": "em-p-168",
+                "text": "🐼🥋🍃",
+                "meaning": "Spinda"
+            },
+            {
+                "id": "em-p-169",
+                "text": "🐉🐜⌛",
+                "meaning": "Flygon"
+            },
+            {
+                "id": "em-p-170",
+                "text": "🌵🏜️🥊",
+                "meaning": "Cacturne"
+            },
+            {
+                "id": "em-p-171",
+                "text": "🐍🎨🟢",
+                "meaning": "Seviper"
+            },
+            {
+                "id": "em-p-172",
+                "text": "☀️🗿🪨",
+                "meaning": "Solrock"
+            },
+            {
+                "id": "em-p-173",
+                "text": "🌙🗿🪨",
+                "meaning": "Lunatone"
+            },
+            {
+                "id": "em-p-174",
+                "text": "🦞⭐🖤",
+                "meaning": "Crawdaunt"
+            },
+            {
+                "id": "em-p-175",
+                "text": "🗿👁️🔮",
+                "meaning": "Claydol"
+            },
+            {
+                "id": "em-p-176",
+                "text": "🐬🩷🌊",
+                "meaning": "Gorebyss"
+            },
+            {
+                "id": "em-p-177",
+                "text": "🌊🐉✨",
+                "meaning": "Milotic"
+            },
+            {
+                "id": "em-p-178",
+                "text": "👻🎭🧟",
+                "meaning": "Dusknoir"
+            },
+            {
+                "id": "em-p-179",
+                "text": "🐲🐉🛡️",
+                "meaning": "Salamence"
+            },
+            {
+                "id": "em-p-180",
+                "text": "🤖⚙️🧠",
+                "meaning": "Metagross"
+            },
+            {
+                "id": "em-p-181",
+                "text": "🪨⚙️🗿",
+                "meaning": "Regirock"
+            },
+            {
+                "id": "em-p-182",
+                "text": "🧊⚙️🥶",
+                "meaning": "Regice"
+            },
+            {
+                "id": "em-p-183",
+                "text": "⚙️🤖⚙️",
+                "meaning": "Registeel"
+            },
+            {
+                "id": "em-p-184",
+                "text": "🐉✈️🔴",
+                "meaning": "Latias"
+            },
+            {
+                "id": "em-p-185",
+                "text": "🐉✈️🔵",
+                "meaning": "Latios"
+            },
+            {
+                "id": "em-p-186",
+                "text": "🐋🌊🌧️",
+                "meaning": "Kyogre"
+            },
+            {
+                "id": "em-p-187",
+                "text": "🧌🌋☀️",
+                "meaning": "Groudon"
+            },
+            {
+                "id": "em-p-188",
+                "text": "🐉🟢🌌",
+                "meaning": "Rayquaza"
+            },
+            {
+                "id": "em-p-189",
+                "text": "🌠✨💫",
+                "meaning": "Jirachi"
+            },
+            {
+                "id": "em-p-190",
+                "text": "🧬👽🔴",
+                "meaning": "Deoxys"
+            },
+            {
+                "id": "em-p-191",
+                "text": "🐧🧊🌊",
+                "meaning": "Piplup"
+            },
+            {
+                "id": "em-p-192",
+                "text": "🐒🔥🥊",
+                "meaning": "Infernape"
+            },
+            {
+                "id": "em-p-193",
+                "text": "🦈🐉🛩️",
+                "meaning": "Garchomp"
+            },
+            {
+                "id": "em-p-194",
+                "text": "🐕⚔️🔵",
+                "meaning": "Lucario"
+            },
+            {
+                "id": "em-p-195",
+                "text": "❄️🦊💎",
+                "meaning": "Glaceon"
+            },
+            {
+                "id": "em-p-196",
+                "text": "🌱🦊🍃",
+                "meaning": "Leafeon"
+            },
+            {
+                "id": "em-p-197",
+                "text": "🎀🦊💖",
+                "meaning": "Sylveon"
+            },
+            {
+                "id": "em-p-198",
+                "text": "👻🖤🗡️",
+                "meaning": "Giratina"
+            },
+            {
+                "id": "em-p-199",
+                "text": "🌙🖤💤",
+                "meaning": "Darkrai"
+            },
+            {
+                "id": "em-p-200",
+                "text": "👑🦄✨",
+                "meaning": "Arceus"
+            }
+        ],
+        "type": "default",
+        "color": "yellow",
+        "symbolName": "gamecontroller.fill",
+        "isEmoji": true
+    }
+]

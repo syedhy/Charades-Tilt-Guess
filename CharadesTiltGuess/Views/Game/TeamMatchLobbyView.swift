@@ -152,12 +152,15 @@ struct TeamMatchLobbyView: View {
     }
 
     private var startButton: some View {
-        DoodleActionButton(
-            title: "Ready! Start Turn",
+        let deck = state.currentDeck
+        let hasCards = deck != nil && deck!.cards.count > 0
+
+        return DoodleActionButton(
+            title: hasCards ? "Ready! Start Turn" : "No Cards Available",
             symbol: "play.fill",
-            accent: state.currentTeamInfo.color.displayColor
+            accent: hasCards ? state.currentTeamInfo.color.displayColor : AppTheme.Colors.gray.opacity(0.42)
         ) {
-            guard let deck = state.currentDeck else { return }
+            guard let deck = deck, !deck.cards.isEmpty else { return }
 
             router.startGame(
                 configuration: .teamVsTeam(
@@ -166,6 +169,8 @@ struct TeamMatchLobbyView: View {
                 )
             )
         }
+        .disabled(!hasCards)
+        .opacity(hasCards ? 1 : 0.60)
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
         .background(AppTheme.Colors.paper.opacity(0.96))

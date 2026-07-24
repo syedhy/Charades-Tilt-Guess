@@ -4,29 +4,1010 @@
         "name": "Food & Drinks",
         "description": "Guess food items and dishes represented by emojis!",
         "cards": [
-            { "id": "em-f-001", "text": "🍔🍟🥤", "meaning": "Fast Food Combo" },
-            { "id": "em-f-002", "text": "🍕🇮🇹", "meaning": "Italian Pizza" },
-            { "id": "em-f-003", "text": "☕🍩", "meaning": "Coffee & Donuts" },
-            { "id": "em-f-004", "text": "🌮🇲🇽", "meaning": "Mexican Tacos" },
-            { "id": "em-f-005", "text": "🍣🇯🇵", "meaning": "Japanese Sushi" },
-            { "id": "em-f-006", "text": "🍿🥤🎬", "meaning": "Movie Snacks" },
-            { "id": "em-f-007", "text": "🎂🕯️🎉", "meaning": "Birthday Cake" },
-            { "id": "em-f-008", "text": "🥞🍯", "meaning": "Pancakes with Syrup" },
-            { "id": "em-f-009", "text": "🌭⚾", "meaning": "Ballpark Hot Dog" },
-            { "id": "em-f-010", "text": "🍦☀️", "meaning": "Summer Ice Cream" },
-            { "id": "em-f-011", "text": "🍍🍕", "meaning": "Hawaiian Pizza" },
-            { "id": "em-f-012", "text": "🍝🥩", "meaning": "Spaghetti & Meatballs" },
-            { "id": "em-f-013", "text": "🥐🇫🇷", "meaning": "French Croissant" },
-            { "id": "em-f-014", "text": "🥑🍞", "meaning": "Avocado Toast" },
-            { "id": "em-f-015", "text": "🧀🐭", "meaning": "Mice & Cheese" },
-            { "id": "em-f-016", "text": "🍷🧀", "meaning": "Wine and Cheese" },
-            { "id": "em-f-017", "text": "🥓🥚", "meaning": "Bacon and Eggs" },
-            { "id": "em-f-018", "text": "🍜🍥", "meaning": "Ramen Noodle Bowl" },
-            { "id": "em-f-019", "text": "🍓🍨", "meaning": "Strawberry Sundae" },
-            { "id": "em-f-020", "text": "🍪🥛", "meaning": "Cookies and Milk" }
+            {
+                "id": "em-f-001",
+                "text": "🍕🧀🇮🇹",
+                "meaning": "Pizza"
+            },
+            {
+                "id": "em-f-002",
+                "text": "🍔🍟🥤",
+                "meaning": "Burger"
+            },
+            {
+                "id": "em-f-003",
+                "text": "🍣🥢🍱",
+                "meaning": "Sushi"
+            },
+            {
+                "id": "em-f-004",
+                "text": "🌮🌶️🥑",
+                "meaning": "Taco"
+            },
+            {
+                "id": "em-f-005",
+                "text": "🌯🫘🧀",
+                "meaning": "Burrito"
+            },
+            {
+                "id": "em-f-006",
+                "text": "🍦❄️🍧",
+                "meaning": "Ice Cream"
+            },
+            {
+                "id": "em-f-007",
+                "text": "🍩☕🍩",
+                "meaning": "Donut"
+            },
+            {
+                "id": "em-f-008",
+                "text": "🥞🧈🍯",
+                "meaning": "Pancakes"
+            },
+            {
+                "id": "em-f-009",
+                "text": "🍜🥢🍥",
+                "meaning": "Ramen"
+            },
+            {
+                "id": "em-f-010",
+                "text": "🍿🎬🥤",
+                "meaning": "Popcorn"
+            },
+            {
+                "id": "em-f-011",
+                "text": "🌭⚾🌭",
+                "meaning": "Hot Dog"
+            },
+            {
+                "id": "em-f-012",
+                "text": "🥪🥓🥬",
+                "meaning": "Sandwich"
+            },
+            {
+                "id": "em-f-013",
+                "text": "🍳🥓🍞",
+                "meaning": "Bacon and Eggs"
+            },
+            {
+                "id": "em-f-014",
+                "text": "🧇🍯🫐",
+                "meaning": "Waffles"
+            },
+            {
+                "id": "em-f-015",
+                "text": "🥐☕🥐",
+                "meaning": "Croissant"
+            },
+            {
+                "id": "em-f-016",
+                "text": "🥖🧀🇫🇷",
+                "meaning": "Baguette"
+            },
+            {
+                "id": "em-f-017",
+                "text": "🥨🍺🥨",
+                "meaning": "Pretzel"
+            },
+            {
+                "id": "em-f-018",
+                "text": "🥯🧀🥯",
+                "meaning": "Bagel"
+            },
+            {
+                "id": "em-f-019",
+                "text": "🥗🥬🥑",
+                "meaning": "Salad"
+            },
+            {
+                "id": "em-f-020",
+                "text": "🥣🥄🍲",
+                "meaning": "Soup"
+            },
+            {
+                "id": "em-f-021",
+                "text": "🥩🔥🍽️",
+                "meaning": "Steak"
+            },
+            {
+                "id": "em-f-022",
+                "text": "🍗🍟🥤",
+                "meaning": "Fried Chicken"
+            },
+            {
+                "id": "em-f-023",
+                "text": "🍖🔥🥩",
+                "meaning": "BBQ Ribs"
+            },
+            {
+                "id": "em-f-024",
+                "text": "🍢🔥🥩",
+                "meaning": "Kebab"
+            },
+            {
+                "id": "em-f-025",
+                "text": "🥟🥢🥟",
+                "meaning": "Dumplings"
+            },
+            {
+                "id": "em-f-026",
+                "text": "🥠✨📜",
+                "meaning": "Fortune Cookie"
+            },
+            {
+                "id": "em-f-027",
+                "text": "🦪🍋🧊",
+                "meaning": "Oysters"
+            },
+            {
+                "id": "em-f-028",
+                "text": "🦞🧈🍽️",
+                "meaning": "Lobster"
+            },
+            {
+                "id": "em-f-029",
+                "text": "🦀🍋🧈",
+                "meaning": "Crab Legs"
+            },
+            {
+                "id": "em-f-030",
+                "text": "🦐🥘🇪🇸",
+                "meaning": "Paella"
+            },
+            {
+                "id": "em-f-031",
+                "text": "🍝🥩🍅",
+                "meaning": "Spaghetti Bolognese"
+            },
+            {
+                "id": "em-f-032",
+                "text": "🍝🧀🍅",
+                "meaning": "Lasagna"
+            },
+            {
+                "id": "em-f-033",
+                "text": "🫕🧀🥖",
+                "meaning": "Cheese Fondue"
+            },
+            {
+                "id": "em-f-034",
+                "text": "🍛🍚🍛",
+                "meaning": "Curry Rice"
+            },
+            {
+                "id": "em-f-035",
+                "text": "🫓🧈🇮🇳",
+                "meaning": "Naan"
+            },
+            {
+                "id": "em-f-036",
+                "text": "🧆🥙🌿",
+                "meaning": "Falafel"
+            },
+            {
+                "id": "em-f-037",
+                "text": "🥙🥩🌯",
+                "meaning": "Shawarma"
+            },
+            {
+                "id": "em-f-038",
+                "text": "🥑🍞🍳",
+                "meaning": "Avocado Toast"
+            },
+            {
+                "id": "em-f-039",
+                "text": "🍞🧈🍯",
+                "meaning": "Butter Toast"
+            },
+            {
+                "id": "em-f-040",
+                "text": "🍟🧀🇨🇦",
+                "meaning": "Poutine"
+            },
+            {
+                "id": "em-f-041",
+                "text": "🧀🥪🧈",
+                "meaning": "Grilled Cheese"
+            },
+            {
+                "id": "em-f-042",
+                "text": "🧀🫓🌮",
+                "meaning": "Quesadilla"
+            },
+            {
+                "id": "em-f-043",
+                "text": "🥑🧅🇲🇽",
+                "meaning": "Guacamole"
+            },
+            {
+                "id": "em-f-044",
+                "text": "🌽🔥🧈",
+                "meaning": "Roasted Corn"
+            },
+            {
+                "id": "em-f-045",
+                "text": "🥧🍎🇺🇸",
+                "meaning": "Apple Pie"
+            },
+            {
+                "id": "em-f-046",
+                "text": "🥧🎃🍂",
+                "meaning": "Pumpkin Pie"
+            },
+            {
+                "id": "em-f-047",
+                "text": "🍰🍓🧁",
+                "meaning": "Strawberry Shortcake"
+            },
+            {
+                "id": "em-f-048",
+                "text": "🎂🕯️🎉",
+                "meaning": "Birthday Cake"
+            },
+            {
+                "id": "em-f-049",
+                "text": "🧁✨💖",
+                "meaning": "Cupcake"
+            },
+            {
+                "id": "em-f-050",
+                "text": "🍫🍪🥛",
+                "meaning": "Chocolate Chip Cookie"
+            },
+            {
+                "id": "em-f-051",
+                "text": "🍫🍫🍫",
+                "meaning": "Chocolate Bar"
+            },
+            {
+                "id": "em-f-052",
+                "text": "🍫🧁🍨",
+                "meaning": "Brownie"
+            },
+            {
+                "id": "em-f-053",
+                "text": "🍡🍡🍡",
+                "meaning": "Dango"
+            },
+            {
+                "id": "em-f-054",
+                "text": "🍧🍓❄️",
+                "meaning": "Shaved Ice"
+            },
+            {
+                "id": "em-f-055",
+                "text": "🍮🍯✨",
+                "meaning": "Flan"
+            },
+            {
+                "id": "em-f-056",
+                "text": "🍨🍫🍒",
+                "meaning": "Sundae"
+            },
+            {
+                "id": "em-f-057",
+                "text": "🥖🍫🇲🇽",
+                "meaning": "Churro"
+            },
+            {
+                "id": "em-f-058",
+                "text": "🍓🍫✨",
+                "meaning": "Chocolate Covered Strawberry"
+            },
+            {
+                "id": "em-f-059",
+                "text": "🍉☀️🌴",
+                "meaning": "Watermelon Slice"
+            },
+            {
+                "id": "em-f-060",
+                "text": "🍍🍌🍓",
+                "meaning": "Fruit Salad"
+            },
+            {
+                "id": "em-f-061",
+                "text": "🥣🥛🥣",
+                "meaning": "Cereal with Milk"
+            },
+            {
+                "id": "em-f-062",
+                "text": "🌾🥣🍯",
+                "meaning": "Oatmeal"
+            },
+            {
+                "id": "em-f-063",
+                "text": "🍌🍨🍒",
+                "meaning": "Banana Split"
+            },
+            {
+                "id": "em-f-064",
+                "text": "🍞🍳🍯",
+                "meaning": "French Toast"
+            },
+            {
+                "id": "em-f-065",
+                "text": "🫕🍫🍓",
+                "meaning": "Chocolate Fondue"
+            },
+            {
+                "id": "em-f-066",
+                "text": "🍵🍡🍵",
+                "meaning": "Matcha"
+            },
+            {
+                "id": "em-f-067",
+                "text": "🧋✨🧋",
+                "meaning": "Boba Milk Tea"
+            },
+            {
+                "id": "em-f-068",
+                "text": "☕🧊🥤",
+                "meaning": "Iced Coffee"
+            },
+            {
+                "id": "em-f-069",
+                "text": "☕🫧☕",
+                "meaning": "Cappuccino"
+            },
+            {
+                "id": "em-f-070",
+                "text": "☕💥⚡",
+                "meaning": "Espresso"
+            },
+            {
+                "id": "em-f-071",
+                "text": "🫖🌿🫖",
+                "meaning": "Green Tea"
+            },
+            {
+                "id": "em-f-072",
+                "text": "🧃🧃🧃",
+                "meaning": "Juice Box"
+            },
+            {
+                "id": "em-f-073",
+                "text": "🍋🧊🥤",
+                "meaning": "Lemonade"
+            },
+            {
+                "id": "em-f-074",
+                "text": "🥤🧊🥤",
+                "meaning": "Soda"
+            },
+            {
+                "id": "em-f-075",
+                "text": "🥛🍪🥛",
+                "meaning": "Milk and Cookies"
+            },
+            {
+                "id": "em-f-076",
+                "text": "🥛🍓🥤",
+                "meaning": "Milkshake"
+            },
+            {
+                "id": "em-f-077",
+                "text": "🍫🥛☕",
+                "meaning": "Hot Chocolate"
+            },
+            {
+                "id": "em-f-078",
+                "text": "🥥🥤🌴",
+                "meaning": "Coconut Water"
+            },
+            {
+                "id": "em-f-079",
+                "text": "🧈🍗🇮🇳",
+                "meaning": "Butter Chicken"
+            },
+            {
+                "id": "em-f-080",
+                "text": "🍚🐟🥑",
+                "meaning": "Poke Bowl"
+            },
+            {
+                "id": "em-f-081",
+                "text": "🥪🥚🍳",
+                "meaning": "Egg Sandwich"
+            },
+            {
+                "id": "em-f-082",
+                "text": "🥪🥓🥬",
+                "meaning": "BLT Sandwich"
+            },
+            {
+                "id": "em-f-083",
+                "text": "🥭🍚🇹🇭",
+                "meaning": "Mango Sticky Rice"
+            },
+            {
+                "id": "em-f-084",
+                "text": "🍙🐟🍣",
+                "meaning": "Salmon Onigiri"
+            },
+            {
+                "id": "em-f-085",
+                "text": "🧀🍝🧀",
+                "meaning": "Mac & Cheese"
+            },
+            {
+                "id": "em-f-086",
+                "text": "🥔🧀🥓",
+                "meaning": "Loaded Fries"
+            },
+            {
+                "id": "em-f-087",
+                "text": "🍅🥣🍞",
+                "meaning": "Tomato Soup"
+            },
+            {
+                "id": "em-f-088",
+                "text": "🧅🥣🧀",
+                "meaning": "Onion Soup"
+            },
+            {
+                "id": "em-f-089",
+                "text": "🦪🥣🥖",
+                "meaning": "Clam Chowder"
+            },
+            {
+                "id": "em-f-090",
+                "text": "🍲🌶️🫘",
+                "meaning": "Chili"
+            },
+            {
+                "id": "em-f-091",
+                "text": "🍜🍥🥢",
+                "meaning": "Udon"
+            },
+            {
+                "id": "em-f-092",
+                "text": "🥟🔥🥢",
+                "meaning": "Momos"
+            },
+            {
+                "id": "em-f-093",
+                "text": "🍜🇻🇳🥢",
+                "meaning": "Pho"
+            },
+            {
+                "id": "em-f-094",
+                "text": "🍱🥢🍱",
+                "meaning": "Bento Box"
+            },
+            {
+                "id": "em-f-095",
+                "text": "🍙🍙🍙",
+                "meaning": "Onigiri"
+            },
+            {
+                "id": "em-f-096",
+                "text": "🐟🔪🥢",
+                "meaning": "Sashimi"
+            },
+            {
+                "id": "em-f-097",
+                "text": "🐙🍡🥢",
+                "meaning": "Takoyaki"
+            },
+            {
+                "id": "em-f-098",
+                "text": "🥩🥬🇰🇷",
+                "meaning": "Korean BBQ"
+            },
+            {
+                "id": "em-f-099",
+                "text": "🍚🍳🇰🇷",
+                "meaning": "Bibimbap"
+            },
+            {
+                "id": "em-f-100",
+                "text": "🍫🥞🇫🇷",
+                "meaning": "Nutella Crepe"
+            },
+            {
+                "id": "em-f-101",
+                "text": "🍎🥐✨",
+                "meaning": "Apple Turnover"
+            },
+            {
+                "id": "em-f-102",
+                "text": "🍒🥧🍒",
+                "meaning": "Cherry Pie"
+            },
+            {
+                "id": "em-f-103",
+                "text": "🍋🥧✨",
+                "meaning": "Lemon Meringue Pie"
+            },
+            {
+                "id": "em-f-104",
+                "text": "🍞🧈🍓",
+                "meaning": "Jam Toast"
+            },
+            {
+                "id": "em-f-105",
+                "text": "🥜🥪🥜",
+                "meaning": "Peanut Butter Sandwich"
+            },
+            {
+                "id": "em-f-106",
+                "text": "🥒🥪🇬🇧",
+                "meaning": "Cucumber Sandwich"
+            },
+            {
+                "id": "em-f-107",
+                "text": "🐟🧀🥪",
+                "meaning": "Tuna Melt"
+            },
+            {
+                "id": "em-f-108",
+                "text": "🌭🧀🌶️",
+                "meaning": "Chili Cheese Dog"
+            },
+            {
+                "id": "em-f-109",
+                "text": "🌭🌽🎪",
+                "meaning": "Corn Dog"
+            },
+            {
+                "id": "em-f-110",
+                "text": "🍔🍄🧀",
+                "meaning": "Mushroom Swiss Burger"
+            },
+            {
+                "id": "em-f-111",
+                "text": "🍔🥓🧀",
+                "meaning": "Bacon Cheeseburger"
+            },
+            {
+                "id": "em-f-112",
+                "text": "🍕🍄🧀",
+                "meaning": "Mushroom Pizza"
+            },
+            {
+                "id": "em-f-113",
+                "text": "🍕🍍🥓",
+                "meaning": "Hawaiian Pizza"
+            },
+            {
+                "id": "em-f-114",
+                "text": "🌮🐟🌮",
+                "meaning": "Fish Taco"
+            },
+            {
+                "id": "em-f-115",
+                "text": "🌮🥩🌶️",
+                "meaning": "Steak Taco"
+            },
+            {
+                "id": "em-f-116",
+                "text": "🌯🍳🥓",
+                "meaning": "Breakfast Burrito"
+            },
+            {
+                "id": "em-f-117",
+                "text": "🥗🐔🧀",
+                "meaning": "Chicken Caesar Salad"
+            },
+            {
+                "id": "em-f-118",
+                "text": "🥗🥑🥓",
+                "meaning": "Cobb Salad"
+            },
+            {
+                "id": "em-f-119",
+                "text": "🥣🍄🍞",
+                "meaning": "Mushroom Soup"
+            },
+            {
+                "id": "em-f-120",
+                "text": "🥣🥦🧀",
+                "meaning": "Broccoli Cheddar Soup"
+            },
+            {
+                "id": "em-f-121",
+                "text": "🍜🐷🥢",
+                "meaning": "Tonkotsu Ramen"
+            },
+            {
+                "id": "em-f-122",
+                "text": "🍜🥟🥢",
+                "meaning": "Wonton Soup"
+            },
+            {
+                "id": "em-f-123",
+                "text": "🥩🥔🍽️",
+                "meaning": "Steak and Potatoes"
+            },
+            {
+                "id": "em-f-124",
+                "text": "🥩🔥🍷",
+                "meaning": "Prime Rib"
+            },
+            {
+                "id": "em-f-125",
+                "text": "🐷🥩🍽️",
+                "meaning": "Pork Chop"
+            },
+            {
+                "id": "em-f-126",
+                "text": "🍗🧇🍯",
+                "meaning": "Chicken and Waffles"
+            },
+            {
+                "id": "em-f-127",
+                "text": "🍗🍗🍗",
+                "meaning": "Chicken Wings"
+            },
+            {
+                "id": "em-f-128",
+                "text": "🍢🍗🔥",
+                "meaning": "Yakitori"
+            },
+            {
+                "id": "em-f-129",
+                "text": "🍤🌾🥢",
+                "meaning": "Tempura Shrimp"
+            },
+            {
+                "id": "em-f-130",
+                "text": "🐟🍟🇬🇧",
+                "meaning": "Fish and Chips"
+            },
+            {
+                "id": "em-f-131",
+                "text": "🦐🧈🧄",
+                "meaning": "Shrimp Scampi"
+            },
+            {
+                "id": "em-f-132",
+                "text": "🦀🥧🦀",
+                "meaning": "Crab Cake"
+            },
+            {
+                "id": "em-f-133",
+                "text": "🍝🦐🦀",
+                "meaning": "Seafood Pasta"
+            },
+            {
+                "id": "em-f-134",
+                "text": "🍝🧄🌶️",
+                "meaning": "Pasta Aglio e Olio"
+            },
+            {
+                "id": "em-f-135",
+                "text": "🍝🦪🍷",
+                "meaning": "Linguine with Clams"
+            },
+            {
+                "id": "em-f-136",
+                "text": "🥘🐓🥘",
+                "meaning": "Chicken Paella"
+            },
+            {
+                "id": "em-f-137",
+                "text": "🍛🥔🥕",
+                "meaning": "Vegetable Curry"
+            },
+            {
+                "id": "em-f-138",
+                "text": "🫓🧄🧈",
+                "meaning": "Garlic Naan"
+            },
+            {
+                "id": "em-f-139",
+                "text": "🫓🫒🌿",
+                "meaning": "Pita Bread"
+            },
+            {
+                "id": "em-f-140",
+                "text": "🍞🧄🧈",
+                "meaning": "Garlic Bread"
+            },
+            {
+                "id": "em-f-141",
+                "text": "🥖🧄🍅",
+                "meaning": "Bruschetta"
+            },
+            {
+                "id": "em-f-142",
+                "text": "🍟🍠🍟",
+                "meaning": "Sweet Potato Fries"
+            },
+            {
+                "id": "em-f-143",
+                "text": "🧅⭕🍟",
+                "meaning": "Onion Rings"
+            },
+            {
+                "id": "em-f-144",
+                "text": "🧀🥖🧀",
+                "meaning": "Mozzarella Sticks"
+            },
+            {
+                "id": "em-f-145",
+                "text": "🥑🥬🧅",
+                "meaning": "Guacamole Salad"
+            },
+            {
+                "id": "em-f-146",
+                "text": "🌽🧈🔥",
+                "meaning": "Corn on the Cob"
+            },
+            {
+                "id": "em-f-147",
+                "text": "🥔🧈🥓",
+                "meaning": "Baked Potato"
+            },
+            {
+                "id": "em-f-148",
+                "text": "🥔🥣🧈",
+                "meaning": "Mashed Potatoes"
+            },
+            {
+                "id": "em-f-149",
+                "text": "🥧🫐🥧",
+                "meaning": "Blueberry Pie"
+            },
+            {
+                "id": "em-f-150",
+                "text": "🥧🍑🥧",
+                "meaning": "Peach Cobbler"
+            },
+            {
+                "id": "em-f-151",
+                "text": "🥧🥩🥔",
+                "meaning": "Shepherd's Pie"
+            },
+            {
+                "id": "em-f-152",
+                "text": "🥧🐓🥕",
+                "meaning": "Chicken Pot Pie"
+            },
+            {
+                "id": "em-f-153",
+                "text": "🍰🧀🍓",
+                "meaning": "Cheesecake"
+            },
+            {
+                "id": "em-f-154",
+                "text": "🍰🍫🌋",
+                "meaning": "Chocolate Lava Cake"
+            },
+            {
+                "id": "em-f-155",
+                "text": "🍰🥕🍰",
+                "meaning": "Carrot Cake"
+            },
+            {
+                "id": "em-f-156",
+                "text": "🍰🔴🧁",
+                "meaning": "Red Velvet Cake"
+            },
+            {
+                "id": "em-f-157",
+                "text": "🧁🍫✨",
+                "meaning": "Chocolate Cupcake"
+            },
+            {
+                "id": "em-f-158",
+                "text": "🍪🥜🍪",
+                "meaning": "Peanut Butter Cookie"
+            },
+            {
+                "id": "em-f-159",
+                "text": "🍪🌾🍇",
+                "meaning": "Oatmeal Raisin Cookie"
+            },
+            {
+                "id": "em-f-160",
+                "text": "🍫🥐🇫🇷",
+                "meaning": "Pain au Chocolat"
+            },
+            {
+                "id": "em-f-161",
+                "text": "🍧🫐❄️",
+                "meaning": "Berry Sorbet"
+            },
+            {
+                "id": "em-f-162",
+                "text": "🍨☕🇮🇹",
+                "meaning": "Affogato"
+            },
+            {
+                "id": "em-f-163",
+                "text": "🍮🥐🍯",
+                "meaning": "Bread Pudding"
+            },
+            {
+                "id": "em-f-164",
+                "text": "⚪🍡🇯🇵",
+                "meaning": "Mochi"
+            },
+            {
+                "id": "em-f-165",
+                "text": "🫐🥣🍓",
+                "meaning": "Acai Bowl"
+            },
+            {
+                "id": "em-f-166",
+                "text": "🍌🍞🧈",
+                "meaning": "Banana Bread"
+            },
+            {
+                "id": "em-f-167",
+                "text": "🍋🍰✨",
+                "meaning": "Lemon Pound Cake"
+            },
+            {
+                "id": "em-f-168",
+                "text": "🍎✨🍬",
+                "meaning": "Candy Apple"
+            },
+            {
+                "id": "em-f-169",
+                "text": "🍿🍯🍿",
+                "meaning": "Kettle Corn"
+            },
+            {
+                "id": "em-f-170",
+                "text": "🍬☁️🎪",
+                "meaning": "Cotton Candy"
+            },
+            {
+                "id": "em-f-171",
+                "text": "🍓🥤🍧",
+                "meaning": "Strawberry Smoothie"
+            },
+            {
+                "id": "em-f-172",
+                "text": "🥭🥤🇮🇳",
+                "meaning": "Mango Lassi"
+            },
+            {
+                "id": "em-f-173",
+                "text": "☕🍫🫧",
+                "meaning": "Mocha Coffee"
+            },
+            {
+                "id": "em-f-174",
+                "text": "☕🧊🥛",
+                "meaning": "Iced Latte"
+            },
+            {
+                "id": "em-f-175",
+                "text": "🫖🌿🥛",
+                "meaning": "Chai Tea"
+            },
+            {
+                "id": "em-f-176",
+                "text": "🫖🍋🧊",
+                "meaning": "Lemon Tea"
+            },
+            {
+                "id": "em-f-177",
+                "text": "🧃🍎🧃",
+                "meaning": "Apple Juice"
+            },
+            {
+                "id": "em-f-178",
+                "text": "🧃🍊🧃",
+                "meaning": "Orange Juice"
+            },
+            {
+                "id": "em-f-179",
+                "text": "🧃🍇🧃",
+                "meaning": "Grape Juice"
+            },
+            {
+                "id": "em-f-180",
+                "text": "🥤🍒🧊",
+                "meaning": "Cherry Soda"
+            },
+            {
+                "id": "em-f-181",
+                "text": "🥤🍦🍒",
+                "meaning": "Root Beer Float"
+            },
+            {
+                "id": "em-f-182",
+                "text": "🥛🍫🥛",
+                "meaning": "Chocolate Milk"
+            },
+            {
+                "id": "em-f-183",
+                "text": "🥥🍦❄️",
+                "meaning": "Coconut Ice Cream"
+            },
+            {
+                "id": "em-f-184",
+                "text": "🍚🥛🌾",
+                "meaning": "Rice Pudding"
+            },
+            {
+                "id": "em-f-185",
+                "text": "🍛🥔🥩",
+                "meaning": "Massaman Curry"
+            },
+            {
+                "id": "em-f-186",
+                "text": "🍚🦐🍳",
+                "meaning": "Shrimp Fried Rice"
+            },
+            {
+                "id": "em-f-187",
+                "text": "🍚🥓🍳",
+                "meaning": "Pork Fried Rice"
+            },
+            {
+                "id": "em-f-188",
+                "text": "🥪🥓🍗",
+                "meaning": "Club Sandwich"
+            },
+            {
+                "id": "em-f-189",
+                "text": "🥩🐷🥪",
+                "meaning": "Pulled Pork Sandwich"
+            },
+            {
+                "id": "em-f-190",
+                "text": "🥩🧀🇺🇸",
+                "meaning": "Philly Cheesesteak"
+            },
+            {
+                "id": "em-f-191",
+                "text": "🍙🔴🇯🇵",
+                "meaning": "Umeboshi Onigiri"
+            },
+            {
+                "id": "em-f-192",
+                "text": "🥟🦐🥢",
+                "meaning": "Shrimp Dumplings"
+            },
+            {
+                "id": "em-f-193",
+                "text": "🥟🥬🥢",
+                "meaning": "Vegetable Dumplings"
+            },
+            {
+                "id": "em-f-194",
+                "text": "🍜🥟🥢",
+                "meaning": "Wonton Noodle Soup"
+            },
+            {
+                "id": "em-f-195",
+                "text": "🍜🌶️🔥",
+                "meaning": "Spicy Ramen"
+            },
+            {
+                "id": "em-f-196",
+                "text": "🍱🐟🍯",
+                "meaning": "Teriyaki Salmon Bento"
+            },
+            {
+                "id": "em-f-197",
+                "text": "🍱🍗🍯",
+                "meaning": "Teriyaki Chicken Bento"
+            },
+            {
+                "id": "em-f-198",
+                "text": "🍚🥒🍣",
+                "meaning": "Cucumber Roll"
+            },
+            {
+                "id": "em-f-199",
+                "text": "🍣🥑🦀",
+                "meaning": "California Roll"
+            },
+            {
+                "id": "em-f-200",
+                "text": "🍫🍧🇮🇹",
+                "meaning": "Chocolate Gelato"
+            }
         ],
         "type": "default",
         "color": "orange",
-        "symbolName": "fork.knife"
+        "symbolName": "fork.knife",
+        "isEmoji": true
     }
 ]

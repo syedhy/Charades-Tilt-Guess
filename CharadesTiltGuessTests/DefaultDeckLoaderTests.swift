@@ -7,8 +7,8 @@ final class DefaultDeckLoaderTests: XCTestCase {
     func testLoadsBundledDefaultDecks() throws {
         let decks = try DefaultDeckLoader().load()
 
-        XCTAssertEqual(decks.count, 19)
-        XCTAssertEqual(decks.first?.name, "Movies")
+        XCTAssertEqual(decks.count, 22)
+        XCTAssertEqual(decks.first?.name, "General Emoji")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
         XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
     }

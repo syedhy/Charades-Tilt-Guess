@@ -10,9 +10,8 @@ Players choose a deck, start a timed round, hold the phone up, and guess the wor
 - **Built-in Decks**: Play immediately with a variety of bundled word decks.
 - **Custom Decks**: Create and store your own custom decks locally. Enter cards manually or paste a newline-separated list.
 - **Picture Mode**: Visual, image-based cards for quick guessing and accessibility.
-- **Wikipedia Mode**: Fetches random public articles from the Wikipedia API for endless gameplay (requires internet).
 - **Tip Jar**: Optional "Buy Me a Coffee" tips supported via StoreKit in-app purchases.
-- **Privacy First**: No ads, no tracking, no account, and no mandatory subscriptions. Everything except Wikipedia Mode works entirely offline.
+- **Privacy First**: No ads, no tracking, no account, and no mandatory subscriptions. Everything works entirely offline.
 
 ## Tech Stack
 

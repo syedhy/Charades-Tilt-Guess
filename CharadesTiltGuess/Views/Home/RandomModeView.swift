@@ -223,7 +223,21 @@ struct RandomModeView: View {
             return
         }
 
-        let playableModes: [GameMode] = [.normal, .emoji, .infinite, .teamVsTeam]
+        let hasEmojiDecks = availableDecks.contains { $0.isEmojiDeck }
+        let hasNormalDecks = availableDecks.contains { !$0.isEmojiDeck }
+
+        var playableModes: [GameMode] = []
+        if hasNormalDecks {
+            playableModes.append(contentsOf: [.normal, .infinite, .teamVsTeam])
+        }
+        if hasEmojiDecks {
+            playableModes.append(.emoji)
+        }
+
+        if playableModes.isEmpty {
+            playableModes = [.normal]
+        }
+
         let newMode = playableModes.randomElement() ?? .normal
         rolledMode = newMode
 

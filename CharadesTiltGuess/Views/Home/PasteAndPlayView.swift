@@ -12,7 +12,9 @@ struct PasteAndPlayView: View {
         duplicateCount: 0,
         tooLongLines: [],
         overDeckLimitCount: 0,
-        maxCardLength: 30
+        maxCardLength: 30,
+        invalidEmojiCardsCount: 0,
+        missingMeaningCardsCount: 0
     )
     @State private var pasteMessage: String?
 
@@ -124,7 +126,8 @@ struct PasteAndPlayView: View {
                 } else {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 124), spacing: 10)], alignment: .leading, spacing: 10) {
                         ForEach(preview.cards.prefix(12), id: \.self) { card in
-                            ImportPreviewPill(text: card)
+                            let displayText = card.meaning != nil ? "\(card.text) - \(card.meaning!)" : card.text
+                            ImportPreviewPill(text: displayText)
                         }
                     }
 
@@ -162,8 +165,8 @@ struct PasteAndPlayView: View {
             id: "temp-paste-\(UUID().uuidString)",
             name: "Paste & Play",
             description: "Temporary pasted deck",
-            cards: preview.cards.enumerated().map { index, text in
-                GameWord(id: "paste-\(index)-\(UUID().uuidString)", text: text)
+            cards: preview.cards.enumerated().map { index, card in
+                GameWord(id: "paste-\(index)-\(UUID().uuidString)", text: card.text, meaning: card.meaning)
             },
             type: .custom,
             color: .yellow,

@@ -8,30 +8,45 @@ struct TeamInfo: Identifiable, Hashable, Equatable {
     var score: Int = 0
 
     static let defaultPresets: [(name: String, icon: String, color: DeckColor)] = [
+        // Animals & Beasts
         ("Tigers", "🐅", .orange),
         ("Lions", "🦁", .yellow),
-        ("Rhinos", "🦏", .mint),
+        ("Dragons", "🐉", .coral),
         ("Eagles", "🦅", .blue),
         ("Wolves", "🐺", .purple),
-        ("Dragons", "🐉", .coral),
         ("Sharks", "🦈", .blue),
-        ("Bears", "🐻", .orange),
-        ("Foxes", "🦊", .yellow),
-        ("Gorillas", "🦍", .mint),
         ("Panthers", "🐆", .purple),
         ("Flamingos", "🦩", .pink),
-        ("Bison", "🦬", .orange),
-        ("Falcons", "🦅", .yellow),
-        ("Cobras", "🐍", .mint),
-        ("Hornets", "🐝", .yellow),
-        ("Mammoths", "🦣", .purple),
-        ("Stallions", "🐎", .coral),
-        ("Kangaroos", "🦘", .orange),
-        ("Owls", "🦉", .blue),
+        ("Dinosaurs", "🦖", .mint),
+        ("Unicorns", "🦄", .pink),
         ("Octopuses", "🐙", .purple),
-        ("Dolphins", "🐬", .mint),
-        ("Cheetahs", "🐆", .orange),
-        ("Gators", "🐊", .mint)
+        ("Cobras", "🐍", .mint),
+
+        // Space & Cosmic
+        ("Rockets", "🚀", .orange),
+        ("Supernovas", "🌟", .yellow),
+        ("Comets", "☄️", .coral),
+        ("Astronauts", "🧑‍🚀", .blue),
+        ("Aliens", "👾", .purple),
+        ("Robots", "🤖", .blue),
+
+        // Food & Fun Treats
+        ("Hot Pizzas", "🍕", .coral),
+        ("Spicy Tacos", "🌮", .orange),
+        ("Ninja Chefs", "🥷", .purple),
+        ("Donuts", "🍩", .pink),
+        ("Fire Peppers", "🌶️", .coral),
+        ("Ice Creams", "🍦", .blue),
+
+        // Fantasy & Pop Culture
+        ("Wizards", "🧙", .purple),
+        ("Pirates", "🏴‍☠️", .coral),
+        ("Gladiators", "⚔️", .orange),
+        ("Kings", "👑", .yellow),
+        ("Lightning", "⚡", .yellow),
+        ("Skulls", "💀", .gray),
+        ("Rockstars", "🎸", .coral),
+        ("Surfers", "🏄", .blue)
     ]
 
     static func randomPresets(count: Int) -> [TeamInfo] {

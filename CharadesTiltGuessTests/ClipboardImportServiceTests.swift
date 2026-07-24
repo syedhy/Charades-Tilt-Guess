@@ -13,14 +13,25 @@ final class ClipboardImportServiceTests: XCTestCase {
             """
         )
 
-        XCTAssertEqual(preview.cards, ["Pizza", "Burger", "Ice Cream", "Football", "Spider-Man"])
+        let expected = [
+            ParsedCard(text: "Pizza", meaning: nil),
+            ParsedCard(text: "Burger", meaning: nil),
+            ParsedCard(text: "Ice Cream", meaning: nil),
+            ParsedCard(text: "Football", meaning: nil),
+            ParsedCard(text: "Spider-Man", meaning: nil)
+        ]
+        XCTAssertEqual(preview.cards, expected)
     }
 
     func testSkipsDuplicatesAcrossFormats() {
         let service = ClipboardImportService()
         let preview = service.previewCards(from: "Pizza, pizza\n1. PIZZA\nBurger")
 
-        XCTAssertEqual(preview.cards, ["Pizza", "Burger"])
+        let expected = [
+            ParsedCard(text: "Pizza", meaning: nil),
+            ParsedCard(text: "Burger", meaning: nil)
+        ]
+        XCTAssertEqual(preview.cards, expected)
         XCTAssertEqual(preview.duplicateCount, 2)
     }
 
@@ -37,8 +48,48 @@ final class ClipboardImportServiceTests: XCTestCase {
         let longCard = String(repeating: "A", count: 31)
         let preview = service.previewCards(from: "Pizza\n\(longCard)")
 
-        XCTAssertEqual(preview.cards, ["Pizza"])
+        XCTAssertEqual(preview.cards, [ParsedCard(text: "Pizza", meaning: nil)])
         XCTAssertEqual(preview.tooLongLines, [longCard])
         XCTAssertTrue(preview.summaryMessages.contains("1 card is over 30 characters."))
+    }
+
+    func testNormalModeDoesNotExtractMeanings() {
+        let service = ClipboardImportService()
+        let preview = service.previewCards(
+            from: """
+            Pizza - A cheesy Italian dish
+            Burger: A delicious sandwich
+            Spider-Man
+            """,
+            isEmoji: false
+        )
+
+        let expected = [
+            ParsedCard(text: "Pizza - A cheesy Italian dish", meaning: nil),
+            ParsedCard(text: "Burger: A delicious sandwich", meaning: nil),
+            ParsedCard(text: "Spider-Man", meaning: nil)
+        ]
+        XCTAssertEqual(preview.cards, expected)
+    }
+
+    func testEmojiValidationAndMeaningRequired() {
+        let service = ClipboardImportService()
+        let preview = service.previewCards(
+            from: """
+            🍿 🎬 - Movie
+            🚀 🌕 - Moonshot
+            NoEmoji - Text
+            🍕
+            """,
+            isEmoji: true
+        )
+
+        let expected = [
+            ParsedCard(text: "🍿 🎬", meaning: "Movie"),
+            ParsedCard(text: "🚀 🌕", meaning: "Moonshot")
+        ]
+        XCTAssertEqual(preview.cards, expected)
+        XCTAssertEqual(preview.invalidEmojiCardsCount, 1) // "NoEmoji" has no emoji
+        XCTAssertEqual(preview.missingMeaningCardsCount, 1) // "🍕" has no meaning
     }
 }

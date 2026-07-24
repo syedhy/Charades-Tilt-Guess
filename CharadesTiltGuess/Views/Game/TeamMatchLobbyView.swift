@@ -87,14 +87,14 @@ struct TeamMatchLobbyView: View {
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
                 }
 
-                Text("Pass the device to \(team.name) to begin!")
+                Text("Pass the device to \(team.name)\nto begin!")
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                     .multilineTextAlignment(.center)
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .background(AppTheme.Colors.paperBright, in: Capsule())
-                    .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .background(AppTheme.Colors.paperBright, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(AppTheme.Colors.ink, lineWidth: 2))
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 36)

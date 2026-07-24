@@ -8,7 +8,7 @@ struct TeamInfo: Identifiable, Hashable, Equatable {
     var score: Int = 0
 
     static let defaultPresets: [(name: String, icon: String, color: DeckColor)] = [
-        // Animals & Beasts
+        // Animals & Mythical
         ("Tigers", "🐅", .orange),
         ("Lions", "🦁", .yellow),
         ("Dragons", "🐉", .coral),
@@ -16,37 +16,32 @@ struct TeamInfo: Identifiable, Hashable, Equatable {
         ("Wolves", "🐺", .purple),
         ("Sharks", "🦈", .blue),
         ("Panthers", "🐆", .purple),
-        ("Flamingos", "🦩", .pink),
+        ("Rhinos", "🦏", .mint),
+        ("Bears", "🐻", .orange),
+        ("Foxes", "🦊", .yellow),
+        ("Gorillas", "🦍", .mint),
+        ("Falcons", "🦅", .yellow),
+        ("Cobras", "🐍", .mint),
+        ("Mammoths", "🦣", .purple),
+        ("Cheetahs", "🐆", .orange),
         ("Dinosaurs", "🦖", .mint),
         ("Unicorns", "🦄", .pink),
-        ("Octopuses", "🐙", .purple),
-        ("Cobras", "🐍", .mint),
 
-        // Space & Cosmic
-        ("Rockets", "🚀", .orange),
-        ("Supernovas", "🌟", .yellow),
-        ("Comets", "☄️", .coral),
-        ("Astronauts", "🧑‍🚀", .blue),
-        ("Aliens", "👾", .purple),
-        ("Robots", "🤖", .blue),
-
-        // Food & Fun Treats
-        ("Hot Pizzas", "🍕", .coral),
-        ("Spicy Tacos", "🌮", .orange),
-        ("Ninja Chefs", "🥷", .purple),
-        ("Donuts", "🍩", .pink),
-        ("Fire Peppers", "🌶️", .coral),
-        ("Ice Creams", "🍦", .blue),
-
-        // Fantasy & Pop Culture
-        ("Wizards", "🧙", .purple),
+        // Warriors, Legends & Sci-Fi
+        ("Ninjas", "🥷", .purple),
         ("Pirates", "🏴‍☠️", .coral),
         ("Gladiators", "⚔️", .orange),
+        ("Wizards", "🧙", .purple),
+        ("Knights", "🛡️", .blue),
+        ("Samurai", "🗡️", .coral),
+        ("Vampires", "🧛", .purple),
+        ("Rockets", "🚀", .orange),
+        ("Robots", "🤖", .blue),
+        ("Astronauts", "🧑‍🚀", .blue),
+        ("Aliens", "👾", .purple),
         ("Kings", "👑", .yellow),
         ("Lightning", "⚡", .yellow),
-        ("Skulls", "💀", .gray),
-        ("Rockstars", "🎸", .coral),
-        ("Surfers", "🏄", .blue)
+        ("Rockstars", "🎸", .coral)
     ]
 
     static func randomPresets(count: Int) -> [TeamInfo] {

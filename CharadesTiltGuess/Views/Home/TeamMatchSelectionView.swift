@@ -16,7 +16,11 @@ struct TeamMatchSelectionView: View {
     @State private var playersPerTeam: Int = 4
     @State private var isCustomPlayers: Bool = false
     @State private var selectedDeckIDs: Set<String> = []
-    @State private var currentTeamPresets: [TeamInfo] = TeamInfo.randomPresets(count: 2)
+    @State private var sessionTeamsPool: [TeamInfo] = TeamInfo.randomPresets(count: 5)
+
+    private var displayedTeams: [TeamInfo] {
+        Array(sessionTeamsPool.prefix(numberOfTeams))
+    }
 
     var body: some View {
         ZStack {
@@ -86,7 +90,6 @@ struct TeamMatchSelectionView: View {
                     Button {
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                             numberOfTeams = count
-                            currentTeamPresets = TeamInfo.randomPresets(count: count)
                         }
                     } label: {
                         Text("\(count)")
@@ -232,20 +235,20 @@ struct TeamMatchSelectionView: View {
                 ]
 
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(currentTeamPresets) { team in
-                        HStack(spacing: 10) {
+                    ForEach(displayedTeams) { team in
+                        HStack(spacing: 8) {
                             Text(team.icon)
-                                .font(.system(size: 26))
+                                .font(.system(size: 24))
 
                             Text(team.name)
-                                .font(.system(size: 18, weight: .black, design: .rounded))
+                                .font(.system(size: 16, weight: .black, design: .rounded))
                                 .foregroundStyle(AppTheme.Colors.ink)
                                 .lineLimit(1)
-                                .minimumScaleFactor(0.8)
+                                .minimumScaleFactor(0.6)
 
                             Spacer(minLength: 0)
                         }
-                        .padding(.horizontal, 14)
+                        .padding(.horizontal, 10)
                         .padding(.vertical, 12)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(team.color.displayColor.opacity(0.35), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -461,7 +464,7 @@ struct TeamMatchSelectionView: View {
             playersPerTeam: playersPerTeam,
             sourceDecks: selectedDecks,
             duration: settings.defaultDuration,
-            customTeams: currentTeamPresets
+            customTeams: displayedTeams
         )
 
         router.activeTeamMatch = state

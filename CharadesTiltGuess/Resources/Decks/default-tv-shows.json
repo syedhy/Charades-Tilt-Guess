@@ -4,1006 +4,256 @@
         "name": "TV Shows",
         "description": "Streaming favorites and classic shows.",
         "cards": [
-            {
-                "id": "default-tv-shows-expanded-000",
-                "text": "Breaking Bad"
-            },
-            {
-                "id": "default-tv-shows-expanded-001",
-                "text": "Game of Thrones"
-            },
-            {
-                "id": "default-tv-shows-expanded-002",
-                "text": "The Office"
-            },
-            {
-                "id": "default-tv-shows-expanded-003",
-                "text": "Friends"
-            },
-            {
-                "id": "default-tv-shows-expanded-004",
-                "text": "Stranger Things"
-            },
-            {
-                "id": "default-tv-shows-expanded-005",
-                "text": "The Mandalorian"
-            },
-            {
-                "id": "default-tv-shows-expanded-006",
-                "text": "The Witcher"
-            },
-            {
-                "id": "default-tv-shows-expanded-007",
-                "text": "The Boys"
-            },
-            {
-                "id": "default-tv-shows-expanded-008",
-                "text": "Squid Game"
-            },
-            {
-                "id": "default-tv-shows-expanded-009",
-                "text": "Money Heist"
-            },
-            {
-                "id": "default-tv-shows-expanded-010",
-                "text": "Dark"
-            },
-            {
-                "id": "default-tv-shows-expanded-011",
-                "text": "Black Mirror"
-            },
-            {
-                "id": "default-tv-shows-expanded-012",
-                "text": "Peaky Blinders"
-            },
-            {
-                "id": "default-tv-shows-expanded-013",
-                "text": "Sherlock"
-            },
-            {
-                "id": "default-tv-shows-expanded-014",
-                "text": "Fargo"
-            },
-            {
-                "id": "default-tv-shows-expanded-015",
-                "text": "True Detective"
-            },
-            {
-                "id": "default-tv-shows-expanded-016",
-                "text": "Mindhunter"
-            },
-            {
-                "id": "default-tv-shows-expanded-017",
-                "text": "Narcos"
-            },
-            {
-                "id": "default-tv-shows-expanded-018",
-                "text": "Ozark"
-            },
-            {
-                "id": "default-tv-shows-expanded-019",
-                "text": "Succession"
-            },
-            {
-                "id": "default-tv-shows-expanded-020",
-                "text": "The Crown"
-            },
-            {
-                "id": "default-tv-shows-expanded-021",
-                "text": "The Queen's Gambit"
-            },
-            {
-                "id": "default-tv-shows-expanded-022",
-                "text": "Chernobyl"
-            },
-            {
-                "id": "default-tv-shows-expanded-023",
-                "text": "Band of Brothers"
-            },
-            {
-                "id": "default-tv-shows-expanded-024",
-                "text": "The Wire"
-            },
-            {
-                "id": "default-tv-shows-expanded-025",
-                "text": "The Sopranos"
-            },
-            {
-                "id": "default-tv-shows-expanded-026",
-                "text": "Mad Men"
-            },
-            {
-                "id": "default-tv-shows-expanded-027",
-                "text": "Seinfeld"
-            },
-            {
-                "id": "default-tv-shows-expanded-028",
-                "text": "Curb Your Enthusiasm"
-            },
-            {
-                "id": "default-tv-shows-expanded-029",
-                "text": "Arrested Development"
-            },
-            {
-                "id": "default-tv-shows-expanded-030",
-                "text": "Parks and Recreation"
-            },
-            {
-                "id": "default-tv-shows-expanded-031",
-                "text": "Brooklyn Nine-Nine"
-            },
-            {
-                "id": "default-tv-shows-expanded-032",
-                "text": "The Good Place"
-            },
-            {
-                "id": "default-tv-shows-expanded-033",
-                "text": "Community"
-            },
-            {
-                "id": "default-tv-shows-expanded-034",
-                "text": "30 Rock"
-            },
-            {
-                "id": "default-tv-shows-expanded-035",
-                "text": "Veep"
-            },
-            {
-                "id": "default-tv-shows-expanded-036",
-                "text": "Silicon Valley"
-            },
-            {
-                "id": "default-tv-shows-expanded-037",
-                "text": "Barry"
-            },
-            {
-                "id": "default-tv-shows-expanded-038",
-                "text": "Ted Lasso"
-            },
-            {
-                "id": "default-tv-shows-expanded-039",
-                "text": "Schitt's Creek"
-            },
-            {
-                "id": "default-tv-shows-expanded-040",
-                "text": "Fleabag"
-            },
-            {
-                "id": "default-tv-shows-expanded-041",
-                "text": "The Marvelous Mrs. Maisel"
-            },
-            {
-                "id": "default-tv-shows-expanded-042",
-                "text": "Atlanta"
-            },
-            {
-                "id": "default-tv-shows-expanded-043",
-                "text": "Insecure"
-            },
-            {
-                "id": "default-tv-shows-expanded-044",
-                "text": "Master of None"
-            },
-            {
-                "id": "default-tv-shows-expanded-045",
-                "text": "Ramy"
-            },
-            {
-                "id": "default-tv-shows-expanded-046",
-                "text": "Bojack Horseman"
-            },
-            {
-                "id": "default-tv-shows-expanded-047",
-                "text": "Rick and Morty"
-            },
-            {
-                "id": "default-tv-shows-expanded-048",
-                "text": "South Park"
-            },
-            {
-                "id": "default-tv-shows-expanded-049",
-                "text": "The Simpsons"
-            },
-            {
-                "id": "default-tv-shows-expanded-050",
-                "text": "Family Guy"
-            },
-            {
-                "id": "default-tv-shows-expanded-051",
-                "text": "Bob's Burgers"
-            },
-            {
-                "id": "default-tv-shows-expanded-052",
-                "text": "Archer"
-            },
-            {
-                "id": "default-tv-shows-expanded-053",
-                "text": "Futurama"
-            },
-            {
-                "id": "default-tv-shows-expanded-054",
-                "text": "Avatar The Last Airbender"
-            },
-            {
-                "id": "default-tv-shows-expanded-055",
-                "text": "The Legend of Korra"
-            },
-            {
-                "id": "default-tv-shows-expanded-056",
-                "text": "Batman The Animated Series"
-            },
-            {
-                "id": "default-tv-shows-expanded-057",
-                "text": "Justice League"
-            },
-            {
-                "id": "default-tv-shows-expanded-058",
-                "text": "X-Men"
-            },
-            {
-                "id": "default-tv-shows-expanded-059",
-                "text": "Spider-Man"
-            },
-            {
-                "id": "default-tv-shows-expanded-060",
-                "text": "Teen Titans"
-            },
-            {
-                "id": "default-tv-shows-expanded-061",
-                "text": "SpongeBob SquarePants"
-            },
-            {
-                "id": "default-tv-shows-expanded-062",
-                "text": "Adventure Time"
-            },
-            {
-                "id": "default-tv-shows-expanded-063",
-                "text": "Regular Show"
-            },
-            {
-                "id": "default-tv-shows-expanded-064",
-                "text": "The Amazing World of Gumball"
-            },
-            {
-                "id": "default-tv-shows-expanded-065",
-                "text": "Steven Universe"
-            },
-            {
-                "id": "default-tv-shows-expanded-066",
-                "text": "Gravity Falls"
-            },
-            {
-                "id": "default-tv-shows-expanded-067",
-                "text": "Phineas and Ferb"
-            },
-            {
-                "id": "default-tv-shows-expanded-068",
-                "text": "Dexter's Laboratory"
-            },
-            {
-                "id": "default-tv-shows-expanded-069",
-                "text": "The Powerpuff Girls"
-            },
-            {
-                "id": "default-tv-shows-expanded-070",
-                "text": "Courage the Cowardly Dog"
-            },
-            {
-                "id": "default-tv-shows-expanded-071",
-                "text": "Ed Edd n Eddy"
-            },
-            {
-                "id": "default-tv-shows-expanded-072",
-                "text": "Johnny Bravo"
-            },
-            {
-                "id": "default-tv-shows-expanded-073",
-                "text": "Cow and Chicken"
-            },
-            {
-                "id": "default-tv-shows-expanded-074",
-                "text": "Samurai Jack"
-            },
-            {
-                "id": "default-tv-shows-expanded-075",
-                "text": "Teen Titans Go"
-            },
-            {
-                "id": "default-tv-shows-expanded-076",
-                "text": "The Fairly OddParents"
-            },
-            {
-                "id": "default-tv-shows-expanded-077",
-                "text": "Jimmy Neutron"
-            },
-            {
-                "id": "default-tv-shows-expanded-078",
-                "text": "Danny Phantom"
-            },
-            {
-                "id": "default-tv-shows-expanded-079",
-                "text": "Avatar"
-            },
-            {
-                "id": "default-tv-shows-expanded-080",
-                "text": "Invader Zim"
-            },
-            {
-                "id": "default-tv-shows-expanded-081",
-                "text": "My Life as a Teenage Robot"
-            },
-            {
-                "id": "default-tv-shows-expanded-082",
-                "text": "Kim Possible"
-            },
-            {
-                "id": "default-tv-shows-expanded-083",
-                "text": "The Proud Family"
-            },
-            {
-                "id": "default-tv-shows-expanded-084",
-                "text": "Lilo and Stitch"
-            },
-            {
-                "id": "default-tv-shows-expanded-085",
-                "text": "Recess"
-            },
-            {
-                "id": "default-tv-shows-expanded-086",
-                "text": "Hey Arnold"
-            },
-            {
-                "id": "default-tv-shows-expanded-087",
-                "text": "Rugrats"
-            },
-            {
-                "id": "default-tv-shows-expanded-088",
-                "text": "Doug"
-            },
-            {
-                "id": "default-tv-shows-expanded-089",
-                "text": "Ren and Stimpy"
-            },
-            {
-                "id": "default-tv-shows-expanded-090",
-                "text": "Rocko's Modern Life"
-            },
-            {
-                "id": "default-tv-shows-expanded-091",
-                "text": "CatDog"
-            },
-            {
-                "id": "default-tv-shows-expanded-092",
-                "text": "The Wild Thornberrys"
-            },
-            {
-                "id": "default-tv-shows-expanded-093",
-                "text": "Rocket Power"
-            },
-            {
-                "id": "default-tv-shows-expanded-094",
-                "text": "As Told by Ginger"
-            },
-            {
-                "id": "default-tv-shows-expanded-098",
-                "text": "The Loud House"
-            },
-            {
-                "id": "default-tv-shows-expanded-099",
-                "text": "The Casagrandes"
-            },
-            {
-                "id": "default-tv-shows-expanded-100",
-                "text": "Blue's Clues"
-            },
-            {
-                "id": "default-tv-shows-expanded-101",
-                "text": "Dora the Explorer"
-            },
-            {
-                "id": "default-tv-shows-expanded-102",
-                "text": "Go Diego Go"
-            },
-            {
-                "id": "default-tv-shows-expanded-103",
-                "text": "Wonder Pets"
-            },
-            {
-                "id": "default-tv-shows-expanded-104",
-                "text": "Yo Gabba Gabba"
-            },
-            {
-                "id": "default-tv-shows-expanded-105",
-                "text": "Peppa Pig"
-            },
-            {
-                "id": "default-tv-shows-expanded-106",
-                "text": "Paw Patrol"
-            },
-            {
-                "id": "default-tv-shows-expanded-107",
-                "text": "PJ Masks"
-            },
-            {
-                "id": "default-tv-shows-expanded-108",
-                "text": "Bluey"
-            },
-            {
-                "id": "default-tv-shows-expanded-109",
-                "text": "Doc McStuffins"
-            },
-            {
-                "id": "default-tv-shows-expanded-110",
-                "text": "Sofia the First"
-            },
-            {
-                "id": "default-tv-shows-expanded-111",
-                "text": "Mickey Mouse Clubhouse"
-            },
-            {
-                "id": "default-tv-shows-expanded-112",
-                "text": "Sesame Street"
-            },
-            {
-                "id": "default-tv-shows-expanded-113",
-                "text": "Mister Rogers Neighborhood"
-            },
-            {
-                "id": "default-tv-shows-expanded-114",
-                "text": "Reading Rainbow"
-            },
-            {
-                "id": "default-tv-shows-expanded-115",
-                "text": "Bill Nye the Science Guy"
-            },
-            {
-                "id": "default-tv-shows-expanded-116",
-                "text": "The Magic School Bus"
-            },
-            {
-                "id": "default-tv-shows-expanded-117",
-                "text": "Arthur"
-            },
-            {
-                "id": "default-tv-shows-expanded-118",
-                "text": "Cyberchase"
-            },
-            {
-                "id": "default-tv-shows-expanded-119",
-                "text": "Clifford the Big Red Dog"
-            },
-            {
-                "id": "default-tv-shows-expanded-120",
-                "text": "Curious George"
-            },
-            {
-                "id": "default-tv-shows-expanded-121",
-                "text": "Wild Kratts"
-            },
-            {
-                "id": "default-tv-shows-expanded-122",
-                "text": "Odd Squad"
-            },
-            {
-                "id": "default-tv-shows-expanded-123",
-                "text": "WordGirl"
-            },
-            {
-                "id": "default-tv-shows-expanded-124",
-                "text": "Peg + Cat"
-            },
-            {
-                "id": "default-tv-shows-expanded-125",
-                "text": "Daniel Tiger's Neighborhood"
-            },
-            {
-                "id": "default-tv-shows-expanded-126",
-                "text": "Dinosaur Train"
-            },
-            {
-                "id": "default-tv-shows-expanded-127",
-                "text": "Super Why"
-            },
-            {
-                "id": "default-tv-shows-expanded-128",
-                "text": "Nature Cat"
-            },
-            {
-                "id": "default-tv-shows-expanded-129",
-                "text": "Ready Jet Go"
-            },
-            {
-                "id": "default-tv-shows-expanded-130",
-                "text": "Let's Go Luna"
-            },
-            {
-                "id": "default-tv-shows-expanded-131",
-                "text": "Xavier Riddle"
-            },
-            {
-                "id": "default-tv-shows-expanded-132",
-                "text": "Hero Elementary"
-            },
-            {
-                "id": "default-tv-shows-expanded-133",
-                "text": "Elinor Wonders Why"
-            },
-            {
-                "id": "default-tv-shows-expanded-134",
-                "text": "Donkey Hodie"
-            },
-            {
-                "id": "default-tv-shows-expanded-135",
-                "text": "Alma's Way"
-            },
-            {
-                "id": "default-tv-shows-expanded-136",
-                "text": "Rosie's Rules"
-            },
-            {
-                "id": "default-tv-shows-expanded-137",
-                "text": "Work It Out Wombats"
-            },
-            {
-                "id": "default-tv-shows-expanded-138",
-                "text": "Lyla in the Loop"
-            },
-            {
-                "id": "default-tv-shows-expanded-139",
-                "text": "Carl the Collector"
-            },
-            {
-                "id": "default-tv-shows-expanded-140",
-                "text": "Doctor Who"
-            },
-            {
-                "id": "default-tv-shows-expanded-141",
-                "text": "Star Trek"
-            },
-            {
-                "id": "default-tv-shows-expanded-142",
-                "text": "Star Wars"
-            },
-            {
-                "id": "default-tv-shows-expanded-143",
-                "text": "Stargate"
-            },
-            {
-                "id": "default-tv-shows-expanded-144",
-                "text": "Battlestar Galactica"
-            },
-            {
-                "id": "default-tv-shows-expanded-145",
-                "text": "Firefly"
-            },
-            {
-                "id": "default-tv-shows-expanded-146",
-                "text": "The Expanse"
-            },
-            {
-                "id": "default-tv-shows-expanded-147",
-                "text": "Westworld"
-            },
-            {
-                "id": "default-tv-shows-expanded-148",
-                "text": "Fringe"
-            },
-            {
-                "id": "default-tv-shows-expanded-149",
-                "text": "Lost"
-            },
-            {
-                "id": "default-tv-shows-expanded-150",
-                "text": "The X-Files"
-            },
-            {
-                "id": "default-tv-shows-expanded-151",
-                "text": "Supernatural"
-            },
-            {
-                "id": "default-tv-shows-expanded-152",
-                "text": "Buffy the Vampire Slayer"
-            },
-            {
-                "id": "default-tv-shows-expanded-153",
-                "text": "Angel"
-            },
-            {
-                "id": "default-tv-shows-expanded-154",
-                "text": "Charmed"
-            },
-            {
-                "id": "default-tv-shows-expanded-155",
-                "text": "The Vampire Diaries"
-            },
-            {
-                "id": "default-tv-shows-expanded-156",
-                "text": "The Originals"
-            },
-            {
-                "id": "default-tv-shows-expanded-157",
-                "text": "Legacies"
-            },
-            {
-                "id": "default-tv-shows-expanded-158",
-                "text": "Teen Wolf"
-            },
-            {
-                "id": "default-tv-shows-expanded-159",
-                "text": "Shadowhunters"
-            },
-            {
-                "id": "default-tv-shows-extra-172",
-                "text": "Frasier"
-            },
-            {
-                "id": "default-tv-shows-extra-173",
-                "text": "Cheers"
-            },
-            {
-                "id": "default-tv-shows-extra-174",
-                "text": "M*A*S*H"
-            },
-            {
-                "id": "default-tv-shows-extra-175",
-                "text": "All in the Family"
-            },
-            {
-                "id": "default-tv-shows-extra-176",
-                "text": "The Mary Tyler Moore Show"
-            },
-            {
-                "id": "default-tv-shows-extra-177",
-                "text": "I Love Lucy"
-            },
-            {
-                "id": "default-tv-shows-extra-178",
-                "text": "The Twilight Zone"
-            },
-            {
-                "id": "default-tv-shows-extra-182",
-                "text": "Twin Peaks"
-            },
-            {
-                "id": "default-tv-shows-extra-184",
-                "text": "The Leftovers"
-            },
-            {
-                "id": "default-tv-shows-extra-185",
-                "text": "Watchmen"
-            },
-            {
-                "id": "default-tv-shows-extra-191",
-                "text": "The Pacific"
-            },
-            {
-                "id": "default-tv-shows-extra-192",
-                "text": "Generation Kill"
-            },
-            {
-                "id": "default-tv-shows-extra-199",
-                "text": "It's Always Sunny in Philadelphia"
-            },
-            {
-                "id": "default-tv-shows-extra-209",
-                "text": "New Girl"
-            },
-            {
-                "id": "default-tv-shows-extra-210",
-                "text": "How I Met Your Mother"
-            },
-            {
-                "id": "default-tv-shows-extra-211",
-                "text": "The Big Bang Theory"
-            },
-            {
-                "id": "default-tv-shows-extra-212",
-                "text": "Modern Family"
-            },
-            {
-                "id": "default-tv-shows-extra-213",
-                "text": "Black-ish"
-            },
-            {
-                "id": "default-tv-shows-extra-214",
-                "text": "Fresh Off the Boat"
-            },
-            {
-                "id": "default-tv-shows-extra-225",
-                "text": "Avatar: The Last Airbender"
-            },
-            {
-                "id": "default-tv-shows-extra-227",
-                "text": "Batman: The Animated Series"
-            },
-            {
-                "id": "default-tv-shows-extra-242",
-                "text": "Ed"
-            },
-            {
-                "id": "default-tv-shows-extra-243",
-                "text": "Edd n Eddy"
-            },
-            {
-                "id": "default-tv-shows-extra-247",
-                "text": "Teen Titans Go!"
-            },
-            {
-                "id": "default-tv-shows-extra-256",
-                "text": "Lilo & Stitch"
-            },
-            {
-                "id": "default-tv-shows-extra-258",
-                "text": "Hey Arnold!"
-            },
-            {
-                "id": "default-tv-shows-extra-261",
-                "text": "Ren & Stimpy"
-            },
-            {
-                "id": "default-tv-shows-extra-274",
-                "text": "Go"
-            },
-            {
-                "id": "default-tv-shows-extra-275",
-                "text": "Diego"
-            },
-            {
-                "id": "default-tv-shows-extra-276",
-                "text": "Go!"
-            },
-            {
-                "id": "default-tv-shows-extra-278",
-                "text": "Yo Gabba Gabba!"
-            },
-            {
-                "id": "default-tv-shows-extra-287",
-                "text": "Mister Rogers' Neighborhood"
-            },
-            {
-                "id": "default-tv-shows-patch-189",
-                "text": "The White Lotus"
-            },
-            {
-                "id": "default-tv-shows-patch-190",
-                "text": "Severance"
-            },
-            {
-                "id": "default-tv-shows-patch-191",
-                "text": "The Bear"
-            },
-            {
-                "id": "default-tv-shows-patch-192",
-                "text": "House of the Dragon"
-            },
-            {
-                "id": "default-tv-shows-patch-193",
-                "text": "Andor"
-            },
-            {
-                "id": "default-tv-shows-patch-194",
-                "text": "Loki"
-            },
-            {
-                "id": "default-tv-shows-patch-195",
-                "text": "WandaVision"
-            },
-            {
-                "id": "default-tv-shows-patch-196",
-                "text": "The Falcon and the Winter Soldier"
-            },
-            {
-                "id": "default-tv-shows-patch-197",
-                "text": "Hawkeye"
-            },
-            {
-                "id": "default-tv-shows-patch-198",
-                "text": "Moon Knight"
-            },
-            {
-                "id": "default-tv-shows-patch-199",
-                "text": "Ms. Marvel"
-            },
-            {
-                "id": "default-tv-shows-patch-200",
-                "text": "She-Hulk"
-            },
-            {
-                "id": "default-tv-shows-patch-201",
-                "text": "Daredevil"
-            },
-            {
-                "id": "default-tv-shows-patch-202",
-                "text": "Jessica Jones"
-            },
-            {
-                "id": "default-tv-shows-patch-203",
-                "text": "Luke Cage"
-            },
-            {
-                "id": "default-tv-shows-patch-204",
-                "text": "Iron Fist"
-            },
-            {
-                "id": "default-tv-shows-patch-205",
-                "text": "The Defenders"
-            },
-            {
-                "id": "default-tv-shows-patch-206",
-                "text": "The Punisher"
-            },
-            {
-                "id": "default-tv-shows-patch-207",
-                "text": "Peacemaker"
-            },
-            {
-                "id": "default-tv-shows-patch-208",
-                "text": "Doom Patrol"
-            },
-            {
-                "id": "default-tv-shows-patch-209",
-                "text": "Titans"
-            },
-            {
-                "id": "default-tv-shows-patch-210",
-                "text": "Arrow"
-            },
-            {
-                "id": "default-tv-shows-patch-211",
-                "text": "The Flash"
-            },
-            {
-                "id": "default-tv-shows-patch-212",
-                "text": "Supergirl"
-            },
-            {
-                "id": "default-tv-shows-patch-213",
-                "text": "Legends of Tomorrow"
-            },
-            {
-                "id": "default-tv-shows-patch-214",
-                "text": "Batwoman"
-            },
-            {
-                "id": "default-tv-shows-patch-215",
-                "text": "Black Lightning"
-            },
-            {
-                "id": "default-tv-shows-patch-216",
-                "text": "Superman & Lois"
-            },
-            {
-                "id": "default-tv-shows-patch-217",
-                "text": "Smallville"
-            },
-            {
-                "id": "default-tv-shows-patch-218",
-                "text": "Gotham"
-            },
-            {
-                "id": "default-tv-shows-patch-219",
-                "text": "Pennyworth"
-            },
-            {
-                "id": "default-tv-shows-patch-220",
-                "text": "Lucifer"
-            },
-            {
-                "id": "default-tv-shows-patch-221",
-                "text": "The Sandman"
-            },
-            {
-                "id": "default-tv-shows-patch-222",
-                "text": "Locke & Key"
-            },
-            {
-                "id": "default-tv-shows-patch-223",
-                "text": "The Umbrella Academy"
-            },
-            {
-                "id": "default-tv-shows-patch-224",
-                "text": "Gen V"
-            },
-            {
-                "id": "default-tv-shows-patch-225",
-                "text": "Invincible"
-            },
-            {
-                "id": "default-tv-shows-patch-226",
-                "text": "The Walking Dead"
-            },
-            {
-                "id": "default-tv-shows-patch-227",
-                "text": "Fear The Walking Dead"
-            },
-            {
-                "id": "default-tv-shows-patch-228",
-                "text": "The Last of Us"
-            },
-            {
-                "id": "default-tv-shows-patch-229",
-                "text": "Fallout"
-            },
-            {
-                "id": "default-tv-shows-patch-230",
-                "text": "Halo"
-            },
-            {
-                "id": "default-tv-shows-patch-231",
-                "text": "Arcane"
-            },
-            {
-                "id": "default-tv-shows-patch-232",
-                "text": "Cyberpunk Edgerunners"
-            },
-            {
-                "id": "default-tv-shows-patch-233",
-                "text": "Castlevania"
-            },
-            {
-                "id": "default-tv-shows-patch-234",
-                "text": "Blood of Zeus"
-            },
-            {
-                "id": "default-tv-shows-patch-235",
-                "text": "Record of Ragnarok"
-            },
-            {
-                "id": "default-tv-shows-patch-236",
-                "text": "Trese"
-            },
-            {
-                "id": "default-tv-shows-patch-237",
-                "text": "DOTA Dragon's Blood"
-            },
-            {
-                "id": "default-tv-shows-patch-238",
-                "text": "Pacific Rim The Black"
-            },
-            {
-                "id": "default-tv-shows-patch-239",
-                "text": "Transformers War for Cybertron"
-            },
-            {
-                "id": "default-tv-shows-patch-240",
-                "text": "Godzilla Singular Point"
-            },
-            {
-                "id": "default-tv-shows-patch-241",
-                "text": "Ultraman"
-            },
-            {
-                "id": "default-tv-shows-patch-242",
-                "text": "Neon Genesis Evangelion"
-            },
-            {
-                "id": "default-tv-shows-patch-243",
-                "text": "Cowboy Bebop"
-            },
-            {
-                "id": "default-tv-shows-patch-244",
-                "text": "Samurai Champloo"
-            },
-            {
-                "id": "default-tv-shows-patch-245",
-                "text": "Ghost in the Shell"
-            },
-            {
-                "id": "default-tv-shows-patch-246",
-                "text": "Akira"
-            },
-            {
-                "id": "default-tv-shows-patch-247",
-                "text": "Princess Mononoke"
-            },
-            {
-                "id": "default-tv-shows-patch-248",
-                "text": "Spirited Away"
-            },
-            {
-                "id": "default-tv-shows-patch-249",
-                "text": "Howl's Moving Castle"
-            }
+            {"id": "default-tv-shows-expanded-000", "text": "Breaking Bad"},
+            {"id": "default-tv-shows-expanded-001", "text": "Game of Thrones"},
+            {"id": "default-tv-shows-expanded-002", "text": "The Office"},
+            {"id": "default-tv-shows-expanded-003", "text": "Friends"},
+            {"id": "default-tv-shows-expanded-004", "text": "Stranger Things"},
+            {"id": "default-tv-shows-expanded-005", "text": "The Mandalorian"},
+            {"id": "default-tv-shows-expanded-006", "text": "The Witcher"},
+            {"id": "default-tv-shows-expanded-007", "text": "The Boys"},
+            {"id": "default-tv-shows-expanded-008", "text": "Squid Game"},
+            {"id": "default-tv-shows-expanded-009", "text": "Money Heist"},
+            {"id": "default-tv-shows-expanded-010", "text": "Dark"},
+            {"id": "default-tv-shows-expanded-011", "text": "Black Mirror"},
+            {"id": "default-tv-shows-expanded-012", "text": "Peaky Blinders"},
+            {"id": "default-tv-shows-expanded-013", "text": "Sherlock"},
+            {"id": "default-tv-shows-expanded-014", "text": "Fargo"},
+            {"id": "default-tv-shows-expanded-015", "text": "True Detective"},
+            {"id": "default-tv-shows-expanded-016", "text": "Mindhunter"},
+            {"id": "default-tv-shows-expanded-017", "text": "Narcos"},
+            {"id": "default-tv-shows-expanded-018", "text": "Ozark"},
+            {"id": "default-tv-shows-expanded-019", "text": "Succession"},
+            {"id": "default-tv-shows-expanded-020", "text": "The Crown"},
+            {"id": "default-tv-shows-expanded-021", "text": "The Queen's Gambit"},
+            {"id": "default-tv-shows-expanded-022", "text": "Chernobyl"},
+            {"id": "default-tv-shows-expanded-023", "text": "Band of Brothers"},
+            {"id": "default-tv-shows-expanded-024", "text": "The Wire"},
+            {"id": "default-tv-shows-expanded-025", "text": "The Sopranos"},
+            {"id": "default-tv-shows-expanded-026", "text": "Mad Men"},
+            {"id": "default-tv-shows-expanded-027", "text": "Seinfeld"},
+            {"id": "default-tv-shows-expanded-028", "text": "Curb Your Enthusiasm"},
+            {"id": "default-tv-shows-expanded-029", "text": "Arrested Development"},
+            {"id": "default-tv-shows-expanded-030", "text": "Parks and Recreation"},
+            {"id": "default-tv-shows-expanded-031", "text": "Brooklyn Nine-Nine"},
+            {"id": "default-tv-shows-expanded-032", "text": "The Good Place"},
+            {"id": "default-tv-shows-expanded-033", "text": "Community"},
+            {"id": "default-tv-shows-expanded-034", "text": "30 Rock"},
+            {"id": "default-tv-shows-expanded-035", "text": "Veep"},
+            {"id": "default-tv-shows-expanded-036", "text": "Silicon Valley"},
+            {"id": "default-tv-shows-expanded-037", "text": "Barry"},
+            {"id": "default-tv-shows-expanded-038", "text": "Ted Lasso"},
+            {"id": "default-tv-shows-expanded-039", "text": "Schitt's Creek"},
+            {"id": "default-tv-shows-expanded-040", "text": "Fleabag"},
+            {"id": "default-tv-shows-expanded-041", "text": "The Marvelous Mrs. Maisel"},
+            {"id": "default-tv-shows-expanded-042", "text": "Atlanta"},
+            {"id": "default-tv-shows-expanded-043", "text": "Insecure"},
+            {"id": "default-tv-shows-expanded-044", "text": "Master of None"},
+            {"id": "default-tv-shows-expanded-045", "text": "Ramy"},
+            {"id": "default-tv-shows-expanded-046", "text": "Bojack Horseman"},
+            {"id": "default-tv-shows-expanded-047", "text": "Rick and Morty"},
+            {"id": "default-tv-shows-expanded-048", "text": "South Park"},
+            {"id": "default-tv-shows-expanded-049", "text": "The Simpsons"},
+            {"id": "default-tv-shows-expanded-050", "text": "Family Guy"},
+            {"id": "default-tv-shows-expanded-051", "text": "Bob's Burgers"},
+            {"id": "default-tv-shows-expanded-052", "text": "Archer"},
+            {"id": "default-tv-shows-expanded-053", "text": "Futurama"},
+            {"id": "default-tv-shows-expanded-054", "text": "Avatar The Last Airbender"},
+            {"id": "default-tv-shows-expanded-055", "text": "The Legend of Korra"},
+            {"id": "default-tv-shows-expanded-056", "text": "Batman The Animated Series"},
+            {"id": "default-tv-shows-expanded-057", "text": "Justice League"},
+            {"id": "default-tv-shows-expanded-058", "text": "X-Men"},
+            {"id": "default-tv-shows-expanded-059", "text": "Spider-Man"},
+            {"id": "default-tv-shows-expanded-060", "text": "Teen Titans"},
+            {"id": "default-tv-shows-expanded-061", "text": "SpongeBob SquarePants"},
+            {"id": "default-tv-shows-expanded-062", "text": "Adventure Time"},
+            {"id": "default-tv-shows-expanded-063", "text": "Regular Show"},
+            {"id": "default-tv-shows-expanded-064", "text": "The Amazing World of Gumball"},
+            {"id": "default-tv-shows-expanded-065", "text": "Steven Universe"},
+            {"id": "default-tv-shows-expanded-066", "text": "Gravity Falls"},
+            {"id": "default-tv-shows-expanded-067", "text": "Phineas and Ferb"},
+            {"id": "default-tv-shows-expanded-068", "text": "Dexter's Laboratory"},
+            {"id": "default-tv-shows-expanded-069", "text": "The Powerpuff Girls"},
+            {"id": "default-tv-shows-expanded-070", "text": "Courage the Cowardly Dog"},
+            {"id": "default-tv-shows-expanded-071", "text": "Ed Edd n Eddy"},
+            {"id": "default-tv-shows-expanded-072", "text": "Johnny Bravo"},
+            {"id": "default-tv-shows-expanded-073", "text": "Cow and Chicken"},
+            {"id": "default-tv-shows-expanded-074", "text": "Samurai Jack"},
+            {"id": "default-tv-shows-expanded-075", "text": "Teen Titans Go"},
+            {"id": "default-tv-shows-expanded-076", "text": "The Fairly OddParents"},
+            {"id": "default-tv-shows-expanded-077", "text": "Jimmy Neutron"},
+            {"id": "default-tv-shows-expanded-078", "text": "Danny Phantom"},
+            {"id": "default-tv-shows-expanded-079", "text": "Avatar"},
+            {"id": "default-tv-shows-expanded-080", "text": "Invader Zim"},
+            {"id": "default-tv-shows-expanded-081", "text": "My Life as a Teenage Robot"},
+            {"id": "default-tv-shows-expanded-082", "text": "Kim Possible"},
+            {"id": "default-tv-shows-expanded-083", "text": "The Proud Family"},
+            {"id": "default-tv-shows-expanded-084", "text": "Lilo and Stitch"},
+            {"id": "default-tv-shows-expanded-085", "text": "Recess"},
+            {"id": "default-tv-shows-expanded-086", "text": "Hey Arnold"},
+            {"id": "default-tv-shows-expanded-087", "text": "Rugrats"},
+            {"id": "default-tv-shows-expanded-088", "text": "Doug"},
+            {"id": "default-tv-shows-expanded-089", "text": "Ren and Stimpy"},
+            {"id": "default-tv-shows-expanded-090", "text": "Rocko's Modern Life"},
+            {"id": "default-tv-shows-expanded-091", "text": "CatDog"},
+            {"id": "default-tv-shows-expanded-092", "text": "The Wild Thornberrys"},
+            {"id": "default-tv-shows-expanded-093", "text": "Rocket Power"},
+            {"id": "default-tv-shows-expanded-094", "text": "As Told by Ginger"},
+            {"id": "default-tv-shows-expanded-098", "text": "The Loud House"},
+            {"id": "default-tv-shows-expanded-099", "text": "The Casagrandes"},
+            {"id": "default-tv-shows-expanded-100", "text": "Blue's Clues"},
+            {"id": "default-tv-shows-expanded-101", "text": "Dora the Explorer"},
+            {"id": "default-tv-shows-expanded-102", "text": "Go Diego Go"},
+            {"id": "default-tv-shows-expanded-103", "text": "Wonder Pets"},
+            {"id": "default-tv-shows-expanded-104", "text": "Yo Gabba Gabba"},
+            {"id": "default-tv-shows-expanded-105", "text": "Peppa Pig"},
+            {"id": "default-tv-shows-expanded-106", "text": "Paw Patrol"},
+            {"id": "default-tv-shows-expanded-107", "text": "PJ Masks"},
+            {"id": "default-tv-shows-expanded-108", "text": "Bluey"},
+            {"id": "default-tv-shows-expanded-109", "text": "Doc McStuffins"},
+            {"id": "default-tv-shows-expanded-110", "text": "Sofia the First"},
+            {"id": "default-tv-shows-expanded-111", "text": "Mickey Mouse Clubhouse"},
+            {"id": "default-tv-shows-expanded-112", "text": "Sesame Street"},
+            {"id": "default-tv-shows-expanded-113", "text": "Mister Rogers Neighborhood"},
+            {"id": "default-tv-shows-expanded-114", "text": "Reading Rainbow"},
+            {"id": "default-tv-shows-expanded-115", "text": "Bill Nye the Science Guy"},
+            {"id": "default-tv-shows-expanded-116", "text": "The Magic School Bus"},
+            {"id": "default-tv-shows-expanded-117", "text": "Arthur"},
+            {"id": "default-tv-shows-expanded-118", "text": "Cyberchase"},
+            {"id": "default-tv-shows-expanded-119", "text": "Clifford the Big Red Dog"},
+            {"id": "default-tv-shows-expanded-120", "text": "Curious George"},
+            {"id": "default-tv-shows-expanded-121", "text": "Wild Kratts"},
+            {"id": "default-tv-shows-expanded-122", "text": "Odd Squad"},
+            {"id": "default-tv-shows-expanded-123", "text": "WordGirl"},
+            {"id": "default-tv-shows-expanded-124", "text": "Peg + Cat"},
+            {"id": "default-tv-shows-expanded-125", "text": "Daniel Tiger's Neighborhood"},
+            {"id": "default-tv-shows-expanded-126", "text": "Dinosaur Train"},
+            {"id": "default-tv-shows-expanded-127", "text": "Super Why"},
+            {"id": "default-tv-shows-expanded-128", "text": "Nature Cat"},
+            {"id": "default-tv-shows-expanded-129", "text": "Ready Jet Go"},
+            {"id": "default-tv-shows-expanded-130", "text": "Let's Go Luna"},
+            {"id": "default-tv-shows-expanded-131", "text": "Xavier Riddle"},
+            {"id": "default-tv-shows-expanded-132", "text": "Hero Elementary"},
+            {"id": "default-tv-shows-expanded-133", "text": "Elinor Wonders Why"},
+            {"id": "default-tv-shows-expanded-134", "text": "Donkey Hodie"},
+            {"id": "default-tv-shows-expanded-135", "text": "Alma's Way"},
+            {"id": "default-tv-shows-expanded-136", "text": "Rosie's Rules"},
+            {"id": "default-tv-shows-expanded-137", "text": "Work It Out Wombats"},
+            {"id": "default-tv-shows-expanded-138", "text": "Lyla in the Loop"},
+            {"id": "default-tv-shows-expanded-139", "text": "Carl the Collector"},
+            {"id": "default-tv-shows-expanded-140", "text": "Doctor Who"},
+            {"id": "default-tv-shows-expanded-141", "text": "Star Trek"},
+            {"id": "default-tv-shows-expanded-142", "text": "Star Wars"},
+            {"id": "default-tv-shows-expanded-143", "text": "Stargate"},
+            {"id": "default-tv-shows-expanded-144", "text": "Battlestar Galactica"},
+            {"id": "default-tv-shows-expanded-145", "text": "Firefly"},
+            {"id": "default-tv-shows-expanded-146", "text": "The Expanse"},
+            {"id": "default-tv-shows-expanded-147", "text": "Westworld"},
+            {"id": "default-tv-shows-expanded-148", "text": "Fringe"},
+            {"id": "default-tv-shows-expanded-149", "text": "Lost"},
+            {"id": "default-tv-shows-expanded-150", "text": "The X-Files"},
+            {"id": "default-tv-shows-expanded-151", "text": "Supernatural"},
+            {"id": "default-tv-shows-expanded-152", "text": "Buffy the Vampire Slayer"},
+            {"id": "default-tv-shows-expanded-153", "text": "Angel"},
+            {"id": "default-tv-shows-expanded-154", "text": "Charmed"},
+            {"id": "default-tv-shows-expanded-155", "text": "The Vampire Diaries"},
+            {"id": "default-tv-shows-expanded-156", "text": "The Originals"},
+            {"id": "default-tv-shows-expanded-157", "text": "Legacies"},
+            {"id": "default-tv-shows-expanded-158", "text": "Teen Wolf"},
+            {"id": "default-tv-shows-expanded-159", "text": "Shadowhunters"},
+            {"id": "default-tv-shows-extra-172", "text": "Frasier"},
+            {"id": "default-tv-shows-extra-173", "text": "Cheers"},
+            {"id": "default-tv-shows-extra-174", "text": "M*A*S*H"},
+            {"id": "default-tv-shows-extra-175", "text": "All in the Family"},
+            {"id": "default-tv-shows-extra-176", "text": "The Mary Tyler Moore Show"},
+            {"id": "default-tv-shows-extra-177", "text": "I Love Lucy"},
+            {"id": "default-tv-shows-extra-178", "text": "The Twilight Zone"},
+            {"id": "default-tv-shows-extra-182", "text": "Twin Peaks"},
+            {"id": "default-tv-shows-extra-184", "text": "The Leftovers"},
+            {"id": "default-tv-shows-extra-185", "text": "Watchmen"},
+            {"id": "default-tv-shows-extra-191", "text": "The Pacific"},
+            {"id": "default-tv-shows-extra-192", "text": "Generation Kill"},
+            {"id": "default-tv-shows-extra-199", "text": "It's Always Sunny in Philadelphia"},
+            {"id": "default-tv-shows-extra-209", "text": "New Girl"},
+            {"id": "default-tv-shows-extra-210", "text": "How I Met Your Mother"},
+            {"id": "default-tv-shows-extra-211", "text": "The Big Bang Theory"},
+            {"id": "default-tv-shows-extra-212", "text": "Modern Family"},
+            {"id": "default-tv-shows-extra-213", "text": "Black-ish"},
+            {"id": "default-tv-shows-extra-214", "text": "Fresh Off the Boat"},
+            {"id": "default-tv-shows-extra-225", "text": "Avatar: The Last Airbender"},
+            {"id": "default-tv-shows-extra-227", "text": "Batman: The Animated Series"},
+            {"id": "default-tv-shows-extra-242", "text": "Ed"},
+            {"id": "default-tv-shows-extra-243", "text": "Edd n Eddy"},
+            {"id": "default-tv-shows-extra-247", "text": "Teen Titans Go!"},
+            {"id": "default-tv-shows-extra-256", "text": "Lilo & Stitch"},
+            {"id": "default-tv-shows-extra-258", "text": "Hey Arnold!"},
+            {"id": "default-tv-shows-extra-261", "text": "Ren & Stimpy"},
+            {"id": "default-tv-shows-extra-274", "text": "Go"},
+            {"id": "default-tv-shows-extra-275", "text": "Diego"},
+            {"id": "default-tv-shows-extra-276", "text": "Go!"},
+            {"id": "default-tv-shows-extra-278", "text": "Yo Gabba Gabba!"},
+            {"id": "default-tv-shows-extra-287", "text": "Mister Rogers' Neighborhood"},
+            {"id": "default-tv-shows-patch-189", "text": "The White Lotus"},
+            {"id": "default-tv-shows-patch-190", "text": "Severance"},
+            {"id": "default-tv-shows-patch-191", "text": "The Bear"},
+            {"id": "default-tv-shows-patch-192", "text": "House of the Dragon"},
+            {"id": "default-tv-shows-patch-193", "text": "Andor"},
+            {"id": "default-tv-shows-patch-194", "text": "Loki"},
+            {"id": "default-tv-shows-patch-195", "text": "WandaVision"},
+            {"id": "default-tv-shows-patch-196", "text": "The Falcon and the Winter Soldier"},
+            {"id": "default-tv-shows-patch-197", "text": "Hawkeye"},
+            {"id": "default-tv-shows-patch-198", "text": "Moon Knight"},
+            {"id": "default-tv-shows-patch-199", "text": "Ms. Marvel"},
+            {"id": "default-tv-shows-patch-200", "text": "She-Hulk"},
+            {"id": "default-tv-shows-patch-201", "text": "Daredevil"},
+            {"id": "default-tv-shows-patch-202", "text": "Jessica Jones"},
+            {"id": "default-tv-shows-patch-203", "text": "Luke Cage"},
+            {"id": "default-tv-shows-patch-204", "text": "Iron Fist"},
+            {"id": "default-tv-shows-patch-205", "text": "The Defenders"},
+            {"id": "default-tv-shows-patch-206", "text": "The Punisher"},
+            {"id": "default-tv-shows-patch-207", "text": "Peacemaker"},
+            {"id": "default-tv-shows-patch-208", "text": "Doom Patrol"},
+            {"id": "default-tv-shows-patch-209", "text": "Titans"},
+            {"id": "default-tv-shows-patch-210", "text": "Arrow"},
+            {"id": "default-tv-shows-patch-211", "text": "The Flash"},
+            {"id": "default-tv-shows-patch-212", "text": "Supergirl"},
+            {"id": "default-tv-shows-patch-213", "text": "Legends of Tomorrow"},
+            {"id": "default-tv-shows-patch-214", "text": "Batwoman"},
+            {"id": "default-tv-shows-patch-215", "text": "Black Lightning"},
+            {"id": "default-tv-shows-patch-216", "text": "Superman & Lois"},
+            {"id": "default-tv-shows-patch-217", "text": "Smallville"},
+            {"id": "default-tv-shows-patch-218", "text": "Gotham"},
+            {"id": "default-tv-shows-patch-219", "text": "Pennyworth"},
+            {"id": "default-tv-shows-patch-220", "text": "Lucifer"},
+            {"id": "default-tv-shows-patch-221", "text": "The Sandman"},
+            {"id": "default-tv-shows-patch-222", "text": "Locke & Key"},
+            {"id": "default-tv-shows-patch-223", "text": "The Umbrella Academy"},
+            {"id": "default-tv-shows-patch-224", "text": "Gen V"},
+            {"id": "default-tv-shows-patch-225", "text": "Invincible"},
+            {"id": "default-tv-shows-patch-226", "text": "The Walking Dead"},
+            {"id": "default-tv-shows-patch-227", "text": "Fear The Walking Dead"},
+            {"id": "default-tv-shows-patch-228", "text": "The Last of Us"},
+            {"id": "default-tv-shows-patch-229", "text": "Fallout"},
+            {"id": "default-tv-shows-patch-230", "text": "Halo"},
+            {"id": "default-tv-shows-patch-231", "text": "Arcane"},
+            {"id": "default-tv-shows-patch-232", "text": "Cyberpunk Edgerunners"},
+            {"id": "default-tv-shows-patch-233", "text": "Castlevania"},
+            {"id": "default-tv-shows-patch-234", "text": "Blood of Zeus"},
+            {"id": "default-tv-shows-patch-235", "text": "Record of Ragnarok"},
+            {"id": "default-tv-shows-patch-236", "text": "Trese"},
+            {"id": "default-tv-shows-patch-237", "text": "DOTA Dragon's Blood"},
+            {"id": "default-tv-shows-patch-238", "text": "Pacific Rim The Black"},
+            {"id": "default-tv-shows-patch-239", "text": "Transformers War for Cybertron"},
+            {"id": "default-tv-shows-patch-240", "text": "Godzilla Singular Point"},
+            {"id": "default-tv-shows-patch-241", "text": "Ultraman"},
+            {"id": "default-tv-shows-patch-242", "text": "Neon Genesis Evangelion"},
+            {"id": "default-tv-shows-patch-243", "text": "Cowboy Bebop"},
+            {"id": "default-tv-shows-patch-244", "text": "Samurai Champloo"},
+            {"id": "default-tv-shows-patch-245", "text": "Ghost in the Shell"},
+            {"id": "default-tv-shows-patch-246", "text": "Akira"},
+            {"id": "default-tv-shows-patch-247", "text": "Princess Mononoke"},
+            {"id": "default-tv-shows-patch-248", "text": "Spirited Away"},
+            {"id": "default-tv-shows-patch-249", "text": "Howl's Moving Castle"}
         ],
         "type": "default",
         "color": "purple",

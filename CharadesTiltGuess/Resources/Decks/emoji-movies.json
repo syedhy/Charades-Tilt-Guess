@@ -4,1006 +4,206 @@
         "name": "Movies",
         "description": "Guess famous movies represented by emojis!",
         "cards": [
-            {
-                "id": "em-m-001",
-                "text": "🚢🧊💔",
-                "meaning": "Titanic"
-            },
-            {
-                "id": "em-m-002",
-                "text": "💍🌋👁️",
-                "meaning": "The Lord of the Rings"
-            },
-            {
-                "id": "em-m-003",
-                "text": "🧙⚡🦉",
-                "meaning": "Harry Potter"
-            },
-            {
-                "id": "em-m-004",
-                "text": "🦖🚙🌴",
-                "meaning": "Jurassic Park"
-            },
-            {
-                "id": "em-m-005",
-                "text": "🐠❓🔍",
-                "meaning": "Finding Nemo"
-            },
-            {
-                "id": "em-m-006",
-                "text": "🎈🏠🎈",
-                "meaning": "Up"
-            },
-            {
-                "id": "em-m-007",
-                "text": "🧊❄️👸",
-                "meaning": "Frozen"
-            },
-            {
-                "id": "em-m-008",
-                "text": "🥋🐼🥟",
-                "meaning": "Kung Fu Panda"
-            },
-            {
-                "id": "em-m-009",
-                "text": "🃏🤡🦇",
-                "meaning": "The Dark Knight"
-            },
-            {
-                "id": "em-m-010",
-                "text": "🤠🧸🚀",
-                "meaning": "Toy Story"
-            },
-            {
-                "id": "em-m-011",
-                "text": "🤖❤️🌱",
-                "meaning": "WALL·E"
-            },
-            {
-                "id": "em-m-012",
-                "text": "👧🌪️👠",
-                "meaning": "The Wizard of Oz"
-            },
-            {
-                "id": "em-m-013",
-                "text": "🧞🪔🐒",
-                "meaning": "Aladdin"
-            },
-            {
-                "id": "em-m-014",
-                "text": "🦁👑🌅",
-                "meaning": "The Lion King"
-            },
-            {
-                "id": "em-m-015",
-                "text": "🏁🚗👁️",
-                "meaning": "Cars"
-            },
-            {
-                "id": "em-m-016",
-                "text": "👹🚪⚡",
-                "meaning": "Monsters, Inc."
-            },
-            {
-                "id": "em-m-017",
-                "text": "🐀👨‍🍳🍝",
-                "meaning": "Ratatouille"
-            },
-            {
-                "id": "em-m-018",
-                "text": "🧠😊😢",
-                "meaning": "Inside Out"
-            },
-            {
-                "id": "em-m-019",
-                "text": "👨🔥🤖",
-                "meaning": "Iron Man"
-            },
-            {
-                "id": "em-m-020",
-                "text": "🕷️📸🏙️",
-                "meaning": "Spider-Man"
-            },
-            {
-                "id": "em-m-021",
-                "text": "🛡️🇺🇸🧊",
-                "meaning": "Captain America: The First Avenger"
-            },
-            {
-                "id": "em-m-022",
-                "text": "🔨⚡🌈",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-m-023",
-                "text": "🟢😡💥",
-                "meaning": "The Hulk"
-            },
-            {
-                "id": "em-m-024",
-                "text": "🕶️💊💻",
-                "meaning": "The Matrix"
-            },
-            {
-                "id": "em-m-025",
-                "text": "🌌⚔️🤖",
-                "meaning": "Star Wars"
-            },
-            {
-                "id": "em-m-026",
-                "text": "🚀🪐🕳️",
-                "meaning": "Interstellar"
-            },
-            {
-                "id": "em-m-027",
-                "text": "😴🌀🏙️",
-                "meaning": "Inception"
-            },
-            {
-                "id": "em-m-028",
-                "text": "🦈🌊🚤",
-                "meaning": "Jaws"
-            },
-            {
-                "id": "em-m-029",
-                "text": "👻🚫🚒",
-                "meaning": "Ghostbusters"
-            },
-            {
-                "id": "em-m-030",
-                "text": "🏠👦🎄😱",
-                "meaning": "Home Alone"
-            },
-            {
-                "id": "em-m-031",
-                "text": "⚡🚗⌛",
-                "meaning": "Back to the Future"
-            },
-            {
-                "id": "em-m-032",
-                "text": "🤵🐴🩸",
-                "meaning": "The Godfather"
-            },
-            {
-                "id": "em-m-033",
-                "text": "🦍🏢✈️",
-                "meaning": "King Kong"
-            },
-            {
-                "id": "em-m-034",
-                "text": "🌊❤️👸",
-                "meaning": "The Little Mermaid"
-            },
-            {
-                "id": "em-m-035",
-                "text": "🌹🏰🦁",
-                "meaning": "Beauty and the Beast"
-            },
-            {
-                "id": "em-m-036",
-                "text": "👠🕛🎃",
-                "meaning": "Cinderella"
-            },
-            {
-                "id": "em-m-037",
-                "text": "🍎😴👸",
-                "meaning": "Snow White and the Seven Dwarfs"
-            },
-            {
-                "id": "em-m-038",
-                "text": "🪵👦🤥",
-                "meaning": "Pinocchio"
-            },
-            {
-                "id": "em-m-039",
-                "text": "🐘👂🎪",
-                "meaning": "Dumbo"
-            },
-            {
-                "id": "em-m-040",
-                "text": "🦌❄️🔥",
-                "meaning": "Bambi"
-            },
-            {
-                "id": "em-m-041",
-                "text": "🐉👧⚔️",
-                "meaning": "Mulan"
-            },
-            {
-                "id": "em-m-042",
-                "text": "🏹🍎🐻",
-                "meaning": "Brave"
-            },
-            {
-                "id": "em-m-043",
-                "text": "🌊🪝🐓",
-                "meaning": "Moana"
-            },
-            {
-                "id": "em-m-044",
-                "text": "💀🎸🌼",
-                "meaning": "Coco"
-            },
-            {
-                "id": "em-m-045",
-                "text": "🐉👦🪽",
-                "meaning": "How to Train Your Dragon"
-            },
-            {
-                "id": "em-m-046",
-                "text": "👑👹🫏",
-                "meaning": "Shrek"
-            },
-            {
-                "id": "em-m-047",
-                "text": "🐧🕺❄️",
-                "meaning": "Happy Feet"
-            },
-            {
-                "id": "em-m-048",
-                "text": "🟡👖🍌",
-                "meaning": "Minions"
-            },
-            {
-                "id": "em-m-049",
-                "text": "😈👧💜",
-                "meaning": "Despicable Me"
-            },
-            {
-                "id": "em-m-050",
-                "text": "🦸‍♂️🦸‍♀️👶",
-                "meaning": "The Incredibles"
-            },
-            {
-                "id": "em-m-051",
-                "text": "🦁🦓🐧",
-                "meaning": "Madagascar"
-            },
-            {
-                "id": "em-m-052",
-                "text": "🦣🐯🐿️",
-                "meaning": "Ice Age"
-            },
-            {
-                "id": "em-m-053",
-                "text": "🎩🐇♥️",
-                "meaning": "Alice in Wonderland"
-            },
-            {
-                "id": "em-m-054",
-                "text": "☠️🏴‍☠️🧭",
-                "meaning": "Pirates of the Caribbean"
-            },
-            {
-                "id": "em-m-055",
-                "text": "👨🧤✂️",
-                "meaning": "Edward Scissorhands"
-            },
-            {
-                "id": "em-m-056",
-                "text": "🩸🧛🦇",
-                "meaning": "Dracula"
-            },
-            {
-                "id": "em-m-057",
-                "text": "🚘➡️🤖",
-                "meaning": "Transformers"
-            },
-            {
-                "id": "em-m-058",
-                "text": "🛶🐯🌊",
-                "meaning": "Life of Pi"
-            },
-            {
-                "id": "em-m-059",
-                "text": "🧸🍺😂",
-                "meaning": "Ted"
-            },
-            {
-                "id": "em-m-060",
-                "text": "👨🕶️👽",
-                "meaning": "Men in Black"
-            },
-            {
-                "id": "em-m-061",
-                "text": "🏃🍫🏓",
-                "meaning": "Forrest Gump"
-            },
-            {
-                "id": "em-m-062",
-                "text": "🛶🐻🍯",
-                "meaning": "The Jungle Book"
-            },
-            {
-                "id": "em-m-063",
-                "text": "🦊🐰🚓",
-                "meaning": "Zootopia"
-            },
-            {
-                "id": "em-m-064",
-                "text": "❄️🚂☕",
-                "meaning": "The Polar Express"
-            },
-            {
-                "id": "em-m-065",
-                "text": "🎈🤡⛵",
-                "meaning": "It"
-            },
-            {
-                "id": "em-m-066",
-                "text": "🏝️🏐📦",
-                "meaning": "Cast Away"
-            },
-            {
-                "id": "em-m-067",
-                "text": "🏎️💨👨‍🦲",
-                "meaning": "Fast & Furious"
-            },
-            {
-                "id": "em-m-068",
-                "text": "🧑‍🚀🥔🪐",
-                "meaning": "The Martian"
-            },
-            {
-                "id": "em-m-069",
-                "text": "🦍🐴⚔️",
-                "meaning": "Planet of the Apes"
-            },
-            {
-                "id": "em-m-070",
-                "text": "🎭🔪📞",
-                "meaning": "Scream"
-            },
-            {
-                "id": "em-m-071",
-                "text": "👰💛⚔️",
-                "meaning": "Kill Bill"
-            },
-            {
-                "id": "em-m-072",
-                "text": "🚗💀🏜️",
-                "meaning": "Mad Max: Fury Road"
-            },
-            {
-                "id": "em-m-073",
-                "text": "🏹🦅🔥",
-                "meaning": "The Hunger Games"
-            },
-            {
-                "id": "em-m-074",
-                "text": "🐺📈💵",
-                "meaning": "The Wolf of Wall Street"
-            },
-            {
-                "id": "em-m-075",
-                "text": "🎩✨🐇",
-                "meaning": "The Prestige"
-            },
-            {
-                "id": "em-m-076",
-                "text": "🕶️🔫🤖",
-                "meaning": "The Terminator"
-            },
-            {
-                "id": "em-m-077",
-                "text": "🌽👽👁️",
-                "meaning": "Signs"
-            },
-            {
-                "id": "em-m-078",
-                "text": "👂👻🥶",
-                "meaning": "The Sixth Sense"
-            },
-            {
-                "id": "em-m-079",
-                "text": "🦢🩰🖤",
-                "meaning": "Black Swan"
-            },
-            {
-                "id": "em-m-080",
-                "text": "🐑😶🔪",
-                "meaning": "The Silence of the Lambs"
-            },
-            {
-                "id": "em-m-081",
-                "text": "🌧️🤖🦄",
-                "meaning": "Blade Runner"
-            },
-            {
-                "id": "em-m-082",
-                "text": "🦎🔥🏙️",
-                "meaning": "Godzilla"
-            },
-            {
-                "id": "em-m-083",
-                "text": "💎🟣🫰",
-                "meaning": "Avengers: Infinity War"
-            },
-            {
-                "id": "em-m-084",
-                "text": "🧙🪞🌌",
-                "meaning": "Doctor Strange"
-            },
-            {
-                "id": "em-m-085",
-                "text": "🐜🔬👨",
-                "meaning": "Ant-Man"
-            },
-            {
-                "id": "em-m-086",
-                "text": "🐆👑🙅🏿‍♂️",
-                "meaning": "Black Panther"
-            },
-            {
-                "id": "em-m-087",
-                "text": "🌳👽🦝",
-                "meaning": "Guardians of the Galaxy"
-            },
-            {
-                "id": "em-m-088",
-                "text": "🎈🏥🤖",
-                "meaning": "Big Hero 6"
-            },
-            {
-                "id": "em-m-089",
-                "text": "🌺👽🏄‍♀️",
-                "meaning": "Lilo & Stitch"
-            },
-            {
-                "id": "em-m-090",
-                "text": "🐶🍝💏",
-                "meaning": "Lady and the Tramp"
-            },
-            {
-                "id": "em-m-091",
-                "text": "⚔️🏛️🐯",
-                "meaning": "Gladiator"
-            },
-            {
-                "id": "em-m-092",
-                "text": "🥊🧼👤",
-                "meaning": "Fight Club"
-            },
-            {
-                "id": "em-m-093",
-                "text": "🍔💼🔫",
-                "meaning": "Pulp Fiction"
-            },
-            {
-                "id": "em-m-094",
-                "text": "👯‍♀️🪓🚪",
-                "meaning": "The Shining"
-            },
-            {
-                "id": "em-m-095",
-                "text": "👽☎️🚲",
-                "meaning": "E.T. the Extra-Terrestrial"
-            },
-            {
-                "id": "em-m-096",
-                "text": "🔵🌳👽",
-                "meaning": "Avatar"
-            },
-            {
-                "id": "em-m-097",
-                "text": "🤠🐍🪨",
-                "meaning": "Indiana Jones"
-            },
-            {
-                "id": "em-m-098",
-                "text": "📺⛵👋",
-                "meaning": "The Truman Show"
-            },
-            {
-                "id": "em-m-099",
-                "text": "🤫👾🌽",
-                "meaning": "A Quiet Place"
-            },
-            {
-                "id": "em-m-100",
-                "text": "🔨🌧️🙌",
-                "meaning": "The Shawshank Redemption"
-            },
-            {
-                "id": "em-m-101",
-                "text": "✈️👨‍✈️🏃",
-                "meaning": "Catch Me If You Can"
-            },
-            {
-                "id": "em-m-102",
-                "text": "🥊🏃‍♂️🥩",
-                "meaning": "Rocky"
-            },
-            {
-                "id": "em-m-103",
-                "text": "🎳🥛🕶️",
-                "meaning": "The Big Lebowski"
-            },
-            {
-                "id": "em-m-104",
-                "text": "💃🕺🌌",
-                "meaning": "La La Land"
-            },
-            {
-                "id": "em-m-105",
-                "text": "🐹⏰🔁",
-                "meaning": "Groundhog Day"
-            },
-            {
-                "id": "em-m-106",
-                "text": "🐉♨️👧",
-                "meaning": "Spirited Away"
-            },
-            {
-                "id": "em-m-107",
-                "text": "☔🐱🚌",
-                "meaning": "My Neighbor Totoro"
-            },
-            {
-                "id": "em-m-108",
-                "text": "🦸‍♂️👓☄️",
-                "meaning": "Superman"
-            },
-            {
-                "id": "em-m-109",
-                "text": "🛡️🗡️👸",
-                "meaning": "Wonder Woman"
-            },
-            {
-                "id": "em-m-110",
-                "text": "🔱🌊🐟",
-                "meaning": "Aquaman"
-            },
-            {
-                "id": "em-m-111",
-                "text": "🤡🚬🕺",
-                "meaning": "Joker"
-            },
-            {
-                "id": "em-m-112",
-                "text": "🎭🎆🗡️",
-                "meaning": "V for Vendetta"
-            },
-            {
-                "id": "em-m-113",
-                "text": "🏜️🪱👁️",
-                "meaning": "Dune"
-            },
-            {
-                "id": "em-m-114",
-                "text": "🥚👽🚀",
-                "meaning": "Alien"
-            },
-            {
-                "id": "em-m-115",
-                "text": "👽🌳🔴",
-                "meaning": "Predator"
-            },
-            {
-                "id": "em-m-116",
-                "text": "🚕🟠👽",
-                "meaning": "The Fifth Element"
-            },
-            {
-                "id": "em-m-117",
-                "text": "🛸👽⭕",
-                "meaning": "Arrival"
-            },
-            {
-                "id": "em-m-118",
-                "text": "👩‍🚀🛰️🌌",
-                "meaning": "Gravity"
-            },
-            {
-                "id": "em-m-119",
-                "text": "🐒🦴🚀",
-                "meaning": "2001: A Space Odyssey"
-            },
-            {
-                "id": "em-m-120",
-                "text": "🚀🌖⚠️",
-                "meaning": "Apollo 13"
-            },
-            {
-                "id": "em-m-121",
-                "text": "👩🏾‍💻🚀📐",
-                "meaning": "Hidden Figures"
-            },
-            {
-                "id": "em-m-122",
-                "text": "💻👥👎",
-                "meaning": "The Social Network"
-            },
-            {
-                "id": "em-m-123",
-                "text": "🎤👑🎹",
-                "meaning": "Bohemian Rhapsody"
-            },
-            {
-                "id": "em-m-124",
-                "text": "🎸🎤⭐",
-                "meaning": "A Star is Born"
-            },
-            {
-                "id": "em-m-125",
-                "text": "🎩🎪🧔",
-                "meaning": "The Greatest Showman"
-            },
-            {
-                "id": "em-m-126",
-                "text": "🇫🇷⛓️🎵",
-                "meaning": "Les Misérables"
-            },
-            {
-                "id": "em-m-127",
-                "text": "🚗⚡💃",
-                "meaning": "Grease"
-            },
-            {
-                "id": "em-m-128",
-                "text": "🍉💃🕺",
-                "meaning": "Dirty Dancing"
-            },
-            {
-                "id": "em-m-129",
-                "text": "🎤🏆🤮",
-                "meaning": "Pitch Perfect"
-            },
-            {
-                "id": "em-m-130",
-                "text": "👚🌸📕",
-                "meaning": "Mean Girls"
-            },
-            {
-                "id": "em-m-131",
-                "text": "🛍️👗📱",
-                "meaning": "Clueless"
-            },
-            {
-                "id": "em-m-132",
-                "text": "👩🏼‍⚖️👛🐶",
-                "meaning": "Legally Blonde"
-            },
-            {
-                "id": "em-m-133",
-                "text": "👠🧥👹",
-                "meaning": "The Devil Wears Prada"
-            },
-            {
-                "id": "em-m-134",
-                "text": "💍💎🇸🇬",
-                "meaning": "Crazy Rich Asians"
-            },
-            {
-                "id": "em-m-135",
-                "text": "🐯🦷🎰",
-                "meaning": "The Hangover"
-            },
-            {
-                "id": "em-m-136",
-                "text": "🆔🍻🚔",
-                "meaning": "Superbad"
-            },
-            {
-                "id": "em-m-137",
-                "text": "👗🧁🤢",
-                "meaning": "Bridesmaids"
-            },
-            {
-                "id": "em-m-138",
-                "text": "📺🎤🥃",
-                "meaning": "Anchorman"
-            },
-            {
-                "id": "em-m-139",
-                "text": "🥁🛌🛥️",
-                "meaning": "Step Brothers"
-            },
-            {
-                "id": "em-m-140",
-                "text": "🚐🐶❄️",
-                "meaning": "Dumb and Dumber"
-            },
-            {
-                "id": "em-m-141",
-                "text": "🎭🟩🌪️",
-                "meaning": "The Mask"
-            },
-            {
-                "id": "em-m-142",
-                "text": "🏢🔫👣",
-                "meaning": "Die Hard"
-            },
-            {
-                "id": "em-m-143",
-                "text": "🕵️‍♂️🔍📝",
-                "meaning": "Memento"
-            },
-            {
-                "id": "em-m-144",
-                "text": "🔪🚿👁️",
-                "meaning": "Psycho"
-            },
-            {
-                "id": "em-m-145",
-                "text": "☕️🧠🥄",
-                "meaning": "Get Out"
-            },
-            {
-                "id": "em-m-146",
-                "text": "🎃🔪🏃‍♀️",
-                "meaning": "Halloween"
-            },
-            {
-                "id": "em-m-147",
-                "text": "📼📺👻",
-                "meaning": "The Ring"
-            },
-            {
-                "id": "em-m-148",
-                "text": "🧩🩸🚲",
-                "meaning": "Saw"
-            },
-            {
-                "id": "em-m-149",
-                "text": "📦🎁🩸",
-                "meaning": "Se7en"
-            },
-            {
-                "id": "em-m-150",
-                "text": "💻🍏🇬🇧",
-                "meaning": "The Imitation Game"
-            },
-            {
-                "id": "em-m-151",
-                "text": "👯‍♀️🏕️🤺",
-                "meaning": "The Parent Trap"
-            },
-            {
-                "id": "em-m-152",
-                "text": "🕷️🕸️🎨",
-                "meaning": "Spider-Man: Into the Spider-Verse"
-            },
-            {
-                "id": "em-m-153",
-                "text": "🦹‍♂️🦸‍♂️🏙️",
-                "meaning": "Megamind"
-            },
-            {
-                "id": "em-m-154",
-                "text": "🍫🎫🏭",
-                "meaning": "Willy Wonka & the Chocolate Factory"
-            },
-            {
-                "id": "em-m-155",
-                "text": "👻🪲🧃",
-                "meaning": "Beetlejuice"
-            },
-            {
-                "id": "em-m-156",
-                "text": "🦇👨‍👦🏨",
-                "meaning": "Hotel Transylvania"
-            },
-            {
-                "id": "em-m-157",
-                "text": "🚇💼👨‍👦",
-                "meaning": "The Pursuit of Happyness"
-            },
-            {
-                "id": "em-m-158",
-                "text": "🏫🎸🤘",
-                "meaning": "School of Rock"
-            },
-            {
-                "id": "em-m-159",
-                "text": "🎤🎶🏔️",
-                "meaning": "The Sound of Music"
-            },
-            {
-                "id": "em-m-160",
-                "text": "🤺🇪🇸🖤",
-                "meaning": "The Mask of Zorro"
-            },
-            {
-                "id": "em-m-161",
-                "text": "👨‍🏫📚🎯",
-                "meaning": "Dead Poets Society"
-            },
-            {
-                "id": "em-m-162",
-                "text": "🏴󠁧󠁢󠁳󠁣󠁴󠁿⚔️💙",
-                "meaning": "Braveheart"
-            },
-            {
-                "id": "em-m-163",
-                "text": "🧛‍♂️☀️✨",
-                "meaning": "Twilight"
-            },
-            {
-                "id": "em-m-164",
-                "text": "🧗‍♂️🪨🔪",
-                "meaning": "127 Hours"
-            },
-            {
-                "id": "em-m-165",
-                "text": "🚌💣🏃‍♂️",
-                "meaning": "Speed"
-            },
-            {
-                "id": "em-m-166",
-                "text": "🎀🦩🩷",
-                "meaning": "Barbie"
-            },
-            {
-                "id": "em-m-167",
-                "text": "💣🧪⚛️",
-                "meaning": "Oppenheimer"
-            },
-            {
-                "id": "em-m-168",
-                "text": "🐶🕵️‍♂️🦏",
-                "meaning": "Ace Ventura: Pet Detective"
-            },
-            {
-                "id": "em-m-169",
-                "text": "🦖🌋☄️",
-                "meaning": "The Land Before Time"
-            },
-            {
-                "id": "em-m-170",
-                "text": "🐶🦴🏠",
-                "meaning": "Marley & Me"
-            },
-            {
-                "id": "em-m-171",
-                "text": "🤖🦾❤️",
-                "meaning": "The Iron Giant"
-            },
-            {
-                "id": "em-m-172",
-                "text": "🐉👊🥋",
-                "meaning": "Enter the Dragon"
-            },
-            {
-                "id": "em-m-173",
-                "text": "👨‍👩‍👧‍👦🍫🏭",
-                "meaning": "Charlie and the Chocolate Factory"
-            },
-            {
-                "id": "em-m-174",
-                "text": "🐢🍕🥋",
-                "meaning": "Teenage Mutant Ninja Turtles"
-            },
-            {
-                "id": "em-m-175",
-                "text": "🐾🎈🐶",
-                "meaning": "The Secret Life of Pets"
-            },
-            {
-                "id": "em-m-176",
-                "text": "🏀🐰🛸",
-                "meaning": "Space Jam"
-            },
-            {
-                "id": "em-m-177",
-                "text": "🎮👾🏎️",
-                "meaning": "Wreck-It Ralph"
-            },
-            {
-                "id": "em-m-178",
-                "text": "👰‍♀️🧟‍♂️🪦",
-                "meaning": "Corpse Bride"
-            },
-            {
-                "id": "em-m-179",
-                "text": "🎃👑💀",
-                "meaning": "The Nightmare Before Christmas"
-            },
-            {
-                "id": "em-m-180",
-                "text": "👁️🪡🪞",
-                "meaning": "Coraline"
-            },
-            {
-                "id": "em-m-181",
-                "text": "🏰🪜🐉",
-                "meaning": "Tangled"
-            },
-            {
-                "id": "em-m-182",
-                "text": "🐸🎷👑",
-                "meaning": "The Princess and the Frog"
-            },
-            {
-                "id": "em-m-183",
-                "text": "🏠🕯️🦋",
-                "meaning": "Encanto"
-            },
-            {
-                "id": "em-m-184",
-                "text": "🐉⚔️🌸",
-                "meaning": "Raya and the Last Dragon"
-            },
-            {
-                "id": "em-m-185",
-                "text": "👨‍👩‍👦🤖🧱",
-                "meaning": "The Lego Movie"
-            },
-            {
-                "id": "em-m-186",
-                "text": "⚡🥋🐍",
-                "meaning": "The Karate Kid"
-            },
-            {
-                "id": "em-m-187",
-                "text": "🏎️🏁🏆",
-                "meaning": "Ford v Ferrari"
-            },
-            {
-                "id": "em-m-188",
-                "text": "👨‍✈️🛩️🕶️",
-                "meaning": "Top Gun"
-            },
-            {
-                "id": "em-m-189",
-                "text": "🕵️‍♂️💼💣",
-                "meaning": "Mission: Impossible"
-            },
-            {
-                "id": "em-m-190",
-                "text": "🐶🔫✏️",
-                "meaning": "John Wick"
-            },
-            {
-                "id": "em-m-191",
-                "text": "🤵‍♂️🍸🔫",
-                "meaning": "Casino Royale"
-            },
-            {
-                "id": "em-m-192",
-                "text": "🕵️‍♂️🔪🏰",
-                "meaning": "Knives Out"
-            },
-            {
-                "id": "em-m-193",
-                "text": "🎰💰🏦",
-                "meaning": "Ocean's Eleven"
-            },
-            {
-                "id": "em-m-194",
-                "text": "🧑‍🍳🔪🍔",
-                "meaning": "The Menu"
-            },
-            {
-                "id": "em-m-195",
-                "text": "🏠⬇️👥",
-                "meaning": "Parasite"
-            },
-            {
-                "id": "em-m-196",
-                "text": "🧟‍♂️🛒🧠",
-                "meaning": "Dawn of the Dead"
-            },
-            {
-                "id": "em-m-197",
-                "text": "🧟‍♂️🍻🏏",
-                "meaning": "Shaun of the Dead"
-            },
-            {
-                "id": "em-m-198",
-                "text": "🚨🚔🦢",
-                "meaning": "Hot Fuzz"
-            },
-            {
-                "id": "em-m-199",
-                "text": "🏃‍♂️🌀🧱",
-                "meaning": "The Maze Runner"
-            },
-            {
-                "id": "em-m-200",
-                "text": "🧳🪄🐉",
-                "meaning": "Fantastic Beasts and Where to Find Them"
-            }
+            {"id": "em-m-001", "text": "🚢🧊💔", "meaning": "Titanic"},
+            {"id": "em-m-002", "text": "💍🌋👁️", "meaning": "The Lord of the Rings"},
+            {"id": "em-m-003", "text": "🧙⚡🦉", "meaning": "Harry Potter"},
+            {"id": "em-m-004", "text": "🦖🚙🌴", "meaning": "Jurassic Park"},
+            {"id": "em-m-005", "text": "🐠❓🔍", "meaning": "Finding Nemo"},
+            {"id": "em-m-006", "text": "🎈🏠🎈", "meaning": "Up"},
+            {"id": "em-m-007", "text": "🧊❄️👸", "meaning": "Frozen"},
+            {"id": "em-m-008", "text": "🥋🐼🥟", "meaning": "Kung Fu Panda"},
+            {"id": "em-m-009", "text": "🃏🤡🦇", "meaning": "The Dark Knight"},
+            {"id": "em-m-010", "text": "🤠🧸🚀", "meaning": "Toy Story"},
+            {"id": "em-m-011", "text": "🤖❤️🌱", "meaning": "WALL·E"},
+            {"id": "em-m-012", "text": "👧🌪️👠", "meaning": "The Wizard of Oz"},
+            {"id": "em-m-013", "text": "🧞🪔🐒", "meaning": "Aladdin"},
+            {"id": "em-m-014", "text": "🦁👑🌅", "meaning": "The Lion King"},
+            {"id": "em-m-015", "text": "🏁🚗👁️", "meaning": "Cars"},
+            {"id": "em-m-016", "text": "👹🚪⚡", "meaning": "Monsters, Inc."},
+            {"id": "em-m-017", "text": "🐀👨‍🍳🍝", "meaning": "Ratatouille"},
+            {"id": "em-m-018", "text": "🧠😊😢", "meaning": "Inside Out"},
+            {"id": "em-m-019", "text": "👨🔥🤖", "meaning": "Iron Man"},
+            {"id": "em-m-020", "text": "🕷️📸🏙️", "meaning": "Spider-Man"},
+            {"id": "em-m-021", "text": "🛡️🇺🇸🧊", "meaning": "Captain America: The First Avenger"},
+            {"id": "em-m-022", "text": "🔨⚡🌈", "meaning": "Thor"},
+            {"id": "em-m-023", "text": "🟢😡💥", "meaning": "The Hulk"},
+            {"id": "em-m-024", "text": "🕶️💊💻", "meaning": "The Matrix"},
+            {"id": "em-m-025", "text": "🌌⚔️🤖", "meaning": "Star Wars"},
+            {"id": "em-m-026", "text": "🚀🪐🕳️", "meaning": "Interstellar"},
+            {"id": "em-m-027", "text": "😴🌀🏙️", "meaning": "Inception"},
+            {"id": "em-m-028", "text": "🦈🌊🚤", "meaning": "Jaws"},
+            {"id": "em-m-029", "text": "👻🚫🚒", "meaning": "Ghostbusters"},
+            {"id": "em-m-030", "text": "🏠👦🎄😱", "meaning": "Home Alone"},
+            {"id": "em-m-031", "text": "⚡🚗⌛", "meaning": "Back to the Future"},
+            {"id": "em-m-032", "text": "🤵🐴🩸", "meaning": "The Godfather"},
+            {"id": "em-m-033", "text": "🦍🏢✈️", "meaning": "King Kong"},
+            {"id": "em-m-034", "text": "🌊❤️👸", "meaning": "The Little Mermaid"},
+            {"id": "em-m-035", "text": "🌹🏰🦁", "meaning": "Beauty and the Beast"},
+            {"id": "em-m-036", "text": "👠🕛🎃", "meaning": "Cinderella"},
+            {"id": "em-m-037", "text": "🍎😴👸", "meaning": "Snow White and the Seven Dwarfs"},
+            {"id": "em-m-038", "text": "🪵👦🤥", "meaning": "Pinocchio"},
+            {"id": "em-m-039", "text": "🐘👂🎪", "meaning": "Dumbo"},
+            {"id": "em-m-040", "text": "🦌❄️🔥", "meaning": "Bambi"},
+            {"id": "em-m-041", "text": "🐉👧⚔️", "meaning": "Mulan"},
+            {"id": "em-m-042", "text": "🏹🍎🐻", "meaning": "Brave"},
+            {"id": "em-m-043", "text": "🌊🪝🐓", "meaning": "Moana"},
+            {"id": "em-m-044", "text": "💀🎸🌼", "meaning": "Coco"},
+            {"id": "em-m-045", "text": "🐉👦🪽", "meaning": "How to Train Your Dragon"},
+            {"id": "em-m-046", "text": "👑👹🫏", "meaning": "Shrek"},
+            {"id": "em-m-047", "text": "🐧🕺❄️", "meaning": "Happy Feet"},
+            {"id": "em-m-048", "text": "🟡👖🍌", "meaning": "Minions"},
+            {"id": "em-m-049", "text": "😈👧💜", "meaning": "Despicable Me"},
+            {"id": "em-m-050", "text": "🦸‍♂️🦸‍♀️👶", "meaning": "The Incredibles"},
+            {"id": "em-m-051", "text": "🦁🦓🐧", "meaning": "Madagascar"},
+            {"id": "em-m-052", "text": "🦣🐯🐿️", "meaning": "Ice Age"},
+            {"id": "em-m-053", "text": "🎩🐇♥️", "meaning": "Alice in Wonderland"},
+            {"id": "em-m-054", "text": "☠️🏴‍☠️🧭", "meaning": "Pirates of the Caribbean"},
+            {"id": "em-m-055", "text": "👨🧤✂️", "meaning": "Edward Scissorhands"},
+            {"id": "em-m-056", "text": "🩸🧛🦇", "meaning": "Dracula"},
+            {"id": "em-m-057", "text": "🚘➡️🤖", "meaning": "Transformers"},
+            {"id": "em-m-058", "text": "🛶🐯🌊", "meaning": "Life of Pi"},
+            {"id": "em-m-059", "text": "🧸🍺😂", "meaning": "Ted"},
+            {"id": "em-m-060", "text": "👨🕶️👽", "meaning": "Men in Black"},
+            {"id": "em-m-061", "text": "🏃🍫🏓", "meaning": "Forrest Gump"},
+            {"id": "em-m-062", "text": "🛶🐻🍯", "meaning": "The Jungle Book"},
+            {"id": "em-m-063", "text": "🦊🐰🚓", "meaning": "Zootopia"},
+            {"id": "em-m-064", "text": "❄️🚂☕", "meaning": "The Polar Express"},
+            {"id": "em-m-065", "text": "🎈🤡⛵", "meaning": "It"},
+            {"id": "em-m-066", "text": "🏝️🏐📦", "meaning": "Cast Away"},
+            {"id": "em-m-067", "text": "🏎️💨👨‍🦲", "meaning": "Fast & Furious"},
+            {"id": "em-m-068", "text": "🧑‍🚀🥔🪐", "meaning": "The Martian"},
+            {"id": "em-m-069", "text": "🦍🐴⚔️", "meaning": "Planet of the Apes"},
+            {"id": "em-m-070", "text": "🎭🔪📞", "meaning": "Scream"},
+            {"id": "em-m-071", "text": "👰💛⚔️", "meaning": "Kill Bill"},
+            {"id": "em-m-072", "text": "🚗💀🏜️", "meaning": "Mad Max: Fury Road"},
+            {"id": "em-m-073", "text": "🏹🦅🔥", "meaning": "The Hunger Games"},
+            {"id": "em-m-074", "text": "🐺📈💵", "meaning": "The Wolf of Wall Street"},
+            {"id": "em-m-075", "text": "🎩✨🐇", "meaning": "The Prestige"},
+            {"id": "em-m-076", "text": "🕶️🔫🤖", "meaning": "The Terminator"},
+            {"id": "em-m-077", "text": "🌽👽👁️", "meaning": "Signs"},
+            {"id": "em-m-078", "text": "👂👻🥶", "meaning": "The Sixth Sense"},
+            {"id": "em-m-079", "text": "🦢🩰🖤", "meaning": "Black Swan"},
+            {"id": "em-m-080", "text": "🐑😶🔪", "meaning": "The Silence of the Lambs"},
+            {"id": "em-m-081", "text": "🌧️🤖🦄", "meaning": "Blade Runner"},
+            {"id": "em-m-082", "text": "🦎🔥🏙️", "meaning": "Godzilla"},
+            {"id": "em-m-083", "text": "💎🟣🫰", "meaning": "Avengers: Infinity War"},
+            {"id": "em-m-084", "text": "🧙🪞🌌", "meaning": "Doctor Strange"},
+            {"id": "em-m-085", "text": "🐜🔬👨", "meaning": "Ant-Man"},
+            {"id": "em-m-086", "text": "🐆👑🙅🏿‍♂️", "meaning": "Black Panther"},
+            {"id": "em-m-087", "text": "🌳👽🦝", "meaning": "Guardians of the Galaxy"},
+            {"id": "em-m-088", "text": "🎈🏥🤖", "meaning": "Big Hero 6"},
+            {"id": "em-m-089", "text": "🌺👽🏄‍♀️", "meaning": "Lilo & Stitch"},
+            {"id": "em-m-090", "text": "🐶🍝💏", "meaning": "Lady and the Tramp"},
+            {"id": "em-m-091", "text": "⚔️🏛️🐯", "meaning": "Gladiator"},
+            {"id": "em-m-092", "text": "🥊🧼👤", "meaning": "Fight Club"},
+            {"id": "em-m-093", "text": "🍔💼🔫", "meaning": "Pulp Fiction"},
+            {"id": "em-m-094", "text": "👯‍♀️🪓🚪", "meaning": "The Shining"},
+            {"id": "em-m-095", "text": "👽☎️🚲", "meaning": "E.T. the Extra-Terrestrial"},
+            {"id": "em-m-096", "text": "🔵🌳👽", "meaning": "Avatar"},
+            {"id": "em-m-097", "text": "🤠🐍🪨", "meaning": "Indiana Jones"},
+            {"id": "em-m-098", "text": "📺⛵👋", "meaning": "The Truman Show"},
+            {"id": "em-m-099", "text": "🤫👾🌽", "meaning": "A Quiet Place"},
+            {"id": "em-m-100", "text": "🔨🌧️🙌", "meaning": "The Shawshank Redemption"},
+            {"id": "em-m-101", "text": "✈️👨‍✈️🏃", "meaning": "Catch Me If You Can"},
+            {"id": "em-m-102", "text": "🥊🏃‍♂️🥩", "meaning": "Rocky"},
+            {"id": "em-m-103", "text": "🎳🥛🕶️", "meaning": "The Big Lebowski"},
+            {"id": "em-m-104", "text": "💃🕺🌌", "meaning": "La La Land"},
+            {"id": "em-m-105", "text": "🐹⏰🔁", "meaning": "Groundhog Day"},
+            {"id": "em-m-106", "text": "🐉♨️👧", "meaning": "Spirited Away"},
+            {"id": "em-m-107", "text": "☔🐱🚌", "meaning": "My Neighbor Totoro"},
+            {"id": "em-m-108", "text": "🦸‍♂️👓☄️", "meaning": "Superman"},
+            {"id": "em-m-109", "text": "🛡️🗡️👸", "meaning": "Wonder Woman"},
+            {"id": "em-m-110", "text": "🔱🌊🐟", "meaning": "Aquaman"},
+            {"id": "em-m-111", "text": "🤡🚬🕺", "meaning": "Joker"},
+            {"id": "em-m-112", "text": "🎭🎆🗡️", "meaning": "V for Vendetta"},
+            {"id": "em-m-113", "text": "🏜️🪱👁️", "meaning": "Dune"},
+            {"id": "em-m-114", "text": "🥚👽🚀", "meaning": "Alien"},
+            {"id": "em-m-115", "text": "👽🌳🔴", "meaning": "Predator"},
+            {"id": "em-m-116", "text": "🚕🟠👽", "meaning": "The Fifth Element"},
+            {"id": "em-m-117", "text": "🛸👽⭕", "meaning": "Arrival"},
+            {"id": "em-m-118", "text": "👩‍🚀🛰️🌌", "meaning": "Gravity"},
+            {"id": "em-m-119", "text": "🐒🦴🚀", "meaning": "2001: A Space Odyssey"},
+            {"id": "em-m-120", "text": "🚀🌖⚠️", "meaning": "Apollo 13"},
+            {"id": "em-m-121", "text": "👩🏾‍💻🚀📐", "meaning": "Hidden Figures"},
+            {"id": "em-m-122", "text": "💻👥👎", "meaning": "The Social Network"},
+            {"id": "em-m-123", "text": "🎤👑🎹", "meaning": "Bohemian Rhapsody"},
+            {"id": "em-m-124", "text": "🎸🎤⭐", "meaning": "A Star is Born"},
+            {"id": "em-m-125", "text": "🎩🎪🧔", "meaning": "The Greatest Showman"},
+            {"id": "em-m-126", "text": "🇫🇷⛓️🎵", "meaning": "Les Misérables"},
+            {"id": "em-m-127", "text": "🚗⚡💃", "meaning": "Grease"},
+            {"id": "em-m-128", "text": "🍉💃🕺", "meaning": "Dirty Dancing"},
+            {"id": "em-m-129", "text": "🎤🏆🤮", "meaning": "Pitch Perfect"},
+            {"id": "em-m-130", "text": "👚🌸📕", "meaning": "Mean Girls"},
+            {"id": "em-m-131", "text": "🛍️👗📱", "meaning": "Clueless"},
+            {"id": "em-m-132", "text": "👩🏼‍⚖️👛🐶", "meaning": "Legally Blonde"},
+            {"id": "em-m-133", "text": "👠🧥👹", "meaning": "The Devil Wears Prada"},
+            {"id": "em-m-134", "text": "💍💎🇸🇬", "meaning": "Crazy Rich Asians"},
+            {"id": "em-m-135", "text": "🐯🦷🎰", "meaning": "The Hangover"},
+            {"id": "em-m-136", "text": "🆔🍻🚔", "meaning": "Superbad"},
+            {"id": "em-m-137", "text": "👗🧁🤢", "meaning": "Bridesmaids"},
+            {"id": "em-m-138", "text": "📺🎤🥃", "meaning": "Anchorman"},
+            {"id": "em-m-139", "text": "🥁🛌🛥️", "meaning": "Step Brothers"},
+            {"id": "em-m-140", "text": "🚐🐶❄️", "meaning": "Dumb and Dumber"},
+            {"id": "em-m-141", "text": "🎭🟩🌪️", "meaning": "The Mask"},
+            {"id": "em-m-142", "text": "🏢🔫👣", "meaning": "Die Hard"},
+            {"id": "em-m-143", "text": "🕵️‍♂️🔍📝", "meaning": "Memento"},
+            {"id": "em-m-144", "text": "🔪🚿👁️", "meaning": "Psycho"},
+            {"id": "em-m-145", "text": "☕️🧠🥄", "meaning": "Get Out"},
+            {"id": "em-m-146", "text": "🎃🔪🏃‍♀️", "meaning": "Halloween"},
+            {"id": "em-m-147", "text": "📼📺👻", "meaning": "The Ring"},
+            {"id": "em-m-148", "text": "🧩🩸🚲", "meaning": "Saw"},
+            {"id": "em-m-149", "text": "📦🎁🩸", "meaning": "Se7en"},
+            {"id": "em-m-150", "text": "💻🍏🇬🇧", "meaning": "The Imitation Game"},
+            {"id": "em-m-151", "text": "👯‍♀️🏕️🤺", "meaning": "The Parent Trap"},
+            {"id": "em-m-152", "text": "🕷️🕸️🎨", "meaning": "Spider-Man: Into the Spider-Verse"},
+            {"id": "em-m-153", "text": "🦹‍♂️🦸‍♂️🏙️", "meaning": "Megamind"},
+            {"id": "em-m-154", "text": "🍫🎫🏭", "meaning": "Willy Wonka & the Chocolate Factory"},
+            {"id": "em-m-155", "text": "👻🪲🧃", "meaning": "Beetlejuice"},
+            {"id": "em-m-156", "text": "🦇👨‍👦🏨", "meaning": "Hotel Transylvania"},
+            {"id": "em-m-157", "text": "🚇💼👨‍👦", "meaning": "The Pursuit of Happyness"},
+            {"id": "em-m-158", "text": "🏫🎸🤘", "meaning": "School of Rock"},
+            {"id": "em-m-159", "text": "🎤🎶🏔️", "meaning": "The Sound of Music"},
+            {"id": "em-m-160", "text": "🤺🇪🇸🖤", "meaning": "The Mask of Zorro"},
+            {"id": "em-m-161", "text": "👨‍🏫📚🎯", "meaning": "Dead Poets Society"},
+            {"id": "em-m-162", "text": "🏴󠁧󠁢󠁳󠁣󠁴󠁿⚔️💙", "meaning": "Braveheart"},
+            {"id": "em-m-163", "text": "🧛‍♂️☀️✨", "meaning": "Twilight"},
+            {"id": "em-m-164", "text": "🧗‍♂️🪨🔪", "meaning": "127 Hours"},
+            {"id": "em-m-165", "text": "🚌💣🏃‍♂️", "meaning": "Speed"},
+            {"id": "em-m-166", "text": "🎀🦩🩷", "meaning": "Barbie"},
+            {"id": "em-m-167", "text": "💣🧪⚛️", "meaning": "Oppenheimer"},
+            {"id": "em-m-168", "text": "🐶🕵️‍♂️🦏", "meaning": "Ace Ventura: Pet Detective"},
+            {"id": "em-m-169", "text": "🦖🌋☄️", "meaning": "The Land Before Time"},
+            {"id": "em-m-170", "text": "🐶🦴🏠", "meaning": "Marley & Me"},
+            {"id": "em-m-171", "text": "🤖🦾❤️", "meaning": "The Iron Giant"},
+            {"id": "em-m-172", "text": "🐉👊🥋", "meaning": "Enter the Dragon"},
+            {"id": "em-m-173", "text": "👨‍👩‍👧‍👦🍫🏭", "meaning": "Charlie and the Chocolate Factory"},
+            {"id": "em-m-174", "text": "🐢🍕🥋", "meaning": "Teenage Mutant Ninja Turtles"},
+            {"id": "em-m-175", "text": "🐾🎈🐶", "meaning": "The Secret Life of Pets"},
+            {"id": "em-m-176", "text": "🏀🐰🛸", "meaning": "Space Jam"},
+            {"id": "em-m-177", "text": "🎮👾🏎️", "meaning": "Wreck-It Ralph"},
+            {"id": "em-m-178", "text": "👰‍♀️🧟‍♂️🪦", "meaning": "Corpse Bride"},
+            {"id": "em-m-179", "text": "🎃👑💀", "meaning": "The Nightmare Before Christmas"},
+            {"id": "em-m-180", "text": "👁️🪡🪞", "meaning": "Coraline"},
+            {"id": "em-m-181", "text": "🏰🪜🐉", "meaning": "Tangled"},
+            {"id": "em-m-182", "text": "🐸🎷👑", "meaning": "The Princess and the Frog"},
+            {"id": "em-m-183", "text": "🏠🕯️🦋", "meaning": "Encanto"},
+            {"id": "em-m-184", "text": "🐉⚔️🌸", "meaning": "Raya and the Last Dragon"},
+            {"id": "em-m-185", "text": "👨‍👩‍👦🤖🧱", "meaning": "The Lego Movie"},
+            {"id": "em-m-186", "text": "⚡🥋🐍", "meaning": "The Karate Kid"},
+            {"id": "em-m-187", "text": "🏎️🏁🏆", "meaning": "Ford v Ferrari"},
+            {"id": "em-m-188", "text": "👨‍✈️🛩️🕶️", "meaning": "Top Gun"},
+            {"id": "em-m-189", "text": "🕵️‍♂️💼💣", "meaning": "Mission: Impossible"},
+            {"id": "em-m-190", "text": "🐶🔫✏️", "meaning": "John Wick"},
+            {"id": "em-m-191", "text": "🤵‍♂️🍸🔫", "meaning": "Casino Royale"},
+            {"id": "em-m-192", "text": "🕵️‍♂️🔪🏰", "meaning": "Knives Out"},
+            {"id": "em-m-193", "text": "🎰💰🏦", "meaning": "Ocean's Eleven"},
+            {"id": "em-m-194", "text": "🧑‍🍳🔪🍔", "meaning": "The Menu"},
+            {"id": "em-m-195", "text": "🏠⬇️👥", "meaning": "Parasite"},
+            {"id": "em-m-196", "text": "🧟‍♂️🛒🧠", "meaning": "Dawn of the Dead"},
+            {"id": "em-m-197", "text": "🧟‍♂️🍻🏏", "meaning": "Shaun of the Dead"},
+            {"id": "em-m-198", "text": "🚨🚔🦢", "meaning": "Hot Fuzz"},
+            {"id": "em-m-199", "text": "🏃‍♂️🌀🧱", "meaning": "The Maze Runner"},
+            {"id": "em-m-200", "text": "🧳🪄🐉", "meaning": "Fantastic Beasts and Where to Find Them"}
         ],
         "type": "default",
         "color": "purple",

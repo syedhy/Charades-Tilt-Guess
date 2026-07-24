@@ -4,1006 +4,256 @@
         "name": "Animals",
         "description": "Creatures with big acting potential.",
         "cards": [
-            {
-                "id": "default-animals-expanded-000",
-                "text": "Dog"
-            },
-            {
-                "id": "default-animals-expanded-001",
-                "text": "Cat"
-            },
-            {
-                "id": "default-animals-expanded-002",
-                "text": "Elephant"
-            },
-            {
-                "id": "default-animals-expanded-003",
-                "text": "Lion"
-            },
-            {
-                "id": "default-animals-expanded-004",
-                "text": "Tiger"
-            },
-            {
-                "id": "default-animals-expanded-005",
-                "text": "Bear"
-            },
-            {
-                "id": "default-animals-expanded-006",
-                "text": "Monkey"
-            },
-            {
-                "id": "default-animals-expanded-007",
-                "text": "Giraffe"
-            },
-            {
-                "id": "default-animals-expanded-008",
-                "text": "Zebra"
-            },
-            {
-                "id": "default-animals-expanded-009",
-                "text": "Kangaroo"
-            },
-            {
-                "id": "default-animals-expanded-010",
-                "text": "Penguin"
-            },
-            {
-                "id": "default-animals-expanded-011",
-                "text": "Dolphin"
-            },
-            {
-                "id": "default-animals-expanded-012",
-                "text": "Shark"
-            },
-            {
-                "id": "default-animals-expanded-013",
-                "text": "Whale"
-            },
-            {
-                "id": "default-animals-expanded-014",
-                "text": "Octopus"
-            },
-            {
-                "id": "default-animals-expanded-015",
-                "text": "Turtle"
-            },
-            {
-                "id": "default-animals-expanded-016",
-                "text": "Frog"
-            },
-            {
-                "id": "default-animals-expanded-017",
-                "text": "Snake"
-            },
-            {
-                "id": "default-animals-expanded-018",
-                "text": "Crocodile"
-            },
-            {
-                "id": "default-animals-expanded-019",
-                "text": "Alligator"
-            },
-            {
-                "id": "default-animals-expanded-020",
-                "text": "Lizard"
-            },
-            {
-                "id": "default-animals-expanded-021",
-                "text": "Chameleon"
-            },
-            {
-                "id": "default-animals-expanded-022",
-                "text": "Iguana"
-            },
-            {
-                "id": "default-animals-expanded-023",
-                "text": "Gecko"
-            },
-            {
-                "id": "default-animals-expanded-024",
-                "text": "Komodo Dragon"
-            },
-            {
-                "id": "default-animals-expanded-025",
-                "text": "Tortoise"
-            },
-            {
-                "id": "default-animals-expanded-026",
-                "text": "Toad"
-            },
-            {
-                "id": "default-animals-expanded-027",
-                "text": "Salamander"
-            },
-            {
-                "id": "default-animals-expanded-028",
-                "text": "Newt"
-            },
-            {
-                "id": "default-animals-expanded-029",
-                "text": "Fish"
-            },
-            {
-                "id": "default-animals-expanded-030",
-                "text": "Goldfish"
-            },
-            {
-                "id": "default-animals-expanded-031",
-                "text": "Betta"
-            },
-            {
-                "id": "default-animals-expanded-032",
-                "text": "Guppy"
-            },
-            {
-                "id": "default-animals-expanded-033",
-                "text": "Koi"
-            },
-            {
-                "id": "default-animals-expanded-034",
-                "text": "Carp"
-            },
-            {
-                "id": "default-animals-expanded-035",
-                "text": "Trout"
-            },
-            {
-                "id": "default-animals-expanded-036",
-                "text": "Salmon"
-            },
-            {
-                "id": "default-animals-expanded-037",
-                "text": "Tuna"
-            },
-            {
-                "id": "default-animals-expanded-038",
-                "text": "Cod"
-            },
-            {
-                "id": "default-animals-expanded-039",
-                "text": "Halibut"
-            },
-            {
-                "id": "default-animals-expanded-040",
-                "text": "Flounder"
-            },
-            {
-                "id": "default-animals-expanded-041",
-                "text": "Bass"
-            },
-            {
-                "id": "default-animals-expanded-042",
-                "text": "Catfish"
-            },
-            {
-                "id": "default-animals-expanded-043",
-                "text": "Piranha"
-            },
-            {
-                "id": "default-animals-expanded-044",
-                "text": "Eel"
-            },
-            {
-                "id": "default-animals-expanded-045",
-                "text": "Stingray"
-            },
-            {
-                "id": "default-animals-expanded-046",
-                "text": "Manta Ray"
-            },
-            {
-                "id": "default-animals-expanded-047",
-                "text": "Jellyfish"
-            },
-            {
-                "id": "default-animals-expanded-048",
-                "text": "Squid"
-            },
-            {
-                "id": "default-animals-expanded-049",
-                "text": "Cuttlefish"
-            },
-            {
-                "id": "default-animals-expanded-050",
-                "text": "Nautilus"
-            },
-            {
-                "id": "default-animals-expanded-051",
-                "text": "Starfish"
-            },
-            {
-                "id": "default-animals-expanded-052",
-                "text": "Sea Urchin"
-            },
-            {
-                "id": "default-animals-expanded-053",
-                "text": "Sea Cucumber"
-            },
-            {
-                "id": "default-animals-expanded-054",
-                "text": "Crab"
-            },
-            {
-                "id": "default-animals-expanded-055",
-                "text": "Lobster"
-            },
-            {
-                "id": "default-animals-expanded-056",
-                "text": "Shrimp"
-            },
-            {
-                "id": "default-animals-expanded-057",
-                "text": "Krill"
-            },
-            {
-                "id": "default-animals-expanded-058",
-                "text": "Barnacle"
-            },
-            {
-                "id": "default-animals-expanded-059",
-                "text": "Clam"
-            },
-            {
-                "id": "default-animals-expanded-060",
-                "text": "Oyster"
-            },
-            {
-                "id": "default-animals-expanded-061",
-                "text": "Mussel"
-            },
-            {
-                "id": "default-animals-expanded-062",
-                "text": "Scallop"
-            },
-            {
-                "id": "default-animals-expanded-063",
-                "text": "Snail"
-            },
-            {
-                "id": "default-animals-expanded-064",
-                "text": "Slug"
-            },
-            {
-                "id": "default-animals-expanded-065",
-                "text": "Earthworm"
-            },
-            {
-                "id": "default-animals-expanded-066",
-                "text": "Leech"
-            },
-            {
-                "id": "default-animals-expanded-067",
-                "text": "Centipede"
-            },
-            {
-                "id": "default-animals-expanded-068",
-                "text": "Millipede"
-            },
-            {
-                "id": "default-animals-expanded-069",
-                "text": "Spider"
-            },
-            {
-                "id": "default-animals-expanded-070",
-                "text": "Scorpion"
-            },
-            {
-                "id": "default-animals-expanded-071",
-                "text": "Tick"
-            },
-            {
-                "id": "default-animals-expanded-072",
-                "text": "Mite"
-            },
-            {
-                "id": "default-animals-expanded-073",
-                "text": "Insect"
-            },
-            {
-                "id": "default-animals-expanded-074",
-                "text": "Beetle"
-            },
-            {
-                "id": "default-animals-expanded-075",
-                "text": "Ladybug"
-            },
-            {
-                "id": "default-animals-expanded-076",
-                "text": "Firefly"
-            },
-            {
-                "id": "default-animals-expanded-077",
-                "text": "Butterfly"
-            },
-            {
-                "id": "default-animals-expanded-078",
-                "text": "Moth"
-            },
-            {
-                "id": "default-animals-expanded-079",
-                "text": "Caterpillar"
-            },
-            {
-                "id": "default-animals-expanded-080",
-                "text": "Bee"
-            },
-            {
-                "id": "default-animals-expanded-081",
-                "text": "Wasp"
-            },
-            {
-                "id": "default-animals-expanded-082",
-                "text": "Ant"
-            },
-            {
-                "id": "default-animals-expanded-083",
-                "text": "Termite"
-            },
-            {
-                "id": "default-animals-expanded-084",
-                "text": "Fly"
-            },
-            {
-                "id": "default-animals-expanded-085",
-                "text": "Mosquito"
-            },
-            {
-                "id": "default-animals-expanded-086",
-                "text": "Gnat"
-            },
-            {
-                "id": "default-animals-expanded-087",
-                "text": "Flea"
-            },
-            {
-                "id": "default-animals-expanded-088",
-                "text": "Louse"
-            },
-            {
-                "id": "default-animals-expanded-089",
-                "text": "Cicada"
-            },
-            {
-                "id": "default-animals-expanded-090",
-                "text": "Aphid"
-            },
-            {
-                "id": "default-animals-expanded-091",
-                "text": "Grasshopper"
-            },
-            {
-                "id": "default-animals-expanded-092",
-                "text": "Cricket"
-            },
-            {
-                "id": "default-animals-expanded-093",
-                "text": "Locust"
-            },
-            {
-                "id": "default-animals-expanded-094",
-                "text": "Mantis"
-            },
-            {
-                "id": "default-animals-expanded-095",
-                "text": "Stick Insect"
-            },
-            {
-                "id": "default-animals-expanded-096",
-                "text": "Cockroach"
-            },
-            {
-                "id": "default-animals-expanded-097",
-                "text": "Dragonfly"
-            },
-            {
-                "id": "default-animals-expanded-098",
-                "text": "Damselfly"
-            },
-            {
-                "id": "default-animals-expanded-099",
-                "text": "Mayfly"
-            },
-            {
-                "id": "default-animals-expanded-100",
-                "text": "Stonefly"
-            },
-            {
-                "id": "default-animals-expanded-101",
-                "text": "Caddisfly"
-            },
-            {
-                "id": "default-animals-expanded-102",
-                "text": "Lacewing"
-            },
-            {
-                "id": "default-animals-expanded-103",
-                "text": "Antlion"
-            },
-            {
-                "id": "default-animals-expanded-104",
-                "text": "Bird"
-            },
-            {
-                "id": "default-animals-expanded-105",
-                "text": "Eagle"
-            },
-            {
-                "id": "default-animals-expanded-106",
-                "text": "Hawk"
-            },
-            {
-                "id": "default-animals-expanded-107",
-                "text": "Falcon"
-            },
-            {
-                "id": "default-animals-expanded-108",
-                "text": "Owl"
-            },
-            {
-                "id": "default-animals-expanded-109",
-                "text": "Vulture"
-            },
-            {
-                "id": "default-animals-expanded-110",
-                "text": "Condor"
-            },
-            {
-                "id": "default-animals-expanded-111",
-                "text": "Osprey"
-            },
-            {
-                "id": "default-animals-expanded-112",
-                "text": "Kite"
-            },
-            {
-                "id": "default-animals-expanded-113",
-                "text": "Harrier"
-            },
-            {
-                "id": "default-animals-expanded-114",
-                "text": "Buzzard"
-            },
-            {
-                "id": "default-animals-expanded-115",
-                "text": "Gull"
-            },
-            {
-                "id": "default-animals-expanded-116",
-                "text": "Tern"
-            },
-            {
-                "id": "default-animals-expanded-117",
-                "text": "Albatross"
-            },
-            {
-                "id": "default-animals-expanded-118",
-                "text": "Petrel"
-            },
-            {
-                "id": "default-animals-expanded-119",
-                "text": "Shearwater"
-            },
-            {
-                "id": "default-animals-expanded-120",
-                "text": "Pelican"
-            },
-            {
-                "id": "default-animals-expanded-121",
-                "text": "Cormorant"
-            },
-            {
-                "id": "default-animals-expanded-122",
-                "text": "Gannet"
-            },
-            {
-                "id": "default-animals-expanded-123",
-                "text": "Booby"
-            },
-            {
-                "id": "default-animals-expanded-124",
-                "text": "Frigatebird"
-            },
-            {
-                "id": "default-animals-expanded-125",
-                "text": "Tropicbird"
-            },
-            {
-                "id": "default-animals-expanded-127",
-                "text": "Loon"
-            },
-            {
-                "id": "default-animals-expanded-128",
-                "text": "Grebe"
-            },
-            {
-                "id": "default-animals-expanded-129",
-                "text": "Duck"
-            },
-            {
-                "id": "default-animals-expanded-130",
-                "text": "Goose"
-            },
-            {
-                "id": "default-animals-expanded-131",
-                "text": "Swan"
-            },
-            {
-                "id": "default-animals-expanded-132",
-                "text": "Flamingo"
-            },
-            {
-                "id": "default-animals-expanded-133",
-                "text": "Heron"
-            },
-            {
-                "id": "default-animals-expanded-134",
-                "text": "Egret"
-            },
-            {
-                "id": "default-animals-expanded-135",
-                "text": "Bittern"
-            },
-            {
-                "id": "default-animals-expanded-136",
-                "text": "Ibis"
-            },
-            {
-                "id": "default-animals-expanded-137",
-                "text": "Spoonbill"
-            },
-            {
-                "id": "default-animals-expanded-138",
-                "text": "Stork"
-            },
-            {
-                "id": "default-animals-expanded-139",
-                "text": "Crane"
-            },
-            {
-                "id": "default-animals-expanded-140",
-                "text": "Rail"
-            },
-            {
-                "id": "default-animals-expanded-141",
-                "text": "Coot"
-            },
-            {
-                "id": "default-animals-expanded-142",
-                "text": "Gallinule"
-            },
-            {
-                "id": "default-animals-expanded-143",
-                "text": "Bustard"
-            },
-            {
-                "id": "default-animals-expanded-144",
-                "text": "Plover"
-            },
-            {
-                "id": "default-animals-expanded-145",
-                "text": "Sandpiper"
-            },
-            {
-                "id": "default-animals-expanded-146",
-                "text": "Snipe"
-            },
-            {
-                "id": "default-animals-expanded-147",
-                "text": "Woodcock"
-            },
-            {
-                "id": "default-animals-expanded-148",
-                "text": "Curlew"
-            },
-            {
-                "id": "default-animals-expanded-149",
-                "text": "Godwit"
-            },
-            {
-                "id": "default-animals-expanded-150",
-                "text": "Phalarope"
-            },
-            {
-                "id": "default-animals-expanded-151",
-                "text": "Avocet"
-            },
-            {
-                "id": "default-animals-expanded-152",
-                "text": "Stilt"
-            },
-            {
-                "id": "default-animals-expanded-155",
-                "text": "Skimmer"
-            },
-            {
-                "id": "default-animals-expanded-156",
-                "text": "Auk"
-            },
-            {
-                "id": "default-animals-expanded-157",
-                "text": "Puffin"
-            },
-            {
-                "id": "default-animals-expanded-158",
-                "text": "Murre"
-            },
-            {
-                "id": "default-animals-expanded-159",
-                "text": "Guillemot"
-            },
-            {
-                "id": "default-animals-expanded-160",
-                "text": "Pigeon"
-            },
-            {
-                "id": "default-animals-expanded-161",
-                "text": "Dove"
-            },
-            {
-                "id": "default-animals-expanded-162",
-                "text": "Sandgrouse"
-            },
-            {
-                "id": "default-animals-expanded-163",
-                "text": "Parrot"
-            },
-            {
-                "id": "default-animals-expanded-164",
-                "text": "Macaw"
-            },
-            {
-                "id": "default-animals-expanded-165",
-                "text": "Cockatoo"
-            },
-            {
-                "id": "default-animals-expanded-166",
-                "text": "Lory"
-            },
-            {
-                "id": "default-animals-expanded-167",
-                "text": "Lorikeet"
-            },
-            {
-                "id": "default-animals-expanded-168",
-                "text": "Parakeet"
-            },
-            {
-                "id": "default-animals-expanded-169",
-                "text": "Budgerigar"
-            },
-            {
-                "id": "default-animals-expanded-170",
-                "text": "Cockatiel"
-            },
-            {
-                "id": "default-animals-expanded-171",
-                "text": "Lovebird"
-            },
-            {
-                "id": "default-animals-expanded-172",
-                "text": "Cuckoo"
-            },
-            {
-                "id": "default-animals-expanded-173",
-                "text": "Roadrunner"
-            },
-            {
-                "id": "default-animals-expanded-174",
-                "text": "Turaco"
-            },
-            {
-                "id": "default-animals-expanded-175",
-                "text": "Hoatzin"
-            },
-            {
-                "id": "default-animals-expanded-176",
-                "text": "Barn Owl"
-            },
-            {
-                "id": "default-animals-expanded-177",
-                "text": "Typical Owl"
-            },
-            {
-                "id": "default-animals-expanded-178",
-                "text": "Nightjar"
-            },
-            {
-                "id": "default-animals-expanded-179",
-                "text": "Potoo"
-            },
-            {
-                "id": "default-animals-expanded-180",
-                "text": "Frogmouth"
-            },
-            {
-                "id": "default-animals-expanded-181",
-                "text": "Oilbird"
-            },
-            {
-                "id": "default-animals-expanded-182",
-                "text": "Swift"
-            },
-            {
-                "id": "default-animals-expanded-183",
-                "text": "Hummingbird"
-            },
-            {
-                "id": "default-animals-expanded-184",
-                "text": "Mousebird"
-            },
-            {
-                "id": "default-animals-expanded-185",
-                "text": "Trogon"
-            },
-            {
-                "id": "default-animals-expanded-186",
-                "text": "Quetzal"
-            },
-            {
-                "id": "default-animals-expanded-187",
-                "text": "Kingfisher"
-            },
-            {
-                "id": "default-animals-expanded-188",
-                "text": "Tody"
-            },
-            {
-                "id": "default-animals-expanded-189",
-                "text": "Motmot"
-            },
-            {
-                "id": "default-animals-expanded-190",
-                "text": "Bee-eater"
-            },
-            {
-                "id": "default-animals-expanded-191",
-                "text": "Roller"
-            },
-            {
-                "id": "default-animals-expanded-192",
-                "text": "Hoopoe"
-            },
-            {
-                "id": "default-animals-expanded-193",
-                "text": "Woodhoopoe"
-            },
-            {
-                "id": "default-animals-expanded-194",
-                "text": "Hornbill"
-            },
-            {
-                "id": "default-animals-expanded-195",
-                "text": "Jacamar"
-            },
-            {
-                "id": "default-animals-expanded-196",
-                "text": "Puffbird"
-            },
-            {
-                "id": "default-animals-expanded-197",
-                "text": "Barbet"
-            },
-            {
-                "id": "default-animals-expanded-198",
-                "text": "Toucan"
-            },
-            {
-                "id": "default-animals-expanded-199",
-                "text": "Honeyguide"
-            },
-            {
-                "id": "default-animals-expanded-200",
-                "text": "Woodpecker"
-            },
-            {
-                "id": "default-animals-expanded-201",
-                "text": "Picucu"
-            },
-            {
-                "id": "default-animals-expanded-202",
-                "text": "Wryneck"
-            },
-            {
-                "id": "default-animals-expanded-203",
-                "text": "Passerine"
-            },
-            {
-                "id": "default-animals-expanded-204",
-                "text": "Songbird"
-            },
-            {
-                "id": "default-animals-expanded-205",
-                "text": "Tyrant Flycatcher"
-            },
-            {
-                "id": "default-animals-expanded-206",
-                "text": "Pittas"
-            },
-            {
-                "id": "default-animals-expanded-207",
-                "text": "Ovenbird"
-            },
-            {
-                "id": "default-animals-expanded-208",
-                "text": "Woodcreeper"
-            },
-            {
-                "id": "default-animals-expanded-209",
-                "text": "Antbird"
-            },
-            {
-                "id": "default-animals-expanded-210",
-                "text": "Antthrush"
-            },
-            {
-                "id": "default-animals-expanded-211",
-                "text": "Antpitta"
-            },
-            {
-                "id": "default-animals-expanded-212",
-                "text": "Gnateater"
-            },
-            {
-                "id": "default-animals-expanded-213",
-                "text": "Tapaculo"
-            },
-            {
-                "id": "default-animals-expanded-214",
-                "text": "Cotinga"
-            },
-            {
-                "id": "default-animals-expanded-215",
-                "text": "Manakin"
-            },
-            {
-                "id": "default-animals-expanded-216",
-                "text": "Tityra"
-            },
-            {
-                "id": "default-animals-expanded-217",
-                "text": "Becard"
-            },
-            {
-                "id": "default-animals-extra-218",
-                "text": "Alpaca"
-            },
-            {
-                "id": "default-animals-extra-219",
-                "text": "Anteater"
-            },
-            {
-                "id": "default-animals-extra-220",
-                "text": "Antelope"
-            },
-            {
-                "id": "default-animals-extra-221",
-                "text": "Ape"
-            },
-            {
-                "id": "default-animals-extra-222",
-                "text": "Armadillo"
-            },
-            {
-                "id": "default-animals-extra-223",
-                "text": "Baboon"
-            },
-            {
-                "id": "default-animals-extra-224",
-                "text": "Badger"
-            },
-            {
-                "id": "default-animals-extra-225",
-                "text": "Bat"
-            },
-            {
-                "id": "default-animals-extra-227",
-                "text": "Beaver"
-            },
-            {
-                "id": "default-animals-extra-228",
-                "text": "Bison"
-            },
-            {
-                "id": "default-animals-extra-229",
-                "text": "Boar"
-            },
-            {
-                "id": "default-animals-extra-230",
-                "text": "Buffalo"
-            },
-            {
-                "id": "default-animals-extra-231",
-                "text": "Camel"
-            },
-            {
-                "id": "default-animals-extra-232",
-                "text": "Capybara"
-            },
-            {
-                "id": "default-animals-extra-233",
-                "text": "Caribou"
-            },
-            {
-                "id": "default-animals-extra-235",
-                "text": "Cattle"
-            },
-            {
-                "id": "default-animals-extra-236",
-                "text": "Cheetah"
-            },
-            {
-                "id": "default-animals-extra-237",
-                "text": "Chimpanzee"
-            },
-            {
-                "id": "default-animals-extra-238",
-                "text": "Chinchilla"
-            },
-            {
-                "id": "default-animals-extra-239",
-                "text": "Chipmunk"
-            },
-            {
-                "id": "default-animals-extra-240",
-                "text": "Cougar"
-            },
-            {
-                "id": "default-animals-extra-241",
-                "text": "Cow"
-            },
-            {
-                "id": "default-animals-extra-242",
-                "text": "Coyote"
-            },
-            {
-                "id": "default-animals-extra-243",
-                "text": "Deer"
-            },
-            {
-                "id": "default-animals-extra-246",
-                "text": "Donkey"
-            },
-            {
-                "id": "default-animals-extra-247",
-                "text": "Dugong"
-            },
-            {
-                "id": "default-animals-extra-248",
-                "text": "Echidna"
-            },
-            {
-                "id": "default-animals-extra-250",
-                "text": "Elk"
-            },
-            {
-                "id": "default-animals-extra-251",
-                "text": "Ermine"
-            },
-            {
-                "id": "default-animals-extra-252",
-                "text": "Ferret"
-            },
-            {
-                "id": "default-animals-extra-253",
-                "text": "Fox"
-            },
-            {
-                "id": "default-animals-extra-255",
-                "text": "Gazelle"
-            },
-            {
-                "id": "default-animals-extra-257",
-                "text": "Goat"
-            },
-            {
-                "id": "default-animals-extra-258",
-                "text": "Gorilla"
-            },
-            {
-                "id": "default-animals-extra-259",
-                "text": "Guinea Pig"
-            }
+            {"id": "default-animals-expanded-000", "text": "Dog"},
+            {"id": "default-animals-expanded-001", "text": "Cat"},
+            {"id": "default-animals-expanded-002", "text": "Elephant"},
+            {"id": "default-animals-expanded-003", "text": "Lion"},
+            {"id": "default-animals-expanded-004", "text": "Tiger"},
+            {"id": "default-animals-expanded-005", "text": "Bear"},
+            {"id": "default-animals-expanded-006", "text": "Monkey"},
+            {"id": "default-animals-expanded-007", "text": "Giraffe"},
+            {"id": "default-animals-expanded-008", "text": "Zebra"},
+            {"id": "default-animals-expanded-009", "text": "Kangaroo"},
+            {"id": "default-animals-expanded-010", "text": "Penguin"},
+            {"id": "default-animals-expanded-011", "text": "Dolphin"},
+            {"id": "default-animals-expanded-012", "text": "Shark"},
+            {"id": "default-animals-expanded-013", "text": "Whale"},
+            {"id": "default-animals-expanded-014", "text": "Octopus"},
+            {"id": "default-animals-expanded-015", "text": "Turtle"},
+            {"id": "default-animals-expanded-016", "text": "Frog"},
+            {"id": "default-animals-expanded-017", "text": "Snake"},
+            {"id": "default-animals-expanded-018", "text": "Crocodile"},
+            {"id": "default-animals-expanded-019", "text": "Alligator"},
+            {"id": "default-animals-expanded-020", "text": "Lizard"},
+            {"id": "default-animals-expanded-021", "text": "Chameleon"},
+            {"id": "default-animals-expanded-022", "text": "Iguana"},
+            {"id": "default-animals-expanded-023", "text": "Gecko"},
+            {"id": "default-animals-expanded-024", "text": "Komodo Dragon"},
+            {"id": "default-animals-expanded-025", "text": "Tortoise"},
+            {"id": "default-animals-expanded-026", "text": "Toad"},
+            {"id": "default-animals-expanded-027", "text": "Salamander"},
+            {"id": "default-animals-expanded-028", "text": "Newt"},
+            {"id": "default-animals-expanded-029", "text": "Fish"},
+            {"id": "default-animals-expanded-030", "text": "Goldfish"},
+            {"id": "default-animals-expanded-031", "text": "Betta"},
+            {"id": "default-animals-expanded-032", "text": "Guppy"},
+            {"id": "default-animals-expanded-033", "text": "Koi"},
+            {"id": "default-animals-expanded-034", "text": "Carp"},
+            {"id": "default-animals-expanded-035", "text": "Trout"},
+            {"id": "default-animals-expanded-036", "text": "Salmon"},
+            {"id": "default-animals-expanded-037", "text": "Tuna"},
+            {"id": "default-animals-expanded-038", "text": "Cod"},
+            {"id": "default-animals-expanded-039", "text": "Halibut"},
+            {"id": "default-animals-expanded-040", "text": "Flounder"},
+            {"id": "default-animals-expanded-041", "text": "Bass"},
+            {"id": "default-animals-expanded-042", "text": "Catfish"},
+            {"id": "default-animals-expanded-043", "text": "Piranha"},
+            {"id": "default-animals-expanded-044", "text": "Eel"},
+            {"id": "default-animals-expanded-045", "text": "Stingray"},
+            {"id": "default-animals-expanded-046", "text": "Manta Ray"},
+            {"id": "default-animals-expanded-047", "text": "Jellyfish"},
+            {"id": "default-animals-expanded-048", "text": "Squid"},
+            {"id": "default-animals-expanded-049", "text": "Cuttlefish"},
+            {"id": "default-animals-expanded-050", "text": "Nautilus"},
+            {"id": "default-animals-expanded-051", "text": "Starfish"},
+            {"id": "default-animals-expanded-052", "text": "Sea Urchin"},
+            {"id": "default-animals-expanded-053", "text": "Sea Cucumber"},
+            {"id": "default-animals-expanded-054", "text": "Crab"},
+            {"id": "default-animals-expanded-055", "text": "Lobster"},
+            {"id": "default-animals-expanded-056", "text": "Shrimp"},
+            {"id": "default-animals-expanded-057", "text": "Krill"},
+            {"id": "default-animals-expanded-058", "text": "Barnacle"},
+            {"id": "default-animals-expanded-059", "text": "Clam"},
+            {"id": "default-animals-expanded-060", "text": "Oyster"},
+            {"id": "default-animals-expanded-061", "text": "Mussel"},
+            {"id": "default-animals-expanded-062", "text": "Scallop"},
+            {"id": "default-animals-expanded-063", "text": "Snail"},
+            {"id": "default-animals-expanded-064", "text": "Slug"},
+            {"id": "default-animals-expanded-065", "text": "Earthworm"},
+            {"id": "default-animals-expanded-066", "text": "Leech"},
+            {"id": "default-animals-expanded-067", "text": "Centipede"},
+            {"id": "default-animals-expanded-068", "text": "Millipede"},
+            {"id": "default-animals-expanded-069", "text": "Spider"},
+            {"id": "default-animals-expanded-070", "text": "Scorpion"},
+            {"id": "default-animals-expanded-071", "text": "Tick"},
+            {"id": "default-animals-expanded-072", "text": "Mite"},
+            {"id": "default-animals-expanded-073", "text": "Insect"},
+            {"id": "default-animals-expanded-074", "text": "Beetle"},
+            {"id": "default-animals-expanded-075", "text": "Ladybug"},
+            {"id": "default-animals-expanded-076", "text": "Firefly"},
+            {"id": "default-animals-expanded-077", "text": "Butterfly"},
+            {"id": "default-animals-expanded-078", "text": "Moth"},
+            {"id": "default-animals-expanded-079", "text": "Caterpillar"},
+            {"id": "default-animals-expanded-080", "text": "Bee"},
+            {"id": "default-animals-expanded-081", "text": "Wasp"},
+            {"id": "default-animals-expanded-082", "text": "Ant"},
+            {"id": "default-animals-expanded-083", "text": "Termite"},
+            {"id": "default-animals-expanded-084", "text": "Fly"},
+            {"id": "default-animals-expanded-085", "text": "Mosquito"},
+            {"id": "default-animals-expanded-086", "text": "Gnat"},
+            {"id": "default-animals-expanded-087", "text": "Flea"},
+            {"id": "default-animals-expanded-088", "text": "Louse"},
+            {"id": "default-animals-expanded-089", "text": "Cicada"},
+            {"id": "default-animals-expanded-090", "text": "Aphid"},
+            {"id": "default-animals-expanded-091", "text": "Grasshopper"},
+            {"id": "default-animals-expanded-092", "text": "Cricket"},
+            {"id": "default-animals-expanded-093", "text": "Locust"},
+            {"id": "default-animals-expanded-094", "text": "Mantis"},
+            {"id": "default-animals-expanded-095", "text": "Stick Insect"},
+            {"id": "default-animals-expanded-096", "text": "Cockroach"},
+            {"id": "default-animals-expanded-097", "text": "Dragonfly"},
+            {"id": "default-animals-expanded-098", "text": "Damselfly"},
+            {"id": "default-animals-expanded-099", "text": "Mayfly"},
+            {"id": "default-animals-expanded-100", "text": "Stonefly"},
+            {"id": "default-animals-expanded-101", "text": "Caddisfly"},
+            {"id": "default-animals-expanded-102", "text": "Lacewing"},
+            {"id": "default-animals-expanded-103", "text": "Antlion"},
+            {"id": "default-animals-expanded-104", "text": "Bird"},
+            {"id": "default-animals-expanded-105", "text": "Eagle"},
+            {"id": "default-animals-expanded-106", "text": "Hawk"},
+            {"id": "default-animals-expanded-107", "text": "Falcon"},
+            {"id": "default-animals-expanded-108", "text": "Owl"},
+            {"id": "default-animals-expanded-109", "text": "Vulture"},
+            {"id": "default-animals-expanded-110", "text": "Condor"},
+            {"id": "default-animals-expanded-111", "text": "Osprey"},
+            {"id": "default-animals-expanded-112", "text": "Kite"},
+            {"id": "default-animals-expanded-113", "text": "Harrier"},
+            {"id": "default-animals-expanded-114", "text": "Buzzard"},
+            {"id": "default-animals-expanded-115", "text": "Gull"},
+            {"id": "default-animals-expanded-116", "text": "Tern"},
+            {"id": "default-animals-expanded-117", "text": "Albatross"},
+            {"id": "default-animals-expanded-118", "text": "Petrel"},
+            {"id": "default-animals-expanded-119", "text": "Shearwater"},
+            {"id": "default-animals-expanded-120", "text": "Pelican"},
+            {"id": "default-animals-expanded-121", "text": "Cormorant"},
+            {"id": "default-animals-expanded-122", "text": "Gannet"},
+            {"id": "default-animals-expanded-123", "text": "Booby"},
+            {"id": "default-animals-expanded-124", "text": "Frigatebird"},
+            {"id": "default-animals-expanded-125", "text": "Tropicbird"},
+            {"id": "default-animals-expanded-127", "text": "Loon"},
+            {"id": "default-animals-expanded-128", "text": "Grebe"},
+            {"id": "default-animals-expanded-129", "text": "Duck"},
+            {"id": "default-animals-expanded-130", "text": "Goose"},
+            {"id": "default-animals-expanded-131", "text": "Swan"},
+            {"id": "default-animals-expanded-132", "text": "Flamingo"},
+            {"id": "default-animals-expanded-133", "text": "Heron"},
+            {"id": "default-animals-expanded-134", "text": "Egret"},
+            {"id": "default-animals-expanded-135", "text": "Bittern"},
+            {"id": "default-animals-expanded-136", "text": "Ibis"},
+            {"id": "default-animals-expanded-137", "text": "Spoonbill"},
+            {"id": "default-animals-expanded-138", "text": "Stork"},
+            {"id": "default-animals-expanded-139", "text": "Crane"},
+            {"id": "default-animals-expanded-140", "text": "Rail"},
+            {"id": "default-animals-expanded-141", "text": "Coot"},
+            {"id": "default-animals-expanded-142", "text": "Gallinule"},
+            {"id": "default-animals-expanded-143", "text": "Bustard"},
+            {"id": "default-animals-expanded-144", "text": "Plover"},
+            {"id": "default-animals-expanded-145", "text": "Sandpiper"},
+            {"id": "default-animals-expanded-146", "text": "Snipe"},
+            {"id": "default-animals-expanded-147", "text": "Woodcock"},
+            {"id": "default-animals-expanded-148", "text": "Curlew"},
+            {"id": "default-animals-expanded-149", "text": "Godwit"},
+            {"id": "default-animals-expanded-150", "text": "Phalarope"},
+            {"id": "default-animals-expanded-151", "text": "Avocet"},
+            {"id": "default-animals-expanded-152", "text": "Stilt"},
+            {"id": "default-animals-expanded-155", "text": "Skimmer"},
+            {"id": "default-animals-expanded-156", "text": "Auk"},
+            {"id": "default-animals-expanded-157", "text": "Puffin"},
+            {"id": "default-animals-expanded-158", "text": "Murre"},
+            {"id": "default-animals-expanded-159", "text": "Guillemot"},
+            {"id": "default-animals-expanded-160", "text": "Pigeon"},
+            {"id": "default-animals-expanded-161", "text": "Dove"},
+            {"id": "default-animals-expanded-162", "text": "Sandgrouse"},
+            {"id": "default-animals-expanded-163", "text": "Parrot"},
+            {"id": "default-animals-expanded-164", "text": "Macaw"},
+            {"id": "default-animals-expanded-165", "text": "Cockatoo"},
+            {"id": "default-animals-expanded-166", "text": "Lory"},
+            {"id": "default-animals-expanded-167", "text": "Lorikeet"},
+            {"id": "default-animals-expanded-168", "text": "Parakeet"},
+            {"id": "default-animals-expanded-169", "text": "Budgerigar"},
+            {"id": "default-animals-expanded-170", "text": "Cockatiel"},
+            {"id": "default-animals-expanded-171", "text": "Lovebird"},
+            {"id": "default-animals-expanded-172", "text": "Cuckoo"},
+            {"id": "default-animals-expanded-173", "text": "Roadrunner"},
+            {"id": "default-animals-expanded-174", "text": "Turaco"},
+            {"id": "default-animals-expanded-175", "text": "Hoatzin"},
+            {"id": "default-animals-expanded-176", "text": "Barn Owl"},
+            {"id": "default-animals-expanded-177", "text": "Typical Owl"},
+            {"id": "default-animals-expanded-178", "text": "Nightjar"},
+            {"id": "default-animals-expanded-179", "text": "Potoo"},
+            {"id": "default-animals-expanded-180", "text": "Frogmouth"},
+            {"id": "default-animals-expanded-181", "text": "Oilbird"},
+            {"id": "default-animals-expanded-182", "text": "Swift"},
+            {"id": "default-animals-expanded-183", "text": "Hummingbird"},
+            {"id": "default-animals-expanded-184", "text": "Mousebird"},
+            {"id": "default-animals-expanded-185", "text": "Trogon"},
+            {"id": "default-animals-expanded-186", "text": "Quetzal"},
+            {"id": "default-animals-expanded-187", "text": "Kingfisher"},
+            {"id": "default-animals-expanded-188", "text": "Tody"},
+            {"id": "default-animals-expanded-189", "text": "Motmot"},
+            {"id": "default-animals-expanded-190", "text": "Bee-eater"},
+            {"id": "default-animals-expanded-191", "text": "Roller"},
+            {"id": "default-animals-expanded-192", "text": "Hoopoe"},
+            {"id": "default-animals-expanded-193", "text": "Woodhoopoe"},
+            {"id": "default-animals-expanded-194", "text": "Hornbill"},
+            {"id": "default-animals-expanded-195", "text": "Jacamar"},
+            {"id": "default-animals-expanded-196", "text": "Puffbird"},
+            {"id": "default-animals-expanded-197", "text": "Barbet"},
+            {"id": "default-animals-expanded-198", "text": "Toucan"},
+            {"id": "default-animals-expanded-199", "text": "Honeyguide"},
+            {"id": "default-animals-expanded-200", "text": "Woodpecker"},
+            {"id": "default-animals-expanded-201", "text": "Picucu"},
+            {"id": "default-animals-expanded-202", "text": "Wryneck"},
+            {"id": "default-animals-expanded-203", "text": "Passerine"},
+            {"id": "default-animals-expanded-204", "text": "Songbird"},
+            {"id": "default-animals-expanded-205", "text": "Tyrant Flycatcher"},
+            {"id": "default-animals-expanded-206", "text": "Pittas"},
+            {"id": "default-animals-expanded-207", "text": "Ovenbird"},
+            {"id": "default-animals-expanded-208", "text": "Woodcreeper"},
+            {"id": "default-animals-expanded-209", "text": "Antbird"},
+            {"id": "default-animals-expanded-210", "text": "Antthrush"},
+            {"id": "default-animals-expanded-211", "text": "Antpitta"},
+            {"id": "default-animals-expanded-212", "text": "Gnateater"},
+            {"id": "default-animals-expanded-213", "text": "Tapaculo"},
+            {"id": "default-animals-expanded-214", "text": "Cotinga"},
+            {"id": "default-animals-expanded-215", "text": "Manakin"},
+            {"id": "default-animals-expanded-216", "text": "Tityra"},
+            {"id": "default-animals-expanded-217", "text": "Becard"},
+            {"id": "default-animals-extra-218", "text": "Alpaca"},
+            {"id": "default-animals-extra-219", "text": "Anteater"},
+            {"id": "default-animals-extra-220", "text": "Antelope"},
+            {"id": "default-animals-extra-221", "text": "Ape"},
+            {"id": "default-animals-extra-222", "text": "Armadillo"},
+            {"id": "default-animals-extra-223", "text": "Baboon"},
+            {"id": "default-animals-extra-224", "text": "Badger"},
+            {"id": "default-animals-extra-225", "text": "Bat"},
+            {"id": "default-animals-extra-227", "text": "Beaver"},
+            {"id": "default-animals-extra-228", "text": "Bison"},
+            {"id": "default-animals-extra-229", "text": "Boar"},
+            {"id": "default-animals-extra-230", "text": "Buffalo"},
+            {"id": "default-animals-extra-231", "text": "Camel"},
+            {"id": "default-animals-extra-232", "text": "Capybara"},
+            {"id": "default-animals-extra-233", "text": "Caribou"},
+            {"id": "default-animals-extra-235", "text": "Cattle"},
+            {"id": "default-animals-extra-236", "text": "Cheetah"},
+            {"id": "default-animals-extra-237", "text": "Chimpanzee"},
+            {"id": "default-animals-extra-238", "text": "Chinchilla"},
+            {"id": "default-animals-extra-239", "text": "Chipmunk"},
+            {"id": "default-animals-extra-240", "text": "Cougar"},
+            {"id": "default-animals-extra-241", "text": "Cow"},
+            {"id": "default-animals-extra-242", "text": "Coyote"},
+            {"id": "default-animals-extra-243", "text": "Deer"},
+            {"id": "default-animals-extra-246", "text": "Donkey"},
+            {"id": "default-animals-extra-247", "text": "Dugong"},
+            {"id": "default-animals-extra-248", "text": "Echidna"},
+            {"id": "default-animals-extra-250", "text": "Elk"},
+            {"id": "default-animals-extra-251", "text": "Ermine"},
+            {"id": "default-animals-extra-252", "text": "Ferret"},
+            {"id": "default-animals-extra-253", "text": "Fox"},
+            {"id": "default-animals-extra-255", "text": "Gazelle"},
+            {"id": "default-animals-extra-257", "text": "Goat"},
+            {"id": "default-animals-extra-258", "text": "Gorilla"},
+            {"id": "default-animals-extra-259", "text": "Guinea Pig"}
         ],
         "type": "default",
         "color": "orange",

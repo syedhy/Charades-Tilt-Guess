@@ -4,3756 +4,756 @@
         "name": "General Emoji",
         "description": "Guess Random from emojis!",
         "cards": [
-            {
-                "id": "em-ez-001",
-                "text": "🚢🧊💔",
-                "meaning": "Titanic"
-            },
-            {
-                "id": "em-ez-002",
-                "text": "🧙‍♂️⚡🦉",
-                "meaning": "Harry Potter"
-            },
-            {
-                "id": "em-ez-003",
-                "text": "🦖🚙🌴",
-                "meaning": "Jurassic Park"
-            },
-            {
-                "id": "em-ez-004",
-                "text": "🐠❓🔍",
-                "meaning": "Finding Nemo"
-            },
-            {
-                "id": "em-ez-005",
-                "text": "🎈🏠👴",
-                "meaning": "Up"
-            },
-            {
-                "id": "em-ez-006",
-                "text": "❄️👸⛄",
-                "meaning": "Frozen"
-            },
-            {
-                "id": "em-ez-007",
-                "text": "🦁👑🌅",
-                "meaning": "The Lion King"
-            },
-            {
-                "id": "em-ez-008",
-                "text": "🕷️🕸️🏙️",
-                "meaning": "Spider-Man"
-            },
-            {
-                "id": "em-ez-009",
-                "text": "🦇🔦🏙️",
-                "meaning": "Batman"
-            },
-            {
-                "id": "em-ez-010",
-                "text": "👻🚫🚒",
-                "meaning": "Ghostbusters"
-            },
-            {
-                "id": "em-ez-011",
-                "text": "🏠👦😱",
-                "meaning": "Home Alone"
-            },
-            {
-                "id": "em-ez-012",
-                "text": "🤠🧸🚀",
-                "meaning": "Toy Story"
-            },
-            {
-                "id": "em-ez-013",
-                "text": "🧽🍍🌊",
-                "meaning": "SpongeBob SquarePants"
-            },
-            {
-                "id": "em-ez-014",
-                "text": "🐱🐭🧀",
-                "meaning": "Tom and Jerry"
-            },
-            {
-                "id": "em-ez-015",
-                "text": "🐶👻🔍",
-                "meaning": "Scooby-Doo"
-            },
-            {
-                "id": "em-ez-016",
-                "text": "⚡🐭🔴",
-                "meaning": "Pokémon"
-            },
-            {
-                "id": "em-ez-017",
-                "text": "🍄👨‍🔧🏰",
-                "meaning": "Super Mario Bros"
-            },
-            {
-                "id": "em-ez-018",
-                "text": "⛏️💎🧱",
-                "meaning": "Minecraft"
-            },
-            {
-                "id": "em-ez-019",
-                "text": "🌌⚔️🤖",
-                "meaning": "Star Wars"
-            },
-            {
-                "id": "em-ez-020",
-                "text": "👨🔥🤖",
-                "meaning": "Iron Man"
-            },
-            {
-                "id": "em-ez-021",
-                "text": "🛡️🇺🇸🧊",
-                "meaning": "Captain America"
-            },
-            {
-                "id": "em-ez-022",
-                "text": "🔨⚡🌈",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-ez-023",
-                "text": "🟢😡💥",
-                "meaning": "The Hulk"
-            },
-            {
-                "id": "em-ez-024",
-                "text": "👑👹🫏",
-                "meaning": "Shrek"
-            },
-            {
-                "id": "em-ez-025",
-                "text": "👠🕛🎃",
-                "meaning": "Cinderella"
-            },
-            {
-                "id": "em-ez-026",
-                "text": "🍎😴👸",
-                "meaning": "Snow White"
-            },
-            {
-                "id": "em-ez-027",
-                "text": "🧞🪔🐒",
-                "meaning": "Aladdin"
-            },
-            {
-                "id": "em-ez-028",
-                "text": "🐀👨‍🍳🍝",
-                "meaning": "Ratatouille"
-            },
-            {
-                "id": "em-ez-029",
-                "text": "🏎️⚡👁️",
-                "meaning": "Cars"
-            },
-            {
-                "id": "em-ez-030",
-                "text": "👹🚪⚡",
-                "meaning": "Monsters, Inc."
-            },
-            {
-                "id": "em-ez-031",
-                "text": "👽🚲🌕",
-                "meaning": "E.T."
-            },
-            {
-                "id": "em-ez-032",
-                "text": "🦈🌊🚤",
-                "meaning": "Jaws"
-            },
-            {
-                "id": "em-ez-033",
-                "text": "🔵🌳👽",
-                "meaning": "Avatar"
-            },
-            {
-                "id": "em-ez-034",
-                "text": "🤠🐍🪨",
-                "meaning": "Indiana Jones"
-            },
-            {
-                "id": "em-ez-035",
-                "text": "💊🕶️💻",
-                "meaning": "The Matrix"
-            },
-            {
-                "id": "em-ez-036",
-                "text": "⚡🚗⌛",
-                "meaning": "Back to the Future"
-            },
-            {
-                "id": "em-ez-037",
-                "text": "🚗🤖⚡",
-                "meaning": "Transformers"
-            },
-            {
-                "id": "em-ez-038",
-                "text": "🟡👖🍌",
-                "meaning": "Minions"
-            },
-            {
-                "id": "em-ez-039",
-                "text": "🚲🔦👾",
-                "meaning": "Stranger Things"
-            },
-            {
-                "id": "em-ez-040",
-                "text": "🦑🎮🔴",
-                "meaning": "Squid Game"
-            },
-            {
-                "id": "em-ez-041",
-                "text": "🍕🧀",
-                "meaning": "Pizza"
-            },
-            {
-                "id": "em-ez-042",
-                "text": "🍔🍟",
-                "meaning": "Burger"
-            },
-            {
-                "id": "em-ez-043",
-                "text": "🌮🌶️",
-                "meaning": "Taco"
-            },
-            {
-                "id": "em-ez-044",
-                "text": "🍦❄️",
-                "meaning": "Ice Cream"
-            },
-            {
-                "id": "em-ez-045",
-                "text": "🍩☕",
-                "meaning": "Donut"
-            },
-            {
-                "id": "em-ez-046",
-                "text": "🥞🧈",
-                "meaning": "Pancakes"
-            },
-            {
-                "id": "em-ez-047",
-                "text": "🍿🎬",
-                "meaning": "Popcorn"
-            },
-            {
-                "id": "em-ez-048",
-                "text": "🌭⚾",
-                "meaning": "Hot Dog"
-            },
-            {
-                "id": "em-ez-049",
-                "text": "🍣🥢",
-                "meaning": "Sushi"
-            },
-            {
-                "id": "em-ez-050",
-                "text": "🍜🥢",
-                "meaning": "Ramen"
-            },
-            {
-                "id": "em-ez-051",
-                "text": "🎂🕯️",
-                "meaning": "Birthday Cake"
-            },
-            {
-                "id": "em-ez-052",
-                "text": "🍫🍫",
-                "meaning": "Chocolate"
-            },
-            {
-                "id": "em-ez-053",
-                "text": "🍉☀️",
-                "meaning": "Watermelon"
-            },
-            {
-                "id": "em-ez-054",
-                "text": "🥛🍓",
-                "meaning": "Milkshake"
-            },
-            {
-                "id": "em-ez-055",
-                "text": "☕🥛",
-                "meaning": "Coffee"
-            },
-            {
-                "id": "em-ez-056",
-                "text": "🍪🥛",
-                "meaning": "Cookies and Milk"
-            },
-            {
-                "id": "em-ez-057",
-                "text": "🍋🧊",
-                "meaning": "Lemonade"
-            },
-            {
-                "id": "em-ez-058",
-                "text": "🍟🍟",
-                "meaning": "French Fries"
-            },
-            {
-                "id": "em-ez-059",
-                "text": "🥪🥓",
-                "meaning": "Sandwich"
-            },
-            {
-                "id": "em-ez-060",
-                "text": "🍳🥓",
-                "meaning": "Bacon and Eggs"
-            },
-            {
-                "id": "em-ez-061",
-                "text": "🍎📱",
-                "meaning": "Apple"
-            },
-            {
-                "id": "em-ez-062",
-                "text": "🔍🌎",
-                "meaning": "Google"
-            },
-            {
-                "id": "em-ez-063",
-                "text": "🛒📦",
-                "meaning": "Amazon"
-            },
-            {
-                "id": "em-ez-064",
-                "text": "🎬🍿",
-                "meaning": "Netflix"
-            },
-            {
-                "id": "em-ez-065",
-                "text": "📺▶️",
-                "meaning": "YouTube"
-            },
-            {
-                "id": "em-ez-066",
-                "text": "📸💖",
-                "meaning": "Instagram"
-            },
-            {
-                "id": "em-ez-067",
-                "text": "👻💬",
-                "meaning": "Snapchat"
-            },
-            {
-                "id": "em-ez-068",
-                "text": "💬🟢",
-                "meaning": "WhatsApp"
-            },
-            {
-                "id": "em-ez-069",
-                "text": "🕺🎵",
-                "meaning": "TikTok"
-            },
-            {
-                "id": "em-ez-070",
-                "text": "🚗⚡",
-                "meaning": "Tesla"
-            },
-            {
-                "id": "em-ez-071",
-                "text": "🍔🟡",
-                "meaning": "McDonald's"
-            },
-            {
-                "id": "em-ez-072",
-                "text": "☕🧜‍♀️",
-                "meaning": "Starbucks"
-            },
-            {
-                "id": "em-ez-073",
-                "text": "🥤🔴",
-                "meaning": "Coca-Cola"
-            },
-            {
-                "id": "em-ez-074",
-                "text": "👟✔️",
-                "meaning": "Nike"
-            },
-            {
-                "id": "em-ez-075",
-                "text": "🏀🗑️",
-                "meaning": "Basketball"
-            },
-            {
-                "id": "em-ez-076",
-                "text": "⚽🥅",
-                "meaning": "Soccer"
-            },
-            {
-                "id": "em-ez-077",
-                "text": "🏈🏟️",
-                "meaning": "American Football"
-            },
-            {
-                "id": "em-ez-078",
-                "text": "⚾🦇",
-                "meaning": "Baseball"
-            },
-            {
-                "id": "em-ez-079",
-                "text": "🎾🎾",
-                "meaning": "Tennis"
-            },
-            {
-                "id": "em-ez-080",
-                "text": "🏌️‍♂️⛳",
-                "meaning": "Golf"
-            },
-            {
-                "id": "em-ez-081",
-                "text": "🎳🎱",
-                "meaning": "Bowling"
-            },
-            {
-                "id": "em-ez-082",
-                "text": "🥊💥",
-                "meaning": "Boxing"
-            },
-            {
-                "id": "em-ez-083",
-                "text": "⛷️❄️",
-                "meaning": "Skiing"
-            },
-            {
-                "id": "em-ez-084",
-                "text": "🏄‍♂️🌊",
-                "meaning": "Surfing"
-            },
-            {
-                "id": "em-ez-085",
-                "text": "🏊‍♂️🌊",
-                "meaning": "Swimming"
-            },
-            {
-                "id": "em-ez-086",
-                "text": "🏃‍♂️💨",
-                "meaning": "Running"
-            },
-            {
-                "id": "em-ez-087",
-                "text": "🚴‍♂️⛰️",
-                "meaning": "Cycling"
-            },
-            {
-                "id": "em-ez-088",
-                "text": "🐶🦴",
-                "meaning": "Dog"
-            },
-            {
-                "id": "em-ez-089",
-                "text": "🐱🐟",
-                "meaning": "Cat"
-            },
-            {
-                "id": "em-ez-090",
-                "text": "🐼🎍",
-                "meaning": "Panda"
-            },
-            {
-                "id": "em-ez-091",
-                "text": "🦁👑",
-                "meaning": "Lion"
-            },
-            {
-                "id": "em-ez-092",
-                "text": "🐯🐅",
-                "meaning": "Tiger"
-            },
-            {
-                "id": "em-ez-093",
-                "text": "🐘👂",
-                "meaning": "Elephant"
-            },
-            {
-                "id": "em-ez-094",
-                "text": "🦒🦒",
-                "meaning": "Giraffe"
-            },
-            {
-                "id": "em-ez-095",
-                "text": "🐧🧊",
-                "meaning": "Penguin"
-            },
-            {
-                "id": "em-ez-096",
-                "text": "🦈🦷",
-                "meaning": "Shark"
-            },
-            {
-                "id": "em-ez-097",
-                "text": "🦉🌙",
-                "meaning": "Owl"
-            },
-            {
-                "id": "em-ez-098",
-                "text": "🐸🪷",
-                "meaning": "Frog"
-            },
-            {
-                "id": "em-ez-099",
-                "text": "🐍🍎",
-                "meaning": "Snake"
-            },
-            {
-                "id": "em-ez-100",
-                "text": "🐻🍯",
-                "meaning": "Bear"
-            },
-            {
-                "id": "em-ez-101",
-                "text": "🐺🌕",
-                "meaning": "Wolf"
-            },
-            {
-                "id": "em-ez-102",
-                "text": "🦊🌲",
-                "meaning": "Fox"
-            },
-            {
-                "id": "em-ez-103",
-                "text": "🦇🌙",
-                "meaning": "Bat"
-            },
-            {
-                "id": "em-ez-104",
-                "text": "🦆🌊",
-                "meaning": "Duck"
-            },
-            {
-                "id": "em-ez-105",
-                "text": "🐒🍌",
-                "meaning": "Monkey"
-            },
-            {
-                "id": "em-ez-106",
-                "text": "🐝🍯",
-                "meaning": "Bee"
-            },
-            {
-                "id": "em-ez-107",
-                "text": "🦋🌸",
-                "meaning": "Butterfly"
-            },
-            {
-                "id": "em-ez-108",
-                "text": "🦄🌈",
-                "meaning": "Unicorn"
-            },
-            {
-                "id": "em-ez-109",
-                "text": "🐉🔥",
-                "meaning": "Dragon"
-            },
-            {
-                "id": "em-ez-110",
-                "text": "🧜‍♀️🐚",
-                "meaning": "Mermaid"
-            },
-            {
-                "id": "em-ez-111",
-                "text": "🧛‍♂️🩸",
-                "meaning": "Vampire"
-            },
-            {
-                "id": "em-ez-112",
-                "text": "🐺🌕",
-                "meaning": "Werewolf"
-            },
-            {
-                "id": "em-ez-113",
-                "text": "🧟‍♂️🧠",
-                "meaning": "Zombie"
-            },
-            {
-                "id": "em-ez-114",
-                "text": "👻🏚️",
-                "meaning": "Ghost"
-            },
-            {
-                "id": "em-ez-115",
-                "text": "👽🛸",
-                "meaning": "Alien"
-            },
-            {
-                "id": "em-ez-116",
-                "text": "🤖⚙️",
-                "meaning": "Robot"
-            },
-            {
-                "id": "em-ez-117",
-                "text": "🦖🌋",
-                "meaning": "Dinosaur"
-            },
-            {
-                "id": "em-ez-118",
-                "text": "🗼🇫🇷",
-                "meaning": "Eiffel Tower"
-            },
-            {
-                "id": "em-ez-119",
-                "text": "🗽🇺🇸",
-                "meaning": "Statue of Liberty"
-            },
-            {
-                "id": "em-ez-120",
-                "text": "🕌🇮🇳",
-                "meaning": "Taj Mahal"
-            },
-            {
-                "id": "em-ez-121",
-                "text": "🔺🇪🇬",
-                "meaning": "Pyramids"
-            },
-            {
-                "id": "em-ez-122",
-                "text": "🧱🇨🇳",
-                "meaning": "Great Wall of China"
-            },
-            {
-                "id": "em-ez-123",
-                "text": "🗽🦅",
-                "meaning": "United States"
-            },
-            {
-                "id": "em-ez-124",
-                "text": "🗼🥖",
-                "meaning": "France"
-            },
-            {
-                "id": "em-ez-125",
-                "text": "🍕🍝",
-                "meaning": "Italy"
-            },
-            {
-                "id": "em-ez-126",
-                "text": "🍣🗻",
-                "meaning": "Japan"
-            },
-            {
-                "id": "em-ez-127",
-                "text": "🐉🏯",
-                "meaning": "China"
-            },
-            {
-                "id": "em-ez-128",
-                "text": "🐪🔺",
-                "meaning": "Egypt"
-            },
-            {
-                "id": "em-ez-129",
-                "text": "🌮🌵",
-                "meaning": "Mexico"
-            },
-            {
-                "id": "em-ez-130",
-                "text": "🦘🌏",
-                "meaning": "Australia"
-            },
-            {
-                "id": "em-ez-131",
-                "text": "🍁🦫",
-                "meaning": "Canada"
-            },
-            {
-                "id": "em-ez-132",
-                "text": "🕌🐅",
-                "meaning": "India"
-            },
-            {
-                "id": "em-ez-133",
-                "text": "☕👑",
-                "meaning": "United Kingdom"
-            },
-            {
-                "id": "em-ez-134",
-                "text": "🍺🥨",
-                "meaning": "Germany"
-            },
-            {
-                "id": "em-ez-135",
-                "text": "💃🐂",
-                "meaning": "Spain"
-            },
-            {
-                "id": "em-ez-136",
-                "text": "⚽🌴",
-                "meaning": "Brazil"
-            },
-            {
-                "id": "em-ez-137",
-                "text": "🎄🎅🎁",
-                "meaning": "Christmas"
-            },
-            {
-                "id": "em-ez-138",
-                "text": "🎃👻🍬",
-                "meaning": "Halloween"
-            },
-            {
-                "id": "em-ez-139",
-                "text": "🦃🍂🥧",
-                "meaning": "Thanksgiving"
-            },
-            {
-                "id": "em-ez-140",
-                "text": "💖💌🌹",
-                "meaning": "Valentine's Day"
-            },
-            {
-                "id": "em-ez-141",
-                "text": "🐰🥚🐣",
-                "meaning": "Easter"
-            },
-            {
-                "id": "em-ez-142",
-                "text": "🎆🥂🕛",
-                "meaning": "New Year's Eve"
-            },
-            {
-                "id": "em-ez-143",
-                "text": "🎂🎉🎁",
-                "meaning": "Birthday"
-            },
-            {
-                "id": "em-ez-144",
-                "text": "👰‍♀️🤵‍♂️💒",
-                "meaning": "Wedding"
-            },
-            {
-                "id": "em-ez-145",
-                "text": "🎓📜🎉",
-                "meaning": "Graduation"
-            },
-            {
-                "id": "em-ez-146",
-                "text": "🏕️🔥🌲",
-                "meaning": "Camping"
-            },
-            {
-                "id": "em-ez-147",
-                "text": "✈️🧳🏝️",
-                "meaning": "Vacation"
-            },
-            {
-                "id": "em-ez-148",
-                "text": "🍿🎬🎟️",
-                "meaning": "Movie Night"
-            },
-            {
-                "id": "em-ez-149",
-                "text": "😴🛏️💤",
-                "meaning": "Sleeping"
-            },
-            {
-                "id": "em-ez-150",
-                "text": "🌧️☔💧",
-                "meaning": "Rain"
-            },
-            {
-                "id": "em-ez-151",
-                "text": "❄️☃️🥶",
-                "meaning": "Snow"
-            },
-            {
-                "id": "em-ez-152",
-                "text": "🌈☀️🌧️",
-                "meaning": "Rainbow"
-            },
-            {
-                "id": "em-ez-153",
-                "text": "🌪️🏠💨",
-                "meaning": "Tornado"
-            },
-            {
-                "id": "em-ez-154",
-                "text": "🌋🔥🪨",
-                "meaning": "Volcano"
-            },
-            {
-                "id": "em-ez-155",
-                "text": "🌩️⚡🌧️",
-                "meaning": "Thunderstorm"
-            },
-            {
-                "id": "em-ez-156",
-                "text": "🚀🌕⭐",
-                "meaning": "Space"
-            },
-            {
-                "id": "em-ez-157",
-                "text": "👨‍🚒🚒🔥",
-                "meaning": "Firefighter"
-            },
-            {
-                "id": "em-ez-158",
-                "text": "👨‍🚀🚀🌕",
-                "meaning": "Astronaut"
-            },
-            {
-                "id": "em-ez-159",
-                "text": "👨‍🍳🍳🔪",
-                "meaning": "Chef"
-            },
-            {
-                "id": "em-ez-160",
-                "text": "👨‍⚕️🩺🏥",
-                "meaning": "Doctor"
-            },
-            {
-                "id": "em-ez-161",
-                "text": "🕵️‍♂️🔍",
-                "meaning": "Detective"
-            },
-            {
-                "id": "em-ez-162",
-                "text": "👮‍♂️🚨🚔",
-                "meaning": "Police Officer"
-            },
-            {
-                "id": "em-ez-163",
-                "text": "👨‍✈️🛩️",
-                "meaning": "Pilot"
-            },
-            {
-                "id": "em-ez-164",
-                "text": "🎨🖌️",
-                "meaning": "Artist"
-            },
-            {
-                "id": "em-ez-165",
-                "text": "👨‍🏫📚",
-                "meaning": "Teacher"
-            },
-            {
-                "id": "em-ez-166",
-                "text": "📸📷",
-                "meaning": "Photographer"
-            },
-            {
-                "id": "em-ez-167",
-                "text": "🧱🏗️",
-                "meaning": "Construction Worker"
-            },
-            {
-                "id": "em-ez-168",
-                "text": "🧑‍🌾🚜",
-                "meaning": "Farmer"
-            },
-            {
-                "id": "em-ez-169",
-                "text": "👨‍🔬🧪",
-                "meaning": "Scientist"
-            },
-            {
-                "id": "em-ez-170",
-                "text": "⚖️👨‍⚖️",
-                "meaning": "Judge"
-            },
-            {
-                "id": "em-ez-171",
-                "text": "✂️💈",
-                "meaning": "Barber"
-            },
-            {
-                "id": "em-ez-172",
-                "text": "🦷🪥",
-                "meaning": "Dentist"
-            },
-            {
-                "id": "em-ez-173",
-                "text": "🪄🎩",
-                "meaning": "Magician"
-            },
-            {
-                "id": "em-ez-174",
-                "text": "⚡👑🏛️",
-                "meaning": "Zeus"
-            },
-            {
-                "id": "em-ez-175",
-                "text": "🔱🌊🐴",
-                "meaning": "Poseidon"
-            },
-            {
-                "id": "em-ez-176",
-                "text": "💀🔥👑",
-                "meaning": "Hades"
-            },
-            {
-                "id": "em-ez-177",
-                "text": "🔨⚡🌩️",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-ez-178",
-                "text": "🐍👩👁️",
-                "meaning": "Medusa"
-            },
-            {
-                "id": "em-ez-179",
-                "text": "🐂🏛️",
-                "meaning": "Minotaur"
-            },
-            {
-                "id": "em-ez-180",
-                "text": "🔥🦅✨",
-                "meaning": "Phoenix"
-            },
-            {
-                "id": "em-ez-181",
-                "text": "🪽🐎",
-                "meaning": "Pegasus"
-            },
-            {
-                "id": "em-ez-182",
-                "text": "🐶🐶🐶",
-                "meaning": "Cerberus"
-            },
-            {
-                "id": "em-ez-183",
-                "text": "🗡️🪨👑",
-                "meaning": "Excalibur"
-            },
-            {
-                "id": "em-ez-184",
-                "text": "🏹💰🌳",
-                "meaning": "Robin Hood"
-            },
-            {
-                "id": "em-ez-185",
-                "text": "👑🐍👁️",
-                "meaning": "Cleopatra"
-            },
-            {
-                "id": "em-ez-186",
-                "text": "🗡️🩸🏛️",
-                "meaning": "Julius Caesar"
-            },
-            {
-                "id": "em-ez-187",
-                "text": "🧠⚡💡",
-                "meaning": "Albert Einstein"
-            },
-            {
-                "id": "em-ez-188",
-                "text": "🍎🌳📉",
-                "meaning": "Isaac Newton"
-            },
-            {
-                "id": "em-ez-189",
-                "text": "🐱🐶🌧️",
-                "meaning": "Raining Cats and Dogs"
-            },
-            {
-                "id": "em-ez-190",
-                "text": "🥶🦶",
-                "meaning": "Cold Feet"
-            },
-            {
-                "id": "em-ez-191",
-                "text": "💛🌟",
-                "meaning": "Heart of Gold"
-            },
-            {
-                "id": "em-ez-192",
-                "text": "⏱️💸",
-                "meaning": "Time is Money"
-            },
-            {
-                "id": "em-ez-193",
-                "text": "🍰🥧",
-                "meaning": "Piece of Cake"
-            },
-            {
-                "id": "em-ez-194",
-                "text": "🧠⚡",
-                "meaning": "Brainstorm"
-            },
-            {
-                "id": "em-ez-195",
-                "text": "⏳🪽",
-                "meaning": "Time Flies"
-            },
-            {
-                "id": "em-ez-196",
-                "text": "🦴🦵",
-                "meaning": "Break a Leg"
-            },
-            {
-                "id": "em-ez-197",
-                "text": "🫗🫘",
-                "meaning": "Spill the Beans"
-            },
-            {
-                "id": "em-ez-198",
-                "text": "🐘🛋️",
-                "meaning": "Elephant in the Room"
-            },
-            {
-                "id": "em-ez-199",
-                "text": "🐷🛫",
-                "meaning": "When Pigs Fly"
-            },
-            {
-                "id": "em-ez-200",
-                "text": "⏳⌛🔁",
-                "meaning": "Time Travel"
-            },
-            {
-                "id": "em-ez-201",
-                "text": "⚡🐭✨",
-                "meaning": "Pikachu"
-            },
-            {
-                "id": "em-ez-202",
-                "text": "🔥🐉💥",
-                "meaning": "Charizard"
-            },
-            {
-                "id": "em-ez-203",
-                "text": "🌱🦖🐸",
-                "meaning": "Bulbasaur"
-            },
-            {
-                "id": "em-ez-204",
-                "text": "🐢💧🕶️",
-                "meaning": "Squirtle"
-            },
-            {
-                "id": "em-ez-205",
-                "text": "😴🐻",
-                "meaning": "Snorlax"
-            },
-            {
-                "id": "em-ez-206",
-                "text": "🎤🎈",
-                "meaning": "Jigglypuff"
-            },
-            {
-                "id": "em-ez-207",
-                "text": "🤕🦆",
-                "meaning": "Psyduck"
-            },
-            {
-                "id": "em-ez-208",
-                "text": "👻😈",
-                "meaning": "Gengar"
-            },
-            {
-                "id": "em-ez-209",
-                "text": "🧬🟣",
-                "meaning": "Mewtwo"
-            },
-            {
-                "id": "em-ez-210",
-                "text": "🏴‍☠️👒🍖",
-                "meaning": "One Piece"
-            },
-            {
-                "id": "em-ez-211",
-                "text": "🟠🥷🦊",
-                "meaning": "Naruto"
-            },
-            {
-                "id": "em-ez-212",
-                "text": "🟠🐉💥",
-                "meaning": "Dragon Ball Z"
-            },
-            {
-                "id": "em-ez-213",
-                "text": "📓🖊️💀",
-                "meaning": "Death Note"
-            },
-            {
-                "id": "em-ez-214",
-                "text": "👨‍👦📜🗡️",
-                "meaning": "Demon Slayer"
-            },
-            {
-                "id": "em-ez-215",
-                "text": "⚔️🧗‍♂️👹",
-                "meaning": "Attack on Titan"
-            },
-            {
-                "id": "em-ez-216",
-                "text": "🦹‍♂️🦸‍♂️🏫",
-                "meaning": "My Hero Academia"
-            },
-            {
-                "id": "em-ez-217",
-                "text": "🧑‍🦲👊💥",
-                "meaning": "One Punch Man"
-            },
-            {
-                "id": "em-ez-218",
-                "text": "🟡👻",
-                "meaning": "Pac-Man"
-            },
-            {
-                "id": "em-ez-219",
-                "text": "🧱🎮",
-                "meaning": "Tetris"
-            },
-            {
-                "id": "em-ez-220",
-                "text": "🦔⚡",
-                "meaning": "Sonic the Hedgehog"
-            },
-            {
-                "id": "em-ez-221",
-                "text": "🦍🍌",
-                "meaning": "Donkey Kong"
-            },
-            {
-                "id": "em-ez-222",
-                "text": "👨‍🚀🔪",
-                "meaning": "Among Us"
-            },
-            {
-                "id": "em-ez-223",
-                "text": "🚗⚽",
-                "meaning": "Rocket League"
-            },
-            {
-                "id": "em-ez-224",
-                "text": "🔫🚔",
-                "meaning": "Grand Theft Auto"
-            },
-            {
-                "id": "em-ez-225",
-                "text": "🎲🏢🎩",
-                "meaning": "Monopoly"
-            },
-            {
-                "id": "em-ez-226",
-                "text": "♟️👑",
-                "meaning": "Chess"
-            },
-            {
-                "id": "em-ez-227",
-                "text": "🔠📝",
-                "meaning": "Scrabble"
-            },
-            {
-                "id": "em-ez-228",
-                "text": "🔪🔎",
-                "meaning": "Clue"
-            },
-            {
-                "id": "em-ez-229",
-                "text": "🧱🪵",
-                "meaning": "Jenga"
-            },
-            {
-                "id": "em-ez-230",
-                "text": "🔴🟡🔵🟢",
-                "meaning": "Twister"
-            },
-            {
-                "id": "em-ez-231",
-                "text": "🃏🔄4️⃣",
-                "meaning": "Uno"
-            },
-            {
-                "id": "em-ez-232",
-                "text": "🌅☀️",
-                "meaning": "Sunrise"
-            },
-            {
-                "id": "em-ez-233",
-                "text": "🌇🌆",
-                "meaning": "Sunset"
-            },
-            {
-                "id": "em-ez-234",
-                "text": "🌙⭐",
-                "meaning": "Night Sky"
-            },
-            {
-                "id": "em-ez-235",
-                "text": "🏖️☀️",
-                "meaning": "Beach Vacation"
-            },
-            {
-                "id": "em-ez-236",
-                "text": "🚗🛣️",
-                "meaning": "Road Trip"
-            },
-            {
-                "id": "em-ez-237",
-                "text": "🤿🐠",
-                "meaning": "Scuba Diving"
-            },
-            {
-                "id": "em-ez-238",
-                "text": "🧗‍♂️🪨",
-                "meaning": "Rock Climbing"
-            },
-            {
-                "id": "em-ez-239",
-                "text": "🏹🎯",
-                "meaning": "Archery"
-            },
-            {
-                "id": "em-ez-240",
-                "text": "🏒🧊",
-                "meaning": "Ice Hockey"
-            },
-            {
-                "id": "em-ez-241",
-                "text": "⛸️❄️",
-                "meaning": "Figure Skating"
-            },
-            {
-                "id": "em-ez-242",
-                "text": "🎆🎇",
-                "meaning": "Fireworks"
-            },
-            {
-                "id": "em-ez-243",
-                "text": "🍿🎬",
-                "meaning": "Cinema"
-            },
-            {
-                "id": "em-ez-244",
-                "text": "🎸🎶",
-                "meaning": "Guitar"
-            },
-            {
-                "id": "em-ez-245",
-                "text": "🎹🎶",
-                "meaning": "Piano"
-            },
-            {
-                "id": "em-ez-246",
-                "text": "🥁🎶",
-                "meaning": "Drums"
-            },
-            {
-                "id": "em-ez-247",
-                "text": "🎻🎶",
-                "meaning": "Violin"
-            },
-            {
-                "id": "em-ez-248",
-                "text": "🎤🎶",
-                "meaning": "Karaoke"
-            },
-            {
-                "id": "em-ez-249",
-                "text": "💃🕺",
-                "meaning": "Dancing"
-            },
-            {
-                "id": "em-ez-250",
-                "text": "🎮🕹️",
-                "meaning": "Video Games"
-            },
-            {
-                "id": "em-mix-250",
-                "text": "🚢 Iceberg 💔",
-                "meaning": "Titanic"
-            },
-            {
-                "id": "em-mix-251",
-                "text": "🦖🚙🌴",
-                "meaning": "Jurassic Park"
-            },
-            {
-                "id": "em-mix-252",
-                "text": "🎈 House 👴",
-                "meaning": "Up"
-            },
-            {
-                "id": "em-mix-253",
-                "text": "🦈 Ocean 🚤",
-                "meaning": "Jaws"
-            },
-            {
-                "id": "em-mix-254",
-                "text": "👽🚲🌕",
-                "meaning": "E.T."
-            },
-            {
-                "id": "em-mix-255",
-                "text": "👨‍🚀 Mars 🪐",
-                "meaning": "The Martian"
-            },
-            {
-                "id": "em-mix-256",
-                "text": "🦁👑🌅",
-                "meaning": "The Lion King"
-            },
-            {
-                "id": "em-mix-257",
-                "text": "🥊 Club 👤",
-                "meaning": "Fight Club"
-            },
-            {
-                "id": "em-mix-258",
-                "text": "💊🕶️💻",
-                "meaning": "The Matrix"
-            },
-            {
-                "id": "em-mix-259",
-                "text": "💍 Ring 👁️",
-                "meaning": "The Lord of the Rings"
-            },
-            {
-                "id": "em-mix-260",
-                "text": "🧙‍♂️⚡🦉",
-                "meaning": "Harry Potter"
-            },
-            {
-                "id": "em-mix-261",
-                "text": "🌌 Force 🤖",
-                "meaning": "Star Wars"
-            },
-            {
-                "id": "em-mix-262",
-                "text": "👧🌪️👠",
-                "meaning": "The Wizard of Oz"
-            },
-            {
-                "id": "em-mix-263",
-                "text": "🐀 Chef 🍝",
-                "meaning": "Ratatouille"
-            },
-            {
-                "id": "em-mix-264",
-                "text": "👻🚫🚒",
-                "meaning": "Ghostbusters"
-            },
-            {
-                "id": "em-mix-265",
-                "text": "🤠 Toy 🚀",
-                "meaning": "Toy Story"
-            },
-            {
-                "id": "em-mix-266",
-                "text": "🏴‍☠️🧭🚢",
-                "meaning": "Pirates of the Caribbean"
-            },
-            {
-                "id": "em-mix-267",
-                "text": "🦇 Gotham 🏙️",
-                "meaning": "Batman"
-            },
-            {
-                "id": "em-mix-268",
-                "text": "🕷️ Web 🏙️",
-                "meaning": "Spider-Man"
-            },
-            {
-                "id": "em-mix-269",
-                "text": "🦸‍♂️ Cape ☄️",
-                "meaning": "Superman"
-            },
-            {
-                "id": "em-mix-270",
-                "text": "🟢 Smash 💥",
-                "meaning": "The Hulk"
-            },
-            {
-                "id": "em-mix-271",
-                "text": "👨 Suit 🤖",
-                "meaning": "Iron Man"
-            },
-            {
-                "id": "em-mix-272",
-                "text": "🛡️ Shield 🧊",
-                "meaning": "Captain America"
-            },
-            {
-                "id": "em-mix-273",
-                "text": "🔨 Thunder 🌈",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-mix-274",
-                "text": "👑 Amazon ➰",
-                "meaning": "Wonder Woman"
-            },
-            {
-                "id": "em-mix-275",
-                "text": "🔱 Atlantis 🐟",
-                "meaning": "Aquaman"
-            },
-            {
-                "id": "em-mix-276",
-                "text": "⚡ Speed 🔴",
-                "meaning": "The Flash"
-            },
-            {
-                "id": "em-mix-277",
-                "text": "🏹 District 🔥",
-                "meaning": "The Hunger Games"
-            },
-            {
-                "id": "em-mix-278",
-                "text": "🧛‍♂️ Blood 🦇",
-                "meaning": "Dracula"
-            },
-            {
-                "id": "em-mix-279",
-                "text": "⚡ Monster 🧟‍♂️",
-                "meaning": "Frankenstein"
-            },
-            {
-                "id": "em-mix-280",
-                "text": "🐠 Nemo 🔍",
-                "meaning": "Finding Nemo"
-            },
-            {
-                "id": "em-mix-281",
-                "text": "❄️ Ice ⛄",
-                "meaning": "Frozen"
-            },
-            {
-                "id": "em-mix-282",
-                "text": "🐼 Dragon 🥟",
-                "meaning": "Kung Fu Panda"
-            },
-            {
-                "id": "em-mix-283",
-                "text": "🤖 Trash 🌱",
-                "meaning": "WALL-E"
-            },
-            {
-                "id": "em-mix-284",
-                "text": "🧠 Joy 😢",
-                "meaning": "Inside Out"
-            },
-            {
-                "id": "em-mix-285",
-                "text": "🚗 Wasteland 🏜️",
-                "meaning": "Mad Max: Fury Road"
-            },
-            {
-                "id": "em-mix-286",
-                "text": "😴 Dream 🌀",
-                "meaning": "Inception"
-            },
-            {
-                "id": "em-mix-287",
-                "text": "🚀 Wormhole 🕳️",
-                "meaning": "Interstellar"
-            },
-            {
-                "id": "em-mix-288",
-                "text": "🎭 Killer 📞",
-                "meaning": "Scream"
-            },
-            {
-                "id": "em-mix-289",
-                "text": "🏠 Traps 😱",
-                "meaning": "Home Alone"
-            },
-            {
-                "id": "em-mix-290",
-                "text": "⚡ Time ⌛",
-                "meaning": "Back to the Future"
-            },
-            {
-                "id": "em-mix-291",
-                "text": "🤵 Family 🩸",
-                "meaning": "The Godfather"
-            },
-            {
-                "id": "em-mix-292",
-                "text": "🦍 Empire ✈️",
-                "meaning": "King Kong"
-            },
-            {
-                "id": "em-mix-293",
-                "text": "🌊 Voice 👸",
-                "meaning": "The Little Mermaid"
-            },
-            {
-                "id": "em-mix-294",
-                "text": "🌹 Curse 🦁",
-                "meaning": "Beauty and the Beast"
-            },
-            {
-                "id": "em-mix-295",
-                "text": "👠 Midnight 🎃",
-                "meaning": "Cinderella"
-            },
-            {
-                "id": "em-mix-296",
-                "text": "🍎 Poison 👸",
-                "meaning": "Snow White"
-            },
-            {
-                "id": "em-mix-297",
-                "text": "🪵 Puppet 🤥",
-                "meaning": "Pinocchio"
-            },
-            {
-                "id": "em-mix-298",
-                "text": "🐉 Warrior ⚔️",
-                "meaning": "Mulan"
-            },
-            {
-                "id": "em-mix-299",
-                "text": "👑 Swamp 🫏",
-                "meaning": "Shrek"
-            },
-            {
-                "id": "em-mix-300",
-                "text": "🟡 Villain 🍌",
-                "meaning": "Minions"
-            },
-            {
-                "id": "em-mix-301",
-                "text": "🦸‍♂️ Family 👶",
-                "meaning": "The Incredibles"
-            },
-            {
-                "id": "em-mix-302",
-                "text": "🎩 Wonderland ♥️",
-                "meaning": "Alice in Wonderland"
-            },
-            {
-                "id": "em-mix-303",
-                "text": "👨 Aliens 👽",
-                "meaning": "Men in Black"
-            },
-            {
-                "id": "em-mix-304",
-                "text": "🏃 Bench 🏓",
-                "meaning": "Forrest Gump"
-            },
-            {
-                "id": "em-mix-305",
-                "text": "🎈 Derry ⛵",
-                "meaning": "It"
-            },
-            {
-                "id": "em-mix-306",
-                "text": "🏝️ Wilson 📦",
-                "meaning": "Cast Away"
-            },
-            {
-                "id": "em-mix-307",
-                "text": "🟡 Bride ⚔️",
-                "meaning": "Kill Bill"
-            },
-            {
-                "id": "em-mix-308",
-                "text": "🕶️ Skynet 🤖",
-                "meaning": "The Terminator"
-            },
-            {
-                "id": "em-mix-309",
-                "text": "🌽 Crop 👁️",
-                "meaning": "Signs"
-            },
-            {
-                "id": "em-mix-310",
-                "text": "👂 Ghost 🥶",
-                "meaning": "The Sixth Sense"
-            },
-            {
-                "id": "em-mix-311",
-                "text": "🦢 Ballet 🖤",
-                "meaning": "Black Swan"
-            },
-            {
-                "id": "em-mix-312",
-                "text": "🐑 Silence 🔪",
-                "meaning": "The Silence of the Lambs"
-            },
-            {
-                "id": "em-mix-313",
-                "text": "🌧️ Replicant 🦄",
-                "meaning": "Blade Runner"
-            },
-            {
-                "id": "em-mix-314",
-                "text": "🦎 Monster 🏙️",
-                "meaning": "Godzilla"
-            },
-            {
-                "id": "em-mix-315",
-                "text": "🍔 Briefcase 🔫",
-                "meaning": "Pulp Fiction"
-            },
-            {
-                "id": "em-mix-316",
-                "text": "👯‍♀️ Twins 🚪",
-                "meaning": "The Shining"
-            },
-            {
-                "id": "em-mix-317",
-                "text": "🔵 Pandora 👽",
-                "meaning": "Avatar"
-            },
-            {
-                "id": "em-mix-318",
-                "text": "🤠 Whip 🪨",
-                "meaning": "Indiana Jones"
-            },
-            {
-                "id": "em-mix-319",
-                "text": "📺 Reality 👋",
-                "meaning": "The Truman Show"
-            },
-            {
-                "id": "em-mix-320",
-                "text": "🧸 Beer 😂",
-                "meaning": "Ted"
-            },
-            {
-                "id": "em-mix-321",
-                "text": "🧪 Meth 🚐",
-                "meaning": "Breaking Bad"
-            },
-            {
-                "id": "em-mix-322",
-                "text": "❄️ Throne 🐉",
-                "meaning": "Game of Thrones"
-            },
-            {
-                "id": "em-mix-323",
-                "text": "🚲 Upside 👾",
-                "meaning": "Stranger Things"
-            },
-            {
-                "id": "em-mix-324",
-                "text": "🏢 Paper 🖨️",
-                "meaning": "The Office"
-            },
-            {
-                "id": "em-mix-325",
-                "text": "🦑 Games 🔴",
-                "meaning": "Squid Game"
-            },
-            {
-                "id": "em-mix-326",
-                "text": "👑 Royals 🍷",
-                "meaning": "The Crown"
-            },
-            {
-                "id": "em-mix-327",
-                "text": "👨‍🍳 Kitchen 🔥",
-                "meaning": "The Bear"
-            },
-            {
-                "id": "em-mix-328",
-                "text": "🧟‍♂️ Walkers 🏃‍♂️",
-                "meaning": "The Walking Dead"
-            },
-            {
-                "id": "em-mix-329",
-                "text": "👨‍🏫 Coach 🧢",
-                "meaning": "Ted Lasso"
-            },
-            {
-                "id": "em-mix-330",
-                "text": "🏦 Heist 👺",
-                "meaning": "Money Heist"
-            },
-            {
-                "id": "em-mix-331",
-                "text": "🖤 Nevermore 🪩",
-                "meaning": "Wednesday"
-            },
-            {
-                "id": "em-mix-332",
-                "text": "☕ Central 📺",
-                "meaning": "Friends"
-            },
-            {
-                "id": "em-mix-333",
-                "text": "🟦 Tardis 🕰️",
-                "meaning": "Doctor Who"
-            },
-            {
-                "id": "em-mix-334",
-                "text": "🕵️‍♂️ Baker 🎩",
-                "meaning": "Sherlock"
-            },
-            {
-                "id": "em-mix-335",
-                "text": "🧢 Blinders 🐎",
-                "meaning": "Peaky Blinders"
-            },
-            {
-                "id": "em-mix-336",
-                "text": "🪖 Grogu 🌌",
-                "meaning": "The Mandalorian"
-            },
-            {
-                "id": "em-mix-337",
-                "text": "🏢 Lumon 💻",
-                "meaning": "Severance"
-            },
-            {
-                "id": "em-mix-338",
-                "text": "🏢 Roy 🚁",
-                "meaning": "Succession"
-            },
-            {
-                "id": "em-mix-339",
-                "text": "📱 Tech 🪞",
-                "meaning": "Black Mirror"
-            },
-            {
-                "id": "em-mix-340",
-                "text": "🦸‍♂️ Vought 💥",
-                "meaning": "The Boys"
-            },
-            {
-                "id": "em-mix-341",
-                "text": "☢️ Disaster 🏭",
-                "meaning": "Chernobyl"
-            },
-            {
-                "id": "em-mix-342",
-                "text": "🇨🇴 Cartel 🚔",
-                "meaning": "Narcos"
-            },
-            {
-                "id": "em-mix-343",
-                "text": "🩸 Blood 🛥️",
-                "meaning": "Dexter"
-            },
-            {
-                "id": "em-mix-344",
-                "text": "🏢 Escape 🏃‍♂️",
-                "meaning": "Prison Break"
-            },
-            {
-                "id": "em-mix-345",
-                "text": "♟️ Chess 💊",
-                "meaning": "The Queen's Gambit"
-            },
-            {
-                "id": "em-mix-346",
-                "text": "👨‍👩‍👧‍👦 Springfield 📺",
-                "meaning": "The Simpsons"
-            },
-            {
-                "id": "em-mix-347",
-                "text": "👨‍👩‍👦‍👦 Griffin 🍺",
-                "meaning": "Family Guy"
-            },
-            {
-                "id": "em-mix-348",
-                "text": "👴 Portal 🧪",
-                "meaning": "Rick and Morty"
-            },
-            {
-                "id": "em-mix-349",
-                "text": "🌪️ Bender 💨",
-                "meaning": "Avatar: The Last Airbender"
-            },
-            {
-                "id": "em-mix-350",
-                "text": "🚀 Planet 👁️",
-                "meaning": "Futurama"
-            },
-            {
-                "id": "em-mix-351",
-                "text": "🧱 Bedrock 🛏️",
-                "meaning": "The Flintstones"
-            },
-            {
-                "id": "em-mix-352",
-                "text": "🦆 Scrooge 💰",
-                "meaning": "DuckTales"
-            },
-            {
-                "id": "em-mix-353",
-                "text": "🐰 Tunes 🥕",
-                "meaning": "Looney Tunes"
-            },
-            {
-                "id": "em-mix-354",
-                "text": "🌲 Mystery 📕",
-                "meaning": "Gravity Falls"
-            },
-            {
-                "id": "em-mix-355",
-                "text": "🐷 Mud 🪵",
-                "meaning": "Peppa Pig"
-            },
-            {
-                "id": "em-mix-356",
-                "text": "🚂 Sodor 💨",
-                "meaning": "Thomas & Friends"
-            },
-            {
-                "id": "em-mix-357",
-                "text": "👧 Map 🐒",
-                "meaning": "Dora the Explorer"
-            },
-            {
-                "id": "em-mix-358",
-                "text": "🤓 Aardvark 📻",
-                "meaning": "Arthur"
-            },
-            {
-                "id": "em-mix-359",
-                "text": "🚌 Frizzle 👩‍🏫",
-                "meaning": "The Magic School Bus"
-            },
-            {
-                "id": "em-mix-360",
-                "text": "🧽 Sponge 🌊",
-                "meaning": "SpongeBob SquarePants"
-            },
-            {
-                "id": "em-mix-361",
-                "text": "🐱 Chase 🧀",
-                "meaning": "Tom and Jerry"
-            },
-            {
-                "id": "em-mix-362",
-                "text": "🐶 Mystery 🔍",
-                "meaning": "Scooby-Doo"
-            },
-            {
-                "id": "em-mix-363",
-                "text": "👦 Watch 👽",
-                "meaning": "Ben 10"
-            },
-            {
-                "id": "em-mix-364",
-                "text": "🗡️ Ooo 🐶",
-                "meaning": "Adventure Time"
-            },
-            {
-                "id": "em-mix-365",
-                "text": "👧 Sugar 💥",
-                "meaning": "The Powerpuff Girls"
-            },
-            {
-                "id": "em-mix-366",
-                "text": "👦 Lab 🔬",
-                "meaning": "Dexter's Laboratory"
-            },
-            {
-                "id": "em-mix-367",
-                "text": "🐶 Nowhere 🏚️",
-                "meaning": "Courage the Cowardly Dog"
-            },
-            {
-                "id": "em-mix-368",
-                "text": "👦 Summer 🔨",
-                "meaning": "Phineas and Ferb"
-            },
-            {
-                "id": "em-mix-369",
-                "text": "🦸 Titans 🏙️",
-                "meaning": "Teen Titans"
-            },
-            {
-                "id": "em-mix-370",
-                "text": "⚔️ Walls 👹",
-                "meaning": "Attack on Titan"
-            },
-            {
-                "id": "em-mix-371",
-                "text": "👨‍👦 Swords 🗡️",
-                "meaning": "Demon Slayer"
-            },
-            {
-                "id": "em-mix-372",
-                "text": "🏴‍☠️ Luffy 🍖",
-                "meaning": "One Piece"
-            },
-            {
-                "id": "em-mix-373",
-                "text": "🟠 Hokage 🦊",
-                "meaning": "Naruto"
-            },
-            {
-                "id": "em-mix-374",
-                "text": "🟠 Saiyan 💥",
-                "meaning": "Dragon Ball Z"
-            },
-            {
-                "id": "em-mix-375",
-                "text": "📓 Shinigami 💀",
-                "meaning": "Death Note"
-            },
-            {
-                "id": "em-mix-376",
-                "text": "🦹‍♂️ Quirks 🏫",
-                "meaning": "My Hero Academia"
-            },
-            {
-                "id": "em-mix-377",
-                "text": "👁️ Curses ⚔️",
-                "meaning": "Jujutsu Kaisen"
-            },
-            {
-                "id": "em-mix-378",
-                "text": "🕵️ Anya 💣",
-                "meaning": "Spy x Family"
-            },
-            {
-                "id": "em-mix-379",
-                "text": "🪓 Devil 🪚",
-                "meaning": "Chainsaw Man"
-            },
-            {
-                "id": "em-mix-380",
-                "text": "🧑‍🦲 Saitama 💥",
-                "meaning": "One Punch Man"
-            },
-            {
-                "id": "em-mix-381",
-                "text": "🧪 Alchemy 🦾",
-                "meaning": "Fullmetal Alchemist"
-            },
-            {
-                "id": "em-mix-382",
-                "text": "⚡ Ash 🔴",
-                "meaning": "Pokémon"
-            },
-            {
-                "id": "em-mix-383",
-                "text": "🎴 Duel 🐉",
-                "meaning": "Yu-Gi-Oh!"
-            },
-            {
-                "id": "em-mix-384",
-                "text": "🌌 Bebop 🎷",
-                "meaning": "Cowboy Bebop"
-            },
-            {
-                "id": "em-mix-385",
-                "text": "🌙 Prism 🐱",
-                "meaning": "Sailor Moon"
-            },
-            {
-                "id": "em-mix-386",
-                "text": "🧑‍🚀 Eva 🤖",
-                "meaning": "Neon Genesis Evangelion"
-            },
-            {
-                "id": "em-mix-387",
-                "text": "🐉 Bathhouse 👧",
-                "meaning": "Spirited Away"
-            },
-            {
-                "id": "em-mix-388",
-                "text": "☔ Forest 🚌",
-                "meaning": "My Neighbor Totoro"
-            },
-            {
-                "id": "em-mix-389",
-                "text": "👵 Castle 🧹",
-                "meaning": "Howl's Moving Castle"
-            },
-            {
-                "id": "em-mix-390",
-                "text": "🗡️ Wolves 👧",
-                "meaning": "Princess Mononoke"
-            },
-            {
-                "id": "em-mix-391",
-                "text": "🏏 Snoopy ⚾",
-                "meaning": "Charlie Brown"
-            },
-            {
-                "id": "em-mix-392",
-                "text": "🐰 Doc 🗣️",
-                "meaning": "Bugs Bunny"
-            },
-            {
-                "id": "em-mix-393",
-                "text": "🦆 Quack ⚓",
-                "meaning": "Donald Duck"
-            },
-            {
-                "id": "em-mix-394",
-                "text": "🐶 Beagle 🐾",
-                "meaning": "Snoopy"
-            },
-            {
-                "id": "em-mix-395",
-                "text": "🐱 Lasagna 💤",
-                "meaning": "Garfield"
-            },
-            {
-                "id": "em-mix-396",
-                "text": "🐱 Seuss ☂️",
-                "meaning": "The Cat in the Hat"
-            },
-            {
-                "id": "em-mix-397",
-                "text": "🥬 Spinach ⚓",
-                "meaning": "Popeye"
-            },
-            {
-                "id": "em-mix-398",
-                "text": "🐻 Honey 🎈",
-                "meaning": "Winnie the Pooh"
-            },
-            {
-                "id": "em-mix-399",
-                "text": "🐆 Mouse 🏃‍♂️",
-                "meaning": "Speedy Gonzales"
-            },
-            {
-                "id": "em-mix-400",
-                "text": "🐦 Sylvester 😺",
-                "meaning": "Tweety Bird"
-            },
-            {
-                "id": "em-mix-401",
-                "text": "⛏️ Craft 🧱",
-                "meaning": "Minecraft"
-            },
-            {
-                "id": "em-mix-402",
-                "text": "🍄 Plumber 🏰",
-                "meaning": "Super Mario Bros"
-            },
-            {
-                "id": "em-mix-403",
-                "text": "🗡️ Link 🧝‍♂️",
-                "meaning": "The Legend of Zelda"
-            },
-            {
-                "id": "em-mix-404",
-                "text": "🟡 Ghosts 🍒",
-                "meaning": "Pac-Man"
-            },
-            {
-                "id": "em-mix-405",
-                "text": "🦔 Rings 👟",
-                "meaning": "Sonic the Hedgehog"
-            },
-            {
-                "id": "em-mix-406",
-                "text": "🦍 Barrels 🎮",
-                "meaning": "Donkey Kong"
-            },
-            {
-                "id": "em-mix-407",
-                "text": "👨‍🚀 Sus 📮",
-                "meaning": "Among Us"
-            },
-            {
-                "id": "em-mix-408",
-                "text": "🚗 Goal 🏟️",
-                "meaning": "Rocket League"
-            },
-            {
-                "id": "em-mix-409",
-                "text": "🔫 Heist 🏙️",
-                "meaning": "Grand Theft Auto"
-            },
-            {
-                "id": "em-mix-410",
-                "text": "🪓 Boy ❄️",
-                "meaning": "God of War"
-            },
-            {
-                "id": "em-mix-411",
-                "text": "🤠 Outlaw 📜",
-                "meaning": "Red Dead Redemption"
-            },
-            {
-                "id": "em-mix-412",
-                "text": "⚔️ Geralt 🗡️",
-                "meaning": "The Witcher"
-            },
-            {
-                "id": "em-mix-413",
-                "text": "🧟‍♂️ Umbrella 🌿",
-                "meaning": "Resident Evil"
-            },
-            {
-                "id": "em-mix-414",
-                "text": "🗡️ Maiden 💍",
-                "meaning": "Elden Ring"
-            },
-            {
-                "id": "em-mix-415",
-                "text": "🧱 Blocks 🧱",
-                "meaning": "Tetris"
-            },
-            {
-                "id": "em-mix-416",
-                "text": "🚌 Drop ⛏️",
-                "meaning": "Fortnite"
-            },
-            {
-                "id": "em-mix-417",
-                "text": "🤖 V 🌃",
-                "meaning": "Cyberpunk 2077"
-            },
-            {
-                "id": "em-mix-418",
-                "text": "🥷 Leap 🏰",
-                "meaning": "Assassin's Creed"
-            },
-            {
-                "id": "em-mix-419",
-                "text": "👧 Croft 🏺",
-                "meaning": "Tomb Raider"
-            },
-            {
-                "id": "em-mix-420",
-                "text": "🟢 Chief 🔫",
-                "meaning": "Halo"
-            },
-            {
-                "id": "em-mix-421",
-                "text": "🔵 Cake 🕳️",
-                "meaning": "Portal"
-            },
-            {
-                "id": "em-mix-422",
-                "text": "🥷 Fatality 🩸",
-                "meaning": "Mortal Kombat"
-            },
-            {
-                "id": "em-mix-423",
-                "text": "🥋 Hadouken ❄️",
-                "meaning": "Street Fighter"
-            },
-            {
-                "id": "em-mix-424",
-                "text": "🏕️ Nook 🍎",
-                "meaning": "Animal Crossing"
-            },
-            {
-                "id": "em-mix-425",
-                "text": "🥊 Melee 🦔",
-                "meaning": "Super Smash Bros"
-            },
-            {
-                "id": "em-mix-426",
-                "text": "🪖 Duty 🚁",
-                "meaning": "Call of Duty"
-            },
-            {
-                "id": "em-mix-427",
-                "text": "🏠 Plumbob 💎",
-                "meaning": "The Sims"
-            },
-            {
-                "id": "em-mix-428",
-                "text": "☢️ Vault 👍",
-                "meaning": "Fallout"
-            },
-            {
-                "id": "em-mix-429",
-                "text": "🪓 Freeman 👓",
-                "meaning": "Half-Life"
-            },
-            {
-                "id": "em-mix-430",
-                "text": "🗺️ Nexus 🏆",
-                "meaning": "League of Legends"
-            },
-            {
-                "id": "em-mix-431",
-                "text": "⚔️ Dragonborn 🐉",
-                "meaning": "Skyrim"
-            },
-            {
-                "id": "em-mix-432",
-                "text": "🔫 Ink 🎨",
-                "meaning": "Splatoon"
-            },
-            {
-                "id": "em-mix-433",
-                "text": "🏎️ Shells 🍌",
-                "meaning": "Mario Kart"
-            },
-            {
-                "id": "em-mix-434",
-                "text": "🦇 Belmont 🩸",
-                "meaning": "Castlevania"
-            },
-            {
-                "id": "em-mix-435",
-                "text": "🎸 Notes 🟢",
-                "meaning": "Guitar Hero"
-            },
-            {
-                "id": "em-mix-436",
-                "text": "💃 Arrows ⬇️",
-                "meaning": "Dance Dance Revolution"
-            },
-            {
-                "id": "em-mix-437",
-                "text": "🏃‍♂️ Idol 🚧",
-                "meaning": "Temple Run"
-            },
-            {
-                "id": "em-mix-438",
-                "text": "🐦 Slingshot 🐷",
-                "meaning": "Angry Birds"
-            },
-            {
-                "id": "em-mix-439",
-                "text": "🍬 Match 💥",
-                "meaning": "Candy Crush"
-            },
-            {
-                "id": "em-mix-440",
-                "text": "🍉 Slice 🥷",
-                "meaning": "Fruit Ninja"
-            },
-            {
-                "id": "em-mix-441",
-                "text": "♟️ Checkmate 🧠",
-                "meaning": "Chess"
-            },
-            {
-                "id": "em-mix-442",
-                "text": "🎲 Boardwalk 🎩",
-                "meaning": "Monopoly"
-            },
-            {
-                "id": "em-mix-443",
-                "text": "🔠 Tiles ⏳",
-                "meaning": "Scrabble"
-            },
-            {
-                "id": "em-mix-444",
-                "text": "🔪 Murder 🏛️",
-                "meaning": "Clue"
-            },
-            {
-                "id": "em-mix-445",
-                "text": "🧱 Tower 🪵",
-                "meaning": "Jenga"
-            },
-            {
-                "id": "em-mix-446",
-                "text": "🔴 Spin 🟢",
-                "meaning": "Twister"
-            },
-            {
-                "id": "em-mix-447",
-                "text": "🃏 Reverse 🔄",
-                "meaning": "Uno"
-            },
-            {
-                "id": "em-mix-448",
-                "text": "🐉 DM 🎲",
-                "meaning": "Dungeons & Dragons"
-            },
-            {
-                "id": "em-mix-449",
-                "text": "🚢 Sink 📍",
-                "meaning": "Battleship"
-            },
-            {
-                "id": "em-mix-450",
-                "text": "🟡 Tokens 🔴",
-                "meaning": "Connect 4"
-            },
-            {
-                "id": "em-mix-451",
-                "text": "🎱 Strike 🎳",
-                "meaning": "Bowling"
-            },
-            {
-                "id": "em-mix-452",
-                "text": "🏀 Hoops ⛹️‍♂️",
-                "meaning": "Basketball"
-            },
-            {
-                "id": "em-mix-453",
-                "text": "⚽ Goal 🏃‍♂️",
-                "meaning": "Soccer"
-            },
-            {
-                "id": "em-mix-454",
-                "text": "🏈 Touchdown 🏆",
-                "meaning": "American Football"
-            },
-            {
-                "id": "em-mix-455",
-                "text": "⚾ HomeRun 🧢",
-                "meaning": "Baseball"
-            },
-            {
-                "id": "em-mix-456",
-                "text": "🎾 Love 👟",
-                "meaning": "Tennis"
-            },
-            {
-                "id": "em-mix-457",
-                "text": "🏒 Puck 🥅",
-                "meaning": "Ice Hockey"
-            },
-            {
-                "id": "em-mix-458",
-                "text": "🥊 KO 💥",
-                "meaning": "Boxing"
-            },
-            {
-                "id": "em-mix-459",
-                "text": "🏌️‍♂️ Par 🕳️",
-                "meaning": "Golf"
-            },
-            {
-                "id": "em-mix-460",
-                "text": "🏏 Wicket 🏟️",
-                "meaning": "Cricket"
-            },
-            {
-                "id": "em-mix-461",
-                "text": "🤿 Ocean 🐠",
-                "meaning": "Scuba Diving"
-            },
-            {
-                "id": "em-mix-462",
-                "text": "⛷️ Slopes ❄️",
-                "meaning": "Skiing"
-            },
-            {
-                "id": "em-mix-463",
-                "text": "🛹 Kickflip 🛹",
-                "meaning": "Skateboarding"
-            },
-            {
-                "id": "em-mix-464",
-                "text": "🏄‍♂️ Waves ☀️",
-                "meaning": "Surfing"
-            },
-            {
-                "id": "em-mix-465",
-                "text": "🧗‍♂️ Summit 🧗",
-                "meaning": "Rock Climbing"
-            },
-            {
-                "id": "em-mix-466",
-                "text": "🏹 Bullseye 🏹",
-                "meaning": "Archery"
-            },
-            {
-                "id": "em-mix-467",
-                "text": "🤺 Parry 🤺",
-                "meaning": "Fencing"
-            },
-            {
-                "id": "em-mix-468",
-                "text": "🚴‍♂️ Pedal ⛰️",
-                "meaning": "Cycling"
-            },
-            {
-                "id": "em-mix-469",
-                "text": "🏋️‍♂️ Reps 💪",
-                "meaning": "Weightlifting"
-            },
-            {
-                "id": "em-mix-470",
-                "text": "🏆 Gold 🌍",
-                "meaning": "Olympics"
-            },
-            {
-                "id": "em-mix-471",
-                "text": "🍎 Mac 📱",
-                "meaning": "Apple"
-            },
-            {
-                "id": "em-mix-472",
-                "text": "🔍 Web 🌎",
-                "meaning": "Google"
-            },
-            {
-                "id": "em-mix-473",
-                "text": "🛒 Prime 🚚",
-                "meaning": "Amazon"
-            },
-            {
-                "id": "em-mix-474",
-                "text": "🔴 Stream 🎬",
-                "meaning": "Netflix"
-            },
-            {
-                "id": "em-mix-475",
-                "text": "🎧 Premium 🎶",
-                "meaning": "Spotify"
-            },
-            {
-                "id": "em-mix-476",
-                "text": "📺 Vlog 🔴",
-                "meaning": "YouTube"
-            },
-            {
-                "id": "em-mix-477",
-                "text": "📸 Feed 💖",
-                "meaning": "Instagram"
-            },
-            {
-                "id": "em-mix-478",
-                "text": "👻 Filters 💬",
-                "meaning": "Snapchat"
-            },
-            {
-                "id": "em-mix-479",
-                "text": "💬 Text 🟢",
-                "meaning": "WhatsApp"
-            },
-            {
-                "id": "em-mix-480",
-                "text": "🐥 Tweet 💬",
-                "meaning": "Twitter"
-            },
-            {
-                "id": "em-mix-481",
-                "text": "🕺 Trends 📱",
-                "meaning": "TikTok"
-            },
-            {
-                "id": "em-mix-482",
-                "text": "💻 OS 🪟",
-                "meaning": "Windows"
-            },
-            {
-                "id": "em-mix-483",
-                "text": "🐧 Open 💻",
-                "meaning": "Linux"
-            },
-            {
-                "id": "em-mix-484",
-                "text": "☕ Code 💻",
-                "meaning": "Java"
-            },
-            {
-                "id": "em-mix-485",
-                "text": "🐍 Dev 💻",
-                "meaning": "Python"
-            },
-            {
-                "id": "em-mix-486",
-                "text": "🤖 Neural 🧠",
-                "meaning": "Artificial Intelligence"
-            },
-            {
-                "id": "em-mix-487",
-                "text": "🤖 Bot 🧠",
-                "meaning": "ChatGPT"
-            },
-            {
-                "id": "em-mix-488",
-                "text": "☁️ Sync 💾",
-                "meaning": "Cloud Storage"
-            },
-            {
-                "id": "em-mix-489",
-                "text": "🔒 Hack 🌐",
-                "meaning": "Cybersecurity"
-            },
-            {
-                "id": "em-mix-490",
-                "text": "🚗 Auto 🔋",
-                "meaning": "Tesla"
-            },
-            {
-                "id": "em-mix-491",
-                "text": "🍔 Arches 🟡",
-                "meaning": "McDonald's"
-            },
-            {
-                "id": "em-mix-492",
-                "text": "☕ Siren 🟢",
-                "meaning": "Starbucks"
-            },
-            {
-                "id": "em-mix-493",
-                "text": "🥤 Fizz ⚪",
-                "meaning": "Coca-Cola"
-            },
-            {
-                "id": "em-mix-494",
-                "text": "👟 Swoosh ✨",
-                "meaning": "Nike"
-            },
-            {
-                "id": "em-mix-495",
-                "text": "👟 Stripes 🏁",
-                "meaning": "Adidas"
-            },
-            {
-                "id": "em-mix-496",
-                "text": "🎮 Sony 🟦",
-                "meaning": "PlayStation"
-            },
-            {
-                "id": "em-mix-497",
-                "text": "🎮 Microsoft 🟩",
-                "meaning": "Xbox"
-            },
-            {
-                "id": "em-mix-498",
-                "text": "🎮 JoyCon 🔴",
-                "meaning": "Nintendo Switch"
-            },
-            {
-                "id": "em-mix-499",
-                "text": "💻 Valve 🕹️",
-                "meaning": "Steam"
-            },
-            {
-                "id": "em-mix-500",
-                "text": "🥽 Meta 🌌",
-                "meaning": "Virtual Reality"
-            },
-            {
-                "id": "em-mix-501",
-                "text": "🍕 Slice 🇮🇹",
-                "meaning": "Pizza"
-            },
-            {
-                "id": "em-mix-502",
-                "text": "🍔 Buns 🥤",
-                "meaning": "Burger"
-            },
-            {
-                "id": "em-mix-503",
-                "text": "🍣 Roll 🍱",
-                "meaning": "Sushi"
-            },
-            {
-                "id": "em-mix-504",
-                "text": "🌮 Shell 🥑",
-                "meaning": "Taco"
-            },
-            {
-                "id": "em-mix-505",
-                "text": "🌯 Wrap 🧀",
-                "meaning": "Burrito"
-            },
-            {
-                "id": "em-mix-506",
-                "text": "🍦 Scoop 🍧",
-                "meaning": "Ice Cream"
-            },
-            {
-                "id": "em-mix-507",
-                "text": "🍩 Glaze ☕",
-                "meaning": "Donut"
-            },
-            {
-                "id": "em-mix-508",
-                "text": "🥞 Syrup 🍯",
-                "meaning": "Pancakes"
-            },
-            {
-                "id": "em-mix-509",
-                "text": "🍜 Broth 🍥",
-                "meaning": "Ramen"
-            },
-            {
-                "id": "em-mix-510",
-                "text": "🍿 Butter 🥤",
-                "meaning": "Popcorn"
-            },
-            {
-                "id": "em-mix-511",
-                "text": "🌭 Bun ⚾",
-                "meaning": "Hot Dog"
-            },
-            {
-                "id": "em-mix-512",
-                "text": "🥪 Crust 🥬",
-                "meaning": "Sandwich"
-            },
-            {
-                "id": "em-mix-513",
-                "text": "🍳 Yolk 🍞",
-                "meaning": "Bacon and Eggs"
-            },
-            {
-                "id": "em-mix-514",
-                "text": "🧇 Grid 🫐",
-                "meaning": "Waffles"
-            },
-            {
-                "id": "em-mix-515",
-                "text": "🥐 Flaky ☕",
-                "meaning": "Croissant"
-            },
-            {
-                "id": "em-mix-516",
-                "text": "🥖 Loaf 🇫🇷",
-                "meaning": "Baguette"
-            },
-            {
-                "id": "em-mix-517",
-                "text": "🥨 Twist 🍺",
-                "meaning": "Pretzel"
-            },
-            {
-                "id": "em-mix-518",
-                "text": "🥯 Hole 🧀",
-                "meaning": "Bagel"
-            },
-            {
-                "id": "em-mix-519",
-                "text": "🥗 Greens 🥑",
-                "meaning": "Salad"
-            },
-            {
-                "id": "em-mix-520",
-                "text": "🥣 Bowl 🍲",
-                "meaning": "Soup"
-            },
-            {
-                "id": "em-mix-521",
-                "text": "🥩 Grill 🍽️",
-                "meaning": "Steak"
-            },
-            {
-                "id": "em-mix-522",
-                "text": "🍗 Crispy 🥤",
-                "meaning": "Fried Chicken"
-            },
-            {
-                "id": "em-mix-523",
-                "text": "🍖 Bone 🥩",
-                "meaning": "BBQ Ribs"
-            },
-            {
-                "id": "em-mix-524",
-                "text": "🍢 Skewer 🥩",
-                "meaning": "Kebab"
-            },
-            {
-                "id": "em-mix-525",
-                "text": "🥟 Steam 🥢",
-                "meaning": "Dumplings"
-            },
-            {
-                "id": "em-mix-526",
-                "text": "🥠 Luck 📜",
-                "meaning": "Fortune Cookie"
-            },
-            {
-                "id": "em-mix-527",
-                "text": "🦪 Pearl 🧊",
-                "meaning": "Oysters"
-            },
-            {
-                "id": "em-mix-528",
-                "text": "🦞 Claws 🍽️",
-                "meaning": "Lobster"
-            },
-            {
-                "id": "em-mix-529",
-                "text": "🦀 Legs 🧈",
-                "meaning": "Crab"
-            },
-            {
-                "id": "em-mix-530",
-                "text": "🦐 Rice 🇪🇸",
-                "meaning": "Paella"
-            },
-            {
-                "id": "em-mix-531",
-                "text": "🍝 Sauce 🍅",
-                "meaning": "Spaghetti"
-            },
-            {
-                "id": "em-mix-532",
-                "text": "🍝 Layers 🍅",
-                "meaning": "Lasagna"
-            },
-            {
-                "id": "em-mix-533",
-                "text": "🫕 Dip 🥖",
-                "meaning": "Cheese Fondue"
-            },
-            {
-                "id": "em-mix-534",
-                "text": "🍛 Spice 🍚",
-                "meaning": "Curry"
-            },
-            {
-                "id": "em-mix-535",
-                "text": "🫓 Bake 🇮🇳",
-                "meaning": "Naan"
-            },
-            {
-                "id": "em-mix-536",
-                "text": "🧆 Chickpea 🌿",
-                "meaning": "Falafel"
-            },
-            {
-                "id": "em-mix-537",
-                "text": "🥙 Meat 🌯",
-                "meaning": "Shawarma"
-            },
-            {
-                "id": "em-mix-538",
-                "text": "🥑 Smash 🍳",
-                "meaning": "Avocado Toast"
-            },
-            {
-                "id": "em-mix-539",
-                "text": "🍟 Gravy 🇨🇦",
-                "meaning": "Poutine"
-            },
-            {
-                "id": "em-mix-540",
-                "text": "🧀 Melt 🧈",
-                "meaning": "Grilled Cheese"
-            },
-            {
-                "id": "em-mix-541",
-                "text": "🐶 Bark ❤️",
-                "meaning": "Dog"
-            },
-            {
-                "id": "em-mix-542",
-                "text": "🐱 Purr 😺",
-                "meaning": "Cat"
-            },
-            {
-                "id": "em-mix-543",
-                "text": "🐼 Bamboo 🇨🇳",
-                "meaning": "Panda"
-            },
-            {
-                "id": "em-mix-544",
-                "text": "🦁 Roar 👑",
-                "meaning": "Lion"
-            },
-            {
-                "id": "em-mix-545",
-                "text": "🐯 Stripes ⚫",
-                "meaning": "Tiger"
-            },
-            {
-                "id": "em-mix-546",
-                "text": "🐘 Trunk 🦣",
-                "meaning": "Elephant"
-            },
-            {
-                "id": "em-mix-547",
-                "text": "🦒 Neck 🍃",
-                "meaning": "Giraffe"
-            },
-            {
-                "id": "em-mix-548",
-                "text": "🐧 Ice ❄️",
-                "meaning": "Penguin"
-            },
-            {
-                "id": "em-mix-549",
-                "text": "🦈 Fins 🦷",
-                "meaning": "Shark"
-            },
-            {
-                "id": "em-mix-550",
-                "text": "🐙 Arms 🦑",
-                "meaning": "Octopus"
-            },
-            {
-                "id": "em-mix-551",
-                "text": "🦋 Wings 🌼",
-                "meaning": "Butterfly"
-            },
-            {
-                "id": "em-mix-552",
-                "text": "🐝 Sting 🌼",
-                "meaning": "Bee"
-            },
-            {
-                "id": "em-mix-553",
-                "text": "🐒 Swing 🌴",
-                "meaning": "Monkey"
-            },
-            {
-                "id": "em-mix-554",
-                "text": "🐸 Leap 💧",
-                "meaning": "Frog"
-            },
-            {
-                "id": "em-mix-555",
-                "text": "🐢 Shell 🌊",
-                "meaning": "Turtle"
-            },
-            {
-                "id": "em-mix-556",
-                "text": "🐍 Slither 🌴",
-                "meaning": "Snake"
-            },
-            {
-                "id": "em-mix-557",
-                "text": "🐊 Snap 🦷",
-                "meaning": "Crocodile"
-            },
-            {
-                "id": "em-mix-558",
-                "text": "🐻 Growl 🌲",
-                "meaning": "Bear"
-            },
-            {
-                "id": "em-mix-559",
-                "text": "🐺 Howl 🌲",
-                "meaning": "Wolf"
-            },
-            {
-                "id": "em-mix-560",
-                "text": "🦊 Sly 🍁",
-                "meaning": "Fox"
-            },
-            {
-                "id": "em-mix-561",
-                "text": "🦇 Cave 🌙",
-                "meaning": "Bat"
-            },
-            {
-                "id": "em-mix-562",
-                "text": "🦉 Hoot 🌲",
-                "meaning": "Owl"
-            },
-            {
-                "id": "em-mix-563",
-                "text": "🦅 Soar ☁️",
-                "meaning": "Eagle"
-            },
-            {
-                "id": "em-mix-564",
-                "text": "🦆 Quack 🌊",
-                "meaning": "Duck"
-            },
-            {
-                "id": "em-mix-565",
-                "text": "🦩 Pink 💧",
-                "meaning": "Flamingo"
-            },
-            {
-                "id": "em-mix-566",
-                "text": "🦚 Feathers ✨",
-                "meaning": "Peacock"
-            },
-            {
-                "id": "em-mix-567",
-                "text": "🦄 Horn ✨",
-                "meaning": "Unicorn"
-            },
-            {
-                "id": "em-mix-568",
-                "text": "🐉 Myth 🏰",
-                "meaning": "Dragon"
-            },
-            {
-                "id": "em-mix-569",
-                "text": "🧜‍♀️ Tale 🐚",
-                "meaning": "Mermaid"
-            },
-            {
-                "id": "em-mix-570",
-                "text": "🦖 Prehistoric 🌋",
-                "meaning": "Dinosaurs"
-            },
-            {
-                "id": "em-mix-571",
-                "text": "🚀 Orbit ⭐",
-                "meaning": "Space"
-            },
-            {
-                "id": "em-mix-572",
-                "text": "🌋 Magma 🪨",
-                "meaning": "Volcano"
-            },
-            {
-                "id": "em-mix-573",
-                "text": "🌪️ Wind 💨",
-                "meaning": "Tornado"
-            },
-            {
-                "id": "em-mix-574",
-                "text": "⚡ Storm ☁️",
-                "meaning": "Thunderstorm"
-            },
-            {
-                "id": "em-mix-575",
-                "text": "❄️ Chill 🥶",
-                "meaning": "Winter"
-            },
-            {
-                "id": "em-mix-576",
-                "text": "🌸 Bloom ☀️",
-                "meaning": "Spring"
-            },
-            {
-                "id": "em-mix-577",
-                "text": "🏖️ Heat 🌊",
-                "meaning": "Summer"
-            },
-            {
-                "id": "em-mix-578",
-                "text": "🍂 Leaves 🌬️",
-                "meaning": "Autumn"
-            },
-            {
-                "id": "em-mix-579",
-                "text": "🌈 Colors ☀️",
-                "meaning": "Rainbow"
-            },
-            {
-                "id": "em-mix-580",
-                "text": "🏝️ Tropical 🥥",
-                "meaning": "Island"
-            },
-            {
-                "id": "em-mix-581",
-                "text": "🕌 Taj 🥭",
-                "meaning": "India"
-            },
-            {
-                "id": "em-mix-582",
-                "text": "🍣 Fuji 🌸",
-                "meaning": "Japan"
-            },
-            {
-                "id": "em-mix-583",
-                "text": "🐉 Wall 🏯",
-                "meaning": "China"
-            },
-            {
-                "id": "em-mix-584",
-                "text": "🐪 Pyramid ☀️",
-                "meaning": "Egypt"
-            },
-            {
-                "id": "em-mix-585",
-                "text": "⚽ Samba 🦜",
-                "meaning": "Brazil"
-            },
-            {
-                "id": "em-mix-586",
-                "text": "🦘 Outback 🌏",
-                "meaning": "Australia"
-            },
-            {
-                "id": "em-mix-587",
-                "text": "🍁 Maple 🏒",
-                "meaning": "Canada"
-            },
-            {
-                "id": "em-mix-588",
-                "text": "🍕 Rome 🏛️",
-                "meaning": "Italy"
-            },
-            {
-                "id": "em-mix-589",
-                "text": "🌮 Aztec 🪅",
-                "meaning": "Mexico"
-            },
-            {
-                "id": "em-mix-590",
-                "text": "🗼 Louvre 🍷",
-                "meaning": "France"
-            },
-            {
-                "id": "em-mix-591",
-                "text": "🗽 Liberty 🦅",
-                "meaning": "United States"
-            },
-            {
-                "id": "em-mix-592",
-                "text": "☕ BigBen 👑",
-                "meaning": "United Kingdom"
-            },
-            {
-                "id": "em-mix-593",
-                "text": "🍺 Berlin 🏎️",
-                "meaning": "Germany"
-            },
-            {
-                "id": "em-mix-594",
-                "text": "💃 Madrid 🥘",
-                "meaning": "Spain"
-            },
-            {
-                "id": "em-mix-595",
-                "text": "🐻 Moscow ❄️",
-                "meaning": "Russia"
-            },
-            {
-                "id": "em-mix-596",
-                "text": "🌷 Windmill 🧀",
-                "meaning": "Netherlands"
-            },
-            {
-                "id": "em-mix-597",
-                "text": "🏔️ Alps 🍫",
-                "meaning": "Switzerland"
-            },
-            {
-                "id": "em-mix-598",
-                "text": "🏛️ Athens 🌊",
-                "meaning": "Greece"
-            },
-            {
-                "id": "em-mix-599",
-                "text": "☘️ Dublin 🎻",
-                "meaning": "Ireland"
-            },
-            {
-                "id": "em-mix-600",
-                "text": "🥬 Seoul 🎙️",
-                "meaning": "South Korea"
-            },
-            {
-                "id": "em-mix-601",
-                "text": "🍜 Hanoi ⛩️",
-                "meaning": "Vietnam"
-            },
-            {
-                "id": "em-mix-602",
-                "text": "🌴 Dubai 🏢",
-                "meaning": "United Arab Emirates"
-            },
-            {
-                "id": "em-mix-603",
-                "text": "🐘 Bangkok 🕌",
-                "meaning": "Thailand"
-            },
-            {
-                "id": "em-mix-604",
-                "text": "🥩 Tango ⚽",
-                "meaning": "Argentina"
-            },
-            {
-                "id": "em-mix-605",
-                "text": "🦙 Andes ☀️",
-                "meaning": "Peru"
-            },
-            {
-                "id": "em-mix-606",
-                "text": "🇳🇿 Kiwi 🏉",
-                "meaning": "New Zealand"
-            },
-            {
-                "id": "em-mix-607",
-                "text": "🦁 Safari 🐘",
-                "meaning": "South Africa"
-            },
-            {
-                "id": "em-mix-608",
-                "text": "🏰 Dracula 🍷",
-                "meaning": "Romania"
-            },
-            {
-                "id": "em-mix-609",
-                "text": "🧊 Geyser ♨️",
-                "meaning": "Iceland"
-            },
-            {
-                "id": "em-mix-610",
-                "text": "🏔️ Everest 📜",
-                "meaning": "Nepal"
-            },
-            {
-                "id": "em-mix-611",
-                "text": "💃 Havana 🇨🇺",
-                "meaning": "Cuba"
-            },
-            {
-                "id": "em-mix-612",
-                "text": "🗽 Apple 🚕",
-                "meaning": "New York City"
-            },
-            {
-                "id": "em-mix-613",
-                "text": "🗼 Romance 🎨",
-                "meaning": "Paris"
-            },
-            {
-                "id": "em-mix-614",
-                "text": "🎡 Thames 🌧️",
-                "meaning": "London"
-            },
-            {
-                "id": "em-mix-615",
-                "text": "🍣 Neon ⛩️",
-                "meaning": "Tokyo"
-            },
-            {
-                "id": "em-mix-616",
-                "text": "🍕 Colosseum 🛵",
-                "meaning": "Rome"
-            },
-            {
-                "id": "em-mix-617",
-                "text": "🐪 Burj 🌴",
-                "meaning": "Dubai"
-            },
-            {
-                "id": "em-mix-618",
-                "text": "🎰 Casinos 🎲",
-                "meaning": "Las Vegas"
-            },
-            {
-                "id": "em-mix-619",
-                "text": "🗽 Torch 🇺🇸",
-                "meaning": "Statue of Liberty"
-            },
-            {
-                "id": "em-mix-620",
-                "text": "🗼 Iron 🇫🇷",
-                "meaning": "Eiffel Tower"
-            },
-            {
-                "id": "em-mix-621",
-                "text": "⚡ Olympus 🏛️",
-                "meaning": "Zeus"
-            },
-            {
-                "id": "em-mix-622",
-                "text": "🔱 Trident 🐴",
-                "meaning": "Poseidon"
-            },
-            {
-                "id": "em-mix-623",
-                "text": "💀 Underworld 👑",
-                "meaning": "Hades"
-            },
-            {
-                "id": "em-mix-624",
-                "text": "🔨 Asgard 🌩️",
-                "meaning": "Thor"
-            },
-            {
-                "id": "em-mix-625",
-                "text": "🐍 Trickster 🎭",
-                "meaning": "Loki"
-            },
-            {
-                "id": "em-mix-626",
-                "text": "🐍 Stone 👁️",
-                "meaning": "Medusa"
-            },
-            {
-                "id": "em-mix-627",
-                "text": "🐂 Labyrinth 🌀",
-                "meaning": "Minotaur"
-            },
-            {
-                "id": "em-mix-628",
-                "text": "🔥 Ashes ✨",
-                "meaning": "Phoenix"
-            },
-            {
-                "id": "em-mix-629",
-                "text": "🪽 Wings ✨",
-                "meaning": "Pegasus"
-            },
-            {
-                "id": "em-mix-630",
-                "text": "🐶 Guard 🐶",
-                "meaning": "Cerberus"
-            },
-            {
-                "id": "em-mix-631",
-                "text": "☀️ Oracle 🎼",
-                "meaning": "Apollo"
-            },
-            {
-                "id": "em-mix-632",
-                "text": "🦉 Wisdom 🏛️",
-                "meaning": "Athena"
-            },
-            {
-                "id": "em-mix-633",
-                "text": "⚔️ War 🩸",
-                "meaning": "Ares"
-            },
-            {
-                "id": "em-mix-634",
-                "text": "🍇 Wine 🎭",
-                "meaning": "Dionysus"
-            },
-            {
-                "id": "em-mix-635",
-                "text": "🦁 Strength 💪",
-                "meaning": "Hercules"
-            },
-            {
-                "id": "em-mix-636",
-                "text": "🪽 Sun 🕯️",
-                "meaning": "Icarus"
-            },
-            {
-                "id": "em-mix-637",
-                "text": "🌍 World 🗿",
-                "meaning": "Atlas"
-            },
-            {
-                "id": "em-mix-638",
-                "text": "🐍 Heads 🐍",
-                "meaning": "Hydra"
-            },
-            {
-                "id": "em-mix-639",
-                "text": "🐙 Ship ⛵",
-                "meaning": "Kraken"
-            },
-            {
-                "id": "em-mix-640",
-                "text": "👑 Camelot 🤺",
-                "meaning": "King Arthur"
-            },
-            {
-                "id": "em-mix-641",
-                "text": "🏹 Sherwood 🌳",
-                "meaning": "Robin Hood"
-            },
-            {
-                "id": "em-mix-642",
-                "text": "👑 Nile 👁️",
-                "meaning": "Cleopatra"
-            },
-            {
-                "id": "em-mix-643",
-                "text": "🗡️ Rome 🏛️",
-                "meaning": "Julius Caesar"
-            },
-            {
-                "id": "em-mix-644",
-                "text": "🎨 Mona 🚁",
-                "meaning": "Leonardo da Vinci"
-            },
-            {
-                "id": "em-mix-645",
-                "text": "🧠 Relativity 💡",
-                "meaning": "Albert Einstein"
-            },
-            {
-                "id": "em-mix-646",
-                "text": "🍎 Gravity 📉",
-                "meaning": "Isaac Newton"
-            },
-            {
-                "id": "em-mix-647",
-                "text": "🚀 Apollo 🧑‍🚀",
-                "meaning": "Moon Landing"
-            },
-            {
-                "id": "em-mix-648",
-                "text": "☄️ Impact 🦕",
-                "meaning": "Extinction of Dinosaurs"
-            },
-            {
-                "id": "em-mix-649",
-                "text": "🏴‍☠️ Pirate 💣",
-                "meaning": "Blackbeard"
-            },
-            {
-                "id": "em-mix-650",
-                "text": "🕊️ Flood 🌿",
-                "meaning": "Noah's Ark"
-            },
-            {
-                "id": "em-mix-651",
-                "text": "🍰 Easy 🍰",
-                "meaning": "Piece of Cake"
-            },
-            {
-                "id": "em-mix-652",
-                "text": "🐱 Pouring 🌧️",
-                "meaning": "Raining Cats and Dogs"
-            },
-            {
-                "id": "em-mix-653",
-                "text": "🧠 Idea 🌩️",
-                "meaning": "Brainstorm"
-            },
-            {
-                "id": "em-mix-654",
-                "text": "🥶 Nervous 🦶",
-                "meaning": "Cold Feet"
-            },
-            {
-                "id": "em-mix-655",
-                "text": "💛 Kind ✨",
-                "meaning": "Heart of Gold"
-            },
-            {
-                "id": "em-mix-656",
-                "text": "⏱️ Value 💸",
-                "meaning": "Time is Money"
-            },
-            {
-                "id": "em-mix-657",
-                "text": "🦋 Anxious 💥",
-                "meaning": "Butterflies in Stomach"
-            },
-            {
-                "id": "em-mix-658",
-                "text": "🧱 Ignore 🧱",
-                "meaning": "Talking to a Brick Wall"
-            },
-            {
-                "id": "em-mix-659",
-                "text": "💧 Secret 🗣️",
-                "meaning": "Spill the Beans"
-            },
-            {
-                "id": "em-mix-660",
-                "text": "💥 Luck 🎭",
-                "meaning": "Break a Leg"
-            },
-            {
-                "id": "em-mix-661",
-                "text": "👁️ Favorite 👁️",
-                "meaning": "Apple of My Eye"
-            },
-            {
-                "id": "em-mix-662",
-                "text": "🔥 Truth 🤥",
-                "meaning": "Liar Liar Pants on Fire"
-            },
-            {
-                "id": "em-mix-663",
-                "text": "⏳ Fast 💨",
-                "meaning": "Time Flies"
-            },
-            {
-                "id": "em-mix-664",
-                "text": "🐷 Never ☁️",
-                "meaning": "When Pigs Fly"
-            },
-            {
-                "id": "em-mix-665",
-                "text": "🤐 Quiet 🤐",
-                "meaning": "Zip It"
-            },
-            {
-                "id": "em-mix-666",
-                "text": "💸 Power 💬",
-                "meaning": "Money Talks"
-            },
-            {
-                "id": "em-mix-667",
-                "text": "🧊 Start 🗣️",
-                "meaning": "Break the Ice"
-            },
-            {
-                "id": "em-mix-668",
-                "text": "🛏️ Rest 🛑",
-                "meaning": "Sleep Tight"
-            },
-            {
-                "id": "em-mix-669",
-                "text": "🐘 Obvious 👀",
-                "meaning": "Elephant in the Room"
-            },
-            {
-                "id": "em-mix-670",
-                "text": "🍳 Careful 🚶‍♂️",
-                "meaning": "Walking on Eggshells"
-            },
-            {
-                "id": "em-mix-671",
-                "text": "⚡ Rare ✨",
-                "meaning": "Lightning in a Bottle"
-            },
-            {
-                "id": "em-mix-672",
-                "text": "⏳ Past 🔁",
-                "meaning": "Time Travel"
-            },
-            {
-                "id": "em-mix-673",
-                "text": "👂 Ignore 🙉",
-                "meaning": "Fall on Deaf Ears"
-            },
-            {
-                "id": "em-mix-674",
-                "text": "🏃‍♂️ Fast 🔥",
-                "meaning": "Run Like the Wind"
-            },
-            {
-                "id": "em-mix-675",
-                "text": "👅 Speechless ❓",
-                "meaning": "Cat Got Your Tongue"
-            },
-            {
-                "id": "em-mix-676",
-                "text": "🐴 Source 🗣️",
-                "meaning": "Straight From the Horse's Mouth"
-            },
-            {
-                "id": "em-mix-677",
-                "text": "🐦 Double 🪨",
-                "meaning": "Kill Two Birds With One Stone"
-            },
-            {
-                "id": "em-mix-678",
-                "text": "🥵 Issue 🔥",
-                "meaning": "Hot Potato"
-            },
-            {
-                "id": "em-mix-679",
-                "text": "🎵 Good 😊",
-                "meaning": "Music to My Ears"
-            },
-            {
-                "id": "em-mix-680",
-                "text": "🌙 Rare 🌒",
-                "meaning": "Once in a Blue Moon"
-            },
-            {
-                "id": "em-mix-681",
-                "text": "🎄 Snow 🎁",
-                "meaning": "Christmas"
-            },
-            {
-                "id": "em-mix-682",
-                "text": "🎃 Scare 👻",
-                "meaning": "Halloween"
-            },
-            {
-                "id": "em-mix-683",
-                "text": "🦃 Feast 🥧",
-                "meaning": "Thanksgiving"
-            },
-            {
-                "id": "em-mix-684",
-                "text": "💖 Cupid 🌹",
-                "meaning": "Valentine's Day"
-            },
-            {
-                "id": "em-mix-685",
-                "text": "🥚 Hunt 🐣",
-                "meaning": "Easter"
-            },
-            {
-                "id": "em-mix-686",
-                "text": "🎆 Midnight 🎇",
-                "meaning": "New Year's Eve"
-            },
-            {
-                "id": "em-mix-687",
-                "text": "🪔 Lights 🎆",
-                "meaning": "Diwali"
-            },
-            {
-                "id": "em-mix-688",
-                "text": "☘️ Luck 🌈",
-                "meaning": "St. Patrick's Day"
-            },
-            {
-                "id": "em-mix-689",
-                "text": "🐲 Lantern 🥁",
-                "meaning": "Chinese New Year"
-            },
-            {
-                "id": "em-mix-690",
-                "text": "🎂 Party 🎁",
-                "meaning": "Birthday"
-            },
-            {
-                "id": "em-mix-691",
-                "text": "👰‍♀️ Vows 💒",
-                "meaning": "Wedding"
-            },
-            {
-                "id": "em-mix-692",
-                "text": "🎓 Degree 🎓",
-                "meaning": "Graduation"
-            },
-            {
-                "id": "em-mix-693",
-                "text": "✈️ Trip 🏝️",
-                "meaning": "Vacation"
-            },
-            {
-                "id": "em-mix-694",
-                "text": "🍿 Film 🎟️",
-                "meaning": "Movie Night"
-            },
-            {
-                "id": "em-mix-695",
-                "text": "🎤 Dance 💃",
-                "meaning": "Party"
-            },
-            {
-                "id": "em-mix-696",
-                "text": "🛒 Buy 💳",
-                "meaning": "Shopping"
-            },
-            {
-                "id": "em-mix-697",
-                "text": "🏎️ Drive 🏎️",
-                "meaning": "Road Trip"
-            },
-            {
-                "id": "em-mix-698",
-                "text": "👶 Crib 🧸",
-                "meaning": "Baby"
-            },
-            {
-                "id": "em-mix-699",
-                "text": "📚 Learn 🎓",
-                "meaning": "School"
-            },
-            {
-                "id": "em-mix-700",
-                "text": "💼 Desk ☕",
-                "meaning": "Office Job"
-            },
-            {
-                "id": "em-mix-701",
-                "text": "🎸 King 👑",
-                "meaning": "Elvis Presley"
-            },
-            {
-                "id": "em-mix-702",
-                "text": "🕺 Pop ✨",
-                "meaning": "Michael Jackson"
-            },
-            {
-                "id": "em-mix-703",
-                "text": "🎸 Rock 👅",
-                "meaning": "The Rolling Stones"
-            },
-            {
-                "id": "em-mix-704",
-                "text": "🍏 Band 🚶‍♂️",
-                "meaning": "The Beatles"
-            },
-            {
-                "id": "em-mix-705",
-                "text": "👑 Queen 🎶",
-                "meaning": "Beyoncé"
-            },
-            {
-                "id": "em-mix-706",
-                "text": "👱‍♀️ Era 💔",
-                "meaning": "Taylor Swift"
-            },
-            {
-                "id": "em-mix-707",
-                "text": "🕶️ Soul 🎵",
-                "meaning": "Ray Charles"
-            },
-            {
-                "id": "em-mix-708",
-                "text": "🎩 Brass 🎶",
-                "meaning": "Jazz"
-            },
-            {
-                "id": "em-mix-709",
-                "text": "🤠 Boots 🎶",
-                "meaning": "Country Music"
-            },
-            {
-                "id": "em-mix-710",
-                "text": "🎧 Rave 🔊",
-                "meaning": "EDM"
-            },
-            {
-                "id": "em-mix-711",
-                "text": "👨‍🚒 Hose 🔥",
-                "meaning": "Firefighter"
-            },
-            {
-                "id": "em-mix-712",
-                "text": "👨‍🚀 Suit 🌕",
-                "meaning": "Astronaut"
-            },
-            {
-                "id": "em-mix-713",
-                "text": "👨‍🍳 Hat 🔪",
-                "meaning": "Chef"
-            },
-            {
-                "id": "em-mix-714",
-                "text": "👨‍⚕️ Cure 🏥",
-                "meaning": "Doctor"
-            },
-            {
-                "id": "em-mix-715",
-                "text": "🕵️‍♂️ Clues 🕵️",
-                "meaning": "Detective"
-            },
-            {
-                "id": "em-mix-716",
-                "text": "👮‍♂️ Badge 🚔",
-                "meaning": "Police Officer"
-            },
-            {
-                "id": "em-mix-717",
-                "text": "👨‍✈️ Fly ☁️",
-                "meaning": "Pilot"
-            },
-            {
-                "id": "em-mix-718",
-                "text": "🎨 Canvas 🖼️",
-                "meaning": "Artist"
-            },
-            {
-                "id": "em-mix-719",
-                "text": "🎸 Play 🧑‍🎤",
-                "meaning": "Musician"
-            },
-            {
-                "id": "em-mix-720",
-                "text": "👨‍🏫 Class 🏫",
-                "meaning": "Teacher"
-            },
-            {
-                "id": "em-mix-721",
-                "text": "📸 Flash 💥",
-                "meaning": "Photographer"
-            },
-            {
-                "id": "em-mix-722",
-                "text": "🧱 Build 👷‍♂️",
-                "meaning": "Construction Worker"
-            },
-            {
-                "id": "em-mix-723",
-                "text": "🧑‍🌾 Crop 🌾",
-                "meaning": "Farmer"
-            },
-            {
-                "id": "em-mix-724",
-                "text": "👨‍🔬 Lab 🔬",
-                "meaning": "Scientist"
-            },
-            {
-                "id": "em-mix-725",
-                "text": "⚖️ Court 🏛️",
-                "meaning": "Judge"
-            },
-            {
-                "id": "em-mix-726",
-                "text": "✂️ Fade 💇‍♂️",
-                "meaning": "Barber"
-            },
-            {
-                "id": "em-mix-727",
-                "text": "🦷 Clean 👨‍⚕️",
-                "meaning": "Dentist"
-            },
-            {
-                "id": "em-mix-728",
-                "text": "🪄 Tricks 🐇",
-                "meaning": "Magician"
-            },
-            {
-                "id": "em-mix-729",
-                "text": "📰 Live 📺",
-                "meaning": "News Reporter"
-            },
-            {
-                "id": "em-mix-730",
-                "text": "💌 Post 📫",
-                "meaning": "Mail Carrier"
-            },
-            {
-                "id": "em-mix-731",
-                "text": "🩸 Forks 🍷",
-                "meaning": "Twilight"
-            },
-            {
-                "id": "em-mix-732",
-                "text": "👽 Home 📞",
-                "meaning": "E.T."
-            },
-            {
-                "id": "em-mix-733",
-                "text": "🚙 Hunters 🔫",
-                "meaning": "Supernatural"
-            },
-            {
-                "id": "em-mix-734",
-                "text": "🩸 Brothers ❤️",
-                "meaning": "The Vampire Diaries"
-            },
-            {
-                "id": "em-mix-735",
-                "text": "👨‍🔬 Delorean 🕰️",
-                "meaning": "Back to the Future"
-            },
-            {
-                "id": "em-mix-736",
-                "text": "🧙‍♀️ Sisters 🐈‍⬛",
-                "meaning": "Hocus Pocus"
-            },
-            {
-                "id": "em-mix-737",
-                "text": "🍫 Golden 🏭",
-                "meaning": "Willy Wonka"
-            },
-            {
-                "id": "em-mix-738",
-                "text": "🏴‍☠️ Map ⚓",
-                "meaning": "Treasure Island"
-            },
-            {
-                "id": "em-mix-739",
-                "text": "🦹‍♂️ Assemble 🏙️",
-                "meaning": "Avengers"
-            },
-            {
-                "id": "em-mix-740",
-                "text": "🕷️ Miles 🏢",
-                "meaning": "Spider-Verse"
-            },
-            {
-                "id": "em-mix-741",
-                "text": "🦖 Indominus 🔬",
-                "meaning": "Jurassic World"
-            },
-            {
-                "id": "em-mix-742",
-                "text": "🐼 Warrior 🇨🇳",
-                "meaning": "Kung Fu Panda"
-            },
-            {
-                "id": "em-mix-743",
-                "text": "🐉 Mother 👸",
-                "meaning": "Daenerys Targaryen"
-            },
-            {
-                "id": "em-mix-744",
-                "text": "🗡️ Watch ❄️",
-                "meaning": "Jon Snow"
-            },
-            {
-                "id": "em-mix-745",
-                "text": "👨‍🔬 Potion 💀",
-                "meaning": "Jekyll and Hyde"
-            },
-            {
-                "id": "em-mix-746",
-                "text": "🕵️‍♂️ Deduction 🇬🇧",
-                "meaning": "Sherlock Holmes"
-            },
-            {
-                "id": "em-mix-747",
-                "text": "🦇 Blind 🔴",
-                "meaning": "Daredevil"
-            },
-            {
-                "id": "em-mix-748",
-                "text": "🏹 Arrows 👁️",
-                "meaning": "Hawkeye"
-            },
-            {
-                "id": "em-mix-749",
-                "text": "🏜️ Spice 🪱",
-                "meaning": "Dune"
-            }
+            {"id": "em-ez-001", "text": "🚢🧊💔", "meaning": "Titanic"},
+            {"id": "em-ez-002", "text": "🧙‍♂️⚡🦉", "meaning": "Harry Potter"},
+            {"id": "em-ez-003", "text": "🦖🚙🌴", "meaning": "Jurassic Park"},
+            {"id": "em-ez-004", "text": "🐠❓🔍", "meaning": "Finding Nemo"},
+            {"id": "em-ez-005", "text": "🎈🏠👴", "meaning": "Up"},
+            {"id": "em-ez-006", "text": "❄️👸⛄", "meaning": "Frozen"},
+            {"id": "em-ez-007", "text": "🦁👑🌅", "meaning": "The Lion King"},
+            {"id": "em-ez-008", "text": "🕷️🕸️🏙️", "meaning": "Spider-Man"},
+            {"id": "em-ez-009", "text": "🦇🔦🏙️", "meaning": "Batman"},
+            {"id": "em-ez-010", "text": "👻🚫🚒", "meaning": "Ghostbusters"},
+            {"id": "em-ez-011", "text": "🏠👦😱", "meaning": "Home Alone"},
+            {"id": "em-ez-012", "text": "🤠🧸🚀", "meaning": "Toy Story"},
+            {"id": "em-ez-013", "text": "🧽🍍🌊", "meaning": "SpongeBob SquarePants"},
+            {"id": "em-ez-014", "text": "🐱🐭🧀", "meaning": "Tom and Jerry"},
+            {"id": "em-ez-015", "text": "🐶👻🔍", "meaning": "Scooby-Doo"},
+            {"id": "em-ez-016", "text": "⚡🐭🔴", "meaning": "Pokémon"},
+            {"id": "em-ez-017", "text": "🍄👨‍🔧🏰", "meaning": "Super Mario Bros"},
+            {"id": "em-ez-018", "text": "⛏️💎🧱", "meaning": "Minecraft"},
+            {"id": "em-ez-019", "text": "🌌⚔️🤖", "meaning": "Star Wars"},
+            {"id": "em-ez-020", "text": "👨🔥🤖", "meaning": "Iron Man"},
+            {"id": "em-ez-021", "text": "🛡️🇺🇸🧊", "meaning": "Captain America"},
+            {"id": "em-ez-022", "text": "🔨⚡🌈", "meaning": "Thor"},
+            {"id": "em-ez-023", "text": "🟢😡💥", "meaning": "The Hulk"},
+            {"id": "em-ez-024", "text": "👑👹🫏", "meaning": "Shrek"},
+            {"id": "em-ez-025", "text": "👠🕛🎃", "meaning": "Cinderella"},
+            {"id": "em-ez-026", "text": "🍎😴👸", "meaning": "Snow White"},
+            {"id": "em-ez-027", "text": "🧞🪔🐒", "meaning": "Aladdin"},
+            {"id": "em-ez-028", "text": "🐀👨‍🍳🍝", "meaning": "Ratatouille"},
+            {"id": "em-ez-029", "text": "🏎️⚡👁️", "meaning": "Cars"},
+            {"id": "em-ez-030", "text": "👹🚪⚡", "meaning": "Monsters, Inc."},
+            {"id": "em-ez-031", "text": "👽🚲🌕", "meaning": "E.T."},
+            {"id": "em-ez-032", "text": "🦈🌊🚤", "meaning": "Jaws"},
+            {"id": "em-ez-033", "text": "🔵🌳👽", "meaning": "Avatar"},
+            {"id": "em-ez-034", "text": "🤠🐍🪨", "meaning": "Indiana Jones"},
+            {"id": "em-ez-035", "text": "💊🕶️💻", "meaning": "The Matrix"},
+            {"id": "em-ez-036", "text": "⚡🚗⌛", "meaning": "Back to the Future"},
+            {"id": "em-ez-037", "text": "🚗🤖⚡", "meaning": "Transformers"},
+            {"id": "em-ez-038", "text": "🟡👖🍌", "meaning": "Minions"},
+            {"id": "em-ez-039", "text": "🚲🔦👾", "meaning": "Stranger Things"},
+            {"id": "em-ez-040", "text": "🦑🎮🔴", "meaning": "Squid Game"},
+            {"id": "em-ez-041", "text": "🍕🧀", "meaning": "Pizza"},
+            {"id": "em-ez-042", "text": "🍔🍟", "meaning": "Burger"},
+            {"id": "em-ez-043", "text": "🌮🌶️", "meaning": "Taco"},
+            {"id": "em-ez-044", "text": "🍦❄️", "meaning": "Ice Cream"},
+            {"id": "em-ez-045", "text": "🍩☕", "meaning": "Donut"},
+            {"id": "em-ez-046", "text": "🥞🧈", "meaning": "Pancakes"},
+            {"id": "em-ez-047", "text": "🍿🎬", "meaning": "Popcorn"},
+            {"id": "em-ez-048", "text": "🌭⚾", "meaning": "Hot Dog"},
+            {"id": "em-ez-049", "text": "🍣🥢", "meaning": "Sushi"},
+            {"id": "em-ez-050", "text": "🍜🥢", "meaning": "Ramen"},
+            {"id": "em-ez-051", "text": "🎂🕯️", "meaning": "Birthday Cake"},
+            {"id": "em-ez-052", "text": "🍫🍫", "meaning": "Chocolate"},
+            {"id": "em-ez-053", "text": "🍉☀️", "meaning": "Watermelon"},
+            {"id": "em-ez-054", "text": "🥛🍓", "meaning": "Milkshake"},
+            {"id": "em-ez-055", "text": "☕🥛", "meaning": "Coffee"},
+            {"id": "em-ez-056", "text": "🍪🥛", "meaning": "Cookies and Milk"},
+            {"id": "em-ez-057", "text": "🍋🧊", "meaning": "Lemonade"},
+            {"id": "em-ez-058", "text": "🍟🍟", "meaning": "French Fries"},
+            {"id": "em-ez-059", "text": "🥪🥓", "meaning": "Sandwich"},
+            {"id": "em-ez-060", "text": "🍳🥓", "meaning": "Bacon and Eggs"},
+            {"id": "em-ez-061", "text": "🍎📱", "meaning": "Apple"},
+            {"id": "em-ez-062", "text": "🔍🌎", "meaning": "Google"},
+            {"id": "em-ez-063", "text": "🛒📦", "meaning": "Amazon"},
+            {"id": "em-ez-064", "text": "🎬🍿", "meaning": "Netflix"},
+            {"id": "em-ez-065", "text": "📺▶️", "meaning": "YouTube"},
+            {"id": "em-ez-066", "text": "📸💖", "meaning": "Instagram"},
+            {"id": "em-ez-067", "text": "👻💬", "meaning": "Snapchat"},
+            {"id": "em-ez-068", "text": "💬🟢", "meaning": "WhatsApp"},
+            {"id": "em-ez-069", "text": "🕺🎵", "meaning": "TikTok"},
+            {"id": "em-ez-070", "text": "🚗⚡", "meaning": "Tesla"},
+            {"id": "em-ez-071", "text": "🍔🟡", "meaning": "McDonald's"},
+            {"id": "em-ez-072", "text": "☕🧜‍♀️", "meaning": "Starbucks"},
+            {"id": "em-ez-073", "text": "🥤🔴", "meaning": "Coca-Cola"},
+            {"id": "em-ez-074", "text": "👟✔️", "meaning": "Nike"},
+            {"id": "em-ez-075", "text": "🏀🗑️", "meaning": "Basketball"},
+            {"id": "em-ez-076", "text": "⚽🥅", "meaning": "Soccer"},
+            {"id": "em-ez-077", "text": "🏈🏟️", "meaning": "American Football"},
+            {"id": "em-ez-078", "text": "⚾🦇", "meaning": "Baseball"},
+            {"id": "em-ez-079", "text": "🎾🎾", "meaning": "Tennis"},
+            {"id": "em-ez-080", "text": "🏌️‍♂️⛳", "meaning": "Golf"},
+            {"id": "em-ez-081", "text": "🎳🎱", "meaning": "Bowling"},
+            {"id": "em-ez-082", "text": "🥊💥", "meaning": "Boxing"},
+            {"id": "em-ez-083", "text": "⛷️❄️", "meaning": "Skiing"},
+            {"id": "em-ez-084", "text": "🏄‍♂️🌊", "meaning": "Surfing"},
+            {"id": "em-ez-085", "text": "🏊‍♂️🌊", "meaning": "Swimming"},
+            {"id": "em-ez-086", "text": "🏃‍♂️💨", "meaning": "Running"},
+            {"id": "em-ez-087", "text": "🚴‍♂️⛰️", "meaning": "Cycling"},
+            {"id": "em-ez-088", "text": "🐶🦴", "meaning": "Dog"},
+            {"id": "em-ez-089", "text": "🐱🐟", "meaning": "Cat"},
+            {"id": "em-ez-090", "text": "🐼🎍", "meaning": "Panda"},
+            {"id": "em-ez-091", "text": "🦁👑", "meaning": "Lion"},
+            {"id": "em-ez-092", "text": "🐯🐅", "meaning": "Tiger"},
+            {"id": "em-ez-093", "text": "🐘👂", "meaning": "Elephant"},
+            {"id": "em-ez-094", "text": "🦒🦒", "meaning": "Giraffe"},
+            {"id": "em-ez-095", "text": "🐧🧊", "meaning": "Penguin"},
+            {"id": "em-ez-096", "text": "🦈🦷", "meaning": "Shark"},
+            {"id": "em-ez-097", "text": "🦉🌙", "meaning": "Owl"},
+            {"id": "em-ez-098", "text": "🐸🪷", "meaning": "Frog"},
+            {"id": "em-ez-099", "text": "🐍🍎", "meaning": "Snake"},
+            {"id": "em-ez-100", "text": "🐻🍯", "meaning": "Bear"},
+            {"id": "em-ez-101", "text": "🐺🌕", "meaning": "Wolf"},
+            {"id": "em-ez-102", "text": "🦊🌲", "meaning": "Fox"},
+            {"id": "em-ez-103", "text": "🦇🌙", "meaning": "Bat"},
+            {"id": "em-ez-104", "text": "🦆🌊", "meaning": "Duck"},
+            {"id": "em-ez-105", "text": "🐒🍌", "meaning": "Monkey"},
+            {"id": "em-ez-106", "text": "🐝🍯", "meaning": "Bee"},
+            {"id": "em-ez-107", "text": "🦋🌸", "meaning": "Butterfly"},
+            {"id": "em-ez-108", "text": "🦄🌈", "meaning": "Unicorn"},
+            {"id": "em-ez-109", "text": "🐉🔥", "meaning": "Dragon"},
+            {"id": "em-ez-110", "text": "🧜‍♀️🐚", "meaning": "Mermaid"},
+            {"id": "em-ez-111", "text": "🧛‍♂️🩸", "meaning": "Vampire"},
+            {"id": "em-ez-112", "text": "🐺🌕", "meaning": "Werewolf"},
+            {"id": "em-ez-113", "text": "🧟‍♂️🧠", "meaning": "Zombie"},
+            {"id": "em-ez-114", "text": "👻🏚️", "meaning": "Ghost"},
+            {"id": "em-ez-115", "text": "👽🛸", "meaning": "Alien"},
+            {"id": "em-ez-116", "text": "🤖⚙️", "meaning": "Robot"},
+            {"id": "em-ez-117", "text": "🦖🌋", "meaning": "Dinosaur"},
+            {"id": "em-ez-118", "text": "🗼🇫🇷", "meaning": "Eiffel Tower"},
+            {"id": "em-ez-119", "text": "🗽🇺🇸", "meaning": "Statue of Liberty"},
+            {"id": "em-ez-120", "text": "🕌🇮🇳", "meaning": "Taj Mahal"},
+            {"id": "em-ez-121", "text": "🔺🇪🇬", "meaning": "Pyramids"},
+            {"id": "em-ez-122", "text": "🧱🇨🇳", "meaning": "Great Wall of China"},
+            {"id": "em-ez-123", "text": "🗽🦅", "meaning": "United States"},
+            {"id": "em-ez-124", "text": "🗼🥖", "meaning": "France"},
+            {"id": "em-ez-125", "text": "🍕🍝", "meaning": "Italy"},
+            {"id": "em-ez-126", "text": "🍣🗻", "meaning": "Japan"},
+            {"id": "em-ez-127", "text": "🐉🏯", "meaning": "China"},
+            {"id": "em-ez-128", "text": "🐪🔺", "meaning": "Egypt"},
+            {"id": "em-ez-129", "text": "🌮🌵", "meaning": "Mexico"},
+            {"id": "em-ez-130", "text": "🦘🌏", "meaning": "Australia"},
+            {"id": "em-ez-131", "text": "🍁🦫", "meaning": "Canada"},
+            {"id": "em-ez-132", "text": "🕌🐅", "meaning": "India"},
+            {"id": "em-ez-133", "text": "☕👑", "meaning": "United Kingdom"},
+            {"id": "em-ez-134", "text": "🍺🥨", "meaning": "Germany"},
+            {"id": "em-ez-135", "text": "💃🐂", "meaning": "Spain"},
+            {"id": "em-ez-136", "text": "⚽🌴", "meaning": "Brazil"},
+            {"id": "em-ez-137", "text": "🎄🎅🎁", "meaning": "Christmas"},
+            {"id": "em-ez-138", "text": "🎃👻🍬", "meaning": "Halloween"},
+            {"id": "em-ez-139", "text": "🦃🍂🥧", "meaning": "Thanksgiving"},
+            {"id": "em-ez-140", "text": "💖💌🌹", "meaning": "Valentine's Day"},
+            {"id": "em-ez-141", "text": "🐰🥚🐣", "meaning": "Easter"},
+            {"id": "em-ez-142", "text": "🎆🥂🕛", "meaning": "New Year's Eve"},
+            {"id": "em-ez-143", "text": "🎂🎉🎁", "meaning": "Birthday"},
+            {"id": "em-ez-144", "text": "👰‍♀️🤵‍♂️💒", "meaning": "Wedding"},
+            {"id": "em-ez-145", "text": "🎓📜🎉", "meaning": "Graduation"},
+            {"id": "em-ez-146", "text": "🏕️🔥🌲", "meaning": "Camping"},
+            {"id": "em-ez-147", "text": "✈️🧳🏝️", "meaning": "Vacation"},
+            {"id": "em-ez-148", "text": "🍿🎬🎟️", "meaning": "Movie Night"},
+            {"id": "em-ez-149", "text": "😴🛏️💤", "meaning": "Sleeping"},
+            {"id": "em-ez-150", "text": "🌧️☔💧", "meaning": "Rain"},
+            {"id": "em-ez-151", "text": "❄️☃️🥶", "meaning": "Snow"},
+            {"id": "em-ez-152", "text": "🌈☀️🌧️", "meaning": "Rainbow"},
+            {"id": "em-ez-153", "text": "🌪️🏠💨", "meaning": "Tornado"},
+            {"id": "em-ez-154", "text": "🌋🔥🪨", "meaning": "Volcano"},
+            {"id": "em-ez-155", "text": "🌩️⚡🌧️", "meaning": "Thunderstorm"},
+            {"id": "em-ez-156", "text": "🚀🌕⭐", "meaning": "Space"},
+            {"id": "em-ez-157", "text": "👨‍🚒🚒🔥", "meaning": "Firefighter"},
+            {"id": "em-ez-158", "text": "👨‍🚀🚀🌕", "meaning": "Astronaut"},
+            {"id": "em-ez-159", "text": "👨‍🍳🍳🔪", "meaning": "Chef"},
+            {"id": "em-ez-160", "text": "👨‍⚕️🩺🏥", "meaning": "Doctor"},
+            {"id": "em-ez-161", "text": "🕵️‍♂️🔍", "meaning": "Detective"},
+            {"id": "em-ez-162", "text": "👮‍♂️🚨🚔", "meaning": "Police Officer"},
+            {"id": "em-ez-163", "text": "👨‍✈️🛩️", "meaning": "Pilot"},
+            {"id": "em-ez-164", "text": "🎨🖌️", "meaning": "Artist"},
+            {"id": "em-ez-165", "text": "👨‍🏫📚", "meaning": "Teacher"},
+            {"id": "em-ez-166", "text": "📸📷", "meaning": "Photographer"},
+            {"id": "em-ez-167", "text": "🧱🏗️", "meaning": "Construction Worker"},
+            {"id": "em-ez-168", "text": "🧑‍🌾🚜", "meaning": "Farmer"},
+            {"id": "em-ez-169", "text": "👨‍🔬🧪", "meaning": "Scientist"},
+            {"id": "em-ez-170", "text": "⚖️👨‍⚖️", "meaning": "Judge"},
+            {"id": "em-ez-171", "text": "✂️💈", "meaning": "Barber"},
+            {"id": "em-ez-172", "text": "🦷🪥", "meaning": "Dentist"},
+            {"id": "em-ez-173", "text": "🪄🎩", "meaning": "Magician"},
+            {"id": "em-ez-174", "text": "⚡👑🏛️", "meaning": "Zeus"},
+            {"id": "em-ez-175", "text": "🔱🌊🐴", "meaning": "Poseidon"},
+            {"id": "em-ez-176", "text": "💀🔥👑", "meaning": "Hades"},
+            {"id": "em-ez-177", "text": "🔨⚡🌩️", "meaning": "Thor"},
+            {"id": "em-ez-178", "text": "🐍👩👁️", "meaning": "Medusa"},
+            {"id": "em-ez-179", "text": "🐂🏛️", "meaning": "Minotaur"},
+            {"id": "em-ez-180", "text": "🔥🦅✨", "meaning": "Phoenix"},
+            {"id": "em-ez-181", "text": "🪽🐎", "meaning": "Pegasus"},
+            {"id": "em-ez-182", "text": "🐶🐶🐶", "meaning": "Cerberus"},
+            {"id": "em-ez-183", "text": "🗡️🪨👑", "meaning": "Excalibur"},
+            {"id": "em-ez-184", "text": "🏹💰🌳", "meaning": "Robin Hood"},
+            {"id": "em-ez-185", "text": "👑🐍👁️", "meaning": "Cleopatra"},
+            {"id": "em-ez-186", "text": "🗡️🩸🏛️", "meaning": "Julius Caesar"},
+            {"id": "em-ez-187", "text": "🧠⚡💡", "meaning": "Albert Einstein"},
+            {"id": "em-ez-188", "text": "🍎🌳📉", "meaning": "Isaac Newton"},
+            {"id": "em-ez-189", "text": "🐱🐶🌧️", "meaning": "Raining Cats and Dogs"},
+            {"id": "em-ez-190", "text": "🥶🦶", "meaning": "Cold Feet"},
+            {"id": "em-ez-191", "text": "💛🌟", "meaning": "Heart of Gold"},
+            {"id": "em-ez-192", "text": "⏱️💸", "meaning": "Time is Money"},
+            {"id": "em-ez-193", "text": "🍰🥧", "meaning": "Piece of Cake"},
+            {"id": "em-ez-194", "text": "🧠⚡", "meaning": "Brainstorm"},
+            {"id": "em-ez-195", "text": "⏳🪽", "meaning": "Time Flies"},
+            {"id": "em-ez-196", "text": "🦴🦵", "meaning": "Break a Leg"},
+            {"id": "em-ez-197", "text": "🫗🫘", "meaning": "Spill the Beans"},
+            {"id": "em-ez-198", "text": "🐘🛋️", "meaning": "Elephant in the Room"},
+            {"id": "em-ez-199", "text": "🐷🛫", "meaning": "When Pigs Fly"},
+            {"id": "em-ez-200", "text": "⏳⌛🔁", "meaning": "Time Travel"},
+            {"id": "em-ez-201", "text": "⚡🐭✨", "meaning": "Pikachu"},
+            {"id": "em-ez-202", "text": "🔥🐉💥", "meaning": "Charizard"},
+            {"id": "em-ez-203", "text": "🌱🦖🐸", "meaning": "Bulbasaur"},
+            {"id": "em-ez-204", "text": "🐢💧🕶️", "meaning": "Squirtle"},
+            {"id": "em-ez-205", "text": "😴🐻", "meaning": "Snorlax"},
+            {"id": "em-ez-206", "text": "🎤🎈", "meaning": "Jigglypuff"},
+            {"id": "em-ez-207", "text": "🤕🦆", "meaning": "Psyduck"},
+            {"id": "em-ez-208", "text": "👻😈", "meaning": "Gengar"},
+            {"id": "em-ez-209", "text": "🧬🟣", "meaning": "Mewtwo"},
+            {"id": "em-ez-210", "text": "🏴‍☠️👒🍖", "meaning": "One Piece"},
+            {"id": "em-ez-211", "text": "🟠🥷🦊", "meaning": "Naruto"},
+            {"id": "em-ez-212", "text": "🟠🐉💥", "meaning": "Dragon Ball Z"},
+            {"id": "em-ez-213", "text": "📓🖊️💀", "meaning": "Death Note"},
+            {"id": "em-ez-214", "text": "👨‍👦📜🗡️", "meaning": "Demon Slayer"},
+            {"id": "em-ez-215", "text": "⚔️🧗‍♂️👹", "meaning": "Attack on Titan"},
+            {"id": "em-ez-216", "text": "🦹‍♂️🦸‍♂️🏫", "meaning": "My Hero Academia"},
+            {"id": "em-ez-217", "text": "🧑‍🦲👊💥", "meaning": "One Punch Man"},
+            {"id": "em-ez-218", "text": "🟡👻", "meaning": "Pac-Man"},
+            {"id": "em-ez-219", "text": "🧱🎮", "meaning": "Tetris"},
+            {"id": "em-ez-220", "text": "🦔⚡", "meaning": "Sonic the Hedgehog"},
+            {"id": "em-ez-221", "text": "🦍🍌", "meaning": "Donkey Kong"},
+            {"id": "em-ez-222", "text": "👨‍🚀🔪", "meaning": "Among Us"},
+            {"id": "em-ez-223", "text": "🚗⚽", "meaning": "Rocket League"},
+            {"id": "em-ez-224", "text": "🔫🚔", "meaning": "Grand Theft Auto"},
+            {"id": "em-ez-225", "text": "🎲🏢🎩", "meaning": "Monopoly"},
+            {"id": "em-ez-226", "text": "♟️👑", "meaning": "Chess"},
+            {"id": "em-ez-227", "text": "🔠📝", "meaning": "Scrabble"},
+            {"id": "em-ez-228", "text": "🔪🔎", "meaning": "Clue"},
+            {"id": "em-ez-229", "text": "🧱🪵", "meaning": "Jenga"},
+            {"id": "em-ez-230", "text": "🔴🟡🔵🟢", "meaning": "Twister"},
+            {"id": "em-ez-231", "text": "🃏🔄4️⃣", "meaning": "Uno"},
+            {"id": "em-ez-232", "text": "🌅☀️", "meaning": "Sunrise"},
+            {"id": "em-ez-233", "text": "🌇🌆", "meaning": "Sunset"},
+            {"id": "em-ez-234", "text": "🌙⭐", "meaning": "Night Sky"},
+            {"id": "em-ez-235", "text": "🏖️☀️", "meaning": "Beach Vacation"},
+            {"id": "em-ez-236", "text": "🚗🛣️", "meaning": "Road Trip"},
+            {"id": "em-ez-237", "text": "🤿🐠", "meaning": "Scuba Diving"},
+            {"id": "em-ez-238", "text": "🧗‍♂️🪨", "meaning": "Rock Climbing"},
+            {"id": "em-ez-239", "text": "🏹🎯", "meaning": "Archery"},
+            {"id": "em-ez-240", "text": "🏒🧊", "meaning": "Ice Hockey"},
+            {"id": "em-ez-241", "text": "⛸️❄️", "meaning": "Figure Skating"},
+            {"id": "em-ez-242", "text": "🎆🎇", "meaning": "Fireworks"},
+            {"id": "em-ez-243", "text": "🍿🎬", "meaning": "Cinema"},
+            {"id": "em-ez-244", "text": "🎸🎶", "meaning": "Guitar"},
+            {"id": "em-ez-245", "text": "🎹🎶", "meaning": "Piano"},
+            {"id": "em-ez-246", "text": "🥁🎶", "meaning": "Drums"},
+            {"id": "em-ez-247", "text": "🎻🎶", "meaning": "Violin"},
+            {"id": "em-ez-248", "text": "🎤🎶", "meaning": "Karaoke"},
+            {"id": "em-ez-249", "text": "💃🕺", "meaning": "Dancing"},
+            {"id": "em-ez-250", "text": "🎮🕹️", "meaning": "Video Games"},
+            {"id": "em-mix-250", "text": "🚢 Iceberg 💔", "meaning": "Titanic"},
+            {"id": "em-mix-251", "text": "🦖🚙🌴", "meaning": "Jurassic Park"},
+            {"id": "em-mix-252", "text": "🎈 House 👴", "meaning": "Up"},
+            {"id": "em-mix-253", "text": "🦈 Ocean 🚤", "meaning": "Jaws"},
+            {"id": "em-mix-254", "text": "👽🚲🌕", "meaning": "E.T."},
+            {"id": "em-mix-255", "text": "👨‍🚀 Mars 🪐", "meaning": "The Martian"},
+            {"id": "em-mix-256", "text": "🦁👑🌅", "meaning": "The Lion King"},
+            {"id": "em-mix-257", "text": "🥊 Club 👤", "meaning": "Fight Club"},
+            {"id": "em-mix-258", "text": "💊🕶️💻", "meaning": "The Matrix"},
+            {"id": "em-mix-259", "text": "💍 Ring 👁️", "meaning": "The Lord of the Rings"},
+            {"id": "em-mix-260", "text": "🧙‍♂️⚡🦉", "meaning": "Harry Potter"},
+            {"id": "em-mix-261", "text": "🌌 Force 🤖", "meaning": "Star Wars"},
+            {"id": "em-mix-262", "text": "👧🌪️👠", "meaning": "The Wizard of Oz"},
+            {"id": "em-mix-263", "text": "🐀 Chef 🍝", "meaning": "Ratatouille"},
+            {"id": "em-mix-264", "text": "👻🚫🚒", "meaning": "Ghostbusters"},
+            {"id": "em-mix-265", "text": "🤠 Toy 🚀", "meaning": "Toy Story"},
+            {"id": "em-mix-266", "text": "🏴‍☠️🧭🚢", "meaning": "Pirates of the Caribbean"},
+            {"id": "em-mix-267", "text": "🦇 Gotham 🏙️", "meaning": "Batman"},
+            {"id": "em-mix-268", "text": "🕷️ Web 🏙️", "meaning": "Spider-Man"},
+            {"id": "em-mix-269", "text": "🦸‍♂️ Cape ☄️", "meaning": "Superman"},
+            {"id": "em-mix-270", "text": "🟢 Smash 💥", "meaning": "The Hulk"},
+            {"id": "em-mix-271", "text": "👨 Suit 🤖", "meaning": "Iron Man"},
+            {"id": "em-mix-272", "text": "🛡️ Shield 🧊", "meaning": "Captain America"},
+            {"id": "em-mix-273", "text": "🔨 Thunder 🌈", "meaning": "Thor"},
+            {"id": "em-mix-274", "text": "👑 Amazon ➰", "meaning": "Wonder Woman"},
+            {"id": "em-mix-275", "text": "🔱 Atlantis 🐟", "meaning": "Aquaman"},
+            {"id": "em-mix-276", "text": "⚡ Speed 🔴", "meaning": "The Flash"},
+            {"id": "em-mix-277", "text": "🏹 District 🔥", "meaning": "The Hunger Games"},
+            {"id": "em-mix-278", "text": "🧛‍♂️ Blood 🦇", "meaning": "Dracula"},
+            {"id": "em-mix-279", "text": "⚡ Monster 🧟‍♂️", "meaning": "Frankenstein"},
+            {"id": "em-mix-280", "text": "🐠 Nemo 🔍", "meaning": "Finding Nemo"},
+            {"id": "em-mix-281", "text": "❄️ Ice ⛄", "meaning": "Frozen"},
+            {"id": "em-mix-282", "text": "🐼 Dragon 🥟", "meaning": "Kung Fu Panda"},
+            {"id": "em-mix-283", "text": "🤖 Trash 🌱", "meaning": "WALL-E"},
+            {"id": "em-mix-284", "text": "🧠 Joy 😢", "meaning": "Inside Out"},
+            {"id": "em-mix-285", "text": "🚗 Wasteland 🏜️", "meaning": "Mad Max: Fury Road"},
+            {"id": "em-mix-286", "text": "😴 Dream 🌀", "meaning": "Inception"},
+            {"id": "em-mix-287", "text": "🚀 Wormhole 🕳️", "meaning": "Interstellar"},
+            {"id": "em-mix-288", "text": "🎭 Killer 📞", "meaning": "Scream"},
+            {"id": "em-mix-289", "text": "🏠 Traps 😱", "meaning": "Home Alone"},
+            {"id": "em-mix-290", "text": "⚡ Time ⌛", "meaning": "Back to the Future"},
+            {"id": "em-mix-291", "text": "🤵 Family 🩸", "meaning": "The Godfather"},
+            {"id": "em-mix-292", "text": "🦍 Empire ✈️", "meaning": "King Kong"},
+            {"id": "em-mix-293", "text": "🌊 Voice 👸", "meaning": "The Little Mermaid"},
+            {"id": "em-mix-294", "text": "🌹 Curse 🦁", "meaning": "Beauty and the Beast"},
+            {"id": "em-mix-295", "text": "👠 Midnight 🎃", "meaning": "Cinderella"},
+            {"id": "em-mix-296", "text": "🍎 Poison 👸", "meaning": "Snow White"},
+            {"id": "em-mix-297", "text": "🪵 Puppet 🤥", "meaning": "Pinocchio"},
+            {"id": "em-mix-298", "text": "🐉 Warrior ⚔️", "meaning": "Mulan"},
+            {"id": "em-mix-299", "text": "👑 Swamp 🫏", "meaning": "Shrek"},
+            {"id": "em-mix-300", "text": "🟡 Villain 🍌", "meaning": "Minions"},
+            {"id": "em-mix-301", "text": "🦸‍♂️ Family 👶", "meaning": "The Incredibles"},
+            {"id": "em-mix-302", "text": "🎩 Wonderland ♥️", "meaning": "Alice in Wonderland"},
+            {"id": "em-mix-303", "text": "👨 Aliens 👽", "meaning": "Men in Black"},
+            {"id": "em-mix-304", "text": "🏃 Bench 🏓", "meaning": "Forrest Gump"},
+            {"id": "em-mix-305", "text": "🎈 Derry ⛵", "meaning": "It"},
+            {"id": "em-mix-306", "text": "🏝️ Wilson 📦", "meaning": "Cast Away"},
+            {"id": "em-mix-307", "text": "🟡 Bride ⚔️", "meaning": "Kill Bill"},
+            {"id": "em-mix-308", "text": "🕶️ Skynet 🤖", "meaning": "The Terminator"},
+            {"id": "em-mix-309", "text": "🌽 Crop 👁️", "meaning": "Signs"},
+            {"id": "em-mix-310", "text": "👂 Ghost 🥶", "meaning": "The Sixth Sense"},
+            {"id": "em-mix-311", "text": "🦢 Ballet 🖤", "meaning": "Black Swan"},
+            {"id": "em-mix-312", "text": "🐑 Silence 🔪", "meaning": "The Silence of the Lambs"},
+            {"id": "em-mix-313", "text": "🌧️ Replicant 🦄", "meaning": "Blade Runner"},
+            {"id": "em-mix-314", "text": "🦎 Monster 🏙️", "meaning": "Godzilla"},
+            {"id": "em-mix-315", "text": "🍔 Briefcase 🔫", "meaning": "Pulp Fiction"},
+            {"id": "em-mix-316", "text": "👯‍♀️ Twins 🚪", "meaning": "The Shining"},
+            {"id": "em-mix-317", "text": "🔵 Pandora 👽", "meaning": "Avatar"},
+            {"id": "em-mix-318", "text": "🤠 Whip 🪨", "meaning": "Indiana Jones"},
+            {"id": "em-mix-319", "text": "📺 Reality 👋", "meaning": "The Truman Show"},
+            {"id": "em-mix-320", "text": "🧸 Beer 😂", "meaning": "Ted"},
+            {"id": "em-mix-321", "text": "🧪 Meth 🚐", "meaning": "Breaking Bad"},
+            {"id": "em-mix-322", "text": "❄️ Throne 🐉", "meaning": "Game of Thrones"},
+            {"id": "em-mix-323", "text": "🚲 Upside 👾", "meaning": "Stranger Things"},
+            {"id": "em-mix-324", "text": "🏢 Paper 🖨️", "meaning": "The Office"},
+            {"id": "em-mix-325", "text": "🦑 Games 🔴", "meaning": "Squid Game"},
+            {"id": "em-mix-326", "text": "👑 Royals 🍷", "meaning": "The Crown"},
+            {"id": "em-mix-327", "text": "👨‍🍳 Kitchen 🔥", "meaning": "The Bear"},
+            {"id": "em-mix-328", "text": "🧟‍♂️ Walkers 🏃‍♂️", "meaning": "The Walking Dead"},
+            {"id": "em-mix-329", "text": "👨‍🏫 Coach 🧢", "meaning": "Ted Lasso"},
+            {"id": "em-mix-330", "text": "🏦 Heist 👺", "meaning": "Money Heist"},
+            {"id": "em-mix-331", "text": "🖤 Nevermore 🪩", "meaning": "Wednesday"},
+            {"id": "em-mix-332", "text": "☕ Central 📺", "meaning": "Friends"},
+            {"id": "em-mix-333", "text": "🟦 Tardis 🕰️", "meaning": "Doctor Who"},
+            {"id": "em-mix-334", "text": "🕵️‍♂️ Baker 🎩", "meaning": "Sherlock"},
+            {"id": "em-mix-335", "text": "🧢 Blinders 🐎", "meaning": "Peaky Blinders"},
+            {"id": "em-mix-336", "text": "🪖 Grogu 🌌", "meaning": "The Mandalorian"},
+            {"id": "em-mix-337", "text": "🏢 Lumon 💻", "meaning": "Severance"},
+            {"id": "em-mix-338", "text": "🏢 Roy 🚁", "meaning": "Succession"},
+            {"id": "em-mix-339", "text": "📱 Tech 🪞", "meaning": "Black Mirror"},
+            {"id": "em-mix-340", "text": "🦸‍♂️ Vought 💥", "meaning": "The Boys"},
+            {"id": "em-mix-341", "text": "☢️ Disaster 🏭", "meaning": "Chernobyl"},
+            {"id": "em-mix-342", "text": "🇨🇴 Cartel 🚔", "meaning": "Narcos"},
+            {"id": "em-mix-343", "text": "🩸 Blood 🛥️", "meaning": "Dexter"},
+            {"id": "em-mix-344", "text": "🏢 Escape 🏃‍♂️", "meaning": "Prison Break"},
+            {"id": "em-mix-345", "text": "♟️ Chess 💊", "meaning": "The Queen's Gambit"},
+            {"id": "em-mix-346", "text": "👨‍👩‍👧‍👦 Springfield 📺", "meaning": "The Simpsons"},
+            {"id": "em-mix-347", "text": "👨‍👩‍👦‍👦 Griffin 🍺", "meaning": "Family Guy"},
+            {"id": "em-mix-348", "text": "👴 Portal 🧪", "meaning": "Rick and Morty"},
+            {"id": "em-mix-349", "text": "🌪️ Bender 💨", "meaning": "Avatar: The Last Airbender"},
+            {"id": "em-mix-350", "text": "🚀 Planet 👁️", "meaning": "Futurama"},
+            {"id": "em-mix-351", "text": "🧱 Bedrock 🛏️", "meaning": "The Flintstones"},
+            {"id": "em-mix-352", "text": "🦆 Scrooge 💰", "meaning": "DuckTales"},
+            {"id": "em-mix-353", "text": "🐰 Tunes 🥕", "meaning": "Looney Tunes"},
+            {"id": "em-mix-354", "text": "🌲 Mystery 📕", "meaning": "Gravity Falls"},
+            {"id": "em-mix-355", "text": "🐷 Mud 🪵", "meaning": "Peppa Pig"},
+            {"id": "em-mix-356", "text": "🚂 Sodor 💨", "meaning": "Thomas & Friends"},
+            {"id": "em-mix-357", "text": "👧 Map 🐒", "meaning": "Dora the Explorer"},
+            {"id": "em-mix-358", "text": "🤓 Aardvark 📻", "meaning": "Arthur"},
+            {"id": "em-mix-359", "text": "🚌 Frizzle 👩‍🏫", "meaning": "The Magic School Bus"},
+            {"id": "em-mix-360", "text": "🧽 Sponge 🌊", "meaning": "SpongeBob SquarePants"},
+            {"id": "em-mix-361", "text": "🐱 Chase 🧀", "meaning": "Tom and Jerry"},
+            {"id": "em-mix-362", "text": "🐶 Mystery 🔍", "meaning": "Scooby-Doo"},
+            {"id": "em-mix-363", "text": "👦 Watch 👽", "meaning": "Ben 10"},
+            {"id": "em-mix-364", "text": "🗡️ Ooo 🐶", "meaning": "Adventure Time"},
+            {"id": "em-mix-365", "text": "👧 Sugar 💥", "meaning": "The Powerpuff Girls"},
+            {"id": "em-mix-366", "text": "👦 Lab 🔬", "meaning": "Dexter's Laboratory"},
+            {"id": "em-mix-367", "text": "🐶 Nowhere 🏚️", "meaning": "Courage the Cowardly Dog"},
+            {"id": "em-mix-368", "text": "👦 Summer 🔨", "meaning": "Phineas and Ferb"},
+            {"id": "em-mix-369", "text": "🦸 Titans 🏙️", "meaning": "Teen Titans"},
+            {"id": "em-mix-370", "text": "⚔️ Walls 👹", "meaning": "Attack on Titan"},
+            {"id": "em-mix-371", "text": "👨‍👦 Swords 🗡️", "meaning": "Demon Slayer"},
+            {"id": "em-mix-372", "text": "🏴‍☠️ Luffy 🍖", "meaning": "One Piece"},
+            {"id": "em-mix-373", "text": "🟠 Hokage 🦊", "meaning": "Naruto"},
+            {"id": "em-mix-374", "text": "🟠 Saiyan 💥", "meaning": "Dragon Ball Z"},
+            {"id": "em-mix-375", "text": "📓 Shinigami 💀", "meaning": "Death Note"},
+            {"id": "em-mix-376", "text": "🦹‍♂️ Quirks 🏫", "meaning": "My Hero Academia"},
+            {"id": "em-mix-377", "text": "👁️ Curses ⚔️", "meaning": "Jujutsu Kaisen"},
+            {"id": "em-mix-378", "text": "🕵️ Anya 💣", "meaning": "Spy x Family"},
+            {"id": "em-mix-379", "text": "🪓 Devil 🪚", "meaning": "Chainsaw Man"},
+            {"id": "em-mix-380", "text": "🧑‍🦲 Saitama 💥", "meaning": "One Punch Man"},
+            {"id": "em-mix-381", "text": "🧪 Alchemy 🦾", "meaning": "Fullmetal Alchemist"},
+            {"id": "em-mix-382", "text": "⚡ Ash 🔴", "meaning": "Pokémon"},
+            {"id": "em-mix-383", "text": "🎴 Duel 🐉", "meaning": "Yu-Gi-Oh!"},
+            {"id": "em-mix-384", "text": "🌌 Bebop 🎷", "meaning": "Cowboy Bebop"},
+            {"id": "em-mix-385", "text": "🌙 Prism 🐱", "meaning": "Sailor Moon"},
+            {"id": "em-mix-386", "text": "🧑‍🚀 Eva 🤖", "meaning": "Neon Genesis Evangelion"},
+            {"id": "em-mix-387", "text": "🐉 Bathhouse 👧", "meaning": "Spirited Away"},
+            {"id": "em-mix-388", "text": "☔ Forest 🚌", "meaning": "My Neighbor Totoro"},
+            {"id": "em-mix-389", "text": "👵 Castle 🧹", "meaning": "Howl's Moving Castle"},
+            {"id": "em-mix-390", "text": "🗡️ Wolves 👧", "meaning": "Princess Mononoke"},
+            {"id": "em-mix-391", "text": "🏏 Snoopy ⚾", "meaning": "Charlie Brown"},
+            {"id": "em-mix-392", "text": "🐰 Doc 🗣️", "meaning": "Bugs Bunny"},
+            {"id": "em-mix-393", "text": "🦆 Quack ⚓", "meaning": "Donald Duck"},
+            {"id": "em-mix-394", "text": "🐶 Beagle 🐾", "meaning": "Snoopy"},
+            {"id": "em-mix-395", "text": "🐱 Lasagna 💤", "meaning": "Garfield"},
+            {"id": "em-mix-396", "text": "🐱 Seuss ☂️", "meaning": "The Cat in the Hat"},
+            {"id": "em-mix-397", "text": "🥬 Spinach ⚓", "meaning": "Popeye"},
+            {"id": "em-mix-398", "text": "🐻 Honey 🎈", "meaning": "Winnie the Pooh"},
+            {"id": "em-mix-399", "text": "🐆 Mouse 🏃‍♂️", "meaning": "Speedy Gonzales"},
+            {"id": "em-mix-400", "text": "🐦 Sylvester 😺", "meaning": "Tweety Bird"},
+            {"id": "em-mix-401", "text": "⛏️ Craft 🧱", "meaning": "Minecraft"},
+            {"id": "em-mix-402", "text": "🍄 Plumber 🏰", "meaning": "Super Mario Bros"},
+            {"id": "em-mix-403", "text": "🗡️ Link 🧝‍♂️", "meaning": "The Legend of Zelda"},
+            {"id": "em-mix-404", "text": "🟡 Ghosts 🍒", "meaning": "Pac-Man"},
+            {"id": "em-mix-405", "text": "🦔 Rings 👟", "meaning": "Sonic the Hedgehog"},
+            {"id": "em-mix-406", "text": "🦍 Barrels 🎮", "meaning": "Donkey Kong"},
+            {"id": "em-mix-407", "text": "👨‍🚀 Sus 📮", "meaning": "Among Us"},
+            {"id": "em-mix-408", "text": "🚗 Goal 🏟️", "meaning": "Rocket League"},
+            {"id": "em-mix-409", "text": "🔫 Heist 🏙️", "meaning": "Grand Theft Auto"},
+            {"id": "em-mix-410", "text": "🪓 Boy ❄️", "meaning": "God of War"},
+            {"id": "em-mix-411", "text": "🤠 Outlaw 📜", "meaning": "Red Dead Redemption"},
+            {"id": "em-mix-412", "text": "⚔️ Geralt 🗡️", "meaning": "The Witcher"},
+            {"id": "em-mix-413", "text": "🧟‍♂️ Umbrella 🌿", "meaning": "Resident Evil"},
+            {"id": "em-mix-414", "text": "🗡️ Maiden 💍", "meaning": "Elden Ring"},
+            {"id": "em-mix-415", "text": "🧱 Blocks 🧱", "meaning": "Tetris"},
+            {"id": "em-mix-416", "text": "🚌 Drop ⛏️", "meaning": "Fortnite"},
+            {"id": "em-mix-417", "text": "🤖 V 🌃", "meaning": "Cyberpunk 2077"},
+            {"id": "em-mix-418", "text": "🥷 Leap 🏰", "meaning": "Assassin's Creed"},
+            {"id": "em-mix-419", "text": "👧 Croft 🏺", "meaning": "Tomb Raider"},
+            {"id": "em-mix-420", "text": "🟢 Chief 🔫", "meaning": "Halo"},
+            {"id": "em-mix-421", "text": "🔵 Cake 🕳️", "meaning": "Portal"},
+            {"id": "em-mix-422", "text": "🥷 Fatality 🩸", "meaning": "Mortal Kombat"},
+            {"id": "em-mix-423", "text": "🥋 Hadouken ❄️", "meaning": "Street Fighter"},
+            {"id": "em-mix-424", "text": "🏕️ Nook 🍎", "meaning": "Animal Crossing"},
+            {"id": "em-mix-425", "text": "🥊 Melee 🦔", "meaning": "Super Smash Bros"},
+            {"id": "em-mix-426", "text": "🪖 Duty 🚁", "meaning": "Call of Duty"},
+            {"id": "em-mix-427", "text": "🏠 Plumbob 💎", "meaning": "The Sims"},
+            {"id": "em-mix-428", "text": "☢️ Vault 👍", "meaning": "Fallout"},
+            {"id": "em-mix-429", "text": "🪓 Freeman 👓", "meaning": "Half-Life"},
+            {"id": "em-mix-430", "text": "🗺️ Nexus 🏆", "meaning": "League of Legends"},
+            {"id": "em-mix-431", "text": "⚔️ Dragonborn 🐉", "meaning": "Skyrim"},
+            {"id": "em-mix-432", "text": "🔫 Ink 🎨", "meaning": "Splatoon"},
+            {"id": "em-mix-433", "text": "🏎️ Shells 🍌", "meaning": "Mario Kart"},
+            {"id": "em-mix-434", "text": "🦇 Belmont 🩸", "meaning": "Castlevania"},
+            {"id": "em-mix-435", "text": "🎸 Notes 🟢", "meaning": "Guitar Hero"},
+            {"id": "em-mix-436", "text": "💃 Arrows ⬇️", "meaning": "Dance Dance Revolution"},
+            {"id": "em-mix-437", "text": "🏃‍♂️ Idol 🚧", "meaning": "Temple Run"},
+            {"id": "em-mix-438", "text": "🐦 Slingshot 🐷", "meaning": "Angry Birds"},
+            {"id": "em-mix-439", "text": "🍬 Match 💥", "meaning": "Candy Crush"},
+            {"id": "em-mix-440", "text": "🍉 Slice 🥷", "meaning": "Fruit Ninja"},
+            {"id": "em-mix-441", "text": "♟️ Checkmate 🧠", "meaning": "Chess"},
+            {"id": "em-mix-442", "text": "🎲 Boardwalk 🎩", "meaning": "Monopoly"},
+            {"id": "em-mix-443", "text": "🔠 Tiles ⏳", "meaning": "Scrabble"},
+            {"id": "em-mix-444", "text": "🔪 Murder 🏛️", "meaning": "Clue"},
+            {"id": "em-mix-445", "text": "🧱 Tower 🪵", "meaning": "Jenga"},
+            {"id": "em-mix-446", "text": "🔴 Spin 🟢", "meaning": "Twister"},
+            {"id": "em-mix-447", "text": "🃏 Reverse 🔄", "meaning": "Uno"},
+            {"id": "em-mix-448", "text": "🐉 DM 🎲", "meaning": "Dungeons & Dragons"},
+            {"id": "em-mix-449", "text": "🚢 Sink 📍", "meaning": "Battleship"},
+            {"id": "em-mix-450", "text": "🟡 Tokens 🔴", "meaning": "Connect 4"},
+            {"id": "em-mix-451", "text": "🎱 Strike 🎳", "meaning": "Bowling"},
+            {"id": "em-mix-452", "text": "🏀 Hoops ⛹️‍♂️", "meaning": "Basketball"},
+            {"id": "em-mix-453", "text": "⚽ Goal 🏃‍♂️", "meaning": "Soccer"},
+            {"id": "em-mix-454", "text": "🏈 Touchdown 🏆", "meaning": "American Football"},
+            {"id": "em-mix-455", "text": "⚾ HomeRun 🧢", "meaning": "Baseball"},
+            {"id": "em-mix-456", "text": "🎾 Love 👟", "meaning": "Tennis"},
+            {"id": "em-mix-457", "text": "🏒 Puck 🥅", "meaning": "Ice Hockey"},
+            {"id": "em-mix-458", "text": "🥊 KO 💥", "meaning": "Boxing"},
+            {"id": "em-mix-459", "text": "🏌️‍♂️ Par 🕳️", "meaning": "Golf"},
+            {"id": "em-mix-460", "text": "🏏 Wicket 🏟️", "meaning": "Cricket"},
+            {"id": "em-mix-461", "text": "🤿 Ocean 🐠", "meaning": "Scuba Diving"},
+            {"id": "em-mix-462", "text": "⛷️ Slopes ❄️", "meaning": "Skiing"},
+            {"id": "em-mix-463", "text": "🛹 Kickflip 🛹", "meaning": "Skateboarding"},
+            {"id": "em-mix-464", "text": "🏄‍♂️ Waves ☀️", "meaning": "Surfing"},
+            {"id": "em-mix-465", "text": "🧗‍♂️ Summit 🧗", "meaning": "Rock Climbing"},
+            {"id": "em-mix-466", "text": "🏹 Bullseye 🏹", "meaning": "Archery"},
+            {"id": "em-mix-467", "text": "🤺 Parry 🤺", "meaning": "Fencing"},
+            {"id": "em-mix-468", "text": "🚴‍♂️ Pedal ⛰️", "meaning": "Cycling"},
+            {"id": "em-mix-469", "text": "🏋️‍♂️ Reps 💪", "meaning": "Weightlifting"},
+            {"id": "em-mix-470", "text": "🏆 Gold 🌍", "meaning": "Olympics"},
+            {"id": "em-mix-471", "text": "🍎 Mac 📱", "meaning": "Apple"},
+            {"id": "em-mix-472", "text": "🔍 Web 🌎", "meaning": "Google"},
+            {"id": "em-mix-473", "text": "🛒 Prime 🚚", "meaning": "Amazon"},
+            {"id": "em-mix-474", "text": "🔴 Stream 🎬", "meaning": "Netflix"},
+            {"id": "em-mix-475", "text": "🎧 Premium 🎶", "meaning": "Spotify"},
+            {"id": "em-mix-476", "text": "📺 Vlog 🔴", "meaning": "YouTube"},
+            {"id": "em-mix-477", "text": "📸 Feed 💖", "meaning": "Instagram"},
+            {"id": "em-mix-478", "text": "👻 Filters 💬", "meaning": "Snapchat"},
+            {"id": "em-mix-479", "text": "💬 Text 🟢", "meaning": "WhatsApp"},
+            {"id": "em-mix-480", "text": "🐥 Tweet 💬", "meaning": "Twitter"},
+            {"id": "em-mix-481", "text": "🕺 Trends 📱", "meaning": "TikTok"},
+            {"id": "em-mix-482", "text": "💻 OS 🪟", "meaning": "Windows"},
+            {"id": "em-mix-483", "text": "🐧 Open 💻", "meaning": "Linux"},
+            {"id": "em-mix-484", "text": "☕ Code 💻", "meaning": "Java"},
+            {"id": "em-mix-485", "text": "🐍 Dev 💻", "meaning": "Python"},
+            {"id": "em-mix-486", "text": "🤖 Neural 🧠", "meaning": "Artificial Intelligence"},
+            {"id": "em-mix-487", "text": "🤖 Bot 🧠", "meaning": "ChatGPT"},
+            {"id": "em-mix-488", "text": "☁️ Sync 💾", "meaning": "Cloud Storage"},
+            {"id": "em-mix-489", "text": "🔒 Hack 🌐", "meaning": "Cybersecurity"},
+            {"id": "em-mix-490", "text": "🚗 Auto 🔋", "meaning": "Tesla"},
+            {"id": "em-mix-491", "text": "🍔 Arches 🟡", "meaning": "McDonald's"},
+            {"id": "em-mix-492", "text": "☕ Siren 🟢", "meaning": "Starbucks"},
+            {"id": "em-mix-493", "text": "🥤 Fizz ⚪", "meaning": "Coca-Cola"},
+            {"id": "em-mix-494", "text": "👟 Swoosh ✨", "meaning": "Nike"},
+            {"id": "em-mix-495", "text": "👟 Stripes 🏁", "meaning": "Adidas"},
+            {"id": "em-mix-496", "text": "🎮 Sony 🟦", "meaning": "PlayStation"},
+            {"id": "em-mix-497", "text": "🎮 Microsoft 🟩", "meaning": "Xbox"},
+            {"id": "em-mix-498", "text": "🎮 JoyCon 🔴", "meaning": "Nintendo Switch"},
+            {"id": "em-mix-499", "text": "💻 Valve 🕹️", "meaning": "Steam"},
+            {"id": "em-mix-500", "text": "🥽 Meta 🌌", "meaning": "Virtual Reality"},
+            {"id": "em-mix-501", "text": "🍕 Slice 🇮🇹", "meaning": "Pizza"},
+            {"id": "em-mix-502", "text": "🍔 Buns 🥤", "meaning": "Burger"},
+            {"id": "em-mix-503", "text": "🍣 Roll 🍱", "meaning": "Sushi"},
+            {"id": "em-mix-504", "text": "🌮 Shell 🥑", "meaning": "Taco"},
+            {"id": "em-mix-505", "text": "🌯 Wrap 🧀", "meaning": "Burrito"},
+            {"id": "em-mix-506", "text": "🍦 Scoop 🍧", "meaning": "Ice Cream"},
+            {"id": "em-mix-507", "text": "🍩 Glaze ☕", "meaning": "Donut"},
+            {"id": "em-mix-508", "text": "🥞 Syrup 🍯", "meaning": "Pancakes"},
+            {"id": "em-mix-509", "text": "🍜 Broth 🍥", "meaning": "Ramen"},
+            {"id": "em-mix-510", "text": "🍿 Butter 🥤", "meaning": "Popcorn"},
+            {"id": "em-mix-511", "text": "🌭 Bun ⚾", "meaning": "Hot Dog"},
+            {"id": "em-mix-512", "text": "🥪 Crust 🥬", "meaning": "Sandwich"},
+            {"id": "em-mix-513", "text": "🍳 Yolk 🍞", "meaning": "Bacon and Eggs"},
+            {"id": "em-mix-514", "text": "🧇 Grid 🫐", "meaning": "Waffles"},
+            {"id": "em-mix-515", "text": "🥐 Flaky ☕", "meaning": "Croissant"},
+            {"id": "em-mix-516", "text": "🥖 Loaf 🇫🇷", "meaning": "Baguette"},
+            {"id": "em-mix-517", "text": "🥨 Twist 🍺", "meaning": "Pretzel"},
+            {"id": "em-mix-518", "text": "🥯 Hole 🧀", "meaning": "Bagel"},
+            {"id": "em-mix-519", "text": "🥗 Greens 🥑", "meaning": "Salad"},
+            {"id": "em-mix-520", "text": "🥣 Bowl 🍲", "meaning": "Soup"},
+            {"id": "em-mix-521", "text": "🥩 Grill 🍽️", "meaning": "Steak"},
+            {"id": "em-mix-522", "text": "🍗 Crispy 🥤", "meaning": "Fried Chicken"},
+            {"id": "em-mix-523", "text": "🍖 Bone 🥩", "meaning": "BBQ Ribs"},
+            {"id": "em-mix-524", "text": "🍢 Skewer 🥩", "meaning": "Kebab"},
+            {"id": "em-mix-525", "text": "🥟 Steam 🥢", "meaning": "Dumplings"},
+            {"id": "em-mix-526", "text": "🥠 Luck 📜", "meaning": "Fortune Cookie"},
+            {"id": "em-mix-527", "text": "🦪 Pearl 🧊", "meaning": "Oysters"},
+            {"id": "em-mix-528", "text": "🦞 Claws 🍽️", "meaning": "Lobster"},
+            {"id": "em-mix-529", "text": "🦀 Legs 🧈", "meaning": "Crab"},
+            {"id": "em-mix-530", "text": "🦐 Rice 🇪🇸", "meaning": "Paella"},
+            {"id": "em-mix-531", "text": "🍝 Sauce 🍅", "meaning": "Spaghetti"},
+            {"id": "em-mix-532", "text": "🍝 Layers 🍅", "meaning": "Lasagna"},
+            {"id": "em-mix-533", "text": "🫕 Dip 🥖", "meaning": "Cheese Fondue"},
+            {"id": "em-mix-534", "text": "🍛 Spice 🍚", "meaning": "Curry"},
+            {"id": "em-mix-535", "text": "🫓 Bake 🇮🇳", "meaning": "Naan"},
+            {"id": "em-mix-536", "text": "🧆 Chickpea 🌿", "meaning": "Falafel"},
+            {"id": "em-mix-537", "text": "🥙 Meat 🌯", "meaning": "Shawarma"},
+            {"id": "em-mix-538", "text": "🥑 Smash 🍳", "meaning": "Avocado Toast"},
+            {"id": "em-mix-539", "text": "🍟 Gravy 🇨🇦", "meaning": "Poutine"},
+            {"id": "em-mix-540", "text": "🧀 Melt 🧈", "meaning": "Grilled Cheese"},
+            {"id": "em-mix-541", "text": "🐶 Bark ❤️", "meaning": "Dog"},
+            {"id": "em-mix-542", "text": "🐱 Purr 😺", "meaning": "Cat"},
+            {"id": "em-mix-543", "text": "🐼 Bamboo 🇨🇳", "meaning": "Panda"},
+            {"id": "em-mix-544", "text": "🦁 Roar 👑", "meaning": "Lion"},
+            {"id": "em-mix-545", "text": "🐯 Stripes ⚫", "meaning": "Tiger"},
+            {"id": "em-mix-546", "text": "🐘 Trunk 🦣", "meaning": "Elephant"},
+            {"id": "em-mix-547", "text": "🦒 Neck 🍃", "meaning": "Giraffe"},
+            {"id": "em-mix-548", "text": "🐧 Ice ❄️", "meaning": "Penguin"},
+            {"id": "em-mix-549", "text": "🦈 Fins 🦷", "meaning": "Shark"},
+            {"id": "em-mix-550", "text": "🐙 Arms 🦑", "meaning": "Octopus"},
+            {"id": "em-mix-551", "text": "🦋 Wings 🌼", "meaning": "Butterfly"},
+            {"id": "em-mix-552", "text": "🐝 Sting 🌼", "meaning": "Bee"},
+            {"id": "em-mix-553", "text": "🐒 Swing 🌴", "meaning": "Monkey"},
+            {"id": "em-mix-554", "text": "🐸 Leap 💧", "meaning": "Frog"},
+            {"id": "em-mix-555", "text": "🐢 Shell 🌊", "meaning": "Turtle"},
+            {"id": "em-mix-556", "text": "🐍 Slither 🌴", "meaning": "Snake"},
+            {"id": "em-mix-557", "text": "🐊 Snap 🦷", "meaning": "Crocodile"},
+            {"id": "em-mix-558", "text": "🐻 Growl 🌲", "meaning": "Bear"},
+            {"id": "em-mix-559", "text": "🐺 Howl 🌲", "meaning": "Wolf"},
+            {"id": "em-mix-560", "text": "🦊 Sly 🍁", "meaning": "Fox"},
+            {"id": "em-mix-561", "text": "🦇 Cave 🌙", "meaning": "Bat"},
+            {"id": "em-mix-562", "text": "🦉 Hoot 🌲", "meaning": "Owl"},
+            {"id": "em-mix-563", "text": "🦅 Soar ☁️", "meaning": "Eagle"},
+            {"id": "em-mix-564", "text": "🦆 Quack 🌊", "meaning": "Duck"},
+            {"id": "em-mix-565", "text": "🦩 Pink 💧", "meaning": "Flamingo"},
+            {"id": "em-mix-566", "text": "🦚 Feathers ✨", "meaning": "Peacock"},
+            {"id": "em-mix-567", "text": "🦄 Horn ✨", "meaning": "Unicorn"},
+            {"id": "em-mix-568", "text": "🐉 Myth 🏰", "meaning": "Dragon"},
+            {"id": "em-mix-569", "text": "🧜‍♀️ Tale 🐚", "meaning": "Mermaid"},
+            {"id": "em-mix-570", "text": "🦖 Prehistoric 🌋", "meaning": "Dinosaurs"},
+            {"id": "em-mix-571", "text": "🚀 Orbit ⭐", "meaning": "Space"},
+            {"id": "em-mix-572", "text": "🌋 Magma 🪨", "meaning": "Volcano"},
+            {"id": "em-mix-573", "text": "🌪️ Wind 💨", "meaning": "Tornado"},
+            {"id": "em-mix-574", "text": "⚡ Storm ☁️", "meaning": "Thunderstorm"},
+            {"id": "em-mix-575", "text": "❄️ Chill 🥶", "meaning": "Winter"},
+            {"id": "em-mix-576", "text": "🌸 Bloom ☀️", "meaning": "Spring"},
+            {"id": "em-mix-577", "text": "🏖️ Heat 🌊", "meaning": "Summer"},
+            {"id": "em-mix-578", "text": "🍂 Leaves 🌬️", "meaning": "Autumn"},
+            {"id": "em-mix-579", "text": "🌈 Colors ☀️", "meaning": "Rainbow"},
+            {"id": "em-mix-580", "text": "🏝️ Tropical 🥥", "meaning": "Island"},
+            {"id": "em-mix-581", "text": "🕌 Taj 🥭", "meaning": "India"},
+            {"id": "em-mix-582", "text": "🍣 Fuji 🌸", "meaning": "Japan"},
+            {"id": "em-mix-583", "text": "🐉 Wall 🏯", "meaning": "China"},
+            {"id": "em-mix-584", "text": "🐪 Pyramid ☀️", "meaning": "Egypt"},
+            {"id": "em-mix-585", "text": "⚽ Samba 🦜", "meaning": "Brazil"},
+            {"id": "em-mix-586", "text": "🦘 Outback 🌏", "meaning": "Australia"},
+            {"id": "em-mix-587", "text": "🍁 Maple 🏒", "meaning": "Canada"},
+            {"id": "em-mix-588", "text": "🍕 Rome 🏛️", "meaning": "Italy"},
+            {"id": "em-mix-589", "text": "🌮 Aztec 🪅", "meaning": "Mexico"},
+            {"id": "em-mix-590", "text": "🗼 Louvre 🍷", "meaning": "France"},
+            {"id": "em-mix-591", "text": "🗽 Liberty 🦅", "meaning": "United States"},
+            {"id": "em-mix-592", "text": "☕ BigBen 👑", "meaning": "United Kingdom"},
+            {"id": "em-mix-593", "text": "🍺 Berlin 🏎️", "meaning": "Germany"},
+            {"id": "em-mix-594", "text": "💃 Madrid 🥘", "meaning": "Spain"},
+            {"id": "em-mix-595", "text": "🐻 Moscow ❄️", "meaning": "Russia"},
+            {"id": "em-mix-596", "text": "🌷 Windmill 🧀", "meaning": "Netherlands"},
+            {"id": "em-mix-597", "text": "🏔️ Alps 🍫", "meaning": "Switzerland"},
+            {"id": "em-mix-598", "text": "🏛️ Athens 🌊", "meaning": "Greece"},
+            {"id": "em-mix-599", "text": "☘️ Dublin 🎻", "meaning": "Ireland"},
+            {"id": "em-mix-600", "text": "🥬 Seoul 🎙️", "meaning": "South Korea"},
+            {"id": "em-mix-601", "text": "🍜 Hanoi ⛩️", "meaning": "Vietnam"},
+            {"id": "em-mix-602", "text": "🌴 Dubai 🏢", "meaning": "United Arab Emirates"},
+            {"id": "em-mix-603", "text": "🐘 Bangkok 🕌", "meaning": "Thailand"},
+            {"id": "em-mix-604", "text": "🥩 Tango ⚽", "meaning": "Argentina"},
+            {"id": "em-mix-605", "text": "🦙 Andes ☀️", "meaning": "Peru"},
+            {"id": "em-mix-606", "text": "🇳🇿 Kiwi 🏉", "meaning": "New Zealand"},
+            {"id": "em-mix-607", "text": "🦁 Safari 🐘", "meaning": "South Africa"},
+            {"id": "em-mix-608", "text": "🏰 Dracula 🍷", "meaning": "Romania"},
+            {"id": "em-mix-609", "text": "🧊 Geyser ♨️", "meaning": "Iceland"},
+            {"id": "em-mix-610", "text": "🏔️ Everest 📜", "meaning": "Nepal"},
+            {"id": "em-mix-611", "text": "💃 Havana 🇨🇺", "meaning": "Cuba"},
+            {"id": "em-mix-612", "text": "🗽 Apple 🚕", "meaning": "New York City"},
+            {"id": "em-mix-613", "text": "🗼 Romance 🎨", "meaning": "Paris"},
+            {"id": "em-mix-614", "text": "🎡 Thames 🌧️", "meaning": "London"},
+            {"id": "em-mix-615", "text": "🍣 Neon ⛩️", "meaning": "Tokyo"},
+            {"id": "em-mix-616", "text": "🍕 Colosseum 🛵", "meaning": "Rome"},
+            {"id": "em-mix-617", "text": "🐪 Burj 🌴", "meaning": "Dubai"},
+            {"id": "em-mix-618", "text": "🎰 Casinos 🎲", "meaning": "Las Vegas"},
+            {"id": "em-mix-619", "text": "🗽 Torch 🇺🇸", "meaning": "Statue of Liberty"},
+            {"id": "em-mix-620", "text": "🗼 Iron 🇫🇷", "meaning": "Eiffel Tower"},
+            {"id": "em-mix-621", "text": "⚡ Olympus 🏛️", "meaning": "Zeus"},
+            {"id": "em-mix-622", "text": "🔱 Trident 🐴", "meaning": "Poseidon"},
+            {"id": "em-mix-623", "text": "💀 Underworld 👑", "meaning": "Hades"},
+            {"id": "em-mix-624", "text": "🔨 Asgard 🌩️", "meaning": "Thor"},
+            {"id": "em-mix-625", "text": "🐍 Trickster 🎭", "meaning": "Loki"},
+            {"id": "em-mix-626", "text": "🐍 Stone 👁️", "meaning": "Medusa"},
+            {"id": "em-mix-627", "text": "🐂 Labyrinth 🌀", "meaning": "Minotaur"},
+            {"id": "em-mix-628", "text": "🔥 Ashes ✨", "meaning": "Phoenix"},
+            {"id": "em-mix-629", "text": "🪽 Wings ✨", "meaning": "Pegasus"},
+            {"id": "em-mix-630", "text": "🐶 Guard 🐶", "meaning": "Cerberus"},
+            {"id": "em-mix-631", "text": "☀️ Oracle 🎼", "meaning": "Apollo"},
+            {"id": "em-mix-632", "text": "🦉 Wisdom 🏛️", "meaning": "Athena"},
+            {"id": "em-mix-633", "text": "⚔️ War 🩸", "meaning": "Ares"},
+            {"id": "em-mix-634", "text": "🍇 Wine 🎭", "meaning": "Dionysus"},
+            {"id": "em-mix-635", "text": "🦁 Strength 💪", "meaning": "Hercules"},
+            {"id": "em-mix-636", "text": "🪽 Sun 🕯️", "meaning": "Icarus"},
+            {"id": "em-mix-637", "text": "🌍 World 🗿", "meaning": "Atlas"},
+            {"id": "em-mix-638", "text": "🐍 Heads 🐍", "meaning": "Hydra"},
+            {"id": "em-mix-639", "text": "🐙 Ship ⛵", "meaning": "Kraken"},
+            {"id": "em-mix-640", "text": "👑 Camelot 🤺", "meaning": "King Arthur"},
+            {"id": "em-mix-641", "text": "🏹 Sherwood 🌳", "meaning": "Robin Hood"},
+            {"id": "em-mix-642", "text": "👑 Nile 👁️", "meaning": "Cleopatra"},
+            {"id": "em-mix-643", "text": "🗡️ Rome 🏛️", "meaning": "Julius Caesar"},
+            {"id": "em-mix-644", "text": "🎨 Mona 🚁", "meaning": "Leonardo da Vinci"},
+            {"id": "em-mix-645", "text": "🧠 Relativity 💡", "meaning": "Albert Einstein"},
+            {"id": "em-mix-646", "text": "🍎 Gravity 📉", "meaning": "Isaac Newton"},
+            {"id": "em-mix-647", "text": "🚀 Apollo 🧑‍🚀", "meaning": "Moon Landing"},
+            {"id": "em-mix-648", "text": "☄️ Impact 🦕", "meaning": "Extinction of Dinosaurs"},
+            {"id": "em-mix-649", "text": "🏴‍☠️ Pirate 💣", "meaning": "Blackbeard"},
+            {"id": "em-mix-650", "text": "🕊️ Flood 🌿", "meaning": "Noah's Ark"},
+            {"id": "em-mix-651", "text": "🍰 Easy 🍰", "meaning": "Piece of Cake"},
+            {"id": "em-mix-652", "text": "🐱 Pouring 🌧️", "meaning": "Raining Cats and Dogs"},
+            {"id": "em-mix-653", "text": "🧠 Idea 🌩️", "meaning": "Brainstorm"},
+            {"id": "em-mix-654", "text": "🥶 Nervous 🦶", "meaning": "Cold Feet"},
+            {"id": "em-mix-655", "text": "💛 Kind ✨", "meaning": "Heart of Gold"},
+            {"id": "em-mix-656", "text": "⏱️ Value 💸", "meaning": "Time is Money"},
+            {"id": "em-mix-657", "text": "🦋 Anxious 💥", "meaning": "Butterflies in Stomach"},
+            {"id": "em-mix-658", "text": "🧱 Ignore 🧱", "meaning": "Talking to a Brick Wall"},
+            {"id": "em-mix-659", "text": "💧 Secret 🗣️", "meaning": "Spill the Beans"},
+            {"id": "em-mix-660", "text": "💥 Luck 🎭", "meaning": "Break a Leg"},
+            {"id": "em-mix-661", "text": "👁️ Favorite 👁️", "meaning": "Apple of My Eye"},
+            {"id": "em-mix-662", "text": "🔥 Truth 🤥", "meaning": "Liar Liar Pants on Fire"},
+            {"id": "em-mix-663", "text": "⏳ Fast 💨", "meaning": "Time Flies"},
+            {"id": "em-mix-664", "text": "🐷 Never ☁️", "meaning": "When Pigs Fly"},
+            {"id": "em-mix-665", "text": "🤐 Quiet 🤐", "meaning": "Zip It"},
+            {"id": "em-mix-666", "text": "💸 Power 💬", "meaning": "Money Talks"},
+            {"id": "em-mix-667", "text": "🧊 Start 🗣️", "meaning": "Break the Ice"},
+            {"id": "em-mix-668", "text": "🛏️ Rest 🛑", "meaning": "Sleep Tight"},
+            {"id": "em-mix-669", "text": "🐘 Obvious 👀", "meaning": "Elephant in the Room"},
+            {"id": "em-mix-670", "text": "🍳 Careful 🚶‍♂️", "meaning": "Walking on Eggshells"},
+            {"id": "em-mix-671", "text": "⚡ Rare ✨", "meaning": "Lightning in a Bottle"},
+            {"id": "em-mix-672", "text": "⏳ Past 🔁", "meaning": "Time Travel"},
+            {"id": "em-mix-673", "text": "👂 Ignore 🙉", "meaning": "Fall on Deaf Ears"},
+            {"id": "em-mix-674", "text": "🏃‍♂️ Fast 🔥", "meaning": "Run Like the Wind"},
+            {"id": "em-mix-675", "text": "👅 Speechless ❓", "meaning": "Cat Got Your Tongue"},
+            {"id": "em-mix-676", "text": "🐴 Source 🗣️", "meaning": "Straight From the Horse's Mouth"},
+            {"id": "em-mix-677", "text": "🐦 Double 🪨", "meaning": "Kill Two Birds With One Stone"},
+            {"id": "em-mix-678", "text": "🥵 Issue 🔥", "meaning": "Hot Potato"},
+            {"id": "em-mix-679", "text": "🎵 Good 😊", "meaning": "Music to My Ears"},
+            {"id": "em-mix-680", "text": "🌙 Rare 🌒", "meaning": "Once in a Blue Moon"},
+            {"id": "em-mix-681", "text": "🎄 Snow 🎁", "meaning": "Christmas"},
+            {"id": "em-mix-682", "text": "🎃 Scare 👻", "meaning": "Halloween"},
+            {"id": "em-mix-683", "text": "🦃 Feast 🥧", "meaning": "Thanksgiving"},
+            {"id": "em-mix-684", "text": "💖 Cupid 🌹", "meaning": "Valentine's Day"},
+            {"id": "em-mix-685", "text": "🥚 Hunt 🐣", "meaning": "Easter"},
+            {"id": "em-mix-686", "text": "🎆 Midnight 🎇", "meaning": "New Year's Eve"},
+            {"id": "em-mix-687", "text": "🪔 Lights 🎆", "meaning": "Diwali"},
+            {"id": "em-mix-688", "text": "☘️ Luck 🌈", "meaning": "St. Patrick's Day"},
+            {"id": "em-mix-689", "text": "🐲 Lantern 🥁", "meaning": "Chinese New Year"},
+            {"id": "em-mix-690", "text": "🎂 Party 🎁", "meaning": "Birthday"},
+            {"id": "em-mix-691", "text": "👰‍♀️ Vows 💒", "meaning": "Wedding"},
+            {"id": "em-mix-692", "text": "🎓 Degree 🎓", "meaning": "Graduation"},
+            {"id": "em-mix-693", "text": "✈️ Trip 🏝️", "meaning": "Vacation"},
+            {"id": "em-mix-694", "text": "🍿 Film 🎟️", "meaning": "Movie Night"},
+            {"id": "em-mix-695", "text": "🎤 Dance 💃", "meaning": "Party"},
+            {"id": "em-mix-696", "text": "🛒 Buy 💳", "meaning": "Shopping"},
+            {"id": "em-mix-697", "text": "🏎️ Drive 🏎️", "meaning": "Road Trip"},
+            {"id": "em-mix-698", "text": "👶 Crib 🧸", "meaning": "Baby"},
+            {"id": "em-mix-699", "text": "📚 Learn 🎓", "meaning": "School"},
+            {"id": "em-mix-700", "text": "💼 Desk ☕", "meaning": "Office Job"},
+            {"id": "em-mix-701", "text": "🎸 King 👑", "meaning": "Elvis Presley"},
+            {"id": "em-mix-702", "text": "🕺 Pop ✨", "meaning": "Michael Jackson"},
+            {"id": "em-mix-703", "text": "🎸 Rock 👅", "meaning": "The Rolling Stones"},
+            {"id": "em-mix-704", "text": "🍏 Band 🚶‍♂️", "meaning": "The Beatles"},
+            {"id": "em-mix-705", "text": "👑 Queen 🎶", "meaning": "Beyoncé"},
+            {"id": "em-mix-706", "text": "👱‍♀️ Era 💔", "meaning": "Taylor Swift"},
+            {"id": "em-mix-707", "text": "🕶️ Soul 🎵", "meaning": "Ray Charles"},
+            {"id": "em-mix-708", "text": "🎩 Brass 🎶", "meaning": "Jazz"},
+            {"id": "em-mix-709", "text": "🤠 Boots 🎶", "meaning": "Country Music"},
+            {"id": "em-mix-710", "text": "🎧 Rave 🔊", "meaning": "EDM"},
+            {"id": "em-mix-711", "text": "👨‍🚒 Hose 🔥", "meaning": "Firefighter"},
+            {"id": "em-mix-712", "text": "👨‍🚀 Suit 🌕", "meaning": "Astronaut"},
+            {"id": "em-mix-713", "text": "👨‍🍳 Hat 🔪", "meaning": "Chef"},
+            {"id": "em-mix-714", "text": "👨‍⚕️ Cure 🏥", "meaning": "Doctor"},
+            {"id": "em-mix-715", "text": "🕵️‍♂️ Clues 🕵️", "meaning": "Detective"},
+            {"id": "em-mix-716", "text": "👮‍♂️ Badge 🚔", "meaning": "Police Officer"},
+            {"id": "em-mix-717", "text": "👨‍✈️ Fly ☁️", "meaning": "Pilot"},
+            {"id": "em-mix-718", "text": "🎨 Canvas 🖼️", "meaning": "Artist"},
+            {"id": "em-mix-719", "text": "🎸 Play 🧑‍🎤", "meaning": "Musician"},
+            {"id": "em-mix-720", "text": "👨‍🏫 Class 🏫", "meaning": "Teacher"},
+            {"id": "em-mix-721", "text": "📸 Flash 💥", "meaning": "Photographer"},
+            {"id": "em-mix-722", "text": "🧱 Build 👷‍♂️", "meaning": "Construction Worker"},
+            {"id": "em-mix-723", "text": "🧑‍🌾 Crop 🌾", "meaning": "Farmer"},
+            {"id": "em-mix-724", "text": "👨‍🔬 Lab 🔬", "meaning": "Scientist"},
+            {"id": "em-mix-725", "text": "⚖️ Court 🏛️", "meaning": "Judge"},
+            {"id": "em-mix-726", "text": "✂️ Fade 💇‍♂️", "meaning": "Barber"},
+            {"id": "em-mix-727", "text": "🦷 Clean 👨‍⚕️", "meaning": "Dentist"},
+            {"id": "em-mix-728", "text": "🪄 Tricks 🐇", "meaning": "Magician"},
+            {"id": "em-mix-729", "text": "📰 Live 📺", "meaning": "News Reporter"},
+            {"id": "em-mix-730", "text": "💌 Post 📫", "meaning": "Mail Carrier"},
+            {"id": "em-mix-731", "text": "🩸 Forks 🍷", "meaning": "Twilight"},
+            {"id": "em-mix-732", "text": "👽 Home 📞", "meaning": "E.T."},
+            {"id": "em-mix-733", "text": "🚙 Hunters 🔫", "meaning": "Supernatural"},
+            {"id": "em-mix-734", "text": "🩸 Brothers ❤️", "meaning": "The Vampire Diaries"},
+            {"id": "em-mix-735", "text": "👨‍🔬 Delorean 🕰️", "meaning": "Back to the Future"},
+            {"id": "em-mix-736", "text": "🧙‍♀️ Sisters 🐈‍⬛", "meaning": "Hocus Pocus"},
+            {"id": "em-mix-737", "text": "🍫 Golden 🏭", "meaning": "Willy Wonka"},
+            {"id": "em-mix-738", "text": "🏴‍☠️ Map ⚓", "meaning": "Treasure Island"},
+            {"id": "em-mix-739", "text": "🦹‍♂️ Assemble 🏙️", "meaning": "Avengers"},
+            {"id": "em-mix-740", "text": "🕷️ Miles 🏢", "meaning": "Spider-Verse"},
+            {"id": "em-mix-741", "text": "🦖 Indominus 🔬", "meaning": "Jurassic World"},
+            {"id": "em-mix-742", "text": "🐼 Warrior 🇨🇳", "meaning": "Kung Fu Panda"},
+            {"id": "em-mix-743", "text": "🐉 Mother 👸", "meaning": "Daenerys Targaryen"},
+            {"id": "em-mix-744", "text": "🗡️ Watch ❄️", "meaning": "Jon Snow"},
+            {"id": "em-mix-745", "text": "👨‍🔬 Potion 💀", "meaning": "Jekyll and Hyde"},
+            {"id": "em-mix-746", "text": "🕵️‍♂️ Deduction 🇬🇧", "meaning": "Sherlock Holmes"},
+            {"id": "em-mix-747", "text": "🦇 Blind 🔴", "meaning": "Daredevil"},
+            {"id": "em-mix-748", "text": "🏹 Arrows 👁️", "meaning": "Hawkeye"},
+            {"id": "em-mix-749", "text": "🏜️ Spice 🪱", "meaning": "Dune"}
         ],
         "type": "default",
         "color": "yellow",

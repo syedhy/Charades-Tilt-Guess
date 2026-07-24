@@ -6,6 +6,7 @@ struct CustomDeckDetailView: View {
     @EnvironmentObject private var settingsViewModel: SettingsViewModel
     @StateObject private var viewModel: CustomDeckDetailViewModel
     private let mode: GameMode
+    private let fromMyDecks: Bool
     @State private var isEditingDeckIdentity = false
     @State private var isShowingDeleteConfirmation = false
     @State private var isShowingUnsavedChangesAlert = false
@@ -17,14 +18,16 @@ struct CustomDeckDetailView: View {
     @FocusState private var isNameFocused: Bool
 
     @MainActor
-    init(deck: Deck, mode: GameMode = .normal) {
+    init(deck: Deck, mode: GameMode = .normal, fromMyDecks: Bool = false) {
         self.mode = mode
+        self.fromMyDecks = fromMyDecks
         _viewModel = StateObject(wrappedValue: CustomDeckDetailViewModel(deck: deck))
     }
 
     @MainActor
-    init(viewModel: CustomDeckDetailViewModel, mode: GameMode = .normal) {
+    init(viewModel: CustomDeckDetailViewModel, mode: GameMode = .normal, fromMyDecks: Bool = false) {
         self.mode = mode
+        self.fromMyDecks = fromMyDecks
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
@@ -218,64 +221,56 @@ struct CustomDeckDetailView: View {
     }
 
     private var playDeckButton: some View {
-        VStack(spacing: 8) {
-            DoodleActionButton(
-                title: viewModel.draftCards.isEmpty ? "Add cards to play" : "Play (Normal Mode)",
-                symbol: viewModel.draftCards.isEmpty ? "exclamationmark.circle.fill" : "play.fill",
-                accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : viewModel.draftColor.displayColor
-            ) {
-                playDeck(mode: .normal)
-            }
-            .disabled(viewModel.draftCards.isEmpty)
-            .accessibilityIdentifier("playDeckButton")
+        VStack(spacing: 10) {
+            if fromMyDecks || mode == .emoji {
+                Text("PLAY THIS DECK")
+                    .font(.system(size: 12, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-            if !viewModel.draftCards.isEmpty {
-                HStack(spacing: 12) {
-                    Button {
-                        playDeck(mode: .infinite)
-                    } label: {
-                        HStack(spacing: 6) {
-                            Image(systemName: "infinity")
-                            Text("Infinite")
-                        }
-                        .font(.system(size: 15, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 48)
-                        .background(AppTheme.Colors.paperBright)
-                        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                .stroke(AppTheme.Colors.ink, lineWidth: 3)
-                        )
-                    }
-                    .buttonStyle(DoodlePressStyle())
-                    .accessibilityIdentifier("playInfiniteDeckButton")
+                let mainMode: GameMode = viewModel.deck.isEmojiDeck ? .emoji : .normal
+                let mainTitle = viewModel.deck.isEmojiDeck ? "Emoji Mode" : "Normal Mode"
 
-                    Button {
-                        playTeamMatch()
-                    } label: {
-                        HStack(spacing: 6) {
-                            Image(systemName: "person.2.fill")
-                            Text("Teams")
-                        }
-                        .font(.system(size: 15, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 48)
-                        .background(AppTheme.Colors.paperBright)
-                        .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                .stroke(AppTheme.Colors.ink, lineWidth: 3)
-                        )
+                VStack(spacing: 8) {
+                    DoodleActionButton(
+                        title: mainTitle,
+                        symbol: mainMode.symbolName,
+                        accent: mainMode.accentColor
+                    ) {
+                        playDeck(mode: mainMode)
                     }
-                    .buttonStyle(DoodlePressStyle())
-                    .accessibilityIdentifier("playTeamsDeckButton")
+
+                    HStack(spacing: 10) {
+                        DoodleActionButton(
+                            title: "Infinite",
+                            symbol: GameMode.infinite.symbolName,
+                            accent: GameMode.infinite.accentColor
+                        ) {
+                            playDeck(mode: .infinite)
+                        }
+
+                        DoodleActionButton(
+                            title: "Teams",
+                            symbol: GameMode.teamVsTeam.symbolName,
+                            accent: GameMode.teamVsTeam.accentColor
+                        ) {
+                            playTeamMatch()
+                        }
+                    }
                 }
+            } else {
+                DoodleActionButton(
+                    title: viewModel.draftCards.isEmpty ? "Add cards to play" : "Play deck",
+                    symbol: viewModel.draftCards.isEmpty ? "exclamationmark.circle.fill" : "play.fill",
+                    accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : viewModel.draftColor.displayColor
+                ) {
+                    playDeck()
+                }
+                .disabled(viewModel.draftCards.isEmpty)
             }
         }
         .opacity(viewModel.draftCards.isEmpty ? 0.62 : 1)
+        .accessibilityIdentifier("playDeckButton")
     }
 
     private var editFormPanel: some View {
@@ -461,7 +456,8 @@ struct CustomDeckDetailView: View {
         }
     }
 
-    private func playDeck(mode playMode: GameMode = .normal) {
+    private func playDeck(mode playMode: GameMode? = nil) {
+        let targetMode = playMode ?? self.mode
         if isCustomDeck && viewModel.hasUnsavedChanges {
             guard let savedDeck = viewModel.saveDraft() else {
                 isEditingDeckIdentity = true
@@ -470,11 +466,11 @@ struct CustomDeckDetailView: View {
 
             isNameFocused = false
             hideIdentityEditorImmediately()
-            router.startGame(mode: playMode, deck: savedDeck, settings: settingsViewModel.settings)
+            router.startGame(mode: targetMode, deck: savedDeck, settings: settingsViewModel.settings)
             return
         }
 
-        router.startGame(mode: playMode, deck: viewModel.deck, settings: settingsViewModel.settings)
+        router.startGame(mode: targetMode, deck: viewModel.deck, settings: settingsViewModel.settings)
     }
 
     private func playTeamMatch() {
@@ -723,7 +719,7 @@ private struct AddCardSheet: View {
                     .accessibilityIdentifier("manualCardTextField")
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Meaning / Answer (Optional)")
+                    Text(viewModel.deck.isEmojiDeck ? "Meaning / Answer (Required)" : "Meaning / Answer (Optional)")
                         .font(.system(size: 14, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
 
@@ -742,7 +738,7 @@ private struct AddCardSheet: View {
                         }
                 }
 
-                if let cardErrorMessage = viewModel.cardValidationMessage(for: cardText), !cardText.isEmpty {
+                if let cardErrorMessage = viewModel.cardValidationMessage(for: cardText, meaning: cardMeaning), !cardText.isEmpty {
                     Text(cardErrorMessage)
                         .font(.system(size: 13, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.coral)
@@ -754,10 +750,11 @@ private struct AddCardSheet: View {
     }
 
     private var addCardButton: some View {
-        DoodleActionButton(
+        let canAdd = viewModel.canAddCard(text: cardText, meaning: cardMeaning)
+        return DoodleActionButton(
             title: "Add card",
             symbol: "plus",
-            accent: viewModel.canAddCard(text: cardText) ? AppTheme.Colors.mint : AppTheme.Colors.gray.opacity(0.42)
+            accent: canAdd ? AppTheme.Colors.mint : AppTheme.Colors.gray.opacity(0.42)
         ) {
             let addedText = cardText.trimmingCharacters(in: .whitespacesAndNewlines)
             guard viewModel.addCard(text: cardText, meaning: cardMeaning) else { return }
@@ -766,8 +763,8 @@ private struct AddCardSheet: View {
             isCardFocused = true
             showAddedToast(for: addedText)
         }
-        .disabled(!viewModel.canAddCard(text: cardText))
-        .opacity(viewModel.canAddCard(text: cardText) ? 1 : 0.60)
+        .disabled(!canAdd)
+        .opacity(canAdd ? 1 : 0.60)
         .accessibilityIdentifier("addManualCardButton")
     }
 
@@ -865,17 +862,11 @@ private struct PasteCardsSheet: View {
                         dismiss()
                     }
 
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Paste from clipboard")
-                            .font(.system(size: 32, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                            .lineLimit(2)
-                            .minimumScaleFactor(0.72)
-
-                        Text("Put each card on its own line\nLists from AI work great here")
-                            .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
-                    }
+                    Text("Paste clipboard")
+                        .font(.system(size: 28, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
 
                 DoodleActionButton(

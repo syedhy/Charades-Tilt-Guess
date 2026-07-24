@@ -19,6 +19,7 @@
 		5180AE57DC32247A202A7BF8 /* default-food.json in Resources */ = {isa = PBXBuildFile; fileRef = 678F539163FBAEFAD6000827 /* default-food.json */; };
 		589CDF95A05DEDD3C803235E /* emoji-food.json in Resources */ = {isa = PBXBuildFile; fileRef = 22C1983614BB6B2495FD8FD1 /* emoji-food.json */; };
 		5A9D53B880BCAFBEBA5015F4 /* default-hard.json in Resources */ = {isa = PBXBuildFile; fileRef = B9FE01940853EA4570787E64 /* default-hard.json */; };
+		5AAE0A98D34AB2CA7FBC4D5A /* MyDecksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854E97E20842DCEC24AFCC1D /* MyDecksListView.swift */; };
 		5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */; };
 		6F208C72EC7AACDF18B75C30 /* default-school.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8BD66528C3CBB528FE1605 /* default-school.json */; };
 		8451797B5A2B7410175BD565 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 48C37B80ACA61339B912EC5F /* correct.wav */; };
@@ -147,6 +148,7 @@
 		6E65C14F1D8DF525C2CF622E /* default-sports.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-sports.json"; sourceTree = "<group>"; };
 		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-science.json"; sourceTree = "<group>"; };
 		78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
+		854E97E20842DCEC24AFCC1D /* MyDecksListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyDecksListView.swift; sourceTree = "<group>"; };
 		860558B3159DDE727387BC26 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		8C7213D1B544528C8F07612D /* emoji-pop.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-pop.json"; sourceTree = "<group>"; };
 		91E0776020540DF6907BA087 /* endCountDown.wav */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = audio.wav; path = endCountDown.wav; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */,
 				29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */,
 				2BE63BEE7463D32D6FA629DC /* BuyMeACoffeeView.swift */,
+				854E97E20842DCEC24AFCC1D /* MyDecksListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				CCE80A49BA7B46EA526290D7 /* StoreKitManager.swift in Sources */,
 				C55030FAA1DF0B60E7A9FF65 /* OnboardingSplashView.swift in Sources */,
 				5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */,
+				5AAE0A98D34AB2CA7FBC4D5A /* MyDecksListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

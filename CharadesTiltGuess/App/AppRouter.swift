@@ -3,8 +3,9 @@ import SwiftUI
 enum AppRoute: Hashable {
     case settings
     case onboarding
-    case deckEditor
-    case customDeckDetail(deck: Deck, mode: GameMode)
+    case deckEditor(isEmoji: Bool = false)
+    case myDecks
+    case customDeckDetail(deck: Deck, mode: GameMode, fromMyDecks: Bool = false)
     case modeDeckSelection(mode: GameMode)
     case pasteAndPlay
     case mixAndMatch
@@ -196,10 +197,12 @@ struct AppShellView: View {
                     router.goBack()
                 }
             }
-        case .deckEditor:
-            DeckEditorView()
-        case let .customDeckDetail(deck, mode):
-            CustomDeckDetailView(deck: deck, mode: mode)
+        case let .deckEditor(isEmoji):
+            DeckEditorView(isEmoji: isEmoji)
+        case .myDecks:
+            MyDecksListView()
+        case let .customDeckDetail(deck, mode, fromMyDecks):
+            CustomDeckDetailView(deck: deck, mode: mode, fromMyDecks: fromMyDecks)
         case let .modeDeckSelection(mode):
             ModeDeckSelectionView(mode: mode)
         case .pasteAndPlay:

@@ -5,6 +5,7 @@ final class DeckEditorViewModel: ObservableObject {
     @Published var deckName = ""
     @Published var selectedColor: DeckColor = .mint
     @Published private(set) var saveErrorMessage: String?
+    let isEmoji: Bool
 
     private let deckStore: DeckStore
     private let idProvider: () -> String
@@ -13,10 +14,13 @@ final class DeckEditorViewModel: ObservableObject {
     let availableColors: [DeckColor] = [.mint, .yellow, .coral, .blue, .purple, .pink, .orange, .gray]
 
     init(
+        isEmoji: Bool = false,
         deckStore: DeckStore = DeckStore(),
         idProvider: @escaping () -> String = { "custom-\(UUID().uuidString)" },
         dateProvider: @escaping () -> Date = Date.init
     ) {
+        self.isEmoji = isEmoji
+        self.selectedColor = isEmoji ? .yellow : .mint
         self.deckStore = deckStore
         self.idProvider = idProvider
         self.dateProvider = dateProvider
@@ -42,14 +46,19 @@ final class DeckEditorViewModel: ObservableObject {
         }
 
         let now = dateProvider()
+        let prefix = isEmoji ? "emoji-custom-" : "custom-"
+        let rawID = idProvider()
+        let deckID = rawID.hasPrefix("custom-") ? rawID.replacingOccurrences(of: "custom-", with: prefix) : prefix + rawID
+
         let deck = Deck(
-            id: idProvider(),
+            id: deckID,
             name: trimmedDeckName,
             description: nil,
             cards: [],
             type: .custom,
             color: selectedColor,
-            symbolName: "rectangle.stack",
+            symbolName: isEmoji ? "face.smiling.fill" : "rectangle.stack",
+            isEmoji: isEmoji,
             createdDate: now,
             updatedDate: now
         )

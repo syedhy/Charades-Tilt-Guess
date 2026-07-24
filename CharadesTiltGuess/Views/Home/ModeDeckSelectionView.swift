@@ -62,19 +62,26 @@ struct ModeDeckSelectionView: View {
 
     private var deckSections: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-            if !viewModel.customDecks.isEmpty {
-                deckSection(title: "Custom Decks", decks: viewModel.customDecks)
-            }
+            let filteredCustomDecks = mode == .emoji
+                ? viewModel.customDecks.filter { $0.isEmojiDeck }
+                : viewModel.customDecks.filter { !$0.isEmojiDeck }
+
+            let customTitle = mode == .emoji ? "Custom Emoji Decks" : "Custom Decks"
+            deckSection(title: customTitle, decks: filteredCustomDecks, isCustom: true)
 
             let filteredDefaultDecks = mode == .emoji 
-                ? viewModel.defaultDecks.filter { $0.id.hasPrefix("emoji-") }
-                : viewModel.defaultDecks.filter { !$0.id.hasPrefix("emoji-") }
+                ? viewModel.defaultDecks.filter { $0.isEmojiDeck }
+                : viewModel.defaultDecks.filter { !$0.isEmojiDeck }
 
-            deckSection(title: "Built-In Decks", decks: filteredDefaultDecks)
+            deckSection(title: "Built-In Decks", decks: filteredDefaultDecks, isCustom: false)
 
-            DoodleActionButton(title: "Add custom deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
+            DoodleActionButton(
+                title: mode == .emoji ? "Add custom emoji deck" : "Add custom deck",
+                symbol: "plus",
+                accent: AppTheme.Colors.paperBright
+            ) {
                 if viewModel.canCreateNewDeck {
-                    router.openImmediately(.deckEditor)
+                    router.openImmediately(.deckEditor(isEmoji: mode == .emoji))
                 } else {
                     showingLimitAlert = true
                 }
@@ -82,15 +89,33 @@ struct ModeDeckSelectionView: View {
         }
     }
 
-    private func deckSection(title: String, decks: [Deck]) -> some View {
+    private func deckSection(title: String, decks: [Deck], isCustom: Bool = false) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text(title)
-                .font(.system(size: 25, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink)
+            HStack {
+                Text(title)
+                    .font(.system(size: 25, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Spacer()
+
+                if isCustom {
+                    DoodleIconButton(
+                        symbol: "plus",
+                        size: 38,
+                        accessibilityLabel: "Add custom deck"
+                    ) {
+                        if viewModel.canCreateNewDeck {
+                            router.openImmediately(.deckEditor(isEmoji: mode == .emoji))
+                        } else {
+                            showingLimitAlert = true
+                        }
+                    }
+                }
+            }
 
             if decks.isEmpty {
                 DoodlePanel {
-                    Text(title == "Custom Decks" ? "Create a deck to see it here." : "Built-in decks could not be loaded.")
+                    Text(isCustom ? (mode == .emoji ? "Create an emoji deck to see it here." : "Create a deck to see it here.") : "Built-in decks could not be loaded.")
                         .font(.system(size: 16, weight: .bold, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                         .frame(maxWidth: .infinity, alignment: .leading)

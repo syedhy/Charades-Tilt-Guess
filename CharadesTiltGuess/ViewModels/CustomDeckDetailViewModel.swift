@@ -75,15 +75,26 @@ final class CustomDeckDetailViewModel: ObservableObject {
         "\(min(text.count, Self.maxCardTextLength)) / \(Self.maxCardTextLength)"
     }
 
-    func canAddCard(text: String) -> Bool {
-        cardValidationMessage(for: text) == nil
+    func canAddCard(text: String, meaning: String? = nil) -> Bool {
+        cardValidationMessage(for: text, meaning: meaning) == nil
     }
 
-    func cardValidationMessage(for text: String) -> String? {
+    func cardValidationMessage(for text: String, meaning: String? = nil) -> String? {
         let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
 
         if trimmedText.isEmpty {
             return "Type a card first."
+        }
+
+        if deck.isEmojiDeck {
+            if !trimmedText.containsEmoji {
+                return "Emoji cards must contain at least one emoji."
+            }
+
+            let trimmedMeaning = meaning?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            if trimmedMeaning.isEmpty {
+                return "Emoji cards require a meaning/answer."
+            }
         }
 
         if trimmedText.count > Self.maxCardTextLength {
@@ -103,7 +114,7 @@ final class CustomDeckDetailViewModel: ObservableObject {
 
     @discardableResult
     func addCard(text: String, meaning: String? = nil) -> Bool {
-        if let message = cardValidationMessage(for: text) {
+        if let message = cardValidationMessage(for: text, meaning: meaning) {
             cardErrorMessage = message
             return false
         }
@@ -213,4 +224,17 @@ extension CustomDeckDetailViewModel {
     static let maxNameLength = 20
     static let maxCardTextLength = 30
     static let maxCustomDeckCardCount = 1500
+}
+
+extension Character {
+    var isEmoji: Bool {
+        guard let scalar = unicodeScalars.first else { return false }
+        return scalar.properties.isEmoji && (scalar.value > 0x2388 || scalar.properties.isEmojiPresentation)
+    }
+}
+
+extension String {
+    var containsEmoji: Bool {
+        contains { $0.isEmoji }
+    }
 }

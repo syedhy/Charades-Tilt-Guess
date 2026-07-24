@@ -83,20 +83,14 @@ struct HomeView: View {
             HStack(spacing: 12) {
                 quickAction(title: "Add Deck", symbol: "plus", accent: AppTheme.Colors.paperBright) {
                     if viewModel.canCreateNewDeck {
-                        router.openImmediately(.deckEditor)
+                        router.openImmediately(.deckEditor())
                     } else {
                         showingLimitAlert = true
                     }
                 }
 
                 quickAction(title: "My Decks", symbol: "rectangle.stack.fill", accent: AppTheme.Colors.paperBright) {
-                    if let firstCustom = viewModel.customDecks.first {
-                        router.open(.customDeckDetail(deck: firstCustom, mode: .normal))
-                    } else if viewModel.canCreateNewDeck {
-                        router.openImmediately(.deckEditor)
-                    } else {
-                        showingLimitAlert = true
-                    }
+                    router.open(.myDecks)
                 }
             }
 

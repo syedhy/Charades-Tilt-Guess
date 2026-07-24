@@ -6,8 +6,8 @@ struct DeckEditorView: View {
     @FocusState private var isNameFocused: Bool
 
     @MainActor
-    init() {
-        _viewModel = StateObject(wrappedValue: DeckEditorViewModel())
+    init(isEmoji: Bool = false) {
+        _viewModel = StateObject(wrappedValue: DeckEditorViewModel(isEmoji: isEmoji))
     }
 
     @MainActor

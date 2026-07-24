@@ -113,7 +113,7 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.importPreview.overDeckLimitCount, 2)
         XCTAssertEqual(
             viewModel.importPreview.summaryMessages.last,
-            "2 cards were skipped because custom decks are limited to 200 cards."
+            "2 cards were skipped because custom decks are limited to \(CustomDeckDetailViewModel.maxCustomDeckCardCount) cards."
         )
 
         XCTAssertEqual(viewModel.importCards(from: pastedText), 1)
@@ -165,6 +165,31 @@ final class CustomDeckDetailViewModelTests: XCTestCase {
 
         XCTAssertTrue(viewModel.deleteDeck())
         XCTAssertEqual(try store.loadDecks(), [])
+    }
+
+    func testEmojiDeckRequiresEmojiAndMeaning() {
+        let emojiDeck = Deck(
+            id: "emoji-custom-test",
+            name: "Emoji Test",
+            description: nil,
+            cards: [],
+            type: .custom,
+            color: .yellow,
+            symbolName: "face.smiling.fill",
+            isEmoji: true,
+            createdDate: Date(),
+            updatedDate: Date()
+        )
+        let viewModel = CustomDeckDetailViewModel(deck: emojiDeck)
+
+        XCTAssertFalse(viewModel.addCard(text: "No Emoji Here", meaning: "Batman"))
+        XCTAssertEqual(viewModel.cardErrorMessage, "Emoji cards must contain at least one emoji.")
+
+        XCTAssertFalse(viewModel.addCard(text: "🦇👨", meaning: nil))
+        XCTAssertEqual(viewModel.cardErrorMessage, "Emoji cards require a meaning/answer.")
+
+        XCTAssertTrue(viewModel.addCard(text: "🦇👨", meaning: "Batman"))
+        XCTAssertEqual(viewModel.draftCards.first?.meaning, "Batman")
     }
 
     private func makeViewModel(

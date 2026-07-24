@@ -1,7 +1,7 @@
 [
     {
         "id": "emoji-animals",
-        "name": "Emoji Animals & Nature",
+        "name": "Animals",
         "description": "Guess animals and nature puzzles from emojis!",
         "cards": [
             { "id": "em-a-001", "text": "🐵🍌", "meaning": "Monkey eating Banana" },

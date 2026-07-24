@@ -1,5 +1,21 @@
 import Foundation
 
+struct TeamInfo: Identifiable, Hashable, Equatable {
+    let id: Int
+    var name: String
+    var icon: String
+    var color: DeckColor
+    var score: Int = 0
+
+    static let defaultPresets: [(name: String, icon: String, color: DeckColor)] = [
+        ("Tigers", "🐅", .orange),
+        ("Lions", "🦁", .yellow),
+        ("Rhinos", "🦏", .mint),
+        ("Eagles", "🦅", .blue),
+        ("Wolves", "🐺", .purple)
+    ]
+}
+
 final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable {
     let id = UUID()
 
@@ -10,53 +26,93 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
+
     let sourceDecks: [Deck]
-    let totalRounds: Int
+    let numberOfTeams: Int
+    let playersPerTeam: Int
     let duration: Int
 
+    @Published var teams: [TeamInfo]
     @Published var currentRound: Int = 1
-    @Published var currentTeam: Int = 1
-
-    @Published var team1Score: Int = 0
-    @Published var team2Score: Int = 0
-
+    @Published var currentTeamIndex: Int = 0
     @Published var currentDeck: Deck?
 
-    init(sourceDecks: [Deck], totalRounds: Int, duration: Int) {
+    // Backward-compatibility properties
+    var totalRounds: Int { playersPerTeam }
+    var currentTeam: Int { currentTeamIndex + 1 }
+    var team1Score: Int { teams.indices.contains(0) ? teams[0].score : 0 }
+    var team2Score: Int { teams.indices.contains(1) ? teams[1].score : 0 }
+
+    init(numberOfTeams: Int = 2, playersPerTeam: Int = 4, sourceDecks: [Deck], duration: Int) {
+        let clampedTeams = max(2, min(5, numberOfTeams))
+        let clampedPlayers = max(1, min(10, playersPerTeam))
+
+        self.numberOfTeams = clampedTeams
+        self.playersPerTeam = clampedPlayers
         self.sourceDecks = sourceDecks
-        self.totalRounds = totalRounds
         self.duration = duration
+
+        var generatedTeams: [TeamInfo] = []
+        for index in 0..<clampedTeams {
+            let preset = TeamInfo.defaultPresets[index % TeamInfo.defaultPresets.count]
+            generatedTeams.append(
+                TeamInfo(
+                    id: index + 1,
+                    name: preset.name,
+                    icon: preset.icon,
+                    color: preset.color,
+                    score: 0
+                )
+            )
+        }
+        self.teams = generatedTeams
+
         generateDeckForCurrentRound()
     }
 
+    convenience init(sourceDecks: [Deck], totalRounds: Int, duration: Int) {
+        self.init(numberOfTeams: 2, playersPerTeam: totalRounds, sourceDecks: sourceDecks, duration: duration)
+    }
+
     var isGameOver: Bool {
-        currentRound > totalRounds
+        currentRound > playersPerTeam
+    }
+
+    var currentTeamInfo: TeamInfo {
+        teams.indices.contains(currentTeamIndex) ? teams[currentTeamIndex] : teams[0]
+    }
+
+    var leaderboard: [TeamInfo] {
+        teams.sorted { $0.score > $1.score }
     }
 
     var winnerText: String {
-        if team1Score > team2Score {
-            return "Team 1 Wins!"
-        } else if team2Score > team1Score {
-            return "Team 2 Wins!"
+        guard let topScore = leaderboard.first?.score else { return "No Winner" }
+        let winners = teams.filter { $0.score == topScore }
+
+        if winners.count == 1 {
+            return "\(winners[0].icon) \(winners[0].name) Win!"
         } else {
-            return "It's a Tie!"
+            let names = winners.map { "\($0.icon) \($0.name)" }.joined(separator: " & ")
+            return "Tie between \(names)!"
         }
     }
 
     func recordResult(_ result: RoundResult) {
         let score = result.correctWords.count
 
-        if currentTeam == 1 {
-            team1Score += score
-            currentTeam = 2
-            shuffleCurrentDeck()
-        } else {
-            team2Score += score
-            currentTeam = 1
+        if teams.indices.contains(currentTeamIndex) {
+            teams[currentTeamIndex].score += score
+        }
+
+        currentTeamIndex += 1
+        if currentTeamIndex >= teams.count {
+            currentTeamIndex = 0
             currentRound += 1
-            if !isGameOver {
-                generateDeckForCurrentRound()
-            }
+        }
+
+        if !isGameOver {
+            generateDeckForCurrentRound()
         }
     }
 

@@ -8,7 +8,7 @@ final class DefaultDeckLoaderTests: XCTestCase {
         let decks = try DefaultDeckLoader().load()
 
         XCTAssertEqual(decks.count, 19)
-        XCTAssertEqual(decks.first?.name, "Emoji Movies")
+        XCTAssertEqual(decks.first?.name, "Movies")
         XCTAssertTrue(decks.allSatisfy { $0.type == .default })
         XCTAssertTrue(decks.allSatisfy { $0.cards.count >= 20 })
     }

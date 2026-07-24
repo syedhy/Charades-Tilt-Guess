@@ -3,10 +3,19 @@ import SwiftUI
 struct TeamMatchSelectionView: View {
     let settings: GameSettings
 
+    enum SetupStep {
+        case teamSetup
+        case deckSelection
+    }
+
     @EnvironmentObject private var router: AppRouter
     @StateObject private var viewModel = HomeViewModel()
+
+    @State private var currentStep: SetupStep = .teamSetup
+    @State private var numberOfTeams: Int = 2
+    @State private var playersPerTeam: Int = 4
+    @State private var isCustomPlayers: Bool = false
     @State private var selectedDeckIDs: Set<String> = []
-    @State private var selectedPlayersPerTeam: Int = 4
 
     var body: some View {
         ZStack {
@@ -14,20 +23,21 @@ struct TeamMatchSelectionView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                    header
-
-                    if let loadErrorMessage = viewModel.loadErrorMessage {
-                        loadError(message: loadErrorMessage)
-                    } else {
+                    if currentStep == .teamSetup {
+                        header
+                        teamsCountPicker
+                            .padding(.bottom, 8)
                         playersPicker
-
+                        teamsPreviewGrid
+                    } else {
+                        deckSelectionHeader
                         selectionControls
 
-                        if !viewModel.customDecks.isEmpty {
-                            deckSection(title: "Custom Decks", decks: viewModel.customDecks)
+                        if !standardCustomDecks.isEmpty {
+                            deckSection(title: "Custom Decks", decks: standardCustomDecks)
                         }
 
-                        deckSection(title: "Built-In Decks", decks: viewModel.defaultDecks)
+                        deckSection(title: "Built-In Decks", decks: standardDefaultDecks)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -37,107 +47,273 @@ struct TeamMatchSelectionView: View {
             .scrollIndicators(.hidden)
         }
         .safeAreaInset(edge: .bottom) {
-            startButton
+            bottomActionButton
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.light)
         .onAppear {
             viewModel.loadDecks()
-            selectedDeckIDs = Set(viewModel.decks.map(\.id))
+            selectedDeckIDs = Set(allStandardDecks.map(\.id))
         }
     }
 
     private var header: some View {
         DoodlePanel(background: GameMode.teamVsTeam.accentColor) {
-            VStack(alignment: .leading, spacing: 14) {
-                Label(GameMode.teamVsTeam.purpose.uppercased(), systemImage: GameMode.teamVsTeam.symbolName)
+            VStack(alignment: .leading, spacing: 8) {
+                Label("STEP 1 OF 2 • TEAM SETUP", systemImage: GameMode.teamVsTeam.symbolName)
                     .font(.system(size: 12, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.64))
 
                 Text(GameMode.teamVsTeam.title)
                     .font(.system(size: 40, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
-
-                Text(GameMode.teamVsTeam.description)
-                    .font(.system(size: 16, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.68))
             }
             .padding(22)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
-    private var playersPicker: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Players per Team")
-                    .font(.system(size: 25, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-
-                Text("Each player gets 1 turn (\(selectedPlayersPerTeam) turns total per team)")
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
-            }
+    private var teamsCountPicker: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text("How many teams?")
+                .font(.system(size: 26, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
 
             HStack(spacing: 12) {
-                ForEach([1, 2, 3, 4, 5], id: \.self) { count in
+                ForEach([2, 3, 4, 5], id: \.self) { count in
                     Button {
-                        selectedPlayersPerTeam = count
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                            numberOfTeams = count
+                        }
                     } label: {
                         Text("\(count)")
-                            .font(.system(size: 20, weight: .black, design: .rounded))
-                            .foregroundStyle(selectedPlayersPerTeam == count ? .white : AppTheme.Colors.ink)
+                            .font(.system(size: 28, weight: .black, design: .rounded))
+                            .foregroundStyle(numberOfTeams == count ? .white : AppTheme.Colors.ink)
                             .frame(maxWidth: .infinity)
-                            .frame(height: 52)
+                            .frame(height: 64)
                             .background(
-                                selectedPlayersPerTeam == count ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
+                                numberOfTeams == count ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
                             )
-                            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
+                            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
                             .overlay(
-                                RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                                    .stroke(AppTheme.Colors.ink, lineWidth: selectedPlayersPerTeam == count ? 0 : 3)
+                                RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous)
+                                    .stroke(AppTheme.Colors.ink, lineWidth: numberOfTeams == count ? 3.5 : 3)
+                            )
+                    }
+                    .buttonStyle(DoodlePressStyle(rotation: 0))
+                }
+            }
+        }
+    }
+
+    private var playersPicker: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text("Players per team")
+                .font(.system(size: 26, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink)
+
+            HStack(spacing: 10) {
+                ForEach([1, 2, 3, 4, 5], id: \.self) { count in
+                    Button {
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                            playersPerTeam = count
+                            isCustomPlayers = false
+                        }
+                    } label: {
+                        Text("\(count)")
+                            .font(.system(size: 24, weight: .black, design: .rounded))
+                            .foregroundStyle((!isCustomPlayers && playersPerTeam == count) ? .white : AppTheme.Colors.ink)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 56)
+                            .background(
+                                (!isCustomPlayers && playersPerTeam == count) ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous)
+                                    .stroke(AppTheme.Colors.ink, lineWidth: (!isCustomPlayers && playersPerTeam == count) ? 3.5 : 3)
                             )
                     }
                     .buttonStyle(DoodlePressStyle(rotation: 0))
                 }
             }
 
-            HStack(spacing: 16) {
-                Text("Custom:")
-                    .font(.system(size: 16, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-
-                Stepper(
-                    value: $selectedPlayersPerTeam,
-                    in: 1...20
-                ) {
-                    Text("\(selectedPlayersPerTeam) players")
-                        .font(.system(size: 16, weight: .bold, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
+            Button {
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                    isCustomPlayers.toggle()
+                    if isCustomPlayers && playersPerTeam <= 5 {
+                        playersPerTeam = 6
+                    }
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(AppTheme.Colors.paperBright)
-                .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card))
+            } label: {
+                HStack(spacing: 8) {
+                    Image(systemName: "person.badge.plus")
+                        .font(.system(size: 16, weight: .black))
+                    Text(isCustomPlayers || playersPerTeam > 5 ? "Custom Count (\(playersPerTeam) Players)" : "Custom Player Count (6+)")
+                        .font(.system(size: 16, weight: .black, design: .rounded))
+                }
+                .foregroundStyle((isCustomPlayers || playersPerTeam > 5) ? .white : AppTheme.Colors.ink)
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+                .background(
+                    (isCustomPlayers || playersPerTeam > 5) ? GameMode.teamVsTeam.accentColor : AppTheme.Colors.paperBright
+                )
+                .clipShape(RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous))
                 .overlay(
-                    RoundedRectangle(cornerRadius: AppTheme.Radius.card)
-                        .stroke(AppTheme.Colors.ink, lineWidth: 3)
+                    RoundedRectangle(cornerRadius: AppTheme.Radius.card, style: .continuous)
+                        .stroke(AppTheme.Colors.ink, lineWidth: (isCustomPlayers || playersPerTeam > 5) ? 3.5 : 3)
                 )
             }
+            .buttonStyle(DoodlePressStyle(rotation: 0))
+
+            if isCustomPlayers || playersPerTeam > 5 {
+                DoodlePanel(background: AppTheme.Colors.paperBright) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Text("CUSTOM PLAYER COUNT")
+                                .font(.system(size: 12, weight: .black, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
+
+                            Spacer()
+
+                            Text("\(playersPerTeam) Players / Team")
+                                .font(.system(size: 18, weight: .black, design: .rounded))
+                                .foregroundStyle(GameMode.teamVsTeam.accentColor)
+                        }
+
+                        Slider(
+                            value: Binding(
+                                get: { Double(playersPerTeam) },
+                                set: { playersPerTeam = Int($0) }
+                            ),
+                            in: 1...15,
+                            step: 1
+                        )
+                        .tint(GameMode.teamVsTeam.accentColor)
+
+                        HStack {
+                            Text("1 player")
+                                .font(.system(size: 12, weight: .bold, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+                            Spacer()
+                            Text("15 players max")
+                                .font(.system(size: 12, weight: .bold, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.5))
+                        }
+                    }
+                    .padding(16)
+                }
+                .transition(.scale.combined(with: .opacity))
+            }
+        }
+    }
+
+    private var teamsPreviewGrid: some View {
+        DoodlePanel(background: AppTheme.Colors.paperBright) {
+            VStack(alignment: .leading, spacing: 14) {
+                HStack {
+                    Text("TEAMS IN MATCH")
+                        .font(.system(size: 12, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
+
+                    Spacer()
+
+                    Text("\(numberOfTeams * playersPerTeam) Total Turns")
+                        .font(.system(size: 12, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
+                }
+
+                let columns = [
+                    GridItem(.flexible(), spacing: 10),
+                    GridItem(.flexible(), spacing: 10)
+                ]
+
+                LazyVGrid(columns: columns, spacing: 10) {
+                    ForEach(0..<numberOfTeams, id: \.self) { index in
+                        let preset = TeamInfo.defaultPresets[index % TeamInfo.defaultPresets.count]
+                        HStack(spacing: 10) {
+                            Text(preset.icon)
+                                .font(.system(size: 26))
+
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(preset.name)
+                                    .font(.system(size: 17, weight: .black, design: .rounded))
+                                    .foregroundStyle(AppTheme.Colors.ink)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.8)
+
+                                Text("Team \(index + 1)")
+                                    .font(.system(size: 11, weight: .bold, design: .rounded))
+                                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.55))
+                            }
+
+                            Spacer(minLength: 0)
+                        }
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 10)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(preset.color.displayColor.opacity(0.35), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                                .stroke(AppTheme.Colors.ink, lineWidth: 2.5)
+                        )
+                    }
+                }
+            }
+            .padding(18)
+        }
+    }
+
+    private var deckSelectionHeader: some View {
+        DoodlePanel(background: GameMode.teamVsTeam.accentColor) {
+            VStack(alignment: .leading, spacing: 14) {
+                HStack {
+                    Button {
+                        withAnimation {
+                            currentStep = .teamSetup
+                        }
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "chevron.left")
+                            Text("Edit Teams")
+                        }
+                        .font(.system(size: 14, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(AppTheme.Colors.paperBright, in: Capsule())
+                        .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
+                    }
+
+                    Spacer()
+
+                    Text("STEP 2 OF 2")
+                        .font(.system(size: 12, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
+                }
+
+                Text("Choose Decks")
+                    .font(.system(size: 36, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink)
+
+                Text("\(numberOfTeams) Teams • \(playersPerTeam) Players each (\(numberOfTeams * playersPerTeam) Total Turns)")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+            }
+            .padding(22)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 
     private var selectionControls: some View {
         HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 3) {
-                Text("Choose your decks")
-                    .font(.system(size: 25, weight: .black, design: .rounded))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
+                Text("Select Deck Pool")
+                    .font(.system(size: 24, weight: .black, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink)
 
-                Text("\(selectedDeckIDs.count) of \(viewModel.decks.count) selected")
+                Text("\(selectedDeckIDs.count) of \(allStandardDecks.count) selected")
                     .font(.system(size: 14, weight: .bold, design: .rounded))
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
             }
@@ -229,67 +405,70 @@ struct TeamMatchSelectionView: View {
         .buttonStyle(DoodlePressStyle(rotation: 0))
     }
 
-    private var startButton: some View {
-        DoodleActionButton(
-            title: selectedDeckIDs.isEmpty ? "Select at least one deck" : "Start Match",
-            symbol: "play.fill",
-            accent: selectedDeckIDs.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.teamVsTeam.accentColor
-        ) {
-            startMatch()
+    private var bottomActionButton: some View {
+        Group {
+            if currentStep == .teamSetup {
+                DoodleActionButton(
+                    title: "Next: Select Decks",
+                    symbol: "arrow.right",
+                    accent: GameMode.teamVsTeam.accentColor
+                ) {
+                    withAnimation {
+                        currentStep = .deckSelection
+                    }
+                }
+            } else {
+                DoodleActionButton(
+                    title: selectedDeckIDs.isEmpty ? "Select at least one deck" : "Start Match",
+                    symbol: "play.fill",
+                    accent: selectedDeckIDs.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.teamVsTeam.accentColor
+                ) {
+                    startMatch()
+                }
+                .disabled(selectedDeckIDs.isEmpty)
+            }
         }
-        .disabled(selectedDeckIDs.isEmpty)
-        .accessibilityIdentifier("teamMatchStartButton")
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
         .background(AppTheme.Colors.paper.opacity(0.96))
     }
 
+    private var standardCustomDecks: [Deck] {
+        viewModel.customDecks.filter { !$0.isEmojiDeck }
+    }
+
+    private var standardDefaultDecks: [Deck] {
+        viewModel.defaultDecks.filter { !$0.isEmojiDeck }
+    }
+
+    private var allStandardDecks: [Deck] {
+        standardCustomDecks + standardDefaultDecks
+    }
+
     private var allDecksSelected: Bool {
-        !viewModel.decks.isEmpty && selectedDeckIDs.count == viewModel.decks.count
+        !allStandardDecks.isEmpty && selectedDeckIDs.count == allStandardDecks.count
     }
 
     private func toggleAllDecks() {
         if allDecksSelected {
             selectedDeckIDs.removeAll()
         } else {
-            selectedDeckIDs = Set(viewModel.decks.map(\.id))
+            selectedDeckIDs = Set(allStandardDecks.map(\.id))
         }
     }
 
     private func startMatch() {
-        let selectedDecks = viewModel.decks.filter { selectedDeckIDs.contains($0.id) }
+        let selectedDecks = allStandardDecks.filter { selectedDeckIDs.contains($0.id) }
         guard !selectedDecks.isEmpty else { return }
 
         let state = TeamMatchState(
+            numberOfTeams: numberOfTeams,
+            playersPerTeam: playersPerTeam,
             sourceDecks: selectedDecks,
-            totalRounds: selectedPlayersPerTeam,
             duration: settings.defaultDuration
         )
 
         router.activeTeamMatch = state
         router.open(.teamMatchLobby(state: state))
-    }
-
-    private func loadError(message: String) -> some View {
-        DoodlePanel {
-            VStack(alignment: .leading, spacing: 14) {
-                Text("Decks could not load")
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-
-                Text(message)
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.6))
-
-                DoodleActionButton(
-                    title: "Try again",
-                    symbol: "arrow.clockwise",
-                    accent: GameMode.teamVsTeam.accentColor
-                ) {
-                    viewModel.loadDecks()
-                    selectedDeckIDs = Set(viewModel.decks.map(\.id))
-                }
-            }
-            .padding(18)
-        }
     }
 }

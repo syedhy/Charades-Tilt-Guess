@@ -159,8 +159,8 @@ struct HomeView: View {
         switch mode {
         case .pasteAndPlay:
             router.open(.pasteAndPlay)
-        case .wikipedia:
-            router.open(.wikipediaMode)
+        case .randomMode:
+            router.open(.randomMode)
         case .mixAndMatch:
             router.open(.mixAndMatch)
         case .teamVsTeam:

@@ -76,7 +76,7 @@ final class GameEngineTests: XCTestCase {
     func testSpecialModeResultsUseTheShortDeckName() {
         let deck = makeDeck()
 
-        for mode in [GameMode.pasteAndPlay, .mixAndMatch, .infinite, .wikipedia] {
+        for mode in [GameMode.pasteAndPlay, .mixAndMatch, .infinite, .randomMode] {
             let result = RoundResult(
                 deck: deck,
                 duration: 60,

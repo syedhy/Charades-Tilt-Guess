@@ -1,7 +1,7 @@
 [
     {
         "id": "emoji-food",
-        "name": "Emoji Food & Drinks",
+        "name": "Food & Drinks",
         "description": "Guess food items and dishes represented by emojis!",
         "cards": [
             { "id": "em-f-001", "text": "🍔🍟🥤", "meaning": "Fast Food Combo" },

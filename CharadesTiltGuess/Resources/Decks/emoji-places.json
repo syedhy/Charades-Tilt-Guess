@@ -1,7 +1,7 @@
 [
     {
         "id": "emoji-places",
-        "name": "Emoji Places & Travel",
+        "name": "Places & Travel",
         "description": "Guess famous landmarks and countries from emojis!",
         "cards": [
             { "id": "em-pl-001", "text": "🗼🇫🇷", "meaning": "Eiffel Tower (Paris, France)" },

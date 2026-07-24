@@ -852,8 +852,8 @@ private struct PasteCardsSheet: View {
 
     private var header: some View {
         DoodlePanel(background: AppTheme.Colors.paperBright) {
-            VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
-                HStack(alignment: .top, spacing: AppTheme.Spacing.standard) {
+            VStack(alignment: .leading, spacing: 18) {
+                HStack(alignment: .center, spacing: AppTheme.Spacing.standard) {
                     DoodleIconButton(
                         symbol: "xmark",
                         size: 42,
@@ -862,8 +862,8 @@ private struct PasteCardsSheet: View {
                         dismiss()
                     }
 
-                    Text("Paste clipboard")
-                        .font(.system(size: 28, weight: .black, design: .rounded))
+                    Text("Paste cards")
+                        .font(.system(size: 30, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink)
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)

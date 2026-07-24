@@ -1,7 +1,7 @@
 [
     {
         "id": "emoji-pop",
-        "name": "Emoji Pop Songs & Culture",
+        "name": "Pop Songs",
         "description": "Guess famous songs and pop culture icons!",
         "cards": [
             { "id": "em-p-001", "text": "🌧️☔", "meaning": "Umbrella (Rihanna)" },

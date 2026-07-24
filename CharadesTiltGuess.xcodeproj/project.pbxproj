@@ -10,6 +10,7 @@
 		0567AF143F2D580531720A78 /* emoji-movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 58F02A54C132727C4D028EE4 /* emoji-movies.json */; };
 		0FCC5F072FA2B22EA14440F0 /* endCountDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91E0776020540DF6907BA087 /* endCountDown.wav */; };
 		20392A226DF68F56937C1832 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 23D9283DE64ECE12D8331F23 /* PrivacyInfo.xcprivacy */; };
+		24658CA7BBDEC13527DB28B5 /* RandomModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BF728A94BA5CB7F5084482 /* RandomModeView.swift */; };
 		2B9A8CE0CEA7CBCC200731A4 /* timeout.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2A150590C1A7E8EADCE1C2BA /* timeout.wav */; };
 		30B647C5FCE8EA3A70A88B64 /* default-sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E65C14F1D8DF525C2CF622E /* default-sports.json */; };
 		39D89CE77F50E4C8052CD4B2 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6CF586EF0228243A1AA5FCA9 /* countdown.wav */; };
@@ -77,15 +78,12 @@
 		AAJ000000000000000000003 /* ChallengeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000023 /* ChallengeCard.swift */; };
 		AAJ000000000000000000004 /* CardRotationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000024 /* CardRotationStore.swift */; };
 		AAJ000000000000000000005 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000025 /* SoundService.swift */; };
-		AAJ000000000000000000006 /* WikipediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000026 /* WikipediaService.swift */; };
 		AAJ000000000000000000007 /* ModeInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000027 /* ModeInstructionsView.swift */; };
 		AAJ000000000000000000008 /* ModeDeckSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000028 /* ModeDeckSelectionView.swift */; };
 		AAJ000000000000000000009 /* PasteAndPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000029 /* PasteAndPlayView.swift */; };
-		AAJ000000000000000000010 /* WikipediaModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000030 /* WikipediaModeView.swift */; };
 		AAJ000000000000000000011 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000031 /* OnboardingView.swift */; };
 		AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000032 /* CardRotationStoreTests.swift */; };
 		AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */; };
-		AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAJ000000000000000000034 /* WikipediaServiceTests.swift */; };
 		B6B413665BA77DF37E308FAA /* default-animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 3ED42CE8F49D0E95353F0564 /* default-animals.json */; };
 		BAA190C8EFF1B4AE17B2BDC7 /* gameStart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 53C8647A2CC5815C08616C69 /* gameStart.wav */; };
 		BD83A95899F4BB7D32458C59 /* emoji-places.json in Resources */ = {isa = PBXBuildFile; fileRef = C5DE951730D51B83D1CFF4B7 /* emoji-places.json */; };
@@ -148,6 +146,7 @@
 		6E65C14F1D8DF525C2CF622E /* default-sports.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-sports.json"; sourceTree = "<group>"; };
 		74F415F8E7B2D8D932CA0B4A /* default-science.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-science.json"; sourceTree = "<group>"; };
 		78153086E795A1C2A0DF1437 /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
+		78BF728A94BA5CB7F5084482 /* RandomModeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RandomModeView.swift; sourceTree = "<group>"; };
 		854E97E20842DCEC24AFCC1D /* MyDecksListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MyDecksListView.swift; sourceTree = "<group>"; };
 		860558B3159DDE727387BC26 /* OnboardingSplashView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingSplashView.swift; sourceTree = "<group>"; };
 		8C7213D1B544528C8F07612D /* emoji-pop.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-pop.json"; sourceTree = "<group>"; };
@@ -209,15 +208,12 @@
 		AAJ000000000000000000023 /* ChallengeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCard.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000024 /* CardRotationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStore.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000025 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
-		AAJ000000000000000000026 /* WikipediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaService.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000027 /* ModeInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeInstructionsView.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000028 /* ModeDeckSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeDeckSelectionView.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000029 /* PasteAndPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteAndPlayView.swift; sourceTree = "<group>"; };
-		AAJ000000000000000000030 /* WikipediaModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaModeView.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000031 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000032 /* CardRotationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRotationStoreTests.swift; sourceTree = "<group>"; };
 		AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardImportServiceTests.swift; sourceTree = "<group>"; };
-		AAJ000000000000000000034 /* WikipediaServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaServiceTests.swift; sourceTree = "<group>"; };
 		B9FE01940853EA4570787E64 /* default-hard.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-hard.json"; sourceTree = "<group>"; };
 		C5DE951730D51B83D1CFF4B7 /* emoji-places.json */ = {isa = PBXFileReference; includeInIndex = 1; path = "emoji-places.json"; sourceTree = "<group>"; };
 		C9544FF4C8B71975D9E49017 /* default-celebrities.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = "default-celebrities.json"; sourceTree = "<group>"; };
@@ -332,7 +328,6 @@
 				AAI000000000000000000018 /* TiltGestureDetectorTests.swift */,
 				AAJ000000000000000000032 /* CardRotationStoreTests.swift */,
 				AAJ000000000000000000033 /* ClipboardImportServiceTests.swift */,
-				AAJ000000000000000000034 /* WikipediaServiceTests.swift */,
 			);
 			path = CharadesTiltGuessTests;
 			sourceTree = "<group>";
@@ -408,11 +403,11 @@
 				AAD000000000000000000018 /* DeckGridView.swift */,
 				AAJ000000000000000000028 /* ModeDeckSelectionView.swift */,
 				AAJ000000000000000000029 /* PasteAndPlayView.swift */,
-				AAJ000000000000000000030 /* WikipediaModeView.swift */,
 				28B0BA2170A9636BEF8AD2AE /* TeamMatchSelectionView.swift */,
 				29E2D6A8CF1DFAA7E550E1F4 /* BuyMeACoffeeView.swift */,
 				2BE63BEE7463D32D6FA629DC /* BuyMeACoffeeView.swift */,
 				854E97E20842DCEC24AFCC1D /* MyDecksListView.swift */,
+				78BF728A94BA5CB7F5084482 /* RandomModeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -483,7 +478,6 @@
 				AAI000000000000000000014 /* HapticsManager.swift */,
 				AAJ000000000000000000025 /* SoundService.swift */,
 				AAI000000000000000000015 /* MotionManager.swift */,
-				AAJ000000000000000000026 /* WikipediaService.swift */,
 				E3CCD86B6DB683329F72C7AD /* StoreKitManager.swift */,
 			);
 			path = Services;
@@ -718,7 +712,6 @@
 				AAI000000000000000000004 /* HapticsManager.swift in Sources */,
 				AAJ000000000000000000005 /* SoundService.swift in Sources */,
 				AAI000000000000000000005 /* MotionManager.swift in Sources */,
-				AAJ000000000000000000006 /* WikipediaService.swift in Sources */,
 				AAE000000000000000000001 /* CustomDeckStore.swift in Sources */,
 				AAD000000000000000000007 /* HomeViewModel.swift in Sources */,
 				AAF000000000000000000001 /* DeckEditorViewModel.swift in Sources */,
@@ -731,7 +724,6 @@
 				AAJ000000000000000000007 /* ModeInstructionsView.swift in Sources */,
 				AAJ000000000000000000008 /* ModeDeckSelectionView.swift in Sources */,
 				AAJ000000000000000000009 /* PasteAndPlayView.swift in Sources */,
-				AAJ000000000000000000010 /* WikipediaModeView.swift in Sources */,
 				AAJ000000000000000000011 /* OnboardingView.swift in Sources */,
 				DBC0983FAE2553ED38B72F4B /* TeamMatchState.swift in Sources */,
 				C640CD2E1D4F67A2922811A3 /* TeamMatchSelectionView.swift in Sources */,
@@ -742,6 +734,7 @@
 				C55030FAA1DF0B60E7A9FF65 /* OnboardingSplashView.swift in Sources */,
 				5EA134FAD0944B6A5AB10892 /* OnboardingCoordinatorView.swift in Sources */,
 				5AAE0A98D34AB2CA7FBC4D5A /* MyDecksListView.swift in Sources */,
+				24658CA7BBDEC13527DB28B5 /* RandomModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +752,6 @@
 				AAI000000000000000000008 /* TiltGestureDetectorTests.swift in Sources */,
 				AAJ000000000000000000012 /* CardRotationStoreTests.swift in Sources */,
 				AAJ000000000000000000013 /* ClipboardImportServiceTests.swift in Sources */,
-				AAJ000000000000000000014 /* WikipediaServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,12 +6,12 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
     case pasteAndPlay
     case mixAndMatch
     case infinite
-    case wikipedia
+    case randomMode
     case teamVsTeam
 
     var id: String { rawValue }
 
-    static let homeModes: [GameMode] = [.normal, .emoji, .mixAndMatch, .infinite, .wikipedia, .teamVsTeam]
+    static let homeModes: [GameMode] = [.normal, .emoji, .mixAndMatch, .infinite, .randomMode, .teamVsTeam]
 
     var title: String {
         switch self {
@@ -25,8 +25,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Mix & Match"
         case .infinite:
             return "Infinite"
-        case .wikipedia:
-            return "Wikipedia Mode"
+        case .randomMode:
+            return "Random Mode"
         case .teamVsTeam:
             return "Team vs Team"
         }
@@ -44,8 +44,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "Play a random mix of cards from your decks"
         case .infinite:
             return "No timer! Play until the deck is done"
-        case .wikipedia:
-            return "Random words from Wikipedia"
+        case .randomMode:
+            return "Surprise game mode & deck combination"
         case .teamVsTeam:
             return "Divide into two teams and compete for the highest score"
         }
@@ -63,8 +63,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "A fresh mix of cards"
         case .infinite:
             return "Finish every card"
-        case .wikipedia:
-            return "Fresh words"
+        case .randomMode:
+            return "Surprise setup"
         case .teamVsTeam:
             return "Competitive team play"
         }
@@ -82,8 +82,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return "square.stack.3d.up.fill"
         case .infinite:
             return "infinity"
-        case .wikipedia:
-            return "globe"
+        case .randomMode:
+            return "die.face.5.fill"
         case .teamVsTeam:
             return "person.2.fill"
         }
@@ -101,8 +101,8 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
             return AppTheme.Colors.orange
         case .infinite:
             return AppTheme.Colors.blue
-        case .wikipedia:
-            return Color(red: 0.66, green: 0.58, blue: 0.86)
+        case .randomMode:
+            return AppTheme.Colors.coral
         case .teamVsTeam:
             return AppTheme.Colors.coral
         }
@@ -112,14 +112,14 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
         switch self {
         case .normal, .emoji, .infinite, .teamVsTeam:
             return true
-        case .pasteAndPlay, .mixAndMatch, .wikipedia:
+        case .pasteAndPlay, .mixAndMatch, .randomMode:
             return false
         }
     }
 
     var showsDurationPicker: Bool {
         switch self {
-        case .normal, .emoji, .pasteAndPlay, .mixAndMatch, .wikipedia, .teamVsTeam:
+        case .normal, .emoji, .pasteAndPlay, .mixAndMatch, .randomMode, .teamVsTeam:
             return true
         case .infinite:
             return false
@@ -185,16 +185,16 @@ enum GameMode: String, Codable, CaseIterable, Hashable, Identifiable {
                 ],
                 scoring: "Correct cards score one point. Passed cards are tracked but do not score."
             )
-        case .wikipedia:
+        case .randomMode:
             return ModeInstruction(
-                title: "Easy Wikipedia",
-                summary: "The app builds a temporary deck from simple single-word Wikipedia titles.",
+                title: "Random Mode",
+                summary: "Surprise game mode and deck selection.",
                 rules: [
-                    "Load a fresh pack when you enter the mode.",
-                    "Only short, single-word prompts are kept.",
-                    "The deck is temporary and is not saved."
+                    "Tap the refresh button to reroll a random mode and deck setup.",
+                    "Filter whether to include custom decks or built-in decks.",
+                    "Tap Start Game to play the surprise roll!"
                 ],
-                scoring: "Scoring matches Normal mode."
+                scoring: "Scoring matches the rolled game mode."
             )
         case .teamVsTeam:
             return ModeInstruction(

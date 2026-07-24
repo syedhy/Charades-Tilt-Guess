@@ -9,7 +9,7 @@ enum AppRoute: Hashable {
     case modeDeckSelection(mode: GameMode)
     case pasteAndPlay
     case mixAndMatch
-    case wikipediaMode
+    case randomMode
     case teamMatchSelection
     case teamMatchLobby(state: TeamMatchState)
     case teamMatchResults(state: TeamMatchState)
@@ -78,8 +78,8 @@ final class AppRouter: ObservableObject {
                     sourceDeckIDs: [deck.id]
                 )
             )
-        case .wikipedia:
-            startGame(configuration: .wikipedia(deck: deck, duration: settings.defaultDuration))
+        case .randomMode:
+            startGame(configuration: .randomMode(deck: deck, duration: settings.defaultDuration))
         case .teamVsTeam:
             startGame(configuration: .teamVsTeam(deck: deck, duration: settings.defaultDuration))
         }
@@ -213,8 +213,8 @@ struct AppShellView: View {
             MixAndMatchSelectionView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)
             }
-        case .wikipediaMode:
-            WikipediaModeView(settings: settingsViewModel.settings) { configuration in
+        case .randomMode:
+            RandomModeView(settings: settingsViewModel.settings) { configuration in
                 router.startGame(configuration: configuration)
             }
         case .teamMatchSelection:

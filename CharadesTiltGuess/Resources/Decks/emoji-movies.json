@@ -1,7 +1,7 @@
 [
     {
         "id": "emoji-movies",
-        "name": "Emoji Movies",
+        "name": "Movies",
         "description": "Guess famous movies represented by emojis!",
         "cards": [
             { "id": "em-m-001", "text": "🦇👨", "meaning": "Batman" },

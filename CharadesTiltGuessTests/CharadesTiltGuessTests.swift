@@ -74,6 +74,6 @@ final class CharadesTiltGuessTests: XCTestCase {
         XCTAssertEqual(state.team2Score, 1)
         XCTAssertEqual(state.currentRound, 2)
         XCTAssertTrue(state.isGameOver)
-        XCTAssertEqual(state.winnerText, "Team 1 Wins!")
+        XCTAssertEqual(state.winnerText, "🐅 Tigers Win!")
     }
 }

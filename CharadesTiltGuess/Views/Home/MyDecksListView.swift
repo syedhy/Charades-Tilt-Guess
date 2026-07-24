@@ -11,11 +11,10 @@ struct MyDecksListView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.roomy) {
-                    header
                     customDecksList
                 }
                 .padding(.horizontal, 24)
-                .padding(.top, 4)
+                .padding(.top, 16)
                 .padding(.bottom, 32)
             }
             .scrollIndicators(.hidden)
@@ -30,18 +29,6 @@ struct MyDecksListView: View {
             Button("OK", role: .cancel) { }
         } message: {
             Text("You can only have 20 custom decks at a time. Delete an old one to create a new one.")
-        }
-    }
-
-    private var header: some View {
-        DoodlePanel(background: AppTheme.Colors.paperBright) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("My Decks")
-                    .font(.system(size: 36, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-            }
-            .padding(20)
-            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 

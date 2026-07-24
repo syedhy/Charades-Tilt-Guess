@@ -21,9 +21,9 @@ enum TiltSensitivity: String, Codable, CaseIterable, Hashable, Identifiable {
     var threshold: Double {
         switch self {
         case .relaxed:
-            0.34
+            0.24
         case .normal:
-            0.46
+            0.36
         case .strict:
             0.58
         }
@@ -35,9 +35,9 @@ enum TiltSensitivity: String, Codable, CaseIterable, Hashable, Identifiable {
 
     var confirmationSamples: Int {
         switch self {
-        case .relaxed:
+        case .relaxed, .normal:
             2
-        case .normal, .strict:
+        case .strict:
             3
         }
     }

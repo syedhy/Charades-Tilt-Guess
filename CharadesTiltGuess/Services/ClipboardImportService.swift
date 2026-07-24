@@ -28,7 +28,7 @@ struct ClipboardImportPreview: Equatable {
         }
 
         if overDeckLimitCount > 0 {
-            messages.append("\(overDeckLimitCount) \(overDeckLimitCount == 1 ? "card was" : "cards were") skipped because custom decks are limited to 200 cards.")
+            messages.append("\(overDeckLimitCount) \(overDeckLimitCount == 1 ? "card was" : "cards were") skipped because custom decks are limited to 1500 cards.")
         }
 
         return messages

@@ -209,5 +209,5 @@ final class CustomDeckDetailViewModel: ObservableObject {
 extension CustomDeckDetailViewModel {
     static let maxNameLength = 20
     static let maxCardTextLength = 30
-    static let maxCustomDeckCardCount = 250
+    static let maxCustomDeckCardCount = 1500
 }

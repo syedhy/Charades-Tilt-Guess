@@ -58,6 +58,8 @@ final class OrientationController {
             topController = presented
         }
         topController?.setNeedsUpdateOfSupportedInterfaceOrientations()
-        windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: requestedOrientation)) { _ in }
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut, .allowUserInteraction]) {
+            windowScene.requestGeometryUpdate(.iOS(interfaceOrientations: requestedOrientation)) { _ in }
+        }
     }
 }

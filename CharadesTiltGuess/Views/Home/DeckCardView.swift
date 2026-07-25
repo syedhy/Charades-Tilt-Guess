@@ -5,7 +5,6 @@ struct DeckCardView: View {
     let detail: String
     let symbol: String
     let accent: Color
-    var isEmoji: Bool = false
     var rotation: Double = 0
 
     var body: some View {
@@ -27,22 +26,8 @@ struct DeckCardView: View {
                 .padding(4)
 
             VStack(alignment: .leading, spacing: 12) {
-                HStack(alignment: .top) {
-                    Image(systemName: symbol)
-                        .font(.system(size: 22, weight: .black))
-
-                    Spacer()
-
-                    if isEmoji {
-                        Text("EMOJI")
-                            .font(.system(size: 9, weight: .black, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink)
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 3)
-                            .background(AppTheme.Colors.yellow, in: Capsule())
-                            .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 1.5))
-                    }
-                }
+                Image(systemName: symbol)
+                    .font(.system(size: 22, weight: .black))
 
                 Spacer()
 

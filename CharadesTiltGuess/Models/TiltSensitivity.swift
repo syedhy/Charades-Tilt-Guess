@@ -34,7 +34,7 @@ enum TiltSensitivity: String, Codable, CaseIterable, Hashable, Identifiable {
     }
 
     var backwardThreshold: Double {
-        threshold * 0.65
+        threshold * 0.75
     }
 
     var confirmationSamples: Int {

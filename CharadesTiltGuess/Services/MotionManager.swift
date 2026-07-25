@@ -54,9 +54,9 @@ struct TiltGestureThresholdValues {
 }
 
 enum TiltGestureThresholds {
-    static let relaxed = values(forwardDegrees: 24, backwardDegrees: -15.6, neutralDegrees: 10)
-    static let normal = values(forwardDegrees: 32, backwardDegrees: -20.8, neutralDegrees: 13)
-    static let strict = values(forwardDegrees: 44, backwardDegrees: -28.6, neutralDegrees: 16)
+    static let relaxed = values(forwardDegrees: 24, backwardDegrees: -18.0, neutralDegrees: 10)
+    static let normal = values(forwardDegrees: 32, backwardDegrees: -24.0, neutralDegrees: 13)
+    static let strict = values(forwardDegrees: 44, backwardDegrees: -33.0, neutralDegrees: 16)
 
     static let forwardTriggerAngle = normal.forwardTriggerAngle
     static let backwardTriggerAngle = normal.backwardTriggerAngle

@@ -110,7 +110,7 @@ struct CustomDeckStore {
     }
 
     private static func defaultFileURL(fileManager: FileManager) -> URL {
-        let baseURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        let baseURL = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first ?? fileManager.temporaryDirectory
         return baseURL
             .appendingPathComponent("CharadesTiltGuess", isDirectory: true)
             .appendingPathComponent("CustomDecks.json")

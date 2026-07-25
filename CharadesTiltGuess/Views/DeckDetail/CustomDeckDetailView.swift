@@ -17,7 +17,7 @@ struct CustomDeckDetailView: View {
     @State private var isDiscarding = false
     @State private var currentPage: Int = 0
     @FocusState private var isNameFocused: Bool
-    private let pageSize = 100
+    private let pageSize = 50
 
     @MainActor
     init(deck: Deck, mode: GameMode = .normal, fromMyDecks: Bool = false) {
@@ -46,13 +46,6 @@ struct CustomDeckDetailView: View {
         guard startIndex < viewModel.draftCards.count else { return [] }
         let endIndex = min(startIndex + pageSize, viewModel.draftCards.count)
         return Array(viewModel.draftCards[startIndex..<endIndex])
-    }
-
-    private var paginationRangeText: String {
-        guard !viewModel.draftCards.isEmpty else { return "" }
-        let startIndex = currentPage * pageSize + 1
-        let endIndex = min((currentPage + 1) * pageSize, viewModel.draftCards.count)
-        return "Showing \(startIndex)–\(endIndex) of \(viewModel.draftCards.count) cards"
     }
 
     private func validateCurrentPage() {
@@ -333,7 +326,13 @@ struct CustomDeckDetailView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
             }
 
-            TextField("Movie night", text: $viewModel.draftName)
+            TextField(
+                "Movie night",
+                text: $viewModel.draftName,
+                prompt: Text("Movie night")
+                    .font(.system(size: 21, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.24))
+            )
                 .font(.system(size: 21, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
                 .textInputAutocapitalization(.words)
@@ -395,17 +394,9 @@ struct CustomDeckDetailView: View {
     private var editCardsSection: some View {
         VStack(alignment: .leading, spacing: AppTheme.Spacing.standard) {
             HStack {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(viewModel.draftCardCountText)
-                        .font(.system(size: 14, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
-
-                    if totalPages > 1 {
-                        Text(paginationRangeText)
-                            .font(.system(size: 12, weight: .bold, design: .rounded))
-                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.48))
-                    }
-                }
+                Text(viewModel.draftCardCountText)
+                    .font(.system(size: 14, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
 
                 Spacer()
             }
@@ -453,7 +444,7 @@ struct CustomDeckDetailView: View {
     }
 
     private var paginationBar: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 8) {
             Button {
                 withAnimation(.easeInOut(duration: 0.2)) {
                     if currentPage > 0 {
@@ -461,32 +452,35 @@ struct CustomDeckDetailView: View {
                     }
                 }
             } label: {
-                HStack(spacing: 6) {
+                HStack(spacing: 5) {
                     Image(systemName: "chevron.left")
-                        .font(.system(size: 14, weight: .black))
-                    Text("Previous 100")
+                        .font(.system(size: 13, weight: .black))
+                    Text("Previous")
                         .font(.system(size: 13, weight: .black, design: .rounded))
                 }
                 .foregroundStyle(currentPage > 0 ? AppTheme.Colors.ink : AppTheme.Colors.ink.opacity(0.3))
-                .padding(.horizontal, 14)
-                .frame(height: 42)
+                .padding(.horizontal, 12)
+                .frame(height: 40)
                 .background(currentPage > 0 ? AppTheme.Colors.paperBright : AppTheme.Colors.gray.opacity(0.2), in: Capsule())
                 .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
             }
             .buttonStyle(DoodlePressStyle())
             .disabled(currentPage == 0)
 
-            Spacer()
+            Spacer(minLength: 4)
 
             Text("Page \(currentPage + 1) of \(totalPages)")
                 .font(.system(size: 13, weight: .black, design: .rounded))
-                .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
-                .padding(.horizontal, 12)
+                .foregroundStyle(AppTheme.Colors.ink.opacity(0.75))
+                .lineLimit(1)
+                .minimumScaleFactor(0.85)
+                .fixedSize(horizontal: true, vertical: false)
+                .padding(.horizontal, 10)
                 .padding(.vertical, 6)
                 .background(AppTheme.Colors.paperBright, in: Capsule())
                 .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 1.5))
 
-            Spacer()
+            Spacer(minLength: 4)
 
             Button {
                 withAnimation(.easeInOut(duration: 0.2)) {
@@ -495,15 +489,15 @@ struct CustomDeckDetailView: View {
                     }
                 }
             } label: {
-                HStack(spacing: 6) {
-                    Text("Next 100")
+                HStack(spacing: 5) {
+                    Text("Next")
                         .font(.system(size: 13, weight: .black, design: .rounded))
                     Image(systemName: "chevron.right")
-                        .font(.system(size: 14, weight: .black))
+                        .font(.system(size: 13, weight: .black))
                 }
                 .foregroundStyle(currentPage < totalPages - 1 ? AppTheme.Colors.ink : AppTheme.Colors.ink.opacity(0.3))
-                .padding(.horizontal, 14)
-                .frame(height: 42)
+                .padding(.horizontal, 12)
+                .frame(height: 40)
                 .background(currentPage < totalPages - 1 ? AppTheme.Colors.paperBright : AppTheme.Colors.gray.opacity(0.2), in: Capsule())
                 .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
             }
@@ -806,13 +800,27 @@ private struct AddCardSheet: View {
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.58))
                 }
 
-                TextField(viewModel.deck.isEmojiDeck ? "🧙‍♂️ ⚡ 🦉" : "Pizza", text: $cardText)
-                    .font(.system(size: 22, weight: .black, design: .rounded))
-                    .foregroundStyle(AppTheme.Colors.ink)
-                    .textInputAutocapitalization(.words)
-                    .autocorrectionDisabled()
-                    .focused($isCardFocused)
-                    .padding(.horizontal, AppTheme.Spacing.standard)
+                ZStack(alignment: .leading) {
+                    if cardText.isEmpty {
+                        Text(viewModel.deck.isEmojiDeck ? "🧙‍♂️ ⚡ 🦉" : "Pizza")
+                            .font(.system(size: 22, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .opacity(0.24)
+                            .padding(.horizontal, AppTheme.Spacing.standard)
+                            .allowsHitTesting(false)
+                    }
+
+                    TextField(
+                        "",
+                        text: $cardText
+                    )
+                        .font(.system(size: 22, weight: .black, design: .rounded))
+                        .foregroundStyle(AppTheme.Colors.ink)
+                        .textInputAutocapitalization(.words)
+                        .autocorrectionDisabled()
+                        .focused($isCardFocused)
+                        .padding(.horizontal, AppTheme.Spacing.standard)
+                }
                     .frame(height: 62)
                     .background(
                         AppTheme.Colors.paper,
@@ -824,27 +832,36 @@ private struct AddCardSheet: View {
                     }
                     .accessibilityIdentifier("manualCardTextField")
 
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(viewModel.deck.isEmojiDeck ? "Meaning / Answer (Required)" : "Meaning / Answer (Optional)")
-                        .font(.system(size: 14, weight: .black, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+                if viewModel.deck.isEmojiDeck {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Meaning / Answer (Required)")
+                            .font(.system(size: 14, weight: .black, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
 
-                    TextField(viewModel.deck.isEmojiDeck ? "Harry Potter" : "Optional description", text: $cardMeaning)
-                        .font(.system(size: 16, weight: .bold, design: .rounded))
-                        .foregroundStyle(AppTheme.Colors.ink)
-                        .padding(.horizontal, AppTheme.Spacing.standard)
-                        .frame(height: 48)
-                        .background(
-                            AppTheme.Colors.paper,
-                            in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                        TextField(
+                            "Meaning / Answer",
+                            text: $cardMeaning,
+                            prompt: Text("Harry Potter")
+                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                .foregroundStyle(AppTheme.Colors.ink.opacity(0.24))
                         )
-                        .overlay {
-                            RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
-                                .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
-                        }
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink)
+                            .padding(.horizontal, AppTheme.Spacing.standard)
+                            .frame(height: 48)
+                            .background(
+                                AppTheme.Colors.paper,
+                                in: RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                            )
+                            .overlay {
+                                RoundedRectangle(cornerRadius: AppTheme.Radius.button, style: .continuous)
+                                    .stroke(AppTheme.Colors.ink, lineWidth: AppTheme.Stroke.standard)
+                            }
+                    }
                 }
 
-                if let cardErrorMessage = viewModel.cardValidationMessage(for: cardText, meaning: cardMeaning), !cardText.isEmpty {
+                let effectiveMeaning = viewModel.deck.isEmojiDeck ? cardMeaning : ""
+                if let cardErrorMessage = viewModel.cardValidationMessage(for: cardText, meaning: effectiveMeaning), !cardText.isEmpty {
                     Text(cardErrorMessage)
                         .font(.system(size: 13, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.coral)
@@ -856,14 +873,15 @@ private struct AddCardSheet: View {
     }
 
     private var addCardButton: some View {
-        let canAdd = viewModel.canAddCard(text: cardText, meaning: cardMeaning)
+        let effectiveMeaning = viewModel.deck.isEmojiDeck ? cardMeaning : ""
+        let canAdd = viewModel.canAddCard(text: cardText, meaning: effectiveMeaning)
         return DoodleActionButton(
             title: "Add card",
             symbol: "plus",
             accent: canAdd ? AppTheme.Colors.mint : AppTheme.Colors.gray.opacity(0.42)
         ) {
             let addedText = cardText.trimmingCharacters(in: .whitespacesAndNewlines)
-            guard viewModel.addCard(text: cardText, meaning: cardMeaning) else { return }
+            guard viewModel.addCard(text: cardText, meaning: effectiveMeaning) else { return }
             cardText = ""
             cardMeaning = ""
             isCardFocused = true

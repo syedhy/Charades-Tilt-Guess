@@ -113,7 +113,10 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
     }
 
     var currentTeamInfo: TeamInfo {
-        teams.indices.contains(currentTeamIndex) ? teams[currentTeamIndex] : teams[0]
+        if teams.indices.contains(currentTeamIndex) {
+            return teams[currentTeamIndex]
+        }
+        return teams.first ?? TeamInfo(id: 1, name: "Team 1", icon: "🏆", color: .coral)
     }
 
     var leaderboard: [TeamInfo] {
@@ -124,8 +127,8 @@ final class TeamMatchState: ObservableObject, Identifiable, Hashable, Equatable 
         guard let topScore = leaderboard.first?.score else { return "No Winner" }
         let winners = teams.filter { $0.score == topScore }
 
-        if winners.count == 1 {
-            return "\(winners[0].icon) \(winners[0].name) Win!"
+        if winners.count == 1, let winner = winners.first {
+            return "\(winner.icon) \(winner.name) Win!"
         } else {
             let names = winners.map { "\($0.icon) \($0.name)" }.joined(separator: " & ")
             return "Tie between \(names)!"

@@ -138,7 +138,13 @@ struct DeckEditorView: View {
                     .foregroundStyle(AppTheme.Colors.ink.opacity(0.52))
             }
 
-            TextField("Movies , Celebs", text: $viewModel.deckName)
+            TextField(
+                "Movies , Celebs",
+                text: $viewModel.deckName,
+                prompt: Text("Movies , Celebs")
+                    .font(.system(size: 21, weight: .black, design: .rounded))
+                    .foregroundStyle(AppTheme.Colors.ink.opacity(0.24))
+            )
                 .font(.system(size: 21, weight: .black, design: .rounded))
                 .foregroundStyle(AppTheme.Colors.ink)
                 .textInputAutocapitalization(.words)

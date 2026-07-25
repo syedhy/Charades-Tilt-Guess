@@ -225,12 +225,13 @@ final class MotionManager {
         manager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: .main) { [weak self] motion, _ in
             guard let self, let motion else { return }
 
-            let angle = self.orientation.forwardTiltAngle(
+            let currentOrientation = LandscapeTiltOrientation(interfaceOrientation: Self.currentInterfaceOrientation)
+            let angle = currentOrientation.forwardTiltAngle(
                 gravityX: motion.gravity.x,
                 gravityZ: motion.gravity.z
             )
 
-            guard self.orientation.isXAxisParallelToGround(gravityY: motion.gravity.y) else {
+            guard currentOrientation.isXAxisParallelToGround(gravityY: motion.gravity.y) else {
                 self.detector.alignmentLost()
                 self.hasDetectedNeutral = false
                 return

@@ -15,7 +15,9 @@ struct CustomDeckDetailView: View {
     @State private var toastMessage: String?
     @State private var toastPlacement: ToastPlacement = .top
     @State private var isDiscarding = false
+    @State private var currentPage: Int = 0
     @FocusState private var isNameFocused: Bool
+    private let pageSize = 100
 
     @MainActor
     init(deck: Deck, mode: GameMode = .normal, fromMyDecks: Bool = false) {
@@ -33,6 +35,30 @@ struct CustomDeckDetailView: View {
 
     private var isCustomDeck: Bool {
         viewModel.deck.type == .custom
+    }
+
+    private var totalPages: Int {
+        max(1, Int(ceil(Double(viewModel.draftCards.count) / Double(pageSize))))
+    }
+
+    private var displayedCards: [GameWord] {
+        let startIndex = currentPage * pageSize
+        guard startIndex < viewModel.draftCards.count else { return [] }
+        let endIndex = min(startIndex + pageSize, viewModel.draftCards.count)
+        return Array(viewModel.draftCards[startIndex..<endIndex])
+    }
+
+    private var paginationRangeText: String {
+        guard !viewModel.draftCards.isEmpty else { return "" }
+        let startIndex = currentPage * pageSize + 1
+        let endIndex = min((currentPage + 1) * pageSize, viewModel.draftCards.count)
+        return "Showing \(startIndex)–\(endIndex) of \(viewModel.draftCards.count) cards"
+    }
+
+    private func validateCurrentPage() {
+        if currentPage >= totalPages {
+            currentPage = max(0, totalPages - 1)
+        }
     }
 
     var body: some View {
@@ -239,27 +265,30 @@ struct CustomDeckDetailView: View {
                     DoodleActionButton(
                         title: mainTitle,
                         symbol: mainMode.symbolName,
-                        accent: mainMode.accentColor
+                        accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : mainMode.accentColor
                     ) {
                         playDeck(mode: mainMode)
                     }
+                    .disabled(viewModel.draftCards.isEmpty)
 
                     HStack(spacing: 10) {
                         DoodleActionButton(
                             title: "Infinite",
                             symbol: GameMode.infinite.symbolName,
-                            accent: GameMode.infinite.accentColor
+                            accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.infinite.accentColor
                         ) {
                             playDeck(mode: .infinite)
                         }
+                        .disabled(viewModel.draftCards.isEmpty)
 
                         DoodleActionButton(
                             title: "Teams",
                             symbol: GameMode.teamVsTeam.symbolName,
-                            accent: GameMode.teamVsTeam.accentColor
+                            accent: viewModel.draftCards.isEmpty ? AppTheme.Colors.gray.opacity(0.42) : GameMode.teamVsTeam.accentColor
                         ) {
                             playTeamMatch()
                         }
+                        .disabled(viewModel.draftCards.isEmpty)
                     }
                 }
             } else {
@@ -370,6 +399,12 @@ struct CustomDeckDetailView: View {
                     Text(viewModel.draftCardCountText)
                         .font(.system(size: 14, weight: .black, design: .rounded))
                         .foregroundStyle(AppTheme.Colors.ink.opacity(0.56))
+
+                    if totalPages > 1 {
+                        Text(paginationRangeText)
+                            .font(.system(size: 12, weight: .bold, design: .rounded))
+                            .foregroundStyle(AppTheme.Colors.ink.opacity(0.48))
+                    }
                 }
 
                 Spacer()
@@ -397,18 +432,83 @@ struct CustomDeckDetailView: View {
                 .padding(.vertical, 40)
             } else {
                 VStack(spacing: 10) {
-                    ForEach(viewModel.draftCards) { card in
+                    ForEach(displayedCards) { card in
                         if isCustomDeck {
                             EditCardRow(card: card) {
                                 viewModel.deleteDraftCard(id: card.id)
+                                validateCurrentPage()
                             }
                         } else {
                             ReadOnlyCardRow(card: card)
                         }
                     }
                 }
-            }
 
+                if totalPages > 1 {
+                    paginationBar
+                        .padding(.top, 12)
+                }
+            }
+        }
+    }
+
+    private var paginationBar: some View {
+        HStack(spacing: 12) {
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    if currentPage > 0 {
+                        currentPage -= 1
+                    }
+                }
+            } label: {
+                HStack(spacing: 6) {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 14, weight: .black))
+                    Text("Previous 100")
+                        .font(.system(size: 13, weight: .black, design: .rounded))
+                }
+                .foregroundStyle(currentPage > 0 ? AppTheme.Colors.ink : AppTheme.Colors.ink.opacity(0.3))
+                .padding(.horizontal, 14)
+                .frame(height: 42)
+                .background(currentPage > 0 ? AppTheme.Colors.paperBright : AppTheme.Colors.gray.opacity(0.2), in: Capsule())
+                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
+            }
+            .buttonStyle(DoodlePressStyle())
+            .disabled(currentPage == 0)
+
+            Spacer()
+
+            Text("Page \(currentPage + 1) of \(totalPages)")
+                .font(.system(size: 13, weight: .black, design: .rounded))
+                .foregroundStyle(AppTheme.Colors.ink.opacity(0.7))
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+                .background(AppTheme.Colors.paperBright, in: Capsule())
+                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 1.5))
+
+            Spacer()
+
+            Button {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    if currentPage < totalPages - 1 {
+                        currentPage += 1
+                    }
+                }
+            } label: {
+                HStack(spacing: 6) {
+                    Text("Next 100")
+                        .font(.system(size: 13, weight: .black, design: .rounded))
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 14, weight: .black))
+                }
+                .foregroundStyle(currentPage < totalPages - 1 ? AppTheme.Colors.ink : AppTheme.Colors.ink.opacity(0.3))
+                .padding(.horizontal, 14)
+                .frame(height: 42)
+                .background(currentPage < totalPages - 1 ? AppTheme.Colors.paperBright : AppTheme.Colors.gray.opacity(0.2), in: Capsule())
+                .overlay(Capsule().stroke(AppTheme.Colors.ink, lineWidth: 2))
+            }
+            .buttonStyle(DoodlePressStyle())
+            .disabled(currentPage >= totalPages - 1)
         }
     }
 
@@ -461,6 +561,7 @@ struct CustomDeckDetailView: View {
     }
 
     private func playDeck(mode playMode: GameMode? = nil) {
+        guard !viewModel.draftCards.isEmpty else { return }
         let targetMode = playMode ?? self.mode
         if isCustomDeck && viewModel.hasUnsavedChanges {
             guard let savedDeck = viewModel.saveDraft() else {
@@ -478,6 +579,7 @@ struct CustomDeckDetailView: View {
     }
 
     private func playTeamMatch() {
+        guard !viewModel.draftCards.isEmpty else { return }
         let deck: Deck
         if isCustomDeck && viewModel.hasUnsavedChanges {
             guard let savedDeck = viewModel.saveDraft() else {

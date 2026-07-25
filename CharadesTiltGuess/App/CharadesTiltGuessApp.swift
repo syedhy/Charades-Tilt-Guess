@@ -38,7 +38,7 @@ final class OrientationController {
     }
 
     func useGameplayLandscape() {
-        updateSupportedOrientations([.landscapeLeft, .landscapeRight], requestedOrientation: .landscapeRight)
+        updateSupportedOrientations([.landscapeLeft, .landscapeRight], requestedOrientation: .landscapeLeft)
     }
 
     private func updateSupportedOrientations(

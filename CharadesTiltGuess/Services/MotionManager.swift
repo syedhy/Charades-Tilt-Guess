@@ -269,6 +269,6 @@ final class MotionManager {
         UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .first?
-            .interfaceOrientation ?? .landscapeRight
+            .interfaceOrientation ?? .landscapeLeft
     }
 }

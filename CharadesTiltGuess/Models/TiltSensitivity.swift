@@ -33,6 +33,10 @@ enum TiltSensitivity: String, Codable, CaseIterable, Hashable, Identifiable {
         threshold * 0.42
     }
 
+    var backwardThreshold: Double {
+        threshold * 0.65
+    }
+
     var confirmationSamples: Int {
         switch self {
         case .relaxed, .normal:
